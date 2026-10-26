@@ -606,3 +606,7 @@ Kharagpur 10, Roorkee 43); the v2 re-run of the three applies the same rule.
   pipeline because visiting people only contribute papers that print the IIT's affiliation (§15.6). The roster brief now
   prescribes a quota-frugal ORCID route, the treatment of associated faculty, honour rolls, defunct units and NIRF-only people;
   the shared fetcher no longer retries DNS/TLS failures (it reports them as DEAD).
+* Golden sets, 2026-10-26: IIT Jammu 348 (48 high) and IIT Dharwad 297 (37 high) accepted (`agents/check_outputs.py` clean).
+  Both new IITs have almost no 2016–2017 rows (institutes founded 2016; joining years are upper bounds from archived lists),
+  and several annual reports are image-only PDFs (read from rendered pages where used). Consistency fix: 46 IIT Palakkad
+  annual-report rows were `high` from the pilot, before the rule "an annual-report listing alone is medium"; harmonised.

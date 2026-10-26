@@ -127,3 +127,7 @@ Materials and Metallurgical Engineering has 0 rows. Its 2 current faculty (Arama
 * **Department mix:** Civil Engineering is over-represented (60 rows) because it is the only department with a usable publication page. HSS (4) and MME (0) are thin. BSE and ESSENCE are small units.
 * **Students and postdocs:** they appear only as co-authors, plus 4 student-led news items and several arXiv preprints with student first authors.
 * **Duplicates of record:** some arXiv preprints may also exist as published versions with different titles. Matching should allow title variants.
+
+
+## Post-review edit (main session, 2026-10-26)
+* 46 annual-report rows changed from `high` to `medium`: the rule adopted after this pilot makes an annual-report listing alone medium (reports also list pre-joining papers); all other golden sets follow it.
