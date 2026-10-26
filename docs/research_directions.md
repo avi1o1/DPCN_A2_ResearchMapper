@@ -26,10 +26,10 @@ Recent and uncertain references were checked online. Older standard references a
 
 ## 0. Two facts about our data that shape every method
 
-1. **A paper-level citation network is a DAG (directed acyclic graph).** Papers almost only cite older papers, so the adjacency matrix is nilpotent and its spectral radius is about 0. Several consequences follow:
-   - Eigenvector centrality is undefined.
-   - Katz centrality converges for *any* α.
-   - A bow-tie decomposition collapses because the strongly connected core is tiny. Only same-year mutual citations and preprint duplicates create cycles, so count them first.
+1. **A paper-level citation network is almost a DAG (directed acyclic graph).** Papers almost only cite older papers. In a true DAG the adjacency matrix is nilpotent, so its spectral radius is 0. Our internal network is not quite one: it has **92 reciprocal pairs** (55 at KGP, 37 at Roorkee), from same-year mutual citations and preprint/published duplicates. Each such 2-cycle makes the spectral radius at least 1. Consequences:
+   - Eigenvector centrality is meaningless (it would sit on the few cycles).
+   - Katz centrality needs α < 1/ρ on the raw network. After removing or merging the reciprocal pairs it becomes a finite sum that converges for any α.
+   - A bow-tie decomposition collapses, because the strongly connected core is tiny.
 
    Matrix centralities and bow-tie analysis become interesting when the network is **aggregated** to faculty, department or institute level, where citation cycles do exist. This is a methodological point worth making in a paper, and many applied papers get it wrong.
 2. **The 1,410-node co-authorship graph is a projection of a hypergraph.** It loses information in two ways. A 3-author paper and three separate 2-author papers give the same triangle. It is also restricted to faculty, so external co-authors are missing. We should rebuild it from the 46k author lists as a hypergraph (one hyperedge per paper), in two versions: faculty-only hyperedges, and full hyperedges using OpenAlex author IDs.
@@ -74,8 +74,8 @@ Recent and uncertain references were checked online. Older standard references a
 - **Key papers:**
   - Newman, PNAS 2004, [10.1073/pnas.0307545100](https://doi.org/10.1073/pnas.0307545100), introduced the 1/(n−1) weighting.
   - Chodrow, *Configuration models of random hypergraphs*, J. Complex Netw. 2020, [10.1093/comnet/cnaa018](https://doi.org/10.1093/comnet/cnaa018).
-  - Landry, Young & Eikmeier, *The simpliciality of higher-order systems*, EPJ Data Sci. 2024, [10.1140/epjds/s13688-024-00458-1](https://doi.org/10.1140/epjds/s13688-024-00458-1).
-  - Musciotto, Battiston & Mantegna, *Statistically validated hypergraphs*, Commun. Phys. 2021, [10.1038/s42005-021-00710-4](https://doi.org/10.1038/s42005-021-00710-4).
+  - Landry, Young & Eikmeier, *The simpliciality of higher-order networks*, EPJ Data Sci. 2024, [10.1140/epjds/s13688-024-00458-1](https://doi.org/10.1140/epjds/s13688-024-00458-1).
+  - Musciotto, Battiston & Mantegna, *Detecting informative higher-order interactions in statistically validated hypergraphs*, Commun. Phys. 2021, [10.1038/s42005-021-00710-4](https://doi.org/10.1038/s42005-021-00710-4).
   - Tudisco & Higham, *Core–periphery detection in hypergraphs*, SIMODS 2023, [arXiv:2202.12769](https://arxiv.org/pdf/2202.12769). It shows that hypergraph core–periphery differs from that of the projection.
 - **Application to our data:** we already reported that big-team papers move the headline numbers. The next step is to recompute the earlier results on the hypergraph and on the validated hypergraph: clustering, k-core, rich club and Louvain/Leiden communities.
   - Measure **simpliciality**: how often every sub-team of a team also appears on its own as a smaller paper.
@@ -131,7 +131,7 @@ Recent and uncertain references were checked online. Older standard references a
 1. **Faculty citation network:** a directed, weighted graph where faculty i cites faculty j. It has cycles, so all measures are well defined.
    - Compute Katz over a range of α, total communicability, and matrix-function hubs/authorities.
    - Plot Kendall τ against PageRank and in-degree as a function of α. This shows the degree↔eigenvector interpolation from Benzi–Klymko on real data.
-2. **Paper-level DAG:** Katz is a finite sum, so α only sets how much long citation chains count. At large α the ranking is dominated by the longest chains, which is a measure of "depth" of influence. Report this alongside the corrected PageRank, and apply the same age-rescaling to Katz.
+2. **Paper-level DAG** (after removing or merging the 92 reciprocal pairs): Katz is a finite sum, so α only sets how much long citation chains count. At large α the ranking is dominated by the longest chains, which is a measure of "depth" of influence. Report this alongside the corrected PageRank, and apply the same age-rescaling to Katz.
 3. **Dynamic communicability on yearly co-authorship snapshots, 2016–2026:** the matrix product Q = ∏(I − aA_t)⁻¹ gives broadcast and receive centralities. This is 11 matrices of size 1,410, so it runs in seconds.
 
 - **Feasibility:** very high. SciPy's `expm_multiply` and sparse `spsolve` handle the matrix functions. NetworkX has `katz_centrality`, `hits` and `communicability_betweenness_centrality`.
@@ -181,7 +181,7 @@ Recent and uncertain references were checked online. Older standard references a
   3. citation reciprocity between pairs;
   4. **institutional inwardness** (Baccini) for KGP versus Roorkee over time.
 
-  The Indian policy context gives (4) a natural experiment: NIRF began excluding institutional self-citations in 2024 ([Chemistry World](https://www.chemistryworld.com/news/are-indian-higher-education-institutes-gaming-the-ranking-system/4020411.article), [DORA](https://sfdora.org/2026/04/03/rankings-have-failed-in-india/)).
+  The Indian policy context makes (4) relevant: citation practices and gaming of the NIRF rankings are under public debate ([Chemistry World, Oct 2024](https://www.chemistryworld.com/news/are-indian-higher-education-institutes-gaming-the-ranking-system/4020411.article), [DORA, Apr 2026](https://sfdora.org/2026/04/03/rankings-have-failed-in-india/)). Neither source says NIRF changed how it counts self-citations, so do not claim a rule change or a "natural experiment" unless NIRF's own methodology documents confirm one.
 - **Fields needed:** we have them all, as long as citation edges can be mapped to faculty.
 - **Feasibility:** high.
 - **Possible finding:** "Faculty cite distance-1 co-authors N× more than topic-matched non-co-authors. Citation predates first collaboration in z% of new pairs."
@@ -268,8 +268,6 @@ Recent and uncertain references were checked online. Older standard references a
 
 **The gap:** we found no published work applying hypergraph or higher-order methods, matrix-function or temporal centralities, or multiplex citation–collaboration coupling to Indian institutions. Our **faculty × department** labels are something global datasets such as APS, DBLP and MAG lack, so the novelty claim should be built around department-level questions.
 
-**Other course groups:** other groups have similar OpenAlex projects, for example one on IISc, TIFR and NITs ([SohamJahagirdar/DPCN_A2](https://github.com/SohamJahagirdar/DPCN_A2)). Pairwise statistics alone will not stand out. With the professor's approval, pooling datasets across groups into a comparison of 5–6 institutes would make a much stronger paper.
-
 ---
 
 ## 5. Institutional dashboards
@@ -308,7 +306,7 @@ Recent and uncertain references were checked online. Older standard references a
    - **Tools:** XGI or Hypergraphx, plus NumPy for Tudisco–Higham.
    - **Main references:** Benson 2018, Tudisco & Higham 2021, Landry 2024, Musciotto 2021, Chodrow 2020.
 2. **Multiplex citation–collaboration coupling.**
-   - **Key finding to report:** "Citations among IIT faculty are concentrated on co-authors (N× over a topic-matched null), citation tends to precede collaboration, and inwardness changed around the 2024 NIRF rule change."
+   - **Key finding to report:** "Citations among IIT faculty are concentrated on co-authors (N× over a topic-matched null), citation tends to precede collaboration, and inwardness differs between KGP and Roorkee and over time."
    - **Tools:** NetworkX and pandas, with `pymnet` for multilayer views.
    - **Main references:** Wallace 2012, Martin 2013, Zingg 2020, Li 2019, Baccini 2019.
 3. **Matrix-function and dynamic centralities.**
