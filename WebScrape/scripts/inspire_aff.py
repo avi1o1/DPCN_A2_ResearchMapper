@@ -3,9 +3,11 @@ Every INSPIRE author affiliation is curated, so a hit is affiliation evidence.
 Raw -> WebScrape/raw/inspire/<inst>.jsonl.gz      usage: python3 inspire_aff.py <inst_key>"""
 import os, sys
 from common import get, RAW, LOGS, write_jsonl_gz
-Q = {"iit_ropar": 'aff:"Indian Inst. Tech., Ropar"', "iit_kharagpur": 'aff:"Indian Inst. Tech., Kharagpur"',
-     "iit_roorkee": 'aff:"IIT, Roorkee"'}
+from institutes import REG
+Q = {k: v["inspire"] for k, v in REG.items()}
 inst = sys.argv[1]; rows = []; page = 1
+if not Q[inst]:
+    sys.exit(f"{inst}: no INSPIRE institution (institutes.INSPIRE)")
 F = "titles,dois,arxiv_eprints,publication_info,authors.full_name,authors.affiliations,document_type,earliest_date,citation_count"
 while True:
     d = get("https://inspirehep.net/api/literature", params={"q": Q[inst] + " and de > 2015", "size": 250, "page": page, "fields": F}).json()

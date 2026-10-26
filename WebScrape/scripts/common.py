@@ -3,30 +3,65 @@ import gzip, json, os, time, random
 import requests
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = ROOT  # WebScrape/: datasets, rosters/, golden/; run-time raw/ and logs/ are created here
-RAW = os.path.join(OUT, "raw")
-LOGS = os.path.join(OUT, "logs")
-MAILTO = "aviral.gupta@research.iiit.ac.in"  # Crossref "polite pool" etiquette
+# Inputs (rosters/, golden/, affil_manual/) live in ROOT = WebScrape/. Outputs (datasets, unconfirmed candidates, reports)
+# go to OUT: WebScrape/ for the v1 run (Group 3 files used by Enrichment/ and Analysis/), WebScrape/v2/ for the v2 run of
+# all IITs (set RM_OUT=v2; PROCESS.md §15). Run-time caches raw/ and logs/ are shared and git-ignored.
+OUT = os.path.join(ROOT, os.environ["RM_OUT"]) if os.environ.get("RM_OUT") else ROOT
+RAW = os.path.join(ROOT, "raw")
+LOGS = os.path.join(ROOT, "logs")
+MAILTO = os.environ.get("RM_MAILTO", "aviral.gupta@research.iiit.ac.in")  # Crossref "polite pool" contact: set RM_MAILTO to your own address
 UA = f"DPCN-ResearchMapper/1.0 (mailto:{MAILTO})"
 YEAR_MIN, YEAR_MAX = 2016, 2026
 os.makedirs(RAW, exist_ok=True)   # run-time caches (git-ignored)
 os.makedirs(LOGS, exist_ok=True)  # run-time logs (git-ignored)
+os.makedirs(os.path.join(OUT, "logs"), exist_ok=True)
+os.makedirs(os.path.join(OUT, "golden"), exist_ok=True)
 
-INSTITUTES = {
-    "iit_ropar": {"name": "Indian Institute of Technology Ropar", "ror": "https://ror.org/02qkhhn56"},
-    "iit_kharagpur": {"name": "Indian Institute of Technology Kharagpur", "ror": "https://ror.org/03w5sq511"},
-    "iit_roorkee": {"name": "Indian Institute of Technology Roorkee", "ror": "https://ror.org/00582g326"},
-}
+from institutes import REG  # noqa: E402  (all institute facts: scripts/institutes.py)
+INSTITUTES = {k: {"name": v["name"], "ror": v["ror"]} for k, v in REG.items()}
 
 _session = requests.Session()
 _session.headers["User-Agent"] = UA
+
+
+# Crossref's polite pool allows 3 concurrent requests per client (x-concurrency-limit, 2026-10-25). Every Crossref call
+# from any script/thread takes one of 3 file-lock slots, so parallel jobs can never exceed the limit together.
+CROSSREF_SLOTS = 3
+_SLOTDIR = os.path.join(LOGS, "crossref_slots")
+os.makedirs(_SLOTDIR, exist_ok=True)
+
+
+class _Slot:
+    def __init__(self, url):
+        self.f = None
+        self.on = "api.crossref.org" in url
+
+    def __enter__(self):
+        import fcntl
+        while self.on:
+            for k in range(CROSSREF_SLOTS):
+                f = open(os.path.join(_SLOTDIR, f"slot{k}"), "a")
+                try:
+                    fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    self.f = f
+                    return self
+                except OSError:
+                    f.close()
+            time.sleep(0.05 + random.random() * 0.1)
+        return self
+
+    def __exit__(self, *a):
+        if self.f:
+            import fcntl
+            fcntl.flock(self.f, fcntl.LOCK_UN); self.f.close()
 
 
 def get(url, params=None, tries=8, timeout=120, **kw):
     """GET with exponential back-off on 429/5xx/network errors. Returns Response or raises."""
     for i in range(tries):
         try:
-            r = _session.get(url, params=params, timeout=timeout, **kw)
+            with _Slot(url):
+                r = _session.get(url, params=params, timeout=timeout, **kw)
             if r.status_code == 200:
                 return r
             if r.status_code == 404:

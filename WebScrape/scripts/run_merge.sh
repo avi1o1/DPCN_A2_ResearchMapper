@@ -15,4 +15,4 @@ open('../raw/dois_$I.txt','w').write('\n'.join(c['doi'] for c in read_jsonl_gz('
 python3 crossref_enrich.py ../raw/dois_$I.txt | tail -1
 python3 datacite_enrich.py $I | tail -1
 python3 finalize.py $I > $L/finalize_$I.json
-python3 eval_recall.py $I > /dev/null
+if [ -f ../golden/golden_$I.csv ]; then python3 eval_recall.py $I > /dev/null; fi

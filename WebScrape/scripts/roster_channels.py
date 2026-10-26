@@ -18,12 +18,14 @@ usage: python3 roster_channels.py <inst_key>
 """
 import os, re, sys, csv, json, time, unicodedata, collections, threading, queue
 import xml.etree.ElementTree as ET
-from common import get, RAW, OUT, LOGS, MAILTO, norm_doi, write_jsonl_gz, YEAR_MIN, YEAR_MAX
-from affil import classify, IIT as IIT_RX, OTHER_IIT_CITY
+from common import get, RAW, OUT, ROOT, LOGS, MAILTO, norm_doi, write_jsonl_gz, YEAR_MIN, YEAR_MAX
+from affil import classify, bare_mention
+from institutes import REG
 
 
 def bare_iit(s):
-    return bool(IIT_RX.search(s)) and not OTHER_IIT_CITY.search(s)
+    """'Indian Institute of Technology' without any IIT's place: ambiguous, not a contradiction"""
+    return bare_mention(inst, s)
 
 inst = sys.argv[1]
 AMB_T = float(os.environ.get("AMB_T", "2.0"))  # ambiguity threshold (name hits vs. expected own output)
@@ -85,7 +87,7 @@ def ckey(au):
     return gkey(au.get("given", ""), au.get("family", ""))
 
 
-roster = list(csv.DictReader(open(os.path.join(OUT, "rosters", f"{inst}_faculty.csv"))))
+roster = list(csv.DictReader(open(os.path.join(ROOT, "rosters", f"{inst}_faculty.csv"), encoding="utf-8-sig")))
 cur = json.load(open(os.path.join(OUT, inst + ".json")))["records"]
 verified = [r for r in cur if r["affiliation_status"] == "verified" and isinstance(r["authors"], list)]
 # snowball (one iteration): a person's own roster-accepted papers from the previous round extend their profile
@@ -153,9 +155,14 @@ def process(p):
         orcids.add(p["orcid"].strip()[-19:])
     start = jy(p) or ((min(years) - 1) if years else None)
     mrange = re.search(r"\((\d{4})\s*-\s*(\d{4})\)", p.get("designation") or "")
-    # +1 year publication lag; IIT Roorkee former-faculty end years are lower bounds (archive gaps, see
-    # rosters/iit_roorkee_roster_notes.md) -> +4 there
-    end = int(mrange.group(2)) + (4 if inst == "iit_roorkee" else 1) if (mrange and p.get("status") == "former") else 9999
+    # +1 year publication lag; IIT Roorkee former-faculty end years are lower bounds (archive gaps) -> +4 there (registry)
+    # v2: the range bounds every non-current person (former, but also visiting/adjunct/mentor faculty no longer listed,
+    # e.g. IIT Madras mentors at IIT Palakkad 2015-16); v1 rosters had ranges only on former faculty, so v1 is unchanged
+    end = int(mrange.group(2)) + REG[inst]["tenure_lag"] if (mrange and p.get("status") != "current") else 9999
+    # v2: visiting / adjunct people (mentor faculty from another IIT, guest faculty, professors of practice) have their main
+    # affiliation elsewhere; their ORCID/DBLP works and co-author matches would bring in home-institution papers. For them a
+    # paper is accepted only if this IIT's affiliation is printed on it (PROCESS.md §15.6)
+    secondary = p.get("status") in ("visiting", "adjunct")
     stat = {"name": p["name"], "dept": p.get("department"), "seeds": len(seeds), "orcids": sorted(orcids), "start": start, "end": end if end != 9999 else None,
             "cr_accepted": 0, "orcid_works": 0, "dblp_works": 0}
     person = f"{p['name']} [roster:{p.get('department', '')}]"
@@ -184,7 +191,7 @@ def process(p):
             a = hits[0]; why = None
             if a.get("ORCID"):
                 o = a["ORCID"][-19:]
-                if o in orcids:
+                if o in orcids and not secondary:
                     why = "orcid"
                 # an ORCID mismatch is NOT a hard reject: people hold duplicate iDs and roster iDs can be
                 # name-matched; such candidates must pass the co-author/venue test below instead
@@ -195,7 +202,7 @@ def process(p):
                 elif not bare_iit(s):
                     continue  # a concrete other institution -> not this person-at-this-IIT
                 # bare "Indian Institute of Technology" without city -> ambiguous, fall through
-            if not why:
+            if not why and not secondary:
                 if start is None or y < start:
                     continue
                 shared = sum(1 for b in auths if b is not a and ckey(b) in co)
@@ -214,7 +221,7 @@ def process(p):
                              "why": why, "person": person})
                 stat["cr_accepted"] += 1
     # ---- B4 ORCID works for roster ORCID
-    if p.get("orcid") and not ONLY_ARXIV and not LOOSE:
+    if p.get("orcid") and not ONLY_ARXIV and not LOOSE and not secondary:
         try:
             r = get(f"https://pub.orcid.org/v3.0/{p['orcid'].strip()[-19:]}/works", headers={"Accept": "application/json"})
             for g in (r.json().get("group") or []) if r.status_code == 200 else []:
@@ -235,7 +242,7 @@ def process(p):
     # ---- B5 DBLP pid
     pid = (p.get("dblp") or "").strip()
     m = re.search(r"pid/([\w/\-]+?)(\.html)?$", pid)
-    if m and not ONLY_ARXIV and not LOOSE:
+    if m and not ONLY_ARXIV and not LOOSE and not secondary:
         try:
             pq = f"""PREFIX dblp: <https://dblp.org/rdf/schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             SELECT ?pub ?title ?year ?doi ?venue ?type WHERE {{ ?pub dblp:authoredBy <https://dblp.org/pid/{m.group(1)}> ; dblp:title ?title ;
@@ -272,7 +279,7 @@ def process(p):
                     continue
                 affs = " | ".join(x.text or "" for x in me[0].findall("arxiv:affiliation", NS))
                 why = "affiliation" if affs and classify(inst, affs) == "iit" else None
-                if not why:
+                if not why and not secondary:
                     shared = sum(1 for n in names if " " in n and gkey(n.rsplit(" ", 1)[0], n.rsplit(" ", 1)[1]) in co)
                     if shared >= 1:
                         why = f"coauthors={shared}"

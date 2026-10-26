@@ -5,14 +5,9 @@ usage: python3 europepmc_aff.py <inst_key>
 """
 import os, sys
 from common import get, RAW, LOGS, write_jsonl_gz
+from institutes import REG
 
-QUERIES = {
-    "iit_ropar": '(AFF:"Ropar" OR AFF:"Rupnagar" OR AFF:"Roopnagar" OR AFF:"140001") AND PUB_YEAR:[2016 TO 2026]',
-    "iit_roorkee": '(AFF:"Roorkee" OR AFF:"247667" OR AFF:"Roorke" OR AFF:"Rorkee" OR AFF:"IIT Roorkee" OR AFF:"iitr.ac.in" OR (AFF:"Saharanpur" AND AFF:"Indian Institute of Technology")) AND PUB_YEAR:[2016 TO 2026]',
-    "iit_kharagpur": '(AFF:"Kharagpur" OR AFF:"721302" OR AFF:"IIT KGP" OR AFF:"IITKGP" OR AFF:"Khargpur" '
-                     'OR AFF:"Kharagapur" OR AFF:"Kharagur" OR AFF:"Kharapur" OR AFF:"Khragpur" OR AFF:"Karagpur") '
-                     'AND PUB_YEAR:[2016 TO 2026]',
-}
+QUERIES = {k: v["europepmc"] for k, v in REG.items()}
 inst = sys.argv[1]
 os.makedirs(os.path.join(RAW, "europepmc"), exist_ok=True)
 params = {"query": QUERIES[inst], "format": "json", "resultType": "core", "pageSize": 1000, "cursorMark": "*"}

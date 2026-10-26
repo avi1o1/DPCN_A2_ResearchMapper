@@ -1,0 +1,64 @@
+inst	expected	string	reason (PROCESS.md section)
+iit_ropar	iit	Department of Chemistry | Indian Institute of Technology | Ropar | India	one address deposited as several entries; whole-string rescue (§15.1)
+iit_ropar	iit	Biomimetic Peptide Engineering Laboratory, Department of Chemistry, Indian Institute of Technology, Ropar, Punjab-781039, India	explicit naming beats a PIN typo (781039 = IIT Guwahati)
+iit_kharagpur	iit	Metallurgical and Materials Engineering, Indian Institute of Technology, Kharagpur 600036, India	explicit naming beats a PIN typo
+iit_kharagpur	other	Institute of Chemical Technology-Indian Oil Odisha Campus, IIT Kharagpur Extension Centre, Mouza Samantpuri, Bhubaneswar 751013, Odisha, India	ICT-IOC Bhubaneswar exclusion (v1 counted it, §15.1)
+iit_kharagpur	uncertain	Department of Physics, Indian Institute of Technology Roorkee, Kharagpur, West Bengal 721 302, India	another IIT named explicitly and our city name too: garbled
+iit_kharagpur	iit	Department of Chemistry and Centre for Theoretical Studies; Indian Institute of Technology; Kharagpur 721302 India | Department of Chemistry; Udai Pratap Autonomous College; Varanasi Uttar Pradesh 221002	hierarchical rescue inside one entry
+iit_kharagpur	None	Department of Cardiology, Duke University Health System, North Carolina, United States. Electronic address: ndpradeep@chem.iitkgp.ernet.in.	e-mail is not affiliation evidence (v1 counted it)
+iit_kharagpur	other	Department of Biosciences and Bioengineering, Indian Institute of Technology Roorkee, Roorkee, Uttarakhand 247667, India. Electronic address: dsircar.iitkgp@gmail.com.	e-mail is not affiliation evidence
+iit_roorkee	other	Department of Agricultural and Food Engineering, Indian Institute of Technology Kharagpur, Kharagpur, India | National Institute of Hydrology, Roorkee, India	Roorkee belongs to another organisation (v1 false positive)
+iit_roorkee	other	Groundwater Hydrology Division, National Institute of Hydrology, Roorkee, India | Department of Civil Engineering, Indian Institute of Technology Delhi, New Delhi, India	v1 false positive
+iit_roorkee	iit	Divyadrishti Imaging Laboratory, Department of Physics, Indian Institute of Technology Roorkee, Roorkee, Uttarakhand-247667, India.	'drishti' must not mark a non-IIT
+iit_roorkee	None	Mehta Family School of Sustainability, Indian Institute of Technology, Indore, India	Mehta Family schools exist at several IITs (v1 false positive)
+iit_jodhpur	iit	iHUB Drishti Foundation, Indian Institute of Technology−Jodhpur, NH 62, Surpura Bypass Road, Karwar, Rajasthan 342030, India	iHub Drishti is IIT Jodhpur's TIH
+iit_jodhpur	other	Defence Laboratory, Defence Research and Development Organisation (DRDO), Ratanada Palace, Jodhpur, Rajasthan 342011, India	DRDO lab shares the old PIN
+iit_jodhpur	iit	Department of Electrical Engineering, N.H.65, Karwar Jodhpur India	IIT Jodhpur address forms are anchors
+iit_palakkad	other	Division of Drug Design and Medicinal Chemistry Research Lab | Department of Pharmaceutical Chemistry | Ahalia School of Pharmacy | Palakkad-678557 | India	Ahalia campus shared; bare location part is not evidence
+iit_palakkad	iit	Department of Physics, Indian Institute of Technology Palakkad, Palakkad 668557, Kerala, India	PIN typo
+iit_tirupati	other	Department of Chemistry, Indian Institute of Science Education and Research (IISER) Tirupati, Tirupati 517619, India	IISER shares PIN 517619 with IIT Tirupati
+iit_goa	other	Department of Applied Sciences, National Institute of Technology Goa, Ponda 403401, India	NIT Goa shares Farmagudi/Ponda
+iit_goa	iit	School of Chemical and Materials Sciences (SCMS), Institute of Technology Goa, Farmagudi, Ponda, Goa 403401, India	IIT Goa school name, "Indian" dropped
+iit_dharwad	other	Department of Forensic Sciences, National Forensic Sciences University, Dharwad, Karnataka 580011, India	NFSU on the WALMI campus
+iit_bhilai	other	IIT,Dept. of Electronics and Communication,Naya Raipur,Chattishgarh,India	IIIT Naya Raipur written as IIT
+iit_bhilai	None	Bhilai Institute of Technology, Durg, India	Durg is a shared district token
+iit_jammu	iit	Department of Mechanical Engineering, Indian Institute of Technology (IIT-J) 3 , Jammu 181221 ,	single-letter abbreviations are ambiguous between IITs
+iit_mandi	iit	School of Engineering | Indian Institute of Mandi | Mandi-175001 | India	"Indian Institute of <city>" counts
+iit_patna	other	Assistant Professor, Department Of Obstetrics and Gynecology, NSMCH, Bihta, Patna, India.	Bihta hosts medical colleges (was a false positive)
+iit_patna	None	Amhara Agricultural Research Institute	Amhara is mostly the Ethiopian region
+iit_indore	iit	Discipline of Chemistry  Simrol, Khandwa Road Indore 453552 India	"Discipline of" is a department word
+iit_indore	None	UGC-DAE Consortium for Scientific Research, Khandwa Road, Indore 452001, Madhya Pradesh, India	Khandwa Road is shared
+iit_gandhinagar	other	Department of Medicinal Chemistry, National Institute of Pharmaceutical Education and Research (NIPER), Ahmedabad, Palaj, Gandhinagar 382355, India	NIPER-A shares Palaj (was a false positive)
+iit_bhubaneswar	other	Department of Engineering and Materials Physics, ICT-IOC Bhubaneswar, 751013, India	ICT-IOC shares 751013
+iit_bhubaneswar	other	National Institute of Science Education and Research, HBNI, Jatni 752050, India	NISER shares Jatni
+iit_ism	iit	Coal Geology & Organic Petrology Laboratory, Department of Applied Geology, Indian Institute of Technology, Indian School of Mines, Dhanbad 826004	ISM name
+iit_ism	other	Central Institute of Mining and Fuel Research  Dhanbad, Jharkhand 826004 India	CIMFR
+iit_bhu	iit	Department of Chemistry | Indian Institute of Technology | Banaras Hindu University | Varanasi 221005 | India	BHU is part of the IIT's official name
+iit_bhu	iit	Department of Ceramic Engineering, BHU, Varanasi	engineering departments exist only at the IIT
+iit_bhu	other	Department of Chemistry, Institute of Science, Banaras Hindu University, Varanasi 221005, India	BHU Institute of Science
+iit_bhu	other	SR, Dept of ENT, BHU, Varanasi 221005, India	department only at the university
+iit_bhu	uncertain	Department of Physics, BHU, Varanasi, India	department at both
+iit_bhu	other	Seismic imaging centre, Geophysics, BHU	"geophysics" is not "physics"
+iit_bhu	other	Radiation Protection Institute, Jiangsu Provincial Center for Disease Control and Prevention , Nanjing, Jiangsu 221005 ,	Chinese postcode
+iit_hyderabad	other	Chemical Research and Development, APL Research Centre-II, Aurobindo Pharma Ltd., Survey No.71 & 72, Indrakaran Village, Kandi Mandal, Sangareddy, Telangana 502329, India	Kandi mandal is shared
+iit_hyderabad	None	B V Raju Institute of Technology,Dept. of Computer Science Engineering,Narsapur, Medak,Telangana,India	Medak is a shared district
+iit_guwahati	other	Department of Neurology, GNRC Medical, North Guwahati, Assam, India	North Guwahati is shared (was a false positive)
+iit_guwahati	iit	Indian Institute of Technology,Mehta Family School of Data Science and Artificial Intelligence,Guwahati,Assam,India	Mehta school at IIT Guwahati
+iit_kanpur	None	Department of Comparative Medicine, Yale School of Medicine, P.O. Box 208016, New Haven, CT 06520-8016, USA	foreign address with our PIN (was a false positive)
+iit_kanpur	uncertain	Tata Institute of Fundamental Research Hyderabad Gopanpally Hyderabad-500107 vc@iitk.ac.in	e-mail only
+iit_kanpur	iit	IITK,Department of Electrical Engineering,Kanpur,Uttar Pradesh,India,208016	abbreviation
+iit_bombay	other	SAMEER, Ministry of Electronics and Information Technology, IIT Campus, Powai, Mumbai, India	SAMEER sits on the campus but is separate
+iit_bombay	iit	IITB-Monash Research Academy, Powai, Mumbai 400076, India	joint academy students are IIT Bombay PhD students
+iit_bombay	iit	Department of Metallurgical Engineering and Materials Science, Mumbai, 400076, India	department rule with the campus PIN
+iit_madras	other	Department of Molecular Oncology, Cancer Institute (WIA), Adyar, Chennai 600036, India	600036 is shared (was a false positive)
+iit_madras	other	Pfizer Healthcare India PVT Ltd., Synergy, IITM Research Park, Kanagam Road, Chennai 600113, India	Research Park tenants
+iit_madras	iit	Department of Chemistry | Institute of Technology Madras | Chennai-600036 | India	word order identifies IIT Madras
+iit_madras	None	Department of Mechanical Engineering, Madras Institute of Technology, Anna University, Chennai, India	Anna University's MIT
+iit_madras	None	Zanzibar Malaria Elimination Programme	Zanzibar is shared
+iit_delhi	other	Centre for Chronic Disease Control, New Delhi 110016, India	Hauz Khas institutional area (was a false positive)
+iit_delhi	other	Climate, Energy and Sustainable Technology Division, Department of Science and Technology, Government of India, Technology Bhavan, New Delhi 110016, India	DST (was a false positive)
+iit_delhi	None	Institute of International Trade and Development (IITD), University of Port Harcourt, Port Harcourt, Nigeria	abbreviation collision
+iit_delhi	iit	IITD,Electrical Engineering Department,New Delhi,India	abbreviation
+iit_delhi	None	Department of Electronics and Communication Engineering, Indian Institute of Information Technology Design and Manufacturing (IIITD&M) Kancheepuram, Chennai, India	IIITD&M
+iit_delhi	None	Department of Civil Engineering, Indian Institute of Technology Kanpur | Ministry of Road Transport, New Delhi, India	the v1 failure mode that motivated v2
+iit_tirupati	iit	Center for Atomic, Molecular and Optical Sciences & Technologies (CAMOST), joint initiative of IIT Tirupati & IISER Tirupati, Tirupati, India	joint IIT-IISER centre naming the IIT counts (golden set excluded such papers; recall is unaffected)

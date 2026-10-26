@@ -7,6 +7,17 @@ import os, sys, json, gzip, glob, threading, queue
 from common import get, RAW, MAILTO, norm_doi
 
 D = os.path.join(RAW, "crossref_full"); os.makedirs(D, exist_ok=True)
+# v2: store only the fields finalize.py reads (its KEEP list; references reduced to their DOIs, as finalize.py does on
+# load). Abstracts, licences, links, funders etc. were never used and made the cache several GB for 23 institutes.
+KEEP = ("_q", "_src", "DOI", "type", "subtype", "title", "author", "issued", "container-title", "event", "issn-type", "ISSN",
+        "references-count", "is-referenced-by-count", "publisher", "ISBN", "relation", "institution", "group-title")
+
+
+def slim(it):
+    r = {k: it[k] for k in KEEP if k in it}
+    if it.get("reference") is not None:
+        r["reference"] = [{"DOI": x["DOI"]} if x.get("DOI") else {} for x in it["reference"]]
+    return r
 have = set()
 for fn in glob.glob(os.path.join(D, "*.jsonl.gz")):
     try:
@@ -43,7 +54,7 @@ def worker(k):
                     params={"filter": ",".join("doi:" + d for d in batch), "rows": B, "mailto": MAILTO}, timeout=180)
             got = {}
             for it in r.json()["message"]["items"]:
-                got[norm_doi(it["DOI"])] = it
+                got[norm_doi(it["DOI"])] = slim(it)
             for d in batch:
                 rec = got.get(d) or {"_missing": True}
                 rec["_q"] = d

@@ -2,19 +2,17 @@
 usage: python3 doaj_aff.py <inst_key>"""
 import os, sys, urllib.parse
 from common import get, RAW, LOGS, write_jsonl_gz
+from institutes import REG
 
-TERMS = {
-    "iit_ropar": ["Ropar", "Rupnagar", "Roopnagar", "140001"],
-    "iit_roorkee": ["Roorkee", "247667", "Roorke", "Rorkee", "Saharanpur", "247001"],
-    "iit_kharagpur": ["Kharagpur", "721302", "IITKGP", "Khargpur", "Kharagapur", "Kharagur", "Kharapur", "Khragpur", "Karagpur"],
-}
+TERMS = {k: v["doaj"] for k, v in REG.items()}
 inst = sys.argv[1]
 os.makedirs(os.path.join(RAW, "doaj"), exist_ok=True)
 seen, rows = set(), []
 for t in TERMS[inst]:
     # DOAJ caps deep paging at 10k; split by year to stay under it.
     for y in range(2016, 2027):
-        q = f'bibjson.author.affiliation:"{t}" AND bibjson.year:{y}'
+        frag = t if ":" in t else f'bibjson.author.affiliation:"{t}"'
+        q = f'{frag} AND bibjson.year:{y}'
         page = 1
         while True:
             url = "https://doaj.org/api/search/articles/" + urllib.parse.quote(q)

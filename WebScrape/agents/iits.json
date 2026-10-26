@@ -1,0 +1,142 @@
+{
+ "iit_palakkad": {
+  "NAME": "IIT Palakkad",
+  "CAMPUS_HINT": " — both the Ahalia (temporary) and Nila (permanent) campuses",
+  "SPECIAL": "* IIT Palakkad was mentored by IIT Madras in its first years: IIT Madras faculty who taught there are `visiting` (designation e.g. `Mentor faculty from IIT Madras`), and must not be listed as regular faculty.",
+  "TARGET": "300",
+  "AUTHCOL": "iitpkd_author"
+ },
+ "iit_bombay": {
+  "NAME": "IIT Bombay",
+  "CAMPUS_HINT": "; include IDC School of Design, SJM School of Management, CTARA, CSRE, KCDH, Desai Sethi School etc.",
+  "SPECIAL": "* IITB-Monash Research Academy staff are not IIT Bombay faculty unless listed by an IIT Bombay unit.",
+  "TARGET": "650",
+  "AUTHCOL": "iitb_author"
+ },
+ "iit_madras": {
+  "NAME": "IIT Madras",
+  "CAMPUS_HINT": "; include the IIT Madras Zanzibar campus (department suffix ' (Zanzibar)') and IIT Madras centres",
+  "SPECIAL": "* Companies and tenants of the IITM Research Park are not IIT Madras faculty. IIT Madras faculty who mentored IIT Palakkad / IIT Tirupati remain IIT Madras faculty.",
+  "TARGET": "650",
+  "AUTHCOL": "iitm_author"
+ },
+ "iit_delhi": {
+  "NAME": "IIT Delhi",
+  "CAMPUS_HINT": "; include IIT Delhi Abu Dhabi (department suffix ' (Abu Dhabi)') and the Sonipat/Jhajjar extension campuses",
+  "SPECIAL": "* IIT Delhi faculty who mentored IIT Jammu remain IIT Delhi faculty.",
+  "TARGET": "650",
+  "AUTHCOL": "iitd_author"
+ },
+ "iit_kanpur": {
+  "NAME": "IIT Kanpur",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* IIT Kanpur faculty who mentored other IITs remain IIT Kanpur faculty.",
+  "TARGET": "600",
+  "AUTHCOL": "iitk_author"
+ },
+ "iit_guwahati": {
+  "NAME": "IIT Guwahati",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "",
+  "TARGET": "550",
+  "AUTHCOL": "iitg_author"
+ },
+ "iit_hyderabad": {
+  "NAME": "IIT Hyderabad",
+  "CAMPUS_HINT": " (the institute was at the ODF Estate, Yeddumailaram until 2015)",
+  "SPECIAL": "* IIT Hyderabad faculty who mentored IIT Bhilai remain IIT Hyderabad faculty.",
+  "TARGET": "550",
+  "AUTHCOL": "iith_author"
+ },
+ "iit_bhubaneswar": {
+  "NAME": "IIT Bhubaneswar",
+  "CAMPUS_HINT": " (temporary campus at Samantapuri/Toshali Bhawan until 2015, then Argul)",
+  "SPECIAL": "",
+  "TARGET": "450",
+  "AUTHCOL": "iitbbs_author"
+ },
+ "iit_gandhinagar": {
+  "NAME": "IIT Gandhinagar",
+  "CAMPUS_HINT": " (VGEC Chandkheda campus until 2015, then Palaj)",
+  "SPECIAL": "* Note: NIPER Ahmedabad shares the Palaj address; its staff are not IIT Gandhinagar faculty.",
+  "TARGET": "450",
+  "AUTHCOL": "iitgn_author"
+ },
+ "iit_jodhpur": {
+  "NAME": "IIT Jodhpur",
+  "CAMPUS_HINT": " (MBM campus until ~2017, then Karwar); include iHub Drishti only if listed as IIT faculty",
+  "SPECIAL": "",
+  "TARGET": "450",
+  "AUTHCOL": "iitj_author"
+ },
+ "iit_patna": {
+  "NAME": "IIT Patna",
+  "CAMPUS_HINT": " (Patliputra temporary campus until 2015, then Bihta)",
+  "SPECIAL": "",
+  "TARGET": "450",
+  "AUTHCOL": "iitp_author"
+ },
+ "iit_indore": {
+  "NAME": "IIT Indore",
+  "CAMPUS_HINT": " (IET-DAVV temporary campus until 2015, then Simrol); units are called 'Discipline of …' in older years",
+  "SPECIAL": "",
+  "TARGET": "450",
+  "AUTHCOL": "iiti_author"
+ },
+ "iit_mandi": {
+  "NAME": "IIT Mandi",
+  "CAMPUS_HINT": " (Mandi town transit campus until ~2015, then Kamand)",
+  "SPECIAL": "",
+  "TARGET": "400",
+  "AUTHCOL": "iitmandi_author"
+ },
+ "iit_bhu": {
+  "NAME": "IIT (BHU) Varanasi",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* Only faculty of IIT (BHU) — not of Banaras Hindu University's Institute of Science, IMS, Institute of Agricultural Sciences etc., even where department names coincide (Chemistry, Physics, Mathematics).",
+  "TARGET": "550",
+  "AUTHCOL": "iitbhu_author"
+ },
+ "iit_tirupati": {
+  "NAME": "IIT Tirupati",
+  "CAMPUS_HINT": " (transit campus near Renigunta until ~2022, then Yerpedu)",
+  "SPECIAL": "* IIT Tirupati was mentored by IIT Madras in its first years: IIT Madras faculty who only taught/mentored there are `visiting` (\"Mentor faculty from IIT Madras (Y1-Y2)\").",
+  "TARGET": "300",
+  "AUTHCOL": "iittp_author"
+ },
+ "iit_ism": {
+  "NAME": "IIT (ISM) Dhanbad",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* The institute was 'Indian School of Mines' until 2016; faculty listed under that name 2016+ are the same institute.",
+  "TARGET": "550",
+  "AUTHCOL": "iitism_author"
+ },
+ "iit_bhilai": {
+  "NAME": "IIT Bhilai",
+  "CAMPUS_HINT": " (GEC Raipur transit campus until 2022, then Kutelabhata, Durg)",
+  "SPECIAL": "* IIT Bhilai was mentored by IIT Hyderabad in its first years: IIT Hyderabad faculty who only taught/mentored there are `visiting` (\"Mentor faculty from IIT Hyderabad (Y1-Y2)\").",
+  "TARGET": "300",
+  "AUTHCOL": "iitbhilai_author"
+ },
+ "iit_goa": {
+  "NAME": "IIT Goa",
+  "CAMPUS_HINT": " (GEC Farmagudi transit campus)",
+  "SPECIAL": "* IIT Goa was mentored by IIT Bombay in its first years: IIT Bombay faculty who only taught/mentored there are `visiting` (\"Mentor faculty from IIT Bombay (Y1-Y2)\").",
+  "TARGET": "300",
+  "AUTHCOL": "iitgoa_author"
+ },
+ "iit_jammu": {
+  "NAME": "IIT Jammu",
+  "CAMPUS_HINT": " (Paloura transit campus until ~2019, then Jagti)",
+  "SPECIAL": "* IIT Jammu was mentored by IIT Delhi in its first years: IIT Delhi faculty who only taught/mentored there are `visiting` (\"Mentor faculty from IIT Delhi (Y1-Y2)\").",
+  "TARGET": "350",
+  "AUTHCOL": "iitjammu_author"
+ },
+ "iit_dharwad": {
+  "NAME": "IIT Dharwad",
+  "CAMPUS_HINT": " (WALMI transit campus until ~2023, then Chikkamalligawad)",
+  "SPECIAL": "* IIT Dharwad was mentored by IIT Bombay in its first years: IIT Bombay faculty who only taught/mentored there are `visiting` (\"Mentor faculty from IIT Bombay (Y1-Y2)\").",
+  "TARGET": "300",
+  "AUTHCOL": "iitdh_author"
+ }
+}

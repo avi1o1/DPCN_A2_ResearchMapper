@@ -56,7 +56,12 @@ def w():
             doi = q.get_nowait()
         except queue.Empty:
             return
-        r = get(f"https://api.datacite.org/dois/{doi}")
+        try:
+            r = get(f"https://api.datacite.org/dois/{doi}")
+        except RuntimeError as e:
+            # transient outage (2026-10-25 run: all workers died on one batch): skip without caching, retried next run
+            print("datacite failed, will retry next run:", doi, str(e)[:80], flush=True)
+            continue
         rec = convert(r.json()["data"], doi) if r.status_code == 200 else {"_q": doi, "_missing": True, "_src": "datacite"}
         with lock:
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")

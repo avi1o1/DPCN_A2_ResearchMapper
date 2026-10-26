@@ -7,7 +7,7 @@ Writes WebScrape/golden/recall_<inst>.md and misses_<inst>.csv.
 usage: python3 eval_recall.py <inst_key>
 """
 import os, re, sys, csv, json, html, unicodedata, collections
-from common import OUT, RAW, read_jsonl_gz, norm_doi
+from common import OUT, ROOT, RAW, read_jsonl_gz, norm_doi
 
 inst = sys.argv[1]
 
@@ -78,7 +78,7 @@ ix_unc = index(unconf, recdoi, lambda r: r["title"], lambda r: r["year"])
 ix_cand = index(cands, lambda c: c["doi"], lambda c: c["title"], lambda c: c["year"])
 ix_rej = index(rej, lambda c: c["key"] if not c["key"].startswith("t:") else None, lambda c: c["title"], lambda c: c["year"])
 
-gold = list(csv.DictReader(open(os.path.join(OUT, "golden", f"golden_{inst}.csv"))))
+gold = list(csv.DictReader(open(os.path.join(ROOT, "golden", f"golden_{inst}.csv"), encoding="utf-8-sig")))
 res = []
 for g in gold:
     y = g.get("year")

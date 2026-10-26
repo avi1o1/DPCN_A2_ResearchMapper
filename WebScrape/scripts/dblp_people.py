@@ -9,12 +9,14 @@ usage: python3 dblp_people.py <inst_key>
 """
 import os, re, sys, csv, io, json
 from common import get, RAW, LOGS, write_jsonl_gz
+from institutes import REG
 
-CFG = {"iit_ropar": ("ropar|rupnagar", re.compile(r"\b(ropar|rupnagar|roopnagar)\b", re.I)),
-       "iit_roorkee": ("roorkee|roorke|rorkee", re.compile(r"\b(roorkee|roorke|rorkee)\b", re.I)),
-       "iit_kharagpur": ("kharagpur|kgp|kharagapur|khragpur", re.compile(r"\b(kharagpur|kharagapur|khragpur|kgp)\b", re.I))}
+CFG = {k: (v["dblp"][0], re.compile(v["dblp"][1], re.I)) for k, v in REG.items()}
 IIT = re.compile(r"\biit\b|indian institute of technology|iitkgp|iit-?kgp", re.I)
 inst = sys.argv[1]; rx_s, rx = CFG[inst]
+UNITS = re.compile(REG[inst]["units"], re.I)
+if REG[inst].get("mention"):
+    IIT = re.compile(REG[inst]["mention"], re.I)   # institution type of a non-IIT institute (institutes.py)
 EP = "https://sparql.dblp.org/sparql"
 
 
@@ -28,7 +30,7 @@ people = sparql(PFX + f"""SELECT ?p ?name ?aff WHERE {{ ?p a dblp:Person ; dblp:
   FILTER(REGEX(STR(?aff), "{rx_s}", "i")) }}""")
 persons = {}
 for r in people:
-    if rx.search(r["aff"]) and IIT.search(r["aff"]):
+    if rx.search(r["aff"]) and (IIT.search(r["aff"]) or UNITS.search(r["aff"])):
         persons.setdefault(r["p"], {"pid": r["p"], "name": r["name"], "affs": []})["affs"].append(r["aff"])
 print(inst, "persons", len(persons), flush=True)
 rows = []

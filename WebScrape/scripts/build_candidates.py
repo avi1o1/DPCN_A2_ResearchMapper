@@ -16,12 +16,10 @@ usage: python3 build_candidates.py <inst_key>
 import os, re, sys, glob, json, collections, unicodedata
 from common import read_jsonl_gz, write_jsonl_gz, norm_doi, RAW, LOGS, YEAR_MIN, YEAR_MAX
 from affil import classify
+from institutes import REG
 
 inst = sys.argv[1]
-TOK = {"iit_ropar": ["Ropar", "Rupnagar", "Roopnagar", "140001", "Punjab"],
-       "iit_roorkee": ["Roorkee", "247667", "Roorke", "Rorkee", "Saharanpur", "247001", "Uttarakhand"],
-       "iit_kharagpur": ["Kharagpur", "721302", "Khargpur", "Kgp", "Kharagapur", "Kharagur", "Kharapur", "Khragpur",
-                         "Karagpur", "Kharagpu", "IITKGP", "West_Bengal"]}[inst]
+TOK = [t.replace(" ", "_") for t in REG[inst]["crossref"] + REG[inst]["crossref_broad"]]
 
 
 def tkey(title, year):

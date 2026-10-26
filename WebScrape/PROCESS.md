@@ -392,3 +392,217 @@ candidates, audit precision 12–22 %) is written by `finalize.py` for follow-up
 and not part of the submission; likewise `todo_followup_<inst>.csv` (regenerate with
 `scripts/export_todo.py`). Output JSON is written with a pretty-printed summary and one record per
 line (valid JSON; fully pretty-printing would push the Kharagpur file past GitHub's 100 MB limit).
+
+---
+
+## 15. v2: extension to all 23 IITs (started 2026-10-25)
+
+Operator brief: extend the dataset from 3 IITs to all IITs with the same procedure and the same strictness ("more data
+points must not loosen the procedure"). The v1 datasets of §§1–14 (`WebScrape/<inst>.json`) stay untouched because
+Enrichment/, Analysis/ and the Group 3 report are built on them; v2 writes to `WebScrape/v2/` (`RM_OUT=v2`).
+All 23 IITs, the original three included, are (re)run with the v2 code so that every institute in the v2 corpus is produced
+by the same pipeline version (the v1 raw caches were not kept, §14).
+
+### 15.1 Code changes before any new data was used
+* **Institute registry** `scripts/institutes.py`: every institute-specific fact (ROR/GRID, sweep tokens, classifier regexes,
+  Europe PMC / DOAJ / INSPIRE / ORCID / DBLP queries, tenure lag) moved out of nine scripts into one module. Regression check:
+  for the three v1 institutes the registry reproduces every v1 query string exactly (Europe PMC, DOAJ, INSPIRE, ORCID query/
+  city/ids, DBLP, Crossref token list).
+* **Classifier v2** (`affil.py`), motivated by the new geography: in Delhi, Mumbai, Chennai, Hyderabad, Varanasi … the IIT is
+  one of many research organisations, so v1's "IIT mention + city token anywhere in the author's joined affiliations ⇒ this
+  IIT" would credit e.g. `IIT Kanpur | Ministry of X, New Delhi` to IIT Delhi. Changes:
+  1. Tokens get roles: `anchor` (campus PIN / locality / e-mail domain; may support the department-only rule), `city`
+     (shared but small; no IIT mention ⇒ `uncertain`), `shared` (big city; no IIT mention ⇒ not about this IIT at all, never
+     `uncertain` — otherwise every University of Delhi string would become a TODO).
+  2. Each affiliation entry (` | `) and each `;` part is judged on its own. The whole string may only *rescue* an `iit`
+     verdict (publishers often deposit one address as several entries: `Department of Chemistry | Indian Institute of
+     Technology | Ropar | India`), and the rescue is refused (`uncertain`) if any part names another IIT or organisation.
+  3. Explicit naming ("Indian Institute of Technology Kharagpur", "IIT (BHU)", "I.I.T. Delhi") is decisive, which also
+     absorbs publisher PIN typos ("Indian Institute of Technology Kharagpur, Kharagpur 600036"). If another IIT is named
+     explicitly and this one is not, our token is another organisation's address (`other`), or `uncertain` when our city
+     *name* also appears ("Indian Institute of Technology Roorkee, Kharagpur, West Bengal 721302").
+  4. Strong exclusions per institute (`exclude`): ICT Mumbai's IOC Odisha campus in the "IIT Kharagpur Extension Centre",
+     Bhubaneswar.
+  5. HTML entities are unescaped before splitting (`&#x0026;` contains a `;`).
+  6. Manual decisions move from the git-ignored `logs/affil_manual_<inst>.tsv` (lost after v1, so v1 is not bit-reproducible)
+     to the committed `affil_manual/<inst>.tsv`.
+* **Regression of the classifier on v1 data**: all 64,944 distinct author-affiliation strings in the three v1 datasets were
+  classified by v1 and v2 for each v1 institute. Changes (distinct strings / author slots): Ropar 2 / 2, Kharagpur 134 / 486,
+  Roorkee 25 / 60. Every change was read: Kharagpur's are the ICT-IOC Bhubaneswar campus (v1 documented it as excluded in
+  §3.2 but its IIT-first rule counted it) plus garbled strings now `uncertain`; Roorkee's are multi-affiliation strings in
+  which Roorkee belongs to another organisation (`IIT Kharagpur | National Institute of Hydrology, Roorkee`, `CSIR-CBRI
+  Roorkee | IIT Delhi`). These are v1 false positives; the bug found on the way (`drishti` matching IIT Roorkee's
+  *Divyadrishti* lab) was fixed before the comparison.
+* `common.OUT` is configurable (`RM_OUT`); inputs (rosters, golden sets, manual decisions) are read from `WebScrape/`.
+
+### 15.2 Source reconnaissance for the 20 new IITs (2026-10-25)
+* ROR records fetched from api.ror.org for all 20 (all `active`, matched with `chosen: true`). ROR data quirks recorded, and
+  a reason never to use ROR aliases as match strings: IIT Jodhpur's record lists "AIIMS Jodhpur" as an alias, and IIT
+  Hyderabad's lists a Malayalam label for "Indian Institute of *Chemical* Technology".
+* Crossref (`query.affiliation`, 2016–2026, `rows=0`) hit counts were probed for every city, campus PIN, campus locality, old
+  temporary campus, old district name and spelling variant (raw counts in the run logs). Findings:
+  * Crossref tokenises on dots: e-mail-domain queries (`iitb.ac.in`, `iitm.ac.in` …) all return ≈3,520 hits of `ac`/`in`
+    noise — unusable as queries (domains are still used by the local classifier).
+  * Multi-word queries are OR-searches (`Madhya Pradesh` 96,013 = every "Pradesh"); state sweeps therefore use single rare
+    tokens (`Madhya`, `Andhra`, `Himachal`, `Tamil`).
+  * Polite pool limits on 2026-10-25: `x-rate-limit-limit: 3`, `x-concurrency-limit: 3` → all sweeps run with 3 workers
+    and nothing else touches Crossref meanwhile.
+  * Temporary/old campuses included as tokens: IIT Hyderabad (Yeddumailaram, ODF estate, old Medak district), IIT
+    Gandhinagar (VGEC Chandkheda 382424), IIT Jodhpur (342011), IIT Patna (Patliputra 800013), IIT Indore (452017, Khandwa
+    Road), IIT Mandi (175001), IIT Palakkad (Ahalia/Kozhippara 678557, Pudussery), IIT Tirupati (Renigunta 517506), IIT Bhilai
+    (GEC Raipur, Sejbahar 492015), IIT Goa (GEC Farmagudi 403401), IIT Jammu (Paloura), IIT Dharwad (WALMI 580011),
+    IIT Bhubaneswar (Samantapuri 751013). Offshore/extension campuses: IIT Madras Zanzibar, IIT Delhi Abu Dhabi, IIT Delhi
+    Sonipat/Jhajjar.
+* INSPIRE-HEP institution names looked up via the INSPIRE institutions API (registry `INSPIRE`); IIT Hyderabad and IIT (ISM)
+  have two records each (both queried); IIT Jammu has none.
+* Europe PMC / DOAJ / ORCID queries for the new institutes: campus tokens alone; shared big-city and noisy tokens (`Delhi`,
+  `Mumbai`, `Mines`, `ISM` …) only together with "Indian Institute of Technology"; plus name phrases ("IIT Bombay",
+  "Indian School of Mines", "IIT (BHU)" …). ORCID/DBLP person matching additionally accepts unit names unique to the IIT
+  ("Indian School of Mines").
+
+### 15.3 Rosters and golden sets for the new IITs (sub-agents)
+Same design as §6/§7, briefs kept with the run notes. New in v2: every agent fetches through one shared fetcher with
+per-host rate limits enforced across processes (Wayback 3 s, arXiv 5 s, others 1 s) and a shared cache, because 40 agents
+on one IP would otherwise be throttled; and the agents' lab notes are kept in `rosters/notes/` and `golden/notes/`.
+Golden-set sampling is now explicit: every unit, every year, ≤ 8 papers per person, fixed source mix, list order (no
+cherry-picking of easy-to-find papers). The briefs were piloted on one small (Palakkad) and one large (Bombay) institute
+before the other 18 were started.
+
+### 15.4 Classifier review for the 20 new IITs (2026-10-25)
+Procedure (as §3.2, made systematic for big cities): for each institute, every distinct author-affiliation string in its
+Crossref sweep records that contains one of its tokens (or an IIT mention + its state) was classified, and the following
+lists were read (`scripts/review_strings.py`): **all** `uncertain` strings; **all** `iit` strings *without any IIT mention*
+(department rule / unit name — the riskiest verdicts); all strings with an IIT mention that classify as `None`; the most
+frequent `other` strings; a random sample of `iit` strings. Every decision became a test case
+(`scripts/test_affil_cases.tsv`, run by `test_affil.py` before every pipeline run).
+
+Finding that shaped the design: **a campus PIN or locality is rarely unique to the IIT.** The department-only rule (a
+department + an IIT-specific location ⇒ IIT, used in v1 for Kharagpur 721302 and Rupnagar 140001) produced false positives
+wherever another organisation shares the location, e.g. Cancer Institute (WIA) departments with "Chennai 600036", PHFI's
+Centre for Chronic Disease Control / FORE School of Management / DST Technology Bhavan with "New Delhi 110016", NIPER
+Ahmedabad with "Palaj 382355", NSMCH hospital with "Bihta", GNRC hospital with "North Guwahati", and "Yale School of
+Medicine, P.O. Box 208016". Each token was therefore re-assigned after the review:
+
+| IIT | campus anchors kept (department rule allowed) | demoted to `city`/`shared`, because shared with |
+|---|---|---|
+| Bombay | Powai, 400076 | — (SAMEER on campus = strong exclusion) |
+| Madras | e-mail domain only | 600036 (Cancer Institute WIA, IMSc, ARCI, VIT, CSIR-CEERI), Zanzibar (Tanzanian bodies) |
+| Delhi | e-mail domain only | Hauz Khas / 110016 (institutional area; also Shenyang's postcode) |
+| Kanpur | 208016 | Kalyanpur (also an IIT (ISM) address and a Lucknow locality) |
+| Guwahati | 781039 | North Guwahati, Amingaon (GNRC hospital, Biotech Park, industrial park) |
+| Hyderabad | 502285, 502284 | Kandi mandal (Aurobindo Pharma R&D, agricultural engineering college), Sangareddy, Medak, ODF estate 502205 |
+| Bhubaneswar | Argul | Jatni / 752050 (NISER), Samantapuri / 751013 (CSIR-IMMT, ICT-IOC) |
+| Gandhinagar | e-mail domain only | Palaj / 382355 (NIPER Ahmedabad, Gujarat Biotechnology University), Chandkheda / 382424 (GTU, VGEC) |
+| Jodhpur | 342037, NH 62/65, Surpura Bypass, "Karwar, Jodhpur" | Karwar (also a town in Karnataka), 342011/342030 (DRDO Defence Lab, JNVU) |
+| Patna | 801106, 801103 | Bihta (NSMCH, ESIC MC, NSIT, NIELIT, CIPET), Amhara (mostly the Ethiopian region), Patliputra / 800013 |
+| Indore | Simrol, 453552 | Khandwa Road / 452017 (DAVV Takshashila campus, UGC-DAE CSR) |
+| Mandi | Kamand, 175005, 175075, Kataula | 175001 (Mandi town) |
+| BHU | e-mail domain only | the whole BHU campus (221005, "BHU") is shared with the university |
+| Palakkad | 678623 | Ahalia campus / 678557 / Kozhippara / Pudussery (Ahalia's schools), Kanjikode (industrial area) |
+| Tirupati | Chindepalle | Yerpedu / 517619 (IISER Tirupati), Renigunta / 517506 |
+| ISM | 826004 | Dhanbad (CIMFR, BIT Sindri, BCCL, colleges) |
+| Bhilai | Kutelabhata | Durg district, 491001/2, Sejbahar / 492015 (IIIT Bhilai, IIM Raipur, GEC Raipur) |
+| Goa | e-mail domain only | Farmagudi / Ponda / 403401 (NIT Goa until 2023, GEC, PES and GVM colleges, NFSU), Cuncolim / 403703 (NIT Goa) |
+| Jammu | Jagti, 181221, Paloura | Nagrota (Government Degree College; also Nagrota Bagwan, HP) |
+| Dharwad | Chikkamalligawad | WALMI / 580011 (NFSU Dharwad campus), 580007 |
+
+Other rules added from the review (all with tests):
+* **Explicit naming** also accepts "Indian Institute of <city>" (generalises v1's "Indian Institute of Ropar"), and IIT Goa's
+  school names with "Institute of Technology Goa" ("Indian" dropped), "Institute of Technology Madras" (word order separates
+  it from Anna University's *Madras Institute of Technology*), "IITM … Chennai" (IITM alone is the Indian Institute of Tropical
+  Meteorology, Pune).
+* **Abbreviations:** single-letter forms (IIT-B, IIT-M, IIT-G, IIT-J, IIT-P …) are ambiguous between IITs (Madras/Mandi,
+  Guwahati/Gandhinagar/Goa, Jodhpur/Jammu, Patna/Palakkad) and never count as unique. Four-letter forms (IITB, IITD, IITK,
+  IITG, IITH, IITJ, IITP, IITI) count on their own only if nothing else is named in the same part — "Institute of International
+  Trade and Development (IITD), University of Port Harcourt" and "IIITD&M Kancheepuram" matched IITD; otherwise they act as an
+  IIT mention that needs the city. Longer forms (IITGN, IITBBS, IITPKD, IITISM, IITBHU …) stay unique.
+* **E-mail addresses are not affiliation evidence:** they are stripped before unit/name matching (they still bring a string in
+  scope, so at most `uncertain`). v1 counted "@iitkgp.ac.in" as an IIT mention, which credited e.g. a Duke University address
+  and an IIT *Roorkee* address (`dsircar.iitkgp@gmail.com`) to IIT Kharagpur.
+* **Addresses abroad** (USA, UK, P.O. Box … ) never trigger the department rule or `uncertain`; Chinese postcodes collide with
+  PINs (110016 Shenyang, 221005 Xuzhou) and are `other`.
+* **Generic neighbours** appended to every v2 institute's `other`: IISERs, IISc, NIPERs, IIMs, IIITs, NITs, medical / dental /
+  pharmacy / nursing colleges, hospitals, polytechnics, colleges, universities, companies (Ltd, LLP, Inc), independent
+  researchers. They never outrank an explicit IIT mention (checked first).
+* **IIT (BHU):** the IIT shares campus, PIN and name with the university. "Banaras Hindu University" / "(BHU)" parts are part of
+  the IIT's official name and do not block the rescue (`name_parts`; likewise "Indian School of Mines" for ISM). Without an
+  IIT mention, engineering departments (ceramic, metallurgical, mining …, only at the IIT) count as IIT (BHU); departments that
+  exist at both (chemistry, physics, mathematics, humanistic studies, architecture) give `uncertain`; everything else is the
+  university (`other`). Known recall limitation: IIT (BHU) authors who write only "Banaras Hindu University" are lost.
+* **IIT (ISM):** "Indian School of Mines" is the institute's name before the 2016 conversion and counts.
+* **Hosted entities:** Technology Innovation Hubs run by an IIT count as that IIT (consistent with v1's iHub-AWaDH at Ropar):
+  iHub Drishti (Jodhpur), TiHAN (Hyderabad), IPTIF (Palakkad), IITM Pravartak (Madras), IITG TIDF. IITB-Monash Research Academy
+  counts (its PhD students are IIT Bombay students). Tenants of a campus are not the IIT: SAMEER (IIT Bombay campus),
+  companies and ARCI centres in the IITM Research Park (strong exclusions).
+* **v1 bugs found in the process and fixed** (v1 regression in §15.1 re-run after each change): "Mehta Family School" is
+  not unique to Roorkee (it also exists at IIT Guwahati and IIT Palakkad; v1 credited "Mehta Family School of Sustainability,
+  IIT Indore" to Roorkee); v1's non-IIT marker "drishti" is IIT Jodhpur's own iHub Drishti; e-mail evidence (above).
+  Final v1→v2 differences on the 64,944 v1 strings: Ropar 1, Kharagpur 145, Roorkee 32 distinct strings, every one read.
+* The department rule also accepts "Discipline of …" (IIT Indore / Gandhinagar / Jodhpur unit naming).
+
+Effect at the end of the review (distinct strings classified `iit`, before → after the review): e.g. Patna 1,728 → 1,627,
+Gandhinagar 2,349 → 2,129 (NIPER-A), Delhi 8,311 → 8,171; `uncertain` lists shrank to 0–80 distinct strings per institute
+(Delhi 80: small organisations in the Hauz Khas institutional area; BHU 12: genuinely ambiguous departments).
+
+### 15.5 Pipeline changes for scale
+* `common.get` enforces Crossref's concurrency limit (3) across all processes and threads with file-lock slots, so scripts
+  that run in parallel cannot exceed it together (tested: 12 parallel callers → peak 3).
+* `crossref_enrich.py` stores only the fields `finalize.py` reads (references reduced to DOIs, as finalize did on load);
+  abstracts, licences, links and funders made the cache several GB for 23 institutes.
+* `finalize.py` / `roster_channels.py`: "bare IIT" (IIT mention without any IIT's place) is tested against all 23 IITs.
+* `run_v2.sh merge|final|refresh` drives the v2 run; recall evaluation is skipped for an institute until its golden set exists.
+* Operational incident (2026-10-25, ~15:00): a usage-limit interruption paused the sub-agents (resumed from their saved
+  state), and a transient DataCite outage killed all four `datacite_enrich.py` workers during IIT Bombay's first pass (arXiv
+  DOIs left without metadata in that pass). Fix: a DOI whose lookup fails after the retries is logged and *not* cached, so
+  the next run retries it; it no longer kills the worker. The first pass is superseded by the final run anyway.
+* Pilot results (Palakkad, 2026-10-25) and the brief changes they caused: the roster brief now fixes the status set, gives every
+  non-current person a tenure range (mentor faculty from IIT Madras are `visiting (2015-2016)`), defines `joining_year`, names NIRF
+  data submissions as a primary source, and warns that archived lists go stale. `roster_channels.py` now bounds every non-current
+  person by their range (before: only `former`; no v1 roster has a ranged non-former person, so v1 is unaffected). The golden
+  brief now forbids institute IRINS portals, requires the affiliation on the paper for `high` (annual reports list pre-joining
+  papers), samples evenly through lists instead of the newest N, and caps 8 papers per person across sources. arXiv's
+  robots.txt asks for a 15 s crawl delay: the shared fetcher used 5 s during the pilots and now enforces 15 s; the pipeline's
+  arXiv pass uses the export API (documented limit one request / 3 s) at 5 s.
+* Known inconsistency carried from v1: the Kharagpur/Roorkee golden sets added DOIs by exact-title Crossref lookup afterwards; v2
+  golden sets carry only printed DOIs. Recall is therefore compared on title+DOI matching (unaffected); "recall on golden papers
+  with a DOI" is not comparable between v1 and v2 golden sets without the same lookup, which will be applied uniformly at
+  evaluation time and reported separately.
+* arXiv pacing (operator decision, 2026-10-25): because of the deadline the shared fetcher uses 5 s between arxiv.org requests,
+  not the 15 s crawl delay in arXiv's robots.txt. Safeguard: a 403 from arXiv (its blocking response) stops arXiv fetching for
+  all agents; HTTP 429/5xx back off exponentially. Only allowed paths (/abs, /pdf, /list) are fetched; /search is not.
+* Operational incident (2026-10-25/26): the ORCID harvest hung on IIT Kanpur (no progress for ~2.5 h, 0 % CPU, after a
+  machine suspend — the same failure mode as v1 §10). `orcid_people.py` now checkpoints every fetched profile and resumes; the
+  queue (`raw/run_orcid.sh`) runs each institute under a 2-hour watchdog with up to 5 resumed attempts.
+* First pass (affiliation channels + DBLP; ORCID only for Bombay and Delhi; no roster channels, no verification channels):
+  records per institute from 665 (Goa) to 27,905 (Delhi). Not comparable to v1 final numbers yet — the person and
+  verification channels are added in the final run.
+* ORCID limits (2026-10-26): (1) the anonymous public API has a **daily quota per IP**; after ~60,000 profile fetches in one
+  day (16 institutes harvested) every request returned HTTP 429 "exceeded the daily quota for anonymous usage". The queue was
+  stopped rather than retried; remaining: Madras, Kanpur (resumes from checkpoint), ISM (checkpoint), Bhilai, Goa, Jammu,
+  Dharwad. (2) The search API pages through at most 10,000 hits; IIT Madras has more. A search above 10,000 is now split by the
+  first letter of the family name plus a remainder query, and the union is checked against the reported total.
+
+### 15.6 Roster-driven channels for people affiliated mainly elsewhere
+The new IITs' rosters contain many `visiting` people (IIT Tirupati: 72 of 248 — mentor faculty from IIT Madras, guest
+faculty) and `adjunct` people (professors of practice, honorary professors). Their ORCID/DBLP works lists and co-author
+matches would bring in papers written at their home institutions, which the "likely" tier cannot tell apart where the
+publisher deposits no affiliation. v2 rule (`roster_channels.py`): for `visiting` and `adjunct` roster people a paper is
+accepted only if this IIT's affiliation is printed on it (Crossref deposited affiliation, arXiv affiliation); ORCID identity,
+co-author/venue matches, ORCID works and DBLP works are not used for them. v1 rosters also had visiting/adjunct people (Ropar 16,
+Kharagpur 10, Roorkee 43); the v2 re-run of the three applies the same rule.
+* IIT Bombay golden set (2026-10-26): 582 papers (target 650; annual reports from 2016 carry counts only), 151 high / 431 medium.
+  Two caveats kept in its notes: ~150 medium rows rest on on-page tenure evidence (no documented joining year) — the precision
+  audit samples these first; 71 arXiv rows were found via arXiv `/search` before the "no /search" decision reached the agent
+  (each has the IIT Bombay affiliation verified in the PDF, so they are kept). The golden brief now covers missing joining
+  years, count-only annual reports, the per-person cap with co-authors, truncated titles, homonyms and a time budget.
+* IIT Tirupati golden set: 313 papers, 26 high / 287 medium (the institute's profile API returned 502 and six department sites
+  were "under maintenance", so most faculty-page rows come from Wayback copies and homepages). Decision: affiliations of joint
+  centres that name the IIT explicitly (CAMOST, "joint initiative of IIT Tirupati & IISER Tirupati") count as the IIT (test
+  case added); the golden agent had excluded such papers, which only removes them from the benchmark, not from the dataset.
+* IIT Bombay roster (2026-10-26): 1,286 people (804 current, 189 former, 30 emeritus, 208 visiting, 56 adjunct), 30 units;
+  NIRF 2026 lists 749 regular faculty working, 635 matched (most unmatched NIRF rows are truncated first-name-only entries); 13
+  unit websites do not resolve in public DNS (archive + NIRF used). 179 people await ORCID lookup (quota). One duplicate removed
+  after review (associated-faculty listing). The 208 `visiting` rows include honour rolls of past visitors: harmless for the
+  pipeline because visiting people only contribute papers that print the IIT's affiliation (§15.6). The roster brief now
+  prescribes a quota-frugal ORCID route, the treatment of associated faculty, honour rolls, defunct units and NIRF-only people;
+  the shared fetcher no longer retries DNS/TLS failures (it reports them as DEAD).

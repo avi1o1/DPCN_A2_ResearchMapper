@@ -19,7 +19,7 @@ usage: python3 finalize.py <inst_key>
 """
 import os, re, sys, glob, json, html, collections, datetime, unicodedata
 from common import read_jsonl_gz, write_jsonl_gz, norm_doi, RAW, OUT, LOGS, YEAR_MIN, YEAR_MAX, INSTITUTES
-from affil import classify, IIT as IIT_RX, OTHER_IIT_CITY
+from affil import classify, bare_mention
 
 inst = sys.argv[1]
 TODO = "TODO"
@@ -162,7 +162,7 @@ def person_contradicted(c, cr):
 
 def bare_iit(s):
     """'Indian Institute of Technology' with no city -> ambiguous, never a contradiction."""
-    return bool(IIT_RX.search(s)) and not OTHER_IIT_CITY.search(s)
+    return bare_mention(inst, s)
 
 
 # ---------- person-level observed tenure (data-driven): years in which a channel person has an
