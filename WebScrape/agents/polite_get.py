@@ -7,8 +7,30 @@ Prints: <status>\t<path-of-cached-body>\t<final-url>
 * Honest User-Agent (no browser spoofing). Pages that answer with a bot challenge are reported, never bypassed.
 * Body cached by URL hash in the shared cache, so agents never fetch the same URL twice.
 """
-import sys, os, time, hashlib, fcntl, json, urllib.parse
+import sys, os, time, hashlib, json, urllib.parse
 import requests
+
+# blocking exclusive file lock: fcntl on Linux/macOS (unchanged); msvcrt byte-range lock on Windows (no fcntl there)
+if os.name == "nt":
+    import msvcrt
+
+    def _lock(f):
+        while True:
+            try:
+                f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1); return
+            except OSError:
+                time.sleep(0.05)
+
+    def _unlock(f):
+        f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
+else:
+    import fcntl
+
+    def _lock(f):
+        fcntl.flock(f, fcntl.LOCK_EX)
+
+    def _unlock(f):
+        fcntl.flock(f, fcntl.LOCK_UN)
 
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".runtime")   # git-ignored
 CACHE, LOCKS = os.path.join(BASE, "shared_cache"), os.path.join(BASE, "locks")
@@ -33,7 +55,7 @@ else:
     meta = None
     for attempt in range(6):
         lk = open(os.path.join(LOCKS, host + ".lock"), "a+")
-        fcntl.flock(lk, fcntl.LOCK_EX)
+        _lock(lk)
         try:
             lk.seek(0); last = float(lk.read().strip() or 0)
             wait = GAP.get(host, DEFAULT_GAP) - (time.time() - last)
@@ -41,7 +63,7 @@ else:
                 time.sleep(wait)
             lk.seek(0); lk.truncate(); lk.write(str(time.time())); lk.flush()
         finally:
-            fcntl.flock(lk, fcntl.LOCK_UN); lk.close()
+            _unlock(lk); lk.close()
         try:
             h = {"User-Agent": UA}
             if accept:
