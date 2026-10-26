@@ -31,18 +31,37 @@ _SLOTDIR = os.path.join(LOGS, "crossref_slots")
 os.makedirs(_SLOTDIR, exist_ok=True)
 
 
+def try_lock(f):
+    """Non-blocking exclusive lock on an open file; raises OSError if another process holds it.
+    fcntl on Linux/macOS (unchanged behaviour); msvcrt byte-range lock on Windows, where fcntl does not exist."""
+    if os.name == "nt":
+        import msvcrt
+        f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1)
+    else:
+        import fcntl
+        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+
+
+def unlock(f):
+    if os.name == "nt":
+        import msvcrt
+        f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
+    else:
+        import fcntl
+        fcntl.flock(f, fcntl.LOCK_UN)
+
+
 class _Slot:
     def __init__(self, url):
         self.f = None
         self.on = "api.crossref.org" in url
 
     def __enter__(self):
-        import fcntl
         while self.on:
             for k in range(CROSSREF_SLOTS):
                 f = open(os.path.join(_SLOTDIR, f"slot{k}"), "a")
                 try:
-                    fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                    try_lock(f)
                     self.f = f
                     return self
                 except OSError:
@@ -52,8 +71,7 @@ class _Slot:
 
     def __exit__(self, *a):
         if self.f:
-            import fcntl
-            fcntl.flock(self.f, fcntl.LOCK_UN); self.f.close()
+            unlock(self.f); self.f.close()
 
 
 def get(url, params=None, tries=8, timeout=120, **kw):
