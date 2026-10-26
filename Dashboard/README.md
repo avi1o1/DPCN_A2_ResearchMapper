@@ -5,6 +5,13 @@ Roorkee**, shown to the class, due **Week 3**. All the numbers it needs are alre
 is a presentation job: read the CSVs below, draw them, and make them filterable. You don't need to touch the
 scraping or enrichment code.
 
+**26 Oct 2026 (second round):** Key findings under the overview tiles (numbers built from the CSVs in
+`build_data.py`); in Quality, the PRL group lists all 16 papers (titles with maths taken from Crossref), plus cards
+for the Nature journals with IF and for journal papers by quality and team size; a new section "Beyond pairs"
+(Katz path, campus bridges, early connectors, citation-prediction test, hypergraph localisation, trio formation),
+built from `stats_matrix_centrality.py`, `stats_hypergraph.py`, `stats_simplicial.py`. Partners and Method swapped
+background bands so the sections still alternate. Checked in headless Edge, light and dark, no console errors.
+
 ## Status (11 Oct 2026): a working dashboard exists in `site/`
 
 A first full version is built as a **static website** (the "no server" option in section 3), following the design

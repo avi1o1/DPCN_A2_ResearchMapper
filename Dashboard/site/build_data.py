@@ -58,6 +58,27 @@ def packed_layout(G, aspect=1.25, gap=0.12):
     return pos
 
 
+FIRST_NUM = re.compile(r"-?\d+(?:\.\d+)?")
+# PRL titles whose maths OpenAlex lost ("JeffDescription ... Insulatorα−RuCl3"): the publisher's title from Crossref,
+# written in plain Unicode (the report has the same titles in LaTeX, Report/make_tables.py)
+PRL_TITLE = {
+    "10.1103/physrevlett.131.056202": "Anomalous Reentrant 5/2 Quantum Hall Phase at Moderate Landau-Level-Mixing Strength",
+    "10.1103/physrevlett.132.029602": "Das et al. Reply (reply to a comment)",
+    "10.1103/physrevlett.132.106501": "Fractional Quantum Hall States of the 𝒜 Phase in the Second Landau Level",
+    "10.1103/physrevlett.117.126403": "J_eff Description of the Honeycomb Mott Insulator α-RuCl₃",
+    "10.1103/physrevlett.116.072501": "Single and Double Beta-Decay Q Values among the Triplet ⁹⁶Zr, ⁹⁶Nb, and ⁹⁶Mo",
+    "10.1103/physrevlett.118.151802": "Measurement of the Neutrino Mixing Angle θ₂₃ in NOvA",
+    "10.1103/physrevlett.123.262701": "Discovery of an Exceptionally Strong β-Decay Transition of ²⁰F and Implications for the Fate of Intermediate-Mass Stars",
+    "10.1103/s7hr-y7zq": "Probing the Shell Effects on Fission: The New Superheavy Nucleus ²⁵⁷Sg",
+}
+
+
+def first_num(s):
+    """First number in a text value such as '0.689 (n = 1105)' or '72 (name)'."""
+    m = FIRST_NUM.search(str(s))
+    return float(m.group()) if m else None
+
+
 ROSTERS = os.path.join(REPO, "WebScrape", "rosters")
 SUPPLEMENT = os.path.join(REPO, "Enrichment", "cache")
 LINK_STATUS = os.path.join(HERE, "link_status.json")   # optional, written by check_links.py
@@ -151,8 +172,9 @@ def main():
                       for i in INSTS}
     ipp = C.defaultdict(list)
     for r in rd("important_journal_papers.csv"):
-        if len([x for x in ipp[(r["institution"], r["group"])]]) < 6:
-            ipp[(r["institution"], r["group"])].append({"title": r["title"], "journal": r["journal"], "year": int(r["year"]),
+        if r["group"] == "PRL" or len(ipp[(r["institution"], r["group"])]) < 6:     # PRL: every paper (professor's request)
+            title = PRL_TITLE.get(r["doi"].replace("https://doi.org/", ""), r["title"])
+            ipp[(r["institution"], r["group"])].append({"title": title, "journal": r["journal"], "year": int(r["year"]),
                                                         "cites": num(r["citations"], int), "doi": r["doi"], "faculty": r["faculty"]})
     D["important_papers"] = {f"{i}|{g}": v for (i, g), v in ipp.items()}
     ifr = rd("impact_factor.csv")
@@ -286,6 +308,92 @@ def main():
                            "deg": int(r["degree"]), "core": int(r["k_core"])} for r in rd("top_spreaders.csv")[:10]]
     D["cent_impact"] = [{k: num(v) if k not in ("centrality", "impact") else v for k, v in r.items()} for r in rd("centrality_vs_impact.csv")]
     D["tie_types"] = [{"type": r["tie_type"], "n": int(r["pair_paper_rows"]), "share": float(r["share"])} for r in rd("coauthor_tie_types.csv")]
+
+    # ---------------- second round: professor's follow-up (stats_if_authors.py)
+    D["nature"] = [{"journal": r["journal"], "if": float(r["if_openalex"]), "n": {i: int(r[i]) for i in INSTS}}
+                   for r in rd("nature_journals_if.csv")]
+    D["grid"] = {i: [{"row": r["row"], "papers": int(r["papers"]), "lt10": int(r["fewer than 10"]), "eq10": int(r["exactly 10"]),
+                      "gt10": int(r["more than 10"]), "share_lt10": float(r["share_fewer_than_10"]),
+                      "share_gt10": float(r["share_more_than_10"])} for r in rows]
+                 for i, rows in by_inst(rd("q1_if_author_grid.csv")).items()}
+    j10 = by_inst(rd("if10_small_team_journals.csv"))
+    D["if10_journals"] = {i: {"journals": len(j10[i]), "papers": sum(int(r["papers_fewer_than_10_authors"]) for r in j10[i]),
+                              "top": [{"journal": r["journal"], "if": float(r["if_openalex"]), "n": int(r["papers_fewer_than_10_authors"])}
+                                      for r in j10[i][:10]]} for i in INSTS}
+
+    # ---------------- second round: beyond pairs and PageRank (stats_matrix_centrality.py, stats_hypergraph.py, stats_simplicial.py)
+    fm, cs, hs, ss = (kv(n) for n in ("faculty_matrix_summary.csv", "citation_centrality_summary.csv",
+                                      "hypergraph_summary.csv", "simplicial_summary.csv"))
+    dyn = rd("dynamic_communicability_top.csv")
+    dyn_meta = dyn[-1]["measure"]                           # '(a = ..., faculty with degree > 0: 1156; Spearman ... 0.796, ...)'
+    test = [r for r in rd("citation_centrality_test.csv") if not r["metric"].startswith("(")]
+    pred = [r for r in rd("simplicial_prediction.csv") if r["score"] == "harmonic mean of edge weights"]
+    D["beyond"] = {
+        "katz_path": [{"f": float(r["f (a = f / lambda_1)"]), "deg": float(r["spearman_vs_degree"]),
+                       "eig": float(r["spearman_vs_eigenvector"])} for r in rd("faculty_katz_path.csv")],
+        "giant": int(fm["eigenvector: faculty with a non-zero score (its component)"]),
+        "eig_top10": fm["eigenvector weight (sum v^2) on its top 10 faculty"],
+        "eig_roorkee": fm["share of eigenvector weight (sum v^2) on Roorkee faculty"], "roorkee_share": fm["Roorkee share of faculty"],
+        "eig_in_core": int(fm["eigenvector top 10 inside the max k-core"]),
+        "campus": {r["pair"]: float(r["mean_cos_angle"]) for r in rd("campus_communicability.csv")},
+        "bridges": [{"name": r["faculty"], "inst": r["institution"], "dept": r["department"], "lost": float(r["campus_ratio_lost"]),
+                     "cross": int(r["direct_cross_campus_coauthors"]), "rank_btw": int(r["rank_betweenness"])}
+                    for r in rd("cross_campus_removal.csv")[:10]],
+        "bridges_over5": int(fm["faculty whose removal lowers rho_KR by more than 5%"]),
+        "btw_overlap": int(fm["top-10 overlap: rho_KR loss vs betweenness"]),
+        "early": [{"name": r["faculty"], "inst": r["institution"], "dept": r["department"], "rank": int(r["rank"]),
+                   "rank_deg": int(r["rank_degree"]), "deg": int(r["degree_all_years"]), "first": num(r["first_faculty_coauthorship_year"], int)}
+                  for r in dyn if r["measure"] == "broadcast"][:15],
+        "early_n": int(first_num(dyn_meta.split("degree > 0:")[1])),
+        "early_rho": first_num(dyn_meta.split("broadcast vs degree")[1]),
+        "predict": [{"metric": r["metric"], "nonzero": num(r["papers_with_nonzero_score"], int), "note": r["note"],
+                     "rho": num(r["spearman_within_year_mean"]), "partial": num(r["partial_spearman_given_past_citations"]),
+                     "band": num(r["spearman_within_year_and_past_band"]), "neg": num(r["bands_negative"], int),
+                     "bands": num(r["bands_used"], int)} for r in test],
+        "papers": int(cs["papers (nodes)"]), "hits_support": int(cs["HITS: authority support"]),
+        "hits_top_group": int(first_num(cs["HITS authority: top-100 papers of the most frequent faculty member"])),
+        "katz_top_group": int(first_num(cs["Katz: top-100 papers of the most frequent faculty member"])),
+        "cycle_papers": int(first_num(cs["largest cycle group: papers, citations, faculty"])), "rho_cit": cs["spectral radius rho"],
+        "hyper": {"authors": int(hs["authors (nodes)"]), "papers": int(hs["papers with >= 2 authors (hyperedges)"]),
+                  "big": int(hs["papers with more than 10 authors (n_authors)"]),
+                  "pair_share": hs["author pairs (counted per paper) that come from papers with more than 10 authors, share of all"],
+                  "top10": {m: hs[f"{m}: share of score weight (x^2) on its top 10 authors"] for m in ("linear", "max", "log-exp")},
+                  "logexp_authors": int(hs["log-exp: authors with a non-zero score"]), "logexp_faculty": int(hs["log-exp: faculty with a non-zero score"]),
+                  "lin_max_rho": first_num(hs["faculty Spearman: linear vs max (faculty non-zero in both)"]),
+                  "kept_linear": int(hs["linear without >10-author papers: top 20 overlap with linear top 20"]),
+                  "kept_coauthors": int(hs["distinct co-authors without >10-author papers: top 20 overlap with distinct co-authors (pairwise) top 20"]),
+                  "name_check": int(hs["check (names split): linear: faculty top 20 overlap with the main run"])},
+        "closure": [{"cap": int(r["cap"]), "cls": r["class"], "triples": int(r["triples"]), "closed": int(r["closed_later"]),
+                     "p": float(r["closure_probability"]), "lo": float(r["ci95_low"]), "hi": float(r["ci95_high"]),
+                     "share": num(r["share_of_new_trios"])} for r in rd("simplicial_closure_by_config.csv")],
+        "tri_closed_all": ss["all authors, papers <= 25 authors, all years: share of triangles closed by one paper"],
+        "tri_closed_fac": ss["faculty network: share of triangles closed by one paper with all three faculty"],
+        "fac3_papers": int(ss["papers with >= 3 faculty (only these can close a faculty triangle in one paper)"]),
+        "pred": {int(r["cap"]): {"auc": float(r["roc_auc"]), "p": float(r["p_value_auc_above_half"]), "ap_x": float(r["ap_over_random"])}
+                 for r in pred}}
+
+    # ---------------- key findings (overview): the report's list, with every number read from the results
+    yr = {i: (int(trend[i][0]["total"]), int(trend[i][-2]["total"])) for i in INSTS}
+    g10 = {i: next(r for r in D["grid"][i] if r["row"].startswith("IF > 10")) for i in INSTS}
+    B, H = D["beyond"], D["beyond"]["hyper"]
+    cl = {r["cls"].split(" ")[0]: r for r in B["closure"] if r["cap"] == 25 and r["share"] is not None}
+    D["findings"] = [
+        f"From 2016 to 2025, output grew {yr[INSTS[0]][1] / yr[INSTS[0]][0]:.1f}× at Kharagpur and {yr[INSTS[1]][1] / yr[INSTS[1]][0]:.1f}× at Roorkee, "
+        f"and most ranked journal papers are in Q1 ({float(quart[INSTS[0]]['q1_fraction_of_ranked']) * 100:.1f}% and {float(quart[INSTS[1]]['q1_fraction_of_ranked']) * 100:.1f}%).",
+        f"High-IF work comes from small teams: of the {g10[INSTS[0]]['papers']:,} Kharagpur and {g10[INSTS[1]]['papers']:,} Roorkee papers in journals "
+        f"with IF > 10, {g10[INSTS[0]]['share_lt10'] * 100:.0f}% and {g10[INSTS[1]]['share_lt10'] * 100:.0f}% have fewer than 10 authors.",
+        f"{D['selfcite']['Cluster (both IITs)']['share'] * 100:.1f}% of the citations between papers of the two IITs are self-citations, and at equal "
+        f"past citations a self-citation does not signal later impact the way an outside citation does.",
+        f"Faculty work inside their own campus: the two IITs share only {D['auth_summary']['Kharagpur-Roorkee faculty pairs']} faculty links, and removing "
+        f"Dr. {B['bridges'][0]['name']} alone lowers the campus communicability ratio by {B['bridges'][0]['lost'] * 100:.0f}%.",
+        f"Big teams distort the pair view: papers with more than 10 authors are {H['big'] / H['papers'] * 100:.1f}% of the co-authorship papers, "
+        f"but give {H['pair_share'] * 100:.0f}% of the author pairs.",
+        f"Rankings that use the whole network at once settle on one dense lab: removing the big-team papers changes {20 - H['kept_linear']} of the "
+        f"hypergraph's top 20 faculty, while a plain count of co-authors keeps {H['kept_coauthors']} of 20.",
+        f"Trios form along existing pairs: three authors who have all worked in pairs write together {cl['3']['p'] * 100:.1f}% of the time, "
+        f"against about {cl['0']['p'] * 1e9:.0f} in a billion with no earlier pair, and {(1 - cl['0']['share']) * 100:.0f}% of new trios follow at least one earlier pair.",
+        f"The collaboration network grew denser every year (ties ∝ faculty^{D['structure']['densification exponent a, ties ~ faculty^a']:.2f}) and survives "
+        f"random loss, but losing its biggest bridges splits the two campuses."]
 
     # ---------------- partners
     part = by_inst(rd("partners.csv"))

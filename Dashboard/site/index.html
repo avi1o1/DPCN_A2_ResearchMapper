@@ -284,6 +284,11 @@ section:not(.alt) .stat { background: var(--band); }
 .method { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 48px; }
 .method h3 { font-size: 19px; margin-bottom: 6px; }
 .method p { margin: 0; color: var(--fg2); font-size: 15.5px; }
+.kfhead { font-size: 21px; margin: 56px 0 0; }
+.findings { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 44px; counter-reset: kf; }
+.findings li { counter-increment: kf; display: grid; grid-template-columns: 26px 1fr; gap: 6px; font-size: 15.5px; line-height: 1.5; color: var(--fg); min-width: 0; }
+.findings li::before { content: counter(kf); font: 600 14px var(--font-display); color: var(--fg3); font-variant-numeric: tabular-nums; padding-top: 2px; }
+@media (max-width: 760px) { .findings { grid-template-columns: 1fr; } }
 footer { padding-block: 40px 60px; font-size: 12.5px; color: var(--fg3); border-top: 1px solid var(--hair); }
 footer p { margin: 4px 0; }
 
@@ -377,7 +382,7 @@ footer p { margin: 4px 0; }
   <div>
     <p class="navh">Network analysis</p>
     <div class="menu">
-      <a href="#citations">Citation network</a><a href="#flow">Indian links</a><a href="#collaboration">Collaboration</a><a href="#dynamics">Dynamics</a><a href="#partners">Partners</a>
+      <a href="#citations">Citation network</a><a href="#flow">Indian links</a><a href="#collaboration">Collaboration</a><a href="#dynamics">Dynamics</a><a href="#beyond">Beyond pairs</a><a href="#partners">Partners</a>
     </div>
   </div>
   <div class="foot">
@@ -398,6 +403,8 @@ footer p { margin: 4px 0; }
     <p class="lede">Every confirmed publication from <strong>IIT Kharagpur</strong> and <strong>IIT Roorkee</strong>, linked to its faculty,
       its journals, and the Indian research network around it.</p>
     <div class="kpis" id="kpis"></div>
+    <h3 class="kfhead rv">Key findings</h3>
+    <ol class="findings rv" id="findings"></ol>
   </div>
 </section>
 
@@ -469,8 +476,20 @@ footer p { margin: 4px 0; }
         </div>
         <div class="card rv">
           <h3>Important journals</h3>
-          <p class="cap">Papers in journal groups the field watches closely, 2016–2026. Open a group to see its most cited papers.</p>
+          <p class="cap">Papers in journal groups the field watches closely, 2016–2026. Open a group to see its most cited papers (PRL: all of them).</p>
           <div id="importantList"></div>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="card rv">
+          <h3>Nature journals and their IF</h3>
+          <p class="cap">Every Nature journal with a paper from the two IITs, 2016–2026, with its IF (OpenAlex 2-year mean citedness).</p>
+          <div id="natureList"></div>
+        </div>
+        <div class="card rv">
+          <h3>High-IF papers by team size</h3>
+          <p class="cap">Journal papers by quality and number of authors. Exactly 10 authors has its own column, so every row adds up.</p>
+          <div id="gridTable"></div>
         </div>
       </div>
       <div class="card rv">
@@ -835,8 +854,62 @@ footer p { margin: 4px 0; }
   </div>
 </section>
 
+<!-- ================= BEYOND PAIRS AND PAGERANK ================= -->
+<section id="beyond">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Beyond pairs and PageRank</p>
+      <h2>Collaboration happens in separate, dense labs.</h2>
+      <p class="lede">Matrix functions count every walk through a network, and a hypergraph keeps each paper as one group instead of many pairs. These results are for both IITs together, so the institute switch does not change this section.</p>
+    </div>
+    <div class="strip rv" id="beyStrip"></div>
+    <div class="grid2">
+      <div class="card rv">
+        <h3>Global rankings settle on one lab</h3>
+        <p class="cap">Katz counts every walk that ends at a person, a walk of length k weighted aᵏ. Small a gives the degree ranking, a close to 1/λ₁ gives the eigenvector ranking (Spearman ρ over the largest component).</p>
+        <div class="chart short" id="chKatz"></div>
+        <p class="note" id="katzNote"></p>
+      </div>
+      <div class="card rv">
+        <h3>Who links the two campuses</h3>
+        <p class="cap">Share of the campus communicability ratio lost when one faculty member is removed. Communicability counts all walks between two people, shorter walks counting more.</p>
+        <div id="bridgeList"></div>
+        <p class="note" id="bridgeNote"></p>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="card rv">
+        <h3>Early connectors</h3>
+        <p class="cap">Time-respecting walks over the yearly networks (dynamic communicability). A high broadcast score means a person's early ties lead, through later ties, to many others. Listed: faculty in the broadcast top 15 whose degree rank is at least twice their broadcast rank and 10 places lower (left number = broadcast rank).</p>
+        <div id="earlyList"></div>
+        <p class="note" id="earlyNote"></p>
+      </div>
+      <div class="card rv">
+        <h3>Papers as groups</h3>
+        <p class="cap">Nonlinear eigenvector centrality on the hypergraph of all authors (Tudisco and Higham, 2021). Bar = share of each model's weight on its top 10 authors.</p>
+        <div id="hyperBars"></div>
+        <p class="note" id="hyperNote"></p>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="card rv">
+        <h3>Can network scores predict later citations?</h3>
+        <p class="cap">Each score on the citation network at the end of 2020, against the citations a paper got worldwide in 2021–2026 (Spearman ρ, mean within publication year).</p>
+        <div class="chart short" id="chPredict"></div>
+        <p class="note" id="predictNote"></p>
+      </div>
+      <div class="card rv">
+        <h3>Do pairs become trios?</h3>
+        <p class="cap">Chance that three authors write a joint paper in 2022–2026, by how many pairs among them had written together by 2021 (log scale, simplicial closure).</p>
+        <div class="chart short" id="chClosure"></div>
+        <p class="note" id="closureNote"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PARTNERS ================= -->
-<section id="partners">
+<section id="partners" class="alt">
   <div class="wrap">
     <div class="head rv">
       <p class="eyebrow">Partners</p>
@@ -859,7 +932,7 @@ footer p { margin: 4px 0; }
 </section>
 
 <!-- ================= METHOD ================= -->
-<section id="method" class="alt">
+<section id="method">
   <div class="wrap">
     <div class="head rv">
       <p class="eyebrow">Method</p>
@@ -871,6 +944,7 @@ footer p { margin: 4px 0; }
       <div><h3>Journals and conferences</h3><p>Journal quartiles come from Scimago for the year of publication. Conference ranks come from the CORE portal edition in force that year.</p></div>
       <div><h3>Networks</h3><p>Citation links and Indian partners come from OpenAlex. Influence uses PageRank (damping 0.85), also without self-citations and rescaled by age; communities use Louvain over ten random seeds, checked with Leiden. Robustness and SIR spreading are simulated on the faculty network.</p></div>
       <div><h3>Read with care</h3><p>h-index and i10 here cover 2016–2026 papers only, so they are about half a career value. IF is OpenAlex's 2-year mean citedness, which runs higher than Clarivate's JIF. Citation counts are as of October 2026. PageRank favours older papers, and 88% of citations inside an institute are self-citations.</p></div>
+      <div><h3>Beyond pairs</h3><p>Katz, communicability and HITS are computed from the adjacency matrix; scores that are zero outside one part of the network are compared only where they are non-zero. The hypergraph and trio results use the co-authorship file: papers with a linked faculty member and at most 50 authors. Every number was checked a second way.</p></div>
       <div><h3>Scope</h3><p>Science and engineering only: papers whose OpenAlex topic is in the Physical or Life Sciences. Faculty of humanities, management, law, education and medical units are not included.</p></div>
     </div>
   </div>
@@ -1203,10 +1277,20 @@ footer p { margin: 4px 0; }
     const groups = D.important[INSTS[0]].map(g => g.group);
     document.getElementById("importantList").innerHTML = groups.map(g => {
       const tot = shown().map(i => `<span class="dot ${i === KGP ? "k" : "r"}"></span><b>${D.important[i].find(x => x.group === g).total}</b>`).join(" &nbsp; ");
-      const ps = shown().flatMap(i => (D.important_papers[i + "|" + g] || []).map(p => Object.assign({ i }, p))).sort((a, b) => (b.cites || 0) - (a.cites || 0)).slice(0, 6);
+      const ps = shown().flatMap(i => (D.important_papers[i + "|" + g] || []).map(p => Object.assign({ i }, p))).sort((a, b) => (b.cites || 0) - (a.cites || 0)).slice(0, g === "PRL" ? undefined : 6);
       return `<details class="imp"><summary><span>${esc(g)}</span><span class="v">${tot}</span></summary>
         <ol class="rank clamp">${ps.map((p, n) => `<li><span class="i">${n + 1}</span><span class="t"><a href="${esc(p.doi)}" target="_blank" rel="noopener"><b>${esc(p.title)}</b></a>
         <span class="m">${esc(p.journal)} · ${p.year} · ${esc(p.faculty || SHORT[p.i])}</span></span><span class="v">${p.cites == null ? "–" : fmt(p.cites)}<small>citations</small></span></li>`).join("")}</ol></details>`; }).join("");
+    // Nature journals with IF, and journal papers by quality and team size (stats_if_authors.py)
+    document.getElementById("natureList").innerHTML = `<div class="tablewrap"><table class="mini"><thead><tr><th>Journal</th><th class="n">IF</th>` +
+      shown().map(i => `<th class="n"><span class="dot ${i === KGP ? "k" : "r"}"></span>${SHORT[i]}</th>`).join("") + `</tr></thead><tbody>` +
+      D.nature.filter(j => shown().some(i => j.n[i])).map(j => `<tr><td>${esc(j.journal)}</td><td class="n"${j.if <= 10 ? ` style="color:var(--fg2)"` : ""}>${j.if.toFixed(1)}</td>` +
+        shown().map(i => `<td class="n">${j.n[i] || `<span style="color:var(--fg3)">–</span>`}</td>`).join("") + `</tr>`).join("") +
+      `</tbody></table></div><p class="note">All have an IF above 10 except Nature Cities (${D.nature.find(j => j.journal === "Nature Cities").if.toFixed(1)}). PRL (all ${shown().map(i => D.important[i].find(x => x.group === "PRL").total).join(" + ")} papers in the list on the left) has an IF of about 9 on this scale.</p>`;
+    instTabs("gridTable", i => { const G = D.if10_journals[i]; return `<div class="tablewrap"><table class="mini"><thead><tr><th></th><th class="n">Papers</th><th class="n">&lt; 10</th><th class="n">10</th><th class="n">&gt; 10</th><th class="n">&gt; 10 share</th></tr></thead><tbody>` +
+      D.grid[i].map(r => `<tr><td>${esc(r.row)}</td><td class="n">${fmt(r.papers)}</td><td class="n">${fmt(r.lt10)}</td><td class="n">${fmt(r.eq10)}</td><td class="n">${fmt(r.gt10)}</td><td class="n">${pct(r.share_gt10, 1)}</td></tr>`).join("") +
+      `</tbody></table></div><h4 class="sub">Journals of the IF &gt; 10 papers with fewer than 10 authors (${fmt(G.papers)} papers in ${G.journals} journals)</h4>` +
+      rankList(G.top.map((j, n) => `<li><span class="i">${n + 1}</span><span class="t"><b>${esc(j.journal)}</b><span class="pill">IF ${j.if.toFixed(1)}</span></span><span class="v">${fmt(j.n)}<small>papers</small></span></li>`)); });
     // CORE venues
     instTabs("coreVenues", i => rankList((D.core_venues[i] || []).map((v, n) =>
       `<li><span class="i">${n + 1}</span><span class="t"><b>${esc(v.conf)}</b><span class="pill">CORE ${v.rank}</span></span><span class="v">${v.papers}<small>papers</small></span></li>`)));
@@ -1464,6 +1548,71 @@ footer p { margin: 4px 0; }
     });
   };
 
+  /* ---------------- 9c. beyond pairs and PageRank (second round) ---------------- */
+  const BY = D.beyond;
+  builders.chKatz = () => Object.assign(base(), {
+    tooltip: Object.assign(base().tooltip, { formatter: ps => `a·λ₁ = ${ps[0].value[0]}<br>` + ps.map(p => `${p.marker}${p.seriesName}&nbsp;&nbsp;<b>${p.value[1].toFixed(3)}</b>`).join("<br>") }),
+    legend: { top: 0, right: 0, icon: "circle", itemWidth: 8, textStyle: { color: css("--fg2") } },
+    grid: { left: 8, right: 16, top: 32, bottom: 30, containLabel: true },
+    xAxis: axisX({ type: "value", min: 0, max: 1, name: "Katz parameter a·λ₁", nameLocation: "middle", nameGap: 26, nameTextStyle: { color: css("--fg2") } }),
+    yAxis: axisY({ type: "value", min: 0.6, max: 1 }),
+    series: [lineS("vs degree", BY.katz_path.map(r => [r.f, r.deg]), css("--kgp")), lineS("vs eigenvector", BY.katz_path.map(r => [r.f, r.eig]), css("--rkg"))]
+  });
+  const PRED = { "in-degree": "In-degree", PageRank: "PageRank", Katz: "Katz", "internal self-citations by test year": "Self-citations by 2020",
+    "internal non-self citations by test year": "Other internal citations by 2020", "worldwide citations up to test year (baseline)": "Worldwide citations by 2020" };
+  builders.chPredict = () => {
+    const rows = BY.predict.filter(r => r.rho != null);
+    return Object.assign(base(), {
+      tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const r = rows[p.dataIndex]; return `${esc(PRED[r.metric] || r.metric)}<br>ρ = <b>${r.rho.toFixed(2)}</b>` +
+        (r.partial != null ? `<br>after past citations: ${r.partial >= 0 ? "+" : "−"}${Math.abs(r.partial).toFixed(3)}` : ""); } }),
+      grid: { left: 8, right: 40, top: 8, bottom: 8, containLabel: true }, xAxis: axisX({ type: "value", show: false, max: 1 }),
+      yAxis: axisY({ type: "category", inverse: true, data: rows.map(r => PRED[r.metric] || r.metric), splitLine: { show: false }, axisLabel: { color: css("--fg"), width: labelW(), overflow: "truncate" } }),
+      series: [{ type: "bar", barWidth: 14, label: { show: true, position: "right", color: css("--fg2"), formatter: p => (+p.value).toFixed(2) },
+        data: rows.map(r => ({ value: r.rho, itemStyle: { color: r.metric.includes("baseline") ? css("--fg3") : css("--c5"), borderRadius: [0, 7, 7, 0] } })) }]
+    });
+  };
+  builders.chClosure = () => {
+    const ser = (cap, c, dx) => ({ name: `papers with at most ${cap} authors`, type: "scatter", symbolSize: 10, itemStyle: { color: c, borderColor: css("--card"), borderWidth: 1 },
+      data: BY.closure.filter(r => r.cap === cap && r.share != null).map((r, j) => ({ value: [j + dx, r.p], r })) });
+    return Object.assign(base(), {
+      tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const r = p.data.r; return `${esc(r.cls)}<br>${p.marker}${esc(p.seriesName)}<br>chance <b>${r.p.toPrecision(2)}</b> (95%: ${r.lo.toPrecision(2)}–${r.hi.toPrecision(2)})<br>${fmt(r.closed)} new trios of ${fmt(r.triples)}`; } }),
+      legend: { top: 0, left: 0, icon: "circle", itemWidth: 8, textStyle: { color: css("--fg2") } },
+      grid: { left: 8, right: 16, top: 36, bottom: 30, containLabel: true },
+      xAxis: axisX({ type: "value", min: -0.5, max: 3.5, interval: 0.5, name: "earlier pairs among the three", nameLocation: "middle", nameGap: 26,
+        nameTextStyle: { color: css("--fg2") }, axisLabel: { color: css("--fg2"), formatter: v => Number.isInteger(v) && v >= 0 ? String(v) : "" } }),
+      yAxis: axisY({ type: "log", min: 1e-9, max: 0.1, axisLabel: { color: css("--fg2"), formatter: v => v >= 0.001 ? +(v * 100).toPrecision(1) + "%" : "10⁻" + "⁰¹²³⁴⁵⁶⁷⁸⁹"[-Math.round(Math.log10(v))] } }),
+      series: [ser(25, css("--kgp"), -0.12), ser(10, css("--rkg"), 0.12)]
+    });
+  };
+  const sgn = v => (v < 0 ? "−" : "+") + Math.abs(v).toFixed(3);
+  function renderBeyond() {
+    const H = BY.hyper, cl = BY.closure.filter(r => r.cap === 25 && r.share != null), c = BY.campus;
+    document.getElementById("beyStrip").innerHTML = `
+      <div class="stat"><div class="big">${pct(BY.eig_top10)}<small>Roorkee ${pct(BY.eig_roorkee, 1)}</small></div><div class="lbl">of eigenvector weight on 10 Kharagpur faculty; Roorkee faculty are ${pct(BY.roorkee_share)} of all</div></div>
+      <div class="stat"><div class="big">${c["Kharagpur - Roorkee"].toFixed(3)}</div><div class="lbl">communicability angle between the campuses (within Kharagpur ${c["Kharagpur - Kharagpur"].toFixed(2)}, within Roorkee ${c["Roorkee - Roorkee"].toFixed(2)})</div></div>
+      <div class="stat"><div class="big">${pct(H.pair_share)}<small>from ${pct(H.big / H.papers, 1)}</small></div><div class="lbl">of author pairs come from the papers with more than 10 authors</div></div>
+      <div class="stat"><div class="big">${(cl[3].p * 100).toFixed(1)}%<small>vs ${(cl[0].p * 1e9).toFixed(0)} in 10⁹</small></div><div class="lbl">chance of a trio when all three pairs exist, vs no earlier pair</div></div>`;
+    document.getElementById("katzNote").textContent = `The eigenvector lives on the ${fmt(BY.giant)} faculty of the largest component, and ${BY.eig_in_core} of its top 10 are in the top k-core, a dense Kharagpur materials group. So it mostly measures closeness to that one lab.`;
+    document.getElementById("bridgeList").innerHTML = rankList(BY.bridges.map((b, n) => `<li><span class="i">${n + 1}</span><span class="t"><b>${esc(b.name)}</b><span class="m"><span class="dot ${b.inst === KGP ? "k" : "r"}"></span>${esc(b.dept)} · ${b.cross} co-author${b.cross === 1 ? "" : "s"} on the other campus · betweenness rank ${b.rank_btw}</span></span><span class="v">${pct(b.lost)}<small>lost</small></span></li>`));
+    document.getElementById("bridgeNote").textContent = `Only ${BY.bridges_over5} faculty lower the ratio by more than 5%. Betweenness finds ${BY.btw_overlap} of these top 10.`;
+    // early connectors: in the broadcast top 15, with a degree rank at least twice the broadcast rank and 10 places lower
+    document.getElementById("earlyList").innerHTML = rankList(BY.early.filter(e => e.rank_deg >= 2 * e.rank && e.rank_deg - e.rank >= 10).map(e => `<li><span class="i">${e.rank}</span><span class="t"><b>${esc(e.name)}</b><span class="m"><span class="dot ${e.inst === KGP ? "k" : "r"}"></span>${esc(e.dept)} · first faculty co-author ${e.first ?? "–"}</span></span><span class="v">${e.rank_deg}<small>degree rank</small></span></li>`));
+    const jump = BY.early.filter(e => e.rank_deg > 50);
+    const parts = jump.map(e => `${e.name} (${e.rank}th on broadcast, ${e.rank_deg}th on degree)`);
+    document.getElementById("earlyNote").textContent = `Broadcast mostly follows the degree (ρ = ${BY.early_rho.toFixed(2)} over ${fmt(BY.early_n)} faculty with a faculty co-author). The exceptions are early connectors: ` +
+      (parts.length > 1 ? parts.slice(0, -1).join(", ") + " and " + parts[parts.length - 1] : parts.join("")) + ".";
+    const M = [["linear", "Linear (paper = sum of its authors)"], ["max", "Max (paper = its best author)"], ["log-exp", "Log-exp (paper = product of its authors)"]];
+    document.getElementById("hyperBars").innerHTML = `<ol class="bars">${M.map(([k, l]) => `<li><span>${l}</span><span class="v">${pct(H.top10[k], 1)}</span>
+      <span class="bar"><span style="width:${(H.top10[k] * 100).toFixed(1)}%;background:var(--c5)"></span></span></li>`).join("")}</ol>`;
+    document.getElementById("hyperNote").textContent = `${fmt(H.authors)} authors of ${fmt(H.papers)} papers. Each model settles on a different lab (linear vs max, ρ = ${H.lin_max_rho.toFixed(2)}), and log-exp collapses onto ${H.logexp_authors} authors (${H.logexp_faculty} faculty). ` +
+      `Without the ${fmt(H.big)} papers of more than 10 authors, the linear top 20 changes ${20 - H.kept_linear} names; a plain count of co-authors keeps ${H.kept_coauthors} of 20.`;
+    const p = k => BY.predict.find(r => r.metric === k);
+    document.getElementById("predictNote").textContent = `HITS is left out: it is non-zero for only ${p("HITS authority").nonzero} papers in the 2020 network (on the full network ${fmt(BY.hits_support)} of ${fmt(BY.papers)}, ${BY.hits_top_group} of its top 100 from one chemistry group). ` +
+      `At equal past citations, self-citations by 2020 go with slightly fewer later citations (partial ρ ${sgn(p("internal self-citations by test year").partial)}, negative in ${p("internal self-citations by test year").neg} of ${p("internal self-citations by test year").bands} groups), while other internal citations do not (${sgn(p("internal non-self citations by test year").partial)}).`;
+    document.getElementById("closureNote").textContent = `This is a chance per trio. New trios still come mostly from the many trios with fewer pairs: ${pct(cl[0].share)} had no earlier pair, ${pct(cl[1].share)} had one and ${pct(cl[2].share)} had two, while only ${pct(cl[3].share, 1)} closed an open triangle. ` +
+      `Which open triangle closes is hard to predict (best ROC AUC ${BY.pred[25].auc.toFixed(2)}). ${pct(BY.tri_closed_all)} of all triangles come from one shared paper (faculty only: ${pct(BY.tri_closed_fac)}).`;
+  }
+
   /* ---------------- 10. partners ---------------- */
   builders.chPartners = () => {
     const insts = shown(), rows = [];
@@ -1503,6 +1652,8 @@ footer p { margin: 4px 0; }
   /* ---------------- HTML panels ---------------- */
   function renderHtml() {
     renderKpis();
+    document.getElementById("findings").innerHTML = D.findings.map(f => `<li>${esc(f)}</li>`).join("");
+    renderBeyond();
     // top journals
     instTabs("topJournals", i => rankList(D.top_journals[i].map((j, n) => `<li><span class="i">${n + 1}</span><span class="t"><b>${esc(j.journal)}</b>${j.q ? `<span class="pill">${j.q}</span>` : ""}${j.if != null ? `<span class="pill" title="OpenAlex 2-year mean citedness">IF ${j.if.toFixed(1)}</span>` : ""}</span><span class="v">${fmt(j.papers)}<small>papers</small></span></li>`)));
     renderNew();
