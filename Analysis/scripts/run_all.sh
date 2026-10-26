@@ -19,5 +19,10 @@ python stats_citation_dynamics.py    # self-citation, PageRank corrections, dist
 python stats_authorship_dynamics.py  # Leiden, hierarchy, robustness, SIR spreading, growth (needs faculty_centrality.csv)
 python stats_connectivity.py
 python stats_citing_top.py
+# second round
+python stats_if_authors.py         # PRL list, Nature journals' IF, IF > 10 with < 10 authors, Q1 / IF / team-size grid
+python stats_matrix_centrality.py  # Katz, HITS, communicability, dynamic communicability (needs faculty_centrality.csv)
+python stats_hypergraph.py         # nonlinear hypergraph centrality (Tudisco & Higham 2021)
+python stats_simplicial.py         # simplicial closure (Benson et al. 2018)
 python stats_rosters.py            # yearly faculty lists (needs WebScrape/scripts/wayback_rosters.py output)
 echo STATS-DONE

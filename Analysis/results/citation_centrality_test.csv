@@ -1,0 +1,9 @@
+﻿metric,papers,papers_with_nonzero_score,note,spearman_within_year_mean,partial_spearman_given_past_citations,spearman_within_year_and_past_band,bands_used,bands_negative,spearman_2016,spearman_2017,spearman_2018,spearman_2019,spearman_2020,top1pct_hit_rate
+in-degree,16174,6854,,0.382,-0.081,-0.085,16,15,0.445,0.423,0.439,0.396,0.208,0.031
+PageRank,16174,16174,,0.361,-0.083,-0.083,16,15,0.43,0.4,0.405,0.37,0.201,0.043
+Katz,16174,6854,,0.38,-0.08,-0.087,16,15,0.446,0.418,0.436,0.396,0.206,0.025
+HITS authority,16174,30,not rankable: non-zero for only 30 papers (fewer than the top 1% = 161),,,,,,,,,,,
+internal self-citations by test year,16174,6571,,0.358,-0.087,-0.093,16,15,0.407,0.391,0.413,0.378,0.203,0.031
+internal non-self citations by test year,16174,926,,0.19,0.036,0.044,16,2,0.287,0.236,0.211,0.149,0.068,0.093
+worldwide citations up to test year (baseline),16174,12192,,0.75,,,,,0.843,0.823,0.818,0.773,0.495,0.348
+"(network up to 2020: rho 2.073, Katz a 0.241; HITS s1/s2 1.1383, authority support 30, one sign True)",16179,,,,,,,,,,,,,

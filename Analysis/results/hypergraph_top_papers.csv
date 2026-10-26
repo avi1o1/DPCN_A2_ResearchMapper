@@ -1,0 +1,31 @@
+﻿model,rank,paper_doi,year,authors,faculty_on_paper
+linear,1,https://doi.org/10.1039/d2nr00132b,2022,11,Chandra Sekhar Tiwary
+linear,2,https://doi.org/10.1002/smll.202201667,2022,11,Basudev Lahiri; Chandra Sekhar Tiwary
+linear,3,https://doi.org/10.48550/arxiv.2109.02779,2021,10,Chandra Sekhar Tiwary
+linear,4,https://doi.org/10.1016/j.mattod.2021.08.008,2021,14,Amreesh Chandra; Chandra Sekhar Tiwary; Vidya Kochat
+linear,5,https://doi.org/10.1002/smll.202270144,2022,11,Basudev Lahiri; Chandra Sekhar Tiwary
+linear,6,https://doi.org/10.1007/s00339-022-05425-z,2022,11,Chandra Sekhar Tiwary
+linear,7,https://doi.org/10.48550/arxiv.2109.02783,2021,11,Chandra Sekhar Tiwary
+linear,8,https://doi.org/10.1039/d1ra03097c,2021,11,Ashok Kumar Gupta; Chandra Sekhar Tiwary; Partha Sarathi Ghosal
+linear,9,https://doi.org/10.1016/j.mattod.2020.11.023,2021,12,Amreesh Chandra; Basudev Lahiri; Chandra Sekhar Tiwary
+linear,10,https://doi.org/10.1016/j.mtnano.2023.100374,2023,9,Basudev Lahiri; Chandra Sekhar Tiwary; Tarun Kumar Kundu
+log-exp,1,https://doi.org/10.1007/978-981-10-8715-8_1,2018,2,Sandeep Kumar
+log-exp,2,https://doi.org/10.1007/978-981-13-7131-8_1,2019,2,Sandeep Kumar
+log-exp,3,https://doi.org/10.1007/978-981-10-8715-8_7,2018,2,Sandeep Kumar
+log-exp,4,https://doi.org/10.1007/978-981-10-8715-8_6,2018,2,Sandeep Kumar
+log-exp,5,https://doi.org/10.1007/978-981-10-8715-8_5,2018,2,Sandeep Kumar
+log-exp,6,https://doi.org/10.1007/978-981-10-8715-8_4,2018,2,Sandeep Kumar
+log-exp,7,https://doi.org/10.1007/978-981-10-8715-8_3,2018,2,Sandeep Kumar
+log-exp,8,https://doi.org/10.1007/978-981-10-8715-8_2,2018,2,Sandeep Kumar
+log-exp,9,https://doi.org/10.1007/978-981-13-7131-8_2,2019,2,Sandeep Kumar
+log-exp,10,https://doi.org/10.1007/s10462-017-9563-5,2017,2,Sandeep Kumar
+max,1,https://doi.org/10.1109/jiot.2023.3238116,2023,6,Sudip Misra
+max,2,https://doi.org/10.1109/jsac.2020.3020678,2021,4,Sudip Misra
+max,3,https://doi.org/10.1109/tvt.2020.2985913,2020,5,Sudip Misra
+max,4,https://doi.org/10.1002/widm.1276,2018,3,Sudip Misra
+max,5,https://doi.org/10.1017/9781108913560,2021,3,Sudip Misra
+max,6,https://doi.org/10.1109/tpds.2020.3013892,2021,6,Sudip Misra
+max,7,https://doi.org/10.1109/jiot.2018.2879459,2019,4,Sudip Misra
+max,8,https://doi.org/10.1109/infocomwkshps50562.2020.9162706,2020,4,Sudip Misra
+max,9,https://doi.org/10.1109/jiot.2021.3082838,2021,4,Sudip Misra
+max,10,https://doi.org/10.1007/s41403-021-00229-8,2021,3,Sudip Misra

@@ -2,12 +2,14 @@
 Citing papers = the same set as the citation in-flow in stats_citation.py: works of another Indian institution that cite
 the institute's papers ('in_from_indian' edges), plus papers of the other IIT that cite it (cross-institute 'internal'
 edges). They are ranked by their own worldwide citation count (OpenAlex cited_by_count, at fetch time).
+OpenAlex sometimes keeps a paper twice (the journal version and a repository copy, e.g. SciPy 1.0), so works with the
+same normalised title are counted once, keeping the most-cited record.
 Online step: one OpenAlex request per 100 citing works (~1,410 requests). Counts are cached in
 ../cache/citing_counts.json and details of the top papers in ../cache/citing_details.json, so a re-run is offline.
 An OpenAlex key (OPENALEX_API_KEY) is used when set; the works endpoint also answers without one.
 Output (results/): top_citing_papers.csv
 usage: python stats_citing_top.py"""
-import os, json, time, collections as C
+import os, re, json, time, collections as C
 import requests
 from common import INSTS, DATA, CACHE, read_csv, write_csv
 
@@ -74,14 +76,22 @@ def main():
     print(f"{len(allids):,} distinct citing works")
     counts = fill(load(COUNTS), COUNTS, allids, "id,cited_by_count", lambda w: w["cited_by_count"])
 
-    tops = {inst: sorted((w for w in d if counts.get(w) is not None), key=lambda w: -counts[w])[:TOP]
-            for inst, d in cited.items() if inst in INSTS.values()}
-    details = fill(load(DETAILS), DETAILS, {w for ws in tops.values() for w in ws},
+    ranked = {inst: sorted((w for w in d if counts.get(w) is not None), key=lambda w: -counts[w])[:3 * TOP]
+              for inst, d in cited.items() if inst in INSTS.values()}
+    details = fill(load(DETAILS), DETAILS, {w for ws in ranked.values() for w in ws},
                    "id,doi,display_name,publication_year,primary_location,authorships",
                    lambda w: {"title": w["display_name"], "doi": w["doi"], "year": w["publication_year"],
                               "journal": ((w.get("primary_location") or {}).get("source") or {}).get("display_name"),
                               "institutions": sorted({i["display_name"] for a in w["authorships"] for i in a["institutions"]
                                                       if i.get("country_code") == "IN"})})
+    tops = {}
+    for inst, ws in ranked.items():                # drop duplicate records of the same paper (lower count goes)
+        seen, tops[inst] = set(), []
+        for w in ws:
+            key = re.sub(r"[^a-z0-9]", "", ((details.get(w) or {}).get("title") or w).lower())
+            if key not in seen and len(tops[inst]) < TOP:
+                seen.add(key)
+                tops[inst].append(w)
     rows = []
     for inst in INSTS.values():
         for rank, w in enumerate(tops[inst], 1):
