@@ -372,6 +372,77 @@ def main():
         "pred": {int(r["cap"]): {"auc": float(r["roc_auc"]), "p": float(r["p_value_auc_above_half"]), "ap_x": float(r["ap_over_random"])}
                  for r in pred}}
 
+    # ---------------- second round: two layers and departments (stats_coauthor_citation.py, stats_bowtie.py,
+    # stats_cross_dept.py, stats_dept_areas.py); 'strict' citations = citing and cited paper share no author
+    cc, da, dp = kv("coauthor_citation_summary.csv"), kv("dept_area_summary.csv"), kv("dept_area_prediction.csv")
+    bt = {r["metric"]: r["value"] for r in rd("bowtie_summary.csv") if r["definition"] == "pure"}
+    bts = {r["metric"]: r["value"] for r in rd("bowtie_summary.csv") if r["definition"] == "strict"}
+    prec = [r for r in rd("coauthor_citation_precedence.csv") if r["definition"] == "strict"]
+    cx = kv("cross_dept_summary.csv")
+    cx_groups = {}
+    for k, v in cx.items():
+        if isinstance(k, str) and k.startswith(f"<= ") and "|" in k:
+            g = dict(x.strip().rsplit(" ", 1) for x in str(v).split(";"))
+            cx_groups[k.split("|")[1].strip()] = {"n": int(g["papers"]), "fwci": float(g["median_fwci"]), "top10": float(g["top10_share"])}
+    reg = {(r["window"].startswith("<="), r["outcome"], r["term"]): r for r in rd("cross_dept_regression.csv")}
+    strata = {(r["window"].startswith("<="), r["comparison"].split(" ")[0]): r for r in rd("cross_dept_strata.csv")}
+    inw = {r["institution"]: r for r in rd("institute_inwardness.csv") if r["publication_year"] == "all"}
+    D["layers"] = {
+        "dist": [{"scope": r["scope"], "d": r["coauthor_distance"], "rate": float(r["citing_rate"]), "oe": float(r["obs_over_expected"]),
+                  "pairs": int(r["ordered_pairs"]), "citing": int(r["pairs_citing"])}
+                 for r in rd("coauthor_citation_distance.csv") if r["definition"] == "strict"],
+        "fac_cit_all": int(cc["faculty citations, all (a on citing paper, b on cited paper, a != b)"]),
+        "fac_cit_strict": int(cc["faculty citations, strict"]), "pairs_strict": int(cc["strict: citing pairs a -> b"]),
+        "recip": cc["strict: reciprocity (share of a -> b with b -> a)"], "recip_exp": cc["strict: reciprocity expected, configuration model (analytic)"],
+        "recip_co": cc["strict: reciprocity among co-author pairs"], "recip_non": cc["strict: reciprocity among pairs that never co-authored"],
+        "active": int(cc["faculty active before and after 2020"]),
+        "prec": [{"test": r["test"][:3], "exposed": r["exposed"], "pairs": int(r["pairs"]), "hits": int(r["pairs_with_outcome"]),
+                  "rate": num(r["rate"]), "oe": num(r["obs_over_expected"])} for r in prec],
+        "inward": {i: {"all": float(inw[i]["inwardness"]), "other": float(inw[i]["inwardness_without_author_self"])} for i in INSTS},
+        "bowtie": {"parts": {i: {p: int(bt[f"{i}: {p}"]) for p in ("CORE", "IN", "OUT", "TUBES", "TENDRILS", "OTHER", "ISOLATED")} for i in INSTS},
+                   "linked": int(bt["faculty with at least one citation link (either direction)"]), "pairs": int(bt["citing pairs a -> b"]),
+                   "cross": int(bt["citing pairs between the two IITs"]), "core_cross": int(bt["CORE members citing or cited by the other IIT within the CORE"]),
+                   "null": bt["CORE size in 10 degree-preserving rewirings: mean (min-max)"], "core_strict": int(bts["CORE (faculty)"]),
+                   "null_strict": bts["CORE size in 10 degree-preserving rewirings: mean (min-max)"],
+                   "median": {p: {k: float(bt[f"{p}: median {k}"]) for k in ("papers", "h_index")} for p in ("CORE", "IN", "OUT", "ISOLATED")},
+                   "growth": [{"y": int(r["up_to_year"]), **{p: int(r[p]) for p in ("CORE", "IN", "OUT", "TUBES", "TENDRILS", "OTHER")}}
+                              for r in rd("bowtie_growth.csv")]},
+        "hier": [{"inst": r["institution"], "dept": r["department"], "fac": int(r["faculty"]), "s": float(r["springrank"]),
+                  "cin": int(r["cited_by_other_departments"]), "cout": int(r["cites_other_departments"])} for r in rd("department_citation_hierarchy.csv")],
+        "hier_rho": float(bt["check: Spearman SpringRank vs net balance"]),
+        "cross": {"groups": cx_groups, "n_multi_check": int(cx["check: the same from group3_data.csv"]),
+                  "match_ratio": float(strata[(True, "cross-department")]["fwci_ratio_exp_diff"]),
+                  "match_campus": float(strata[(True, "cross-campus")]["fwci_ratio_exp_diff"]),
+                  "reg": {k: {"coef": float(r["coef"]), "lo": float(r["ci95_low"]), "hi": float(r["ci95_high"]), "p": float(r["p_value"])}
+                          for k, r in (("dept", reg[(True, "log(1 + FWCI)", "cross-department (same IIT)")]),
+                                       ("campus", reg[(True, "log(1 + FWCI)", "cross-campus")]),
+                                       ("campus_all", reg[(False, "log(1 + FWCI)", "cross-campus")]))},
+                  "rs_p": float(next(r for k, r in reg.items() if k[0] and k[2].startswith("Rao"))["p_value"]),
+                  "same_fac": int(cx["same faculty member: faculty with both one-department and cross-department papers"]),
+                  "same_share": float(cx["same faculty member: share of faculty with a higher value on cross-department papers"]),
+                  "same_p": float(cx["same faculty member: Wilcoxon signed-rank p"])},
+        "areas": {"cand": int(dp["candidate (department, subfield) pairs: not strong in 2016-20 (strong = RCA >= 1 and >= 5 papers)"]),
+                  "entries": int(dp["entries: strong in 2021-26"]), "auc": dp["ROC AUC: density (relatedness to what the department does)"],
+                  "auc_rca": dp["ROC AUC: RCA in 2016-20 (already close)"],
+                  "auc_both": dp["ROC AUC, logistic with one department left out: density + RCA"],
+                  "null": dp["ROC AUC: density with shuffled subfield labels, 500 shuffles: mean (95% range)"],
+                  "auc_new": dp["ROC AUC: density, brand-new areas only"],
+                  "bins": [{"bin": r["bin"], "pairs": int(r["pairs"]), "entries": int(r["entries"]), "rate": float(r["entry_rate"])}
+                           for r in rd("dept_area_prediction_bins.csv")],
+                  "fc_stable": da["fitness-complexity: ranking stability, Spearman of fitness after 50 and 100 steps"]},
+        "depts": {}}
+    dep = D["layers"]["depts"]
+    for r in rd("dept_fitness.csv"):
+        dep[f"{r['institution']}|{r['department']}"] = {"inst": r["institution"], "dept": r["department"], "fac": int(r["faculty"]),
+                                                          "papers": int(r["papers"]), "nstrong": int(r["strong_subfields"]),
+                                                          "fit": int(r["fitness_rank"]), "strong": [], "rising": [], "near": []}
+    for r in rd("dept_area_strengths.csv"):
+        dep[f"{r['institution']}|{r['department']}"]["strong"].append([r["subfield"], int(r["papers"]), float(r["rca"])])
+    for r in rd("dept_area_rising.csv"):
+        dep[f"{r['institution']}|{r['department']}"]["rising"].append([r["subfield"], int(r["papers_2016_20"]), int(r["papers_2021_26"])])
+    for r in rd("dept_area_outlook.csv"):
+        dep[f"{r['institution']}|{r['department']}"]["near"].append([r["subfield"], int(r["papers_2021_26"])])
+
     # ---------------- key findings (overview): the report's list, with every number read from the results
     yr = {i: (int(trend[i][0]["total"]), int(trend[i][-2]["total"])) for i in INSTS}
     g10 = {i: next(r for r in D["grid"][i] if r["row"].startswith("IF > 10")) for i in INSTS}
@@ -393,7 +464,11 @@ def main():
         f"Trios form along existing pairs: three authors who have all worked in pairs write together {cl['3']['p'] * 100:.1f}% of the time, "
         f"against about {cl['0']['p'] * 1e9:.0f} in a billion with no earlier pair, and {(1 - cl['0']['share']) * 100:.0f}% of new trios follow at least one earlier pair.",
         f"The collaboration network grew denser every year (ties ∝ faculty^{D['structure']['densification exponent a, ties ~ faculty^a']:.2f}) and survives "
-        f"random loss, but losing its biggest bridges splits the two campuses."]
+        f"random loss, but losing its biggest bridges splits the two campuses.",
+        f"Faculty cite their co-authors {next(r['oe'] for r in D['layers']['dist'] if r['scope'] == 'all pairs' and r['d'] == '1'):.0f}× as often "
+        f"as similar faculty far apart, even when the two papers share no author, and citing and co-authoring each predict the other.",
+        f"Teams that mix departments get no citation gain once team size is fixed, but departments do move into research areas related to "
+        f"what they already do (ROC AUC {D['layers']['areas']['auc']:.2f}, against {first_num(D['layers']['areas']['null']):.2f} for shuffled areas)."]
 
     # ---------------- partners
     part = by_inst(rd("partners.csv"))

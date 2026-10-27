@@ -1,0 +1,5 @@
+﻿window,comparison,strata_used,treated_papers_matched,treated_papers,diff_mean_log1p_fwci,fwci_ratio_exp_diff,diff_top10_share
+<= 2023,cross-department (same IIT) vs one department,263,1756,1978,0.0055,1.006,0.0042
+<= 2023,cross-campus vs one department,51,89,99,-0.1173,0.889,-0.0454
+all years,cross-department (same IIT) vs one department,380,2620,2929,0.0074,1.007,0.0005
+all years,cross-campus vs one department,68,114,128,-0.0894,0.914,-0.021

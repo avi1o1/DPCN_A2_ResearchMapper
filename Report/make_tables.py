@@ -88,6 +88,24 @@ def main():
         if inst == "IIT Kharagpur":
             out.append("\\midrule")
     write("if10_journals.tex", out)
+
+    # citation rate by co-authorship distance, strict definition (stats_coauthor_citation.py)
+    d = {(r["scope"], r["coauthor_distance"]): r for r in rows("coauthor_citation_distance.csv") if r["definition"] == "strict"}
+    scopes = ["same department", "same institute, other department", "other institute"]
+    out = []
+    for c, label in (("1", "co-authors"), ("2", "2 steps"), ("3", "3 steps"), ("far", "4+ / none")):
+        cells = [f"{100 * float(d[(s, c)]['citing_rate']):.2f}\\% ({float(d[(s, c)]['obs_over_expected']):.1f})" for s in scopes]
+        out.append(f"{label} & " + " & ".join(cells) + " \\\\")
+    write("coauthor_distance.tex", out)
+
+    # bow-tie parts of the faculty citation network by IIT (stats_bowtie.py)
+    b = {r["metric"]: r["value"] for r in rows("bowtie_summary.csv") if r["definition"] == "pure"}
+    out = []
+    for p, label in (("CORE", "Core"), ("IN", "IN (cite into the core)"), ("OUT", "OUT (cited by the core)"),
+                     ("TENDRILS", "Tendrils and tubes"), ("OTHER", "Other small parts"), ("ISOLATED", "No citation link")):
+        k = [int(b[f"{i}: {p}"]) + (int(b[f"{i}: TUBES"]) if p == "TENDRILS" else 0) for i in ("IIT Kharagpur", "IIT Roorkee")]
+        out.append(f"{label} & {k[0]:,} & {k[1]:,} & {k[0] + k[1]:,} \\\\")
+    write("bowtie.tex", out)
     print("tables written to", OUT)
 
 

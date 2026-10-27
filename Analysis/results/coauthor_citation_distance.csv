@@ -1,0 +1,33 @@
+﻿definition,scope,coauthor_distance,ordered_pairs,pairs_citing,citing_rate,citations_per_pair,expected_citing_pairs,obs_over_expected
+pure,all pairs,1,5476,1130,0.20636,0.7659,79.3,14.26
+pure,all pairs,2,31484,2173,0.06902,0.1567,178.5,12.18
+pure,all pairs,3,113128,1130,0.00999,0.0198,332.1,3.4
+pure,all pairs,far,1836602,2193,0.00119,0.0022,2193.0,1.0
+pure,same department,1,2650,627,0.2366,0.9121,68.2,9.19
+pure,same department,2,6042,731,0.12099,0.3333,114.4,6.39
+pure,same department,3,7956,263,0.03306,0.0721,118.1,2.23
+pure,same department,far,34848,290,0.00832,0.0174,290.0,1.0
+pure,"same institute, other department",1,2668,447,0.16754,0.5547,9.4,47.77
+pure,"same institute, other department",2,23486,1251,0.05327,0.1062,52.5,23.81
+pure,"same institute, other department",3,90106,563,0.00625,0.0117,150.0,3.75
+pure,"same institute, other department",far,833334,626,0.00075,0.0012,626.0,1.0
+pure,other institute,1,158,56,0.35443,1.8797,1.7,33.12
+pure,other institute,2,1956,191,0.09765,0.2178,11.5,16.61
+pure,other institute,3,15066,304,0.02018,0.0404,64.0,4.75
+pure,other institute,far,968420,1277,0.00132,0.0025,1277.0,1.0
+strict,all pairs,1,5476,765,0.1397,0.4096,74.3,10.29
+strict,all pairs,2,31484,1162,0.03691,0.0762,164.0,7.09
+strict,all pairs,3,113128,1021,0.00903,0.0172,303.6,3.36
+strict,all pairs,far,1836602,2051,0.00112,0.002,2051.0,1.0
+strict,same department,1,2650,461,0.17396,0.5555,64.2,7.18
+strict,same department,2,6042,469,0.07762,0.1888,105.2,4.46
+strict,same department,3,7956,245,0.03079,0.0651,106.0,2.31
+strict,same department,far,34848,252,0.00723,0.0143,252.0,1.0
+strict,"same institute, other department",1,2668,257,0.09633,0.2316,8.5,30.15
+strict,"same institute, other department",2,23486,567,0.02414,0.0423,47.6,11.91
+strict,"same institute, other department",3,90106,485,0.00538,0.0096,135.4,3.58
+strict,"same institute, other department",far,833334,563,0.00068,0.0011,563.0,1.0
+strict,other institute,1,158,47,0.29747,0.9684,1.6,28.51
+strict,other institute,2,1956,126,0.06442,0.1345,11.2,11.26
+strict,other institute,3,15066,291,0.01932,0.0372,62.3,4.67
+strict,other institute,far,968420,1236,0.00128,0.0023,1236.0,1.0

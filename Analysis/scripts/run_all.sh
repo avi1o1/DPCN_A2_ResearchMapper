@@ -24,5 +24,9 @@ python stats_if_authors.py         # PRL list, Nature journals' IF, IF > 10 with
 python stats_matrix_centrality.py  # Katz, HITS, communicability, dynamic communicability (needs faculty_centrality.csv)
 python stats_hypergraph.py         # nonlinear hypergraph centrality (Tudisco & Higham 2021)
 python stats_simplicial.py         # simplicial closure (Benson et al. 2018)
+python stats_coauthor_citation.py  # citing co-authors, citing vs collaborating over time, inwardness (needs faculty.csv)
+python stats_bowtie.py             # bow-tie of the faculty citation network, department hierarchy (SpringRank)
+python stats_cross_dept.py         # cross-department teams vs FWCI (needs oa_fwci.json)
+python stats_dept_areas.py         # department strengths, relatedness prediction, fitness-complexity
 python stats_rosters.py            # yearly faculty lists (needs WebScrape/scripts/wayback_rosters.py output)
 echo STATS-DONE

@@ -1,0 +1,65 @@
+﻿institution,department,faculty,CORE,IN,OUT,TUBES,TENDRILS,OTHER,ISOLATED,core_share
+IIT Roorkee,Civil Engineering,75,49,8,4,0,0,0,14,0.653
+IIT Kharagpur,Mechanical Engineering,54,32,7,3,0,1,0,11,0.593
+IIT Roorkee,Mechanical and Industrial Engineering,53,32,8,4,0,0,0,9,0.604
+IIT Kharagpur,Agricultural and Food Engineering,52,33,10,5,0,0,0,4,0.635
+IIT Kharagpur,Computer Science and Engineering,51,29,3,4,0,2,1,12,0.569
+IIT Kharagpur,Physics,48,14,6,3,0,7,1,17,0.292
+IIT Roorkee,Electrical Engineering,48,24,6,5,0,2,0,11,0.5
+IIT Kharagpur,Electronics and Electrical Communication Engg.,46,18,5,12,0,0,2,9,0.391
+IIT Kharagpur,Civil Engineering,45,33,3,5,0,0,0,4,0.733
+IIT Kharagpur,Electrical Engineering,45,22,3,8,0,0,0,12,0.489
+IIT Roorkee,Electronics and Communication Engineering,45,21,6,6,0,0,0,12,0.467
+IIT Kharagpur,Mathematics,44,10,2,4,0,0,6,22,0.227
+IIT Roorkee,Physics,44,17,6,3,0,0,7,11,0.386
+IIT Kharagpur,Chemistry,42,30,3,5,0,0,1,3,0.714
+IIT Roorkee,Biosciences and Bioengineering,40,26,3,8,0,0,0,3,0.65
+IIT Roorkee,Chemistry,38,22,3,6,0,0,0,7,0.579
+IIT Roorkee,Mathematics,38,5,5,2,0,3,6,17,0.132
+IIT Kharagpur,Geology and Geophysics,36,22,3,5,0,0,0,6,0.611
+IIT Kharagpur,Chemical Engineering,35,23,6,0,0,0,0,6,0.657
+IIT Roorkee,Chemical Engineering,35,24,5,3,0,0,0,3,0.686
+IIT Kharagpur,Metallurgical and Materials Engineering,33,27,2,1,0,0,0,3,0.818
+IIT Roorkee,Earth Sciences,33,22,5,2,0,0,0,4,0.667
+IIT Roorkee,Metallurgical and Materials Engineering,30,15,5,2,0,0,0,8,0.5
+IIT Roorkee,Computer Science and Engineering,26,10,2,2,0,0,0,12,0.385
+IIT Kharagpur,Aerospace Engineering,23,10,6,2,1,0,0,4,0.435
+IIT Kharagpur,Mining Engineering,23,5,7,2,0,1,0,8,0.217
+IIT Kharagpur,Bioscience and Biotechnology,22,17,2,1,0,0,0,2,0.773
+IIT Kharagpur,Ocean Engg and Naval Architecture,22,8,4,0,1,0,0,9,0.364
+IIT Roorkee,Earthquake Engineering,22,9,3,2,0,0,0,8,0.409
+IIT Roorkee,Hydro and Renewable Energy,20,13,3,3,0,0,0,1,0.65
+IIT Roorkee,Water Resources Development and Management,19,11,5,2,0,1,0,0,0.579
+IIT Kharagpur,Architecture and Regional Planning,18,9,3,4,0,1,0,1,0.5
+IIT Roorkee,Architecture and Planning,18,5,3,3,0,0,0,7,0.278
+IIT Kharagpur,Industrial and Systems Engineering,16,9,0,0,0,0,0,7,0.562
+IIT Roorkee,Polymer and Process Engineering,16,8,5,1,0,0,0,2,0.5
+IIT Kharagpur,Materials Science Centre,15,13,0,1,0,0,0,1,0.867
+IIT Roorkee,Paper Technology,14,11,0,0,0,0,0,3,0.786
+IIT Kharagpur,Centre for Interdisciplinary and Convergent Technologies,13,2,4,0,0,3,0,4,0.154
+IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",13,10,1,1,0,0,0,1,0.769
+IIT Roorkee,Hydrology,11,8,2,1,0,0,0,0,0.727
+IIT Kharagpur,Rubber Technology,9,8,0,0,0,0,0,1,0.889
+IIT Kharagpur,Cryogenic Engineering,9,3,0,1,0,0,0,5,0.333
+IIT Kharagpur,Artificial Intelligence,9,1,4,0,0,0,0,4,0.111
+IIT Kharagpur,G.S Sanyal School of Telecommunication,8,1,0,2,0,2,1,2,0.125
+IIT Kharagpur,School of Water Resources,6,4,2,0,0,0,0,0,0.667
+IIT Kharagpur,Subir Chowdhury School of Quality and Reliability,6,1,5,0,0,0,0,0,0.167
+IIT Kharagpur,Energy Science and Engineering,5,4,0,0,0,0,0,1,0.8
+IIT Roorkee,Centre for Nanotechnology,5,0,2,1,0,1,1,0,0.0
+IIT Kharagpur,Deysarkar Centre of Petroleum and Energy Transition,4,1,0,2,0,0,0,1,0.25
+IIT Kharagpur,Ranbir and Chitra Gupta School of Infrastructure Design and Mngt.,4,2,1,1,0,0,0,0,0.5
+IIT Roorkee,Applied Mathematics and Scientific Computing (Saharanpur),4,1,1,0,0,1,0,1,0.25
+IIT Kharagpur,Centre for Computational and Data Sciences,3,2,1,0,0,0,0,0,0.667
+IIT Kharagpur,Centre for Rural Development and Innovative Sustainable Technology,3,1,2,0,0,0,0,0,0.333
+IIT Kharagpur,Nano Science and Technology,3,2,1,0,0,0,0,0,0.667
+IIT Kharagpur,Centre of Excellence on Safety Engineering & Analytics (COE-SEA),2,0,0,0,0,0,0,2,0.0
+IIT Kharagpur,Steel Technology Centre,1,0,0,0,0,0,0,1,0.0
+IIT Kharagpur,Environmental Science and Engineering,1,0,0,1,0,0,0,0,0.0
+IIT Kharagpur,Biotechnology,1,0,0,1,0,0,0,0,0.0
+IIT Roorkee,Mehta Family School of Data Science and Artificial Intelligence,1,0,0,0,0,0,0,1,0.0
+IIT Roorkee,Unknown unit (institute-wide list 2019),1,0,0,0,0,0,0,1,0.0
+IIT Roorkee,Centre for Photonics and Quantum Communication Technology,1,0,0,0,0,0,0,1,0.0
+IIT Roorkee,Centre for Transportation Systems,1,0,0,0,0,0,0,1,0.0
+IIT Roorkee,Mechanical Engineering,1,1,0,0,0,0,0,0,1.0
+IIT Roorkee,Centre of Excellence in Disaster Mitigation and Management,1,1,0,0,0,0,0,0,1.0

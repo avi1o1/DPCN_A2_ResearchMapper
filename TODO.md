@@ -58,6 +58,35 @@ Status: [x] done, [~] in progress (note says what is left), [ ] not started. Wor
   first year and issue year, different citation counts); checked on Crossref: in all 8 the later record has Crossref's
   issued year and citation count, and it is the record `faculty.csv` already keeps. OpenAlex FWCI fetched for all 45,986
   works (461 credits).
+- 27 Oct, four more analyses (scripts `stats_coauthor_citation.py`, `stats_bowtie.py`, `stats_cross_dept.py`,
+  `stats_dept_areas.py`, shared input `faculty_layers.py`; all in `run_all.sh`). Checks: faculty citation count by a
+  matrix route (50,372 = 50,372), distances vs networkx (0 differ), bow-tie by networkx and scipy (same), multi-department
+  papers recounted from `group3_data.csv` (3,265 = 3,265), department paper counts vs `departments.csv` (0 differ), spot
+  check of 3 faculty citations against the raw CSVs. 'Strict' = citing and cited paper share no author at all.
+  - Citing co-authors [§3b]: co-authors cite each other in 14% of ordered pairs (strict), against 0.11% for pairs 4+
+    steps apart; 10x what distant pairs of the same kind show (same department / institute, main subfield, output).
+    Strongest across departments (O/E 30) and across campuses (O/E 29). Citing before 2020 → 3.6x more likely to start
+    writing together in 2021-26; co-authoring before 2020 → 3.9x more likely to start citing. For pairs new after 2018,
+    the joint paper came first in 56%, the citation in 31%. Reciprocity 23% vs 2.2% in the configuration model (2.5% in 10 rewirings).
+    Deterministic re-run: all 19 result files identical (rewiring now gets sorted edges, fixed seeds).
+- 28 Oct: the four analyses are in the report (VIII-G to VIII-J, Tables XIV-XV, 3 figures, 2 key findings; 19 pages,
+  no LaTeX warnings; 11 new references checked on Crossref) and on the dashboard (new section "Two layers"; headless
+  Edge light / dark / 400 px, 0 console errors, shown numbers equal the CSVs). The relatedness chart now shows the 2,053
+  pairs with density 0 as one bar (deciles split ties arbitrarily) and quintiles of the rest: 0.5% → 17% become a
+  strength (`dept_area_prediction_bins.csv`). Not committed.
+    Inwardness: 10% of OpenAlex citations come from the same institute, but 0.7% (KGP) / 1.0% (Roorkee) without author
+    self-citations; the rise for recent papers is an age effect (only the self-citation part rises).
+  - Bow-tie [§3c]: 741 of the 1,110 linked faculty form one strongly connected core spanning both IITs (KGP 406,
+    Roorkee 335); IN 182, OUT 134, 300 faculty with no pure citation link. Degree-preserving rewiring gives a core of
+    761 (10 graphs, 753-767), so the core is what the citation counts imply, not extra structure. Core members: median 39 papers, h 12;
+    IN 13 / 4, OUT 13 / 6. Departments: SpringRank on citations between departments (Spearman 0.94 with net balance);
+    KGP Electrical, E&ECE, Mechanical cited more than they cite; Roorkee Hydrology, WRDM, Architecture the reverse.
+  - Cross-department teams [§3d]: no FWCI gain. Matched strata: ratio 1.006; regression 0.00 (CI -0.04 to 0.03); same
+    faculty member: Wilcoxon p = 0.82. Cross-campus papers slightly lower (ratio 0.89, p = 0.025, only 99 papers;
+    p = 0.07 with all years). Distance between departments (Rao-Stirling): no effect (p = 0.26).
+  - Department areas [§3f]: relatedness density in 2016-20 predicts new strengths in 2021-26 (AUC 0.83; shuffled labels
+    0.51, 0 of 500 shuffles as high; brand-new areas only 0.83; with RCA, leave-one-department-out 0.89). Fitness-
+    complexity ranking stable (Spearman 0.9998 between 50 and 100 steps); top: KGP Agricultural and Food Engg.
 
 ## 6. Mendes-style dashboard (prof's request, 27 Oct: "present data like jfmendes-sciart.github.io")
 Reference: the research page's summary tiles, ego co-author network and the 12-page Power BI report (screenshots in
@@ -94,12 +123,16 @@ Reference: the research page's summary tiles, ego co-author network and the 12-p
 ## 2. New analysis — choose 2 or 3 (the "something new" part)
 - [x] (M) Teams as groups, not pairs (hypergraph) [§1b, §1c]. In the report (VIII-E).
 - [x] (M) Do three people who wrote in pairs later write together as three? [§1a]. In the report (VIII-F).
-- [ ] (M) Who cites their own co-authors, how much, and does citing come before working together [§3b].
+- [x] (M) Who cites their own co-authors, how much, and does citing come before working together [§3b].
+  `stats_coauthor_citation.py`; report VIII-G, dashboard "Two layers".
 - [x] (S) New ranking methods (Katz, HITS hubs/authorities, communicability) instead of PageRank [§2]. In the report (VIII-A, B, D).
 - [x] (S) Which faculty connect people early on, using the year-by-year co-authorship networks [§2, dynamic]. In the report (VIII-C).
-- [ ] (S) Core and periphery of the faculty citation network (the bow-tie idea from Mendes's own paper) [§3c].
-- [ ] (S) Which research areas each department is strong in, and predicting which areas it moves into next [§3f].
-- [ ] (S) Do teams mixing several departments get more citations [§3d].
+- [x] (S) Core and periphery of the faculty citation network (the bow-tie idea from Mendes's own paper) [§3c].
+  `stats_bowtie.py`; report VIII-H, dashboard "Two layers".
+- [x] (S) Which research areas each department is strong in, and predicting which areas it moves into next [§3f].
+  `stats_dept_areas.py`; report VIII-J, dashboard "Two layers" (with a department picker).
+- [x] (S) Do teams mixing several departments get more citations [§3d]. `stats_cross_dept.py`; report VIII-I,
+  dashboard "Two layers".
 - [ ] (L) Do small teams make more "disruptive" papers than big ones (needs a large OpenAlex download) [§3a].
 
 ## 3. Report and dashboard
@@ -114,6 +147,7 @@ Reference: the research page's summary tiles, ego co-author network and the 12-p
 
 ## 4. Discussion prep (after 25 Oct)
 - [ ] (S) Short slides or notes: key statistics, network results, why they matter, modelling used, related methods.
+  Deferred (27 Oct, Varun: "slides we can look at later").
 - [x] (S) Ask the professor which José Fernando Mendes dashboard he meant (not found online). Mail sent 26 Oct.
 - [ ] (M) Possible addition for the "modelling" point of the brief: a dynamical model on our data, e.g. research
   topics spreading along co-author teams (simplicial contagion). Not started; team to decide.

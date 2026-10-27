@@ -1,0 +1,47 @@
+﻿institution,department,faculty,papers,strong_subfields,fitness_rank,log10_fitness
+IIT Kharagpur,Agricultural and Food Engineering,52,1480,23,1,1.66
+IIT Roorkee,Biosciences and Bioengineering,40,1029,23,2,-1.73
+IIT Roorkee,Mathematics,38,830,18,3,-1.77
+IIT Kharagpur,Mathematics,44,909,20,4,-1.91
+IIT Kharagpur,Bioscience and Biotechnology,22,722,24,5,-2.1
+IIT Kharagpur,Computer Science and Engineering,51,2429,17,6,-12.19
+IIT Kharagpur,Chemistry,42,1650,16,7,-13.43
+IIT Kharagpur,Electronics and Electrical Communication Engg.,46,1418,16,8,-13.45
+IIT Roorkee,Metallurgical and Materials Engineering,30,599,12,9,-13.46
+IIT Roorkee,Physics,44,1515,11,10,-13.56
+IIT Roorkee,Civil Engineering,75,2021,20,11,-13.56
+IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",13,529,14,12,-13.68
+IIT Kharagpur,Chemical Engineering,35,1082,18,13,-13.72
+IIT Kharagpur,Physics,48,1344,13,14,-13.74
+IIT Roorkee,Chemical Engineering,35,946,16,15,-13.75
+IIT Roorkee,Chemistry,38,1272,13,16,-13.75
+IIT Kharagpur,Metallurgical and Materials Engineering,33,1478,11,17,-13.77
+IIT Roorkee,Earth Sciences,33,549,16,18,-13.83
+IIT Kharagpur,Geology and Geophysics,36,852,14,19,-13.87
+IIT Kharagpur,Electrical Engineering,45,1329,15,20,-13.89
+IIT Roorkee,Water Resources Development and Management,19,623,15,21,-13.9
+IIT Roorkee,Computer Science and Engineering,26,817,14,22,-13.9
+IIT Roorkee,Paper Technology,14,290,9,23,-13.91
+IIT Kharagpur,Industrial and Systems Engineering,16,322,15,24,-13.91
+IIT Roorkee,Electronics and Communication Engineering,45,1854,14,25,-13.92
+IIT Kharagpur,Mining Engineering,23,454,19,26,-13.97
+IIT Roorkee,Polymer and Process Engineering,16,586,13,27,-14.01
+IIT Roorkee,Mechanical and Industrial Engineering,53,1671,14,28,-14.02
+IIT Kharagpur,Centre for Interdisciplinary and Convergent Technologies,13,213,10,29,-14.02
+IIT Kharagpur,Subir Chowdhury School of Quality and Reliability,6,178,8,30,-14.06
+IIT Kharagpur,Civil Engineering,45,1748,16,31,-14.13
+IIT Kharagpur,Mechanical Engineering,54,1926,13,32,-14.14
+IIT Kharagpur,Materials Science Centre,15,724,10,33,-14.15
+IIT Kharagpur,Rubber Technology,9,644,10,34,-14.16
+IIT Roorkee,Hydro and Renewable Energy,20,489,14,35,-14.2
+IIT Roorkee,Hydrology,11,476,12,36,-14.22
+IIT Kharagpur,Ocean Engg and Naval Architecture,22,379,10,37,-14.29
+IIT Roorkee,Electrical Engineering,48,1694,7,38,-14.47
+IIT Kharagpur,Aerospace Engineering,23,643,7,39,-14.47
+IIT Kharagpur,School of Water Resources,6,156,8,40,-14.56
+IIT Roorkee,Earthquake Engineering,22,358,6,41,-14.59
+IIT Roorkee,Architecture and Planning,18,176,8,42,-14.61
+IIT Kharagpur,Energy Science and Engineering,5,259,7,43,-14.61
+IIT Kharagpur,Cryogenic Engineering,9,188,8,44,-14.64
+IIT Kharagpur,G.S Sanyal School of Telecommunication,8,223,5,45,-14.8
+IIT Kharagpur,Architecture and Regional Planning,18,151,6,46,-14.83

@@ -382,7 +382,7 @@ footer p { margin: 4px 0; }
   <div>
     <p class="navh">Network analysis</p>
     <div class="menu">
-      <a href="#citations">Citation network</a><a href="#flow">Indian links</a><a href="#collaboration">Collaboration</a><a href="#dynamics">Dynamics</a><a href="#beyond">Beyond pairs</a><a href="#partners">Partners</a>
+      <a href="#citations">Citation network</a><a href="#flow">Indian links</a><a href="#collaboration">Collaboration</a><a href="#dynamics">Dynamics</a><a href="#beyond">Beyond pairs</a><a href="#layers">Two layers</a><a href="#partners">Partners</a>
     </div>
   </div>
   <div class="foot">
@@ -908,8 +908,69 @@ footer p { margin: 4px 0; }
   </div>
 </section>
 
+<!-- ================= TWO LAYERS AND DEPARTMENTS ================= -->
+<section id="layers" class="alt">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Two layers and departments</p>
+      <h2>Faculty cite the people they work with.</h2>
+      <p class="lede">The citation network and the co-authorship network are two layers on the same 1,410 faculty. Here we join them, and then move up to departments. A citation counts only under a strict rule: the citing and the cited paper share no author at all. Network results are for both IITs together; the department lists follow the institute switch.</p>
+    </div>
+    <div class="strip rv" id="layStrip"></div>
+    <div class="grid2">
+      <div class="card rv">
+        <h3>Citations follow co-authorship</h3>
+        <p class="cap">Share of faculty pairs in which A cites B, by distance in the co-authorship network (log scale). Hover for the ratio to similar pairs that are 4+ steps apart: same department relation, main subfield and paper count.</p>
+        <div class="chart short" id="chCoCite"></div>
+        <p class="note" id="coCiteNote"></p>
+      </div>
+      <div class="card rv">
+        <h3>Which comes first?</h3>
+        <p class="cap">Faculty active both before and after 2020. What happened in 2021–2026 to pairs that had, or had not, already cited or co-authored by 2020.</p>
+        <div id="precList"></div>
+        <p class="note" id="precNote"></p>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="card rv">
+        <h3>Core and periphery of the citation network</h3>
+        <p class="cap">Faculty network with a link A → B when A cites B (A did not write the cited paper, B did not write the citing one). The core is the largest group in which everyone reaches everyone along citation chains; IN cites into it, OUT is cited by it. Bars: citations made up to each year.</p>
+        <div class="chart short" id="chBowtie"></div>
+        <p class="note" id="bowtieNote"></p>
+      </div>
+      <div class="card rv">
+        <h3>Departments in the citation flow</h3>
+        <p class="cap">SpringRank on citations between departments (De Bacco et al., 2018): cited departments sit above the departments that cite them. Departments with at least 15 faculty, top and bottom five. A position in the flow, not a measure of quality.</p>
+        <div id="hierList"></div>
+        <p class="note" id="hierNote"></p>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="card rv">
+        <h3>Do mixed-department teams get more citations?</h3>
+        <p class="cap">Papers with at least two of our faculty, published 2016–2023. FWCI = citations relative to the world average for the same field, year and type (1 = world average).</p>
+        <div id="crossTable"></div>
+        <p class="note" id="crossNote"></p>
+      </div>
+      <div class="card rv">
+        <h3>Departments move into related areas</h3>
+        <p class="cap">Department–subfield pairs that were not a strength in 2016–2020, by how related the subfield is to the department's strengths then. Bar = share that became a strength in 2021–2026.</p>
+        <div class="chart short" id="chAreaPred"></div>
+        <p class="note" id="areaPredNote"></p>
+      </div>
+    </div>
+    <div class="card rv" style="margin-top:20px">
+      <h3>What each department is strong in</h3>
+      <p class="cap">Strong = revealed comparative advantage (RCA) of at least 1 and at least 5 papers in an OpenAlex subfield: the department puts a larger share of its papers there than the two IITs do overall. Departments with at least 5 faculty and 100 papers.</p>
+      <select class="field" id="areaDept" aria-label="Department" style="max-width:100%;margin:6px 0 10px"></select>
+      <div class="grid3" id="areaLists"></div>
+      <p class="note">“Nearby” lists the subfields most related to the department's present strengths that it is not yet strong in. This is an indication, not a forecast.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PARTNERS ================= -->
-<section id="partners" class="alt">
+<section id="partners">
   <div class="wrap">
     <div class="head rv">
       <p class="eyebrow">Partners</p>
@@ -932,7 +993,7 @@ footer p { margin: 4px 0; }
 </section>
 
 <!-- ================= METHOD ================= -->
-<section id="method">
+<section id="method" class="alt">
   <div class="wrap">
     <div class="head rv">
       <p class="eyebrow">Method</p>
@@ -945,6 +1006,7 @@ footer p { margin: 4px 0; }
       <div><h3>Networks</h3><p>Citation links and Indian partners come from OpenAlex. Influence uses PageRank (damping 0.85), also without self-citations and rescaled by age; communities use Louvain over ten random seeds, checked with Leiden. Robustness and SIR spreading are simulated on the faculty network.</p></div>
       <div><h3>Read with care</h3><p>h-index and i10 here cover 2016–2026 papers only, so they are about half a career value. IF is OpenAlex's 2-year mean citedness, which runs higher than Clarivate's JIF. Citation counts are as of October 2026. PageRank favours older papers, and 88% of citations inside an institute are self-citations.</p></div>
       <div><h3>Beyond pairs</h3><p>Katz, communicability and HITS are computed from the adjacency matrix; scores that are zero outside one part of the network are compared only where they are non-zero. The hypergraph and trio results use the co-authorship file: papers with a linked faculty member and at most 50 authors. Every number was checked a second way.</p></div>
+      <div><h3>Two layers</h3><p>Faculty-to-faculty citations use internal citations only; under the strict rule the two papers share no author. Comparisons are made against faculty pairs of the same kind (department relation, main subfield, output), and network results against random networks with the same degrees. FWCI is OpenAlex's. Department strengths use OpenAlex subfields; the 2016–20 → 2021–26 test uses only 2016–20 data to predict.</p></div>
       <div><h3>Scope</h3><p>Science and engineering only: papers whose OpenAlex topic is in the Physical or Life Sciences. Faculty of humanities, management, law, education and medical units are not included.</p></div>
     </div>
   </div>
@@ -1613,6 +1675,99 @@ footer p { margin: 4px 0; }
       `Which open triangle closes is hard to predict (best ROC AUC ${BY.pred[25].auc.toFixed(2)}). ${pct(BY.tri_closed_all)} of all triangles come from one shared paper (faculty only: ${pct(BY.tri_closed_fac)}).`;
   }
 
+  /* ---------------- 9d. two layers and departments (second round) ---------------- */
+  const LY = D.layers;
+  const DIST = ["1", "2", "3", "far"], DLAB = ["co-authors", "2 steps", "3 steps", "4+ / none"];
+  const SCOPES = [["same department", "--c5"], ["same institute, other department", "--c1"], ["other institute", "--c2"]];
+  builders.chCoCite = () => Object.assign(base(), {
+    tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const r = p.data.r; return `${esc(r.scope)} · ${DLAB[DIST.indexOf(r.d)]}<br>A cites B in <b>${(r.rate * 100).toPrecision(2)}%</b> of ${fmt(r.pairs)} pairs<br>${r.oe.toFixed(1)}× similar pairs 4+ steps apart`; } }),
+    legend: { top: 0, left: 0, icon: "circle", itemWidth: 8, textStyle: { color: css("--fg2") } },
+    grid: { left: 8, right: 16, top: 52, bottom: 8, containLabel: true },
+    xAxis: axisX({ type: "category", data: DLAB }),
+    yAxis: axisY({ type: "log", min: 0.0005, max: 0.5, axisLabel: { color: css("--fg2"), formatter: v => +(v * 100).toPrecision(1) + "%" } }),
+    series: SCOPES.map(([s, c]) => ({ name: s, type: "line", symbol: "circle", symbolSize: 9, lineStyle: { color: css(c), width: 2 },
+      itemStyle: { color: css(c), borderColor: css("--card"), borderWidth: 1.5 },
+      data: DIST.map(d => { const r = LY.dist.find(x => x.scope === s && x.d === d); return { value: r.rate, r }; }) }))
+  });
+  const BT_PARTS = [["CORE", "core", "--c5"], ["IN", "IN", "--c1"], ["OUT", "OUT", "--c2"], ["TEND", "tendrils / tubes", "--fg3"], ["OTHER", "other", "--line"]];
+  builders.chBowtie = () => Object.assign(base(), {
+    tooltip: Object.assign(base().tooltip, { trigger: "axis", formatter: ps => `citations up to ${ps[0].name}<br>` + ps.map(p => `${p.marker}${p.seriesName}&nbsp;&nbsp;<b>${fmt(p.value)}</b>`).join("<br>") }),
+    legend: { top: 0, left: 0, icon: "circle", itemWidth: 8, textStyle: { color: css("--fg2") } },
+    grid: { left: 8, right: 16, top: 36, bottom: 8, containLabel: true },
+    legend: { top: 0, right: 0, icon: "circle", itemWidth: 8, itemGap: 14, textStyle: { color: css("--fg2") } },
+    xAxis: axisX({ type: "category", data: LY.bowtie.growth.map(r => r.y) }),
+    yAxis: axisY({ type: "value", name: "faculty", nameTextStyle: { color: css("--fg2"), align: "left" } }),
+    series: BT_PARTS.map(([k, name, c]) => ({ name, type: "bar", stack: "bt", barWidth: "62%", itemStyle: { color: css(c) },
+      data: LY.bowtie.growth.map(r => k === "TEND" ? r.TENDRILS + r.TUBES : r[k]) }))
+  });
+  const BIN = { "density 0": "none" };
+  builders.chAreaPred = () => {
+    const A = LY.areas.bins;
+    return Object.assign(base(), {
+      tooltip: Object.assign(base().tooltip, { trigger: "item", formatter: p => { const r = A[p.dataIndex]; return `${r.bin === "density 0" ? "no related strength" : "relatedness " + r.bin}<br><b>${fmt(r.entries)}</b> of ${fmt(r.pairs)} pairs became a strength (${(r.rate * 100).toFixed(1)}%)`; } }),
+      grid: { left: 8, right: 16, top: 24, bottom: 30, containLabel: true },
+      xAxis: axisX({ type: "category", data: A.map(r => BIN[r.bin] || r.bin.replace("quintile ", "Q")), name: "relatedness in 2016–2020 (none, then fifths of the rest)",
+        nameLocation: "middle", nameGap: 26, nameTextStyle: { color: css("--fg2") } }),
+      yAxis: axisY({ type: "value", axisLabel: { color: css("--fg2"), formatter: v => (v * 100).toFixed(0) + "%" } }),
+      series: [{ type: "bar", barWidth: "56%", label: { show: true, position: "top", color: css("--fg2"), formatter: p => `${A[p.dataIndex].entries}/${fmt(A[p.dataIndex].pairs)}` },
+        data: A.map((r, j) => ({ value: r.rate, itemStyle: { color: j === 0 ? css("--fg3") : css("--c5"), borderRadius: [5, 5, 0, 0] } })) }]
+    });
+  };
+  function renderLayers() {
+    const one = LY.dist.find(r => r.scope === "all pairs" && r.d === "1"), far = LY.dist.find(r => r.scope === "all pairs" && r.d === "far");
+    const pr = (t, e) => LY.prec.find(r => r.test === t && r.exposed === e), B = LY.bowtie, X = LY.cross, A = LY.areas;
+    const core = B.parts[KGP].CORE + B.parts[RKG].CORE;
+    document.getElementById("layStrip").innerHTML = `
+      <div class="stat"><div class="big">${one.oe.toFixed(0)}×<small>${(one.rate * 100).toFixed(1)}% vs ${(far.rate * 100).toFixed(2)}%</small></div><div class="lbl">how much more often co-authors cite each other than similar faculty far apart</div></div>
+      <div class="stat"><div class="big">${pr("(a)", "yes").oe.toFixed(1)}×<small>and ${pr("(b)", "yes").oe.toFixed(1)}×</small></div><div class="lbl">citing by 2020 → writing together later, and writing together → citing later</div></div>
+      <div class="stat"><div class="big">${fmt(core)}<small>of ${fmt(B.linked)}</small></div><div class="lbl">faculty in one citation core that spans both IITs (random networks: ${first(B.null)})</div></div>
+      <div class="stat"><div class="big">${A.auc.toFixed(2)}<small>shuffled ${first(A.null).toFixed(2)}</small></div><div class="lbl">ROC AUC: relatedness predicts a department's new strengths</div></div>`;
+    const sc = s => LY.dist.find(r => r.scope === s && r.d === "1").oe.toFixed(0);
+    document.getElementById("coCiteNote").textContent = `Strict rule: ${fmt(LY.fac_cit_strict)} of the ${fmt(LY.fac_cit_all)} faculty-to-faculty citations remain. Co-authors cite each other ${sc("same department")}× as often as similar faculty far apart inside a department, ${sc("same institute, other department")}× across departments and ${sc("other institute")}× across the two IITs. ` +
+      `${pct(LY.recip)} of citing pairs cite back, against ${pct(LY.recip_exp, 1)} in a random network with the same degrees (co-authors ${pct(LY.recip_co)}, others ${pct(LY.recip_non)}).`;
+    const pa = [pr("(a)", "yes"), pr("(a)", "no"), pr("(b)", "yes"), pr("(b)", "no")];
+    document.getElementById("precList").innerHTML = `<ol class="bars">` + [
+      ["Not co-authors by 2020, one had cited the other", "start writing together", pa[0]], ["Not co-authors by 2020, no citation either", "start writing together", pa[1]],
+      ["No citation by 2020, already co-authors", "start citing each other", pa[2]], ["No citation by 2020, not co-authors either", "start citing each other", pa[3]]]
+      .map(([l, o, r]) => `<li><span>${l}<br><small style="color:var(--fg3)">${fmt(r.pairs)} pairs · ${o}</small></span><span class="v">${(r.rate * 100).toFixed(r.rate < 0.01 ? 2 : 1)}%</span>
+        <span class="bar"><span style="width:${Math.max(0.5, r.rate / 0.3 * 100).toFixed(1)}%;background:var(${r.exposed === "yes" ? "--c5" : "--fg3"})"></span></span></li>`).join("") + `</ol>`;
+    const c = k => LY.prec.find(r => r.test === "(c)" && r.exposed === k);
+    document.getElementById("precNote").textContent = `Against pairs of the same kind, ${pa[0].oe.toFixed(1)}× and ${pa[2].oe.toFixed(1)}×. For the ${fmt(c("joint paper first").pairs)} pairs whose first contact came after 2018 and who later did both, the joint paper came first in ${pct(c("joint paper first").rate)} and the citation in ${pct(c("citation first").rate)} (descriptive; our data starts in 2016).`;
+    document.getElementById("bowtieNote").textContent = `${fmt(B.core_cross)} of the ${fmt(core)} core members cite or are cited by a core member of the other IIT; ${fmt(B.cross)} of the ${fmt(B.pairs)} citing pairs join the two IITs. ` +
+      `Random networks with the same citation counts per person give a core of ${B.null}, so the core's size is expected; who sits in it is not. Median papers / h-index: core ${B.median.CORE.papers} / ${B.median.CORE.h_index}, IN ${B.median.IN.papers} / ${B.median.IN.h_index}, OUT ${B.median.OUT.papers} / ${B.median.OUT.h_index}, no citation link ${B.median.ISOLATED.papers} / ${B.median.ISOLATED.h_index}.`;
+    const H = LY.hier.filter(d => d.fac >= 15 && shown().includes(d.inst));
+    const hi = H.slice(0, 5), lo = H.slice(-5);
+    const hli = (d, n) => `<li><span class="i">${n}</span><span class="t"><b>${esc(d.dept)}</b><span class="m"><span class="dot ${d.inst === KGP ? "k" : "r"}"></span>${SHORT[d.inst]} · ${d.fac} faculty · cited ${fmt(d.cin)} · cites ${fmt(d.cout)}</span></span><span class="v">${d.s >= 0 ? "+" : "−"}${Math.abs(d.s).toFixed(2)}<small>SpringRank</small></span></li>`;
+    document.getElementById("hierList").innerHTML = `<h4 class="sub">Most cited by other departments</h4><ol class="rank">${hi.map((d, j) => hli(d, j + 1)).join("")}</ol>` +
+      `<h4 class="sub">Draw most on other departments</h4><ol class="rank">${lo.map((d, j) => hli(d, H.length - lo.length + j + 1)).join("")}</ol>`;
+    document.getElementById("hierNote").textContent = `${LY.hier.length} departments with at least 5 faculty in the ranking; it agrees with a simple net balance (received − made, over their sum) at ρ = ${LY.hier_rho.toFixed(2)}.`;
+    const G = X.groups;
+    document.getElementById("crossTable").innerHTML = `<div class="tablewrap"><table class="mini"><thead><tr><th>Team</th><th class="n">Papers</th><th class="n">Median FWCI</th><th class="n">In world top 10%</th></tr></thead><tbody>` +
+      [["one department", "One department"], ["cross-department", "Two or more departments, same IIT"], ["cross-campus", "Both IITs"]]
+        .map(([k, l]) => `<tr><td>${l}</td><td class="n">${fmt(G[k].n)}</td><td class="n">${G[k].fwci.toFixed(2)}</td><td class="n">${pct(G[k].top10, 1)}</td></tr>`).join("") + `</tbody></table></div>`;
+    const r = X.reg;
+    document.getElementById("crossNote").textContent = `With team size held fixed (number of faculty and authors, year, field), mixing departments changes nothing: matched groups give a ratio of ${X.match_ratio.toFixed(3)}, the regression ${sgn(r.dept.coef)} (95% ${r.dept.lo.toFixed(3)} to ${r.dept.hi.toFixed(3)}, p = ${r.dept.p}), and the same ${X.same_fac} faculty do better on mixed papers only ${pct(X.same_share)} of the time (p = ${X.same_p}). ` +
+      `How far apart the departments are does not matter either (p = ${X.rs_p}). Papers joining both IITs do slightly worse (${sgn(r.campus.coef)}, p = ${r.campus.p}), but they are only ${G["cross-campus"].n}, and with all years p = ${r.campus_all.p}: a weak result.`;
+    document.getElementById("areaPredNote").textContent = `${fmt(A.entries)} of ${fmt(A.cand)} pairs became a strength. ROC AUC ${A.auc.toFixed(2)} (shuffled subfields ${A.null}); for areas with no paper before 2021, ${A.auc_new.toFixed(2)}. The department's own past RCA gives ${A.auc_rca.toFixed(2)}, and the two together ${A.auc_both.toFixed(2)} (one department left out at a time).`;
+    // department picker (follows the institute switch)
+    const sel = document.getElementById("areaDept"), keep = sel.value;
+    const opts = Object.entries(LY.depts).filter(([, d]) => shown().includes(d.inst)).sort((a, b) => (a[1].inst + a[1].dept).localeCompare(b[1].inst + b[1].dept));
+    sel.innerHTML = opts.map(([k, d]) => `<option value="${esc(k)}">${esc(d.dept)}${shown().length > 1 ? " · " + SHORT[d.inst] : ""} (${d.fac} faculty)</option>`).join("");
+    if (opts.some(([k]) => k === keep)) sel.value = keep;
+    renderAreaDept();
+  }
+  function renderAreaDept() {
+    const d = LY.depts[document.getElementById("areaDept").value];
+    if (!d) return;
+    const li = (a, b) => `<li><span>${esc(a)}</span><span class="v">${b}</span></li>`;
+    document.getElementById("areaLists").innerHTML =
+      `<div><h4>Strong in (papers · RCA)</h4><ol class="bars">${d.strong.map(s => li(s[0], `${fmt(s[1])} · ${s[2].toFixed(1)}`)).join("") || "<li>—</li>"}</ol></div>` +
+      `<div><h4>Rising (papers 2016–20 → 2021–26)</h4><ol class="bars">${d.rising.map(s => li(s[0], `${s[1]} → ${s[2]}`)).join("") || "<li>—</li>"}</ol></div>` +
+      `<div><h4>Nearby, not yet strong (papers 2021–26)</h4><ol class="bars">${d.near.map(s => li(s[0], fmt(s[1]))).join("") || "<li>—</li>"}</ol></div>`;
+  }
+  document.getElementById("areaDept").addEventListener("change", renderAreaDept);
+  const first = s => parseFloat(String(s));
+
   /* ---------------- 10. partners ---------------- */
   builders.chPartners = () => {
     const insts = shown(), rows = [];
@@ -1654,6 +1809,7 @@ footer p { margin: 4px 0; }
     renderKpis();
     document.getElementById("findings").innerHTML = D.findings.map(f => `<li>${esc(f)}</li>`).join("");
     renderBeyond();
+    renderLayers();
     // top journals
     instTabs("topJournals", i => rankList(D.top_journals[i].map((j, n) => `<li><span class="i">${n + 1}</span><span class="t"><b>${esc(j.journal)}</b>${j.q ? `<span class="pill">${j.q}</span>` : ""}${j.if != null ? `<span class="pill" title="OpenAlex 2-year mean citedness">IF ${j.if.toFixed(1)}</span>` : ""}</span><span class="v">${fmt(j.papers)}<small>papers</small></span></li>`)));
     renderNew();

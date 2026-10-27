@@ -1,0 +1,15 @@
+﻿definition,test,exposed,pairs,pairs_with_outcome,rate,expected_same_strata,obs_over_expected
+pure,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,yes,827,67,0.08102,15.8,4.23
+pure,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,no,428226,983,0.0023,983.0,1.0
+pure,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,yes,942,257,0.27282,59.2,4.34
+pure,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,no,428226,3422,0.00799,3422.0,1.0
+pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,citation first,560,170,0.3036,,
+pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,same year,560,89,0.1589,,
+pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,joint paper first,560,301,0.5375,,
+strict,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,yes,583,41,0.07033,11.5,3.57
+strict,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,no,428470,1009,0.00235,1009.0,1.0
+strict,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,yes,990,198,0.2,50.7,3.9
+strict,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,no,428470,2740,0.00639,2740.0,1.0
+strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,citation first,383,118,0.3081,,
+strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,same year,383,51,0.1332,,
+strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,joint paper first,383,214,0.5587,,

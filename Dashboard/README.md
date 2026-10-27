@@ -11,6 +11,13 @@ for the Nature journals with IF and for journal papers by quality and team size;
 (Katz path, campus bridges, early connectors, citation-prediction test, hypergraph localisation, trio formation),
 built from `stats_matrix_centrality.py`, `stats_hypergraph.py`, `stats_simplicial.py`. Partners and Method swapped
 background bands so the sections still alternate. Checked in headless Edge, light and dark, no console errors.
+**28 Oct 2026:** new section "Two layers" (`#layers`): citation rate by co-authorship distance, which comes first
+(citing or co-authoring), bow-tie core of the faculty citation network, department SpringRank, mixed-department teams vs
+FWCI, relatedness prediction of new department strengths, and a department picker (strengths, rising, nearby areas).
+Built in `build_data.py` (`D.layers`) from `stats_coauthor_citation.py`, `stats_bowtie.py`, `stats_cross_dept.py`,
+`stats_dept_areas.py`; two more key findings. Layers is shaded, Partners plain, Method shaded, so the bands alternate.
+Checked in headless Edge: light and dark, 400 px phone width without sideways scroll, no console errors, every shown
+number equal to the result CSVs.
 
 ## Status (11 Oct 2026): a working dashboard exists in `site/`
 

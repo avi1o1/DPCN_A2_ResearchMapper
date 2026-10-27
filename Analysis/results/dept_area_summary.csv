@@ -1,0 +1,10 @@
+﻿metric,value
+"departments (>= 5 faculty, >= 100 papers)",46
+OpenAlex subfields in our papers,122
+papers without a subfield (left out),105
+check: departments whose paper count differs from departments.csv,0
+"fitness-complexity: ranking stability, Spearman of fitness after 50 and 100 steps",0.9998
+fitness-complexity: same for subfield complexity,0.9999
+Spearman fitness vs number of strong subfields (check: fitness grows with diversity),0.808
+"most complex subfields (few, diverse departments strong in them)",Aquatic Science; Animal Science and Zoology; General Agricultural and Biological Sciences; Pharmacology; Insect Science
+least complex subfields,Electrical and Electronic Engineering; Automotive Engineering; Global and Planetary Change; Environmental Engineering; Aerospace Engineering

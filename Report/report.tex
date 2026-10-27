@@ -88,6 +88,10 @@ time, against about 3 in a billion for three people with no joint papers, and 80
 earlier pair.
 \item The collaboration network grew denser every year and survives the random loss of faculty, but removing about 100
 bridging faculty splits the two campuses.
+\item Faculty cite their co-authors 10 times as often as similar faculty who are far apart, even when the two papers
+share no author, and citing and co-authoring each predict the other (Section~\ref{sec:coauthcite}).
+\item Teams that mix departments get no citation gain once team size is fixed, but departments do move into research
+areas related to what they already do (ROC AUC 0.83 against 0.51 for shuffled areas).
 \end{enumerate}
 
 %===========================================================
@@ -945,7 +949,8 @@ core.
 So far, we have used the measures from the handout. In this section, we go further with matrix functions and
 hypergraphs. All the measures here either count walks in a network, or treat a paper as one group instead of many
 pairs. One message comes out of most of them. Collaboration in our data happens in separate dense labs, and any
-measure that looks at the whole network at once ends up describing one of these labs.
+measure that looks at the whole network at once ends up describing one of these labs. The last four subsections join
+the citation and co-authorship layers, and move up from faculty to departments.
 
 \subsection{Eigenvector centrality and Katz}
 As we know from our lectures already, \textbf{eigenvector centrality} gives a node a high score when its neighbours
@@ -1106,6 +1111,196 @@ by 2021 (log scale). Error bars are 95\% intervals, and most are smaller than th
 \label{fig:closure}
 \end{figure}
 
+\subsection{Do faculty cite their co-authors?}\label{sec:coauthcite}
+Up to now, we have studied the citation network and the co-authorship network one at a time. But they are two layers
+on the same people, so we can ask how the two layers are linked. Wallace, Larivi\`ere and Gingras (2012) and Martin,
+Ball, Karrer and Newman (2013) found that scientists cite their co-authors much more often than other people. We test
+this on our 1,410 faculty.
+
+We say that faculty member A cites B when A is an author of a citing paper and B is an author of the cited paper. As
+we saw in Section~\ref{sec:cit}, most internal citations are self-citations, and a self-citation between two co-authors
+would make this test trivial. So we use a \textit{strict} rule here. The citing paper and the cited paper must have no
+author in common at all. This leaves 10,205 of the 50,372 faculty-to-faculty citations, between 4,999 ordered pairs of
+faculty.
+
+For each ordered pair, we take the distance between A and B in the faculty co-authorship network, and we find the share
+of pairs at each distance where A cites B (Table~\ref{tab:coauthcite}). Co-authors often share a department, a topic
+and a high output, and each of these raises the chance of a citation on its own. So we compare each group with the
+pairs that are four or more steps apart and are of the same kind (the same department, institute or campus relation,
+the same main subfield and a similar number of papers). The ratio of observed to expected citing pairs (O/E) then
+shows the extra effect of the co-author tie.
+
+Co-authors cite each other in 14.0\% of the pairs, against 0.11\% for pairs four or more steps apart, and the O/E is
+10.3. The effect falls with distance, to 7.1 at two steps and 3.4 at three steps. It is strongest when the tie crosses
+a boundary (Fig.~\ref{fig:coauthcite}). Co-authors from two departments of the same IIT cite each other 30 times as
+often as similar faculty far apart, and co-authors from the two IITs 29 times as often. Inside a department the ratio is
+7.2, because faculty of one department cite each other often anyway.
+
+\begin{table}[!t]
+\centering
+\caption{Share of faculty pairs in which A cites B, by distance in the co-authorship network (strict rule). In brackets,
+the O/E against pairs of the same kind that are four or more steps apart.}
+\label{tab:coauthcite}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Distance} & \textbf{Same dept.} & \textbf{Other dept.} & \textbf{Other IIT} \\
+\midrule
+\inputrows{tables/coauthor_distance.tex}
+\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{coauthor_citation_distance.png}
+\caption{Share of faculty pairs in which A cites B, by co-authorship distance (log scale, strict rule).}
+\label{fig:coauthcite}
+\end{figure}
+
+Does citing come before working together, or after it? We split the time at the end of 2020 and use the 928 faculty
+who published both before and after. Among the pairs that had not written together by 2020, the pairs where one had
+cited the other started a joint paper in 2021-2026 in 7.0\% of cases, against 0.24\% for the other pairs. That is 3.6
+times what pairs of the same kind show. The other direction is just as strong. Among the pairs with no citation by
+2020, co-authors started to cite each other in 20\% of cases, which is 3.9 times the expected value. So each layer
+predicts the next step in the other layer. For the 383 pairs whose first contact came after 2018 and who later both
+wrote together and cited each other, the joint paper came first in 56\% of cases and the citation in 31\%. Our data
+starts in 2016, so we only describe this split and do not test it.
+
+As we know from our lectures, \textbf{reciprocity} is the share of directed links that also go back. 23\% of the citing
+pairs cite each other in both directions, against 2.2\% in a configuration model with the same in-degrees and
+out-degrees (2.5\% in 10 rewired networks). It is 44\% for co-authors and still 20\% for pairs who never wrote together.
+
+Last, we measure \textbf{inwardness} (Baccini, De Nicolao and Petrovich, 2019), which is the share of an institute's
+citations that come from its own papers. We report it only for whole institutes. In our set it is 10.2\% at KGP and
+10.4\% at Roorkee. Almost all of it is self-citation. Without the citations where the two papers share an author, it
+is 0.7\% at KGP and 1.0\% at Roorkee. The total rises for recent papers, to 14\% and 16\% for the papers of 2025, but
+only the self-citation part rises. A young paper gets its first citations mostly from its own authors, so this is an
+effect of age and not a trend. Both values are lower bounds, because our set holds only the verified science and
+engineering papers of each IIT.
+
+\subsection{Core and periphery of the citation network}\label{sec:bowtie}
+A citation network of papers has almost no cycles, because papers cite older papers. So its strongly connected groups
+are tiny, at most 10 papers in our data. When we join all the papers of one faculty member into one node, cycles
+appear, because A can cite B in one year and B can cite A later. As we know from our lectures, a \textbf{strongly
+connected component} is a set of nodes in which every node can reach every other node along directed links. Broder and
+others (2000) described a directed network as a \textbf{bow-tie} around its largest strongly connected component, the
+\textit{core}. The \textit{IN} part holds the nodes that can reach the core but cannot be reached from it, the
+\textit{OUT} part holds the reverse, and \textit{tendrils} hang off IN or OUT. Tim\'ar, Goltsev, Dorogovtsev and Mendes
+(2017) studied this structure in more detail.
+
+Our faculty network has a link from A to B when A cites B, where A is not an author of the cited paper and B is not an
+author of the citing paper. It has 6,626 citing pairs. In this network, IN holds faculty who draw on the core, and OUT
+holds faculty the core draws on. 741 of the 1,110 faculty with at least one citation link form one core, with 406
+from KGP and 335 from Roorkee (Table~\ref{tab:bowtie}). 612 of the 741 core members cite, or are cited by, a core member
+of the other IIT, so the core spans both campuses. This is very different from the co-authorship network, where the
+campuses share only 77 links. 1,828 of the 6,626 citing pairs (28\%) join the two IITs, so citations cross the campuses
+much more easily than collaboration does.
+
+\begin{table}[!t]
+\centering
+\caption{Bow-tie parts of the faculty citation network}
+\label{tab:bowtie}
+\footnotesize
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Part} & \textbf{KGP} & \textbf{Roorkee} & \textbf{Total} \\
+\midrule
+\inputrows{tables/bowtie.tex}
+\end{tabular}
+\end{table}
+
+Is this core special? We rewired the network 10 times, keeping the number of citations each faculty member makes and
+receives. The random networks give a core of 761 faculty (753 to 767), about the same as the real 741. So the size of
+the core follows from the citation counts alone. What the bow-tie does show is who sits where. Core members have a
+median of 39 papers and an h-index of 12, against 13 papers and 4 for IN and 13 papers and 6 for OUT. The 300 faculty
+with no citation link to another faculty member have a median of only 3 papers. The core grew from 19 faculty, for the
+citations made up to 2018, to 741 by 2026 (Fig.~\ref{fig:bowtie}). With the strict rule of
+Section~\ref{sec:coauthcite}, the core has 622 faculty and the random networks give 651, so the result is the same.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{bowtie_growth.png}
+\caption{Bow-tie parts of the faculty citation network, for the citations made up to each year.}
+\label{fig:bowtie}
+\end{figure}
+
+We also placed the 48 departments with at least 5 faculty on one line, using the 9,578 citations between departments.
+\textbf{SpringRank} (De Bacco, Larremore and Moore, 2018) finds positions such that, for most citations, the cited
+department sits above the citing one. It agrees with a simple net balance (citations received minus citations made,
+divided by their sum) at $\rho = 0.94$. Among the larger departments, KGP Electrical Engineering, Electronics and
+Electrical Communication Engineering and Mechanical Engineering are near the top. KGP Electrical Engineering, for
+example, is cited 244 times by other departments and cites them 69 times. Roorkee Hydrology (cited 170 times, cites 341
+times), Water Resources Development and Management (248 and 381) and Architecture and Planning are near the bottom. They
+draw more on other departments than other departments draw on them. This is a position in the citation flow between
+our two IITs, and not a measure of quality.
+
+\subsection{Do mixed-department teams get more citations?}
+Work that joins several fields is often said to have more impact, but studies disagree, and the answer depends on how
+the mix is measured (Wang, Thijs and Gl\"anzel, 2015). Since we know the department of every faculty member, we can test
+one simple form of it, which is a team that mixes departments. We take the 7,954 papers with at least two of our
+faculty. Of these, 4,689 have all their faculty in one department, 3,130 mix departments of the same IIT and 135 mix the
+two IITs. A recount of the mixed papers from \texttt{group3\_data.csv} gives the same 3,265.
+
+Raw citations depend on the field and the age of a paper, so we use the \textbf{field-weighted citation impact}
+(FWCI) from OpenAlex. It is the citations of a paper divided by the world average for papers of the same field, year
+and type, so 1 is the world average. We use the papers up to 2023, since newer papers have had little time to be cited.
+Bigger teams get more citations and also mix departments more often, so we hold the team size fixed in three ways.
+\begin{enumerate}
+\item We compare mixed and one-department papers only inside groups with the same number of faculty, the same number of
+authors, the same year and the same field. The mean of $\log(1 + \mathrm{FWCI})$ differs by only 0.006.
+\item In a regression on the same controls, the effect of mixing departments is $-0.001$ (95\% interval $-0.036$ to
+$0.033$, $p = 0.94$). The chance of being in the world's top 10\% changes by $+0.1$ points ($p = 0.90$).
+\item For the 450 faculty members who have both kinds of papers, we compare each person with themselves. Their mixed
+papers do better for 54\% of them, and the difference is not significant (Wilcoxon $p = 0.82$).
+\end{enumerate}
+How far apart the departments are does not matter either. We measured it with the Rao-Stirling diversity (Stirling,
+2007), using the distance between the departments' subfield profiles, and found no effect ($p = 0.26$). So in our data,
+mixing departments brings no citation gain once the team size is fixed. Papers that join the two IITs do slightly worse
+($-0.12$ in the matched groups and $-0.11$ in the regression, $p = 0.025$), but there are only 99 such papers, and with
+all years included the effect is not significant ($p = 0.07$). We call this a weak result.
+
+\subsection{Department strengths and where they move next}
+We describe what a department is strong in with the \textbf{revealed comparative advantage} of each OpenAlex subfield,
+$\mathrm{RCA}_{ds} = (X_{ds}/X_d)/(X_s/X)$, where $X_{ds}$ is the number of papers of department $d$ in subfield $s$
+(Hidalgo, Klinger, Barab\'asi and Hausmann, 2007). An RCA above 1 means the department puts a larger share of its papers
+into that subfield than our two IITs do overall. We call a department strong in a subfield when its RCA is at least 1
+and it has at least 5 papers there, so that one or two papers do not count as a strength. We use the 46 departments
+with at least 5 faculty and 100 papers. The full lists are in \texttt{dept\_area\_strengths.csv}, and some departments
+changed a lot between 2016-2020 and 2021-2026. For example, KGP Architecture and Regional Planning went from 1 to 50
+papers in Building and Construction, KGP Mathematics from 3 to 52 in Algebra and Number Theory, and KGP Electronics and
+Electrical Communication Engineering from 8 to 77 in Electronic, Optical and Magnetic Materials.
+
+Can we predict which subfields a department moves into? Hidalgo and others (2007) showed that countries start to export
+products that are related to what they already export, and Guevara and others (2016) found the same for research
+fields. Two subfields are related when the same faculty are strong in both. We measure this with the 742 faculty who had
+at least 5 papers in 2016-2020. The \textbf{density} of a subfield for a department is then the share of its related
+subfields where the department was already strong in 2016-2020, with closer subfields counting more.
+
+Of the 5,203 department-subfield pairs that were not a strength in 2016-2020, 204 became one in 2021-2026. The density
+ranks them with a ROC AUC of 0.83, where 0.5 would be a random guess. In the most related fifth of the pairs, 17\%
+became a strength, against 0.5\% for the 2,053 pairs with no related strength at all (Fig.~\ref{fig:deptareas}). When we shuffle the subfield
+labels, the AUC drops to 0.51 (95\% range 0.46 to 0.56), and none of 500 shuffles reaches 0.83. For the 4,416 pairs with
+no paper at all before 2021, of which 56 became a strength, the AUC is still 0.83. A department's own RCA in 2016-2020
+also predicts well (0.82), so we also fitted both, leaving out one department at a time. Density alone gives 0.82, RCA
+alone 0.77 and the two together 0.89. So relatedness adds information that the department's own past does not hold.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\linewidth]{dept_area_prediction.png}
+\caption{Share of department-subfield pairs that became a strength in 2021-2026, by their relatedness density in
+2016-2020. The first bar holds the pairs with no related strength at all, and the others are fifths of the rest. The
+labels give new strengths over pairs.}
+\label{fig:deptareas}
+\end{figure}
+
+Last, we ran the \textbf{fitness-complexity} map of Tacchella and others (2012). It is a nonlinear centrality on the
+department-subfield matrix that gives a department a high fitness when it is strong in many subfields, and especially in
+subfields that few other departments are strong in. The values of most departments shrink towards zero as the map runs,
+which is known to happen when the matrix is not perfectly nested (Pugliese, Zaccaria and Pietronero, 2016). The ranking
+itself is stable ($\rho = 0.9998$ between 50 and 100 steps). The top departments are KGP Agricultural and Food
+Engineering, Roorkee Biosciences and Bioengineering, and the Mathematics departments of both IITs.
+
 %===========================================================
 \section{Connections with Other Indian Institutes}\label{sec:india}
 %===========================================================
@@ -1156,7 +1351,9 @@ already cited. Most citations within an institute are self-citations, so we also
 PageRank for age. Since 2023, Indian research has been citing the IITs more than they cite it. Faculty work in tight,
 hierarchical groups within each campus, forming a small world that has grown denser every year. This network survives
 the random loss of faculty, but losing about 100 bridging faculty would split the two campuses apart, and ideas spread
-best from its core. Every step of this work is a script in our repository, so anyone can repeat it.
+best from its core. Faculty cite their co-authors far more often than other faculty, and citing and writing together
+each lead to the other. Teams that mix departments get no citation gain, but departments do move into research areas
+close to what they already do. Every step of this work is a script in our repository, so anyone can repeat it.
 
 The second part of our work adds two lessons. First, the high-quality output of both IITs, whether Q1 or IF $>$ 10,
 comes mostly from teams of fewer than 10 authors (92\% of the IF $>$ 10 papers). Second, matrix functions and hypergraphs show the

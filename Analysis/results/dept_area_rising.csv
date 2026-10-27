@@ -1,0 +1,124 @@
+﻿institution,department,subfield,papers_2016_20,papers_2021_26,share_2016_20,share_2021_26
+IIT Kharagpur,Aerospace Engineering,Computational Mechanics,38,103,0.194,0.231
+IIT Kharagpur,Aerospace Engineering,Aerospace Engineering,59,146,0.301,0.327
+IIT Kharagpur,Agricultural and Food Engineering,Plant Science,52,151,0.116,0.147
+IIT Kharagpur,Agricultural and Food Engineering,Food Science,44,127,0.098,0.124
+IIT Kharagpur,Agricultural and Food Engineering,Ecology,4,30,0.009,0.029
+IIT Kharagpur,Architecture and Regional Planning,Building and Construction,1,50,0.034,0.41
+IIT Kharagpur,Bioscience and Biotechnology,Molecular Biology,56,93,0.154,0.26
+IIT Kharagpur,Bioscience and Biotechnology,Molecular Medicine,12,20,0.033,0.056
+IIT Kharagpur,Bioscience and Biotechnology,Ecology,6,13,0.016,0.036
+IIT Kharagpur,Centre for Interdisciplinary and Convergent Technologies,Hardware and Architecture,2,21,0.057,0.12
+IIT Kharagpur,Centre for Interdisciplinary and Convergent Technologies,Artificial Intelligence,6,35,0.171,0.2
+IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",Global and Planetary Change,28,119,0.226,0.295
+IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",Ecology,7,37,0.056,0.092
+IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",Atmospheric Science,20,77,0.161,0.191
+IIT Kharagpur,Chemical Engineering,"Renewable Energy, Sustainability and the Environment",24,76,0.052,0.122
+IIT Kharagpur,Chemical Engineering,Catalysis,5,20,0.011,0.032
+IIT Kharagpur,Chemical Engineering,Mechanics of Materials,1,12,0.002,0.019
+IIT Kharagpur,Chemistry,Electrical and Electronic Engineering,20,44,0.026,0.05
+IIT Kharagpur,Chemistry,"Electronic, Optical and Magnetic Materials",56,80,0.073,0.091
+IIT Kharagpur,Chemistry,"Atomic and Molecular Physics, and Optics",25,44,0.032,0.05
+IIT Kharagpur,Civil Engineering,Pollution,3,61,0.004,0.058
+IIT Kharagpur,Civil Engineering,"Renewable Energy, Sustainability and the Environment",14,65,0.02,0.062
+IIT Kharagpur,Civil Engineering,Waste Management and Disposal,13,43,0.019,0.041
+IIT Kharagpur,Computer Science and Engineering,Artificial Intelligence,235,379,0.232,0.269
+IIT Kharagpur,Computer Science and Engineering,Control and Systems Engineering,8,34,0.008,0.024
+IIT Kharagpur,Computer Science and Engineering,Cognitive Neuroscience,16,42,0.016,0.03
+IIT Kharagpur,Cryogenic Engineering,Biomedical Engineering,6,16,0.06,0.182
+IIT Kharagpur,Cryogenic Engineering,Mechanical Engineering,12,16,0.12,0.182
+IIT Kharagpur,Electrical Engineering,Control and Systems Engineering,97,189,0.189,0.234
+IIT Kharagpur,Electrical Engineering,Electrical and Electronic Engineering,198,337,0.385,0.417
+IIT Kharagpur,Electrical Engineering,Geophysics,6,24,0.012,0.03
+IIT Kharagpur,Electronics and Electrical Communication Engg.,"Electronic, Optical and Magnetic Materials",8,77,0.014,0.091
+IIT Kharagpur,Electronics and Electrical Communication Engg.,Computer Vision and Pattern Recognition,38,93,0.067,0.11
+IIT Kharagpur,Electronics and Electrical Communication Engg.,Artificial Intelligence,25,67,0.044,0.079
+IIT Kharagpur,Energy Science and Engineering,Biomedical Engineering,4,50,0.125,0.22
+IIT Kharagpur,Energy Science and Engineering,Mechanical Engineering,0,16,0.0,0.07
+IIT Kharagpur,G.S Sanyal School of Telecommunication,Aerospace Engineering,7,14,0.072,0.111
+IIT Kharagpur,G.S Sanyal School of Telecommunication,Artificial Intelligence,8,15,0.082,0.119
+IIT Kharagpur,Geology and Geophysics,Atmospheric Science,18,67,0.062,0.119
+IIT Kharagpur,Geology and Geophysics,Geophysics,96,197,0.332,0.351
+IIT Kharagpur,Geology and Geophysics,Ocean Engineering,1,12,0.003,0.021
+IIT Kharagpur,Materials Science Centre,Organic Chemistry,2,11,0.007,0.025
+IIT Kharagpur,Materials Science Centre,"Atomic and Molecular Physics, and Optics",2,10,0.007,0.023
+IIT Kharagpur,Materials Science Centre,Molecular Medicine,5,13,0.018,0.029
+IIT Kharagpur,Mathematics,Algebra and Number Theory,3,52,0.008,0.097
+IIT Kharagpur,Mathematics,Computational Theory and Mathematics,20,51,0.054,0.095
+IIT Kharagpur,Mathematics,Geometry and Topology,19,42,0.051,0.078
+IIT Kharagpur,Mechanical Engineering,Computational Mechanics,93,167,0.113,0.152
+IIT Kharagpur,Mechanical Engineering,Plant Science,0,11,0.0,0.01
+IIT Kharagpur,Mechanical Engineering,Industrial and Manufacturing Engineering,5,17,0.006,0.015
+IIT Kharagpur,Metallurgical and Materials Engineering,Materials Chemistry,53,202,0.115,0.199
+IIT Kharagpur,Metallurgical and Materials Engineering,Ceramics and Composites,9,44,0.02,0.043
+IIT Kharagpur,Metallurgical and Materials Engineering,Biomaterials,11,41,0.024,0.04
+IIT Kharagpur,Mining Engineering,Building and Construction,0,19,0.0,0.061
+IIT Kharagpur,Mining Engineering,Biomedical Engineering,1,18,0.007,0.058
+IIT Kharagpur,Mining Engineering,Environmental Engineering,1,12,0.007,0.039
+IIT Kharagpur,Ocean Engg and Naval Architecture,Civil and Structural Engineering,5,15,0.031,0.068
+IIT Kharagpur,Ocean Engg and Naval Architecture,Ocean Engineering,37,57,0.233,0.259
+IIT Kharagpur,Physics,"Electronic, Optical and Magnetic Materials",74,135,0.14,0.167
+IIT Kharagpur,Physics,Electrical and Electronic Engineering,69,127,0.13,0.157
+IIT Kharagpur,Physics,Artificial Intelligence,0,15,0.0,0.019
+IIT Kharagpur,Rubber Technology,Biomedical Engineering,21,54,0.074,0.149
+IIT Kharagpur,Rubber Technology,Electrical and Electronic Engineering,3,17,0.011,0.047
+IIT Kharagpur,Rubber Technology,Mechanical Engineering,23,41,0.082,0.113
+IIT Kharagpur,School of Water Resources,Global and Planetary Change,4,27,0.118,0.221
+IIT Kharagpur,Subir Chowdhury School of Quality and Reliability,Control and Systems Engineering,2,19,0.033,0.168
+IIT Kharagpur,Subir Chowdhury School of Quality and Reliability,Mechanical Engineering,0,13,0.0,0.115
+IIT Kharagpur,Subir Chowdhury School of Quality and Reliability,Signal Processing,3,11,0.049,0.097
+IIT Roorkee,Architecture and Planning,Global and Planetary Change,0,25,0.0,0.179
+IIT Roorkee,Architecture and Planning,"Health, Toxicology and Mutagenesis",0,14,0.0,0.1
+IIT Roorkee,Biosciences and Bioengineering,Plant Science,25,66,0.068,0.1
+IIT Roorkee,Biosciences and Bioengineering,Molecular Medicine,9,34,0.024,0.052
+IIT Roorkee,Biosciences and Bioengineering,Electrical and Electronic Engineering,3,19,0.008,0.029
+IIT Roorkee,Chemical Engineering,Catalysis,8,37,0.022,0.064
+IIT Roorkee,Chemical Engineering,Environmental Chemistry,8,37,0.022,0.064
+IIT Roorkee,Chemical Engineering,Computational Mechanics,17,48,0.047,0.083
+IIT Roorkee,Chemistry,"Electronic, Optical and Magnetic Materials",18,51,0.035,0.067
+IIT Roorkee,Chemistry,Mechanics of Materials,6,28,0.012,0.037
+IIT Roorkee,Chemistry,Catalysis,0,18,0.0,0.024
+IIT Roorkee,Civil Engineering,Civil and Structural Engineering,125,424,0.205,0.302
+IIT Roorkee,Civil Engineering,Waste Management and Disposal,11,48,0.018,0.034
+IIT Roorkee,Civil Engineering,Atmospheric Science,20,68,0.033,0.048
+IIT Roorkee,Computer Science and Engineering,Artificial Intelligence,49,90,0.148,0.186
+IIT Roorkee,Computer Science and Engineering,Electrical and Electronic Engineering,10,32,0.03,0.066
+IIT Roorkee,Computer Science and Engineering,Cognitive Neuroscience,10,30,0.03,0.062
+IIT Roorkee,Earth Sciences,Environmental Engineering,5,45,0.035,0.111
+IIT Roorkee,Earth Sciences,Mechanics of Materials,3,29,0.021,0.072
+IIT Roorkee,Earth Sciences,Artificial Intelligence,0,19,0.0,0.047
+IIT Roorkee,Earthquake Engineering,Civil and Structural Engineering,60,153,0.556,0.619
+IIT Roorkee,Earthquake Engineering,Mechanical Engineering,1,11,0.009,0.045
+IIT Roorkee,Earthquake Engineering,"Management, Monitoring, Policy and Law",4,16,0.037,0.065
+IIT Roorkee,Electrical Engineering,Electrical and Electronic Engineering,244,601,0.485,0.505
+IIT Roorkee,Electrical Engineering,Automotive Engineering,0,17,0.0,0.014
+IIT Roorkee,Electrical Engineering,Biomedical Engineering,2,20,0.004,0.017
+IIT Roorkee,Electronics and Communication Engineering,Artificial Intelligence,7,60,0.015,0.043
+IIT Roorkee,Electronics and Communication Engineering,Cognitive Neuroscience,0,32,0.0,0.023
+IIT Roorkee,Electronics and Communication Engineering,Electrical and Electronic Engineering,197,614,0.426,0.444
+IIT Roorkee,Hydro and Renewable Energy,Control and Systems Engineering,0,19,0.0,0.051
+IIT Roorkee,Hydro and Renewable Energy,Waste Management and Disposal,3,24,0.025,0.065
+IIT Roorkee,Hydro and Renewable Energy,Artificial Intelligence,1,15,0.008,0.04
+IIT Roorkee,Hydrology,Global and Planetary Change,16,119,0.225,0.295
+IIT Roorkee,Hydrology,"Management, Monitoring, Policy and Law",0,14,0.0,0.035
+IIT Roorkee,Hydrology,Ecology,0,10,0.0,0.025
+IIT Roorkee,Mathematics,Applied Mathematics,58,103,0.161,0.22
+IIT Roorkee,Mathematics,Computational Mechanics,18,50,0.05,0.107
+IIT Roorkee,Mathematics,Mathematical Physics,5,27,0.014,0.058
+IIT Roorkee,Mechanical and Industrial Engineering,Polymers and Plastics,35,76,0.049,0.079
+IIT Roorkee,Mechanical and Industrial Engineering,Biomedical Engineering,57,104,0.081,0.108
+IIT Roorkee,Mechanical and Industrial Engineering,Biomaterials,5,32,0.007,0.033
+IIT Roorkee,Metallurgical and Materials Engineering,Materials Chemistry,45,73,0.168,0.221
+IIT Roorkee,Metallurgical and Materials Engineering,Electrical and Electronic Engineering,10,19,0.037,0.058
+IIT Roorkee,Metallurgical and Materials Engineering,Biomedical Engineering,4,10,0.015,0.03
+IIT Roorkee,Paper Technology,Biomaterials,11,117,0.216,0.49
+IIT Roorkee,Paper Technology,Mechanics of Materials,0,16,0.0,0.067
+IIT Roorkee,Paper Technology,Polymers and Plastics,0,16,0.0,0.067
+IIT Roorkee,Physics,Astronomy and Astrophysics,12,74,0.028,0.068
+IIT Roorkee,Physics,"Atomic and Molecular Physics, and Optics",36,131,0.085,0.12
+IIT Roorkee,Physics,Biomedical Engineering,13,69,0.031,0.063
+IIT Roorkee,Polymer and Process Engineering,Biomaterials,17,57,0.103,0.136
+IIT Roorkee,Polymer and Process Engineering,Water Science and Technology,10,38,0.061,0.09
+IIT Roorkee,Polymer and Process Engineering,Biomedical Engineering,13,45,0.079,0.107
+IIT Roorkee,Water Resources Development and Management,Civil and Structural Engineering,3,21,0.015,0.05
+IIT Roorkee,Water Resources Development and Management,Environmental Engineering,23,59,0.116,0.139
