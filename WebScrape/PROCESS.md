@@ -610,3 +610,43 @@ Kharagpur 10, Roorkee 43); the v2 re-run of the three applies the same rule.
   Both new IITs have almost no 2016–2017 rows (institutes founded 2016; joining years are upper bounds from archived lists),
   and several annual reports are image-only PDFs (read from rendered pages where used). Consistency fix: 46 IIT Palakkad
   annual-report rows were `high` from the pilot, before the rule "an annual-report listing alone is medium"; harmonised.
+* ORCID harvest complete for all 23 IITs (2026-10-27 08:00, after the quota reset at 22:51 — roughly 24 h after exhaustion).
+  IIT Madras: 11,093 profiles, the partitioned search recovered all 11,093 reported. Roster agents now match faculty against an
+  offline index of these harvested ORCID affiliation records (employment/education/invited-position entries naming the IIT, with
+  dates) instead of per-person API lookups; same acceptance rule (an employment at this IIT on the ORCID record), no quota use.
+* IIT Goa (287 papers, 38 high) and IIT Bhilai (287, 37 high) golden sets accepted. Bhilai caveats: the institute's live sites fail
+  TLS (Wayback copies used), five annual-report PDFs were unreadable (truncated copies / image-only), no 2016–2017 rows (tenure
+  rule + institute founded 2016). From 2026-10-27 new agents run on Sonnet 5.5 (operator decision, to finish faster within
+  usage limits); the pilots and the first golden sets were Opus 5.5. Harness limit: 20 concurrent agents.
+* IIT Mandi golden set accepted (2026-10-27): 300 papers (target 400), 40 high / 260 medium, 64 with a DOI; the first agent's
+  ~215 transcribed rows were spot-checked only, the rest built by its Sonnet continuation (38 arXiv rows verified in the PDF,
+  51 department/lab rows). Source mix off target (news ~1 %). Unused sources: the institute repository (odr.iitmandi.ac.in)
+  and the SCS/SCEE publication listings.
+* IIT Jodhpur golden set, first pass (2026-10-27): 126 papers against a 450 target and **not accepted as the benchmark**: no
+  faculty-page or department-page rows (IITJ profiles list no publications, departmental publication pages are empty in the
+  archive), 61 arXiv + 62 annual-report + 3 news rows, skewed to physics/CS/maths; Chemical Engineering, Design and CETSD are
+  empty. A supplement agent extends it from personal homepages and lab pages (the standard sources of the other golden sets).
+  Recall on Jodhpur is reported only after the supplement, with the first-pass size and bias stated.
+* IIT Guwahati roster accepted (2026-10-27): 655 people (488 current, 65 former, 101 visiting, 1 emeritus), 17 units; 470 of 488
+  current confirmed in NIRF; 276 ORCIDs from the offline index. Known gap: the archived 2016–2020 department faculty pages were
+  not fetched (shared Wayback slot, ~30 min per CDX query), so former faculty rest on NIRF and annual-report tables and
+  2016–2017 leavers are mostly missing. 72 NIRF-2026 people with designation "Other" (not on the faculty list) were excluded as
+  presumed staff; two different people named Gautam Barua are both kept.
+
+### 15.7 Run structure and timing (2026-10-27)
+First complete run (IIT Palakkad, the smallest IIT, 230 roster people): 234 min wall-clock, 3 min CPU. Crossref author queries
+(`query.author`, 1000 rows) take 9–14 s each and the polite pool allows 3 at once → ~15 min per roster pass for 230 people
+(~90 min for IIT Bombay's 1,286); the arXiv pass is 5 s per person (~20 min); one pass took 3 h 15 min with no logged errors
+(a Crossref slowdown). Consequences for the driver (`run_v2.sh`):
+* stages are separate queues (`roster`, `arxiv`, `verify`, `refresh`) so different services run in parallel;
+* the **loose roster pass is optional and off by default**: it feeds only `candidates_unconfirmed_<inst>.json` (precision
+  12–22 %, git-ignored, not part of any dataset, §9) and doubled the Crossref time. Dataset counts are unaffected; only the
+  diagnostic "recall if the unconfirmed file were added" is not produced for institutes run without it. Palakkad had it.
+* the verification channels of v1 (§9: Europe PMC by DOI, Springer landing pages, TODO resolution) are an explicit `verify` stage;
+  the first Palakkad run omitted them (782 `unverified-likely` records remained) and is superseded by the verified run.
+Palakkad first run (without verification), against its 308-paper golden set: recall 67.2 % (83.3 % for golden papers with a
+DOI); v1 for comparison 67–74 % / 81–83 %.
+* IIT Hyderabad golden set accepted with caveats (2026-10-27): 398 papers (target ~650, floor ~550 not reached: the agent stopped
+  at the interruption), 378 medium / 20 high, no IIIT-H papers (one arXiv candidate rejected for that). Seven units have 1–11 rows
+  (Physics, Chemical, MSME, Design, BME, AI, Biotech): per-unit recall is reported as unreliable there. ~17 rows with broken
+  title/venue parsing were dropped. News share 0 (institute news lists no papers).

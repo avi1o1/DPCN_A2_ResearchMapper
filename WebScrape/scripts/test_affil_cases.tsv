@@ -62,3 +62,6 @@ iit_delhi	iit	IITD,Electrical Engineering Department,New Delhi,India	abbreviatio
 iit_delhi	None	Department of Electronics and Communication Engineering, Indian Institute of Information Technology Design and Manufacturing (IIITD&M) Kancheepuram, Chennai, India	IIITD&M
 iit_delhi	None	Department of Civil Engineering, Indian Institute of Technology Kanpur | Ministry of Road Transport, New Delhi, India	the v1 failure mode that motivated v2
 iit_tirupati	iit	Center for Atomic, Molecular and Optical Sciences & Technologies (CAMOST), joint initiative of IIT Tirupati & IISER Tirupati, Tirupati, India	joint IIT-IISER centre naming the IIT counts (golden set excluded such papers; recall is unaffected)
+iit_hyderabad	None	Department of CSE, I.I.I.T. Hyderabad, Gachibowli, India	"I.I.T." must not match inside "I.I.I.T." (IIIT-H); reported by the IIIT team 2026-10-27
+iit_hyderabad	None	Department of Chemistry, I. I. I. T. Hyderabad, India	same, spaced form
+iit_hyderabad	iit	Department of CSE, I.I.T. Hyderabad, Kandi, India	the dotted IIT form still counts

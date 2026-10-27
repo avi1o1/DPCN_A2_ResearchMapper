@@ -1,11 +1,15 @@
 #!/bin/sh
 # v2 pipeline driver (PROCESS.md §15): every step writes to WebScrape/v2/ (RM_OUT=v2).
-# usage: sh run_v2.sh merge|final|refresh [inst ...]       (default: every institute in institutes.py)
-#   merge   : union -> DOI resolution -> Crossref/DataCite enrichment -> finalize -> recall (after the discovery harvests)
-#   final   : strict roster pass -> merge -> loose roster pass -> arXiv pass -> merge -> OpenCitations -> finalize -> recall
-#             -> TODO sheet (needs rosters/<inst>_faculty.csv)
-#   refresh : rebuild from the caches after verify_*.py / resolve_todos.py, then cross-institute validation
-# Sequential on purpose: shared caches must have a single writer.
+# usage: sh run_v2.sh <stage> [inst ...]       (default: every institute in institutes.py)
+#   merge    : union -> DOI resolution -> Crossref/DataCite enrichment -> finalize -> recall   (works without a roster)
+#   roster   : strict roster pass (Crossref author search, roster ORCID works, DBLP) -> merge        [Crossref queue]
+#   arxiv    : arXiv author pass (5 s per person, a separate host -> may run in parallel with `roster` of other institutes)
+#   verify   : Europe PMC DOI verification, Springer landing-page verification, TODO resolution   [slow, 3 workers/1 req/s]
+#   refresh  : merge -> OpenCitations fallback -> finalize -> recall -> TODO sheet; then cross-institute validation
+#   loose    : OPTIONAL loose roster pass (feeds only the unconfirmed-candidates file, a diagnostic outside the dataset);
+#              off by default since 2026-10-27 (it doubles the Crossref time; PROCESS.md §15.7)
+# Typical order per institute: roster -> arxiv -> verify -> refresh.  Sequential per queue on purpose:
+# shared caches must have a single writer per institute.
 set -e
 cd "$(dirname "$0")"
 export RM_OUT=v2
@@ -20,10 +24,10 @@ post() {  # OpenCitations fallback, finalize, recall, TODO sheet
 }
 case $STAGE in
   merge)   for I in $INSTS; do sh run_merge.sh $I; done ;;
-  final)   for I in $INSTS; do python3 roster_channels.py $I; sh run_merge.sh $I; done
-           for I in $INSTS; do python3 roster_channels.py $I --loose; done
-           for I in $INSTS; do python3 roster_channels.py $I --arxiv-only; done
-           for I in $INSTS; do sh run_merge.sh $I; post $I; done ;;
+  roster)  for I in $INSTS; do python3 roster_channels.py $I; sh run_merge.sh $I; done ;;
+  loose)   for I in $INSTS; do python3 roster_channels.py $I --loose; done ;;
+  arxiv)   for I in $INSTS; do python3 roster_channels.py $I --arxiv-only; done ;;
+  verify)  for I in $INSTS; do python3 verify_epmc.py $I; python3 verify_springer.py $I; python3 resolve_todos.py $I; done ;;
   refresh) for I in $INSTS; do sh run_merge.sh $I; post $I; done
            python3 validate.py $INSTS ;;
   *) echo "unknown stage $STAGE"; exit 2 ;;
