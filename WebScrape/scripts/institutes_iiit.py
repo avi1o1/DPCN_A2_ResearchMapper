@@ -13,8 +13,10 @@ import re
 
 # "International / Indian / Indraprastha Institute of Information Technology" (typos: Institue, Inst., Informaton, Technolgy)
 # (review 2026-10-27: "Institute for Information Technology", "Institute of Information, Technology")
-NAME = r"ins\w*\.?\s+(?:(?:of|for)\s+)?info\w*\.?[\s,]*te(?:ch|cc|hc)\w*"   # also "Tecchnology", "Tehcnology"
-MENTION = rf"(?:inter?national|indian|indraprastha)\s+{NAME}|\biiit|\bi\s*\.\s*i\s*\.\s*i\s*\.\s*t\b"
+NAME = r"ins\w*\.?\s+(?:(?:of|for)\s+)?info\w*\.?[\s,]*(?:and\s+)?te(?:ch|cc|hc)\w*"   # also "Tecchnology", "Information and Technology"
+# Indraprastha also as "Indaprastha", "Indraprashtha" (review 2026-10-27)
+INDRAPRASTHA = r"ind\w*pra\w*"
+MENTION = rf"(?:inter?national|int'?l\.?|indian|{INDRAPRASTHA})\s+{NAME}|\biiit|\bi\s*\.\s*i\s*\.\s*i\s*\.\s*t\b"
 # optional ", Design and Manufacturing" / "and Management" after the name
 SUFFIX = r"(?:\s*,?\s*(?:design\s*,?\s*(?:and|&|&amp;)?\s*manufacturing|and\s+management))?"
 # IITs never count as an IIIT (the IIT entries likewise list IIITs among their `other` organisations)
@@ -47,7 +49,9 @@ def explicit(first, city, abbr=None):
     wider window matched "Indian Institute of Information Technology, Dharwad, Pune" (review 2026-10-27). Looser strings still
     count through the mention rule (mention + place in the same part, nothing else named)."""
     gap = r"[\s,\-‐–—:]*(?:\(\s*[\w&.\- ]{1,12}\s*\)[\s,\-‐–—:]*)?"
-    x = rf"(?:{first})\s+{NAME}{SUFFIX}{gap}(?:{city})\b|\biiit\w*\W{{0,3}}(?:{city})\b"
+    # dotted "I.I.I.T. Hyderabad" must be caught here: otherwise the IIT rule "I.I.T. Hyderabad" (inside it) wins (review)
+    x = (rf"(?:{first})\s+{NAME}{SUFFIX}{gap}(?:{city})\b|\biiit\w*\W{{0,3}}(?:{city})\b|"
+         rf"\bi\s*\.\s*i\s*\.\s*i\s*\.\s*t\.?\W{{0,3}}(?:{city})\b")
     return x + (f"|{abbr}" if abbr else "")
 
 
@@ -97,8 +101,9 @@ EXT = {
         # review 2026-10-27: 600127 is also printed by VIT Chennai, Bharath Institute (Selaiyur), PSVP Engineering and LifeCell;
         # Kelambakkam by Chennai Mathematical Institute, Chettinad, SMK Fomra; Vandalur by B.S. Abdur Rahman Crescent and the
         # TN wildlife institute -> 'shared' (without an IIIT mention a string there is not about IIITDM)
-        anchor=r"\biiitdm\.ac\.in\b", city=r"\bmelakottaiyur\b",
-        shared=r"\b(?:kancheepuram|kanchipuram|chennai)\b|\b600127\b|\bvandalur\b|\bkelambakkam\b",
+        # Melakottaiyur too: Tagore Engineering / Medical College, TN Physical Education and Sports University, VIT Chennai
+        anchor=r"\biiitdm\.ac\.in\b", city=None,
+        shared=r"\b(?:kancheepuram|kanchipuram|chennai)\b|\b600127\b|\bvandalur\b|\bkelambakkam\b|\bmelakottaiyur\b",
         units=r"\biiit\s*-?\s*d\s*(?:&|&amp;|and)?\s*m\W{0,3}(?:kancheepuram|kanchipuram|chennai)\b|"
               r"\biiidm\W{0,5}(?:kancheepuram|kanchipuram|chennai)\b",   # IIIDM typo
         explicit_full=explicit(r"indian|inter?national", r"kancheepuram|kanchipuram|chennai"),
@@ -171,11 +176,12 @@ EXT = {
         name="Indraprastha Institute of Information Technology Delhi",
         ror="https://ror.org/03vfp4g33", grid="grid.454294.a", short="Delhi",
         crossref=["Okhla", "110020", "IIITD", "Indraprastha", "Delhi"], crossref_broad=[],
-        # Okhla Industrial Estate / 110020 hosts companies, ESIC and other bodies -> 'city'
-        anchor=r"\biiitd\.(?:ac|edu)\.in\b", city=r"\bokhla\b|\b110020\b", shared=r"\b(?:new\s+)?delhi\b",
-        units=rf"indraprastha\s+{NAME}|\biiit\s*-?\s*delhi\b|\biiitdelhi\b",
+        # Okhla / 110020 is dominated by DSEU's G.B. Pant campus, AcSIR, INCLEN, IHD, Sightsavers, Fortis Escorts, companies;
+        # none of 100 uncertain strings without a mention was IIIT-D (review 2026-10-27) -> 'shared'
+        anchor=r"\biiitd\.(?:ac|edu)\.in\b", city=None, shared=r"\b(?:new\s+)?delhi\b|\bokhla\b|\b110020\b",
+        units=rf"{INDRAPRASTHA}\s+{NAME}|\biiit\s*-?\s*delhi\b|\biiitdelhi\b",
         abbr=r"\biiit\s*-?\s*d\b(?!\s*(?:&|&amp;|and)?\s*m)|\biiitd\b(?!\s*(?:&|&amp;|and)?\s*m)",   # not IIITD&M
-        explicit_full=explicit(r"indraprastha|indian|inter?national", r"delhi"),
+        explicit_full=explicit(rf"{INDRAPRASTHA}|indian|inter?national", r"delhi"),
         state=None,
         other=r"guru gobind singh|\bggsipu\b|\bipu\b|indraprastha university|indraprastha apollo|indraprastha college|"
               r"indira gandhi delhi technical|\bigdtuw?\b|netaji subhas|\bnsut\b|\bnsit\b|delhi technological|\bdtu\b|jamia|"
@@ -187,11 +193,12 @@ EXT = {
         name="International Institute of Information Technology Hyderabad",
         ror="https://ror.org/05f11g639", grid="grid.419361.8", short="Hyderabad",
         crossref=["Hyderabad", "Gachibowli", "500032", "500046", "IIITH"], crossref_broad=[],
-        # Gachibowli / 500032 / 500046 are shared with the University of Hyderabad, ISB and many companies -> 'city'
-        anchor=r"\biiit\.(?:ac\.in|net)\b", city=r"\bgachibowli\b|\b500032\b|\b500046\b", shared=r"\bhyderabad\b",
+        # Gachibowli / 500032 / 500046 are dominated by NIAB, AIG hospitals, University of Hyderabad, CR Rao AIMSCS, DRILS,
+        # MANUU, TIFR-H and companies; the only IIIT-H strings among 160 uncertain ones were name typos (review 2026-10-27)
+        anchor=r"\biiit\.(?:ac\.in|net)\b", city=None, shared=r"\bhyderabad\b|\bgachibowli\b|\b500032\b|\b500046\b",
         units=r"\biiit\s*-?\s*hyderabad\b|\biiithyderabad\b|kohli cent(?:re|er)|cent(?:re|er) for visual information technology",
         abbr=r"\biiit\s*-?\s*h\b|\biiith\b",
-        explicit_full=explicit(r"inter?national|indian", r"hyderabad"),
+        explicit_full=explicit(r"inter?national|int'?l\.?|indian", r"hyderabad"),
         state=None,   # Telangana also has IIIT Basar (RGUKT)
         other=r"university of hyderabad|\buoh\b|indian school of business|\bisb\b|osmania|\bjntu|jawaharlal nehru technological|"
               r"\bmlr\b|vardhaman|\bgnits\b|narayanamma|chaitanya bharathi|\bcbit\b|\bvnr\b|vasavi|\bcvr\b|\bbvrit\b|"
