@@ -86,3 +86,71 @@ Look-alikes found in the same samples (to become `other` / `confusable` entries 
   primary sources.
 * Bangalore: REVA University's "School of Computing and Information Technology".
 * Kancheepuram: Sri Venkateswara College of Engineering's IT department.
+
+## 2. Registry and classifier review (2026-10-27)
+
+### 2.1 Registry (`scripts/institutes_iiit.py`)
+* `family="iiit"`; `mention` = "International / Indian / Indraprastha Institute of Information Technology" (fuzzy: Institue,
+  "Institute for", "Information, Technology", "Information and Technology", Tecchnology, Int'l, Indaprastha) or `IIIT…` or dotted
+  `I.I.I.T.`. `confusable` = IIT names + unregistered IIITs named with their city (Lucknow, Kota, Vadodara, Sri City, Guwahati,
+  Kalyani, Bhagalpur, Agartala, Bhubaneswar, Naya Raipur, Dharwad, Una, Sonepat, Kottayam, Manipur, Nagpur, Ranchi, Bhopal,
+  Surat, Raichur, Tiruchirappalli, Kurnool, Kerala/IIITM-K, Basar, Nuzvid …) and their abbreviations.
+* `explicit_full`: the institute's name followed by its city with only punctuation or a bracketed abbreviation in between, or
+  `IIIT<city>`. A 60-character window (first version) matched "Indian Institute of Information Technology, Dharwad, Pune"; the
+  tightened rule leaves looser strings to the mention rule (mention + place in the same part, nothing else named).
+* A named unregistered IIIT is a strong exclusion (`exclude`) for every IIIT ("IIITDM Kurnool … CVRDE, Avadi, Chennai").
+* IIIT Pune's `mention` deliberately excludes "International Institute of Information Technology": in Pune that is the private
+  I²IT (Hinjawadi), and ORCID/DBLP person matching accepts "city AND mention". I²IT strings are excluded explicitly.
+* `state=None` for all eight: every state concerned has a second IIIT (MP: Gwalior+Jabalpur; UP: Allahabad+Lucknow; Karnataka:
+  Bangalore+Dharwad+Raichur; TN: Kancheepuram+Trichy; Maharashtra: Pune+Nagpur; Telangana: Hyderabad+Basar). No broad sweeps
+  are used (the `Telangana` sweep was run before this decision and is not in the registry).
+* IIT regression: every distinct author-affiliation string of the three v1 datasets (46,021) classified for all 23 IITs with and
+  without `institutes_iiit.py`: **0 changed verdicts** (first version and again after review round 2).
+
+### 2.2 Crossref sweeps
+44 tokens, all completed on 2026-10-27 (light records, 3 lanes, watchdog runner `raw/run_sweeps_iiit.sh`).
+
+### 2.3 Review findings (`review_strings.py`; all `uncertain`, all `iitnoname`, all `iitnone`, top `other`, random `iit` samples)
+**No campus PIN or locality of the eight IIITs is campus-unique.** Every one was dominated by other organisations in the
+uncertain lists, so the department rule is not used for any IIIT (anchors = e-mail domains only), and the location tokens are
+`shared` (without an IIIT mention a string there is not about the IIIT) except where noted:
+
+| IIIT | token | shared with (examples from the uncertain lists) | role |
+|---|---|---|---|
+| Jabalpur | 482005, Dumna | Hitkarini colleges (HCET, dental, pharmacy), MITS Gwalior typo | city |
+| Gwalior | 474015, Morena Link Road | (no conflicts found; kept conservative) | city |
+| Allahabad | Jhalwa, Devghat/Deoghat, 211015, 211012 | Shambhunath Institute (SIET), VKS Agritech | city |
+| Bangalore | 560100, Electronics City | IBAB, C-DAC, Centre for Human Genetics, XIME, Bangalore Bioinnovation Centre, companies | shared |
+| Pune | 411041, 411048, 412109, Ambegaon, Nanoli | NBNSSOE, JSPM, SKNCOE (Narhe); VIIT, NIBM, PCCM (Kondhwa); SKNMC; CFSL (Nanoli) | shared |
+| Kancheepuram | 600127, Melakottaiyur, Vandalur, Kelambakkam | VIT Chennai, Bharath Institute, PSVPEC, Tagore colleges, TNPESU; CMI, Chettinad; BSA Crescent | shared |
+| Delhi | Okhla, 110020 | DSEU G.B. Pant campus, AcSIR, INCLEN, IHD, Sightsavers, Fortis Escorts | shared |
+| Hyderabad | Gachibowli, 500032, 500046 | NIAB, AIG hospitals, University of Hyderabad, CR Rao AIMSCS, DRILS, MANUU, TIFR-H | shared |
+
+Other decisions: "Indian Institute of Design and Manufacturing Jabalpur" (IT dropped) = IIITDM Jabalpur; "ABV-IITM" = ABV-IIITM;
+"IIIDM Kancheepuram" = IIITDM; an IIT name printed with an IIIT's token is another organisation (PIN typo); Kohli Centre and
+CVIT are IIIT-H units. Each decision is a test case in `scripts/test_affil_cases_iiit.tsv` (49 IIIT cases; 112/112 pass).
+
+Effect (distinct strings / author slots classified as the institute, end of round 2): Jabalpur 923 / 5,489; Gwalior 670 / 4,254;
+Allahabad 816 / 5,654; Pune 73 / 164; Kancheepuram 755 / 4,318; Bangalore 402 / 2,685; Delhi 1,079 / 8,343; Hyderabad 1,084 / 5,598.
+Remaining `uncertain`: 0–2 distinct strings per institute (garbled multi-institute strings).
+
+**Bug reported to the IIT team (not fixed here, shared code):** the IIT explicit rule `I.I.T. <city>` matches inside the dotted
+"I.I.I.T. Hyderabad", so `classify("iit_hyderabad", "I.I.I.T. Hyderabad, Telangana, India")` returns `iit`.
+
+### 2.4 Discovery channels
+Europe PMC, DOAJ, DBLP, INSPIRE (Allahabad 26 records; Hyderabad), ORCID harvested for all eight (`raw/run_channels_iiit.sh`);
+Europe PMC and DOAJ re-run after review round 2 because their queries derive from the token roles (`raw/run_epmc_doaj_iiit.sh`).
+Europe PMC records (final queries): Jabalpur 199, Gwalior 87, Kancheepuram 968, Allahabad 440, Bangalore 575, Pune 479, Delhi 1,313,
+Hyderabad 805.
+
+## 3. Rosters and golden sets (sub-agents, Sonnet)
+* Briefs: `agents/iiits.json` + `fill.py`; each filled brief gets a "machine environment" section (Windows, venv, RM_MAILTO,
+  operator) and the instruction to read "IIT" as "this institute".
+* Incidents (2026-10-27): (1) the IIITDM Jabalpur CDN serves brotli-compressed bodies that `polite_get.py` cached undecoded,
+  because `brotli` was missing in the venv; installed (urllib3 then decodes transparently; no code change). (2) A DNS outage
+  stopped all four agents; resumed from their saved state. (3) The session usage limit stopped all agents; the operator asked
+  for fewer parallel agents: **at most two agents at a time** from then on.
+* **IIITDM Jabalpur roster** (accepted): 129 people (73 current, 28 former, 28 visiting); NIRF 2018–2026 tables (joining/leaving
+  dates) + 16 Wayback snapshots + annual reports; 72 of 73 current rows NIRF-confirmed; ORCID 46. The 8 currently listed
+  visiting people carry no year range (open tenure); harmless because visiting people only contribute papers that print the
+  institute's affiliation (PROCESS.md §15.6). Known gaps: four image-only annual reports not read.
