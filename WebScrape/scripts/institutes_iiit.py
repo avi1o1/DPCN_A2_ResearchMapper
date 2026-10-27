@@ -12,7 +12,8 @@ First version 2026-10-27 from the reconnaissance (PROCESS_IIIT.md §1); `other` 
 import re
 
 # "International / Indian / Indraprastha Institute of Information Technology" (typos: Institue, Inst., Informaton, Technolgy)
-NAME = r"ins\w*\.?\s+(?:of\s+)?info\w*\.?\s*tech\w*"
+# (review 2026-10-27: "Institute for Information Technology", "Institute of Information, Technology")
+NAME = r"ins\w*\.?\s+(?:(?:of|for)\s+)?info\w*\.?[\s,]*te(?:ch|cc|hc)\w*"   # also "Tecchnology", "Tehcnology"
 MENTION = rf"(?:inter?national|indian|indraprastha)\s+{NAME}|\biiit|\bi\s*\.\s*i\s*\.\s*i\s*\.\s*t\b"
 # optional ", Design and Manufacturing" / "and Management" after the name
 SUFFIX = r"(?:\s*,?\s*(?:design\s*,?\s*(?:and|&|&amp;)?\s*manufacturing|and\s+management))?"
@@ -23,7 +24,10 @@ OTHER_CITIES = (r"lucknow|kota|vadodara|sri\s*city|chittoor|guwahati|kalyani|bha
                 r"naya\s*raipur|nava\s*raipur|atal\s*nagar|dharwad|una|sonepat|sonipat|kottayam|manipur|senapati|imphal|nagpur|"
                 r"ranchi|bhopal|surat|raichur|tiruchirappalli|tiruchirapalli|trichy|srirangam|kurnool|kerala|thiruvananthapuram|"
                 r"trivandrum|basar|nuzvid|r\.?\s*k\.?\s*valley|ongole|srikakulam|kozhikode")
-OTHER_IIITS = (rf"(?:\biiit\w*|{NAME}{SUFFIX})\W{{0,6}}(?:{OTHER_CITIES})\b|\biiitm\s*-?\s*k\b|\biiitnr\b|\biiitdmk\b|\biiitl\b|"
+# an unregistered IIIT named with its city is another organisation even when one of our tokens appears in the same part
+# ("IIITDM Kurnool ... Combat Vehicles R&D, Avadi, Chennai"): a strong exclusion for every IIIT (review 2026-10-27)
+OTHER_NAMED = rf"(?:\biiit\w*|{NAME}{SUFFIX})\W{{0,6}}(?:{OTHER_CITIES})\b"
+OTHER_IIITS = (OTHER_NAMED + r"|\biiitm\s*-?\s*k\b|\biiitnr\b|\biiitdmk\b|\biiitl\b|"
                r"\biiitv\b|\biiitg\b|\biiitk\b|\biiitbh\b|\biiitn\b|\biiitr\b|\biiitu\b|\biiitkota\b|digital university kerala")
 CONFUSABLE = IIT_NAMES + "|" + OTHER_IIITS
 
@@ -33,13 +37,17 @@ GENERIC_OTHER = (r"indian institute of science education|\biiser\b|indian instit
                  r"polytechnic|\bclinic\b|\bpvt\.?\s*ltd|private limited|indian institute of management|\biim\b|"
                  r"national institute of technology|\bnit\b|college|universit|public[- ]school|"
                  r"national institute of pharmaceutical|\bniper\b|\bchina\b|jiangsu|vietnam|\bp\.?\s*r\.?\s*c\b|"
-                 r"\blimited\b|\bltd\b|\bllp\b|\binc\b|consultancy|independent researcher")
+                 r"\blimited\b|\bltd\b|\bllp\b|\binc\b|consultancy|independent researcher|"
+                 + IIT_NAMES)   # an IIT printed with one of our tokens is a PIN typo of an IIT address (review 2026-10-27)
 
 
 def explicit(first, city, abbr=None):
-    """first = name variants accepted for this institute, city = its place names; the name and the place must stand in the
-    same part (no ' | ' or ';' between them)."""
-    x = rf"(?:{first})\s+{NAME}{SUFFIX}[^|;]{{0,60}}?\b(?:{city})\b|\biiit\w*\W{{0,3}}(?:{city})\b"
+    """first = name variants accepted for this institute, city = its place names. Only punctuation or a bracketed
+    abbreviation may stand between the name and the place ("Indian Institute of Information Technology (IIIT), Pune"): a
+    wider window matched "Indian Institute of Information Technology, Dharwad, Pune" (review 2026-10-27). Looser strings still
+    count through the mention rule (mention + place in the same part, nothing else named)."""
+    gap = r"[\s,\-‐–—:]*(?:\(\s*[\w&.\- ]{1,12}\s*\)[\s,\-‐–—:]*)?"
+    x = rf"(?:{first})\s+{NAME}{SUFFIX}{gap}(?:{city})\b|\biiit\w*\W{{0,3}}(?:{city})\b"
     return x + (f"|{abbr}" if abbr else "")
 
 
@@ -50,10 +58,12 @@ EXT = {
         crossref=["Jabalpur", "482005", "Dumna", "PDPM", "IIITDM", "IIITDMJ"], crossref_broad=[],
         # 482005 / Dumna: to be confirmed as campus-unique in the string review -> 'city' until then
         anchor=r"\biiitdmj\.ac\.in\b", city=r"\b482005\b|\bdumna\b", shared=r"\bjabalpur\b",
-        units=r"\bpdpm\b|\biiitdmj\b|\biiitdm\s*-?\s*j\b",
+        # "Indian Institute of Design and Manufacturing Jabalpur" (Information Technology dropped): review 2026-10-27
+        units=r"\bpdpm\b|\biiitdmj\b|\biiitdm\s*-?\s*j\b|indian\s+institute\s+of\s+design\s*(?:and|&|&amp;)\s*manufacturing\W{0,5}jabalpur",
         explicit_full=explicit(r"indian|inter?national", r"jabalpur", r"\bpdpm\b|\biiitdmj\b"),
         state=None,   # Madhya Pradesh also has ABV-IIITM Gwalior
-        other=r"jabalpur engineering|\bjec\b|rani durgavati|\brdvv\b|jawaharlal nehru krishi|\bjnkvv\b|netaji subhash|\bnscb\b|"
+        # Dumna / 482005 also host the Hitkarini colleges (HCET, dental, pharmacy): review 2026-10-27
+        other=r"hitkarini|\bhcet\b|madhav institute|jabalpur engineering|\bjec\b|rani durgavati|\brdvv\b|jawaharlal nehru krishi|\bjnkvv\b|netaji subhash|\bnscb\b|"
               r"gyan ganga|global engineering|takshshila|shri ram institute|vehicle factory|gun carriage|ordnance factory|khamaria|"
               r"\bdrdo\b|tropical forest|\btfri\b|\bicmr\b|tribal health|\bnirth\b|veterinary|"
               + GENERIC_OTHER,
@@ -66,7 +76,7 @@ EXT = {
         crossref=["Gwalior", "474015", "IIITM", "ABV"], crossref_broad=[],
         anchor=r"\biiitm\.ac\.in\b", city=r"\b474015\b|morena link road", shared=r"\bgwalior\b",
         units=r"\babv\b\W{0,3}(?:iiitm|indian|inst\w*|atal)|atal\s+bihari\s+vajpayee\W{0,3}(?:indian\s+)?ins\w*\.?\s+(?:of\s+)?info|"
-              r"\biiitm\W{0,3}gwalior\b",
+              r"\biiitm\W{0,3}gwalior\b|\babv\s*-?\s*i{2,3}tm\b",   # ABV-IITM typo: review 2026-10-27
         # IIITM alone: also IIITM-K (Kerala); decisive only when nothing else is named in the part
         abbr=r"\biiitm\b(?!\s*-?\s*k\b)",
         explicit_full=explicit(r"indian|inter?national|abv\W{0,3}indian|atal\s+bihari\s+vajpayee\W{0,3}indian", r"gwalior",
@@ -84,10 +94,13 @@ EXT = {
         ror="https://ror.org/023c9pb11", grid="grid.504246.1", short="Kancheepuram",
         crossref=["Kancheepuram", "Kanchipuram", "Melakottaiyur", "600127", "IIITDM", "Vandalur", "Kelambakkam", "Chennai"],
         crossref_broad=[],
-        # 600127 / Vandalur-Kelambakkam Road also hosts VIT Chennai and other colleges -> 'city'
-        anchor=r"\biiitdm\.ac\.in\b", city=r"\bmelakottaiyur\b|\b600127\b|\bvandalur\b|\bkelambakkam\b",
-        shared=r"\b(?:kancheepuram|kanchipuram|chennai)\b",
-        units=r"\biiit\s*-?\s*d\s*(?:&|&amp;|and)?\s*m\W{0,3}(?:kancheepuram|kanchipuram|chennai)\b",
+        # review 2026-10-27: 600127 is also printed by VIT Chennai, Bharath Institute (Selaiyur), PSVP Engineering and LifeCell;
+        # Kelambakkam by Chennai Mathematical Institute, Chettinad, SMK Fomra; Vandalur by B.S. Abdur Rahman Crescent and the
+        # TN wildlife institute -> 'shared' (without an IIIT mention a string there is not about IIITDM)
+        anchor=r"\biiitdm\.ac\.in\b", city=r"\bmelakottaiyur\b",
+        shared=r"\b(?:kancheepuram|kanchipuram|chennai)\b|\b600127\b|\bvandalur\b|\bkelambakkam\b",
+        units=r"\biiit\s*-?\s*d\s*(?:&|&amp;|and)?\s*m\W{0,3}(?:kancheepuram|kanchipuram|chennai)\b|"
+              r"\biiidm\W{0,5}(?:kancheepuram|kanchipuram|chennai)\b",   # IIIDM typo
         explicit_full=explicit(r"indian|inter?national", r"kancheepuram|kanchipuram|chennai"),
         state=None,   # Tamil Nadu also has IIIT Tiruchirappalli
         other=r"vellore institute|\bvit\b|sri venkateswara|\bsvce\b|pallava|\bsrm\b|sathyabama|hindustan|crescent|anna university|"
@@ -107,7 +120,8 @@ EXT = {
         abbr=r"\biiit\s*-?\s*a\b|\biiita\b",   # also IIIT Agartala
         explicit_full=explicit(r"indian|inter?national", r"allahabad|prayagraj"),
         state=None,   # Uttar Pradesh also has IIIT Lucknow
-        other=r"motilal nehru|\bmnnit\b|university of allahabad|allahabad university|harish[- ]chandra|\bhri\b|jhunsi|"
+        # Jhalwa / 211015 / 211012 also host Shambhunath Institute (SIET) and VKS Agritech: review 2026-10-27
+        other=r"shambhunath|\bs\.?\s*i\.?\s*e\.?\s*t\b|agritech|motilal nehru|\bmnnit\b|university of allahabad|allahabad university|harish[- ]chandra|\bhri\b|jhunsi|"
               r"sam higginbottom|\bshuats\b|kamla nehru|\biert\b|united (college|institute|group)|ewing christian|"
               r"\bicar\b|central (soil|potato)|national academy of sciences|govind ballabh pant|\bgbpssi\b|"
               + GENERIC_OTHER,
@@ -117,9 +131,10 @@ EXT = {
         name="International Institute of Information Technology Bangalore",
         ror="https://ror.org/05h9eqy10", grid="grid.435284.c", short="Bangalore",
         crossref=["Bangalore", "Bengaluru", "Banglore", "560100", "IIITB"], crossref_broad=[],
-        # Electronics City / 560100 hosts many companies and colleges -> 'city'
-        anchor=r"\biiitb\.(?:ac|org)\.in\b", city=r"\b560100\b|electronics?\s*city",
-        shared=r"\b(?:bangalore|bengaluru|banglore|bengalore)\b",
+        # Electronics City / 560100 is dominated by IBAB, C-DAC, Centre for Human Genetics, XIME, Bangalore Bioinnovation Centre
+        # and companies; none of 159 uncertain strings was IIIT-B (review 2026-10-27) -> 'shared'
+        anchor=r"\biiitb\.(?:ac|org)\.in\b", city=None,
+        shared=r"\b(?:bangalore|bengaluru|banglore|bengalore)\b|\b560100\b|electronics?\s*city",
         units=r"\biiit\s*-?\s*(?:bangalore|bengaluru|banglore)\b",
         abbr=r"\biiit\s*-?\s*b\b|\biiitb\b",   # also IIIT Bhubaneswar / Bhagalpur
         explicit_full=explicit(r"inter?national|indian", r"bangalore|bengaluru|banglore|bengalore"),
@@ -133,9 +148,11 @@ EXT = {
         name="Indian Institute of Information Technology Pune",
         ror="https://ror.org/01f8qyw75", grid="grid.503420.0", short="Pune",
         crossref=["Pune", "IIITP", "411041", "411048", "412109", "Ambegaon"], crossref_broad=[],
-        # campus history still to be established (PROCESS_IIIT.md §1.4): no campus anchor except the e-mail domain
-        anchor=r"\biiitp\.ac\.in\b", city=r"\b411041\b|\b411048\b|\b412109\b|\bambegaon\b|\bnanoli\b",
-        shared=r"\bpune\b",
+        # every candidate PIN / locality is dominated by other organisations (review 2026-10-27): 411041 Narhe (NBNSSOE, JSPM,
+        # SKNCOE), 411048 Kondhwa (VIIT, NIBM, PCCM), Ambegaon (SKNMC), Nanoli (CFSL) -> 'shared': without an IIIT mention a
+        # string there is not about IIIT Pune; no campus anchor except the e-mail domain
+        anchor=r"\biiitp\.ac\.in\b", city=None,
+        shared=r"\bpune\b|\b411041\b|\b411048\b|\b412109\b|\bambegaon\b|\bnanoli\b",
         units=r"\biiit\s*-?\s*pune\b|\biiitpune\b|\biiitp\b",
         # "International Institute of Information Technology" in Pune is the private I2IT (Hinjawadi): it is NOT a mention of
         # this institute's type, so that ORCID / DBLP person matching (city AND mention) does not accept I2IT people
@@ -191,6 +208,7 @@ def _channels(k, c):
     c.setdefault("family", "iiit")
     c.setdefault("mention", MENTION)
     c.setdefault("confusable", CONFUSABLE)
+    c["exclude"] = OTHER_NAMED + (f"|{c['exclude']}" if c.get("exclude") else "")
     c.setdefault("inspire", None)   # INSPIRE: only IIIT Hyderabad and IIIT Allahabad have records (PROCESS_IIIT.md §1.2)
     c.setdefault("tenure_lag", 1)
     c.pop("short")
