@@ -30,7 +30,9 @@ CSIR_OTHER_LAB = (r"\bcsir\s*(-|–|—|‐|−|&#x2013;|\s)\s*(?!{me}|cs*es*rs*
 
 # CECRI's name. The acronym alone collides with Rome's "Centre of Excellence for Nursing Scholarship (CECRI)" (review §2.6),
 # so "CECRI" counts only with a CECRI context word in the same part (CSIR, electrochemistry, its places, India).
-CECRI_NAME = (r"central\s+electro\s*-?\s*chemical\s+res\w*\s+inst\w*|"
+# Typos seen in printed affiliations: "Centeral" (OpenAlex raw string of 10.1016/j.matpr.2017.09.150, precision audit §2.9),
+# "Electrochemcial" (test case, §2.4).
+CECRI_NAME = (r"cent\w{0,2}ral\s+electro\s*-?\s*chem\w*\s+res\w*\s+inst\w*|"
               r"\bcecri\b(?=.{0,200}(csir|electro|karaikudi|chennai|madras|tamil|india))|"
               r"(csir|electro|karaikudi|chennai|madras|tamil|india).{0,200}\bcecri\b")
 

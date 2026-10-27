@@ -315,3 +315,47 @@ claimed: TMC / ACTREC, UGC-DAE CSR, TIFR, AERB, NPCIL, BRIT, Heavy Water Board, 
   Bhubaneswar, IOP, XIM, Centurion excluded unless NISER is named; Bhubaneswar (23,787) sweep-only. Checked: an IOP + HBNI +
   DAE string at 751005 -> other.
 * All 24 CSIR + DAE units registered; test_affil 717/717. ROR / GRID checked for all four; 118 test strings, 0 missing.
+
+### 3.21 Golden set: CSIR-NCL (agent, 2026-10-27)
+* 393 rows: 264 from the NCL library's "Publications by Year" list (Wayback, 2016–2023; Wayback kept page 1 of each year, a
+  title-sorted A–~G slice), 112 from four Allotrope newsletters (2025–2026, pdftotext titles, no DOI), 17 arXiv preprints
+  printing CSIR-NCL (`high`). 2016–2023: 33–36 rows per year; 2024: 2; 2025: 59; 2026: 56. DOI on 67.9 % (all printed on the
+  source). ncl.res.in serves scientist profiles and staff lists through JavaScript / reCAPTCHA (not bypassed); library and
+  DSpace hosts unreachable; annual reports 2023–25 (70–83 MB) skipped.
+* Verification: verify_agent_outputs, 30 random rows, **30/30 titles found on the cited page**. Accepted. Caveats for the
+  recall report: 2024 is not covered; the 2016–2023 rows are an alphabetical slice (independent of whether the pipeline finds
+  a paper, so recall stays unbiased in expectation); the Allotrope rows have no DOI.
+
+### 2.8 CECRI: final pass, verification, recall, validation (2026-10-27)
+* `run_v2.sh final` (roster channels, arXiv, merge, OpenCitations; restarted once after the session restart), then
+  `verify_epmc.py`, `verify_springer.py`, `resolve_todos.py`, `run_v2.sh refresh` (with the registry as of §3.20) and
+  `eval_recall.py` — one detached job, log `logs/finish_csir_cecri.out`.
+* `v2/csir_cecri.json`: **2,432 records, 1,683 verified**; 438 in the unconfirmed file.
+* **Validation (`v2/VALIDATION.md`): 0 violations** in all 9 checks; live Crossref re-check of 200 random records: title, year,
+  venue 200/200; citations Crossref vs OpenCitations ρ = 0.933 (n = 130).
+* **Recall vs the golden set: 72.0 %** (219 / 304; DOI recall 63.5 %, 40 / 63); 75.7 % counting the unconfirmed file. By
+  source: faculty pages 83 %, annual reports 71 %, dept pages 51 %, news 100 %, arXiv 3/4.
+* Miss diagnosis (new `scripts/diagnose_misses.py`, Crossref look-up of every never-discovered golden paper): of 72, **58 are
+  in Crossref with no author affiliation deposited**, 14 are not in Crossref; **0** had a CECRI affiliation that our tokens or
+  rules missed. The recall ceiling is the publishers' deposits, not the registry.
+* Precision: `precision_sample.py csir_cecri` (seed 20261007): 25 verified + 40 likely (no `possible` tier in the main file);
+  audit agent started (output `golden/precision_audit_csir_cecri.csv`).
+
+### 2.9 CECRI precision audit (2026-10-27) — CECRI finished
+* Agent audit (`golden/precision_audit_csir_cecri.csv`, against the affiliation printed on the paper: Crossref, Europe PMC,
+  publisher meta tags, OA / arXiv PDFs; no bot wall bypassed): **verified 25 yes / 0 no / 0 unknown (precision 1.00)**;
+  likely 1 / 0 / 39 — the 39 have no Crossref / Europe PMC affiliations and bot-blocked publisher pages (Elsevier, ECS/IOP,
+  T&F), so the likely tier could not be judged.
+* Operator second pass on the 39 unknown rows (new `scripts/audit_openalex.py`; OpenAlex keeps the raw affiliation strings it
+  extracted from the publisher page / PDF, and OpenAlex is not a pipeline harvest channel; key read from outside the repo):
+  `golden/precision_audit_csir_cecri_openalex.csv`. Result: 35 yes, 2 no, 2 unknown. The first run said 3 no; the operator
+  read all three: 10.1016/j.matpr.2017.09.150 prints "**Centeral** electrochemical research institute, karaikudi" — CECRI
+  with a typo (-> yes; `CECRI_NAME` now tolerates "Centeral" / "Electrochemcial", test case added, test_affil 718/718);
+  10.1149/ma2017-02/5/477 (KAIST, UNIST) and 10.1016/j.mcat.2017.07.012 (Anna University) are real namesake errors.
+* **Precision, both passes: verified 25/25 = 1.00; likely 36 yes / 2 no / 2 unknown = 0.95.**
+* After the name fix: `run_v2.sh refresh csir_cecri` — 2,432 records (1,683 verified), validation 0 violations, live re-check
+  200/200, recall 72.0 % (DOI 63.5 %) unchanged.
+* **CECRI result (handoff §8 report):** records 2,432 main (1,683 verified, 748 unverified-likely, 1 ambiguous) + 438
+  unconfirmed; recall 72.0 % all / 63.5 % with DOI (ceiling: 58 of 72 never-discovered golden papers have no deposited
+  affiliation, 14 are not in Crossref); precision verified 1.00, likely 0.95 (n = 38 decidable); validation 0 violations.
+  Open: likely-tier errors are namesakes (2 of 38) — they stay labelled `unverified-likely` in the data.
