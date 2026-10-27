@@ -168,3 +168,55 @@ Hyderabad 805.
   60.2 % if the unconfirmed file were included). Misses: 107 not discovered (93 without a printed DOI; Springer/Elsevier journals,
   book chapters, conference papers: publishers without deposited affiliations, i.e. the gap the roster channels address), 23 in
   the unconfirmed file, 1 rejected, 1 dropped. Comparable to v1 iteration 0 (Ropar 77.9 %, Kharagpur 63.9 %) before roster channels.
+* All eight (records / verified / likely / unconfirmed file): Jabalpur 2,264 / 1,268 / 996 / 663; Gwalior 1,664 / 1,001 / 662 /
+  964; Kancheepuram 1,506 / 1,029 / 477 / 441; Allahabad 2,436 / 1,610 / 824 / 989; Bangalore 1,134 / 943 / 188 / 496; Pune 183 /
+  114 / 69 / 90; Delhi 3,243 / 2,237 / 1,006 / 1,784; Hyderabad 3,301 / 2,438 / 862 / 2,153. Hyderabad and Delhi look low for
+  their size: CS conference output without DOI or deposited affiliations (CVF open access, ACL Anthology, NeurIPS) depends on
+  the DBLP / arXiv / roster channels.
+
+### 4.2 Roster stage (`run_v2.sh final`), Jabalpur, Gwalior, Kancheepuram, Allahabad (2026-10-27)
+Recall (all golden papers; DOI-subset; incl. the unconfirmed file):
+
+| IIIT | recall | DOI recall | incl. unconfirmed | not discovered |
+|---|---|---|---|---|
+| Jabalpur | 66.1 % (181/274) | 78.3 % | 74.1 % | 69 |
+| Gwalior | 73.8 % (197/267) | 78.5 % | 84.6 % | 38 |
+| Allahabad | 78.9 % (209/265) | (2 DOIs) | 83.8 % | 42 |
+| Kancheepuram | 45.5 % (135/297) | 61.7 % | 55.2 % | 130 |
+
+Allahabad's golden set is 2023-heavy (110 of 265 rows from one annual report): its recall must be read per year.
+
+**Finding: the DBLP person channel was empty for every IIIT.** `roster_channels.py` (B5) runs only for roster people with a
+DBLP pid, and the roster brief accepts only identifiers printed on institute pages, which IIITs rarely show (0–1 pids per
+roster; `dblp_works` = 0 for all 157 Kancheepuram people, including prolific CS faculty). Kancheepuram's misses concentrated on
+exactly those people. New IIIT-team tool `scripts/dblp_roster_ids.py` fills empty `dblp` cells from the DBLP SPARQL endpoint when
+the DBLP name matches and (R1) the DBLP ORCID equals the roster ORCID, (R2) a DBLP affiliation classifies as the institute, or
+(R3) ≥ 2 and ≥ 5 % of the DBLP person's DOIs are affiliation-verified records of the institute with a matching institute author.
+A different ORCID is never accepted; ties stay blank; every decision is in `rosters/notes/<inst>_dblp_ids.tsv`. The 5 % rule
+was added after an audit of the first run: common names ("Amit Kumar" 3 of 229 DOIs, "Sunil Kumar" 3 of 277) had attached to
+prolific namesake profiles. Accepted: Kancheepuram 16, Jabalpur 28, Gwalior 47, Allahabad 44, Bangalore 36, Pune 5.
+
+**Also observed (shared code, reported to the IIT team, not changed):** `split_name()` takes the last token as family name, so
+Tamil patronymic-initial names ("Sadagopan N", 61 of 157 Kancheepuram rows) get the family name "N"; the swapped-order rule in
+`name_match` partly compensates, but the data-driven common-surname list then contains single initials (a, b, k, m, p, r, s, v).
+The IIT Madras / Tirupati / Palakkad rosters have the same pattern.
+
+**Incident (2026-10-27, ~17:30): ORCID daily quota exhausted** (HTTP 429 "exceeded the daily quota for anonymous usage"), first
+reported by the Pune roster agent. The roster-stage re-run with DBLP ids, started 17:06, was stopped (`roster_channels.py` does not
+cache ORCID responses, so the run would have lost every roster ORCID channel); its outputs from the morning run were untouched
+(the stage writes at the end). Re-run after the quota resets. Agents told not to call ORCID meanwhile.
+Incident: the Pune roster agent stopped its own duplicate fetches with a process-name filter that also matched other agents'
+`polite_get.py` processes (the `pkill` pitfall of PROCESS.md §10); agents are now told to stop only PIDs they started.
+
+### 4.3 Rosters and golden sets accepted later on 2026-10-27
+* Kancheepuram roster 157 (103 current; operator change: the director in additional charge, a regular ABV-IIITM professor, set
+  to `adjunct (2026-2026)`, so his Gwalior papers cannot enter through person channels); golden set 297 (22 high).
+* Allahabad roster 121 (87 current; acting director 2022–23 = adjunct); golden set 265 (20 high; 2023-heavy, see above).
+* Bangalore roster 132 (49 current, 38 adjunct); golden set 261, year-balanced (23–24 per year); its `/publications` source is a
+  static institute-maintained page (checked: no Scopus / OpenAlex / IRINS backing).
+* Pune roster 109 (31 current); **campus history**: transit Sadumbare, Talegaon–Chakan Road 412109 (2016–2018); Kondhwa Annexe,
+  Yewalewadi 411048 (by 2019–2020); Ambegaon Budruk 411041 (by 2023–2025); permanent Nanoli-Tarf Chakan, Talegaon 410507 (from
+  2025); mentor institute COEP. Tokens added to the registry as `shared`; new sweeps (410507 75, Talegaon 272, Sadumbare 0,
+  Yewalewadi 1 records) added no IIIT Pune strings. Golden set 94 (founded 2016; no 2016–2017 rows possible under the tenure rule).
+  Ritu Tiwari appears in the Gwalior (current) and Pune (former 2019–2025, "on lien") rosters; deposited affiliations decide
+  her papers, only the "likely" tier could double-credit.
