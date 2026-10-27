@@ -25,6 +25,13 @@ for I in "$@"; do
   if on crossref; then
     ( while read -r T; do
         [ -n "$T" ] || continue
+        # tokens shared by several labs (Delhi, Hyderabad, 500007 ...) are swept once per day: reuse a finished file, wait
+        # for one another job is still writing (.part); FORCE=1 re-sweeps
+        F="../raw/crossref_aff/$(echo "$T" | tr ' ' '_').light.jsonl.gz"
+        while [ -z "$FORCE" ] && [ -f "$F.part" ] && [ -n "$(find "$F.part" -mmin -10)" ]; do sleep 30; done
+        if [ -z "$FORCE" ] && [ -n "$(find "$F" -mtime -1 2>/dev/null)" ]; then
+          echo "$(date '+%F %T') SKIP crossref $T (swept $(date -r "$F" '+%F %T'))" >> $LOG; continue
+        fi
         job "crossref $T" python3 crossref_aff.py "$T" --light &
         while [ "$(jobs -r | wc -l)" -ge 3 ]; do sleep 2; done
       done < ../logs/tokens_$I.txt; wait ) &

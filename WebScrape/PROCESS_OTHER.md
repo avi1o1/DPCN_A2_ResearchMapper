@@ -139,7 +139,12 @@ No token is unique to the CECRI campus, so `anchor` is empty: the department-onl
   operator); a golden row whose page cannot be text-checked is looked up in Crossref (title overlap ≥ 0.9 both ways,
   |year| ≤ 1) and a failed look-up is reported as `LOOKUP-FAILED`, never as "does not exist".
 * CECRI's 2022–23 annual report (cited by the roster) is a 272 MB PDF; the shared fetcher has no total-time limit, so it was
-  downloaded once with curl for the check. (open: result of the re-run)
+  downloaded once with curl (resumed, full Content-Length) and placed in the shared cache under the fetcher's key.
+* Result (re-run with the network up): roster names 17 found on the cited page + 3 in image-only PDFs, each checked by the
+  operator: KJ Sreeram (Director's message of AR 2022–23, p.7, signed "डॉ. के. जे. श्रीराम"; ORCID: CECRI Director 2022-08 to
+  2023-04), Harshal Agarwal (CECRI profile page, Chennai unit), R Mayandi (AR 2017–18 p.192, "New Appointments") — 20/20.
+  ORCIDs 10/10 (name matches, employment names CECRI). Golden titles 10 found on the cited page + 10 on image-only report
+  pages, all 10 found in Crossref with the same title and year — 0 problems. Roster and golden set accepted.
 * Brief issues seen on the pilot: golden set has no repository `evidence_source` (use `dept_page` + note); image-only
   annual reports (transcription risk for long chemical names); roster: two people named "S Mohan"; CLRI directors holding
   CECRI's additional charge listed as `former`.
@@ -179,3 +184,67 @@ because of usage limits). Token counts of all 22 labs are in `logs/recon_<key>.t
     separate entry still counts). Re-classification: exactly those 7 strings changed. Every `iit` string naming another
     Hyderabad lab (18) read: the other 11 have IICT and NEERI-Nagpur / CCMB as separate entries — correct.
   - 3 test cases added; test_affil 110/110.
+* Recall gap found after the first pass (5,232 records, 4,029 verified): strings printing only "Indian Institute of Chemical
+  Technology, Hyderabad" contain none of the campus tokens. Added Hyderabad (62,988 hits), Hyderbad, Hydrabad, Hyderabd,
+  Secunderabad as sweep-only tokens (`shared=None`: they never count without IICT's name). The Hyderabad file
+  (`raw/crossref_aff/Hyderabad.light.jsonl.gz`) is shared with CCMB and later UoH.
+* Incident: the operator's session restarted at ~10:48 and killed the background jobs (CECRI `final` at 100/156 roster
+  names, the Hyderabad sweep at 33,000/62,988; crossref_aff has no resume, the `.part` file was restarted). Long jobs are
+  now started as detached processes (`Start-Process bash <script>`), scripts in `rm_v2_work/run_*.sh`.
+
+### 3.2 CSIR-CCMB, Hyderabad (key `csir_ccmb`)
+* Agent draft (recon brief) reviewed by the operator: ROR 05shq4n12 / grid.417634.3 checked; all 29 test strings found in the
+  agent's probe output (28) or in the existing test file (1).
+* Name and "CCMB" count only with a CCMB context word in the same part (Cologne, CancerCare Manitoba, Brown, Bahia use
+  "CCMB"; Deakin and Amity print "Centre for Cellular and Molecular Biology"). LaCONES counts alone (11 hits, all CCMB).
+  AIC-CCMB (incubator hosted by CCMB) -> uncertain. 500048 (LaCONES, shared with ZSI / BSI) is `city`.
+* Operator changes to the draft: (1) `exclude` had `\biict\b`, which would drop CCMB's own address "Uppal Road, IICT Colony,
+  Habsiguda" (seen 12× in the IICT review) -> `\biict\b(?!\s*colony)`, test case added for both labs; (2) Hyderabad +
+  misspellings as sweep-only tokens (the agent's open question on strings with only "CCMB, Hyderabad"); (3) Europe PMC
+  query bracketed (AND/OR precedence); (4) NEERI added to `exclude` (mirror of IICT).
+* With CCMB registered, every reviewed IICT string was re-classified: 0 changes. test_affil 141/141.
+
+### 3.3 CSIR-NCL, Pune (key `csir_ncl`)
+* Agent draft reviewed: ROR 057mn3690 / grid.417643.3 checked; all 27 test strings found in the probe output or test file; no
+  IIT entry mentions NCL.
+* Full name counts alone; "NCL" only with CSIR / Pune / Pashan / Homi Bhabha Road / 411008 context and never in "NCL
+  Innovation Park / Venture Center / Colony" (tenants, C-DAC, IISER print them). Pashan, 411008, Homi Bhabha Road are `city`
+  (IISER Pune, IITM, C-MET, C-DAC, NCCS share them -> `exclude`). "Pune" is not a place (CSIR-URDIP, AcSIR's HRDC campus).
+* Operator changes: Pune (51,761 hits) and Poona (542) as sweep-only tokens (same recall gap as IICT); NEERI in `exclude`.
+  test_affil 168/168.
+
+### 3.4–3.10 CFTRI, NIIST, SERC, NPL, CRRI, IGIB, CDRI (agent drafts, operator review 2026-10-27)
+Every draft passed `agents/check_draft.py` before merging: ROR id resolves and its GRID equals the draft's; every test string
+is found in the agent's own probe output or an existing test file (0 missing in all seven); the full test suite passes with
+the draft merged into a temporary copy of the registry. Merged with `agents/merge_draft.py <key> <section>`. Then the
+operator read every `exclude` / `other` / place rule. Summary per lab (details in the agents' `<key>_recon.md`, kept in
+`rm_v2_work/registry_drafts/`):
+* **3.4 CFTRI** (01d7fn555): "CFTRI" is unique (189 hits, all CFTRI) and counts alone; 570020 / Cheluvamba Mansion `city`
+  (shared with JSS, PHRII); Mysuru / Mysore sweep-only. Collision: Ghana's CSIR Food Research Institute — Ghana / Accra /
+  South Africa in `exclude`. Accepted unchanged.
+* **3.5 NIIST** (05bkc5375): "NIIST" also = NRI Institution of Information Science & Technology, Bhopal -> acronym needs
+  CSIR / Kerala context; Pappanamcode / 695019 `city`; Thiruvananthapuram / Trivandrum sweep-only. Accepted unchanged.
+* **3.6 SERC** (00pyevk91): "SERC" has many owners (IIIT Hyderabad, VIT, Stevens, South Wales, Chile ...) -> counts only as
+  "CSIR-SERC" or with CSIR + a Chennai place; the full name needs CSIR / Chennai / India context (IIEES Tehran, Shandong, TU
+  Wien). Taramani / 600113 sweep-only as for CECRI. **Operator change:** removed `steel structures` and `geotechnical` from
+  `exclude` — the agent's own recon lists a Steel Structures Laboratory among SERC's divisions; TU Wien and Shandong are
+  excluded by name.
+* **3.7 NPL** (0307k1x46; ROR's affiliation matcher picks the UK NPL — id used directly): name / acronym only with CSIR / India
+  / Delhi / PIN context (UK NPL Teddington, UBC, Toulouse ...); 110012 `shared`; K.S. Krishnan Marg `city`; CSIR-NIScPR /
+  NISTADS (same street and PIN) excluded. **Operator changes:** Delhi (106,963 hits) sweep-only; ICAR / IARI moved into
+  `exclude` (they share 110012, and `other` is checked only after the CSIR-mention rule, so "CSIR, ICAR-IARI ... 110012"
+  would have counted). Open: ~100 strings "National Physical Laboratory (NPL)" without a place stay None.
+* **3.8 CRRI** (01pdb1x94): "CRRI" mostly = Compulsory Rotatory Residential Internship (TN dental / medical) and ICAR-NRRI
+  "formerly CRRI" -> excluded; division names are `units`; an AcSIR part naming CRRI without a CRRI staff word -> `other`
+  (other labs' authors print AcSIR's Delhi office in CRRI's campus). **Operator change:** Delhi sweep-only.
+* **3.9 IGIB** (05ef28661): both campuses (Mall Road 110007, shared with University of Delhi -> `shared`; Sukhdev Vihar ->
+  `city`); TRISUTRA / INGEN-HOPE units; old name Centre for Biochemical Technology with context. **Operator change:** Delhi
+  sweep-only. Test expectation changed: "CSIR-NPL ... | University of Delhi" is now None for IGIB (NPL registered).
+* **3.10 CDRI** (04t8qjg16): Jankipuram / 226031 `city` (AKTU's Centre for Advanced Studies, Biotech Park share them);
+  Lucknow sweep-only; CSIR-NBRI / IITR / CIMAP excluded; "CDRI" collisions (Cambodia, Korea CBRN, Coalition for Disaster
+  Resilient Infrastructure, Karachi) need context. Accepted unchanged.
+* Incident: a shell heredoc turned `\b` into backspace characters in the NPL draft; found by inspecting the bytes, fixed, all
+  drafts and repository files checked for control characters (0).
+* All registered: 11 CSIR labs, test_affil 348/348.
+* `run_harvest_other.sh`: a token already swept today is reused (SKIP in the log), a token being swept by another job is waited
+  for; FORCE=1 re-sweeps. Saves repeated Delhi / Hyderabad / 500007 sweeps.
