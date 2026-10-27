@@ -63,13 +63,16 @@ Status: [x] done, [~] in progress (note says what is left), [ ] not started. Wor
 Reference: the research page's summary tiles, ego co-author network and the 12-page Power BI report (screenshots in
 `rm_v2_work/mendes/`). Our version: `Dashboard/site/explorer.html`, data `profiles.js` (built offline, self-checked).
 - [x] (S) Data builder with the same paper set and definitions as the statistics; FWCI fetch; self-check vs faculty.csv.
-- [~] (M) Explorer page: scope = both IITs / one IIT / department / faculty member, year range; KPI tiles (papers,
+- [x] (M) Explorer page (`explorer.html`, linked from the dashboard menu): scope = both IITs / one IIT / department / faculty member, year range; KPI tiles (papers,
   citations, citations per paper, cited %, h, i10, Q1, most-cited, avg FWCI, single-author equivalent, first / last
   author, co-authors, partner institutions, years active); papers / citations per year, citations per paper by year,
   quartile per year, type and quartile donuts; top journals, topics, partner institutions (papers, citations, FWCI),
   most-cited papers; ego co-author network (top 10 / 20 / all); researcher scatter; paper search card; compare two.
-- [ ] (S) Second-way check of the explorer's numbers in the browser against `faculty.csv` / `departments.csv`.
-- [ ] (S) Link from the main dashboard; README note. Not possible with our data: Scopus topic prominence, CiteScore.
+- [x] (S) Second-way check in a real browser (`check_explorer.py`, the page's own code): 1,410 faculty vs `faculty.csv`
+  and 64 departments vs `departments.csv`, 0 mismatches; per-IIT papers 25,942 / 20,326; 0 console errors; phone width
+  400 px without sideways scroll; search and compare tested.
+- [x] (S) Link from the main dashboard; Dashboard/README note. Not possible with our data: Scopus topic prominence,
+  CiteScore. Committed locally (3134e19), not pushed.
 
 ## Already done
 - Data, the four CSV files, report (rephrased, roll numbers, dashboard link), dashboard on GitHub Pages, data on the TAs' Drive.
