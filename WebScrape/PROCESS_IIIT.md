@@ -154,3 +154,17 @@ Hyderabad 805.
   dates) + 16 Wayback snapshots + annual reports; 72 of 73 current rows NIRF-confirmed; ORCID 46. The 8 currently listed
   visiting people carry no year range (open tenure); harmless because visiting people only contribute papers that print the
   institute's affiliation (PROCESS.md §15.6). Known gaps: four image-only annual reports not read.
+* **IIITDM Jabalpur golden set** (accepted): 274 papers (target 300; four image-only annual reports, faculty pages mostly end
+  ~2023), 37 high / 237 medium, every year 2016–2026, all units with content; ~25 % with a printed DOI; independence confirmed in
+  its notes.
+* **ABV-IIITM Gwalior roster** (accepted): 137 people (78 current, 12 former, 44 adjunct, 3 visiting); NIRF 2026 72 regular −3
+  leavers +9 missing = the 78 on the live site; 69 current rows NIRF-confirmed; ORCID 44. NIRF calls adjuncts "Visiting": the
+  site's term was kept. The 25 currently listed adjuncts carry no range (open tenure).
+
+## 4. Pipeline runs
+
+### 4.1 First pass (`run_v2.sh merge`, affiliation channels + ORCID + DBLP, no roster channels), 2026-10-27
+* IIITDM Jabalpur: 2,264 records (1,268 verified, 996 unverified-likely; 663 in the unconfirmed file). **Recall 51.8 %** (142/274;
+  60.2 % if the unconfirmed file were included). Misses: 107 not discovered (93 without a printed DOI; Springer/Elsevier journals,
+  book chapters, conference papers: publishers without deposited affiliations, i.e. the gap the roster channels address), 23 in
+  the unconfirmed file, 1 rejected, 1 dropped. Comparable to v1 iteration 0 (Ropar 77.9 %, Kharagpur 63.9 %) before roster channels.
