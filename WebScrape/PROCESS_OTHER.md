@@ -248,3 +248,26 @@ operator read every `exclude` / `other` / place rule. Summary per lab (details i
 * All registered: 11 CSIR labs, test_affil 348/348.
 * `run_harvest_other.sh`: a token already swept today is reused (SKIP in the log), a token being swept by another job is waited
   for; FORCE=1 re-sweeps. Saves repeated Delhi / Hyderabad / 500007 sweeps.
+
+### 3.11–3.19 IMTECH, CSIO, CBRI, CEERI, AMPRI, CGCRI, NML, CMERI, CIMFR (agent drafts, operator review 2026-10-27)
+Same procedure (`check_draft.py` -> operator reading -> `merge_draft.py`); 0 test strings missing in all nine (three IMTECH
+mirror strings were in the CSIO probe file: the checker now searches every probe file). ROR / GRID checked for each:
+IMTECH 055rjs771, CSIO 04bfs6764, CBRI 03gjr0792, CEERI 01hh45364, AMPRI 02x351n42, CGCRI 039d1mp60, NML 0211zmf46,
+CMERI 059h0ng81, CIMFR 03vkfy293. Bare cities are sweep-only (Chandigarh, Roorkee, Pilani, Bhopal, Kolkata / Calcutta,
+Jamshedpur via `city`, Durgapur via `city`, Dhanbad `shared`, Nagpur / Bilaspur for CIMFR's regional centres).
+* **Rule-order finding (applies to every lab with a `city` / `shared` token):** `other` is consulted only after the
+  CSIR-mention rule, so a neighbour that shares the place token and prints "CSIR" (a CSIR fellowship, a collaboration)
+  would be counted. Neighbours of that kind moved to `exclude`: CSIO / IMTECH — GMCH-32, TBRL, PGIMER, DGRE (share
+  160030 / 160036); CGCRI — Jadavpur University; CMERI — NIT Durgapur (same street and PIN); NML — Tata Steel, NIT
+  Jamshedpur, XLRI. For CGCRI / CMERI / NML the exclusion is guarded (`^(?![\s\S]*<lab name>)...`) so a joint string that
+  also names the lab still counts. Checked: "NIT Durgapur ... Council of Scientific and Industrial Research ... 713209" ->
+  other; "CSIR-CGCRI and Jadavpur University, 700032" -> CGCRI. IIT (ISM) needs no exclusion for CIMFR: it is a registered
+  institute, so the classifier's "another institute named" step already handles it.
+* IMTECH: "Microbial" (35,590 hits, half Shandong University's Institute of Microbial Technology) dropped as a sweep token —
+  the Chandigarh sweep reaches "<name>, Chandigarh".
+* CIMFR: Digwadih, 828108, 826015, Barwa Road are `anchor` (complete scans of their hits: only CIMFR). Old names CMRI / CFRI
+  count only with Dhanbad context (CMRI = China Mobile RI, Sydney Children's MRI; CFRI = China Fire and Rescue ...).
+* Incident (again): `\b` became a backspace character when a Python non-raw string was used in a shell heredoc (CSIO / IMTECH
+  exclude). Effect: those alternatives could never match (no wrong data). Fixed; every edit is now followed by a
+  control-character check; raw strings only.
+* All 20 CSIR labs of the handoff registered; test_affil 592/592.

@@ -29,7 +29,7 @@ print(f"ROR {ror}: {names[:3]} | grid {grids} (draft {grid}{' OK' if grid in gri
 
 # 2. test strings
 pool = ""
-for fn in glob.glob(f"{WORK}/scratch/probe_{lab}*.txt") + glob.glob(f"{WORK}/registry_drafts/_probe/*") + \
+for fn in glob.glob(f"{WORK}/scratch/probe_*.txt") + glob.glob(f"{WORK}/registry_drafts/_probe/*") + \
           glob.glob(f"{WORK}/scratch/*{lab}*") + glob.glob(f"{WORK}/review/*.txt") + glob.glob(f"{WORK}/review/*.tsv") + \
           [os.path.join(WS, "scripts", "test_affil_cases_other.tsv"), os.path.join(WS, "scripts", "test_affil_cases.tsv")]:
     if os.path.isfile(fn):
