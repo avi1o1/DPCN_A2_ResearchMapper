@@ -1,0 +1,58 @@
+{
+ "iiit_jabalpur": {
+  "NAME": "PDPM IIITDM Jabalpur",
+  "CAMPUS_HINT": " (Dumna Airport Road campus, Jabalpur 482005; units are often called 'Disciplines')",
+  "SPECIAL": "* This is an IIIT (PDPM Indian Institute of Information Technology, Design and Manufacturing Jabalpur), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: IIITDM Kancheepuram (Chennai), IIITDM Kurnool, Jabalpur Engineering College, IIIT Jabalpur does not exist as a separate body. Faculty 'on contract' / 'temporary faculty' listed on the institute's faculty pages count as faculty (keep the designation).\n* If the institute was mentored by another institute in its first years, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\").",
+  "TARGET": "300",
+  "AUTHCOL": "iiitdmj_author"
+ },
+ "iiit_gwalior": {
+  "NAME": "ABV-IIITM Gwalior",
+  "CAMPUS_HINT": " (Atal Bihari Vajpayee Indian Institute of Information Technology and Management, Morena Link Road, Gwalior 474015; includes the management faculty)",
+  "SPECIAL": "* This is an IIIT (Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior, 'ABV-IIITM'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: IIITM-K / Digital University Kerala (Thiruvananthapuram), IITM (IIT Madras; Indian Institute of Tropical Meteorology, Pune), Jiwaji University, MITS Gwalior, Amity University Gwalior. Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "300",
+  "AUTHCOL": "abviiitm_author"
+ },
+ "iiit_kancheepuram": {
+  "NAME": "IIITDM Kancheepuram",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology, Design and Manufacturing Kancheepuram, Melakottaiyur / Vandalur-Kelambakkam Road, Chennai 600127)",
+  "SPECIAL": "* This is an IIIT (IIITDM Kancheepuram, Chennai), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* IIITDM Kancheepuram was set up with IIT Madras as mentor: IIT Madras faculty who only taught/mentored are `visiting` (\"Mentor faculty from IIT Madras (Y1-Y2)\"); someone who held a post at IIITDM (Director, Dean, regular appointment) is regular faculty.\n* Look-alikes that are NOT this institute: IIITDM Jabalpur, IIITDM Kurnool, IIT Madras, VIT Chennai, Sri Venkateswara College of Engineering. Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "300",
+  "AUTHCOL": "iiitdmk_author"
+ },
+ "iiit_allahabad": {
+  "NAME": "IIIT Allahabad",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Allahabad, Devghat, Jhalwa, Prayagraj 211015; city renamed Allahabad -> Prayagraj in 2018)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Allahabad), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: MNNIT Allahabad, University of Allahabad, IIIT Agartala ('IIITA' is ambiguous), IIIT Lucknow. Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "350",
+  "AUTHCOL": "iiita_author"
+ },
+ "iiit_bangalore": {
+  "NAME": "IIIT Bangalore",
+  "CAMPUS_HINT": " (International Institute of Information Technology Bangalore, Electronics City, Bengaluru 560100; include research centres/labs listed by the institute)",
+  "SPECIAL": "* This is an IIIT (International Institute of Information Technology Bangalore, 'IIIT-B'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: IIIT Bhubaneswar and IIIT Bhagalpur ('IIIT-B' is ambiguous), IIIT Dharwad, IIIT Raichur, REVA University. IIIT-B lists many adjunct / visiting / industry faculty: they are `adjunct` / `visiting` (they only contribute papers that print IIIT-B's affiliation). Research staff of centres are excluded unless the institute lists them as faculty.",
+  "TARGET": "300",
+  "AUTHCOL": "iiitb_author"
+ },
+ "iiit_pune": {
+  "NAME": "IIIT Pune",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Pune, founded 2016 as a PPP IIIT; transit campus(es) in Pune and permanent campus at Nanoli, Talegaon: establish every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Pune, 'IIITP'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* **Look-alike to keep out:** the private 'International Institute of Information Technology (I2IT / I²IT), Hinjawadi, Pune' (isquareit.ac.in) is a different organisation; also AISSMS IOIT, Vishwakarma Institute of Information Technology, PICT, COEP. If IIIT Pune had a mentor institute in its first years, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\"). Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "150",
+  "AUTHCOL": "iiitp_author"
+ },
+ "iiit_delhi": {
+  "NAME": "IIIT Delhi",
+  "CAMPUS_HINT": " (Indraprastha Institute of Information Technology Delhi, Okhla Industrial Estate Phase III, New Delhi 110020; a state university; include all departments and research centres listed by the institute)",
+  "SPECIAL": "* This is an IIIT (Indraprastha Institute of Information Technology Delhi, 'IIIT-Delhi', 'IIIT-D'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: Guru Gobind Singh Indraprastha University (GGSIPU), Indira Gandhi Delhi Technical University for Women (IGDTUW), IIT Delhi, IIITDM ('IIITD&M'), NSUT, DTU. Adjunct / visiting / honorary faculty are `adjunct` / `visiting`. Research staff of centres are excluded unless the institute lists them as faculty.",
+  "TARGET": "450",
+  "AUTHCOL": "iiitd_author"
+ },
+ "iiit_hyderabad": {
+  "NAME": "IIIT Hyderabad",
+  "CAMPUS_HINT": " (International Institute of Information Technology Hyderabad, Gachibowli, Hyderabad 500032; include every research centre / lab listed by the institute, e.g. CVIT, LTRC, KCIS, CSTAR, Spatial Informatics, Building Science, Robotics, CogSci, Data Sciences, Security, VLSI, and the humanities / natural sciences units)",
+  "SPECIAL": "* This is an IIIT (International Institute of Information Technology Hyderabad, 'IIIT-H'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* IIIT Hyderabad is organised in research centres rather than departments: use the centre as `department` (primary centre; others in the notes). Research scientists / research staff are excluded unless the institute's faculty list shows them as faculty; adjunct, visiting, honorary and 'professor of practice' people are `adjunct` / `visiting` (they only contribute papers that print IIIT-H's affiliation).\n* Look-alikes that are NOT this institute: IIT Hyderabad (Kandi/Sangareddy), University of Hyderabad (also in Gachibowli), ISB, IIIT Naya Raipur, IIIT Bhubaneswar, the Department of Information Technology of Hyderabad engineering colleges (MLR, Vardhaman, GNITS, CBIT …).",
+  "TARGET": "550",
+  "AUTHCOL": "iiith_author"
+ }
+}
