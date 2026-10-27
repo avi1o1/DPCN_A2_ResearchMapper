@@ -283,3 +283,35 @@ Jamshedpur via `city`, Durgapur via `city`, Dhanbad `shared`, Nagpur / Bilaspur 
   (University of Delhi strings; both mean "not IGIB"). test_affil 592/592.
 * Effect on real data: every reviewed IICT `iit` string (2,963) and every matched string of CECRI's 1,568 verified records
   re-classified — **0 changes**. The guards close a possible error; no observed record depended on it.
+* Golden set (agent, 2026-10-27): 400 rows, but iict.res.in does not answer from this machine (operator check: every variant
+  times out after 21 s), so the agent used Wayback copies: 392 rows from the IICT Biennial Report 2018-20 (sampled evenly
+  through the institute-wide list of 2018 and 2019, no authors printed), 8 from one scientist's own page. 0 DOIs. Earlier /
+  later reports came back truncated from Wayback. Verification: check_outputs passes (warning: 387 rows without an author
+  name — expected, the report prints none); verify_agent_outputs 25/25 titles found on the cited pages. **Accepted as a
+  partial benchmark: recall for IICT is reported for 2018–2019 only.** A re-run is needed if the site becomes reachable.
+
+## 4. DAE units (agent drafts, operator review 2026-10-27)
+Shared patterns (in the BARC draft, merged first): `DAE_MENTION` = "Department of Atomic Energy" + a guarded `\bdae\b`
+(of 993 distinct Crossref strings with "DAE": ~600 UGC-DAE CSR, ~300 Korean "Dae-jeon / Dae-gu", the rest Bangladesh DAE,
+Brazil); `HBNI_ONLY` (HBNI, the DAE's university, names no unit — like AcSIR); `DAE_OTHER_UNIT`. Out of scope and never
+claimed: TMC / ACTREC, UGC-DAE CSR, TIFR, AERB, NPCIL, BRIT, Heavy Water Board, IOP, BHAVINI.
+* **4.1 BARC** (05w6wfp17): name / "BARC" with context (the acronym also = USDA Beltsville ARC, Copenhagen, Barts,
+  Bangladesh, "bARC" Australian Research Council ...); all BARC outstations (Vizag, BARCF Kalpakkam, Tarapur, NCCCM) and
+  BARC Hospital count (operator: hospital is a BARC unit). Sweeps: BARC, Trombay, 400085, Anushaktinagar, Anushakti, 400094,
+  Bhabha (14,912 — reaches name-only strings); Mumbai / Bombay / Atomic not swept (BARC strings print the name, Trombay or a
+  PIN). **Operator change:** the draft placed "DAE mention + Anushaktinagar / 400094" at BARC (`shared`); a test showed
+  "HBNI, Anushaktinagar, 400094, Department of Atomic Energy" counted as BARC. Anushaktinagar also holds AERB, NPCIL, the
+  Heavy Water Board, all DAE -> `shared=None` (count only if BARC is named). Three test expectations other -> None; a real
+  AERB + HBNI probe string added as a test. (A constructed test string was added first and replaced by the real one — test
+  strings stay real.)
+* **4.2 IGCAR** (05tkzma19): Kalpakkam / 603102 / 603127 `city`; BARCF, AERB-SRI, BHAVINI, NPCIL, the UGC-DAE node excluded
+  unless IGCAR is named; Indira (7,633) swept for name-only strings; Chennai not swept. Checked: "Department of Atomic Energy,
+  BHAVINI, Kalpakkam 603102" -> other.
+* **4.3 RRCAT** (02378jc90): 452013 `anchor` (508 of 515 distinct strings name RRCAT; the other 7 checked: a BARC string with a
+  wrong PIN, UGC-DAE CSR — both handled by name / exclude); "Raja Ramanna Fellow / Chair" (a DAE fellowship held anywhere)
+  excluded from the name; Indore sweep-only. BARC beamline staff at RRCAT count for both (both printed).
+* **4.4 NISER** (02r2k1c68): Jatni campus (752050, Padanpur `anchor`: 0 of 167 strings lack the name) and the transit campus
+  at IOP (751005); "NISER" also = Nigerian / Nepal institutes -> acronym needs Bhubaneswar / Odisha / HBNI context; IIT
+  Bhubaneswar, IOP, XIM, Centurion excluded unless NISER is named; Bhubaneswar (23,787) sweep-only. Checked: an IOP + HBNI +
+  DAE string at 751005 -> other.
+* All 24 CSIR + DAE units registered; test_affil 717/717. ROR / GRID checked for all four; 118 test strings, 0 missing.

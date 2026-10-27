@@ -430,6 +430,113 @@ CIMFR_NAME = (r"central\s+inst\w*\s+of\s+mining\s*(and|&|&amp;)?\s*fuel|central\
               r"\b(cmri|cfri)\b(?=.{0,200}" + CIMFR_DHN + r")|" + CIMFR_DHN + r".{0,200}\b(cmri|cfri)\b")
 
 
+# Draft registry entry (proposal) -- Bhabha Atomic Research Centre (BARC), Trombay, Mumbai, and its outstations. Names available
+# from institutes_other.py: GENERIC_OTHER. Recon 2026-10-27; evidence: dae_barc_recon.md, dae_barc_tests.tsv and the probe
+# outputs scratch/probe_dae_barc.txt, scratch/probe_dae_mention.txt.
+#
+# This first draft file also DEFINES the shared DAE patterns (DAE_MENTION, DAE_OTHER_UNIT, HBNI_ONLY) that dae_igcar.py,
+# dae_rrcat.py and dae_niser.py reuse (to be placed at the top of the DAE block of institutes_other.py when merged).
+
+# How the Department of Atomic Energy is named as a type. "DAE" collides widely (probe_dae_mention.txt, 1000 Crossref strings):
+#   * "UGC-DAE Consortium for Scientific Research" (Indore, Kolkata, Mumbai, Kalpakkam: ~600 of the strings) and "UM-DAE Centre
+#     for Excellence in Basic Sciences" are separate organisations -> never a mention (lookbehind on "ugc" / "um" + one character);
+#   * "Dae-jeon" / "Dae jeon" / "Dae-gu" / "Dae-dong" (Korea: Daejeon, Daegu), "DAE - IFSC" (Brazil), "DAE (Departamento de
+#     Administracao e Economia)" (Lavras), "Department of Agricultural Extension (DAE), MoA, Dhaka" (Bangladesh), Bogazici
+#     Kandilli "DAE" (Turkey) -> Korean name parts are excluded by lookahead; the rest have none of our place tokens, so a bare
+#     "DAE" can only make a string a unit's string when one of our places is in the same part (and exclude / confusable apply).
+# AcSIR-like rule: HBNI (Homi Bhabha National Institute, Anushaktinagar, Mumbai) is the degree-granting university of all DAE
+# units and is NOT a mention: HBNI + a unit's name counts for the unit through the unit's name; HBNI alone counts for none.
+DAE_MENTION = (r"depart?ment\s+of\s+atomic\s+energy|dept\.?\s+of\s+atomic\s+energy|"
+               r"(?<!\bugc.)(?<!\bugc\s.\s)(?<!\bum.)(?<!\bum\s.\s)\bdae\b(?!\s*[-‐‑–]?\s*(jeon|jon|gu\b|dong|gyeong)|\s*[-‐‑–]\s*ifsc)")
+
+# HBNI named (any spelling seen: "Homi Bhabha National Institute", "Homi Bhaba National Institute" (typo, 276 strings), "Bhabha
+# National Institute", "Homi Bhabha Institute of Technology (HBNI)", "HBNI"). Used in `other`: a part that names HBNI and a
+# place of a unit but not the unit itself is not about the unit (checked after the explicit-name rule).
+HBNI_ONLY = r"homi\s+bh?a+b+h?a+\s+(national\s+)?inst\w*|bhabha\s+national\s+inst\w*|\bhbni\b"
+
+# Look-alike DAE organisations (other DAE units, aided institutes, PSUs). Used as `confusable` of every DAE entry: a bare DAE
+# mention plus our place is not decisive when another DAE organisation is named in the same part. The four units of this
+# group (BARC, IGCAR, RRCAT, NISER) are not listed: they are registered, so the classifier already knows them.
+DAE_OTHER_UNIT = (r"tata\s+institute\s+of\s+fundamental|\btifr\b|tata\s+memorial|\bactrec\b|\btmc\b|\btmh\b|homi\s+bhabha\s+cancer|"
+                  r"homi\s+bhabha\s+cent(re|er)\s+for\s+science|\bhbcse\b|ugc\W{0,3}dae|consortium\s+for\s+scientific\s+research|"
+                  r"\bcebs\b|excellence\s+in\s+basic\s+sciences|nuclear\s+power\s+corporation|\bnpcil\b|atomic\s+energy\s+regulatory|"
+                  r"\baerb\b|board\s+of\s+radiation\s+(and|&)\s+isotope|\bbrit\b|heavy\s+water\s+board|variable\s+energy\s+cyclotron|"
+                  r"\bvecc\b|saha\s+institute|\bsinp\b|harish.chandra\s+research|\bhri\b|institute\s+of\s+mathematical\s+sciences|"
+                  r"\bimsc\b|institute\s+of\s+physics,?\s*(bhubaneswar|sachivalaya)|\biopb\b|institute\s+for\s+plasma\s+research|"
+                  r"\bipr\b|atomic\s+minerals\s+directorate|indian\s+rare\s+earths|\birel\b|nuclear\s+fuel\s+complex|"
+                  r"uranium\s+corporation|\bucil\b|\bbhavini\b|bharatiya\s+nabhikiya|national\s+cent(re|er)\s+for\s+radio\s+astrophysics|"
+                  r"\bncra\b|indian\s+nuclear\s+society|mishra\s+dhatu|\bmidhani\b|nuclear\s+recycle\s+board\s+\(?\s*npcil")
+
+# BARC's name. Typo-tolerant ("Bhaba", "Bhabha", "Centre"/"Center"/"Cente", "Reseach"). Acronym "BARC" collides (probe_dae_barc.txt,
+# 1,109 distinct Crossref strings): USDA Beltsville Agricultural Research Center (~half of them), Basic Algorithms Research
+# Copenhagen, Big Anxiety Research Centre (UNSW), Bridge Animal Referral Center, Bangladesh Agricultural Research Council (Dhaka),
+# Barts Research Centre for Women's Health (QMUL), the Australian Research Council's "ARC" printed as "bARC" (Monash, Tasmania,
+# Melbourne ...), Balance and Auditory Research Center (Mississippi), Biotechnology Advanced Research Centre (SHESTCO, Nigeria),
+# BARC-SA (Johannesburg), PQ Barcon (Mexico). So the acronym counts only with a BARC context word in the same part, or as the
+# last word of a division / section / centre ("Electron Beam Centre, BARC"), or written "B.A.R.C." (dots: no collision seen).
+BARC_CTX = (r"(bh?a+b+h?a+|trombay|anushakti\w*|mumbai|bombay|india|vizag|visakhapatnam|kalpakkam|tarapur|hbni|homi|atomic|"
+            r"\bdae\b|\b400\s?0?(85|94)\b|hyderabad|training\s+school|facilit|nccm|nuclear|npcil|vecc|ugc)")
+BARC_ACR = r"(?<![\w-])barc\b(?!\s*[-‐‑–]\s*(sa|east|west)\b)"
+BARC_NAME = (r"bh?a+b+h?a+\s+atomic\s+res\w*(\s+cent\w*)?|"
+             r"\bb\.\s?a\.\s?r\.\s?c\b|"
+             r"national\s+cent\w*\s+for\s+compositional\s+characteri[sz]ation\s+of\s+materials?|"
+             r"(division|section|group|cent(re|er))\s*,\s*" + BARC_ACR + r"\s*($|[,|;)])|"
+             + BARC_ACR + r"(?=.{0,200}" + BARC_CTX + r")|" + BARC_CTX + r".{0,200}" + BARC_ACR + r"|"
+             r"\bbarc\s+facilit\w+")
+
+
+# Draft registry entry (proposal) -- Indira Gandhi Centre for Atomic Research (IGCAR), Kalpakkam. Names available from
+# dae_barc.py (to be merged first): DAE_MENTION, DAE_OTHER_UNIT, HBNI_ONLY; from institutes_other.py: GENERIC_OTHER.
+# Recon 2026-10-27; evidence: dae_igcar_recon.md, dae_igcar_tests.tsv, scratch/probe_dae_igcar.txt.
+#
+# Kalpakkam is a DAE township: besides IGCAR it hosts BARC Facilities (BARCF: Water and Steam Chemistry Division, Integrated
+# Nuclear Recycle Plant, Waste Immobilisation Plant), AERB's Safety Research Institute, NPCIL's Madras Atomic Power Station and
+# Nuclear Power Plant Hospital, BHAVINI, the UGC-DAE CSR Kalpakkam Node (Kokilamedu 603104) and HBNI's Kalpakkam centre.
+# "IGCAR" (146 Crossref hits, all IGCAR in the samples; no acronym collision found) counts alone.
+# Name typo variants seen: "Indira  Gandhi", "IndiraGandhi", "Center", lower-case "atomic research".
+IGCAR_NAME = r"indira\s*gandhi\s+cent\w*\s+(for|of)\s+atomic\s+res\w*|\bigcar\b"
+
+# IGCAR's groups / divisions printed without the name next to Kalpakkam ("Metallurgy and Materials Group, Kalpakkam, India | Homi
+# Bhabha National Institute, Mumbai, India"; "Corrosion Science and Technology Division, Metallurgy and Materials Group, Kalpakkam
+# 603 102"; "Materials Developing and Technology Division, HBNI, Kalpakkam 603 102"). BARCF's Chemistry Group is NOT listed.
+IGCAR_GROUPS = (r"(metallurgy\s+(and|&|&amp;)\s+materials|materials?\s+science|materials\s+chemistry|reprocessing|reactor\s+facilities|"
+                r"fast\s+reactor\s+technology|safety\W{0,3}\s*quality|corrosion\s+science|physical\s+metallurgy|non\s+destructive\s+evaluation|"
+                r"materials\s+develop\w*\s+and\s+technology)\b[^|]{0,150}(kalpakkam|\b603\s?1(02|27)\b)")
+
+
+# Draft registry entry (proposal) -- Raja Ramanna Centre for Advanced Technology (RRCAT), Indore (PO CAT, 452013). Names available
+# from dae_barc.py (to be merged first): DAE_MENTION, DAE_OTHER_UNIT, HBNI_ONLY; from institutes_other.py: GENERIC_OTHER.
+# Recon 2026-10-27; evidence: dae_rrcat_recon.md, dae_rrcat_tests.tsv, scratch/probe_dae_rrcat.txt.
+#
+# Name variants seen in Crossref strings: "Raja Rammana Centre", "Raja Ramana Centre for Advance Technology", "Raja Ramanna Center",
+# "Raja Ramanna Ctr." (INSPIRE style), "Raja Ramanna Research Center", and the pre-2005 name "(Centre for) Advanced Technology (CAT)",
+# "P.O.: CAT, Indore". "Raja Ramanna Fellow" / "Raja Ramanna Chair" are DAE fellowships held at CSIR-NGRI, BARC, IGCAR, AMD, DRDO,
+# IIT Kharagpur ...: they are NOT RRCAT, so the pattern requires Centre / Center / Ctr. / Research Centre after "Raja Ramanna".
+# The acronym "RRCAT" (203 Crossref hits, every sample string is RRCAT) counts alone.
+RRCAT_NAME = (r"raja\s+ram{1,2}an{1,2}a\s+(research\s+)?(cent\w*|ctr\b)|\brrcat\b|"
+              r"\bcent\w*\s+for\s+advanc\w*\s+tech\w*[^|]{0,60}\bindore\b|\bp\.?\s?o\.?:?\s*cat\b")
+
+
+# Draft registry entry (proposal) -- National Institute of Science Education and Research (NISER), Bhubaneswar: the Jatni campus
+# (PO Bhimpur-Padanpur, Via Jatni, Khurda 752050, since 2015) and the transit campus on the Institute of Physics campus
+# (Sachivalaya Marg, PO Sainik School, Bhubaneswar 751005, 2007-2015). NISER is a teaching institute (HBNI constituent; its schools
+# print "An OCC of Homi Bhabha National Institute"). Names available from dae_barc.py (to be merged first): DAE_MENTION, DAE_OTHER_UNIT,
+# HBNI_ONLY; from institutes_other.py: GENERIC_OTHER. Recon 2026-10-27; evidence: dae_niser_recon.md, dae_niser_tests.tsv,
+# scratch/probe_dae_niser.txt.
+#
+# Acronym collisions (probe "NISER": 947 distinct strings, 49 without Bhubaneswar/Odisha/Jatni/HBNI/science education):
+#  * Nigerian Institute of Social and Economic Research, Ibadan (the bulk: "NISER" prints ~45 of the 49), also written "National Institute
+#    of Social and Economic Research (NISER)" and "Nigeria institute of Social ...";
+#  * Nepal Institute for Social and Environmental Research (NISER); "Niser Eye Clinic"; "MacAuthur Project Office, NISER".
+# So "NISER" counts only with a Bhubaneswar / Odisha / HBNI context word in the same part (the typo "Bubaneswar" and the abbreviation
+# "BBSR" are context words), and the Nigerian / Nepalese look-alikes are in `exclude`. The full name starts with "National Institute
+# of Science Education": it does not match "Indian Institute of Science Education and Research" (IISERs).
+NISER_CTX = (r"(bh?u\w*nesh?war|bbsr|odisha|orissa|jat(ni|ani)|khurda|khordha|khorda|padanpur|bhimpur|\b752\s?050\b|\b751\s?005\b|"
+             r"hbni|homi|\bdae\b|atomic\s+energy)")
+NISER_NAME = (r"national\s+inst\w*\s+(of|for)\s+science\s+educ\w*\s*(and|&|&amp;)?\s*res\w*|"
+              r"(?<![a-z])niser(?![a-z])(?=.{0,200}" + NISER_CTX + r")|" + NISER_CTX + r".{0,200}(?<![a-z])niser(?![a-z])")
+
+
 EXT = {
     # ------------------------------------------------------------------ CSIR-CECRI, Karaikudi (pilot, PROCESS_OTHER.md §2)
     # Recon 2026-10-27: Karaikudi and CECRI's PINs 630003 / 630006 are shared with Alagappa University, so no token is
@@ -1252,4 +1359,180 @@ EXT = {
         orcid_city=r"\bcimfr\b|central\s+institute\s+of\s+mining|digwadih",
         dblp=("cimfr|mining and fuel research", r"\bcimfr\b|central\s+institute\s+of\s+mining"),
         tenure_lag=1),
+    # ------------------------------------------------------------------ dae_barc (PROCESS_OTHER.md §4.1)
+        "dae_barc": dict(
+            name="Bhabha Atomic Research Centre", ror="https://ror.org/05w6wfp17", grid="grid.418304.a",
+            family="dae",
+            mention=DAE_MENTION,
+            explicit_full=BARC_NAME,
+            confusable=DAE_OTHER_UNIT,
+            # Crossref hits 2016-2026 (recon_probe, logs/recon_dae_barc.tsv): BARC 1,170; Trombay 1,345; 400085 2,629; Anushaktinagar
+            # 1,453; Anushakti 1,070; 400094 2,325; Bhabha 14,912 (heavy sweep: HBNI, Homi Bhabha Cancer Hospital, TIFR's Homi Bhabha Road, the
+            # name-only strings "Bhabha Atomic Research Centre | Homi Bhabha National Institute"); Mumbai 53,582 and Bombay 14,497
+            # NOT swept (too big: IIT Bombay, TIFR, ICT, TMC, universities; every BARC string that matters prints the name, Trombay,
+            # 400085 or 400094 and is reached by those sweeps); Atomic 31,184 (rejected, generic); Kharghar 457 (colleges, ACTREC: no
+            # BARC string seen), Tarapur 49 (BARC Nuclear Recycle Board / TAPS-NPCIL: reached through the name), Vizag / Visakhapatnam,
+            # Kalpakkam, Mysuru: BARC outstations print the name (see recon).
+            crossref=["BARC", "Trombay", "400085", "Anushaktinagar", "Anushakti", "400094", "Bhabha"],   # "Bhabha" is the heavy one (14,912)
+            crossref_broad=[],
+            anchor=None,   # no token unique to BARC: 400085 = also UGC-DAE CSR Mumbai Centre, Cluj-Napoca (Romania); Trombay = also
+                           # UGC-DAE CSR, Tata Memorial/HBNI strings and TISS (Sion-Trombay Road, Deonar)
+            # in-scope tokens shared with a few organisations: no name -> uncertain (unless a division name makes it explicit, see units)
+            city=r"\btrombay\b|\b400\s?085\b|barc\.gov\.in",
+            # Anushaktinagar / 400094 hold HBNI's head office, AERB, NPCIL, Heavy Water Board, Indian Nuclear Society, IITB-typo strings:
+            # operator (§4.1): these are all DAE units, so a DAE mention does not place a string at BARC ("HBNI, Anushaktinagar,
+            # 400094, Department of Atomic Energy" counted as BARC in the draft). Sweep-only: count only if BARC is named.
+            shared=None,
+            units=BARC_NAME + "|"
+                  # BARC division names with Trombay / 400085 / Anushaktinagar and no name ("Technical Physics Division, Mumbai, 400085, India";
+                  # "Radiochemistry Division  400085 Trombay, Mumbai India"): only BARC and UGC-DAE CSR (excluded) sit at Trombay
+                  r"\b(division|section|group)\b.{0,120}(\btrombay\b|\b400\s?085\b)|"
+                  r"\bnuclear\s+recycle\s+board\b(?!\s*\(?\s*npcil)|\btraining\s+school\s+complex\b.{0,60}\bbarc\b",
+            state=None,   # Maharashtra has TIFR, TMC, IIT Bombay ...: no state rule
+            # never BARC even with a DAE mention or a Trombay place (checked before the mention rule): the DAE neighbours at Trombay /
+            # Anushaktinagar and the acronym look-alikes
+            exclude=r"ugc\W{0,3}dae|consortium\s+for\s+scientific\s+research|tata\s+memorial|\bactrec\b|\btmc\b|\btmh\b|homi\s+bhabha\s+cancer|"
+                    r"tata\s+institute\s+of\s+(fundamental|social)|\btifr\b|nuclear\s+power\s+corporation|\bnpcil\b|atomic\s+energy\s+regulatory|"
+                    r"\baerb\b|heavy\s+water\s+board|indian\s+nuclear\s+society|board\s+of\s+radiation\s+(and|&)\s+isotope|\bbrit\b|"
+                    r"babe\w*.bolyai|cluj|romania|"
+                    r"beltsville|\busda\b|agricultural\s+research\s+(service|council)|\bars\b|copenhagen|big\s+anxiety|bridge\s+animal|"
+                    r"barts|australia|bangladesh|dhaka|nigeria|south\s+africa|mississippi",
+            # organisations at the same places that never carry a DAE mention (checked after the mention rule). HBNI alone (the
+            # degree-granting university, Anushaktinagar) is never BARC: with Trombay / 400085 it would otherwise be 'uncertain'.
+            other=HBNI_ONLY + r"|surface\s+modification|directorate\s+of\s+construction|v\.\s?s\.\s?bhavan|vikram\s+sarabhai\s+bhavan|"
+                  + GENERIC_OTHER,
+            europepmc='(AFF:"Bhabha Atomic Research Centre" OR AFF:"Bhabha Atomic Research Center" OR AFF:"B.A.R.C." OR '
+                      '(AFF:"BARC" AND (AFF:"Mumbai" OR AFF:"Trombay" OR AFF:"Bombay")) OR '
+                      'AFF:"National Centre for Compositional Characterisation of Materials") AND PUB_YEAR:[2016 TO 2026]',
+            doaj=['bibjson.author.affiliation:"Bhabha Atomic Research Centre"',
+                  'bibjson.author.affiliation:"Bhabha Atomic Research Center"',
+                  'bibjson.author.affiliation:"BARC" AND bibjson.author.affiliation:"Mumbai"'],
+            # INSPIRE record "Bhabha Atomic Res. Ctr." (Trombay, Van de Graaff Building)
+            inspire='(aff:"Bhabha Atomic Res. Ctr." or aff:"Bhabha Atomic Research Centre")',
+            orcid_q='affiliation-org-name:"Bhabha Atomic Research Centre" OR affiliation-org-name:"Bhabha Atomic Research Center" OR '
+                    'ror-org-id:"https://ror.org/05w6wfp17"',
+            orcid_city=r"mumbai|bombay|trombay|anushakti|visakhapatnam|vizag|tarapur|kalpakkam",
+            dblp=("bhabha atomic|barc", r"bhabha\s+atomic|\bbarc\b"),
+            tenure_lag=1),
+    # ------------------------------------------------------------------ dae_igcar (PROCESS_OTHER.md §4.2)
+        "dae_igcar": dict(
+            name="Indira Gandhi Centre for Atomic Research", ror="https://ror.org/05tkzma19", grid="grid.459621.d",
+            family="dae",
+            mention=DAE_MENTION,
+            explicit_full=IGCAR_NAME,
+            # DAE_OTHER_UNIT plus the township address of all Kalpakkam DAE staff ("JRF Enclave DAE Township, Kalpakkam 603102"):
+            # DAE mention + Kalpakkam + township is not decisive -> uncertain
+            confusable=DAE_OTHER_UNIT + r"|dae\s+township",
+            # Crossref hits 2016-2026: IGCAR 146, Kalpakkam 1,005, 603102 465, 603127 5, Kokilamedu 51 (all UGC-DAE node: rejected),
+            # Kalpakam 0, Chengalpattu 1,336 / Kancheepuram 924 (districts: 3 and 1 IGCAR strings; rejected), 603104 133 (UGC-DAE node:
+            # rejected), Sadras 0. Chennai 100,310 hits NOT swept (IIT Madras, hundreds of institutions; IGCAR strings print the
+            # name, Kalpakkam or 603102). "Indira" 7,633 hits (IGNOU, IGIDR, Indira Gandhi colleges ... plus the IGCAR name-only strings) is swept for the
+            # strings that print the name without any place.
+            crossref=["IGCAR", "Kalpakkam", "603102", "603127", "Indira"],   # "Indira" 7,633 hits: the only way to reach name-only strings
+            crossref_broad=[],
+            anchor=None,   # Kalpakkam / 603102 are shared with BARCF, AERB-SRI, BHAVINI, NPCIL; no unique token
+            city=r"\bkalpakkam\b|\b603\s?102\b|\b603127\b|igcar\.gov\.in",
+            shared=None,   # Chennai (the "Chennai" printed after Kalpakkam) is a big city: sweep-less, not a place
+            units=IGCAR_NAME + "|" + IGCAR_GROUPS + r"|reactor\s+research\s+cent\w*\b.{0,80}(kalpakkam|india)",
+            state=None,    # Tamil Nadu: many DAE and other organisations
+            # never IGCAR (checked before the name rule): the other Kalpakkam units; "BARC" counts as BARCF only when IGCAR is not
+            # named in the same part (BARC Facilities strings were 116 of 1,275 Kalpakkam strings without the IGCAR name)
+            exclude=r"ugc\W{0,3}dae|consortium\s+for\s+scientific\s+research|atomic\s+energy\s+regulatory|\baerb\b|safety\s+research\s+institute|"
+                    r"bharatiya\s+nabhikiya|\bbhavini\b|nuclear\s+power\s+(corporation|plant)|\bnpcil\b|madras\s+atomic\s+power|"
+                    r"^(?![\s\S]*(indira\s*gandhi\s+cent|\bigcar\b))[\s\S]*(\bbarcf?\b|bh?a+b+h?a+\s+atomic|nuclear\s+recycle)",
+            # HBNI alone, with Kalpakkam, is not IGCAR (checked after the mention rule); organisations printing 603102 / Chengalpattu
+            other=HBNI_ONLY + r"|samsung|great\s+lakes|kalpakkam\s+hospital|" + GENERIC_OTHER,
+            europepmc='(AFF:"Indira Gandhi Centre for Atomic Research" OR AFF:"Indira Gandhi Center for Atomic Research" OR AFF:"IGCAR" OR '
+                      '(AFF:"Kalpakkam" AND AFF:"Atomic")) AND PUB_YEAR:[2016 TO 2026]',
+            doaj=['bibjson.author.affiliation:"Indira Gandhi Centre for Atomic Research"',
+                  'bibjson.author.affiliation:"Indira Gandhi Center for Atomic Research"',
+                  'bibjson.author.affiliation:"IGCAR"'],
+            # INSPIRE record "Kalpakkam Reactor Res. Ctr." (postal address "Indira Gandhi Center for Atomic Res., DAE, Kalpakkam 603 102")
+            inspire='(aff:"Kalpakkam Reactor Res. Ctr." or aff:"Indira Gandhi Centre for Atomic Research")',
+            orcid_q='affiliation-org-name:"Indira Gandhi Centre for Atomic Research" OR affiliation-org-name:"Indira Gandhi Center for Atomic Research" '
+                    'OR affiliation-org-name:(IGCAR) OR ror-org-id:"https://ror.org/05tkzma19"',
+            orcid_city=r"kalpakkam|kancheepuram",
+            dblp=("indira gandhi centre for atomic|igcar", r"indira\s+gandhi\s+cent\w*\s+for\s+atomic|\bigcar\b"),
+            tenure_lag=1),
+    # ------------------------------------------------------------------ dae_rrcat (PROCESS_OTHER.md §4.3)
+        "dae_rrcat": dict(
+            name="Raja Ramanna Centre for Advanced Technology", ror="https://ror.org/02378jc90", grid="grid.250590.b",
+            family="dae",
+            mention=DAE_MENTION,
+            explicit_full=RRCAT_NAME,
+            confusable=DAE_OTHER_UNIT,
+            # Crossref hits 2016-2026: RRCAT 203; Ramanna 739 (RRCAT plus the Raja Ramanna Fellow / Chair titles: sweep for name-only
+            # strings); 452013 387; 452012 67 (DAVV, IPS Academy, SAGE University: rejected); Rammana 7 (typo, all RRCAT); Indore 11,930
+            # (sweep-only: DAVV, IIT Indore, IIM, medical colleges, UGC-DAE CSR ...). The name-only strings "Raja Ramanna Centre for Advanced
+            # Technology | Homi Bhabha National Institute" are reached by Ramanna.
+            crossref=["RRCAT", "Ramanna", "452013", "Rammana", "Indore"],
+            crossref_broad=[],
+            # 452013 is RRCAT's own PIN: 515 distinct strings in the first 400 Crossref rows, 508 name RRCAT; the other 7 are typos of
+            # other DAE units' strings (UGC-DAE CSR Indore printing 452013, BARC's Technical Physics Division printing "Mumbai 452013") and two
+            # Boston strings where RRCAT is another part. IIT Indore uses 452017 / 453552 (Khandwa Road / Simrol). Anchor (open question).
+            anchor=r"\b452[\s-]?013\b",
+            city=r"rrcat\.gov\.in",
+            shared=None,   # Indore is sweep-only (11,930 hits): DAVV, IIT Indore, UGC-DAE CSR Indore print it
+            units=RRCAT_NAME,
+            state=None,    # Madhya Pradesh: UGC-DAE CSR, AMD ... no state rule
+            # UGC-DAE CSR Indore (University Campus, Khandwa Road 452001/452017; one string prints 452013): never RRCAT
+            exclude=r"ugc\W{0,3}dae|consortium\s+for\s+scientific\s+research",
+            # HBNI alone is not RRCAT; Indore institutions; checked after the mention rule
+            other=HBNI_ONLY + r"|devi\s+ahilya|\bdavv\b|ips\s+academy|sage\s+university|" + GENERIC_OTHER,
+            europepmc='(AFF:"Raja Ramanna Centre for Advanced Technology" OR AFF:"Raja Ramanna Center for Advanced Technology" OR '
+                      'AFF:"RRCAT" OR (AFF:"Centre for Advanced Technology" AND AFF:"Indore")) AND PUB_YEAR:[2016 TO 2026]',
+            doaj=['bibjson.author.affiliation:"Raja Ramanna Centre for Advanced Technology"',
+                  'bibjson.author.affiliation:"Raja Ramanna Center for Advanced Technology"',
+                  'bibjson.author.affiliation:"RRCAT"'],
+            # INSPIRE records "Raja Ramanna Ctr." and the legacy "Indore, Ctr. for Advanced Tech." (postal "Center for Advanced Technology, Indore")
+            inspire='(aff:"Raja Ramanna Ctr." or aff:"Indore, Ctr. for Advanced Tech.")',
+            orcid_q='affiliation-org-name:"Raja Ramanna Centre for Advanced Technology" OR affiliation-org-name:"Raja Ramanna Center for Advanced Technology" '
+                    'OR affiliation-org-name:(RRCAT) OR ror-org-id:"https://ror.org/02378jc90"',
+            orcid_city=r"indore",
+            dblp=("raja ramanna centre|rrcat", r"raja\s+ramanna\s+cent|\brrcat\b"),
+            tenure_lag=1),
+    # ------------------------------------------------------------------ dae_niser (PROCESS_OTHER.md §4.4)
+        "dae_niser": dict(
+            name="National Institute of Science Education and Research", ror="https://ror.org/02r2k1c68", grid="grid.419643.d",
+            family="dae",
+            mention=DAE_MENTION,
+            explicit_full=NISER_NAME,
+            confusable=DAE_OTHER_UNIT,
+            # Crossref hits 2016-2026: NISER 1,141; Jatni 941; Jatani 76 (typo, NISER and Centurion); 752050 2,038 (IIT Bhubaneswar,
+            # Centurion University, XIM University, NISER); Padanpur 186 / Bhimpur 192 (Bhimpur alone also = a West Bengal college); 751005 295
+            # (Institute of Physics, NISER's transit campus); Bhubaneswar 23,787 (sweep-only; the cache is shared with IIT Bhubaneswar's
+            # sweep, so it costs nothing extra) and Bhubaneshwar 902: needed for strings that print the full name without the acronym or a
+            # NISER place; Khurda 634 / Khordha 299 (district: includes Bhubaneswar, rejected); Bubaneswar 13 (typo, covered by NISER).
+            crossref=["NISER", "Jatni", "Jatani", "Padanpur", "752050", "751005", "Bhubaneswar", "Bhubaneshwar"],
+            crossref_broad=[],
+            # Padanpur (as "Bhimpur-Padanpur") is NISER's postal address: 167 distinct strings in 300 rows, 0 without NISER's name in the
+            # sample. Bhimpur alone is not an anchor (a West Bengal college prints it). niser.ac.in scopes e-mail addresses only.
+            anchor=r"\bpadanpur\b|\bniser\.ac\.in\b",
+            # in-scope tokens shared with other organisations: Jatni / 752050 with IIT Bhubaneswar (Argul), Centurion University, XIM;
+            # 751005 / Sachivalaya Marg with the Institute of Physics (see exclude). No name -> uncertain.
+            city=r"\bjat(ni|ani)\b|\b752\s?050\b|\b751\s?005\b|\bsachival\w*",
+            shared=None,   # Bhubaneswar is sweep-only (IIT Bhubaneswar, IOP, ILS, KIIT, Utkal ...)
+            units=NISER_NAME,
+            state=None,    # Odisha: IIT Bhubaneswar has the state rule; NISER none
+            # never NISER: the look-alike acronym owners (unconditional), and the neighbours at NISER's places when NISER is not named in
+            # the same part (IIT Bhubaneswar at Jatni / 752050, Centurion University, XIM, Jatni Degree College, the Institute of Physics
+            # at 751005 / Sachivalaya Marg, Utkal). A part that names NISER together with "Institute of Physics Campus" stays NISER.
+            exclude=r"nigeria|ibadan|\bnepal\b|economic\s+research|environmental\s+research|eye\s+clinic|"
+                    r"^(?![\s\S]*((?<![a-z])niser(?![a-z])|national\s+institute\s+of\s+science\s+educ))[\s\S]*"
+                    r"((?<![a-z])iit(?![a-z])|indian\s+institute\s+of\s+technology|\bargul\b|institute\s+of\s+physics|\biopb\b|sachivalaya|sainik\s+school|"
+                    r"centurion|\bxim\b|jatni\s+degree|utkal)",
+            # HBNI alone is not NISER (checked after the mention rule); other organisations of Bhubaneswar that print its PINs
+            other=HBNI_ONLY + r"|institute\s+of\s+life\s+sciences|\bils\b|\bkiit\b|kalinga|siksha|" + GENERIC_OTHER,
+            europepmc='(AFF:"National Institute of Science Education and Research" OR AFF:"National Institute of Science Education & Research" OR '
+                      '(AFF:"NISER" AND (AFF:"Bhubaneswar" OR AFF:"Odisha" OR AFF:"Jatni" OR AFF:"HBNI"))) AND PUB_YEAR:[2016 TO 2026]',
+            doaj=['bibjson.author.affiliation:"National Institute of Science Education and Research"',
+                  'bibjson.author.affiliation:"National Institute of Science Education & Research"',
+                  'bibjson.author.affiliation:"NISER" AND bibjson.author.affiliation:"Bhubaneswar"'],
+            # INSPIRE records "NISER, Jatni" and "Bhubaneswar, NISER" (the transit campus: "Institute of Physics Campus, PO: Sainik School")
+            inspire='(aff:"NISER, Jatni" or aff:"Bhubaneswar, NISER")',
+            orcid_q='affiliation-org-name:"National Institute of Science Education and Research" OR affiliation-org-name:(NISER) OR '
+                    'ror-org-id:"https://ror.org/02r2k1c68"',
+            orcid_city=r"bhubaneswar|bhubaneshwar|jatni|jatani|khurda|khordha",
+            dblp=("national institute of science education|niser", r"national\s+institute\s+of\s+science\s+educ|\bniser\b"),
+            tenure_lag=1),
 }
