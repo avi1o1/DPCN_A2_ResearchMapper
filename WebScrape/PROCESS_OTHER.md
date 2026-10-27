@@ -271,3 +271,15 @@ Jamshedpur via `city`, Durgapur via `city`, Dhanbad `shared`, Nagpur / Bilaspur 
   exclude). Effect: those alternatives could never match (no wrong data). Fixed; every edit is now followed by a
   control-character check; raw strings only.
 * All 20 CSIR labs of the handoff registered; test_affil 592/592.
+
+### 3.20 The rule-order finding applied to the earlier entries
+* The six entries merged before §3.11 had the same exposure: a neighbour sharing a `city` / `shared` token, listed only in
+  `other`. New helper `_unless_named(name, neighbours)` in institutes_other.py (excluded unless the same part names the lab);
+  applied by `scripts/oneoff_apply_unless_named.py` to CECRI (Alagappa University and Karaikudi colleges), IICT (Osmania,
+  Sarojini Naidu pharmacy college, NIPER), CCMB (ZSI, BSI at 500048), CFTRI (JSS, PHRII), CDRI (AKTU and Jankipuram
+  neighbours), IGIB (University of Delhi and colleges at 110007).
+* Test run found one real problem in the new guard: CECRI's own locality is "**Alagappa**puram, Karaikudi", and a CECRI string
+  with a misspelled name ("Electrochemcial") was excluded -> `alagappa(?!puram)`. Three IGIB test expectations None -> other
+  (University of Delhi strings; both mean "not IGIB"). test_affil 592/592.
+* Effect on real data: every reviewed IICT `iit` string (2,963) and every matched string of CECRI's 1,568 verified records
+  re-classified — **0 changes**. The guards close a possible error; no observed record depended on it.

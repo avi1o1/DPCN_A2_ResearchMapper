@@ -83,6 +83,13 @@ def _others(me, *own):
         s = s.replace(frag, rep, 1)
     return s
 
+def _unless_named(name, neighbours):
+    """Exclusion of `neighbours` that share a place token with a lab, unless the same part also names the lab (`name`).
+    `other` is consulted only after the type-mention rule, so 'CSIR ... <neighbour> ... <place token>' would otherwise count
+    for the lab (PROCESS_OTHER.md §3.11-3.20)."""
+    return r"^(?![\s\S]*(" + name + r"))[\s\S]*(" + neighbours + r")"
+
+
 
 # Draft registry entry (proposal) -- CSIR-Central Food Technological Research Institute (CFTRI), Mysuru, and its resource
 # centres (Hyderabad, Lucknow). Names available from institutes_other.py: CSIR_MENTION, CSIR_OTHER_LAB, GENERIC_OTHER,
@@ -452,7 +459,7 @@ EXT = {
               r"corrosion\s+(and|&)\s+materials?\s+protection)\b.{0,120}(karaikudi|\b630\s*00[36]\b)",
         state=None,   # Tamil Nadu has several CSIR labs (CECRI, SERC, CLRI, CEERI centre): no state rule
         # other organisations at CECRI's places: never CECRI even with a CSIR mention (checked before the mention rule)
-        exclude=r"structural\s+engineering\s+research|\bserc\b|central\s+leather\s+research|\bclri\b|"
+        exclude=_unless_named(CECRI_NAME, r"alagappa(?!puram)|\bacgcet\b|chettinad|raaja\s+raajan|umayal") + "|" + r"structural\s+engineering\s+research|\bserc\b|central\s+leather\s+research|\bclri\b|"
                 r"central\s+electronics\s+engineering\s+research|\bceeri\b|salt\s+(and|&|&amp;)\s+marine|\bcsmcri\b|"
                 r"mathematical\s+sciences|\bimsc\b|university\s+of\s+madras|"
                 # Rome's Centre of Excellence for Nursing Scholarship is also "CECRI" (review §2.6)
@@ -502,7 +509,7 @@ EXT = {
         state=None,   # Telangana has CCMB, NGRI and a CFTRI resource centre too
         # same place, other organisations; look-alike acronym owners; ICT Mumbai (only with its own places, because a
         # bare "institute of chemical technology" also occurs inside IICT's name)
-        exclude=r"cellular\s+(and|&|&amp;)\s+molecular\s+biology|\bccmb\b|geophysical\s+research|\bngri\b|food\s+technological|\bcftri\b|"
+        exclude=_unless_named(IICT_NAME, r"osmania|sarojini\s+naidu|pharmaceutical\s+education|\bnipe?r\b") + "|" + r"cellular\s+(and|&|&amp;)\s+molecular\s+biology|\bccmb\b|geophysical\s+research|\bngri\b|food\s+technological|\bcftri\b|"
                 r"national\s+institute\s+of\s+nutrition|\bicmr\b|\bcdfd\b|fingerprinting|"
                 # review §3.1: CSIR-NEERI's Hyderabad Zonal Centre prints "IICT Campus, Tarnaka" as its address
                 r"national\s+environmental\s+engineering\s+research|\bneeri\b|"
@@ -548,7 +555,7 @@ EXT = {
         state=None,
         # same places, other organisations; acronym / name look-alikes. "IICT Colony" is part of CCMB's own address
         # ("Uppal Road, IICT Colony, Habsiguda", §3.1 review): the IICT acronym is excluded only when not followed by "colony"
-        exclude=r"indian\s+institute\s+of\s+chemical\s+technology|\biict\b(?!\s*colony)|geophysical\s+research|\bngri\b|"
+        exclude=_unless_named(CCMB_NAME + "|" + LACONES, r"zoological\s+survey|botanical\s+survey|\bzsi\b|\bbsi\b") + "|" + r"indian\s+institute\s+of\s+chemical\s+technology|\biict\b(?!\s*colony)|geophysical\s+research|\bngri\b|"
                 r"food\s+technological|\bcftri\b|national\s+institute\s+of\s+nutrition|\bicmr\b|\bcdfd\b|fingerprinting|"
                 r"national\s+environmental\s+engineering\s+research|\bneeri\b|"
                 r"cologne|musculoskeletal|cancer\s*care\s+manitoba|manitoba|computational\s+molecular|maluku|bahia|deakin|amity",
@@ -638,7 +645,7 @@ EXT = {
         # never CFTRI even with a CSIR mention: CSIR of Ghana (Council for Scientific and Industrial Research, Accra: its Food
         # Research Institute prints "Central Food Technological Research Institute, CSIR, Accra, Ghana" in one sample string) and
         # South Africa share the name "CSIR"; DRDO's Defence Food Research Laboratory (Mysuru) is the look-alike "Food Research" lab
-        exclude=r"ghana|accra|kumasi|south\s+africa|pretoria|defen[cs]e\s+food|\bdfrl\b|"
+        exclude=_unless_named(CFTRI_NAME, r"\bjss\b|public\s+health\s+research\s+institute|\bphrii\b|mysore\s+medical") + "|" + r"ghana|accra|kumasi|south\s+africa|pretoria|defen[cs]e\s+food|\bdfrl\b|"
                 r"cheluvamba\s+hospital|medical\s+college",
         other=r"university\s+of\s+mysore|mysore\s+university|\buom\b|\bjss\b|public\s+health\s+research\s+institute|\bphrii\b|"
               r"ramakrishna\s+institute|yadavagiri|\bdrdo\b|defen[cs]e|siddarthanagar|central\s+institute\s+of\s+indian\s+languages|"
@@ -837,7 +844,7 @@ EXT = {
         shared=r"\b110\s?007\b",
         units=IGIB_NAME + "|" + IGIB_UNITS,
         state=None,   # Delhi has CRRI, NPL, IGIB, NIScPR, NISTADS, CSIR headquarters
-        exclude=r"central\s+road\s+research|\bcrri\b|shaheed\s+sukhdev",
+        exclude=_unless_named(IGIB_NAME, r"university\s+of\s+delhi|delhi\s+university|\bdu\b|north\s+campus|ramjas|daulat\s+ram|hindu\s+college|miranda|kirori") + "|" + r"central\s+road\s+research|\bcrri\b|shaheed\s+sukhdev",
         other=r"university\s+of\s+delhi|delhi\s+university|\bdu\b|ramjas|daulat\s+ram|venkateswara|hindu\s+college|miranda|kirori|"
               r"shriram\s+institute|sansriti|north\s+campus|jamia|jawaharlal\s+nehru|\bjnu\b|all\s+india\s+institute|\baiims\b|"
               r"indian\s+institute\s+of\s+technology\s+delhi|\biit\s*-?\s*delhi|indraprastha|\biiit\b|indian\s+statistical|"
@@ -873,7 +880,7 @@ EXT = {
         units=CDRI_NAME,
         state=None,    # Uttar Pradesh: CSIR-CDRI, NBRI, IITR, CIMAP (Lucknow), plus others
         # never CDRI: the acronym's other owners; CSIR labs of Lucknow (their names are explicit, so "other", not uncertain)
-        exclude=r"coalition|disaster|cambodia|phnom|cbrn|defen[cs]e|"
+        exclude=_unless_named(CDRI_NAME, r"kalam|\baktu\b|technical\s+university|centre\s+for\s+advanced\s+studies|biotech\s+park|remote\s+sensing|homoeopath") + "|" + r"coalition|disaster|cambodia|phnom|cbrn|defen[cs]e|"
                 r"botanical\s+research|toxicology\s+research|medicinal\s+(and|&|&amp;)\s+aromatic|\bnbri\b|\biitr\b|\bcimap\b",
         other=r"kalam|\baktu\b|technical\s+university|centre\s+for\s+advanced\s+studies|biotech\s+park|remote\s+sensing|homoeopath|"
               r"turtle|university\s+of\s+lucknow|lucknow\s+university|\bkgmu\b|king\s+george|sgpg|sanjay\s+gandhi|integral\s+university|"
