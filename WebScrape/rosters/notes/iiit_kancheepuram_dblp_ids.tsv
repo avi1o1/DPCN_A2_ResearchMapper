@@ -4,7 +4,6 @@ Bhukya Krishna Priya	https://dblp.org/pid/237/0459	not accepted	no route	0
 Dinesh R	https://dblp.org/pid/08/4235-1;https://dblp.org/pid/08/4235	not accepted	no route	0
 Jagadeesh Kakarla	https://dblp.org/pid/124/3579	accepted	R3 verified	7
 Maithilee Laxmanrao Patawar	https://dblp.org/pid/284/0183	not accepted	no route	0
-Masilamani V	https://dblp.org/pid/15/10437	rejected	overlap 1 < 5% of 26 DBLP DOIs (namesake profile?)	1
 Masilamani V	https://dblp.org/pid/286/9341	accepted	R3 verified	4
 Mukku Nisanth Kartheek	https://dblp.org/pid/277/3345	not accepted	no route	0
 Om Prakash	https://dblp.org/pid/06/8718-1	rejected	different ORCID 0000-0001-6395-9989	0
@@ -77,8 +76,7 @@ Naveen Kumar	https://dblp.org/pid/78/2996-4	rejected	different ORCID 0000-0003-0
 Naveen Kumar	https://dblp.org/pid/78/2996-5	rejected	different ORCID 0000-0001-9482-1579	0
 Naveen Kumar	https://dblp.org/pid/78/2996-2;https://dblp.org/pid/78/2996-3;https://dblp.org/pid/78/2996-6;https://dblp.org/pid/78/2996-7;https://dblp.org/pid/78/2996-8;https://dblp.org/pid/78/2996-9;https://dblp.org/pid/78/2996	not accepted	no route	0
 Sarbendu Rakshit	https://dblp.org/pid/270/7788	not accepted	no route	0
-Shalu M A	https://dblp.org/pid/89/5473	rejected	overlap 1 < 5% of 33 DBLP DOIs (namesake profile?)	1
-Shalu M A	https://dblp.org/pid/89/5473	not accepted	no route	0
+Shalu M A	https://dblp.org/pid/89/5473	not accepted	no route	1
 Tapas Sil	https://dblp.org/pid/120/9923	not accepted	no route	0
 Vijayakumar S	https://dblp.org/pid/17/1666	not accepted	no route	0
 Vivek Kumar	https://dblp.org/pid/82/2381-6	rejected	different ORCID 0000-0001-5801-9474	0

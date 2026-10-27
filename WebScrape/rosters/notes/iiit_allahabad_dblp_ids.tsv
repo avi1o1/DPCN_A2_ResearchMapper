@@ -1,13 +1,11 @@
 roster_name	dblp_person	decision	route_or_reason	verified_doi_overlap
 Srijit Bhattacharjee	https://dblp.org/pid/364/5562	not accepted	no route	1
 Savitri Joshi	https://dblp.org/pid/201/9597	not accepted	no route	1
-Pramod Kumar	https://dblp.org/pid/21/6302	rejected	overlap 1 < 5% of 66 DBLP DOIs (namesake profile?)	1
-Pramod Kumar	https://dblp.org/pid/21/6302	not accepted	no route	0
+Pramod Kumar	https://dblp.org/pid/21/6302	not accepted	no route	1
 Upendra Kumar	https://dblp.org/pid/13/10963	not accepted	no route	0
 Seema Kushwaha	https://dblp.org/pid/260/9658	not accepted	no route	0
 Tapobrata Lahiri	https://dblp.org/pid/86/1859	accepted	R3 verified	2
-Ashutosh Mishra	https://dblp.org/pid/59/6930	rejected	overlap 1 < 5% of 83 DBLP DOIs (namesake profile?)	1
-Ashutosh Mishra	https://dblp.org/pid/59/6930	not accepted	no route	0
+Ashutosh Mishra	https://dblp.org/pid/59/6930	not accepted	no route	1
 Nidhi Mishra	https://dblp.org/pid/153/5490	not accepted	no route	0
 Amit Prabhakar	https://dblp.org/pid/422/3675	not accepted	no route	0
 Ratan K Saha	https://dblp.org/pid/255/1919	not accepted	no route	0
@@ -53,8 +51,7 @@ Manish Kumar	https://dblp.org/pid/35/4332	rejected	overlap 1 < 5% of 173 DBLP DO
 Manish Kumar	https://dblp.org/pid/35/4332-1	accepted	R2 aff	17
 Soumyadev Maity	https://dblp.org/pid/12/11240	accepted	R1 orcid	11
 Nabajyoti Mazumdar	https://dblp.org/pid/204/0417	accepted	R3 verified	8
-Gora Chand Nandi	https://dblp.org/pid/87/1587	rejected	overlap 1 < 5% of 116 DBLP DOIs (namesake profile?)	1
-Gora Chand Nandi	https://dblp.org/pid/87/1587	accepted	R2 aff	0
+Gora Chand Nandi	https://dblp.org/pid/87/1587	accepted	R2 aff	1
 Muneendra Ojha	https://dblp.org/pid/117/9135	accepted	R1 orcid	3
 Triloki Pant	https://dblp.org/pid/251/3508	accepted	R3 verified	4
 K M Pooja	https://dblp.org/pid/218/8490	not accepted	no route	0
@@ -69,13 +66,11 @@ Uma Shanker Tiwary	https://dblp.org/pid/55/6437	accepted	R1 orcid	6
 Abhishek Vaish	https://dblp.org/pid/94/10392	not accepted	no route	1
 S. Venkatesan	https://dblp.org/pid/43/5587-2	accepted	R3 verified	10
 Shekhar Verma	https://dblp.org/pid/39/2285	accepted	R3 verified	13
-Om Prakash Vyas	https://dblp.org/pid/35/1403	rejected	overlap 3 < 5% of 92 DBLP DOIs (namesake profile?)	3
-Om Prakash Vyas	https://dblp.org/pid/35/1403	accepted	R2 aff	0
+Om Prakash Vyas	https://dblp.org/pid/35/1403	accepted	R2 aff	3
 Ranjana Vyas	https://dblp.org/pid/29/2959	accepted	R3 verified	6
 Sudipta Das	https://dblp.org/pid/06/9060	not accepted	no route	0
 Utkarsh Goel	https://dblp.org/pid/58/10394	accepted	R3 verified	2
-Shailendra Kumar	https://dblp.org/pid/97/7798	rejected	overlap 1 < 5% of 70 DBLP DOIs (namesake profile?)	1
-Shailendra Kumar	https://dblp.org/pid/97/7798	not accepted	no route	0
+Shailendra Kumar	https://dblp.org/pid/97/7798	not accepted	no route	1
 Saurabh Mishra	https://dblp.org/pid/34/8757	not accepted	no route	0
 Madhvendra Misra	https://dblp.org/pid/53/8146	accepted	R3 verified	2
 Pragya Singh	https://dblp.org/pid/311/0003	not accepted	no route	1
@@ -99,17 +94,14 @@ Rajesh Kumar	https://dblp.org/pid/172/1447;https://dblp.org/pid/30/5688-1;https:
 B. R. Singh	https://dblp.org/pid/139/8940	not accepted	no route	0
 Somenath Biswas	https://dblp.org/pid/b/SomenathBiswas	not accepted	no route	0
 Amrita Chaturvedi	https://dblp.org/pid/136/8375	not accepted	no route	0
-Amit Kumar Dhar	https://dblp.org/pid/48/11471	rejected	overlap 1 < 5% of 31 DBLP DOIs (namesake profile?)	1
-Amit Kumar Dhar	https://dblp.org/pid/160/2315;https://dblp.org/pid/48/11471	not accepted	no route	0
+Amit Kumar Dhar	https://dblp.org/pid/160/2315;https://dblp.org/pid/48/11471	not accepted	no route	1
 Kokila Jagadeesh	https://dblp.org/pid/237/4239	not accepted	no route	0
 Rahul Kala	https://dblp.org/pid/29/5028	accepted	R3 verified	11
 Ratna Sanyal	https://dblp.org/pid/55/3197	not accepted	no route	0
 Sudip Sanyal	https://dblp.org/pid/08/6183	not accepted	no route	0
-Jagpreet Singh	https://dblp.org/pid/52/8395	rejected	overlap 1 < 5% of 27 DBLP DOIs (namesake profile?)	1
-Jagpreet Singh	https://dblp.org/pid/52/8395	not accepted	no route	0
+Jagpreet Singh	https://dblp.org/pid/52/8395	not accepted	no route	1
 Rishi Ranjan Singh	https://dblp.org/pid/129/1674;https://dblp.org/pid/168/6986	not accepted	no route	0
 Shirshu Varma	https://dblp.org/pid/04/7532	accepted	R3 verified	4
 Hemant Kumar	https://dblp.org/pid/63/5736	not accepted	no route	0
-P. Nagabhushan	https://dblp.org/pid/51/66	rejected	overlap 6 < 5% of 136 DBLP DOIs (namesake profile?)	6
-P. Nagabhushan	https://dblp.org/pid/51/66	not accepted	no route	0
+P. Nagabhushan	https://dblp.org/pid/51/66	accepted	R3 verified	6
 Sudharsan Parthasarathy	https://dblp.org/pid/180/5841	not accepted	no route	0
