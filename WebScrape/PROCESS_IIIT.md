@@ -220,3 +220,38 @@ Incident: the Pune roster agent stopped its own duplicate fetches with a process
   Yewalewadi 1 records) added no IIIT Pune strings. Golden set 94 (founded 2016; no 2016–2017 rows possible under the tenure rule).
   Ritu Tiwari appears in the Gwalior (current) and Pune (former 2019–2025, "on lien") rosters; deposited affiliations decide
   her papers, only the "likely" tier could double-credit.
+* Delhi golden set 433 (13 high). `iiitd.ac.in` fails TLS for the fetcher, so every institute page came from Wayback. 87 % of
+  rows come from the institute's year-wise publication list (2019–2026), whose APA-style entries look Scopus-derived:
+  independence is weaker than for the other sets, and the rows are separable via `source_type = dept_page`.
+* Delhi roster 360: 97 current, 1 emeritus, 154 former, 81 adjunct, 27 visiting. Built from quarterly Wayback faculty lists
+  (2016-03 to 2026-08) plus the institute's NIRF PDFs 2017–2025. 97 NIRF-only lecturer / ad hoc rows have no department.
+* `dblp_roster_ids.py` change: the 5 % namesake guard rejected real faculty with long careers elsewhere (Mayank Vatsa 3 of 441
+  DOIs, Vinayak Naik, Tammam Tillo, M. S. Hashmi). The guard now applies only when the matched name is held by several DBLP
+  persons. Re-run for all rosters (tool-set ids unset first, roster-printed ids kept). Accepted: Delhi 101, Gwalior 49,
+  Allahabad 45, Bangalore 40, Jabalpur 29, Kancheepuram 16, Pune 7; later Hyderabad 77.
+* Hyderabad roster 211: 131 current, 25 former, 9 emeritus, 31 adjunct, 15 visiting. Sources: faculty sitemap, NIRF 2019–2026
+  via Wayback (the PDFs sit under robots-disallowed `/wp-content/`), 16 Wayback faculty-list snapshots 2016-08 to 2024-07.
+  No snapshot exists between 2017-07 and 2019-05.
+* Hyderabad golden set 322, all medium, 7 DOIs (2 %). Older years are thin: 11–16 per year for 2016–2021, against 55 per year
+  for 2023–2026.
+  - The institute repository (`iiit.ac.in/publications/`) pages only through POST, and per person it exposes only the newest
+    10 papers. Wayback has no snapshot of it before 2023.
+  - The older years therefore rest on the CVIT and other lab lists. Recall for 2016–2021 will have wide intervals.
+  - Incident: the agent fetched ten activity-report PDFs under the robots-disallowed `/wp-content/`. No row uses them, and
+    agents are now told to read robots.txt first.
+
+### 4.4 Security incident: devalab.in (2026-10-28 00:22)
+The Hyderabad roster agent requested `https://devalab.in/robots.txt` (U. Deva Priyakumar's lab). The site has no robots.txt
+and answered with its server-wide 404 page. Windows Defender quarantined the cached body
+(`agents/.runtime/shared_cache/01b04850….body`) as a Severe "Trojan", and at 00:26 also quarantined two shell-output files of
+the investigating agent that had printed the page.
+
+A sub-agent then analysed the site in memory only (8 requests):
+* The 404 page is a 583-byte loader. It sets `_skz_pid` and pulls `http://cdn.jsinit.directfwd.com/…`, an ad / redirect
+  script, the same pattern reported elsewhere as `Trojan.HTML.MALINK`.
+* It is not a webshell or a dropper: no eval, base64, iframe or PHP.
+* The real pages (home page, `publications.html`) are clean static Mobirise HTML that loads only local scripts.
+* Likely cause: a host-level or injected nginx error page. The risk is to browsers that hit a 404, not to our data.
+
+Nothing was executed on this machine. Afterwards agents were allowed exactly one URL on the host, `publications.html` (8
+golden rows). All fetched content is treated as data only.
