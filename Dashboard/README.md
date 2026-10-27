@@ -22,6 +22,10 @@ rules in section 3b. Open `Dashboard/site/index.html` in a browser. It needs int
 | `site/index.html` | the page: layout, light/dark mode, all charts (ECharts 5.5.0 from cdnjs) and interactions |
 | `site/data.js` | all the numbers the page shows, built from `Analysis/results` (+ titles and network edges from `Enrichment/out`) |
 | `site/build_data.py` | rebuilds `data.js`: `python Dashboard/site/build_data.py`, after `Analysis/scripts/run_all.sh` if stats change |
+| `site/explorer.html` | **profile explorer** (27 Oct, modelled on the Power BI dashboard of J. F. F. Mendes's research page): both IITs / one IIT / a department / a faculty member and a year range; KPI tiles (papers, citations, citations per paper, cited %, h, i10, Q1, most cited, average FWCI, single-author equivalent, first / last author, co-authors, partner institutions, years active), per-year charts, type mix, ego co-author network, researcher scatter, top journals / topics / partner institutions, most-cited papers, paper search, compare two faculty. Linked from the dashboard menu. |
+| `site/profiles.js` | the explorer's data (12.9 MB, loaded only by `explorer.html`): one row per paper of the analysis set + each faculty member's papers with their author position |
+| `site/build_profiles.py` | rebuilds `profiles.js` offline (needs `Analysis/cache/oa_fwci.json` and `oa_counts_by_year.json` from `fetch_openalex_extra.py`). Stops unless every faculty member's papers, citations, h, i10 and Q1 equal `results/faculty.csv`. |
+| `site/check_explorer.py` | second check in a real browser (Edge via Playwright): the page's own code for all 1,410 faculty vs `faculty.csv` and 64 departments vs `departments.csv`, console errors, screenshots. Last run 27 Oct: 0 mismatches, 0 errors. |
 
 **Done:** all 11 required panels plus the Indian-links, communities, null-model and partner panels. A
 Both / Kharagpur / Roorkee filter for the whole page, light/dark toggle, interactive citation and faculty networks

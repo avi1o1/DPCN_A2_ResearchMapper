@@ -7,6 +7,9 @@ offline (only missing ids are fetched).
   oa_paper_source.json    work id -> source id, read from the cached Stage A works (Enrichment/cache/a*_works_*.jsonl)
   oa_authors.json         faculty roster id -> OpenAlex author id (the id most often attached to that person's matched
                           papers, by name) and that author's all-career h-index, i10-index, works and citations
+  oa_fwci.json            work id -> {"fwci": field-weighted citation impact, "pct": citation-normalised percentile}
+                          (OpenAlex's own values at fetch time; FWCI = citations / expected citations for papers of the same
+                          field, year and type; used for the dashboard's "Average FWCI" tile)
 Cost: one credit per 100 ids (about 600 credits in total). Key: OPENALEX_API_KEY or OPENALEX_KEY_FILE (see oa.py).
 usage: python fetch_openalex_extra.py"""
 import os, json, glob, collections as C
@@ -18,6 +21,7 @@ F_CBY = os.path.join(CACHE, "oa_counts_by_year.json")
 F_SRC = os.path.join(CACHE, "oa_sources.json")
 F_PSRC = os.path.join(CACHE, "oa_paper_source.json")
 F_AUT = os.path.join(CACHE, "oa_authors.json")
+F_FWCI = os.path.join(CACHE, "oa_fwci.json")
 
 
 def load(fn):
@@ -96,6 +100,13 @@ def main():
                   lambda x: cby.__setitem__(x["id"].rsplit("/", 1)[-1],
                                             {str(c["year"]): c["cited_by_count"] for c in x.get("counts_by_year") or []}),
                   cby, F_CBY, "works counts_by_year")
+
+    fw = load(F_FWCI)
+    batched_fetch("/works", works, "id,fwci,citation_normalized_percentile",
+                  lambda x: fw.__setitem__(x["id"].rsplit("/", 1)[-1], {
+                      "fwci": x.get("fwci"),
+                      "pct": (x.get("citation_normalized_percentile") or {}).get("value")}),
+                  fw, F_FWCI, "works fwci")
 
     psrc = paper_sources(works)
     srcs = {s for w, s in psrc.items() if s and w in works}

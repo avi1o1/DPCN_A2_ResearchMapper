@@ -4,6 +4,8 @@ One line per task. Effort: (S) a few hours, (M) a day or two, (L) several days. 
 analyses are in [docs/research_directions.md](docs/research_directions.md) (section numbers in brackets).
 Status: [x] done, [~] in progress (note says what is left), [ ] not started. Work order agreed on 26 Oct:
 5 (setup) → 1 → 2 (Katz/HITS → early connectors → hypergraph → simplicial closure) → 3 → 4.
+27 Oct: the v2 all-institutes scrape is paused (state in the v2 clone's WebScrape/PROCESS_OTHER.md §7); focus is section
+6 (Mendes-style dashboard), then the open items of section 2.
 
 ## Progress log (final, checked numbers; all on the real data after `git lfs pull`)
 - 26 Oct, checks done on everything below: second independent count, deterministic re-run (identical files),
@@ -49,6 +51,25 @@ Status: [x] done, [~] in progress (note says what is left), [ ] not started. Wor
   holds papers with >= 1 linked faculty and <= 50 authors, so its > 10-author count is 696, against 979 distinct in
   `group3_data.csv` (259 no faculty, 23 over 50 authors, 1 other); stated in the report.
 - `run_all.sh` runs the four new scripts (before the roster step, which needs the lost Wayback cache).
+
+- 27 Oct: Mendes-style profile explorer started (section 6). Its data builder (`Dashboard/site/build_profiles.py`)
+  recomputes papers, citations, h-index, i10-index and Q1 papers for all 1,410 faculty and refuses to write unless every
+  value equals `results/faculty.csv` — 0 mismatches. It found 8 DOIs that occur twice in the KGP analysis set (online-
+  first year and issue year, different citation counts); checked on Crossref: in all 8 the later record has Crossref's
+  issued year and citation count, and it is the record `faculty.csv` already keeps. OpenAlex FWCI fetched for all 45,986
+  works (461 credits).
+
+## 6. Mendes-style dashboard (prof's request, 27 Oct: "present data like jfmendes-sciart.github.io")
+Reference: the research page's summary tiles, ego co-author network and the 12-page Power BI report (screenshots in
+`rm_v2_work/mendes/`). Our version: `Dashboard/site/explorer.html`, data `profiles.js` (built offline, self-checked).
+- [x] (S) Data builder with the same paper set and definitions as the statistics; FWCI fetch; self-check vs faculty.csv.
+- [~] (M) Explorer page: scope = both IITs / one IIT / department / faculty member, year range; KPI tiles (papers,
+  citations, citations per paper, cited %, h, i10, Q1, most-cited, avg FWCI, single-author equivalent, first / last
+  author, co-authors, partner institutions, years active); papers / citations per year, citations per paper by year,
+  quartile per year, type and quartile donuts; top journals, topics, partner institutions (papers, citations, FWCI),
+  most-cited papers; ego co-author network (top 10 / 20 / all); researcher scatter; paper search card; compare two.
+- [ ] (S) Second-way check of the explorer's numbers in the browser against `faculty.csv` / `departments.csv`.
+- [ ] (S) Link from the main dashboard; README note. Not possible with our data: Scopus topic prominence, CiteScore.
 
 ## Already done
 - Data, the four CSV files, report (rephrased, roll numbers, dashboard link), dashboard on GitHub Pages, data on the TAs' Drive.
