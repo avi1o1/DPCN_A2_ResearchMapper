@@ -1,0 +1,170 @@
+{
+ "csir_cecri": {
+  "NAME": "CSIR-Central Electrochemical Research Institute (CSIR-CECRI), Karaikudi",
+  "CAMPUS_HINT": " — the Karaikudi campus, the CSIR-CECRI Chennai unit (CSIR Madras Complex, Taramani) and any other CECRI unit whose scientists CECRI lists",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff — Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's CECRI division or group as the lab names it; Chennai-unit scientists without a division get `CSIR-CECRI Chennai Unit`.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the CSIR-CECRI annual reports (staff lists, joinings, superannuations) and the lab's own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as CSIR-CECRI. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "cecri_author"
+ },
+ "csir_ncl": {
+  "NAME": "CSIR-National Chemical Laboratory (CSIR-NCL), Pune",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "400",
+  "AUTHCOL": "ncl_author"
+ },
+ "csir_iict": {
+  "NAME": "CSIR-Indian Institute of Chemical Technology (CSIR-IICT), Hyderabad",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "400",
+  "AUTHCOL": "iict_author"
+ },
+ "csir_cftri": {
+  "NAME": "CSIR-Central Food Technological Research Institute (CSIR-CFTRI), Mysuru",
+  "CAMPUS_HINT": " and its resource centres",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "cftri_author"
+ },
+ "csir_niist": {
+  "NAME": "CSIR-National Institute for Interdisciplinary Science and Technology (CSIR-NIIST), Thiruvananthapuram",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "niist_author"
+ },
+ "csir_nml": {
+  "NAME": "CSIR-National Metallurgical Laboratory (CSIR-NML), Jamshedpur",
+  "CAMPUS_HINT": " and its centres (e.g. the Madras Centre, Chennai)",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "nml_author"
+ },
+ "csir_npl": {
+  "NAME": "CSIR-National Physical Laboratory (CSIR-NPL), New Delhi",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "npl_author"
+ },
+ "csir_csio": {
+  "NAME": "CSIR-Central Scientific Instruments Organisation (CSIR-CSIO), Chandigarh",
+  "CAMPUS_HINT": " and its centres (e.g. the Chennai centre)",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "csio_author"
+ },
+ "csir_cgcri": {
+  "NAME": "CSIR-Central Glass and Ceramic Research Institute (CSIR-CGCRI), Kolkata",
+  "CAMPUS_HINT": " and its outstation centres",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "cgcri_author"
+ },
+ "csir_cmeri": {
+  "NAME": "CSIR-Central Mechanical Engineering Research Institute (CSIR-CMERI), Durgapur",
+  "CAMPUS_HINT": " and its centres",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "cmeri_author"
+ },
+ "csir_crri": {
+  "NAME": "CSIR-Central Road Research Institute (CSIR-CRRI), New Delhi",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "250",
+  "AUTHCOL": "crri_author"
+ },
+ "csir_cimfr": {
+  "NAME": "CSIR-Central Institute of Mining and Fuel Research (CSIR-CIMFR), Dhanbad",
+  "CAMPUS_HINT": " and its regional centres",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "cimfr_author"
+ },
+ "csir_cbri": {
+  "NAME": "CSIR-Central Building Research Institute (CSIR-CBRI), Roorkee",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "250",
+  "AUTHCOL": "cbri_author"
+ },
+ "csir_ceeri": {
+  "NAME": "CSIR-Central Electronics Engineering Research Institute (CSIR-CEERI), Pilani",
+  "CAMPUS_HINT": " and its centres (e.g. Chennai, Jaipur)",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "ceeri_author"
+ },
+ "csir_serc": {
+  "NAME": "CSIR-Structural Engineering Research Centre (CSIR-SERC), Chennai",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "250",
+  "AUTHCOL": "serc_author"
+ },
+ "csir_ampri": {
+  "NAME": "CSIR-Advanced Materials and Processes Research Institute (CSIR-AMPRI), Bhopal",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "250",
+  "AUTHCOL": "ampri_author"
+ },
+ "csir_cdri": {
+  "NAME": "CSIR-Central Drug Research Institute (CSIR-CDRI), Lucknow",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "cdri_author"
+ },
+ "csir_ccmb": {
+  "NAME": "CSIR-Centre for Cellular and Molecular Biology (CSIR-CCMB), Hyderabad",
+  "CAMPUS_HINT": " and its Laboratory for the Conservation of Endangered Species (LaCONES)",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "ccmb_author"
+ },
+ "csir_igib": {
+  "NAME": "CSIR-Institute of Genomics and Integrative Biology (CSIR-IGIB), New Delhi",
+  "CAMPUS_HINT": " (both of its Delhi campuses)",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "igib_author"
+ },
+ "csir_imtech": {
+  "NAME": "CSIR-Institute of Microbial Technology (CSIR-IMTECH), Chandigarh",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a CSIR lab** (handoff §6): the scientific staff - Scientist, Senior Scientist, Principal Scientist, Senior Principal Scientist, Chief Scientist (grades Sc-B to Sc-H / Scientist B-H), Outstanding / Distinguished Scientist, and the Director. Exclude technical officers and assistants, project staff, research associates, postdocs, students and administrative staff. CSIR emeritus scientists -> `emeritus`; fellows hosted by the lab (Ramanujan, INSPIRE Faculty, CSIR Young Scientist) -> `visiting` with the fellowship in `designation`.\n* `department` = the scientist's division or group as the lab names it; scientists of an outstation centre / unit without a division get the centre's name.\n* CSIR labs are not in NIRF's university tables: wherever this brief says NIRF, use the lab's annual reports (staff lists, joinings, superannuations) and its own scientist pages instead, and say so in the notes. AcSIR faculty listings are not separate membership evidence (AcSIR faculty are the lab's own scientists).\n* This brief was written for IITs: read 'this IIT' as the lab. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "imtech_author"
+ },
+ "dae_barc": {
+  "NAME": "Bhabha Atomic Research Centre (BARC), Mumbai",
+  "CAMPUS_HINT": " (Trombay, and any other BARC facility the notes decide to include, with the reason)",
+  "SPECIAL": "* **Who counts as faculty at a DAE unit** (handoff §6): Scientific Officers (SO/C to SO/H+, Outstanding Scientist, Distinguished Scientist) and the Director / unit heads. Exclude technical officers, scientific assistants, project staff, research scholars and administrative staff. HBNI faculty listings are not separate membership evidence (HBNI faculty are the unit's own scientists). Raja Ramanna / DAE fellows hosted by the unit -> `visiting`.\n* `department` = the scientist's division / group / section as the unit names it.\n* DAE units are not in NIRF's university tables: wherever this brief says NIRF, use the unit's annual reports, newsletters and its own staff pages, and say so in the notes.\n* This brief was written for IITs: read 'this IIT' as the unit. The mentor-IIT rules do not apply.",
+  "TARGET": "400",
+  "AUTHCOL": "barc_author"
+ },
+ "dae_igcar": {
+  "NAME": "Indira Gandhi Centre for Atomic Research (IGCAR), Kalpakkam",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a DAE unit** (handoff §6): Scientific Officers (SO/C to SO/H+, Outstanding Scientist, Distinguished Scientist) and the Director / unit heads. Exclude technical officers, scientific assistants, project staff, research scholars and administrative staff. HBNI faculty listings are not separate membership evidence (HBNI faculty are the unit's own scientists). Raja Ramanna / DAE fellows hosted by the unit -> `visiting`.\n* `department` = the scientist's division / group / section as the unit names it.\n* DAE units are not in NIRF's university tables: wherever this brief says NIRF, use the unit's annual reports, newsletters and its own staff pages, and say so in the notes.\n* This brief was written for IITs: read 'this IIT' as the unit. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "igcar_author"
+ },
+ "dae_rrcat": {
+  "NAME": "Raja Ramanna Centre for Advanced Technology (RRCAT), Indore",
+  "CAMPUS_HINT": "",
+  "SPECIAL": "* **Who counts as faculty at a DAE unit** (handoff §6): Scientific Officers (SO/C to SO/H+, Outstanding Scientist, Distinguished Scientist) and the Director / unit heads. Exclude technical officers, scientific assistants, project staff, research scholars and administrative staff. HBNI faculty listings are not separate membership evidence (HBNI faculty are the unit's own scientists). Raja Ramanna / DAE fellows hosted by the unit -> `visiting`.\n* `department` = the scientist's division / group / section as the unit names it.\n* DAE units are not in NIRF's university tables: wherever this brief says NIRF, use the unit's annual reports, newsletters and its own staff pages, and say so in the notes.\n* This brief was written for IITs: read 'this IIT' as the unit. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "rrcat_author"
+ },
+ "dae_niser": {
+  "NAME": "National Institute of Science Education and Research (NISER), Bhubaneswar",
+  "CAMPUS_HINT": " (the Jatni campus and the earlier transit campus)",
+  "SPECIAL": "* NISER is a teaching institute: faculty = its schools' faculty (as for an IIT); HBNI is its degree-granting university and is not separate membership evidence.\n* This brief was written for IITs: read 'this IIT' as NISER. The mentor-IIT rules do not apply.",
+  "TARGET": "300",
+  "AUTHCOL": "niser_author"
+ }
+}
