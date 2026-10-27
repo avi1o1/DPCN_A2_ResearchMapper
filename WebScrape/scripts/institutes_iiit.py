@@ -152,12 +152,17 @@ EXT = {
     "iiit_pune": dict(
         name="Indian Institute of Information Technology Pune",
         ror="https://ror.org/01f8qyw75", grid="grid.503420.0", short="Pune",
-        crossref=["Pune", "IIITP", "411041", "411048", "412109", "Ambegaon"], crossref_broad=[],
+        # campus history (roster notes, 2026-10-27): transit Sadumbare, Talegaon-Chakan Road 412109 (2016-2018); Kondhwa Annexe,
+        # Yewalewadi 411048 (by 2019-2020); Ambegaon Budruk 411041 (by 2023-2025); permanent Nanoli-Tarf Chakan, Talegaon 410507
+        # (from 2025). Mentor institute COEP.
+        crossref=["Pune", "IIITP", "411041", "411048", "412109", "410507", "Ambegaon", "Talegaon", "Sadumbare", "Yewalewadi"],
+        crossref_broad=[],
         # every candidate PIN / locality is dominated by other organisations (review 2026-10-27): 411041 Narhe (NBNSSOE, JSPM,
         # SKNCOE), 411048 Kondhwa (VIIT, NIBM, PCCM), Ambegaon (SKNMC), Nanoli (CFSL) -> 'shared': without an IIIT mention a
         # string there is not about IIIT Pune; no campus anchor except the e-mail domain
         anchor=r"\biiitp\.ac\.in\b", city=None,
-        shared=r"\bpune\b|\b411041\b|\b411048\b|\b412109\b|\bambegaon\b|\bnanoli\b",
+        shared=r"\bpune\b|\b41104[18]\b|\b412109\b|\b410507\b|\bambegaon\b|\bnanoli\b|\btalegaon\b|\bsadumbare\b|\byewalewadi\b|"
+               r"\bkondhwa\b",
         units=r"\biiit\s*-?\s*pune\b|\biiitpune\b|\biiitp\b",
         # "International Institute of Information Technology" in Pune is the private I2IT (Hinjawadi): it is NOT a mention of
         # this institute's type, so that ORCID / DBLP person matching (city AND mention) does not accept I2IT people
