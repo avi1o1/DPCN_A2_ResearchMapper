@@ -650,3 +650,244 @@ DOI); v1 for comparison 67–74 % / 81–83 %.
   at the interruption), 378 medium / 20 high, no IIIT-H papers (one arXiv candidate rejected for that). Seven units have 1–11 rows
   (Physics, Chemical, MSME, Design, BME, AI, Biotech): per-unit recall is reported as unreliable there. ~17 rows with broken
   title/venue parsing were dropped. News share 0 (institute news lists no papers).
+* IIT (BHU) golden set accepted as a weak benchmark (2026-10-27): 365 papers (target 550), 100 % faculty profile pages (~79
+  people, regex-parsed), all `medium`, years 2016–2025. Uneven units: Civil, Mechanical, Mining, Biochemical, Humanities
+  over-represented; Computer Science 6 rows, Electrical 1, Electronics / Metallurgy / Physical AI thin or empty. BHU recall is
+  reported only for units with enough rows and labelled lower-confidence; a supplement from lab pages / arXiv / annual reports
+  is listed as open work (like Jodhpur's, which is under way).
+* IIT Goa roster accepted (2026-10-27): 113 people (69 current, 13 former, 25 visiting incl. 14 IIT Bombay mentor faculty, 6
+  adjunct). Gaps: NIRF 2019–2024 PDFs were error pages (only 2025/2026 usable), two annual-report PDFs truncated, no 2022–2024
+  archived snapshots parsed → regular faculty who left 2021–2024 and are not in NIRF 2025/26 may be missing; former-faculty ends
+  are lower bounds. Two people still on the live site were marked former from NIRF leave dates; one Dean-listed person kept as an
+  IIT Bombay mentor (ambiguous).
+* IIT Kanpur roster accepted (2026-10-28): 858 people (607 current, 127 former, 94 visiting, 23 adjunct, 7 emeritus); 382 ORCIDs
+  from the offline index; size matches NIRF 2026 (615 working vs 607 current + ad hoc as visiting/adjunct). An initials-matching bug
+  (NIRF names attached to the wrong page names) was found and fixed with a strict compatibility check; 5 true duplicates merged.
+  Gaps: 115 rows have no department (NIRF-only people); leavers of 2016–2020 may be missing (archive covers 2016–2021, NIRF from
+  2021); 12 ORCID cases with several qualifying iDs left blank; four same-name pairs kept as different people on join dates only.
+* IIT Madras roster accepted (2026-10-28): 996 people (670 current, 60 visiting, 266 former), 16 departments + 259 NIRF-only rows
+  without a department; 337 ORCIDs from the offline index (73 ambiguous left blank, department fit not checked). Gaps: no Zanzibar
+  campus (site unreachable, not in NIRF), no archived faculty-page pass so former-faculty last years are NIRF lower bounds, no
+  emeritus/adjunct rows, Engineering Design (12) and CSE (37) department lists look low against NIRF, current count confirmed by
+  NIRF 2026 only.
+
+### 15.8 First complete v2 results, pipelined run (2026-10-28)
+| Institute | Records | Verified | Golden n | Recall | DOI recall |
+|---|---|---|---|---|---|
+| IIT Palakkad (no verify stage) | 2,115 | 1,331 | 308 | 67.2 % | 83.3 % |
+| IIT Goa | 1,016 | 730 | 287 | 69.0 % (70.2 % w/o 5 refuted) | 83.8 % (n=37) |
+| IIT Tirupati | 1,743 | 1,265 | 313 | 55.9 % (56.6 % w/o 4 refuted) | 63.6 % (n=44) |
+Tirupati diagnosis: of 138 misses, 104 were never discovered, 28 sit in the unconfirmed-candidates file, 4 are refuted by
+publisher affiliations, 2 were dropped after discovery. Recall is 0 % for 2016–2017 (7 papers) and 28 % for 2018, 72 % for 2023;
+annual-report rows 45 %, conferences 56 %, books 0 % (8). So the shortfall is mostly early years and sources the affiliation
+channels do not reach, not a classifier effect. Not yet investigated: whether early-year roster tenure (joining years) or a
+Crossref author-name search gap explains the undiscovered early papers.
+* IIT Madras golden set, first pass (2026-10-28): 230 papers against a 650 target, **not accepted as the benchmark**: 69 %
+  annual-report rows from only two usable reports (2017-18, 2019-20), so 2017 and 2019 hold ~75 % of rows and other years are
+  thin; no department/lab pages; 3 news rows. A supplement agent adds faculty homepages, lab and department pages, and the
+  years the first pass misses. Madras recall is reported only after it.
+* IIT Bhubaneswar roster accepted (2026-10-28): 312 people (226 current, 44 former, 26 visiting, 15 adjunct, 1 emeritus), 7 schools;
+  216 of 230 live-list entries confirmed in NIRF 2026; 143 ORCIDs (142 offline index, 1 profile page). Decision for the reader: 22
+  NIRF people with designation "Other" (Adhoc/Contractual) were excluded as guest-lecturer-like, against the brief's "include
+  NIRF-only people"; names are in the notes. Gaps: no archived capture after 2023-12, no annual reports, NIRF before 2023 unavailable,
+  no per-school former-faculty pass; 2016-only people have uncertain last years.
+* IIT Hyderabad roster accepted (2026-10-28): 558 people (358 current, 153 adjunct, 19 visiting, 26 former, 2 emeritus), 18 units;
+  330 of 358 current confirmed in NIRF 2026; 228 ORCIDs (offline index). Gaps: no archived faculty list for 2018-19 (dynamic page),
+  no adjunct list for 2017–2019, 8 people dropped (all NIRF leaving dates before 2016), so the former count (26) is low and is a
+  floor. A name change (Pritha Bhattacharya = Pritha Chatterjee) is assumed. One IIIT-H person (P. Kumaraguru) is on IIT-H's own
+  adjunct list and kept as adjunct, flagged in the notes. The golden set (398) predates this roster and used its own NIRF tenure.
+* IIT Bhubaneswar golden set accepted with a flagged source (2026-10-28): 450 papers, 29 high / 421 medium, 2016–2026 (about 37 per
+  year to 2023, 46–53 for 2024–2026, because lists run newest-first). Source mix: faculty pages 44 %, Central Library publications
+  list 27 % (122 rows, stored as evidence_source `websearch`), department pages 12 %, annual reports 11 %, arXiv 6 %, news 0.2 %.
+  The library list (library.iitbbs.ac.in/publications.php) is an institute-hosted list, which the brief allows, but its feed is not
+  documented; if it is Scopus- or IRINS-backed it would breach the independence rule, so the 122 rows are separable by their
+  `websearch` tag and recall is also computed without them. They over-represent HSSM, MMME and EOCS.
+* IIT Madras golden set accepted as partial (2026-10-28): 501 papers (target 650), 25 high / 476 medium, 2016–2026 (2017 and 2019
+  now 34 % instead of ~75 %). Source mix ≈ annual reports 32 %, faculty pages 32 %, department pages 32 %, arXiv 4 %, news 0.6 %
+  (brief: 50/15/15/10/10), DOI printed on 35 %. Sampling bent on purpose: 2017/2019 entries excluded from the new rows and
+  department pages capped per page, to lift thin years. Chemistry pages are behind a CAPTCHA (not bypassed), Biotech lists none,
+  WSAI shows only the first three authors. Parse risks (comma-split titles on two faculty pages; initial-only name matches) are in
+  the notes. Two Applied Mechanics labels merged here.
+* IIT Kanpur golden set accepted with caveats (2026-10-28): 432 papers (target 600), 37 high / 395 medium, 22 units, 204 authors,
+  2016–2026. Source mix far from the brief: faculty pages 66 %, department pages 24 %, arXiv 8 %, annual reports 1.4 % (the
+  annual reports contain no publication lists), news 0.7 %. DOI printed on ~21 %. Thin units: Biological Sciences & Bioengineering 2,
+  Photonics 2, Earth Sciences 1, Sustainable Energy 1; 2024–25 over-represented (EE pages). One over-cap author trimmed to 8.
+  The original search strings were lost with the interrupted agent.
+* IIT Patna golden set accepted as a weak benchmark (2026-10-28): 391 papers (target 450), 17 high / 374 medium, all ten academic
+  units (CSE 69 … Metallurgical 21), years 2016–2026 (thin 2016–17 and 2026). Source mix: faculty-page fields 89 % (the
+  per-department faculty profile fields are labelled faculty_page, not dept_page), annual report 2017-18 only (24 rows), arXiv 17,
+  department pages 0, news 0 (no dated lists or coverage found). No roster, so joining years are upper bounds from personal pages
+  or the 2016 archived list; three faculty with unresolved tenure excluded. Only ~21 % print a DOI.
+* IIT Guwahati golden set accepted with caveats (2026-10-28): 576 papers, 46 high / 530 medium, 189 authors, 16 units, 2016–2026
+  (21–93 per year), DOI printed on 25 %. Source mix: faculty pages 66.7 %, annual reports 12.5 % (only 2016–2019 list papers),
+  department pages 12 %, arXiv 8 %, news 0.9 %. The library PDFs at iitg.ac.in/lib/IITCouncil/* were excluded because they are a
+  Scopus export (independence rule); they would have covered 2023–2026 and can be admitted only by an explicit decision. The roster
+  lacks joining years for many faculty, so the tenure rule drops their papers. 2017–18 and Physics (half the arXiv rows) are heavy.
+* IIT Gandhinagar roster accepted (2026-10-28): 404 people (165 current, 53 former, 163 visiting, 23 adjunct), 18 units; 136 ORCIDs
+  (offline index). Everything comes from archived pages (the live site returns 403 to the fetcher); joining years (122) are first
+  archived appearance, i.e. upper bounds; last years may be off by up to a year; people who joined and left between the
+  semi-annual snapshots are missed; several people last seen in 2025 are marked former only because they are absent from the
+  March 2026 list. The NIRF file cached is a count-only summary (171 faculty), so current rows (165) cannot be NIRF-confirmed.
+* IIT Jodhpur roster accepted (2026-10-28): 443 people (324 current, 74 former, 44 adjunct, 1 visiting), 17 units, 52 without a
+  department; 235 ORCIDs (offline index); 267 NIRF-2026 distinct people all present in the current set, 57 current rows are on the
+  website lists but not in NIRF (probably recent joiners). Gaps: the old-site faculty endpoints hold no names, so former faculty
+  come from NIRF only and sciences / humanities / management leavers before ~2021 are missing; annual-report staff could not be
+  separated from faculty; NIRF name order (surname-first vs given-first) was kept as printed, so some former rows read
+  surname-first; two people named Jitendra Kumar are not separable; Ajay Agarwal's NIRF join 2021 vs annual-report tenure to 2024.
+* IIT Gandhinagar golden set accepted with caveats (2026-10-28): 349 papers (target 450), 22 high / 327 medium, all 13 units
+  (Earth Sciences 7 rows), 2016–2026 with 2018–2020 over-represented (66 / 90 / 53) and 2016 (4), 2017 (15) thin. Source mix:
+  faculty pages 65 %, annual reports 29 % (only 2018-19 and 2019-20 list papers), arXiv 6 %, department/lab pages and news 0
+  (archived news pages 404). DOIs printed on 31 %; annual-report DOIs whose text extraction had lost a character were blanked
+  rather than kept as printed. Roster joining years are upper bounds; blank = on the June 2016 page, treated as 2015. Papers listed
+  by physicists from earlier employers were dropped.
+* IIT Delhi roster accepted as PARTIAL (2026-10-28): 738 people (648 current, 51 former, 17 emeritus, 18 adjunct, 4 visiting), 24
+  units, 324 ORCIDs (offline index). The current count is ~185 (22 %) below NIRF 2025's 833 (NIRF 2021/22/23: 682/880/745), and no
+  row can be NIRF-confirmed (the NIRF PDFs hold counts only, no names). Only 5 joining years (retired faculty), so tenure-based
+  steps cannot use this roster. No former-faculty discovery for CSE, EE, Mechanical (the largest gap); no lists for CAS, CRDT, ETSC,
+  TRIPP, CARE, Bharti, SIT; Abu Dhabi, Sonipat and Jhajjar not covered. Consequence for the pipeline: the strict roster pass
+  cannot find papers by Delhi faculty missing from this roster, so Delhi recall is expected to be lower and must be read together
+  with this coverage figure.
+* IIT Jodhpur golden set accepted as a weak benchmark (2026-10-28): 192 papers (target 450; first pass 126 + supplement 66), 67
+  high / 125 medium. Source mix: arXiv 32 %, annual reports 32 %, department/lab pages 25 %, faculty pages 8 %, news 3 %. The
+  supplement came from Google-Sites lab and personal pages that exist mainly for recent hires, so 2021–2026 got all new rows and
+  2016–2020 only the first pass's annual-report rows (2016–2019). No Bioscience, Design, CETSD or Aerospace rows (only
+  forbidden IRINS-style portals surfaced). 14 supplement rows pass the tenure rule only because lists are newest-first; one author's
+  rows (Sarkar) were not checked against place of work; one name (Kothadia) is inferred from the roster. News titles were
+  recovered by web search, not from the news item. Jodhpur recall is small-sample (192) and skewed to recent years and to
+  Civil, Chemical, Materials; read it as indicative only.
+
+### 15.9 Working order: depth first (2026-10-28, user decision)
+Breadth-first ran too many agents and pipelines at once (three usage-limit stops, four arXiv passes sharing one host). From now on a
+few institutes are taken to the end (roster → golden → pipeline → recall/precision review → notes) before the next ones start.
+Wave 1 (inputs complete): Palakkad, Goa, Tirupati, Bombay, Hyderabad, Madras. Wave 2 (inputs complete, pipeline pending): Kanpur,
+Guwahati, Gandhinagar, Jodhpur, Bhubaneswar. Wave 3 (inputs unfinished): Delhi (golden), Patna, Indore, Mandi, BHU (rosters), then
+ISM, Bhilai, Jammu, Dharwad (rosters) and Indore, ISM (golden). Paused agents keep their saved work and are resumed one at a time.
+
+### 15.10 IIT Palakkad end-to-end result (2026-10-28)
+Pipeline run: 2,136 records (1,613 verified, 522 unverified-likely, 1 ambiguous), 505 further candidates in the unconfirmed file.
+Recall against the 308-paper golden set 69.5 % (69.9 % without 2 entries refuted by publisher affiliations); DOI recall 84.4 %.
+Precision audit (65 records, one agent, `v2/golden/precision_audit_iit_palakkad.csv`): verified 25/25 yes (100 %); unverified-likely
+11 yes / 3 no / 26 unknown (79 % on the 14 decidable rows; 26 unknown because Elsevier, IEEE, AIP, APS and SSRN pages are stubs or
+bot-challenged and were not bypassed — the figure is weak evidence). All three "no" rows had only `orcid_tenure` (± `roster_orcid`)
+as evidence: two are papers from before the person's move (ORCID employment dates too loose), one is a wrong person at NIT
+Rourkela. Rows with `roster_crossref_author` plus a printed affiliation were all yes. Open question, not acted on: whether
+`orcid_tenure`-only rows should leave the main file; to be decided after Goa and Tirupati are audited, on all three institutes.
+* IIT Delhi golden set accepted as a weak, skewed benchmark (2026-10-28): 213 papers (target 650), 21 high / 192 medium. Source mix:
+  faculty pages 80 %, department pages 10 %, arXiv 8 %, news 2 %, annual reports 0 (rti.iitd.ac.in fails TLS; archived copies 404 or
+  HTML wrappers). Covered: Mechanical, Chemistry, Textile, Physics (over-represented), a few EE / Energy / Applied Mechanics / Maths /
+  Chemical pages; Civil, Biological Sciences, Design, Management, HSS, Public Policy and most of the School of AI have no rows, CSE
+  and biomedical one each. Only people with a joining year on their own page are included (about half of the Mechanical, Chemistry
+  and Textile profiles excluded). 2016 has 34 rows, 2018 14, 2026 7. Delhi recall will be reported per covered department only, and
+  together with the roster's 22 % shortfall against NIRF; it is not an institute-wide figure.
+
+### 15.11 Precision audit, three IITs pooled (2026-10-28)
+Seeded samples of 25 verified + 40 unverified-likely records per institute, checked against the affiliation printed on the paper
+(Crossref, Europe PMC, publisher meta tags, open-access / arXiv PDFs; no bot challenge bypassed; Unpaywall was used by the Goa and
+Tirupati agent only to locate an open copy of a known DOI, not to discover records).
+
+| Institute | verified yes/no/unk | precision | likely yes/no/unk | precision (decidable rows) |
+|---|---|---|---|---|
+| Palakkad | 25 / 0 / 0 | 100 % | 11 / 3 / 26 | 79 % (n=14) |
+| Goa | 24 / 0 / 1 | 100 % | 12 / 5 / 23 | 71 % (n=17) |
+| Tirupati | 25 / 0 / 0 | 100 % | 11 / 1 / 28 | 92 % (n=12) |
+| pooled | 74 / 0 / 1 | 100 % | 34 / 9 / 77 | 79 % (n=43) |
+
+Of the 120 likely rows, 77 (64 %) could not be decided (Elsevier, IEEE, APS, SSRN, AIP pages blocked or bare), so the likely-tier
+figure is a weak estimate; the verified tier held on every institute. Failure types in the 9 "no" rows: papers printed at another
+institution before the person joined (4), namesakes (3), person printed elsewhere (2). By evidence (pooled, decidable rows only):
+roster_arxiv 16 yes / 2 no; roster_crossref_author alone 4 / 1; orcid_tenure alone 4 / 2; the combinations with orcid_tenure
+1–4 yes / 1 no. Samples of ≤ 6 rows per combination do not separate the channels reliably.
+Decision: **no change to the main/unconfirmed split.** Evidence for dropping `orcid_tenure`-only rows (4/6 yes) is too thin; the
+precision of the "likely" tier is reported as 79 % on the decidable rows with 64 % undecidable, the verified tier as 100 %. A larger
+audit of orcid_tenure-only rows (~40 rows from the six IITs finished by then) is listed as open work.
+* IIT Patna roster accepted (2026-10-28): 217 people (162 current, 50 former, 4 visiting, 1 adjunct), 10 departments; 151 of 162
+  current NIRF-confirmed; 118 ORCIDs (offline index); 174 joining years, all NIRF. Gaps: live NIRF links are 404 and only the 2016
+  (names), 2018, 2022 and 2025 submissions are archived, so last years of former faculty can be up to ~2 years early; ~26 former
+  rows rest on the 2016 names table only (year and unit unknown); 34 former rows have no department; 110 NIRF rows with designation
+  "Other"/blank excluded as non-faculty (some genuine visitors may be among them); four CEE people marked former on the live-page
+  absence alone; annual reports unusable. With its golden set (391) Patna now has both inputs.
+* IIT (BHU) roster accepted (2026-10-28): 596 people (412 current, 70 former, 114 visiting); 374 of 412 current NIRF-2026-confirmed
+  (NIRF 2026: 409 rows); 320 ORCIDs (210 from the institute profile pages, 110 offline index); 487 joining years from NIRF.
+  Inconsistency to resolve: the 114 NIRF "Other" rows (re-employed senior people, ad hoc/contractual faculty) are kept here as
+  `visiting`, while Bhubaneswar (22) and Guwahati (72) excluded the same NIRF category. Gaps: 82 former/visiting rows without a
+  department (archive queries failed), NIRF 2018 is an image PDF (not OCR'd) and 2020 a stub, 36 former last years are lower
+  bounds, two people retired in 2025 but still "working" in NIRF were set former, former names kept surname-first as NIRF prints.
+* IIT Mandi roster accepted (2026-10-28): 322 people (216 current, 50 former, 42 visiting, 14 adjunct), 12 current units + 2 defunct
+  schools; all 189 NIRF-2026 Regular people present, 188 current rows NIRF-confirmed (27 more current than NIRF-Regular: late
+  joiners and people NIRF omits); 128 ORCIDs (123 offline index, 5 pages); 280 joining years (NIRF). Gaps: no archived faculty lists
+  for six schools between the 2020 reorganisation and 2024-11, so faculty who left 2019–2021 and are not in NIRF 2019/2021 are
+  probably missing and Wayback-only ranges understate tenure; 38 rows without a department; ORCID matches use name + role and
+  were not checked against employment dates; the live directory omits the Director and a few others (treated as current from
+  school pages / NIRF, ~4 rows). NIRF "Other/Contractual" rows are labelled visiting (as BHU; unlike Bhubaneswar and Guwahati).
+* IIT (ISM) Dhanbad golden set accepted (2026-10-28): 541 papers (target 550), 53 high / 488 medium, all 17 departments, 179
+  authors (max 7 each), 2016–2026 (2016: 28, 2024–26 heavy), DOI printed on 36 %. Source mix: faculty pages 72 %, department pages
+  12 %, arXiv 10 %, news 6 % (department newsletters), annual reports 0 (only 2024-25 is published, image pages, counts only).
+  About 246 of 445 profiled people have no joining year on their page and were skipped (no NIRF or archive lookup yet), so
+  older faculty without a dated page are missed; the ISM roster should widen that. Only 6 of 17 departments yielded
+  department-page rows. One image-only newsletter PDF skipped (no OCR).
+* IIT Indore roster accepted (2026-10-28): 302 people (229 current, 34 former, 31 visiting, 8 adjunct), 13 units; all 213 NIRF-2026
+  Regular present as current, 16 more current rows from 2026 department pages; 135 ORCIDs (offline index); 257 joining years
+  (NIRF; may be regularisation dates, 13 people appear on archived lists earlier). Gaps: most department sites return a 403
+  bot challenge (archive used instead); no archive for Mechanical (meche.iiti.ac.in) and AASE is a JS shell, HSS 2016–2020 pages
+  are empty iframes, so former faculty 2016–2020 are under-covered there; 41 rows without department. 25 NIRF "Other" people
+  (postdocs, project staff) excluded and six undated or pre-2016 former members left out — the "Other" handling here follows the
+  Bhubaneswar/Guwahati exclusion and differs from BHU/Mandi (visiting); to be unified.
+* IIT Indore golden set, first pass (2026-10-28): 171 papers against a 450 target, **not accepted as the benchmark**: 28 high /
+  143 medium; source mix department pages 60, annual reports 43, faculty pages 40 (23 %), arXiv 28, news 0; years thin after 2021
+  (2022: 9, 2024: 5 against 35 in 2019); Metallurgical Engineering and Materials Science and Chemical Engineering have no rows; CSE
+  list is a stale archived copy. Untouched sources: ~70 saved faculty home pages and the 2021-22 to 2024-25 annual reports. A
+  supplement agent mines them.
+* IIT (ISM) Dhanbad roster accepted (2026-10-28): 755 people (425 current, 181 visiting, 131 former, 15 adjunct, 3 emeritus), 17
+  departments; 400 of the 446 people on the site list link to a NIRF-2026 row (NIRF: 508 rows, 469 working); 716 joining years
+  (708 from 10 NIRF editions, 8 from pages; automatic reading of profile dates was wrong in 10 of 14 disagreements, so NIRF stands);
+  310 ORCIDs (309 offline index). 178 NIRF "Other" people kept as `visiting` (as BHU and Mandi). Gaps: 212 non-listed rows without
+  department; no archived department lists for 2018–2021 (site redesign), so people who joined and left between NIRF editions are
+  missed; former years ±1; 12 people "working" in NIRF 2026 but not on the site were set former (site list wins), some may just
+  be missing from the site; heuristic name clustering may mix histories of repeated names.
+* IIT Indore golden set accepted with caveats (2026-10-28): 417 papers (target 450; first pass 171 + supplement 246), 33 high / 384
+  medium, 129 authors (max 8). Source mix: faculty pages 44 %, annual reports 34 % (best-three-publications blocks of the
+  2018-19 to 2020-21 reports), department pages 14 %, arXiv 8 %, news 0. DOI printed on 11 %. Years: 2020 has 85 rows (only
+  2018-19 to 2020-21 reports carry publication lists), 2022 has 23, 2024 25. Chemical Engineering (department founded July 2023)
+  has 0 rows: its two lab pages list papers only up to 2024 and both authors joined in 2024. The 2021-22 annual report is an
+  image PDF (no OCR); 2022-25 reports give counts and a best-paper table without years. Faculty with a maintained publications
+  page are over-represented; HEP/astro collaboration papers under-represented.
+* IIT Jammu roster accepted (2026-10-28): 229 people (157 current, 42 visiting, 29 former, 1 adjunct), 12 units; current list from
+  the institute's public faculty JSON; 138 of 157 current in NIRF 2026 (142 working, 137 Regular), 19 are 2026 joiners; 95 ORCIDs
+  (90 offline index, 5 pages); 155 joining years. Data-quality flag: the NIRF 2026 PDF is image-only and no OCR is installed, so
+  the 150-row faculty table (tenure dates, who left) was transcribed by eye; NIRF 2021–2025 PDFs do not exist on the site, so NIRF is
+  a single snapshot. Gaps: former faculty who left between Oct 2019 and ~2025 are mostly invisible (no archive after 2019-10);
+  10 former rows rest on one annual-report listing; last years for people last seen in 2019 are lower bounds; four NIRF Regular
+  people missing from the site kept as current (unconfirmed); two joining-year overrides (Riya Bhowmik 2020, four 2019 visitors).
+
+### 15.12 Why the arXiv pass was slow, and the fix (2026-10-28)
+The arXiv stage queries `export.arxiv.org/api/query` once per roster person. It ran as four parallel processes (one per
+institute), each pacing itself at 5 s but not coordinated with the others, so arXiv saw ~0.8 requests/s against its stated limit
+of 1 request per 3 s and answered 429. `common.get` then backs off exponentially (up to 120 s, 8 tries) *while holding the
+pacing lock*, so one throttled query stalled that process for minutes. Measured: ~50 people per 30 min per process; a probe from
+this machine was answered 429 within 0.4 s. The `Crawl-delay: 15` in arxiv.org/robots.txt concerns the web site (/abs, /pdf), not the
+API, and the pass was already below it for the API; going faster would only have raised the 429 rate and risked blocking the
+machine's IP, so no limit was exceeded or relaxed. Fix: `roster_channels.arxiv_gate()` — a machine-wide file-lock gate
+(`logs/arxiv_gate`) allowing one in-flight request and ≥ 3.5 s between request starts across all processes — and one serial queue
+for the remaining institutes (`pq_master_serial`), started after Bombay's running pass ends. Expected ≈ 1,000 people per hour
+against ≈ 100 before. The abandoned passes (Hyderabad 150/558, Kanpur, Gandhinagar) lost their partial progress because the pass
+writes its output only at the end.
+* IIT Bhilai roster accepted (2026-10-28): 157 people (91 current, 12 former, 48 visiting incl. 42 IIT Hyderabad mentor faculty,
+  6 adjunct); 64 ORCIDs (59 offline index); 86 joining years. Current exceeds NIRF 2025 (72 working) by ~20 joiners seen only on 2026
+  department pages. Gaps: the live site is dead (SSL), everything is archived; NIRF only for 2023–2025; earliest department pages
+  2019-07, so 2016–2018 rests on mentor pages, the 2017-18 annual report and a 2019 directory; former faculty of 2018–2019 probably
+  under-counted (ORCID index shows Bhilai employment for people no institute source lists; not added: self-declared dates);
+  the mentor page "Jan–June 2016" read as 2017; five adjunct/distinguished professors without department.
+* IIT Dharwad roster accepted (2026-10-28): 209 people (96 current, 20 former, 75 visiting incl. 49 IIT Bombay mentor faculty, 18
+  adjunct), 10 units; NIRF 2023–2026 PDFs were text-based (nothing hand-transcribed; row counts match the PDFs' own numbering);
+  100 current rows link to a NIRF 2026 row (105 regular working in NIRF); 78 ORCIDs (offline index); 123 joining years. Gaps: former
+  last years are the last archived appearance (true departure up to a year later); mentor years depend on the 2019–2020 course
+  tables; visiting assistant professors and fellows have no joining year; four people current in NIRF 2026 but former on the live site
+  were set former (site wins). ALL 40 INPUT FILES NOW EXIST (20 rosters, 20 golden sets); quality tiers per institute are in the
+  entries above.
+* IIT (BHU) golden set supplemented and accepted (2026-10-28): 543 papers (target 550; first pass 365, supplement 178), 24 high /
+  519 medium. Source mix: faculty profile pages 67 %, department/lab pages 14 %, annual reports 14 % (2016-17 to 2023-24 department
+  "refereed international journals" lists), arXiv 4 % (PDF prints IIT (BHU) on page 1), news 0 (the institute news page has only
+  notices; press articles returned 403, not bypassed). CSE 6 → 65 rows, Electronics 0 → 30, Electrical 1 → 17, Metallurgical 0 → 7;
+  Physical AI still empty; 2016–2017 thinnest. Annual-report and department-list rows match authors to the roster by surname +
+  initials (unique match, voted department, year after joining), so a few may belong to a same-initial outsider; the per-person cap
+  is enforced for roster people only (some arXiv rows are led by students). DOI printed on 23 %.

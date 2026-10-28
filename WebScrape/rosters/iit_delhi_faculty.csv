@@ -1,0 +1,739 @@
+name,department,designation,status,joining_year,profile_url,email,orcid,google_scholar,dblp,scopus_id,irins,homepage,source_url
+Ajeet Kumar,Applied Mechanics,Professor,current,,,ajeetk@am.iitd.ac.in,0000-0003-1501-4889,,,,,,https://am.iitd.ac.in/faculty
+Amitabh Bhattacharya,Applied Mechanics,Professor,current,,,bhattach@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Anupam Dewan,Applied Mechanics,Professor,current,,,adewan@am.iitd.ac.in,0000-0002-1561-713X,,,,,,https://am.iitd.ac.in/faculty
+Arghya Samanta,Applied Mechanics,Professor,current,,,arghya@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Arjun Sharma,Applied Mechanics,Assistant Professor,current,,,arjunsharma@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Arpit Agrawal,Applied Mechanics,Assistant Professor,current,,,arpit@am.iitd.ac.in,0000-0003-3429-3502,,,,,,https://am.iitd.ac.in/faculty
+B. P. Patel,Applied Mechanics,Professor,current,,,bppatel@am.iitd.ac.in,0000-0003-2624-2078,,,,,,https://am.iitd.ac.in/faculty
+Gaurav Chopra,Applied Mechanics,Assistant Professor,current,,,gchopra@am.iitd.ac.in,0000-0003-4819-138X,,,,,,https://am.iitd.ac.in/faculty
+Gaurav Singh,Applied Mechanics,Associate Professor,current,,,gsingh@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Hari Vemuri,Applied Mechanics,Assistant Professor,current,,,hari@iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+M. K. Singha,Applied Mechanics,Professor,current,,,maloy@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Mandeep Saini,Applied Mechanics,Assistant Professor,current,,,mandeep@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Murali R. Cholemari,Applied Mechanics,Associate Professor,current,,,murali@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Narsing Kumar Jha,Applied Mechanics,Assistant Professor,current,,,narsingjha@am.iitd.ac.in,0000-0001-5560-1207,,,,,,https://am.iitd.ac.in/faculty
+Nikhil Walani,Applied Mechanics,Assistant Professor,current,,,nwalani@am.iitd.ac.in,0000-0002-5248-9181,,,,,,https://am.iitd.ac.in/faculty
+Pradyumna S.,Applied Mechanics,Professor,current,,,pradyum@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Prapanch Nair,Applied Mechanics,Assistant Professor,current,,,prapanch.nair@am.iitd.ac.in,0000-0002-4918-5806,,,,,,https://am.iitd.ac.in/faculty
+Prateek Gupta,Applied Mechanics,Assistant Professor,current,,,prgupta@am.iitd.ac.in,0000-0003-3666-0257,,,,,,https://am.iitd.ac.in/faculty
+Puneet Mahajan,Applied Mechanics,Professor,current,,,mahajan@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Rahul G. Ramachandran,Applied Mechanics,Assistant Professor,current,,,gr_rahul@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Rahul Kumar Singh,Applied Mechanics,Assistant Professor,current,,,rks@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Rajdip Nayek,Applied Mechanics,Assistant Professor,current,,,rajdipn@am.iitd.ac.in,0000-0003-4277-8382,,,,,,https://am.iitd.ac.in/faculty
+Ritabrata Thakur,Applied Mechanics,Assistant Professor,current,,,ritabrata@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Ritwik Bandyopadhyay,Applied Mechanics,Assistant Professor,current,,,ritwik@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+S. V. Veeravalli,Applied Mechanics,Professor,current,,,svrvalli@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Sabyasachi Chatterjee,Applied Mechanics,Assistant Professor,current,,,sabyasachi@am.iitd.ac.in,0000-0001-6667-9720,,,,,,https://am.iitd.ac.in/faculty
+Sanjeev Sanghi,Applied Mechanics,Professor,current,,,sanghi@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Sankalp Tiwari,Applied Mechanics,Assistant Professor,current,,,tsankalp@iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Santosh Kapuria,Applied Mechanics,Professor,current,,,kapuria@am.iitd.ac.in,0000-0003-1172-1279,,,,,,https://am.iitd.ac.in/faculty
+Sawan S. Sinha,Applied Mechanics,Professor,current,,,sawan@am.iitd.ac.in,0000-0001-8632-6615,,,,,,https://am.iitd.ac.in/faculty
+Sitikantha Roy,Applied Mechanics,Professor,current,,,sroy@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Souvik Chakraborty,Applied Mechanics,Associate Professor,current,,,souvik@am.iitd.ac.in,0000-0003-2383-2603,,,,,,https://am.iitd.ac.in/faculty
+Sushma Santapuri,Applied Mechanics,Associate Professor,current,,,ssantapuri@am.iitd.ac.in,0000-0002-1244-8238,,,,,,https://am.iitd.ac.in/faculty
+Vamsi K. Chalamalla,Applied Mechanics,Associate Professor,current,,,vchalama@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Vikrant Tiwari,Applied Mechanics,Professor,current,,,tiwariv@am.iitd.ac.in,,,,,,,https://am.iitd.ac.in/faculty
+Seyed E. Hasnain,Biochemical Engineering and Biotechnology,Honorary Professor,adjunct,,https://bioschool.iitd.ac.in/faculty-profile/50,seh@dbeb.iitd.ac.in,,,,,,https://bioschool.iitd.ac.in/researches,https://beb.iitd.ac.in/faculty.html ; https://bioschool.iitd.ac.in/faculty
+Aditya Mittal,Biochemical Engineering and Biotechnology,Associate Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/31,amittal@bioschool.iitd.ac.in,0000-0002-4030-0951,,,,,,exfac_cbme.html ; https://beb.iitd.ac.in/faculty.html ; https://bioschool.iitd.ac.in/faculty
+Anjan Roy,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,0000-0002-1493-4184,,,,,,https://beb.iitd.ac.in/faculty.html
+Aradhana Srivastava,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,0000-0002-0057-0631,,,,,,https://beb.iitd.ac.in/faculty.html
+Ashish Misra,Biochemical Engineering and Biotechnology,Associate Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Ashok Kumar Dubey,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,0000-0002-1799-7260,,,,,,https://beb.iitd.ac.in/faculty.html
+Atul Narang,Biochemical Engineering and Biotechnology,Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Auhin Kumar Maparu,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Bishwajit Kundu,Biochemical Engineering and Biotechnology,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/49,bkundu@bioschool.iitd.ac.in,0000-0002-5786-3144,,,,,,https://beb.iitd.ac.in/faculty.html ; https://bioschool.iitd.ac.in/faculty
+Garima Rani,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,0000-0002-0105-0590,,,,,,https://beb.iitd.ac.in/faculty.html
+Gurmeet Singh,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,0000-0002-1219-7379,,,,,,https://beb.iitd.ac.in/faculty.html
+Ipsita Roy,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Ishaan Gupta,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,0000-0001-8934-9919,,,,,,https://beb.iitd.ac.in/faculty.html
+J. K. Deb,Biochemical Engineering and Biotechnology,Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+James Gomes,Biochemical Engineering and Biotechnology,Associate Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/39,jgomes@bioschool.iitd.ac.in,0000-0002-0135-7648,,,,,,https://beb.iitd.ac.in/faculty.html ; https://bioschool.iitd.ac.in/faculty
+Jatin Panwar,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+K. B. Ramachandran,Biochemical Engineering and Biotechnology,Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+K. J. Mukherjee,Biochemical Engineering and Biotechnology,Professor,current,,,,0000-0002-8290-2803,,,,,,https://beb.iitd.ac.in/faculty.html
+Lucinda Elizabeth Doyle,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,0000-0002-7767-3065,,,,,,https://beb.iitd.ac.in/faculty.html
+Madhuresh Sumit,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Pradip K. Roychoudhury,Biochemical Engineering and Biotechnology,PROFESSOR (Deceased),current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Prashant Mishra,Biochemical Engineering and Biotechnology,Professor,current,,,,0000-0002-9947-0496,,,,,,https://beb.iitd.ac.in/faculty.html
+Praveen Kaul,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Preeti Srivastava,Biochemical Engineering and Biotechnology,Professor & Head Of The Department,current,,,,0000-0003-2645-5495,,,,,,https://beb.iitd.ac.in/faculty.html
+Priti Sinha,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Purnendu Ghosh,Biochemical Engineering and Biotechnology,Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Ravikrishnan Elangovan,Biochemical Engineering and Biotechnology,Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Ritu Kulshreshtha,Biochemical Engineering and Biotechnology,Professor,current,,,,0000-0003-0488-5048,,,,,,https://beb.iitd.ac.in/faculty.html
+Rohan Jain,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Shaikh Z. Ahammad,Biochemical Engineering and Biotechnology,Professor,current,,,,0000-0002-4459-0239,,,,,,https://beb.iitd.ac.in/faculty.html
+Sharad Kumar Gupta,Biochemical Engineering and Biotechnology,Assistant Professor,current,,https://chemical.iitd.ac.in/faculty/sharad-k-gupta/,sgupta@chemical.iitd.ac.in,,,,,,,https://beb.iitd.ac.in/faculty.html ; https://chemical.iitd.ac.in/faculties/
+Shilpi Sharma,Biochemical Engineering and Biotechnology,Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Sunil Nath,Biochemical Engineering and Biotechnology,Professor,current,,,,0000-0002-0362-069X,,,,,,https://beb.iitd.ac.in/faculty.html
+T. R. Sreekrishnan,Biochemical Engineering and Biotechnology,Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Tapan Kumar Chaudhuri,Biochemical Engineering and Biotechnology,Associate Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/46,tkchaudhuri@bioschool.iitd.ac.in,0000-0002-3668-1640,,,,,,https://beb.iitd.ac.in/faculty.html ; https://bioschool.iitd.ac.in/faculty
+Umakant Sahu,Biochemical Engineering and Biotechnology,Assistant Professor,current,,,,,,,,,,https://beb.iitd.ac.in/faculty.html
+Gokulnath Thandavarayan,Centre for Automotive Research and Tribology,Assistant Professor,current,,https://cart.iitd.ac.in/faculty-profile/14,tgokulnath@iitd.ac.in,,,,,,https://www.linkedin.com/in/gokulnath-thandavarayan,https://cart.iitd.ac.in/faculty
+Husain Kanchwala,Centre for Automotive Research and Tribology,Assistant Professor,current,,https://cart.iitd.ac.in/faculty-profile/6,husaink@iitd.ac.in,,,,,,https://web.iitd.ac.in/~husaink/,https://cart.iitd.ac.in/faculty
+Krishna Raj R,Centre for Automotive Research and Tribology,Assistant Professor,current,,https://cart.iitd.ac.in/faculty-profile/10,krishnaraj@iitd.ac.in,,,,,,https://web.iitd.ac.in/~krishnaraj,https://cart.iitd.ac.in/faculty
+Mandeep Singh Rana,Centre for Automotive Research and Tribology,Assistant Professor,current,,https://cart.iitd.ac.in/faculty-profile/13,mandp@iitd.ac.in,,,,,https://iitd.irins.org/profile/533996,,https://cart.iitd.ac.in/faculty
+S. Fatima,Centre for Automotive Research and Tribology,Associate Professor,current,,https://cart.iitd.ac.in/faculty-profile/5,fatima@iitd.ac.in,0000-0002-9462-5049,,,,,https://www.ahmlab.com/,https://cart.iitd.ac.in/faculty
+Santanu Kumar Mishra,Centre for Automotive Research and Tribology,Head,current,,https://cart.iitd.ac.in/hod-profile/1,hod@cart.iitd.ac.in,0000-0002-4580-6177,https://scholar.google.co.in/citations?user=Xlsp1hQAAAAJ&hl=en,,,,https://cart.iitd.ac.in/hod-profile/1,https://cart.iitd.ac.in/faculty
+Saptarshi Basak,Centre for Automotive Research and Tribology,Assistant Professor,current,,https://cart.iitd.ac.in/faculty-profile/3,sbasak@cart.iitd.ac.in,0000-0002-2125-0389,,,,https://iitd.irins.org/profile/213953#other_information_panel,,https://cart.iitd.ac.in/faculty
+Saurabh Saxena,Centre for Automotive Research and Tribology,Assistant Professor,current,,https://cart.iitd.ac.in/faculty-profile/12,saxenas@iitd.ac.in,,,,,,https://web.iitd.ac.in/~saxenas/,https://cart.iitd.ac.in/faculty
+Mark Parsons,Centre for Biomedical Engineering,Adjunct Faculty,adjunct,,https://cbme.iitd.ac.in/faculty-profile/23,,,,,,,https://research.unsw.edu.au/people/professor-mark-parsons,https://cbme.iitd.ac.in/faculty
+Aarat Kalra,Centre for Biomedical Engineering,Assistant Professor,current,,https://cbme.iitd.ac.in/faculty-profile/19,aaratkalra@iitd.ac.in,0000-0002-1877-0439,,,,,https://quantumbio.iitd.ac.in/,https://cbme.iitd.ac.in/faculty
+Aayush Kant,Centre for Biomedical Engineering,Assistant Professor,current,,https://cbme.iitd.ac.in/faculty-profile/24,akant@iitd.ac.in,0000-0001-9898-1852,,,,,https://mindlabiitd.github.io,https://cbme.iitd.ac.in/faculty
+Amit Mehndiratta,Centre for Biomedical Engineering,Professor,current,,https://cbme.iitd.ac.in/faculty-profile/10,amehndiratta@cbme.iitd.ac.in,,,,,,https://web.iitd.ac.in/~amehndiratta/,https://cbme.iitd.ac.in/faculty
+Anup Singh,Centre for Biomedical Engineering,Head of the Centre,current,,https://cbme.iitd.ac.in/hod-profile/1,anupsm@cbme.iitd.ac.in,0000-0001-6744-8326,,,,,https://web.iitd.ac.in/~anupsm/home.html,https://cbme.iitd.ac.in/faculty
+Arnab Chanda,Centre for Biomedical Engineering,Associate Professor,current,,https://cbme.iitd.ac.in/faculty-profile/2,arnab.chanda@cbme.iitd.ac.in,0000-0002-6266-078X,,,,,https://sites.google.com/view/diml-iitd,https://cbme.iitd.ac.in/faculty
+Biswarup Mukherjee,Centre for Biomedical Engineering,Associate Professor,current,,https://cbme.iitd.ac.in/faculty-profile/3,bmukherjee@cbme.iitd.ac.in,0000-0001-5528-3763,,,,,https://sites.google.com/view/riselabiitd/,https://cbme.iitd.ac.in/faculty
+Deepak Joshi,Centre for Biomedical Engineering,Associate Professor,current,,https://cbme.iitd.ac.in/faculty-profile/15,joshid@cbme.iitd.ac.in,,,,,,https://web.iitd.ac.in/~joshid/,https://cbme.iitd.ac.in/faculty
+Dinesh Kalyanasundaram,Centre for Biomedical Engineering,Associate Professor,current,,https://cbme.iitd.ac.in/faculty-profile/5,dineshk@cbme.iitd.ac.in,0000-0001-5127-4122,,,,,https://web.iitd.ac.in/~dineshk/,https://cbme.iitd.ac.in/faculty
+Jayanta Bhattacharyya,Centre for Biomedical Engineering,Associate Professor,current,,https://cbme.iitd.ac.in/faculty-profile/7,jayanta@cbme.iitd.ac.in,,,,,,https://labbiotherapeutics.wixsite.com/jblab,https://cbme.iitd.ac.in/faculty
+Naveen Kumar Singh,Centre for Biomedical Engineering,Assistant Professor,current,,https://cbme.iitd.ac.in/faculty-profile/17,nks@iitd.ac.in,,,,,,https://naveensalori36.wixsite.com/my-site,https://cbme.iitd.ac.in/faculty
+Neetu Singh,Centre for Biomedical Engineering,Professor,current,,https://cbme.iitd.ac.in/faculty-profile/8,sneetu@cbme.iitd.ac.in,,,,,,https://sites.google.com/site/mrnblorg,https://cbme.iitd.ac.in/faculty
+Pradipta Mukherjee,Centre for Biomedical Engineering,Assistant Professor,current,,https://cbme.iitd.ac.in/faculty-profile/22,pmukherjee@cbme.iitd.ac.in,,,,,,https://www.biophotonica-lab.com,https://cbme.iitd.ac.in/faculty
+Priya Vashisth,Centre for Biomedical Engineering,Assistant Professor,current,,https://cbme.iitd.ac.in/faculty-profile/20,pvashisth@iitd.ac.in,0000-0003-4034-6543,https://scholar.google.com/citations?user=5QizAOUAAAAJ&hl=en,,,,,https://cbme.iitd.ac.in/faculty
+Sachin Kumar B,Centre for Biomedical Engineering,Assistant Professor,current,,https://cbme.iitd.ac.in/faculty-profile/11,ksachin@cbme.iitd.ac.in,,,,,,https://skb-lab-iitd.github.io/index.html,https://cbme.iitd.ac.in/faculty
+Sandeep Kumar Jha,Centre for Biomedical Engineering,Professor,current,,https://cbme.iitd.ac.in/faculty-profile/9,,,,,,,http://sandeepjha.com/,https://cbme.iitd.ac.in/faculty
+Sarvesh Kumar Srivastava,Centre for Biomedical Engineering,Assistant Professor,current,,https://cbme.iitd.ac.in/faculty-profile/18,sksr@cbme.iitd.ac.in,,,,,,https://www.3mlabs.org/,https://cbme.iitd.ac.in/faculty
+S. K. Guha,Centre for Biomedical Engineering,Former faculty (2021-2021); last listed as Faculty,former,,,,,,,,,,exfac_cbme.html
+S. M. K. Rahman,Centre for Biomedical Engineering,Former faculty (2021-2021); last listed as Faculty,former,,,,,,,,,,exfac_cbme.html
+Veena Koul,Centre for Biomedical Engineering,Former faculty (2021-2021); last listed as Faculty,former,,,,,,,,,,exfac_cbme.html
+K. K. Deepak,Centre for Biomedical Engineering,Visiting Professor,visiting,,https://cbme.iitd.ac.in/faculty-profile/21,,0000-0003-0734-1097,,,,,https://www.kkdeepak.com/,https://cbme.iitd.ac.in/faculty
+Chandra Shakher,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Honorary Professor,adjunct,,https://sense.iitd.ac.in/faculty-profile/11,cshakher@sense.iitd.ac.in,,,,,,http://web.iitd.ac.in/~cshakher/,https://sense.iitd.ac.in/faculty
+DT Shahani,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Honorary Professor,adjunct,,https://sense.iitd.ac.in/faculty-profile/12,shahani@sense.iitd.ac.in,,,,,https://iitd.irins.org/profile/16899,http://web.iitd.ac.in/~shahani/,https://sense.iitd.ac.in/faculty
+Hari Babu Srivastava,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Professor of Practice,adjunct,,https://sense.iitd.ac.in/faculty-profile/18,hbsrivastava@sense.iitd.ac.in,,,,,,http://web.iitd.ac.in/~hbsrivastava/,https://sense.iitd.ac.in/faculty
+Gufran Sayeed Khan,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Professor,current,,https://sense.iitd.ac.in/faculty-profile/4,gufranskhan@sense.iitd.ac.in,0000-0001-7911-565X,,,,https://iitd.irins.org/profile/85823,http://web.iitd.ac.in/~gufranskhan/,https://sense.iitd.ac.in/faculty
+Jasleen Lugani,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Assistant Professor,current,,https://sense.iitd.ac.in/faculty-profile/16,jasleen@sense.iitd.ac.in,,,,,https://iitd.irins.org/profile/205281,http://web.iitd.ac.in/~jasleen/,https://sense.iitd.ac.in/faculty
+Jolly Xavier P,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Associate Professor,current,,https://sense.iitd.ac.in/faculty-profile/5,jxavier@sense.iitd.ac.in,,,,,https://iitd.irins.org/profile/221855,http://web.iitd.ac.in/~jxavier/,https://sense.iitd.ac.in/faculty
+Manish Kumar,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Assistant Professor,current,,https://sense.iitd.ac.in/faculty-profile/17,kmanish@sense.iitd.ac.in,0000-0003-1514-021X,,,,https://iitd.irins.org/profile/253470,https://web.iitd.ac.in/~kmanish/,https://sense.iitd.ac.in/faculty
+Ravibabu Mulaveesala,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Professor,current,,https://sense.iitd.ac.in/faculty-profile/6,mulaveesala@sense.iitd.ac.in,0000-0001-7351-0982,,,,https://iitd.irins.org/profile/216092,http://web.iitd.ac.in/~mulaveesala/,https://sense.iitd.ac.in/faculty
+Santhosh Sivasubramani,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Assistant Professor,current,,https://sense.iitd.ac.in/faculty-profile/10,ssivasub@sense.iitd.ac.in,,,,,,https://web.iitd.ac.in/~ssivasub/,https://sense.iitd.ac.in/faculty
+Satish Kumar Dubey,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Head of the Department,current,,https://sense.iitd.ac.in/hod-profile/1,hodsense@admin.iitd.ac.in,0000-0002-7752-4481,,,,https://iitd.irins.org/profile/70365,http://web.iitd.ac.in/~satishdubey/,https://sense.iitd.ac.in/faculty
+Shahid Malik,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",Assistant Professor,current,,https://sense.iitd.ac.in/faculty-profile/15,smalik@sense.iitd.ac.in,,,,,https://iitd.irins.org/profile/253466,http://web.iitd.ac.in/~smalik/,https://sense.iitd.ac.in/faculty
+Abhijeet Raj,Chemical Engineering,Professor,current,,https://chemical.iitd.ac.in/faculty/abhijeet-raj/,raj@iitd.ac.in,0000-0002-1470-0513,,,,,,https://chemical.iitd.ac.in/faculties/
+Akshi Singla,Chemical Engineering,Assistant Professor,current,,,akshi@iitd.ac.in,0000-0002-2139-7954,,,,,https://web.iitd.ac.in/~akshi/,https://chemical.iitd.ac.in/faculties/
+Anil K. Saroha,Chemical Engineering,Professor,current,,https://chemical.iitd.ac.in/faculty/anil-k-saroha/,aksaroha@chemical.iitd.ac.in,0000-0001-8252-346X,,,,,,https://chemical.iitd.ac.in/faculties/
+Anil Verma,Chemical Engineering,Professor,current,,,anilverma@chemical.iitd.ac.in,0000-0002-4813-9031,,,,,http://web.iitd.ac.in/~anilverma/,https://chemical.iitd.ac.in/faculties/
+Anupam Shukla,Chemical Engineering,Professor,current,,,anupam@chemical.iitd.ac.in,0000-0001-9136-7577,,,,,http://web.iitd.ac.in/~anupam,https://chemical.iitd.ac.in/faculties/
+Anurag S. Rathore,Chemical Engineering,"Head, Chemical Engineering",current,,,,0000-0002-5913-4244,,,,,http://www.biotechcmz.com/,https://chemical.iitd.ac.in/faculties/
+Ashok N. Bhaskarwar,Chemical Engineering,Professor,current,,https://chemical.iitd.ac.in/faculty/ashok-n-bhaskarwar/,ashoknb@chemical.iitd.ac.in,,,,,,,https://chemical.iitd.ac.in/faculties/
+Divesh Bhatia,Chemical Engineering,Professor,current,,https://chemical.iitd.ac.in/faculty/divesh-bhatia/,dbhatia@chemical.iitd.ac.in,,,,,,,https://chemical.iitd.ac.in/faculties/
+Gaurav Goel,Chemical Engineering,Professor,current,,,goelg@chemical.iitd.ac.in,0000-0003-2871-7153,,,,,http://web.iitd.ac.in/~goelg,https://chemical.iitd.ac.in/faculties/
+Hariprasad Kodamana,Chemical Engineering,Associate Professor,current,,,kodamana@chemical.iitd.ac.in,,,,,,http://web.iitd.ernet.in/~kodamana/,https://chemical.iitd.ac.in/faculties/
+Jayati Sarkar,Chemical Engineering,Professor,current,,,jayati@chemical.iitd.ac.in,,,,,,http://web.iitd.ac.in/~jayati/,https://chemical.iitd.ac.in/faculties/
+Kamal K. Pant,Chemical Engineering,Professor,current,,,kkpant@chemical.iitd.ac.in,,,,,,http://web.iitd.ac.in/~kkpant,https://chemical.iitd.ac.in/faculties/
+M. Ali Haider,Chemical Engineering,Professor,current,,,haider@iitd.ac.in,,,,,,https://www.reclab.in/home,https://chemical.iitd.ac.in/faculties/
+M. K. S. Verma,Chemical Engineering,Assistant Professor,current,,,mksverma@chemical.iitd.ac.in,0000-0002-2641-0855,,,,,http://web.iitd.ac.in/~mksverma/,https://chemical.iitd.ac.in/faculties/
+Manjesh Kumar,Chemical Engineering,Assistant Professor,current,,,manjeshkumar@chemical.iitd.ac.in,0000-0001-6167-420X,,,,,http://web.iitd.ac.in/~manjeshkumar/,https://chemical.iitd.ac.in/faculties/
+Manojkumar C. Ramteke,Chemical Engineering,Professor,current,,,mcramteke@chemical.iitd.ac.in,0000-0002-3837-8952,,,,,http://web.iitd.ac.in/~mcramteke/Home.html,https://chemical.iitd.ac.in/faculties/
+Om Prakash,Chemical Engineering,Assistant Professor,current,,,omprakash@iitd.ac.in,0000-0002-8735-608X,,,,,https://iprana-lab.github.io/,https://chemical.iitd.ac.in/faculties/
+Paresh P. Chokshi,Chemical Engineering,Professor,current,,https://chemical.iitd.ac.in/faculty/paresh-p-chokshi/,paresh@chemical.iitd.ac.in,,,,,,,https://chemical.iitd.ac.in/faculties/
+Rajesh Khanna,Chemical Engineering,Professor,current,,,rajkh@chemical.iitd.ac.in,,,,,,https://web.iitd.ac.in/~rajkh/,https://chemical.iitd.ac.in/faculties/
+Rousan Debbarma,Chemical Engineering,Assistant Professor,current,,,rousan@iitd.ac.in,0000-0001-9195-6371,,,,,https://web.iitd.ac.in/~rousan/,https://chemical.iitd.ac.in/faculties/
+Sankalp Nambiar,Chemical Engineering,Assistant Professor,current,,https://chemical.iitd.ac.in/faculty/sankalp-nambiar/,snambiar@iitd.ac.in,0000-0003-0035-7715,,,,,,https://chemical.iitd.ac.in/faculties/
+Shantanu Roy,Chemical Engineering,Dean Academics & Professor in Chemical Engineering Department,current,,https://chemical.iitd.ac.in/faculty/shantanu-roy/,roys@chemical.iitd.ac.in,,,,,,,https://chemical.iitd.ac.in/faculties/
+Somnath Ghosh,Chemical Engineering,Assistant Professor,current,,https://chemical.iitd.ac.in/faculty/somnath-ghosh/,somnath.ghosh@chemical.iitd.ac.in,,,,,,,https://chemical.iitd.ac.in/faculties/
+Sreedevi Upadhyayula,Chemical Engineering,Professor,current,,,sreedevi@chemical.iitd.ac.in,0000-0001-6042-4401,,,,,http://web.iitd.ac.in/~sreedevi/,https://chemical.iitd.ac.in/faculties/
+Suddhasatwa Basu,Chemical Engineering,"Professor,",current,,,sbasu@iitd.ac.in,0000-0001-7288-2370,,,,,http://web.iitd.ac.in/~sbasu/,https://chemical.iitd.ac.in/faculties/
+Sudip K. Pattanayek,Chemical Engineering,Professor,current,,,sudip@chemical.iitd.ac.in,,,,,,http://web.iitd.ac.in/~sudip/,https://chemical.iitd.ac.in/faculties/
+Vikram Singh,Chemical Engineering,Professor,current,,https://chemical.iitd.ac.in/faculty/vikram-singh/,vs225@chemical.iitd.ac.in,0000-0001-5881-681X,,,,,,https://chemical.iitd.ac.in/faculties/
+Vikrant,Chemical Engineering,Assistant Professor,current,,,vvikrant@chemical.iitd.ac.in,,,,,,https://vvikrant.wordpress.com/,https://chemical.iitd.ac.in/faculties/
+Vivek V. Buwa,Chemical Engineering,Professor,current,,,vvbuwa@chemical.iitd.ac.in,,,,,,http://web.iitd.ac.in/~vvbuwa/,https://chemical.iitd.ac.in/faculties/
+Anil J. Elias,Chemistry,Faculty,current,,https://chemistry.iitd.ac.in/faculty-profile/36,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Ashok K Ganguli,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/8,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Biju Basumatary,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/40,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Biswarup Chakraborty,Chemistry,Assistant Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/2,,0000-0002-6292-6357,,,,,,https://chemistry.iitd.ac.in/faculty
+Chinmoy K. Hazra,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/29,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Dibyajyoti Ghosh,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/37,dibyajyoti@mse.iitd.ac.in,0000-0002-3640-7537,,,,,https://sites.google.com/view/dibyajyoti-ghosh/home,https://chemistry.iitd.ac.in/faculty ; https://mse.iitd.ac.in/api/faculty_api
+Haridas V,Chemistry,Assistant Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/9,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Hemant K Kashyap,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/22,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Jai D Singh,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/19,,0000-0003-2987-3676,,,,,,https://chemistry.iitd.ac.in/faculty
+Janakiram Vaitla,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/32,,0000-0003-4068-5916,,,,,,https://chemistry.iitd.ac.in/faculty
+Kuntal Manna,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/26,,0000-0002-2924-0353,,,,,,https://chemistry.iitd.ac.in/faculty
+M. Ramu Yadav,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/30,,0000-0002-9294-0846,,,,,,https://chemistry.iitd.ac.in/faculty
+N G Ramesh,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/6,,0000-0002-4478-6899,,,,,,https://chemistry.iitd.ac.in/faculty
+Nalin Pant,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/16,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Narayanan D Kurur,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/13,,0000-0002-7150-2070,,,,,,https://chemistry.iitd.ac.in/faculty
+Nidhi Jain,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/10,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Pramit K Chowdhury,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/4,,0000-0002-9593-2577,,,,,,https://chemistry.iitd.ac.in/faculty
+Pravin P Ingole,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/24,,0000-0002-9755-4477,,,,,,https://chemistry.iitd.ac.in/faculty
+Priyanka Verma,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/38,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Ravi P Singh,Chemistry,Assistant Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/23,,,,,,,,https://chemistry.iitd.ac.in/faculty ; https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Ravi Shankar,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/17,ravi1@dms.iitd.ac.in,,,,,,,https://chemistry.iitd.ac.in/faculty ; https://dms.iitd.ac.in/faculty/
+Ritu Gupta,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/39,,0000-0001-6819-2748,,,,,,https://chemistry.iitd.ac.in/faculty
+Sajesh P. Thomas,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/33,,0000-0003-3552-8625,,,,,,https://chemistry.iitd.ac.in/faculty
+Sameer Sapra,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/20,,0000-0002-1778-2884,,,,,,https://chemistry.iitd.ac.in/faculty
+Sandeep Kumar Gupta,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/41,,0000-0003-2432-933X,,,,,,https://chemistry.iitd.ac.in/faculty
+Sayantan Paria,Chemistry,Assistant Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/27,,0000-0001-5476-8259,,,,,,https://chemistry.iitd.ac.in/faculty
+Selvarajan Nagendran,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/14,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Shashank Deep,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/7,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Shivajirao L Gholap,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/25,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Siddharth Pandey,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/15,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Soumik Siddhanta,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/3,,,,,,,,https://chemistry.iitd.ac.in/faculty
+Subrata Kundu,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/31,,0000-0002-2308-5452,,,,,,https://chemistry.iitd.ac.in/faculty
+Sudipta Raha Roy,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/28,,0000-0002-1382-109X,,,,,,https://chemistry.iitd.ac.in/faculty
+Sunil K Khare,Chemistry,Associate Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/12,,0000-0002-7339-3058,,,,,,https://chemistry.iitd.ac.in/faculty
+Tanmay Dutta,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/21,,0000-0002-6575-1599,,,,,,https://chemistry.iitd.ac.in/faculty
+Tarak Karmakar,Chemistry,Professor,current,,https://chemistry.iitd.ac.in/faculty-profile/34,,,,,,,,https://chemistry.iitd.ac.in/faculty
+A K Singh,Chemistry,Former faculty (1982-2022); last listed as Retired Professor,former,1982,,,,,,,,,https://chemistry.iitd.ac.in/retfac
+Arunachalam Ramanan,Chemistry,Former faculty (1990-2022); last listed as Retired Professor,former,1990,,,0000-0002-5754-459X,,,,,,https://chemistry.iitd.ac.in/retfac
+B. Jayaram,Chemistry,Former faculty (1990-2023); last listed as Retired Professor,former,1990,https://bioschool.iitd.ac.in/faculty-profile/36,bjayaram@chemistry.iitd.ac.in,0000-0002-5495-2213,,,,https://iitd.irins.org/profile/10468,,https://bioschool.iitd.ac.in/faculty ; https://chemistry.iitd.ac.in/retfac
+D. Bandopadhyay,Chemistry,Former faculty (1992-2022); last listed as Retired Professor,former,1992,,,,,,,https://iitd.irins.org/profile/10473,,https://chemistry.iitd.ac.in/retfac
+Ramakrishna Ramaswamy,Chemistry,Former faculty (2018-2023); last listed as Retired Professor,former,2018,,,0000-0002-9085-8224,,,,,,exfac_physics.html ; https://chemistry.iitd.ac.in/retfac
+S. Z. S. Tabish,Civil Engineering,Professor of Practice,adjunct,,,szstabish@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~szstabish/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Svetha (Ms) Venkatachari,Civil Engineering,Professors of Practice (2),adjunct,,,svethav@civil.iitd.ac.in,,,,,,https://sites.google.com/view/svethavenkatachari,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+A. K. Keshari,Civil Engineering,Professor,current,,,akeshari@civil.iitd.ac.in,0000-0002-5094-2659,,,,,https://web.iitd.ac.in/~akeshari/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+A. N. Rohith,Civil Engineering,Assistant Professor,current,,,anrohith@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~anrohith/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Allan L. Marbaniang,Civil Engineering,Assistant Professor,current,,,allanm@civil.iitd.ac.in,,,,,,https://sites.google.com/view/allanmarbaniang,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Alok Madan,Civil Engineering,Professor,current,,,madan@civil.iitd.ac.in,0009-0008-2985-8808,,,,,https://web.iitd.ac.in/~madan/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Ann (Ms) Francis,Civil Engineering,Assistant Professor,current,,,annfrancis@civil.iitd.ac.in,,,,,,https://annfrancis.owlstown.net/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Aravind Krishna Swamy,Civil Engineering,Associate Professors (11),current,,,akswamy@civil.iitd.ac.in,0000-0002-5323-3209,,,,,https://web.iitd.ac.in/~akswamy/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Arnab Banerjee,Civil Engineering,Associate Professor,current,,,abanerjee@civil.iitd.ac.in,0000-0002-3157-6200,,,,,https://web.iitd.ac.in/~abanerjee,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Arun Kumar,Civil Engineering,Professor,current,,,arunku@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~arunku/,exfac_physics.html ; https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Arvind Kumar Nema,Civil Engineering,Professor (H.A.G.) and Deputy Director(Operations),current,,,aknema@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~aknema/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Arya (Ms) Vijayanandan,Civil Engineering,Associate Professor,current,,,aryav@civil.iitd.ac.in,,,,,,https://aryaiitd.wixsite.com/my-site,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Atul Kumar Mittal,Civil Engineering,Professor,current,,,akmittal@civil.iitd.ac.in,0000-0003-4647-2559,,,,,https://web.iitd.ac.in/~akmittal/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Babu J. Alappat,Civil Engineering,Professor (H.A.G.),current,,,alappat@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~alappat/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Bappaditya Manna,Civil Engineering,Professor,current,,,bmanna@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~bmanna/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Bhagu Ram Chahar,Civil Engineering,Professor (H.A.G.),current,,,chahar@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~chahar/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+C. T. (Ms) Dhanya,Civil Engineering,"Professor, Rama Kanta Chair, and Dean (Academics)",current,,,dhanya@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~dhanya/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+D. R. Kaushal,Civil Engineering,Professor (H.A.G.),current,,,kaushal@civil.iitd.ac.in,0000-0002-5578-862X,,,,,https://web.iitd.ac.in/~kaushal/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Debayan Bhattacharya,Civil Engineering,Assistant Professor,current,,,debayanb@civil.iitd.ac.in,0009-0006-1934-6935,,,,,https://web.iitd.ac.in/~debayanb/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Deepak Kumar Kamde,Civil Engineering,Assistant Professor,current,,,kamdedk@civil.iitd.ac.in,0000-0003-1794-5695,,,,,https://web.iitd.ac.in/~kamdedk/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Deepanshu Shirole,Civil Engineering,Assistant Professor,current,,,dshirole@civil.iitd.ac.in,0000-0002-3807-1846,,,,,https://web.iitd.ac.in/~dshirole/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Dipti Ranjan Sahoo,Civil Engineering,"Professor, and Dean (Infrastructure)",current,,,drsahoo@civil.iitd.ac.in,0000-0002-8477-6759,,,,,https://web.iitd.ac.in/~drsahoo/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Gaurav Talukdar,Civil Engineering,Assistant Professor,current,,,gtalukdar@iitd.ac.in,0000-0002-7624-6205,,,,,https://sites.google.com/view/gauravtalukdar/home,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Gazala (Ms) Habib,Civil Engineering,Professor,current,,,gazala@civil.iitd.ac.in,0000-0003-3598-3548,,,,,https://web.iitd.ac.in/~gazala/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Gunturi Venkata Ramana,Civil Engineering,Professor (H.A.G.),current,,,ramana@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~ramana/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Jagdish Telangrao Shahu,Civil Engineering,Professor (H.A.G.),current,,,shahu@civil.iitd.ac.in,0000-0002-2400-1900,,,,,https://web.iitd.ac.in/~shahu/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Joseph V. Puthussery,Civil Engineering,Assistant Professor,current,,,josephvp@civil.iitd.ac.in,0000-0002-0185-1187,,,,,https://sites.google.com/view/josephvputhussery/bio?authuser=0,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Kumar Neeraj Jha,Civil Engineering,Professor (H.A.G.),current,,,knjha@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~knjha/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+M. Manoj,Civil Engineering,"Associate Professor, MoUD Chair (Urban Transport and Environment)",current,,,manojm@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~manojm/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Manabendra Saharia,Civil Engineering,Associate Professor,current,,,msaharia@civil.iitd.ac.in,0000-0001-5275-0821,,,,,https://hydrosense.iitd.ac.in/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+N. M. Anoop Krishnan,Civil Engineering,Associate Professor,current,,,krishnan@civil.iitd.ac.in,,,,,,https://sites.google.com/site/nmakrishnaniitd/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Pramesh Kumar,Civil Engineering,Assistant Professor,current,,,pkk@civil.iitd.ac.in,,,,,,https://prameshk.github.io/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Prashanth Vangla,Civil Engineering,Assistant Professors (15),current,,,pvangla05@civil.iitd.ac.in,0000-0003-4864-6647,,,,,https://sites.google.com/view/drvangla-iitd/home,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+R. Ayothiraman,Civil Engineering,Professor {https://cee.iittp.ac.in/prof-ramanathan-ayothiraman} (On Lien),current,,,araman@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~araman/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Ramachandra Rao Kalaga,Civil Engineering,"Professor (H.A.G.), Volvo Chair for Urban Transport",current,,,rrkalaga@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~rrkalaga/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Sahil Bansal,Civil Engineering,Associate Professor,current,,,sahil@civil.iitd.ac.in,0000-0002-4968-2079,,,,,https://sites.google.com/view/sahilbansal/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Sahil Garg,Civil Engineering,Assistant Professor,current,,,gargsahil@civil.iitd.ac.in,0000-0002-1303-3288,,,,,https://sites.google.com/view/sahilgarg,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Saikat Sarkar,Civil Engineering,Associate Professor,current,,,saikat@civil.iitd.ac.in,0000-0003-3577-595X,,,,,https://sites.google.com/view/saikatsarkar/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Saumava Dey,Civil Engineering,Assistant Professor,current,,,saumavadey@civil.iitd.ac.in,0000-0001-8625-7285,,,,,https://web.iitd.ac.in/~saumavadey/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Shashank Bishnoi,Civil Engineering,Professor,current,,,bishnoi@civil.iitd.ac.in,0000-0002-2183-2530,,,,,https://web.iitd.ac.in/~bishnoi/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Sovik Das,Civil Engineering,Assistant Professor,current,,,dassovik@civil.iitd.ac.in,0000-0001-7059-2070,,,,,http://www.w2w.org.in,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Sri Harsha Kota,Civil Engineering,"Associate Professor, Associate Dean (Infrastructure)",current,,,harshakota@civil.iitd.ac.in,0000-0002-1977-2954,,,,,https://sites.google.com/view/uramiitd,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Srinivas Mogili,Civil Engineering,Assistant Professor,current,,,sri@civil.iitd.ac.in,0000-0002-2130-6725,,,,,https://web.iitd.ac.in/~sri/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Sumedha Chakma,Civil Engineering,Professor,current,,,chakma@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~chakma/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Supratic Gupta,Civil Engineering,Associate Professor,current,,,supratic@civil.iitd.ac.in,0000-0003-4540-6680,,,,,https://web.iitd.ac.in/~supratic/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Suresh Bhalla,Civil Engineering,Professor (H.A.G.),current,,,sbhalla@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~sbhalla/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Tanusree (Ms) Chakraborty,Civil Engineering,Professor,current,,,tanusree@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~tanusree/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Vasant Matsagar,Civil Engineering,Professors (22),current,,,matsagar@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~matsagar/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Manoj Datta,Civil Engineering,Emeritus Professor,emeritus,,,mdatta@civil.iitd.ac.in,0000-0002-0395-5270,,,,,https://web.iitd.ac.in/~mdatta/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Mukesh Khare,Civil Engineering,Visiting Faculty Members (3),emeritus,,,mukeshk@civil.iitd.ac.in,0000-0002-5848-2159,,,,,https://web.iitd.ac.in/~mukeshk/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Pawan Col Pandey,Civil Engineering,Emeritus Professors (2),emeritus,,,pvn@civil.iitd.ac.in,,,,,,https://web.iitd.ac.in/~pvn/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+A. K. Gosain,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/10490,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+A. K. Nagpal,Civil Engineering,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,,https://www.researchgate.net/profile/Ashok-Nagpal-3,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Ashok Gupta,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/10500,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+B. Bhattacharjee,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,0000-0002-6642-9139,,,,,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+G. S. Benipal,Civil Engineering,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/10509,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Geetam Tewari,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/70583,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+J. Uma Maheswari,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/70081,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+K. C. Iyer,Civil Engineering,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/70595,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+K. G. Sharma,Civil Engineering,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/10494,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+K. S. Rao,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/10507,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+M. Mallikharjuna Rao,Civil Engineering,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/69957,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+N. K. Garg,Civil Engineering,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,,https://vidwan.inflibnet.ac.in/profile/10499,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Rakesh Khosa,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,https://iitd.irins.org/profile/10514,,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Shashi Mathur,Civil Engineering,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,,https://www.researchgate.net/profile/Shashi-Mathur,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Achintya Haldar,Civil Engineering,Adjunct Faculty,visiting,,,,,,,,,https://sites.arizona.edu/haldar/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Patrick Gurian,Civil Engineering,Visiting,visiting,,,gurian1.vfaculty@civil.iitd.ac.in,,,,,,https://drexel.edu/engineering/about/faculty-staff/G/gurian-patrick/,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Venkatesh Kumar R. Kodur,Civil Engineering,Visiting,visiting,,,,,,,,,https://msu.edu/honoredfaculty/directory/kodur-kumar-venkatesh.html,https://civil.iitd.ac.in/index.php?lmenuid=faculty
+Aaditeshwar Seth,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/aaditeshwar-seth/,aseth@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Abhilash Jindal,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/abhilash-jindal/,ajindal@cse.iitd.ac.in,0000-0002-4525-9791,,,,,,https://homecse.iitd.ac.in/faculty/
+Abhradeep Guha Thakurta,Computer Science and Engineering,Research Scientist at Google Deep Mind,current,,https://homecse.iitd.ac.in/team/abhradeep-guha-thakurta/,,,,,,,,https://homecse.iitd.ac.in/faculty/
+Adarsh Barik,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/adarsh-barik/,adarshbarik1@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Amit Kumar,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/amit-kumar/,amitk@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Amitabha Bagchi,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/amitabha-bagchi/,bagchi@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Anish Arora,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/anish-arora/,,,,,,,,https://homecse.iitd.ac.in/faculty/
+Anshul Kumar,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/anshul-kumar/,,,,,,,,https://homecse.iitd.ac.in/faculty/
+Ashish Chiplunkar,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/ashish-chiplunkar/,ashishc@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Chandrajit L. Bajaj,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/prof-chandrajit-l-bajaj/,,,,,,,,https://homecse.iitd.ac.in/faculty/
+Chetan Arora,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/chetan-arora/,chetan@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/ ; https://scai.iitd.ac.in/faculty
+Gautam Shroff,Computer Science and Engineering,Vice President Chief Scientist and Head TCS Research,current,,https://homecse.iitd.ac.in/team/gautam-shroff/,,,,,,,,https://homecse.iitd.ac.in/faculty/
+Kaustubh Beedkar,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/kaustubh-beedkar/,kbeedkar@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Keerti Choudhary,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/keerti-choudhary/,keerti@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Kolin Paul,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/kolin-paul/,kolin@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Kumar Madhukar,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/kumar-madhukar/,madhukar@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Mausam,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/mausam/,mausam@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Maya Ramanath,Computer Science and Engineering,Associate Professor,current,,https://homecse.iitd.ac.in/team/maya-ramanath/,amanath@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Naveen Garg,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/naveen-garg/,naveen@cse.iitd.ac.in,0000-0001-7923-4464,,,,,,https://homecse.iitd.ac.in/faculty/
+Nikhil Balaji,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/nikhil-balaji/,nbalaji@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Parag Singla,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/parag-singla/,parags@cse.iitd.ac.in,0009-0000-9190-9794,,,,,,https://homecse.iitd.ac.in/faculty/
+Piyush Kumar Sharma,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/piyush-kumar-sharma/,piyush@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Preeti Ranjan Panda,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/preeti-r-panda/,panda@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Priyanka Golia,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/priyanka-golia/,pgolia@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Ragesh Jaiswal,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/ragesh-jaiswal/,rjaiswal@cse.iitd.ac.in,0009-0002-4475-0922,,,,,,https://homecse.iitd.ac.in/faculty/
+Rahul Garg,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/rahul-garg/,rahulgarg@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Rahul Narain,Computer Science and Engineering,Associate Professor,current,,https://homecse.iitd.ac.in/team/rahul-narain/,narain@cse.iitd.ac.in,0000-0003-4905-6649,,,,,,https://homecse.iitd.ac.in/faculty/
+Rajendra Kumar,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/rajendra-kumar/,r_kumar@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Rijurekha Sen,Computer Science and Engineering,Associate Professor,current,,https://homecse.iitd.ac.in/team/rijurekha-sen/,riju@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Rohan Paul,Computer Science and Engineering,Associate Professor,current,,https://homecse.iitd.ac.in/team/rohan-paul/,rohan@cse.iitd.ac.in,0000-0001-9082-0376,,,,,,https://homecse.iitd.ac.in/faculty/
+Rohit Vaish,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/rohit-vaish/,rvaish@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Sanjiva Prasad,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/sanjiva-prasad/,sanjiva@cse.iitd.ac.in,0000-0001-5887-1237,,,,,,https://homecse.iitd.ac.in/faculty/
+Sayan Ranu,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/sayan-ranu/,sayanranu@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Smruti Ranjan Sarangi,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/smruti-ranjan-sarangi/,srsarangi@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Sorav Bansal,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/sorav-bansal/,sbansal@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Srikanta Bedathur,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/srikanta-bedathur/,srikanta@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Subodh Kumar,Computer Science and Engineering,Professor,current,,https://homecse.iitd.ac.in/team/subodh-kumar/,subodh@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Subodh Vishnu Sharma,Computer Science and Engineering,Associate Professor,current,,https://homecse.iitd.ac.in/team/subodh-vishnu-sharma/,svs@cse.iitd.ac.in,0000-0003-3069-3744,,,,,,https://homecse.iitd.ac.in/faculty/
+Sumit Diware,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/sumit-diware/,sdiware@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Tarun Mangla,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/tarun-mangla/,tmangla@cse.iitd.ac.in,0000-0001-9016-9931,,,,,,https://homecse.iitd.ac.in/faculty/
+Vaishnavi Sundararajan,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/vaishnavi-sundararajan/,vaishnavi@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Venkata Vivek Kumar Koppula,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/venkata-vivek-kumar-koppula/,kvenkata@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Vijay Keswani,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/vijay-keswani/,vkeswani@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Vireshwar Kumar,Computer Science and Engineering,Assistant Professor,current,,https://homecse.iitd.ac.in/team/vireshwar-kumar/,viresh@cse.iitd.ac.in,0000-0002-2214-1571,,,,,,https://homecse.iitd.ac.in/faculty/
+Huzur Saran,Computer Science and Engineering,Emeritus Professor,emeritus,,https://homecse.iitd.ac.in/team/huzur-saran/,saran@cse.iitd.ac.in,,,,,,,https://homecse.iitd.ac.in/faculty/
+Sabyasachi Paldas,Design,Professor of Practice,adjunct,,,spaldas.1967@gmail.com,,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Aakash Johry,Design,Assistant Professor,current,,,aakash@design.iitd.ac.in,0000-0003-3871-4351,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Aneesha Sharma,Design,Associate Professor,current,,,aneesha@iitd.ac.in,0000-0003-4391-4649,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Charu Monga,Design,Assistant Professor,current,,,charum@iitd.ac.in,,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Gourab Kar,Design,Assistant Professor,current,,,gourab.kar@gmail.com,0000-0003-4617-2134,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Jay Dhariwal,Design,Associate Professor,current,,http://web.iitd.ac.in/~jay/,jay@design.iitd.ac.in,0000-0001-6201-4676,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Jyoti Kumar,Design,Head of the Department,current,,https://web.iitd.ac.in/~jyoti/index.html,hoddod@admin.iitd.ac.in,0000-0002-3810-3262,,,,,,https://design.iitd.ac.in/dod-faculty.html
+P. V. Madhusudhan Rao,Design,Professor,current,,http://web.iitd.ac.in/~pvmrao/,pvmrao@mech.iitd.ac.in,,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Pramod Khadilkar,Design,Associate Professor,current,,,prakha@design.iitd.ac.in,0000-0002-8249-2429,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Saurabh Tewari,Design,Assistant Professor,current,,,st@design.iitd.ac.in,0000-0002-4743-9948,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Srinivasan Venkataraman,Design,Associate Professor,current,,https://sites.google.com/view/srinivasan-aboutme/home,srinivenk@iitd.ac.in,0000-0001-8181-6594,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Subir Dey,Design,Assistant Professor,current,,http://www.subirdey.net,subir@iitd.ac.in,0000-0003-4140-7213,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Sumer Singh,Design,Associate Professor,current,,https://www.sumerid.com/,sumer@design.iitd.ac.in,0000-0001-7868-5888,,,,,,https://design.iitd.ac.in/dod-faculty.html
+Bhim Singh,Electrical Engineering,Honorary Professor,adjunct,,https://ee.iitd.ac.in/faculty-profile/4,bsingh@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~bsingh/,https://ee.iitd.ac.in/faculty
+S. Chaudhury,Electrical Engineering,Honorary Professor,adjunct,,https://ee.iitd.ac.in/faculty-profile/6,santanuc@ee.iitd.ac.in,0000-0002-5488-7773,,,,,https://web.iitd.ac.in/~santanuc/index.html,https://ee.iitd.ac.in/faculty
+Abhijit R. Abhyankar,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/2,abhyankar@ee.iitd.ac.in,,,,,,http://web.iitd.ac.in/~abhyankar/,https://ee.iitd.ac.in/faculty
+Abhisek Dixit,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/31,adixit@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~adixit/,https://ee.iitd.ac.in/faculty
+Abhishek Dixit,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/38,abhishek.dixit@iitd.ac.in,,,,,,https://web.iitd.ac.in/~abhishek.dixit/home.html,https://ee.iitd.ac.in/faculty
+Aditya Nema,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/79,adityanema@iitd.ac.in,,,,,,https://prof-demo-web-1-new.vercel.app/,https://ee.iitd.ac.in/faculty
+Amartansh Dubey,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/69,amardubey@ee.iitd.ac.in,,,,,,https://ee.iitd.ac.in/faculty,https://ee.iitd.ac.in/faculty
+Amit Kumar Jain,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/32,amitjain@ee.iitd.ac.in,,,,,https://iitd.irins.org/profile/10502,https://web.iitd.ac.in/~amitjain/index.html,https://civil.iitd.ac.in/index.php?lmenuid=faculty ; https://ee.iitd.ac.in/faculty
+Amol Choudhary,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/51,achoudhary@ee.iitd.ac.in,0000-0002-9999-4038,,,,https://iitd.irins.org/profile/99031#personal_information_panel,,https://ee.iitd.ac.in/faculty
+Anandarup Das,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/35,anandarup@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~anandarup/,https://ee.iitd.ac.in/faculty
+Ankesh Jain,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/50,ankesh@ee.iitd.ac.in,0000-0003-4109-6312,,,,,https://web.iitd.ac.in/~ankesh/,https://ee.iitd.ac.in/faculty
+Ankit Singhal,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/66,sankit@ee.iitd.ac.in,0000-0002-9849-7099,,,,,https://sites.google.com/site/ankitsinghal1291,https://ee.iitd.ac.in/faculty
+Anuj Dhawan,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/27,adhawan@ee.iitd.ac.in,0000-0001-5245-7713,,,,,http://web.iitd.ac.in/~adhawan/,https://ee.iitd.ac.in/faculty
+Anupama Rajoriya,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/76,rajoriya@iitd.ac.in,,,,,,https://sites.google.com/d/1GIGyqY4UL5jVF_-FnRrnmVJzfVaFnf5j/p/1PLtJ0n_Fw-Fxzhsi6I8r3l0wP1mcE8UA/edit,https://ee.iitd.ac.in/faculty
+Arpan Chattopadhyay,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/48,arpanc@iitd.ac.in,,,,,,https://sites.google.com/site/arpanchattop/,https://ee.iitd.ac.in/faculty
+B. K. Panigrahi,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/16,bkpanigrahi@ee.iitd.ac.in,,,,,,https://ee.iitd.ac.in/faculty,https://cart.iitd.ac.in/faculty ; https://ee.iitd.ac.in/faculty
+Bhaskar Mitra,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/36,bmitra@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~bmitra/,https://ee.iitd.ac.in/faculty
+Brejesh Lall,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/19,brejesh@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~brejesh/interest.html,https://ee.iitd.ac.in/faculty
+Deepak U. Patil,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/39,deepakpatil@ee.iitd.ac.in,0000-0002-2897-2587,,,,,https://web.iitd.ac.in/~deepakpatil/index.html,https://ee.iitd.ac.in/faculty
+Dhiman Mallick,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/49,dhiman.mallick@ee.iitd.ac.in,0000-0002-6622-6403,,,,,https://sites.google.com/site/dhimanmallick,https://ee.iitd.ac.in/faculty
+Gourab Ghatak,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/62,gghatak@ee.iitd.ac.in,,,,,,https://www.gghatak.com/,https://ee.iitd.ac.in/faculty
+Harshan Jagadeesh,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/42,jharshan@ee.iitd.ac.in,,,,,,https://sites.google.com/site/jharshan/,https://ee.iitd.ac.in/faculty
+Indra Narayan Kar,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/11,ink@ee.iitd.ac.in,0000-0003-0277-1725,,,,,http://web.iitd.ac.in/~ink,https://ee.iitd.ac.in/faculty
+Jayadeva,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/8,jayadeva@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~jayadeva/,https://ee.iitd.ac.in/faculty
+Kaushalya Jhuria,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/77,jkaushalya@ee.iitd.ac.in,,,,,,https://sites.google.com/view/silicon-quantum-photonics-lab/research?authuser=0,https://ee.iitd.ac.in/faculty
+Krishan Kant,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/70,kkbhalla@ee.iitd.ac.in,,,,,,https://sites.google.com/view/krishankantbhalla/home,https://ee.iitd.ac.in/faculty
+Lalan Kumar,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/40,lkumar@ee.iitd.ac.in,0000-0001-7000-7492,,,,,https://web.iitd.ac.in/~lalank/index.php,https://ee.iitd.ac.in/faculty
+M. Veerachary,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/13,mvchary@ee.iitd.ac.in,,,,,,https://ee.iitd.ac.in/people/mveerachary.html,https://ee.iitd.ac.in/faculty
+Madhusudan Singh,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/25,msingh@ee.iitd.ac.in,,,,,,http://web.iitd.ac.in/~msingh/,https://ee.iitd.ac.in/faculty
+Manan Suri,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/34,manansuri@ee.iitd.ac.in,0000-0003-1417-3570,,,,,http://web.iitd.ac.in/~manansuri/,https://ee.iitd.ac.in/faculty
+Manav Bhatnagar,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/21,manav@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~manav/,https://ee.iitd.ac.in/faculty
+Mayank Sewlia,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/87,sewlia@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~sewlia/,https://ee.iitd.ac.in/faculty
+Mukul Sarkar,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/29,msarkar@ee.iitd.ac.in,0000-0002-4958-8787,,,,,https://ee.iitd.ac.in/people/msarkar.html,https://ee.iitd.ac.in/faculty
+Mustafijur Rahman,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/55,mustafijur@ee.iitd.ac.in,0000-0003-0477-8154,,,,,https://web.iitd.ac.in/~mustafijur/,https://ee.iitd.ac.in/faculty
+Nilanjan Senroy,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/20,nsenroy@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~nsenroy/,https://ee.iitd.ac.in/faculty
+Pranav Sharma,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/86,,,,,,,https://ee.iitd.ac.in/faculty,https://ee.iitd.ac.in/faculty
+Priyabrata Saha,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/80,psaha@ee.iitd.ac.in,,,,,,https://ee.iitd.ac.in/faculty,https://ee.iitd.ac.in/faculty
+Priyank Srivastava,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/68,psrivast@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~psrivast/,https://ee.iitd.ac.in/faculty
+R. K. Mallik,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/10,rkmallik@ee.iitd.ac.in,,,,,,http://rkmallik.tripod.com/~rkmallik/,https://ee.iitd.ac.in/faculty
+Rakesh K. Palani,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/52,rakesh@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~rakesh/,https://ee.iitd.ac.in/faculty
+Ranjan Bose,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/9,rbose@ee.iitd.ac.in,0000-0001-5762-1957,,,,,https://web.iitd.ac.in/~rbose/,https://ee.iitd.ac.in/faculty
+S. Janardhanan,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/26,janas@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~janas/,https://ee.iitd.ac.in/faculty
+Saif Khan Mohammed,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/30,saifkm@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~saifkm,https://ee.iitd.ac.in/faculty
+Sandeep Kumar,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/53,ksandeep@ee.iitd.ac.in,,,,,,http://ctech.iitd.ac.in/sandeep.html,https://ee.iitd.ac.in/faculty
+Santanu Manna,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/65,mannasan@ee.iitd.ac.in,0000-0002-0946-2629,https://scholar.google.co.in/citations?hl=en&user=pu1ydGAAAAAJ&view_op=list_works&sortby=pubdate,,,,,https://ee.iitd.ac.in/faculty
+Seshan Srirangarajan,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/37,seshan@ee.iitd.ac.in,0000-0003-4424-638X,,,,,https://web.iitd.ac.in/~seshan/,https://ee.iitd.ac.in/faculty
+Shankar Prakriya,Electrical Engineering,Head of Department,current,,https://ee.iitd.ac.in/hod-profile/1,shankar.prakriya@ee.iitd.ac.in,0000-0002-9581-9275,,,,,https://web.iitd.ac.in/~shankar.prakriya/,https://ee.iitd.ac.in/faculty
+Shaunak Sen,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/1,shaunak.sen@ee.iitd.ac.in,,,,,,http://web.iitd.ac.in/~shaunak/sen,https://ee.iitd.ac.in/faculty
+Shouri Chatterjee,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/22,shouri@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~shouri/biosketch.php,https://ee.iitd.ac.in/faculty
+Shubham Sundeep,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/78,ssundeep@ee.iitd.ac.in,,,,,,https://sites.google.com/view/shubhamsundeep,https://ee.iitd.ac.in/faculty
+Shubhendu Bhasin,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/28,sbhasin@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~sbhasin/,https://ee.iitd.ac.in/faculty
+Soumya Shubhra Nag,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/47,ssnag@ee.iitd.ac.in,0000-0003-1043-2934,,,,,https://web.iitd.ac.in/~ssnag/,https://ee.iitd.ac.in/faculty
+Soutik Betal,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/54,soutik@ee.iitd.ac.in,0000-0002-8580-2015,,,,,https://web.iitd.ac.in/~soutik/,https://ee.iitd.ac.in/faculty
+Sreyam Sinha,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/63,sreyamsinha@ee.iitd.ac.in,,,,,,https://sites.google.com/view/sreyamsinha,https://ee.iitd.ac.in/faculty
+Subashish Datta,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/46,subashish@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~subashish/index.html,https://ee.iitd.ac.in/faculty
+Subrat Kar,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/7,subrat@ee.iitd.ac.in,0000-0002-2845-5598,,,,,https://web.iitd.ac.in/~subrat/,https://ee.iitd.ac.in/faculty
+Sukumar Mishra,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/15,sukumar@ee.iitd.ac.in,,,,,,https://web.iitd.ac.in/~sukumar/,https://ee.iitd.ac.in/faculty
+Sumantra Dutta Roy,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/18,sumantra@ee.iitd.ac.in,,,,,,https://www.cse.iitd.ac.in/~sumantra/,https://ee.iitd.ac.in/faculty
+Sumeet Agarwal,Electrical Engineering,Faculty,current,,https://ee.iitd.ac.in/joint-faculty-profile/4,sumeet@ee.iitd.ac.in,,,,,,http://web.iitd.ac.in/~sumeet/,https://scai.iitd.ac.in/faculty ; jf_ee.html
+Sumit Kumar Pramanick,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/45,spramanick@ee.iitd.ac.in,0000-0002-7797-2145,,,,,https://web.iitd.ac.in/~spramanick/,https://ee.iitd.ac.in/faculty
+Swades De,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/17,swadesd@ee.iitd.ac.in,0000-0003-3979-1025,,,,,https://web.iitd.ac.in/~swadesd/,https://ee.iitd.ac.in/faculty
+Tanmoy Chakraborty,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/64,tanchak@ee.iitd.ac.in,,,,,,https://tanmoychak.com/,https://ee.iitd.ac.in/faculty
+Tapan K. Gandhi,Electrical Engineering,Professor,current,,https://ee.iitd.ac.in/faculty-profile/33,tgandhi@ee.iitd.ac.in,0000-0002-3532-9389,,,,,https://tapankgandhi.com/,https://ee.iitd.ac.in/faculty
+Vivek Venkataraman,Electrical Engineering,Associate Professor,current,,https://ee.iitd.ac.in/faculty-profile/43,vivekv@iitd.ac.in,,,,,,https://sites.google.com/view/vivekv,https://ee.iitd.ac.in/faculty
+Yashasvi Bansal,Electrical Engineering,Assistant Professor,current,,https://ee.iitd.ac.in/faculty-profile/67,yashasvi@ee.iitd.ac.in,,,,,,https://sites.google.com/view/yashasvi-bansal,https://ee.iitd.ac.in/faculty
+Anshika,Electrical Engineering,Emeritus Professor,emeritus,,https://ee.iitd.ac.in/faculty-profile/82,anshika@ee.iitd.ac.in,,,,,,https://ee.iitd.ac.in/,https://ee.iitd.ac.in/faculty
+Himanshu Saini,Electrical Engineering,Emeritus Professor,emeritus,,https://ee.iitd.ac.in/faculty-profile/81,hsaini@ee.iitd.ac.in,,,,,,https://ee.iitd.ac.in/,https://ee.iitd.ac.in/faculty
+Mahesh Gaurav Yadav,Electrical Engineering,Emeritus Professor,emeritus,,https://ee.iitd.ac.in/faculty-profile/84,tomahesh@iitd.ac.in,0000-0002-9294-0846,,,,,https://ee.iitd.ac.in/,https://ee.iitd.ac.in/faculty
+Rashi Jain,Electrical Engineering,Emeritus Professor,emeritus,,https://ee.iitd.ac.in/faculty-profile/83,rashileo@ee.iitd.ac.in,,,,,,https://ee.iitd.ac.in/,https://ee.iitd.ac.in/faculty
+Shefali Painuli,Electrical Engineering,Emeritus Professor,emeritus,,https://ee.iitd.ac.in/faculty-profile/85,,,,,,,https://ee.iitd.ac.in/,https://ee.iitd.ac.in/faculty
+Shobha Sharma,Electrical Engineering,Emeritus Professor,emeritus,,https://ee.iitd.ac.in/faculty-profile/74,shobhasharma@iitd.ac.in,,https://scholar.google.com/citations?user=z-mIuBgAAAAJ&hl=en,,,,,https://ee.iitd.ac.in/faculty
+Arihant Bhandari,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/61,arihant@dese.iitd.ac.in,0000-0002-2914-9402,https://scholar.google.com/citations?user=jURdCNoAAAAJ,,,,https://web.iitd.ac.in/~arihant/,https://dese.iitd.ac.in/faculty
+Ashu Verma,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/19,averma@dese.iitd.ac.in,0000-0002-1573-8994,,,,https://iitd.irins.org/profile/70235,https://web.iitd.ac.in/~averma/,https://dese.iitd.ac.in/faculty
+Avanish Tripathi,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/24,avanish@dese.iitd.ac.in,,https://scholar.google.co.in/citations?user=UHC04JUAAAAJ&hl=hi,,,,https://sites.google.com/view/aetpglab/home,https://dese.iitd.ac.in/faculty
+Bibhuti Bhusan Sahu,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/15,bbsahu@dese.iitd.ac.in,0000-0002-1012-9559,,,,https://iitd.irins.org/profile/201788,https://bibhutisahu.wixsite.com/my-site,https://dese.iitd.ac.in/faculty
+Debaprasad Sahu,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/16,dpsahu@dese.iitd.ac.in,0000-0002-4226-5379,,,,https://iitd.irins.org/profile/85691,https://sites.google.com/view/dsahuweb/home?authuser=1,https://dese.iitd.ac.in/faculty
+Dibakar Rakshit,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/13,dibakar@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/70237,https://web.iitd.ac.in/~dibakar/,https://dese.iitd.ac.in/faculty
+K. A. Subramanian,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/3,subra@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/70049,,https://dese.iitd.ac.in/faculty
+Kaushik Saha,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/14,kaushiksaha@dese.iitd.ac.in,0000-0003-0153-0292,,,,https://iitd.irins.org/profile/70249,https://sites.google.com/view/kaushik-saha/home,https://dese.iitd.ac.in/faculty
+Rabindra Mohanty,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/58,rabindra@dese.iitd.ac.in,,https://scholar.google.co.in/citations?user=zLB8KzsAAAAJ&hl=en,,,,https://sites.google.com/view/assistant-professor-iit-delhi/home,https://dese.iitd.ac.in/faculty
+Rahul Goyal,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/7,rahulgoyal@dese.iitd.ac.in,0000-0002-3221-2847,,,,https://iitd.irins.org/profile/100061,https://hwpliitd.wixsite.com/my-site,https://dese.iitd.ac.in/faculty
+Ramesh Narayanan,Energy Science and Engineering,Head of the Department,current,,https://dese.iitd.ac.in/hod-profile/1,hodces@admin.iitd.ac.in,0000-0003-4726-003X,,,,https://iitd.irins.org/profile/85685,https://dese.iitd.ac.in/hod-profile/1,https://dese.iitd.ac.in/faculty
+Rangan Banerjee,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/59,rangan@iitd.ac.in,,https://scholar.google.com/citations?user=CXrZU8gAAAAJ&hl=en,,,,https://www.ese.iitb.ac.in/~rb/#!/home,https://dese.iitd.ac.in/faculty
+Ravi K Kumar,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/10,krk@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/70245,,https://dese.iitd.ac.in/faculty
+S. K Tyagi,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/17,tyagisk@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/70053,https://sites.google.com/view/sktyagi,https://dese.iitd.ac.in/faculty
+Satyananda Kar,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/8,satyananda@dese.iitd.ac.in,0000-0001-8033-2328,,,,https://iitd.irins.org/profile/70243,https://web.iitd.ac.in/~satyananda,https://dese.iitd.ac.in/faculty
+Snehasish Panigrahy,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/12,snehasish.panigrahy@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/292325,https://sites.google.com/view/cfel-iitd/home,https://dese.iitd.ac.in/faculty
+Subhendu Dutta,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/6,sd@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/204316,https://subdut87.wixsite.com/subhendu,https://dese.iitd.ac.in/faculty
+Subodh Khullar,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/62,skhullar@iitd.ac.in,,https://scholar.google.com/citations?user=MpMo7EwAAAAJ,,,,https://web.iitd.ac.in/~skhullar/,https://dese.iitd.ac.in/faculty
+Sujeet Yadav,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/60,syadav@iitd.ac.in,,https://scholar.google.com/citations?user=CLHlKywAAAAJ&hl=en&oi=ao,,,,https://web.iitd.ac.in/~syadav/,https://dese.iitd.ac.in/faculty
+Sumit K. Chattopadhyay,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/5,sumit@dese.iitd.ac.in,0000-0002-4293-8289,,,,https://iitd.irins.org/profile/70247,,https://dese.iitd.ac.in/faculty
+Supravat Karak,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/9,supravat@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/70241,https://supravatk.wixsite.com/ohedl,https://dese.iitd.ac.in/faculty
+Trilok Singh,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/57,triloksingh@iitd.ac.in,0000-0003-2322-7403,,,,,https://sites.google.com/view/tsingh-step-iitdelhi/home?authuser=0,https://dese.iitd.ac.in/faculty
+Vamsi K Komarala,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/1,vamsi@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/85683,https://web.iitd.ac.in/~vamsi/,https://dese.iitd.ac.in/faculty
+Vipin Kumar,Energy Science and Engineering,Faculty,current,,https://dese.iitd.ac.in/faculty-profile/4,vkumar@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/150876,https://web.iitd.ac.in/~vkumar/,https://dese.iitd.ac.in/faculty
+Ashok Kumar Mukerjee,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/39,,,,,,,https://www.dese.iitd.ac.in,exfac_dese.html
+Avinash Chandra,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/30,,,,,,,https://www.dese.iitd.ac.in,exfac_dese.html
+D. P. Kothari,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/37,,0000-0001-8964-3309,,,,,https://www.dese.iitd.ac.in,exfac_dese.html
+H. P. Garg,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/35,garghp@iitd.ac.in,,,,,,http://www.profhpgarg.com/publications.asp,exfac_dese.html
+L. M. Das,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/38,lmdas@ces.iitd.ac.in,0000-0002-0257-0766,https://scholar.google.com/citations?user=W-weGwsAAAAJ&hl=en,,,,http://web.iitd.ernet.in/~lmdas,exfac_dese.html
+M. G. Dastidar,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/32,dastidar@dese.iitd.ac.in,,,,,,https://www.dese.iitd.ac.in,exfac_dese.html
+M. K. G. Babu,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/27,mkgbabu@ces.iitd.ac.in,,,,,,http://web.iitd.ernet.in/~mkgbabu,exfac_dese.html
+M. S. Sodha,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/45,,,,,,,https://www.dese.iitd.ac.in,exfac_dese.html ; exfac_physics.html
+N. K. Bansal,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/29,nkbansal@dese.iitd.ac.in,0000-0001-6353-9730,https://scholar.google.com/citations?user=bunbTi8AAAAJ&hl=en,,,,,exfac_dese.html
+R Uma,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/18,ruma@dese.iitd.ac.in,0000-0002-6451-5332,,,,https://iitd.irins.org/profile/70051,https://dese.iitd.ac.in,exfac_dese.html
+R. Balasubramanian,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/28,rbmanian@ces.iitd.ac.in,,,,,,http://web.iitd.ernet.in/~rbmanian,exfac_dese.html
+R. P. Dahiya,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/31,rpdahiya@ces.iitd.ac.in,,https://scholar.google.com/citations?user=Tkbzpu0AAAAJ&hl=en,,,,https://profile.iitd.ac.in//~rpdahiya,exfac_dese.html
+R. P. Sharma,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/42,rpsharma@dese.iitd.ac.in,0000-0001-5666-4103,,,,,https://www.dese.iitd.ac.in,exfac_dese.html
+S. C. Kaushik,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/36,kaushik@dese.iitd.ac.in,0000-0001-5879-186X,https://scholar.google.co.in/citations?user=rvWt1Q0AAAAJ&hl=en,,,,,exfac_dese.html
+Sandeep Pathak,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/43,spathak@iitd.ac.in,,,,,,https://www.dese.iitd.ac.in,exfac_dese.html
+T. C. Kandpal,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/2,tarak@dese.iitd.ac.in,,,,,,https://web.iitd.ac.in/~tarak/,exfac_dese.html
+T. S. Bhatti,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/21,tsb@dese.iitd.ac.in,,,,,https://iitd.irins.org/profile/16878,,exfac_dese.html
+Viresh Dutta,Energy Science and Engineering,Former faculty (2017-2021); last listed as Faculty,former,,https://dese.iitd.ac.in/faculty-profile/22,vdutta@dese.iitd.ac.in,0000-0003-0382-1800,,,,https://iitd.irins.org/profile/16864,,exfac_dese.html
+Rukmini Bhaya Nair,Humanities and Social Sciences,"Honorary Professor (Linguistics, Literature)",adjunct,,,rbnair@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Abhijit Banerji,Humanities and Social Sciences,Professor (Economics),current,,,a_banerji@hss.iitd.ac.in,0000-0003-3384-8764,,,,,,https://hss.iitd.ac.in/faculty
+Angelie Multani,Humanities and Social Sciences,Professor (Literature),current,,,angelie@hss.iitd.ac.in,0000-0003-3789-9243,,,,,,https://hss.iitd.ac.in/faculty
+Ankush Agrawal,Humanities and Social Sciences,Professor (Economics),current,,,firstname@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Arudra Burra,Humanities and Social Sciences,Assistant Professor (Philosophy),current,,,burra@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Ashwini Vaidya,Humanities and Social Sciences,Assistant Professor (Linguistics),current,,,avaidya@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Bharati Puri,Humanities and Social Sciences,Associate Professor (Philosophy),current,,,bpuri@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Debasis Mondal,Humanities and Social Sciences,Professor (Economics),current,,,,0009-0001-7624-359X,,,,,,https://hss.iitd.ac.in/faculty
+Deepak Alok,Humanities and Social Sciences,Assistant Professor (Linguistics),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Dickens Leonard,Humanities and Social Sciences,Assistant Professor (Literature),current,,,,0000-0002-6292-9072,,,,,,https://hss.iitd.ac.in/faculty
+Divya Dwivedi,Humanities and Social Sciences,"Professor (Literature, Philosophy)",current,,,divyadwi@hss.iitd.ac.in,0000-0002-8091-7761,,,,,,https://hss.iitd.ac.in/faculty
+Don Dcruz,Humanities and Social Sciences,Assistant Professor (Philosophy),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Farhana Ibrahim,Humanities and Social Sciences,Professor (Sociology),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Ishan Anand,Humanities and Social Sciences,Assistant Professor (Economics),current,,,ianand@iitd.ac.in,0000-0003-1587-5865,,,,,,https://hss.iitd.ac.in/faculty
+Jayan Jose Thomas,Humanities and Social Sciences,Professor (Economics),current,,,jayanjthomas@gmail.com,,,,,,,https://hss.iitd.ac.in/faculty
+Kamlesh Singh,Humanities and Social Sciences,Professor (Psychology),current,,,singhk@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Madhulika Sonkar,Humanities and Social Sciences,Assistant Professor (Sociology),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Mahuya Bandyopadhyay,Humanities and Social Sciences,Professor (Sociology),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Milind Wakankar,Humanities and Social Sciences,Associate Professor (Literature),current,,,milindw@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Naveen Thayyil,Humanities and Social Sciences,Associate Professor (Multi. Disc.),current,,,nthayyil@iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Paroma Sanyal,Humanities and Social Sciences,Associate Professor (Linguistics),current,,,psanyal@hss.iitd.ac.in,0009-0002-3384-3656,,,,,,https://hss.iitd.ac.in/faculty
+Pritha Chandra,Humanities and Social Sciences,Professor (Linguistics),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Rakesh Chaturvedi,Humanities and Social Sciences,Associate Professor (Economics),current,,,rcrakesh@iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Reetika Khera,Humanities and Social Sciences,Professor (Economics),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Richa Kumar,Humanities and Social Sciences,Associate Professor (Multi. Disc.),current,,,,0009-0003-9860-5250,,,,,,https://hss.iitd.ac.in/faculty
+Rohit Kumar,Humanities and Social Sciences,Assistant Professor (Economics),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Sahiinii Veikho,Humanities and Social Sciences,Assistant Professor (Linguistics),current,,,,0000-0003-2350-7042,,,,,,https://hss.iitd.ac.in/faculty
+Samar Husain,Humanities and Social Sciences,Associate Professor (Multi. Disc.),current,,,,0000-0002-4336-4897,,,,,,https://hss.iitd.ac.in/faculty
+Sanil V,Humanities and Social Sciences,Professor (Philosophy),current,,,sanil@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Saptarshi Mukherjee,Humanities and Social Sciences,Professor (Economics),current,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Sarbeswar Sahoo,Humanities and Social Sciences,Professor (Sociology),current,,,,0000-0002-3274-2434,,,,,,https://hss.iitd.ac.in/faculty
+Simona Sawhney,Humanities and Social Sciences,Professor (Literature),current,,,ssawhney@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Sisir Debnath,Humanities and Social Sciences,Associate Professor (Economics),current,,,sisirdebnath@iitd.ac.in,0000-0001-8395-8836,,,,,,https://hss.iitd.ac.in/faculty
+Sneha Lamba,Humanities and Social Sciences,Assistant Professor (Economics),current,,,,0000-0002-3086-2491,,,,,,https://hss.iitd.ac.in/faculty
+Sourabh B Paul,Humanities and Social Sciences,Associate Professor (Economics),current,,,,0000-0002-6410-1818,,,,,,https://hss.iitd.ac.in/faculty
+Stuti Khanna,Humanities and Social Sciences,Associate Professor (Literature),current,,,stuti.khanna@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Sumitava Mukherjee,Humanities and Social Sciences,Associate Professor (Psychology),current,,,sm1@hss.iitd.ac.in,0000-0002-8445-0492,,,,,,https://hss.iitd.ac.in/faculty
+Sunny Kumar,Humanities and Social Sciences,Assistant Professor (History),current,,,sunnykumar@iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Tsering Nurboo,Humanities and Social Sciences,Assistant Professor (Philosophy),current,,,nurboo@hss.iitd.ac.in,,,,,,,https://hss.iitd.ac.in/faculty
+Varsha Singh,Humanities and Social Sciences,Professor (Psychology),current,,,vsingh@iitd.ac.in,0000-0002-0262-7785,,,,,,https://hss.iitd.ac.in/faculty
+Vibha Arora,Humanities and Social Sciences,Professor (Sociology),current,,,vibhaaurora@yahoo.com,,,,,,,https://hss.iitd.ac.in/faculty
+Vinay Suhalka,Humanities and Social Sciences,Assistant Professor (Sociology),current,,,suhalkavinay@iitd.ac.in,0009-0003-6447-1020,,,,,,https://hss.iitd.ac.in/faculty
+Yashpal Jogdand,Humanities and Social Sciences,Associate Professor (Psychology),current,,,,0000-0002-2672-8564,,,,,,https://hss.iitd.ac.in/faculty
+Purnima Singh,Humanities and Social Sciences,Professor Emeritus (Psychology),emeritus,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Ravinder Kaur,Humanities and Social Sciences,Professor Emerita (Sociology),emeritus,,,,,,,,,,https://hss.iitd.ac.in/faculty
+Agam Gupta,Management Studies,Associate Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-agam-gupta/,agam@iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Amlendu Kumar Dubey,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-amlendu-kumar-dubey/,amlendu@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Arpan Kumar Kar,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-arpan-kumar-kar/,arpankar@dms.iitd.ac.in,0000-0003-4186-4887,,,,,,https://dms.iitd.ac.in/faculty/
+Avinash Jain,Management Studies,Assistant Professor,current,,https://dms.iitd.ac.in/areawise_faculity/dr-avinash-jain/,avinashjain@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Biswajita Parida,Management Studies,Associate Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-biswajita-parida/,biswajitap@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Eri Ikeda,Management Studies,Assistant Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-eri-ikeda/,eri.ikeda@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Gourav Dwivedi,Management Studies,Associate Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-gourav-dwivedi/,gourav@dms.iitd.ac.in,0000-0002-8036-5880,,,,,,https://dms.iitd.ac.in/faculty/
+Jitender Madaan,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-jitendra-madaan/,jmadaan@dms.iitd.ac.in,0000-0003-3245-5854,,,,,,https://dms.iitd.ac.in/faculty/
+Kanika T. Bhal,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-kanika-t-bhal/,kanika@iitd.dms.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+M. P. Gupta,Management Studies,Modi Foundation Chair Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-m-p-gupta/,mpgupta@dms.iitd.ac.in,0000-0002-6260-2651,,,,,,https://dms.iitd.ac.in/faculty/
+Mahim Sagar,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/mahim-sagar/,mahim@dms.iitd.ac.in,0000-0002-1987-095X,,,,,,https://dms.iitd.ac.in/faculty/
+Neeru Chaudhry,Management Studies,Associate Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-neeru-chaudhry/,neeruc1@iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+P. Vigneswara Ilavarasan,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-p-v-ilavarasan/,vignes@iitd.ac.in,0000-0002-9431-3520,,,,,,https://dms.iitd.ac.in/faculty/
+Prasanna R,Management Studies,Assistant Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-prasanna-r/,prasanna.r@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Sanjay Dhir,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-sanjay-dhir/,sanjaydhir@dms.iitd.ac.in,0000-0001-6754-9602,,,,,,https://dms.iitd.ac.in/faculty/
+Seema Sharma,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/dr-seema-sharma/,seemash@dms.iitd.ac.in,0000-0001-8218-5560,,,,,,https://dms.iitd.ac.in/faculty/
+Shuchi Sinha,Management Studies,Associate Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-shuchi-sinha/,shuchi@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Shveta Singh,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-shveta-singh/,shvetasingh@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Smita Kashiramka,Management Studies,Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-smita-kashiramka/,smitak@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Sonali Jain,Management Studies,Assistant Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-sonali-jain/,sonalijain@dms.iitd.ac.in,0000-0002-1836-5564,,,,,,https://dms.iitd.ac.in/faculty/
+Surya Prakash Singh,Management Studies,Professor & Head,current,,https://dms.iitd.ac.in/areawise_faculity/prof-surya-prakash-singh/,sprsingh@dms.iitd.ac.in,0000-0002-3867-6845,,,,,,https://dms.iitd.ac.in/faculty/
+Vivek G Nair,Management Studies,Assistant Professor,current,,https://dms.iitd.ac.in/areawise_faculity/prof-vivek-g-nair/,nairvivek@iitd.ac.in,0000-0001-8955-9422,,,,,,https://dms.iitd.ac.in/faculty/
+Vivek Mishra,Management Studies,Assistant Professor,current,,https://dms.iitd.ac.in/areawise_faculity/dr-vivek-mishra/,vmishra@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Harish Chaudhry,Management Studies,Emeritus Professor,emeritus,,https://dms.iitd.ac.in/areawise_faculity/abc/,harisgc@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+S. S. Yadav,Management Studies,Emeritus Professor,emeritus,,https://dms.iitd.ac.in/areawise_faculity/prof-s-s-yadav/,ssyadav@dms.iitd.ac.in,,,,,,,https://dms.iitd.ac.in/faculty/
+Abhishek Sarkar,Materials Science and Engineering,Assistant Professor,current,,,asarkar@iitd.ac.in,0000-0001-9444-8241,,,,,https://sites.google.com/view/abhishek-sarkar-iit-delhi/home,https://mse.iitd.ac.in/api/faculty_api
+Ankur Goswami,Materials Science and Engineering,Associate Professor,current,,,agoswami@mse.iitd.ac.in,0000-0003-0639-6758,,,,,https://sites.google.com/view/ankur-goswami/home/,https://mse.iitd.ac.in/api/faculty_api
+Ayan Bhowmik,Materials Science and Engineering,Associate Professor,current,,,abhowmik@mse.iitd.ac.in,0000-0002-8484-7430,,,,,https://sites.google.com/view/ayan-bhowmik/home,https://mse.iitd.ac.in/api/faculty_api
+Bhabani K Satapathy,Materials Science and Engineering,Professor,current,,,bhabani@mse.iitd.ac.in,,,,,,https://sites.google.com/view/bksatapathy/home,https://mse.iitd.ac.in/api/faculty_api
+Bijay P Tripathi,Materials Science and Engineering,Associate Professor,current,,,bptripathi@mse.iitd.ac.in,,,,,,https://www.bptripathi.com/,https://mse.iitd.ac.in/api/faculty_api
+Divya Nayar,Materials Science and Engineering,Associate Professor,current,,,divyanayar@mse.iitd.ac.in,0000-0001-8569-7633,,,,,https://sites.google.com/prod/view/divyanayar/,https://mse.iitd.ac.in/api/faculty_api
+Jayant Jain,Materials Science and Engineering,Professor,current,,,jayantj@mse.iitd.ac.in,,,,,,https://sites.google.com/view/profjayantjain/home,https://mse.iitd.ac.in/api/faculty_api
+Josemon Jacob,Materials Science and Engineering,Professor,current,,,jacob@mse.iitd.ac.in,0000-0002-7512-3289,,,,,https://sites.google.com/view/josemonjacob/home,https://mse.iitd.ac.in/api/faculty_api
+Krishna B. Balasubramanian,Materials Science and Engineering,Assistant Professor,current,,,bkrishna@mse.iitd.ac.in,0000-0001-6307-7425,,,,,https://web.iitd.ac.in/~bkrishna/,https://mse.iitd.ac.in/api/faculty_api
+Lakshmi N. Ramasubramanian,Materials Science and Engineering,Associate Professor,current,,,rlnarayan@mse.iitd.ac.in,,,,,,https://sites.google.com/view/rlnarayan/home,https://mse.iitd.ac.in/api/faculty_api
+Leena Nebhani,Materials Science and Engineering,Professor,current,,,lnebhani@mse.iitd.ac.in,,,,,,https://sites.google.com/view/surfchem/home,https://mse.iitd.ac.in/api/faculty_api
+N S Harsha Gunda,Materials Science and Engineering,Assistant Professor,current,,,gnsharsha@mse.iitd.ac.in,,,,,,https://scholar.google.com/citations?user=MsQejEkAAAAJ&hl=en,https://mse.iitd.ac.in/api/faculty_api
+Nirat Ray,Materials Science and Engineering,Associate Professor,current,,,nirat@mse.iitd.ac.in,0000-0003-0984-2469,,,,,https://nirat3.wixsite.com/electronic-metamater,https://mse.iitd.ac.in/api/faculty_api
+Nitya Nand Gosvami,Materials Science and Engineering,Associate Professor,current,,,ngosvami@mse.iitd.ac.in,0000-0003-4082-9887,,,,,https://sites.google.com/view/ngosvami/home,https://mse.iitd.ac.in/api/faculty_api
+Rajesh Prasad,Materials Science and Engineering,Professor,current,,,rajesh@mse.iitd.ac.in,0000-0002-6020-0827,,,,,https://sites.google.com/view/prof-rajesh-prasad/home,https://mse.iitd.ac.in/api/faculty_api
+Rohit Malik,Materials Science and Engineering,Assistant Professor,current,,,rmalik@mse.iitd.ac.in,0000-0001-8764-3321,,,,,https://scholar.google.com/citations?user=R6a33LkAAAAJ&hl=en,https://mse.iitd.ac.in/api/faculty_api
+Sampa Saha,Materials Science and Engineering,Professor,current,,,ssaha@mse.iitd.ac.in,,,,,,https://sites.google.com/view/sampasaha/home,https://mse.iitd.ac.in/api/faculty_api
+Sangeeta Santra,Materials Science and Engineering,Associate Professor,current,,,ssantra@mse.iitd.ac.in,,,,,,https://sites.google.com/view/ssantra/home,https://mse.iitd.ac.in/api/faculty_api
+Shib S. Banerjee,Materials Science and Engineering,Associate Professor,current,,,ssbanerjee@mse.iitd.ac.in,0000-0001-6785-2150,,,,,https://sites.google.com/view/shib-shankar/home,https://mse.iitd.ac.in/api/faculty_api
+Suresh Neelakantan,Materials Science and Engineering,Associate Professor,current,,,sureshn@mse.iitd.ac.in,,,,,,https://sites.google.com/view/sureshn/home,https://mse.iitd.ac.in/api/faculty_api
+Suryanarayana Vikrant Karra,Materials Science and Engineering,Assistant Professor,current,,,ksnvikrant@mse.iitd.ac.in,0000-0002-5671-0998,,,,,https://sites.google.com/view/ksn-vikrant/home,https://mse.iitd.ac.in/api/faculty_api
+Amit Priyadarshi,Mathematics,Associate Professor,current,,,priyadarshi@maths.iitd.ac.in,0000-0002-7706-1587,,,,,https://web.iitd.ac.in/~priyadarshi/,https://maths.iitd.ac.in/api/faculty
+Amitabha Tripathi,Mathematics,Professor,current,,,atripath@maths.iitd.ac.in,0000-0002-3790-1908,,,,,https://web.iitd.ac.in/~atripath/,https://maths.iitd.ac.in/api/faculty
+Ananta Kumar Majee,Mathematics,Associate Professor,current,,,majee@maths.iitd.ac.in,,,,,,https://sites.google.com/d/11Ln774ulTgRAvKrqHpfxwxu6RS5S-8p8/p/1eKneqbAGgrW4hKUaKJpuVx6ZGY7nJW_g/edit,https://maths.iitd.ac.in/api/faculty
+Anima Nagar,Mathematics,Associate Professor,current,,,anima@maths.iitd.ac.in,,,,,,,https://maths.iitd.ac.in/api/faculty
+Aparajita Dasgupta,Mathematics,Associate Professor,current,,,adasgupta@maths.iitd.ac.in,0000-0001-7093-8158,,,,,https://sites.google.com/view/aparajitadasgupta/home,https://maths.iitd.ac.in/api/faculty
+Aparna Mehra,Mathematics,Professor,current,,,apmehra@maths.iitd.ac.in,0009-0005-3319-6948,,,,,https://web.iitd.ac.in/~apmehra/,https://maths.iitd.ac.in/api/faculty
+Ashutosh Rai,Mathematics,Associate Professor,current,,,ashutosh.rai@maths.iitd.ac.in,0000-0003-2429-750X,,,,,https://web.iitd.ac.in/~raiashutosh/,https://maths.iitd.ac.in/api/faculty
+Bhawani Sankar Panda,Mathematics,Professor (HAG),current,,,bspanda@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~bspanda/,https://maths.iitd.ac.in/api/faculty
+Biplab Basak,Mathematics,Associate Professor,current,,,biplab@iitd.ac.in,0000-0002-4978-7022,,,,,https://sites.google.com/view/biplabbasak,https://maths.iitd.ac.in/api/faculty
+Biplab Paul,Mathematics,Assistant Professor,current,,,paulbiplab@maths.iitd.ac.in,,,,,,,https://maths.iitd.ac.in/api/faculty
+Biswajyoti Saha,Mathematics,Assistant Professor,current,,,biswajyoti@maths.iitd.ac.in,0009-0009-2904-4860,,,,,https://sites.google.com/site/biswajyotimathematics/,https://maths.iitd.ac.in/api/faculty
+Dalu Jacob,Mathematics,Assistant Professor,current,,,dalujacob@maths.iitd.ac.in,0009-0008-2277-5639,,,,,https://sites.google.com/view/dalujacob,https://maths.iitd.ac.in/api/faculty
+Ekata Saha,Mathematics,Associate Professor,current,,,ekata@maths.iitd.ac.in,,,,,,https://sites.google.com/site/ekatamath/home,https://maths.iitd.ac.in/api/faculty
+Harish Kumar,Mathematics,Professor,current,,,hkumar@maths.iitd.ac.in,0000-0003-4746-2336,,,,,http://hkkaushik.github.io,https://maths.iitd.ac.in/api/faculty
+Harmender Gahlawat,Mathematics,Assistant Professor,current,,,gahlawat@maths.iitd.ac.in,,,,,,https://sites.google.com/view/harmendergahlawat,https://maths.iitd.ac.in/api/faculty
+Kamana Porwal,Mathematics,Associate Professor,current,,,kamana@maths.iitd.ac.in,,,,,,https://sites.google.com/view/kporwal/home,https://maths.iitd.ac.in/api/faculty
+Konijeti Sreenadh,Mathematics,"Professor (HAG), Janaki & K.A. Iyer Chair Professor",current,,,sreenadh@maths.iitd.ac.in,,,,,,https://sites.google.com/view/professor-sreenadh/,https://maths.iitd.ac.in/api/faculty
+Mani Mehra,Mathematics,"Professor, Head of Department",current,,,mmehra@maths.iitd.ac.in,,,,,,http://web.iitd.ac.in/~mmehra/,https://maths.iitd.ac.in/api/faculty
+Minati De,Mathematics,Associate Professor,current,,,minati@maths.iitd.ac.in,0000-0002-1859-8800,,,,,https://web.iitd.ac.in/~minati/,https://maths.iitd.ac.in/api/faculty
+N. Shravan Kumar,Mathematics,Professor,current,,,shravankumar@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~shravankumar/,https://maths.iitd.ac.in/api/faculty
+Neeraj Joshi,Mathematics,Assistant Professor,current,,,njoshi@maths.iitd.ac.in,0000-0001-9017-4255,,,,,https://sites.google.com/view/joshineeraj,https://maths.iitd.ac.in/api/faculty
+Pinakinath Saha,Mathematics,Assistant Professor,current,,,pinakinath@maths.iitd.ac.in,0000-0003-1077-3990,,,,,https://pinakinath.github.io/,https://maths.iitd.ac.in/api/faculty
+Punit Sharma,Mathematics,Associate Professor,current,,,punit1718@maths.iitd.ac.in,0000-0001-5110-4449,,,,,https://web.iitd.ac.in/~punit1718/index.html,https://maths.iitd.ac.in/api/faculty
+Rahul Singh,Mathematics,Assistant Professor,current,,,sirahul@maths.iitd.ac.in,,,,,,https://sites.google.com/view/rahuls/,https://maths.iitd.ac.in/api/faculty
+Ritumoni Sarma,Mathematics,Professor,current,,,ritumoni@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~ritumoni/,https://maths.iitd.ac.in/api/faculty
+S Dharmaraja,Mathematics,Professor (HAG),current,,,dharmar@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~dharmar/,https://maths.iitd.ac.in/api/faculty
+S. Chandra Sekhara Rao,Mathematics,Professor,current,,,scsr@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~scsr/,https://maths.iitd.ac.in/api/faculty
+S. Sivananthan,Mathematics,Professor,current,,,siva@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~siva/,https://maths.iitd.ac.in/api/faculty
+Shiv Prakash Patel,Mathematics,Assistant Professor,current,,,shiv@maths.iitd.ac.in,,,,,,https://sites.google.com/view/shivprakashpatel,https://maths.iitd.ac.in/api/faculty
+Surjeet Kour,Mathematics,Associate Professor,current,,,surjeetkour@maths.iitd.ac.in,,,,,,https://sites.google.com/view/surjeetkour/home,https://maths.iitd.ac.in/api/faculty
+Vijayananda Kalyana Srinivas Kumar Vasana,Mathematics,Assistant Professor,current,,,vvksrini@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~vvksrini/Oldhomepage/,https://maths.iitd.ac.in/api/faculty
+Vikas Vikram Singh,Mathematics,Associate Professor,current,,,vikassingh@maths.iitd.ac.in,,,,,,https://sites.google.com/site/vikassinghiitd/home,https://maths.iitd.ac.in/api/faculty
+Viswanathan Puthan Veedu,Mathematics,Professor,current,,,viswa@maths.iitd.ac.in,0000-0002-7876-7258,,,,,https://sites.google.com/view/viswapv/home,https://maths.iitd.ac.in/api/faculty
+Vivek Mukundan,Mathematics,Associate Professor,current,,,vmukunda@maths.iitd.ac.in,,,,,,https://web.iitd.ac.in/~vmukunda/,https://maths.iitd.ac.in/api/faculty
+Abhishek Das,Mechanical Engineering,Faculty,current,,https://mech.iitd.ac.in/faculty-profile/199,abhi@mech.iitd.ac.in,0000-0002-2610-5607,,,,,,https://mech.iitd.ac.in/faculty
+Amber Srivastava,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/203,asrvstv@mech.iitd.ac.in,0000-0002-0568-8276,,,,,,https://mech.iitd.ac.in/faculty
+Amit Gupta,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/178,agupta@mech.iitd.ac.in,0000-0001-6709-7095,,,,,,https://mech.iitd.ac.in/faculty
+Anjan Ray,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/156,raya@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Anoop Chawla,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/149,achawla@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Anurag Goyal,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/198,agoyal@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Aravindan S,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/166,aravindan@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Arpan Gupta,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/204,arpan.gupta@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Ashish Kamalakar Darpe,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/163,akdarpe@mech.iitd.ac.in,0000-0002-2978-2056,,,,,,https://mech.iitd.ac.in/faculty
+Bahni Ray,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/188,bray@mech.iitd.ac.in,0000-0003-0930-8004,,,,,,https://mech.iitd.ac.in/faculty
+Debabrata Dasgupta,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/187,debabrata@mech.iitd.ac.in,0000-0002-4073-6560,,,,,,https://mech.iitd.ac.in/faculty
+Devendra Kumar Dubey,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/180,dkdubey@mech.iitd.ac.in,0000-0003-1264-1422,,,,,,https://mech.iitd.ac.in/faculty
+Harish Hirani,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/172,hirani@mech.iitd.ac.in,0000-0002-3159-1443,,,,,,https://mech.iitd.ac.in/faculty
+Jayanta Kumar Dutt,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/167,jkdutt@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Jitendra Prasad Khatait,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/181,jpkhatait@mech.iitd.ac.in,0000-0002-4132-690X,,,,,,https://mech.iitd.ac.in/faculty
+Kartikey Sharma,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/212,ksharma@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Kaushik Mukherjee,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/192,kmukherjee@mech.iitd.ac.in,0000-0002-8290-2803,,,,,,https://mech.iitd.ac.in/faculty
+Krishnakant Agrawal,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/191,kkant@mech.iitd.ac.in,0000-0002-7360-2411,,,,,,https://mech.iitd.ac.in/faculty
+Kusum Meena,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/196,kusum@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Madhusudhan Rao P V,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/208,pvmrao@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Mayank Kumar,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/186,kmayank@mech.iitd.ac.in,0000-0002-4478-8798,,,,,,https://mech.iitd.ac.in/faculty
+Minakshi Kumari,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/205,minakshi@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Naresh Bhatnagar,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/159,nareshb@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Naresh Varma Datla,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/183,datla@mech.iitd.ac.in,0000-0001-7699-963X,,,,,,https://mech.iitd.ac.in/faculty
+Nomesh Bhojkumar Bolia,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/173,nomesh@mech.iitd.ac.in,0000-0002-2465-8187,,,,,,https://mech.iitd.ac.in/faculty
+Pavan Prakash Duvvuri,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/202,duvvuripp@mech.iitd.ac.in,0000-0002-4568-0404,,,,,,https://mech.iitd.ac.in/faculty
+Prabal Talukdar,Mechanical Engineering,Professor and Head,current,,https://mech.iitd.ac.in/hod-profile/1,prabal@mech.iitd.ac.in,,,,,,https://profile.iitd.ac.in/~prabal/,https://mech.iitd.ac.in/faculty
+Prashant Palkar,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/207,ppalkar@mech.iitd.ac.in,0000-0001-7693-4211,,,,,,https://mech.iitd.ac.in/faculty
+Pratik Das,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/209,pdas@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Premachandran B,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/171,prem@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Prithviraj Mukhopadhyay,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/195,prithvirajm@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Pulak Mohan Pandey,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/162,pmpandey@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Raj Kumar Pandey,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/176,rajpandey@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Rajan Prasad,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/200,prajan@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Rama Krishna K,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/190,rkk@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Ravi Kumar D,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/160,dravi@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Ravi M R,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/151,ravimr@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Sagar Sarkar,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/197,sagar@mech.iitd.ac.in,0000-0001-9339-7614,,,,,,https://mech.iitd.ac.in/faculty
+Sangeeta Kohli,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/161,skohli@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Satinder Paul Singh,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/153,singhsp@mech.iitd.ac.in,0000-0002-4302-354X,,,,,,https://mech.iitd.ac.in/faculty
+Shaurya Shriyam,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/194,shriyam@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Subbarao P M V,Mechanical Engineering,Assistant Professor,current,,https://mech.iitd.ac.in/faculty-profile/154,pmvs@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Subhra Datta,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/175,subhra.datta@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Subir Kumar Saha,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/152,saha@mech.iitd.ac.in,0000-0002-3681-8061,,,,,,https://mech.iitd.ac.in/faculty
+Subodh Vasant Modak,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/164,svmodak@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Sudarsan Ghosh,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/170,ghoshs@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Sudipto Mukherjee,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/158,sudipto@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Sujeet Kumar Sinha,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/184,sks@mech.iitd.ac.in,,,,,,https://web.iitd.ac.in/~sk_sinha/,https://civil.iitd.ac.in/index.php?lmenuid=faculty ; https://mech.iitd.ac.in/faculty
+Sunil Jha,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/169,suniljha@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Supreet Singh Bahga,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/179,bahga@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Varun Ramamohan,Mechanical Engineering,Professor,current,,https://mech.iitd.ac.in/faculty-profile/189,varunr@mech.iitd.ac.in,0000-0001-6517-9142,,,,,,https://mech.iitd.ac.in/faculty
+Venkateswara Rao P,Mechanical Engineering,Associate Professor,current,,https://mech.iitd.ac.in/faculty-profile/157,pvrao@mech.iitd.ac.in,,,,,,,https://mech.iitd.ac.in/faculty
+Ajoy K. Ghatak,Optics and Photonics Centre,Honorary Professor,adjunct,,https://opc.iitd.ac.in/faculty/prof-ajoy-k-ghatak,,,,,,,,exfac_physics.html ; https://opc.iitd.ac.in/faculty
+Anurag Sharma,Optics and Photonics Centre,"NASI Distinguished Chair Professor, Honorary Professor",adjunct,,https://opc.iitd.ac.in/faculty/prof-anurag-sharma,asharma@iitd.ac.in,0000-0002-4770-529X,,,,,,exfac_physics.html ; https://opc.iitd.ac.in/faculty
+A. Aadhi,Optics and Photonics Centre,Assistant Professor,current,,https://opc.iitd.ac.in/faculty/prof-a-aadhi,aadhi@opc.iitd.ac.in,,,,,,,https://opc.iitd.ac.in/faculty
+Awanish Pandey,Optics and Photonics Centre,Assistant Professor,current,,https://opc.iitd.ac.in/faculty/prof-awanish-pandey,opcawanish@iitd.ac.in,0009-0001-8316-5518,,,,,,https://opc.iitd.ac.in/faculty
+Deepak Jain,Optics and Photonics Centre,Associate Professor,current,,https://opc.iitd.ac.in/faculty/prof-deepak-jain,,,,,,,,https://opc.iitd.ac.in/faculty
+Dheeraj Pratap,Optics and Photonics Centre,Assistant Professor,current,,https://opc.iitd.ac.in/faculty/prof-dheeraj-pratap,dpratap@iitd.ac.in,0000-0001-5438-3818,,,,,,https://opc.iitd.ac.in/faculty
+Gayathri Bharathan,Optics and Photonics Centre,Assistant Professor,current,,https://opc.iitd.ac.in/faculty/prof-gayathri-bharathan,gayathrib@iitd.ac.in,,,,,,,https://opc.iitd.ac.in/faculty
+Joby Joseph,Optics and Photonics Centre,Professor,current,,https://opc.iitd.ac.in/faculty/prof-joby-joseph,joby@iitd.ac.in,0000-0002-1513-8008,,,,,,https://opc.iitd.ac.in/faculty
+Jolly Xavier,Optics and Photonics Centre,Associate Professor,current,,https://opc.iitd.ac.in/faculty/prof-jolly-xavier,jxavier@sense.iitd.ac.in,0000-0001-8931-9365,,,,,,https://opc.iitd.ac.in/faculty
+Kedar Khare,Optics and Photonics Centre,Professor,current,,https://opc.iitd.ac.in/faculty/prof-kedar-khare,kedark@iitd.ac.in,,,,,,,https://opc.iitd.ac.in/faculty
+P. Senthilkumaran,Optics and Photonics Centre,Professor,current,,https://opc.iitd.ac.in/faculty/prof-psenthilkumaran,psenthil@opc.iitd.ac.in,0000-0002-1015-0710,,,,,,https://opc.iitd.ac.in/faculty
+Parvendra Kumar,Optics and Photonics Centre,Assistant Professor,current,,https://opc.iitd.ac.in/faculty/prof-parvendra-kumar,parvendra@opc.iitd.ac.in,0009-0000-6055-6818,,,,,,https://civil.iitd.ac.in/index.php?lmenuid=faculty ; https://opc.iitd.ac.in/faculty
+Ritwick Das,Optics and Photonics Centre,Professor,current,,https://opc.iitd.ac.in/faculty/prof-ritwick-das,dasritwick@opc.iitd.ac.in,,,,,,,https://opc.iitd.ac.in/faculty
+Saurabh Mani Tripathi,Optics and Photonics Centre,Professor,current,,https://opc.iitd.ac.in/faculty/prof-saurabh-mani-tripathi,smt@opc.iitd.ac.in,0000-0002-2592-5806,,,,,,https://opc.iitd.ac.in/faculty
+Abhishek M. Iyer,Physics,Assistant Professor,current,,,iyerabhishek@physics.iitd.ac.in,0000-0002-7399-6676,,,,,,https://physics.iitd.ac.in/faculty
+Aditya N. Agnihotri,Physics,Assistant Professor,current,,,agnihotri@physics.iitd.ac.in,0009-0004-6418-2680,,,,,,https://physics.iitd.ac.in/faculty
+Aloka Sinha,Physics,Professor,current,,,aloka@physics.iitd.ac.in,0000-0003-4875-6395,,,,,https://web.iitd.ac.in/~aloka/,https://physics.iitd.ac.in/faculty
+Amartya Sengupta,Physics,Assistant Professor,current,,,amartya@physics.iitd.ac.in,0000-0002-0195-9171,,,,,https://web.iitd.ac.in/~amartya/,https://physics.iitd.ac.in/faculty
+Amita Das,Physics,Professor,current,,,amita@physics.iitd.ac.in,0000-0001-5273-1049,,,,,https://web.iitd.ac.in/~amita/,https://beb.iitd.ac.in/faculty.html ; https://physics.iitd.ac.in/faculty
+Amruta Mishra,Physics,Professor,current,,,amruta@physics.iitd.ac.in,0000-0001-8250-7259,,,,,https://web.iitd.ac.in/~amruta/,https://physics.iitd.ac.in/faculty
+Ashmeet Singh,Physics,Assistant Professor,current,,,ashmeet@iitd.ac.in,0000-0002-4404-1416,,,,,,https://physics.iitd.ac.in/faculty
+Bhaskar Kanseri,Physics,Professor,current,,https://opc.iitd.ac.in/faculty/prof-bhaskar-kanseri,bkanseri@physics.iitd.ac.in,,,,,,https://web.iitd.ac.in/~bkanseri/,https://opc.iitd.ac.in/faculty ; https://physics.iitd.ac.in/faculty
+Bodhaditya Santra,Physics,Associate Professor,current,,,bodhaditya.santra@physics.iitd.ac.in,0000-0002-6296-1494,,,,,,https://physics.iitd.ac.in/faculty
+Brajesh Kumar Mani,Physics,Associate Professor,current,,,bkmani@physics.iitd.ac.in,,,,,,https://web.iitd.ac.in/~bkmani/,https://physics.iitd.ac.in/faculty
+Dalip Singh Mehta,Physics,Professor,current,,,mehtads@physics.iitd.ac.in,0000-0002-1569-1647,,,,,https://web.iitd.ac.in/~mehtads/,https://physics.iitd.ac.in/faculty
+Deepak Kumar,Physics,Associate Professor,current,,https://cart.iitd.ac.in/faculty-profile/8,krdeepak@physics.iitd.ac.in,,,,,,https://web.iitd.ac.in/~dkumar/,https://cart.iitd.ac.in/faculty ; https://physics.iitd.ac.in/faculty
+Folke Tobias Florus Toll,Physics,Associate Professor,current,,,tobiastoll@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+G. Vijaya Prakash,Physics,Professor,current,,,prakash@physics.iitd.ac.in,0000-0003-0450-3767,,,,,,https://physics.iitd.ac.in/faculty
+Gargee Sharma,Physics,Assistant Professor,current,,,gargee@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Hemanta Kumar Kundu,Physics,Assistant Professor,current,,,hkkundu@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Hitendra Kumar Malik,Physics,Professor,current,,,hkmalik@physics.iitd.ac.in,0000-0002-9432-8140,,,,,https://web.iitd.ac.in/~hkmalik/,https://physics.iitd.ac.in/faculty
+Jitendra Pratap Singh,Physics,Professor,current,,,jpsingh@physics.iitd.ac.in,0000-0001-8145-0561,,,,,https://web.iitd.ac.in/~jpsingh/,https://physics.iitd.ac.in/faculty
+Joyee Ghosh,Physics,Professor,current,,,joyee@physics.iitd.ac.in,,,,,,https://web.iitd.ac.in/~joyee/,https://physics.iitd.ac.in/faculty
+Kaushik Sen,Physics,Assistant Professor,current,,,kaushik.sen@physics.iitd.ac.in,0000-0002-1253-7628,,,,,,https://physics.iitd.ac.in/faculty
+Kaustuv Manna,Physics,Assistant Professor,current,,,kaustuvmanna@physics.iitd.ac.in,0000-0002-9442-2321,,,,,,https://physics.iitd.ac.in/faculty
+Marshal,Physics,Professor,current,,,marshal@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Navendu Mondal,Physics,Assistant Professor,current,,,nmondal@iitd.ac.in,0000-0001-5002-9678,,,,,,https://physics.iitd.ac.in/faculty
+Nitin Yadav,Physics,Assistant Professor,current,,,nyadav@physics.iitd.ac.in,0000-0002-8976-516X,,,,,,https://physics.iitd.ac.in/faculty
+Pankaj Srivastava,Physics,Professor,current,,,pankajs@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Pintu Das,Physics,Professor,current,,,pintu@physics.iitd.ac.in,,,,,,https://web.iitd.ac.in/~pintu/,https://physics.iitd.ac.in/faculty
+Pradipta Ghosh,Physics,Associate Professor,current,,,tphyspg@physics.iitd.ac.in,0000-0002-6560-4556,,,,,https://web.iitd.ac.in/~tphyspg/,https://physics.iitd.ac.in/faculty
+Pranaba Kishor Muduli,Physics,Professor,current,,,muduli@physics.iitd.ac.in,0000-0002-0061-8455,,,,,,https://physics.iitd.ac.in/faculty
+Rahul Suresh Marathe,Physics,Professor,current,,,maratherahul@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Rajendra Singh,Physics,Professor,current,,,rsingh@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Rajendra Singh Dhaka,Physics,Professor,current,,,rsdhaka@physics.iitd.ac.in,0000-0002-3231-0316,,,,,https://web.iitd.ac.in/~rsdhaka/,https://physics.iitd.ac.in/faculty
+Rana Nandi,Physics,Assistant Professor,current,,,rananandi@physics.iitd.ac.in,0000-0002-6277-2618,,,,,,https://physics.iitd.ac.in/faculty
+Rohit Narula,Physics,Associate Professor,current,,,rnarula@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Sankalpa Ghosh,Physics,Professor,current,,,sankalpa@physics.iitd.ac.in,0000-0002-0289-5173,,,,,https://web.iitd.ac.in/~sankalpa/,https://physics.iitd.ac.in/faculty
+Santanu Ghosh,Physics,Professor,current,,,santanu1@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Sarthak Parikh,Physics,Assistant Professor,current,,,sarthak@physics.iitd.ac.in,0000-0002-5831-3873,,,,,https://web.iitd.ac.in/~sarthak/,https://physics.iitd.ac.in/faculty
+Saswata Bhattacharya,Physics,Professor,current,,,saswata@physics.iitd.ac.in,0000-0002-4145-4899,,,,,https://web.iitd.ac.in/~saswata/,https://physics.iitd.ac.in/faculty
+Sujeet Chaudhary,Physics,Professor,current,,,sujeetc@physics.iitd.ac.in,0000-0002-0535-6132,,,,,https://web.iitd.ac.in/~sujeetc/,https://physics.iitd.ac.in/faculty
+Sujin B. Babu,Physics,Professor,current,,,sujin@physics.iitd.ac.in,0000-0002-2006-5376,,,,,https://web.iitd.ac.in/~sujin/,https://physics.iitd.ac.in/faculty
+Sujit Manna,Physics,Associate Professor,current,,,smanna@physics.iitd.ac.in,0000-0001-9523-5379,,,,,,https://physics.iitd.ac.in/faculty
+Sunil Kumar,Physics,Professor,current,,,kumarsunil@physics.iitd.ac.in,0000-0002-1065-9883,,,,,https://web.iitd.ac.in/~kumarsunil/,https://physics.iitd.ac.in/faculty
+Suprit Singh,Physics,Assistant Professor,current,,,suprit@physics.iitd.ac.in,0000-0002-7926-3174,,,,,,https://physics.iitd.ac.in/faculty
+Tanya Malhotra,Physics,Assistant Professor,current,,,tmalhotra@iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Tarun Sharma,Physics,Assistant Professor,current,,,tks@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+Vaibhav Pant,Physics,Assistant Professor,current,,,vpant@iitd.ac.in,0000-0002-6954-2276,,,,,,https://physics.iitd.ac.in/faculty
+Varsha Banerjee,Physics,Professor,current,,,varsha@physics.iitd.ac.in,,,,,,https://web.iitd.ac.in/~varsha/,https://physics.iitd.ac.in/faculty
+Vikrant Saxena,Physics,Associate Professor,current,,,vsaxena@physics.iitd.ac.in,0000-0002-7477-9358,,,,,,https://physics.iitd.ac.in/faculty
+Neeraj Khare,Physics,Emeritus Faculty,emeritus,,,nkhare@physics.iitd.ac.in,0000-0003-3702-2257,,,,,https://web.iitd.ac.in/~nkhare/,https://physics.iitd.ac.in/faculty
+Ravindra Kumar Varshney,Physics,Emeritus Faculty,emeritus,,,ravi@physics.iitd.ac.in,,,,,,,https://physics.iitd.ac.in/faculty
+A. K. Shukla,Physics,Former faculty (2017-2021); last listed as Faculty,former,,,,0000-0001-9136-7577,,,,,,exfac_physics.html
+Ajit Kumar,Physics,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,,,exfac_physics.html
+B. D. Gupta,Physics,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,,,exfac_physics.html
+B. R. Mehta,Physics,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,,,exfac_physics.html
+D. K. Pandya,Physics,Former faculty (2017-2017); last listed as Faculty,former,,,,0000-0002-1604-1187,,,,,,exfac_physics.html
+G. B. Reddy,Physics,Former faculty (2017-2017); last listed as Faculty,former,,,,,,,,,,exfac_physics.html
+M. R. Shenoy,Physics,Former faculty (2017-2021); last listed as Faculty,former,,,,,,,,,,exfac_physics.html
+Ratnamala ChatterJee,Physics,Former faculty (2021-2021); last listed as Faculty,former,,,,0000-0001-8364-4474,,,,,,exfac_physics.html
+V. Ravishankar,Physics,Former faculty (2017-2021); last listed as Faculty,former,,,,0000-0001-6387-5275,,,,,,exfac_physics.html
+Amit K. Gaurav,School of Biological Sciences,Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/51,agaurav@iitd.ac.in,0000-0003-1883-6183,,,,,,https://bioschool.iitd.ac.in/faculty
+Amit Nain,School of Biological Sciences,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/53,amitnain@bioschool.iitd.ac.in,,,,,,,https://bioschool.iitd.ac.in/faculty
+Anita Roy,School of Biological Sciences,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/33,anita@bioschool.iitd.ac.in,0000-0002-7297-2920,,,,,,https://bioschool.iitd.ac.in/faculty
+Archana Chugh,School of Biological Sciences,Associate Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/30,achugh@bioschool.iitd.ac.in,,,,,,,https://bioschool.iitd.ac.in/faculty
+Ashok Kumar Patel,School of Biological Sciences,Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/34,ashokpatel@bioschool.iitd.ac.in,0000-0001-6134-7794,,,,,,https://bioschool.iitd.ac.in/faculty
+Deepti Abbey,School of Biological Sciences,Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/38,adeepti@bioschool.iitd.ac.in,0009-0000-2194-0833,,,,,,https://bioschool.iitd.ac.in/faculty
+Jyotirmaya Behera,School of Biological Sciences,Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/52,jbehera@bioschool.iitd.ac.in,,,,,,,https://bioschool.iitd.ac.in/faculty
+Manidipa Banerjee,School of Biological Sciences,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/40,mbanerjee@bioschool.iitd.ac.in,,,,,,,https://bioschool.iitd.ac.in/faculty
+Manoj B. Menon,School of Biological Sciences,Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/41,menon@bioschool.iitd.ac.in,0000-0001-5859-0347,,,,,,https://bioschool.iitd.ac.in/faculty
+Parul Mehrotra,School of Biological Sciences,Associate Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/42,pmehrotra@bioschool.iitd.ac.in,,,,,,,https://bioschool.iitd.ac.in/faculty
+Santanu Mondal,School of Biological Sciences,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/43,smondal@bioschool.iitd.ac.in,0000-0002-7399-8364,,,,,,https://bioschool.iitd.ac.in/faculty
+Saran Kumar,School of Biological Sciences,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/27,ksaran@iitd.ac.in,0000-0002-5052-0499,,,,,,https://bioschool.iitd.ac.in/faculty
+Saurabh Raj,School of Biological Sciences,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/44,sraj@bioschool.iitd.ac.in,0000-0002-5332-9710,,,,,,https://bioschool.iitd.ac.in/faculty
+Shilpi Minocha,School of Biological Sciences,Assistant Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/45,sminocha@bioschool.iitd.ac.in,0000-0001-8229-1443,,,,,,https://bioschool.iitd.ac.in/faculty
+Tapan K. Nayak,School of Biological Sciences,Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/47,tapannayak@bioschool.iitd.ac.in,0000-0002-3054-5867,,,,,,https://bioschool.iitd.ac.in/faculty
+Vivekanandan Perumal,School of Biological Sciences,Associate Professor,current,,https://bioschool.iitd.ac.in/faculty-profile/48,vperumal@bioschool.iitd.ac.in,,,,,,,https://bioschool.iitd.ac.in/faculty
+Amitabha Mukhopadhyay,School of Biological Sciences,Former faculty (2021-2021); last listed as Faculty,former,,https://bioschool.iitd.ac.in/faculty-profile/32,amitabha@bioschool.iitd.ac.in,,,,,https://iitd.irins.org/profile/87103,,https://bioschool.iitd.ac.in/faculty
+Chinmoy S. Dey,School of Biological Sciences,Former faculty (2017-2021); last listed as Faculty,former,,https://bioschool.iitd.ac.in/faculty-profile/37,csdey@bioschool.iitd.ac.in,0000-0003-0667-915X,,,,https://iitd.irins.org/profile/43057,,https://bioschool.iitd.ac.in/faculty
+B. Premachandran,School of Interdisciplinary Research,Head of the Department,current,,https://sire.iitd.ac.in/hod-profile/1,headsire@admin.iitd.ac.in,,,,,,https://home.iitd.ac.in/about.php,https://sire.iitd.ac.in/faculty
+Aditya V. Bahadur,School of Public Policy,Adjunct Professor,adjunct,,https://spp.iitd.ac.in/faculty-profile/21,,,,,,,,https://spp.iitd.ac.in/faculty
+Brij Kothari,School of Public Policy,Adjunct Professor,adjunct,,https://spp.iitd.ac.in/faculty-profile/20,,,,,,,,https://spp.iitd.ac.in/faculty
+Nivedita Narain,School of Public Policy,Adjunct Faculty Members,adjunct,,https://spp.iitd.ac.in/faculty-profile/19,,,,,,,,https://spp.iitd.ac.in/faculty
+Shyama V. Ramani,School of Public Policy,Adjunct Professor,adjunct,,https://spp.iitd.ac.in/faculty-profile/22,,,,,,,,https://spp.iitd.ac.in/faculty
+Soutrik Basu,School of Public Policy,Professor of Practice,adjunct,,https://spp.iitd.ac.in/faculty-profile/4,,0000-0002-5617-2800,,,,,,https://spp.iitd.ac.in/faculty
+Ajay Mathur,School of Public Policy,Faculty,current,,https://spp.iitd.ac.in/faculty-profile/26,,0009-0005-0224-2657,,,,,,https://spp.iitd.ac.in/faculty
+Ambuj Sagar,School of Public Policy,Professor of Practice,current,,https://spp.iitd.ac.in/hod-profile/1,,0000-0002-5361-0852,,,,,https://spp.iitd.ac.in/hod-profile/1,https://spp.iitd.ac.in/faculty
+Anshu Ogra,School of Public Policy,Professor,current,,https://spp.iitd.ac.in/faculty-profile/14,,,,,,,,https://spp.iitd.ac.in/faculty
+Debananda Misra,School of Public Policy,Assistant Professor,current,,https://spp.iitd.ac.in/faculty-profile/10,,0000-0001-6020-680X,,,,,,https://spp.iitd.ac.in/faculty
+Kaveri K. Iychettira,School of Public Policy,Associate Professor,current,,https://spp.iitd.ac.in/faculty-profile/9,,,,,,,,https://spp.iitd.ac.in/faculty
+Monika Makwana,School of Public Policy,Associate Professor,current,,https://spp.iitd.ac.in/faculty-profile/24,,,,,,,,https://spp.iitd.ac.in/faculty
+Pooja Prasad,School of Public Policy,Assistant Professor,current,,https://spp.iitd.ac.in/faculty-profile/18,,0000-0003-0582-2639,,,,,,https://spp.iitd.ac.in/faculty
+Rajarshi Dasgupta,School of Public Policy,Assistant Professor,current,,https://spp.iitd.ac.in/faculty-profile/17,,0000-0003-0051-5090,,,,,,https://spp.iitd.ac.in/faculty
+Rathin Biswas,School of Public Policy,Associate Professor,current,,https://spp.iitd.ac.in/faculty-profile/12,,0000-0001-6818-1651,,,,,,https://spp.iitd.ac.in/faculty
+Rohit Chandra,School of Public Policy,Assistant Professor,current,,https://spp.iitd.ac.in/faculty-profile/7,,0000-0002-3913-0713,,,,,,https://spp.iitd.ac.in/faculty
+Sanjay Mitra,School of Public Policy,Assistant Professor,current,,https://spp.iitd.ac.in/faculty-profile/8,,,,,,,,https://spp.iitd.ac.in/faculty
+Sugat Chaturvedi,School of Public Policy,Associate Professor,current,,https://spp.iitd.ac.in/faculty-profile/23,,0000-0001-5057-0616,,,,,,https://spp.iitd.ac.in/faculty
+Suma Athreye,School of Public Policy,Assistant Professor,current,,https://spp.iitd.ac.in/faculty-profile/15,,,,,,,,https://spp.iitd.ac.in/faculty
+Surajit Chakravarty,School of Public Policy,Professor,current,,https://spp.iitd.ac.in/faculty-profile/11,,,,,,,,https://spp.iitd.ac.in/faculty
+Tiesta Thakur,School of Public Policy,Professor,current,,https://spp.iitd.ac.in/faculty-profile/13,,,,,,,,https://spp.iitd.ac.in/faculty
+Upasna Sharma,School of Public Policy,Assistant Professor,current,,https://spp.iitd.ac.in/faculty-profile/3,,,,,,,,https://spp.iitd.ac.in/faculty
+Vikas Nimesh,School of Public Policy,Associate Professor,current,,https://spp.iitd.ac.in/faculty-profile/25,,0000-0003-3770-5795,,,,,,https://spp.iitd.ac.in/faculty
+Abhijit Majumdar,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/10,majumdar@textile.iitd.ac.in,0000-0002-0353-1849,,,,,https://iitdprotech.github.io/site/index.html,https://textile.iitd.ac.in/faculty
+Amit Rawal,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/4,arawal@iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Apurba Das,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/9,apurba@iitd.ac.in,,,,,,https://rkt-tt.github.io/apurba-website,https://textile.iitd.ac.in/faculty
+Archana Samanta,Textile and Fibre Engineering,Assistant Professor,current,,https://textile.iitd.ac.in/faculty-profile/26,archana@iitd.ac.in,,,,,,https://sites.google.com/view/green-tech-materials-lab/about,https://textile.iitd.ac.in/faculty
+Ashwini Kumar Agrawal,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/7,ashwini@textile.iitd.ac.in,0000-0002-9898-5893,,,,,https://www.smita-iitd.com/group-members/prof-ashwini-k-agrawal,https://textile.iitd.ac.in/faculty
+B. S. Butola,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/13,,0000-0003-3078-3985,,,,,,https://textile.iitd.ac.in/faculty
+Bhanu Nandan,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/15,nandan@iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Bipin Kumar,Textile and Fibre Engineering,Associate Professor,current,,https://textile.iitd.ac.in/faculty-profile/19,bipin@iitd.ac.in,0000-0002-9754-8210,,,,,,https://textile.iitd.ac.in/faculty
+Deepti Gupta,Textile and Fibre Engineering,Head of the Department,current,,https://textile.iitd.ac.in/hod-profile/1,deepti@iitd.ac.in,0000-0002-3101-3053,,,,,,https://textile.iitd.ac.in/faculty
+Dipayan Das,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/12,dipayan@textile.iitd.ac.in,0000-0001-6049-7440,,,,,,https://textile.iitd.ac.in/faculty
+Harun Venkatesan,Textile and Fibre Engineering,Assistant Professor,current,,https://textile.iitd.ac.in/faculty-profile/22,harun@textile.iitd.ac.in,0000-0002-1200-6456,,,,,,https://textile.iitd.ac.in/faculty
+Javed Nabibaksha Sheikh,Textile and Fibre Engineering,Associate Professor,current,,https://textile.iitd.ac.in/faculty-profile/18,jnsheikh@iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Mangala Joshi,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/2,mangala@textile.iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+R. Alagirusamy,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/6,,,,,,,,https://textile.iitd.ac.in/faculty
+R. S. Rengasamy,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/5,rsr@iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Rajiv. K. Srivastava,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/16,rajiv@iitd.ac.in,0000-0003-0703-3019,,,,,,https://textile.iitd.ac.in/faculty
+S. Wazed Ali,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/17,wazed@iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Samrat Mukhopadhyay,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/14,samrat@textile.iitd.ac.in,0000-0002-2978-9565,,,,,,https://textile.iitd.ac.in/faculty
+Sohel Rana,Textile and Fibre Engineering,Associate Professor,current,,https://textile.iitd.ac.in/faculty-profile/27,sohelrana@iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Sourabh Ghosh,Textile and Fibre Engineering,Professor,current,,https://textile.iitd.ac.in/faculty-profile/11,sghosh08@textile.iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Sumit Sinha Ray,Textile and Fibre Engineering,Assistant Professor,current,,https://textile.iitd.ac.in/faculty-profile/21,ssinharay@textile.iitd.ac.in,0000-0001-8594-8842,,,,,,https://textile.iitd.ac.in/faculty
+Vijaykumar Narayandas Baheti,Textile and Fibre Engineering,Associate Professor,current,,https://textile.iitd.ac.in/faculty-profile/20,baheti@textile.iitd.ac.in,,,,,,,https://textile.iitd.ac.in/faculty
+Manjeet Jassal,Textile and Fibre Engineering,Emeritus Professor,emeritus,,https://textile.iitd.ac.in/faculty-profile/1,,,,,,,http://www.smita-iitd.com/group-members/smita-coordiantor-prof-manjeet-jassal,https://textile.iitd.ac.in/faculty
+Arambam James Singh,Yardi School of Artificial Intelligence,Assistant Professor,current,,,,0009-0009-9763-9217,,,,,,https://scai.iitd.ac.in/faculty
+Bhaskar Pratim Mukhoty,Yardi School of Artificial Intelligence,Assistant Professor,current,,,,,,,,,,https://scai.iitd.ac.in/faculty
+Nilesh Kumar Jha,Yardi School of Artificial Intelligence,Assistant Professor,current,,,,,,,,,,https://scai.iitd.ac.in/faculty
+Raunak Bhattacharyya,Yardi School of Artificial Intelligence,Assistant Professor,current,,,,,,,,,,https://scai.iitd.ac.in/faculty
+Sudipan Saha,Yardi School of Artificial Intelligence,Assistant Professor,current,,,,0000-0002-9440-0720,,,,,,https://scai.iitd.ac.in/faculty
