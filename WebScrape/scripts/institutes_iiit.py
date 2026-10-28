@@ -223,6 +223,9 @@ def _channels(k, c):
     c["exclude"] = OTHER_NAMED + (f"|{c['exclude']}" if c.get("exclude") else "")
     c.setdefault("inspire", None)   # INSPIRE: only IIIT Hyderabad and IIIT Allahabad have records (PROCESS_IIIT.md §1.2)
     c.setdefault("tenure_lag", 1)
+    # arXiv person channel: the co-author route is not used for papers with more authors than this (precision audit
+    # 2026-10-29: 23 LIGO/Virgo papers with ~1,770 authors entered IIITDM Jabalpur through a chance co-author name match)
+    c.setdefault("arxiv_coauthor_max_authors", 50)
     c.pop("short")
     ph = c.pop("phrases")
     loc = re.compile("|".join(f"(?:{p})" for p in (c["anchor"], c.get("city")) if p), re.I)
