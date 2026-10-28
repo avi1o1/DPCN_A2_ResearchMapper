@@ -13,7 +13,8 @@ the person's name variants AND one of:
                person's DOIs (common names: a prolific namesake profile can contain a few of our papers; first run
                accepted "Sunil Kumar" with 3 of 277, "Amit Kumar" 3 of 241 - rejected by this rule). The 5 % guard applies only
                when the matched name is shared by several DBLP persons: a unique name with a long career elsewhere (Mayank
-               Vatsa, 3 of 441) is not a namesake profile
+               Vatsa, 3 of 441) is not a namesake profile, unless other DBLP names extend it ("Sushant Kumar Jha"): then the
+               single exact holder is DBLP's undisambiguated catch-all profile and the guard applies
 A DBLP person with a different ORCID is never accepted. If several DBLP persons qualify, the best one is taken only if it
 beats the runner-up by 2x on R3 overlaps; otherwise the person is left blank (ambiguous). Every decision goes to
 rosters/notes/<inst>_dblp_ids.tsv. Only empty `dblp` cells are written.
@@ -101,6 +102,16 @@ HOLDERS = collections.defaultdict(set)   # name -> DBLP persons carrying it (hom
 for p, c in cand.items():
     for n in c["names"]:
         HOLDERS[n].add(p)
+_EXT = {}
+
+
+def extended(n):
+    """DBLP persons whose name extends this one ("Sushant Kumar Jha" for "Sushant Kumar"): a common name whose only exact
+    holder is DBLP's undisambiguated catch-all profile (precision audit 2026-10-29: pid 166/1095, 120 papers of several
+    people, 4 ours)."""
+    if n not in _EXT:
+        _EXT[n] = len(sparql(f"SELECT DISTINCT ?p WHERE {{ ?p dblp:creatorName ?m . FILTER(STRSTARTS(?m, {json.dumps(n + ' ')})) }} LIMIT 1"))
+    return _EXT[n]
 # 2. their DOIs
 DOIS = collections.defaultdict(set)
 pl = sorted(cand)
@@ -124,7 +135,7 @@ for r in todo:
         r1 = bool(my_orcid and my_orcid in c["orcid"])
         r2 = any(classify(inst, a) == "iit" for a in c["aff"])
         r3 = sum(1 for d in DOIS[p] if d in VER and any(kt and kt in n for n in VER[d]))
-        if r3 and r3 < 0.05 * len(DOIS[p]) and any(len(HOLDERS[n]) > 1 for n in c["names"] & vs):
+        if r3 and r3 < 0.05 * len(DOIS[p]) and any(len(HOLDERS[n]) > 1 or extended(n) for n in c["names"] & vs):
             log.append([r["name"], p, "rejected", f"overlap {r3} < 5% of {len(DOIS[p])} DBLP DOIs (namesake profile?)", r3])
             r3 = 0
         scored.append((p, r1, r2, r3))

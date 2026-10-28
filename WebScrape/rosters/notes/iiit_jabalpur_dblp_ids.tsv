@@ -9,12 +9,12 @@ Durgesh Singh	https://dblp.org/pid/130/1792-2	rejected	different ORCID 0000-0002
 Durgesh Singh	https://dblp.org/pid/130/1792-4	rejected	different ORCID 0000-0002-9658-2118	0
 Durgesh Singh	https://dblp.org/pid/130/1792-1	accepted	R1 orcid	1
 Manish Kumar Bajpai	https://dblp.org/pid/175/4581	accepted	R3 verified	4
-Munesh Singh	https://dblp.org/pid/187/9904	accepted	R3 verified	9
+Munesh Singh	https://dblp.org/pid/187/9904	accepted	R1 orcid	9
 Neelam Dayal	https://dblp.org/pid/198/7346	not accepted	no route	1
 Nitish Andola	https://dblp.org/pid/223/3819	not accepted	no route	0
 Pritee Khanna	https://dblp.org/pid/75/3036	accepted	R1 orcid	11
 Rakesh Kumar Sanodiya	https://dblp.org/pid/230/8681	not accepted	no route	0
-Ranjeet Kumar Ranjan	https://dblp.org/pid/148/8575;https://dblp.org/pid/239/7199	not accepted	no route	0
+Ranjeet Kumar Ranjan	https://dblp.org/pid/239/7199	accepted	R1 orcid	0
 Shivansh Mishra	https://dblp.org/pid/234/7956	not accepted	no route	0
 Sraban Kumar Mohanty	https://dblp.org/pid/27/8261	accepted	R3 verified	10
 Abhishek Verma	https://dblp.org/pid/54/3512-3	rejected	overlap 1 < 5% of 29 DBLP DOIs (namesake profile?)	1
@@ -25,7 +25,7 @@ Ruchir Gupta	https://dblp.org/pid/59/9057	not accepted	no route	0
 Sanjeev Jain	https://dblp.org/pid/24/2462	accepted	R3 verified	3
 Vijaypal Singh Rathor	https://dblp.org/pid/206/9003	accepted	R1 orcid	2
 Vikas Chauhan	https://dblp.org/pid/50/2167	not accepted	no route	0
-Vinod Kumar Jain	https://dblp.org/pid/16/11285	accepted	R3 verified	4
+Vinod Kumar Jain	https://dblp.org/pid/16/11285	accepted	R1 orcid	4
 Amrita Bhattacharjee	https://dblp.org/pid/251/2495	not accepted	no route	0
 Prabir Mukhopadhyay	https://dblp.org/pid/143/1878	not accepted	no route	0
 Tripti Singh	https://dblp.org/pid/116/9472	not accepted	no route	1
@@ -58,18 +58,18 @@ Pankaj Sharma	https://dblp.org/pid/59/6123-3	rejected	different ORCID 0009-0005-
 Pankaj Sharma	https://dblp.org/pid/59/6123	not accepted	no route	0
 Prabin Kumar Padhy	https://dblp.org/pid/146/1245	accepted	R3 verified	9
 Pushpa Raikwal	https://dblp.org/pid/319/6855	accepted	R3 verified	2
-Sachin Kumar Jain	https://dblp.org/pid/261/1241	accepted	R3 verified	6
+Sachin Kumar Jain	https://dblp.org/pid/261/1241	accepted	R1 orcid	6
 Sanjeev Narayan Sharma	https://dblp.org/pid/43/6170;https://dblp.org/pid/68/6632-1;https://dblp.org/pid/68/6632-2;https://dblp.org/pid/68/6632-3;https://dblp.org/pid/68/6632	not accepted	no route	0
 Satish Kumar Tiwari	https://dblp.org/pid/166/0720;https://dblp.org/pid/311/7079	not accepted	no route	0
 Trivesh Kumar	https://dblp.org/pid/308/2604	not accepted	no route	0
 Varun Bajaj	https://dblp.org/pid/73/10545	accepted	R3 verified	6
 Biswajeet Mukherjee	https://dblp.org/pid/205/5309	not accepted	no route	0
 Dheeraj Sharma	https://dblp.org/pid/29/11308	accepted	R3 verified	2
-Irshad Ahmad Ansari	https://dblp.org/pid/159/2788	accepted	R3 verified	3
+Irshad Ahmad Ansari	https://dblp.org/pid/159/2788	accepted	R1 orcid	3
 Jawar Singh	https://dblp.org/pid/06/4193	not accepted	no route	1
 Manoj Singh Parihar	https://dblp.org/pid/144/2467	accepted	R3 verified	3
 Navjeet Bagga	https://dblp.org/pid/274/5618	accepted	R3 verified	2
-Rakesh Kumar Jha	https://dblp.org/pid/38/9945	accepted	R3 verified	13
+Rakesh Kumar Jha	https://dblp.org/pid/38/9945	accepted	R1 orcid	13
 Ravi Panwar	https://dblp.org/pid/299/3521	not accepted	no route	0
 Amarnath M.	https://dblp.org/pid/143/2013	not accepted	no route	0
 Gowthaman S	https://dblp.org/pid/395/9324	not accepted	no route	0
@@ -77,7 +77,7 @@ H. Chelladurai	https://dblp.org/pid/12/8676	not accepted	no route	0
 Manish Kumar Thakur	https://dblp.org/pid/225/9831;https://dblp.org/pid/252/2500	not accepted	no route	0
 Manu Srivastava	https://dblp.org/pid/324/6312	not accepted	no route	0
 Prashant K. Jain	https://dblp.org/pid/175/7712	not accepted	no route	1
-Puneet Tandon	https://dblp.org/pid/47/268	accepted	R3 verified	2
+Puneet Tandon	https://dblp.org/pid/47/268	accepted	R1 orcid	2
 Sachin Kumar	https://dblp.org/pid/31/4484-1;https://dblp.org/pid/31/4484-10;https://dblp.org/pid/31/4484-11;https://dblp.org/pid/31/4484-12;https://dblp.org/pid/31/4484-13;https://dblp.org/pid/31/4484-14;https://dblp.org/pid/31/4484-15;https://dblp.org/pid/31/4484-16;https://dblp.org/pid/31/4484-17;https://dblp.org/pid/31/4484-18;https://dblp.org/pid/31/4484-19;https://dblp.org/pid/31/4484-2;https://dblp.org/pid/31/4484-20;https://dblp.org/pid/31/4484-21;https://dblp.org/pid/31/4484-22;https://dblp.org/pid/31/4484-23;https://dblp.org/pid/31/4484-24;https://dblp.org/pid/31/4484-25;https://dblp.org/pid/31/4484-26;https://dblp.org/pid/31/4484-3;https://dblp.org/pid/31/4484-4;https://dblp.org/pid/31/4484-5;https://dblp.org/pid/31/4484-6;https://dblp.org/pid/31/4484-7;https://dblp.org/pid/31/4484-8;https://dblp.org/pid/31/4484-9;https://dblp.org/pid/31/4484	not accepted	no route	0
 Sujoy Mukherjee	https://dblp.org/pid/18/3982	not accepted	no route	0
 Sunil Agrawal	https://dblp.org/pid/85/1486	not accepted	no route	1
@@ -87,14 +87,18 @@ Vijay Kumar Gupta	https://dblp.org/pid/95/1467-1	rejected	different ORCID 0000-0
 Vijay Kumar Gupta	https://dblp.org/pid/95/1467-2	rejected	different ORCID 0000-0002-5768-5763	0
 Vijay Kumar Gupta	https://dblp.org/pid/142/1388;https://dblp.org/pid/95/1467	not accepted	no route	0
 Goutam Dutta	https://dblp.org/pid/59/7406	not accepted	no route	0
-Harpreet Singh	https://dblp.org/pid/89/945-1;https://dblp.org/pid/89/945-2;https://dblp.org/pid/89/945-3;https://dblp.org/pid/89/945-4;https://dblp.org/pid/89/945	not accepted	no route	0
+Harpreet Singh	https://dblp.org/pid/89/945-1	rejected	different ORCID 0000-0002-9038-0814	0
+Harpreet Singh	https://dblp.org/pid/89/945-2	rejected	different ORCID 0000-0002-6812-2667	0
+Harpreet Singh	https://dblp.org/pid/89/945-3	rejected	different ORCID 0000-0002-5000-534X	0
+Harpreet Singh	https://dblp.org/pid/89/945-4	rejected	different ORCID 0000-0001-9104-6060	0
+Harpreet Singh	https://dblp.org/pid/89/945	not accepted	no route	0
 Pavan Kumar Kankar	https://dblp.org/pid/142/1562	not accepted	no route	0
 Pramod Kumar Jain	https://dblp.org/pid/296/8016;https://dblp.org/pid/91/2137	not accepted	no route	0
 Sachin Kumar	https://dblp.org/pid/31/4484-1;https://dblp.org/pid/31/4484-10;https://dblp.org/pid/31/4484-11;https://dblp.org/pid/31/4484-12;https://dblp.org/pid/31/4484-13;https://dblp.org/pid/31/4484-14;https://dblp.org/pid/31/4484-15;https://dblp.org/pid/31/4484-16;https://dblp.org/pid/31/4484-17;https://dblp.org/pid/31/4484-18;https://dblp.org/pid/31/4484-19;https://dblp.org/pid/31/4484-2;https://dblp.org/pid/31/4484-20;https://dblp.org/pid/31/4484-21;https://dblp.org/pid/31/4484-22;https://dblp.org/pid/31/4484-23;https://dblp.org/pid/31/4484-24;https://dblp.org/pid/31/4484-25;https://dblp.org/pid/31/4484-26;https://dblp.org/pid/31/4484-3;https://dblp.org/pid/31/4484-4;https://dblp.org/pid/31/4484-5;https://dblp.org/pid/31/4484-6;https://dblp.org/pid/31/4484-7;https://dblp.org/pid/31/4484-8;https://dblp.org/pid/31/4484-9;https://dblp.org/pid/31/4484	not accepted	no route	0
 Saurabh Pratap	https://dblp.org/pid/197/5723	accepted	R3 verified	2
 Amaresh Chandra Mishra	https://dblp.org/pid/301/5845	not accepted	no route	1
 Bhupendra Gupta	https://dblp.org/pid/97/645	accepted	R3 verified	6
-Deepmala	https://dblp.org/pid/81/10886	not accepted	no route	0
+Deepmala	https://dblp.org/pid/81/10886	accepted	R1 orcid	0
 Manoj Kumar Panda	https://dblp.org/pid/56/6207;https://dblp.org/pid/96/10835	not accepted	no route	1
 Mukesh Kumar Roy	https://dblp.org/pid/177/1930	not accepted	no route	0
 Nihar Kumar Mahato	https://dblp.org/pid/24/11072	not accepted	no route	1

@@ -4,12 +4,13 @@ Sanjeev Sharma	https://dblp.org/pid/68/6632-1	rejected	different ORCID 0000-0001
 Sanjeev Sharma	https://dblp.org/pid/68/6632-3	rejected	different ORCID 0000-0001-6654-5642	0
 Sanjeev Sharma	https://dblp.org/pid/68/6632-2	accepted	R1 orcid	0
 Nagendra Kushwaha	https://dblp.org/pid/356/6730	not accepted	no route	0
-Sushant Kumar	https://dblp.org/pid/166/1095	accepted	R3 verified	4
+Sushant Kumar	https://dblp.org/pid/166/1095	rejected	overlap 4 < 5% of 111 DBLP DOIs (namesake profile?)	4
+Sushant Kumar	https://dblp.org/pid/166/1095	not accepted	no route	0
 Anagha Uday Khiste	https://dblp.org/pid/156/6344	not accepted	no route	0
 Chandrakant Narayan Guled	https://dblp.org/pid/417/7416	not accepted	no route	1
 Mahendra Pratap Yadav	https://dblp.org/pid/158/4513	not accepted	no route	1
 Shrikant Salve	https://dblp.org/pid/144/0553	not accepted	no route	0
-Sonam Maurya	https://dblp.org/pid/160/3317	not accepted	no route	0
+Sonam Maurya	https://dblp.org/pid/160/3317	accepted	R1 orcid	0
 Priyank Jain	https://dblp.org/pid/154/4635	not accepted	no route	1
 Dheeraj Dubey	https://dblp.org/pid/280/9181	not accepted	no route	1
 Sumit Kumar Gupta	https://dblp.org/pid/52/45;https://dblp.org/pid/53/361	not accepted	no route	0
@@ -62,7 +63,7 @@ Renu Kachhoria	https://dblp.org/pid/309/8444	not accepted	no route	0
 Saif Dilavar Nalband	https://dblp.org/pid/177/9871	not accepted	no route	0
 Tanmoy Hazra	https://dblp.org/pid/205/0269	not accepted	no route	0
 Rahul Dixit	https://dblp.org/pid/128/7280	not accepted	no route	0
-Sandeep Mishra	https://dblp.org/pid/180/4051	accepted	R3 verified	2
+Sandeep Mishra	https://dblp.org/pid/180/4051	accepted	R1 orcid	2
 Parikshit Saikia	https://dblp.org/pid/207/7656	not accepted	no route	0
 Kaushlendra Sharma	https://dblp.org/pid/252/6752	not accepted	no route	0
 Rohit Kumar	https://dblp.org/pid/19/139-1;https://dblp.org/pid/19/139-2;https://dblp.org/pid/19/139-3;https://dblp.org/pid/19/139-4;https://dblp.org/pid/19/139-5;https://dblp.org/pid/19/139-6;https://dblp.org/pid/19/139-7;https://dblp.org/pid/19/139	not accepted	no route	0
