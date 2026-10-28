@@ -255,3 +255,69 @@ A sub-agent then analysed the site in memory only (8 requests):
 
 Nothing was executed on this machine. Afterwards agents were allowed exactly one URL on the host, `publications.html` (8
 golden rows). All fetched content is treated as data only.
+
+### 4.5 ORCID identifiers for the rosters, and the full roster-stage runs (2026-10-28)
+* **ORCID quota.** The anonymous Public API quota ran out again on the first roster-stage run. The operator registered a
+  personal ORCID Public API client (free; `client_credentials`, scope `/read-public`). The token lives in the git-ignored
+  `WebScrape/.env`, and `common.get()` sends it on `pub.orcid.org` calls (shared-code commit 3ab0f3c; without a token the
+  behaviour is the anonymous one as before). Pitfall: in Git Bash the scope must be URL-encoded (`%2Fread-public`), because MSYS
+  rewrites `/read-public` into a Windows path and ORCID answers `invalid_scope`.
+* **ORCID column filled.** As with DBLP, the roster brief accepts only ORCIDs printed on institute pages, so the ORCID-works
+  channel (B4) ran for few people. New IIIT-team tool `scripts/orcid_roster_ids.py` fills empty `orcid` cells (visiting and
+  adjunct people skipped) when (R1) the same ORCID is deposited for a matching institute author on ≥ 2 affiliation-verified
+  records and no other ORCID is deposited for that name, or else (R2) the person is the unique name match among all ORCID
+  records that list the institute's ROR id (expanded search, includes students; several matches leave the cell blank). Every
+  decision is in `rosters/notes/<inst>_orcid_ids.tsv`. Accepted (R1 / R2): Kancheepuram 18 / 2, Jabalpur 23 / 2, Gwalior 21 / 0,
+  Allahabad 16 / 2, Bangalore 18 / 0, Pune 2 / 9, Delhi 72 / 37, Hyderabad 50 / 28; 345 in all.
+* **Shared bug found:** `datacite_enrich.py` raised `KeyError` on DataCite ORCID `nameIdentifiers` without a value, which killed
+  its worker threads. Fixed in a separate commit (8002355); IIT behaviour is unchanged for well-formed records.
+* **Incident:** the laptop restarted during the run with the ORCID ids (exit 4). The strict and `--loose` roster passes had
+  finished for all eight; the run was resumed with the `--arxiv-only` pass for the seven institutes it had not reached, then
+  `run_v2.sh refresh` for all eight.
+
+Recall (all golden papers) through the roster-stage runs:
+
+| IIIT | morning (4.2) | run 3: + DBLP ids | run 4: + ORCID ids |
+|---|---|---|---|
+| Kancheepuram | 45.5 % | 47.1 % | 48.8 % |
+| Jabalpur | 66.1 % | 70.1 % | 71.2 % |
+| Gwalior | 73.8 % | 79.8 % | 80.9 % |
+| Allahabad | 78.9 % | 82.3 % | 82.3 % |
+| Bangalore | – | 76.2 % | 77.4 % |
+| Pune | – | 57.4 % | 60.6 % |
+| Delhi | – | 82.9 % | 83.8 % |
+| Hyderabad | – | 71.1 % | 70.5 % |
+
+Kancheepuram stays lowest: of its 157 misses after run 4, 125 were never discovered (mostly faculty-page papers in venues with
+no index coverage; some golden titles carry the venue inside the title, which defeats title matching), and 29 sit in the
+unconfirmed file because their year falls outside the person's verified-paper window (the "possible" rule of `finalize.py`, an
+IIT-team precision rule left unchanged; e.g. a 2016 N. Sadagopan ENDM paper found through his DBLP profile).
+
+### 4.6 Verification and TODO resolution (2026-10-28/29)
+`verify_epmc.py` (13,891 records checked) and `verify_springer.py` (4,755 Springer pages, robots-permitted paths only) ran for
+all eight, then `resolve_todos.py` per institute and `run_v2.sh refresh`.
+* **Incident:** on the first attempt every `resolve_todos.py` call died with `GET failed after 8 tries` on a Crossref single-DOI
+  lookup (`10.1109/wispnet.8299896` and others). The same URLs answered a normal 404 minutes later, so this was a network
+  outage on this machine (the last Springer request also failed then), not a code fault. The half-done refresh was stopped by
+  PID and both steps re-run (`raw/verify_iiit_2.log`).
+* `resolve_todos.py` (R1 Crossref retry / R2 CSL / R3 DOI-less candidates resolved / R4 venue ISSNs / R5 Semantic Scholar ids
+  found): Kancheepuram 0 / 0 / 5 / 5 / 174; Jabalpur 1 / 3 / 8 / 10 / 266; Gwalior 1 / 4 / 18 / 22 / 296; Allahabad 4 / 4 / 21 / 20 /
+  367; Bangalore 1 / 1 / 11 / 11 / 259; Pune 0 / 2 / 2 / 5 / 62; Delhi 2 / 0 / 55 / 11 / 1,164; Hyderabad 1 / 4 / 67 / 8 / 1,343.
+* `validate.py`: **0 violations for all eight** (200-record Crossref spot check per institute: titles, years and venues agree;
+  the few `not_in_crossref_now` are DOIs registered elsewhere).
+
+Result after verification (main file = verified + unverified-likely; "possible" candidates are in
+`candidates_unconfirmed_<inst>.json`):
+
+| IIIT | main records | verified | likely | unconfirmed | recall | DOI recall (n) |
+|---|---|---|---|---|---|---|
+| Delhi | 4,670 | 2,567 | 2,103 | 1,007 | 84.8 % (367/433) | 86.6 % (247) |
+| Allahabad | 3,137 | 2,107 | 1,030 | 557 | 83.8 % | 100 % (2) |
+| Gwalior | 2,146 | 1,378 | 768 | 713 | 81.3 % | 87.7 % (65) |
+| Bangalore | 1,642 | 1,091 | 549 | 329 | 79.7 % | 88.3 % (137) |
+| Jabalpur | 3,027 | 1,849 | 1,178 | 433 | 73.4 % | 88.4 % (69) |
+| Hyderabad | 5,187 | 2,895 | 2,292 | 1,013 | 70.8 % | 57.1 % (7) |
+| Pune | 272 | 163 | 109 | 93 | 61.7 % | 70.0 % (10) |
+| Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % | 66.0 % (47) |
+
+Verification raised the verified count from 1,030 to 1,265 for Kancheepuram and from 1,264 to 1,849 for Jabalpur. Bangalore's main file also holds 2 `ambiguous` records (an IIHS Bangalore + IIIT Delhi string).
