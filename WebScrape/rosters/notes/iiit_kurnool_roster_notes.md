@@ -52,3 +52,10 @@ Mid-2026 joiners (Manoj Kumar 15.06.2026, Rabani 08.06.2026, Hazarika 27.07.2026
 
 ## Known gaps
 * 2016-2018 faculty (including any Kancheepuram mentor faculty), 2020-10 to 2024-03 archive gap, tenure end years for Srilakshmi R, Situ Rani Patre, Amitava Das, Raju Sagi, Satya Sekhar B (single capture), joining years for two Mechanical faculty, department for NIRF-only people, no non-ORCID identifiers.
+
+## Operator correction (2026-10-29, after the precision audit)
+`joining_year` = 2025 for **Pawan Kumar** and **S. Anand Kumar** (both Mechanical; blank in the agent's roster). Evidence: neither
+is in the NIRF 2026 faculty table, whose data runs to the 2024-25 academic year, so both joined in 2025 or later. Their
+earliest records that print IIITDM Kurnool are from 2026. The Mechanical faculty page has no dates and was never archived (Wayback CDX empty).
+A blank joining year let the person channels credit their whole careers to Kurnool. The precision audit found 15 S. Anand Kumar
+papers from IIT Jammu and earlier colleges, and Pawan Kumar papers from Manipal.
