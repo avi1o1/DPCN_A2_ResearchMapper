@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making of in Full</title>
+<meta name="description" content="How the IIT Kharagpur and IIT Roorkee dataset was built and tested: sources, search, verification, recall and precision, validation, enrichment, faculty links and the checks behind every number.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="story.css">
+<style>
+.part h3{font-family:var(--display); font-weight:700; font-size:clamp(22px,2.3vw,28px); letter-spacing:-.02em; line-height:1.15; margin:40px 0 10px; max-width:24em}
+.part h3:first-of-type{margin-top:0}
+.part p{margin:0 0 12px; max-width:var(--col)}
+.part .why{font-size:17px; color:var(--ink-2); border-left:3px solid var(--rule); padding:2px 0 2px 14px; margin:14px 0}
+.part .why b{font-family:var(--ui); font-weight:700; font-size:14px; color:var(--ink); display:block}
+.part .chart{max-width:var(--col)}
+.part .rules{border-top:0; padding-top:0; margin-top:0}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand keep" href="./">Two IITs, ten years</a>
+    <span class="crumb">Chapter 1 in full: how the data was made</span>
+    <span class="sp"></span>
+    <button class="theme" id="themeBtn" aria-label="Switch light or dark theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+    </button>
+  </div>
+  <nav class="menu" aria-label="Sections">
+    <a href="#sources">Sources</a><a href="#search">Search</a><a href="#verify">Verification</a><a href="#measure">Recall and precision</a>
+    <a href="#validate">Validation</a><a href="#enrich">Enrichment and links</a><a href="#analysis">Analysis checks</a><a href="#rules">Rules</a><a href="#incidents">Incidents</a>
+  </nav>
+</header>
+<noscript>The charts on this page need JavaScript. All tables and text work without it.</noscript>
+
+<main>
+<div class="wrap page-head">
+  <div class="ch-tag"><b aria-hidden="true">1</b><span>How the data was made, every step</span></div>
+  <h1>Every step, and the check behind it.</h1>
+  <p class="lede">The story page tells the making of in eight steps. This page keeps everything behind them: each source we tried, each rule, and the number each test gave. The full lab notebook, with every script, is in the <a href="https://github.com/avi1o1/DPCN_A2_ResearchMapper">repository</a> (<code>WebScrape/PROCESS.md</code> and <code>Enrichment/README.md</code>).</p>
+</div>
+
+<!-- ============ 1 SOURCES ============ -->
+<section class="part" id="sources">
+<div class="wrap">
+  <h2>The brief, and every source we tried</h2>
+  <p class="intro">The assignment asked for every publication of IIT Kharagpur and IIT Roorkee from 2016 to 2026, with title, authors, year, type, venue, ISSN, DOI, citations and references. We set one rule before writing any code: a value we cannot establish is written as <code>TODO</code>, never guessed.</p>
+
+  <h3>We probed every source before designing anything (7 Oct)</h3>
+  <div class="tbl wide"><table>
+    <thead><tr><th>Source</th><th>What happened</th><th>How we used it</th></tr></thead>
+    <tbody>
+      <tr><td>OpenAlex API</td><td class="no">HTTP 429. It now needs an API key, and our shared campus IP had used the free allowance. We did not get around the limit.</td><td>Not used to find papers. Used from 10 Oct with a key, only to fill gaps</td></tr>
+      <tr><td>Scopus / Elsevier API</td><td class="no">No key</td><td>Not used</td></tr>
+      <tr><td>Semantic Scholar</td><td>Worked only sometimes (HTTP 429 on a shared pool)</td><td>Fallback for citations and references</td></tr>
+      <tr><td>Crossref REST API</td><td class="ok">Worked. A search on "Ropar" gave 3,482 records for 2016–2026, and 3,481 had "Ropar" in an author affiliation</td><td>Main metadata source, and search by affiliation</td></tr>
+      <tr><td>Europe PMC</td><td class="ok">Worked (affiliation field search)</td><td>Search by affiliation, and affiliation checks by DOI</td></tr>
+      <tr><td>DOAJ</td><td class="ok">Worked (open-access journals only)</td><td>Search by affiliation</td></tr>
+      <tr><td>ORCID public API</td><td class="ok">Worked. Profiles that name the IIT list their works, including Elsevier ones</td><td>Search by person</td></tr>
+      <tr><td>DBLP</td><td>Website behind a bot check. The public SPARQL endpoint worked</td><td>Search by person (computer science)</td></tr>
+      <tr><td>INSPIRE-HEP</td><td>Reachable</td><td>Search by affiliation (physics)</td></tr>
+      <tr><td>IRINS (institute research portals)</td><td class="no">HTTP 403 to scripts, behind a Cloudflare check. Not bypassed</td><td>Not used</td></tr>
+      <tr><td>Institute websites</td><td class="ok">Reachable</td><td>Faculty rosters, and the golden test sets</td></tr>
+    </tbody>
+  </table></div>
+  <p class="why"><b>What this decided</b>No single source covers everything. Recall had to come from the union of several independent sources, and quality from an evidence trail on every record: which source found it, and what confirmed it.</p>
+</div>
+</section>
+
+<!-- ============ 2 SEARCH ============ -->
+<section class="part" id="search">
+<div class="wrap">
+  <h2>Finding the papers: by place and by person</h2>
+  <p class="intro">Two kinds of search ran side by side. The first looks for the IIT in the author affiliations printed on papers. The second starts from the faculty and lists their papers. They catch different papers, so we kept both and merged them.</p>
+
+  <h3>Search by place: rare words, judged locally</h3>
+  <p>Crossref treats a multi-word query as "any of these words", so "IIT KGP" returns about 21,000 mostly unrelated hits. We searched on single rare tokens instead (city names, PIN codes and misspellings) and did all filtering ourselves. For a rare token the search behaves like an exact filter: for "Ropar", 3,481 of the 3,482 hits had the word in an author affiliation.</p>
+  <div class="raw" aria-label="Search tokens and their Crossref hit counts, 2016 to 2026">
+    <div><span>Kharagpur</span><span class="ok">13,781 hits, searched</span></div>
+    <div><span>Khargpur (typo)</span><span class="ok">11 hits, searched</span></div>
+    <div><span>Kgp</span><span class="ok">43 hits, searched</span></div>
+    <div><span>Kharaghpur, Kharakpur, Kharagpour …</span><span class="mid">0 hits</span></div>
+    <div><span>Roorkee</span><span class="ok">11,833 hits, searched</span></div>
+    <div><span>247667 (Roorkee PIN code)</span><span class="ok">3,490 hits, searched</span></div>
+    <div><span>Saharanpur, 247001 (second campus)</span><span class="ok">778 and 179 hits, searched</span></div>
+    <div><span>Roorke, Rorkee (typos)</span><span class="ok">12 and 9 hits, searched</span></div>
+    <div><span>IITR</span><span class="no">rejected: also CSIR-IITR, Lucknow</span></div>
+  </div>
+  <p>Broad sweeps on the state names (West Bengal, 277,583 records, and Uttarakhand, 18,267) catch strings that name the IIT without the city. After the classifier fix described below, the West Bengal sweep added only 3 Kharagpur records beyond the targeted words. That is our evidence that the word list is complete for Crossref.</p>
+  <p>Full Crossref records came back at about 100 per 40 seconds. Asking only for the DOI, authors, title, type and date gave 1,000 per 50 seconds, so the search used these light records and the full metadata was fetched afterwards, 40 DOIs per request.</p>
+
+  <h3>The classifier: what does "IIT Kharagpur" look like?</h3>
+  <p>Each author's affiliation text is put into one of four classes, by these rules in order.</p>
+  <ol class="steps">
+    <li>No city, PIN code or e-mail domain of the IIT appears: no decision.</li>
+    <li>A fuzzy "Indian Institute of Technology" or IIT pattern, or a unit name of this IIT, appears: <b>the IIT</b>. The match is fuzzy because real strings contain typos such as <i>Indian Institue</i>, <i>Tehcnology</i>, <i>Instituteof</i> and "Indi | an Institute".</li>
+    <li>A known other organisation in the same town appears: <b>not the IIT</b>. For Kharagpur this covers the local colleges, the South Eastern Railway, IIM, IIEST, KGP Bremerhaven (a German clinic) and Kazakh "KGP" health centres. For Roorkee it covers the National Institute of Hydrology, CSIR-CBRI, COER, Quantum, Patanjali, CPPRI and others.</li>
+    <li>A department, school or centre name together with the city, and no other organisation: <b>the IIT</b>, because it is the only multi-department research institution there. This rule is not used for Saharanpur, which has many unrelated institutions.</li>
+    <li>Anything else: <b>uncertain</b>. The record is kept and marked <code>TODO</code>.</li>
+  </ol>
+  <p>Every distinct string that mentioned the city but was not accepted was read by a person. For Kharagpur that was 78 strings, of which 11 stayed uncertain after the rules were refined. For Roorkee, 293 strings were reviewed and 49 stayed uncertain (67 author slots). What is left are bare places such as "Kharagpur, West Bengal, India", which nobody can decide.</p>
+  <p class="why"><b>A bug the review caught</b>A pattern added for the broken string "Indi | an Institute" was too loose and matched any "Indian Institute…", including "Indian Institute of Science, Kharagpur". Reading the strings by hand found it.</p>
+  <p class="why"><b>A second one, from the broad sweeps</b>The state sweeps first "found" 650 extra Kharagpur records. They were false: generic unit names such as "School of Energy Science and Engineering" matched universities in Harbin and Tianjin. Generic unit names now count only together with the city.</p>
+
+  <h3>Search by person: the faculty rosters</h3>
+  <p>Elsevier, the largest publisher in these fields, mostly does not send affiliations to Crossref, so a place search misses many of its papers. The second route starts from the faculty. Sub-agents built the rosters from the institute websites.</p>
+  <div class="tbl wide"><table>
+    <thead><tr><th>Institute</th><th class="n">People</th><th class="n">Current</th><th class="n">Former (left 2016 or later)</th><th>Others</th><th>Where the list came from</th></tr></thead>
+    <tbody>
+      <tr><td>IIT Kharagpur</td><td class="n">1,144</td><td class="n">834</td><td class="n">286</td><td>14 emeritus, 10 visiting</td><td>The website's people and former-staff lists for all 65 unit codes. Former lists carry tenure years. 458 archived profile pages were checked and gave no further former faculty</td></tr>
+      <tr><td>IIT Roorkee</td><td class="n">849</td><td class="n">573</td><td class="n">227</td><td>25 visiting, 18 adjunct, 6 emeritus</td><td>Department pages, and archived pages in the Wayback Machine for former faculty</td></tr>
+    </tbody>
+  </table></div>
+  <p>ORCID iDs were found for 474 Kharagpur and 371 Roorkee faculty. Those found by a name search (360 and 322) were accepted only when the ORCID record shows employment at that IIT.</p>
+  <p>Each person's papers came from ORCID, DBLP, a Crossref author search with name checks, and arXiv. A paper counts only if its year falls inside the person's time at the IIT, plus one year for publication delay. For Roorkee's former faculty the allowance is four years, because archive gaps make their end years lower bounds.</p>
+
+  <h3>All the channels, and how they merge</h3>
+  <div class="tbl wide"><table>
+    <thead><tr><th>Channel</th><th>Kind</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Crossref, affiliation tokens</td><td>place</td><td>The main channel</td></tr>
+      <tr><td>Europe PMC, affiliation field</td><td>place</td><td>Strong in life sciences and chemistry, and includes Elsevier</td></tr>
+      <tr><td>DOAJ, author affiliation</td><td>place</td><td>Open-access journals</td></tr>
+      <tr><td>INSPIRE-HEP, affiliation</td><td>place</td><td>Physics. A hit without the IIT in any author affiliation counts only as weak evidence</td></tr>
+      <tr><td>ORCID profiles that name the IIT</td><td>person</td><td>Works within the dated time at the IIT</td></tr>
+      <tr><td>DBLP persons affiliated with the IIT</td><td>person</td><td>Weak evidence, because DBLP affiliations have no dates</td></tr>
+      <tr><td>Roster → Crossref author search, ORCID, DBLP</td><td>person</td><td>With the name rules described under recall and precision</td></tr>
+      <tr><td>Roster → arXiv</td><td>person</td><td>One process, at most one request every 5 seconds</td></tr>
+      <tr><td>Missing DOIs by exact title in Crossref</td><td>metadata</td><td>Same title, year within one</td></tr>
+    </tbody>
+  </table></div>
+  <p>Records are joined on the normalised DOI, else on the title and year. A record without a DOI whose normalised title matches a DOI record (year within one) is merged into it. Crossref is the main metadata source, DataCite covers DOIs that Crossref does not hold (arXiv and Zenodo, for example), and the channel's own metadata is the last fallback.</p>
+  <p>Preprints that Crossref links to a published version, or that have an identical title, are merged into the published paper: 1,622 at Kharagpur and 752 at Roorkee. Twin registrations of the same work were merged too: 349 and 127. Peer reviews, datasets, journal issues, standards and similar records are not papers and are left out.</p>
+</div>
+</section>
+
+<!-- ============ 3 VERIFY ============ -->
+<section class="part" id="verify">
+<div class="wrap">
+  <h2>Verifying each paper</h2>
+  <p class="intro">Finding a paper is not the same as knowing it belongs to the IIT. Every record carries its evidence and one of these statuses. Only verified papers are analysed.</p>
+  <div class="tbl wide"><table>
+    <thead><tr><th>Status</th><th>Rule</th><th>In the statistics?</th></tr></thead>
+    <tbody>
+      <tr><td><b>Verified</b></td><td>An affiliation string on the paper is classified as the IIT, from any source</td><td class="ok">Yes</td></tr>
+      <tr><td>Rejected</td><td>Found only through a person, but the affiliations on the paper put that person, or every author, somewhere else</td><td class="no">No, removed</td></tr>
+      <tr><td>Likely (<code>TODO</code>)</td><td>Found through a person with dated or specific evidence, no affiliation published anywhere, and the year lies within the years in which the same person has verified papers</td><td class="no">No, kept in the file as TODO</td></tr>
+      <tr><td>Possible</td><td>Found through a person, outside that range, or only through undated ORCID or DBLP evidence</td><td class="no">No, moved to a separate file that is never analysed</td></tr>
+      <tr><td>Ambiguous</td><td>The only affiliation string cannot be decided</td><td class="no">No, kept as TODO</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Checking with the text printed on the paper</h3>
+  <p>Two sources were used only to confirm or refute records, by reading real affiliation text:</p>
+  <ul class="steps">
+    <li><b>Europe PMC, looked up by DOI</b> in batches: 3,622 of 45,861 DOIs had affiliations there.</li>
+    <li><b>Springer article pages</b>, which carry an institution tag for each author. We used an honestly named user agent, only the paths that robots.txt allows, and at most one request per second for each of three workers.</li>
+  </ul>
+  <p>ScienceDirect (HTTP 403), IEEE Xplore (a challenge page), Wiley, Taylor &amp; Francis, AIP and ACS (HTTP 403) were tested and left alone. No bot check was bypassed anywhere.</p>
+  <div class="mini">
+    <div><b>10,525</b>Kharagpur records found through a person, then refuted by the real affiliations</div>
+    <div><b>7,512</b>the same for Roorkee</div>
+    <div><b>10,979 / 7,538</b>low-confidence candidates kept out of the main files</div>
+  </div>
+  <p>Later, OpenAlex's raw affiliation text was read by the same classifier, under the same rule. A likely record became verified only when an author's affiliation text on the paper named the IIT, and it was rejected when every author's affiliation named another institution.</p>
+</div>
+</section>
+
+<!-- ============ 4 MEASURE ============ -->
+<section class="part" id="measure">
+<div class="wrap">
+  <h2>Measuring what we missed, and what we got wrong</h2>
+  <p class="intro">Recall and precision pull in opposite directions. Looser matching finds more real papers and more wrong ones. We measured both, against data the pipeline never saw.</p>
+
+  <h3>Golden sets: a referee built another way</h3>
+  <p>Separate agents built lists of known papers from faculty pages, department pages, institute news, annual reports and arXiv PDFs with the affiliation visible. They used none of the bibliographic databases that the pipeline used. Their notes list every search string, the results visited and what each gave.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Where the golden paper came from</th><th class="n">Kharagpur found / listed</th><th class="n">Roorkee found / listed</th></tr></thead>
+    <tbody>
+      <tr><td>Faculty pages</td><td class="n">234 / 391</td><td class="n">274 / 380</td></tr>
+      <tr><td>Department pages</td><td class="n">56 / 58</td><td class="n">80 / 111</td></tr>
+      <tr><td>arXiv</td><td class="n">72 / 102</td><td class="n">49 / 51</td></tr>
+      <tr><td>Annual reports</td><td class="n">9 / 21</td><td class="n">1 / 6</td></tr>
+      <tr><td>News and web search</td><td class="n">56 / 65</td><td class="n">10 / 14</td></tr>
+      <tr><td><b>All golden papers</b></td><td class="n"><b>67.0%</b> of 637</td><td class="n"><b>73.7%</b> of 562</td></tr>
+      <tr><td><b>Golden papers that have a DOI</b></td><td class="n"><b>81.1%</b></td><td class="n"><b>80.6%</b></td></tr>
+      <tr><td>If the excluded low-confidence candidates were added</td><td class="n">73.0%</td><td class="n">79.4%</td></tr>
+    </tbody>
+  </table></div>
+  <p>Most misses without a DOI are grey literature (conference abstracts, talks, magazine articles) that no bibliographic index covers. Misses with a DOI are mostly Elsevier and IEEE papers by faculty with very common names, where no open source shows the affiliation. Faculty pages also list papers from before or after a person's time at the IIT, so golden entries whose printed affiliation is elsewhere were counted as errors of the golden set.</p>
+
+  <h3>Recall across the pipeline's iterations</h3>
+  <div class="chart short" data-chart="recall"></div>
+  <p style="font-family:var(--ui); font-size:14px; color:var(--ink-3)">Recall against the golden set at each iteration. IIT Ropar was the pilot institute, where each change was tested first. From iteration 4 on, recall is measured on the main file only.</p>
+  <div class="tbl wide"><table>
+    <thead><tr><th class="n">Iteration</th><th>Change</th><th class="n">Kharagpur</th></tr></thead>
+    <tbody>
+      <tr><td class="n">0</td><td>Affiliation channels, ORCID and DBLP persons</td><td class="n">63.9%</td></tr>
+      <tr><td class="n">1</td><td>DataCite metadata, preprint merging, INSPIRE-HEP</td><td class="n">64.2%</td></tr>
+      <tr><td class="n">2</td><td>Roster channels (Crossref author search with name checks, roster ORCID and DBLP)</td><td class="n">70.2%</td></tr>
+      <tr><td class="n">3</td><td>Graded full-name rule and one snowball round</td><td class="n">75.4%</td></tr>
+      <tr><td class="n">4–5</td><td>Precision audit: full first names for co-authors, the common-surname rule, the name-ambiguity guard</td><td class="n">not measured</td></tr>
+      <tr><td class="n">6</td><td>Snowball removed from the main file (it drifted)</td><td class="n">62.6%</td></tr>
+      <tr><td class="n">7 (final)</td><td>arXiv pass, Springer and Europe PMC checks complete, OpenCitations fallback</td><td class="n">66.9%</td></tr>
+    </tbody>
+  </table></div>
+  <p class="why"><b>Recall went down on purpose</b>Iteration 3 found 75% of Kharagpur's golden papers, but the extra papers came from loose name matching. After the precision audit we removed that matching, and recall fell back to 67% overall, or 81% for papers with a DOI. We kept the lower number because the papers behind it are real.</p>
+
+  <h3>The precision audit: the Kumar problem</h3>
+  <p>For each institute we drew a random sample with a fixed seed (20261007): 25 verified, 40 likely and 40 possible records. A separate agent checked each one against the affiliation printed on the paper, using Crossref, Europe PMC, Springer page tags, open-access PDFs and arXiv PDFs.</p>
+  <div class="chart short" data-chart="precision"></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Tier</th><th class="n">Kharagpur yes / no / unknown</th><th class="n">Roorkee yes / no / unknown</th></tr></thead>
+    <tbody>
+      <tr><td>Verified</td><td class="n">24 / 1 / 0</td><td class="n">25 / 0 / 0</td></tr>
+      <tr><td>Likely</td><td class="n">15 / 8 / 17</td><td class="n">8 / 0 / 32</td></tr>
+      <tr><td>Possible</td><td class="n">3 / 23 / 14</td><td class="n">not part of the final audit</td></tr>
+    </tbody>
+  </table></div>
+  <p>Kharagpur was audited before the namesake fixes and Roorkee on the final data, where 32 of 40 likely records could not be checked because the publisher sites block scripted access. Precision by the channel that found an unverified record (correct / wrong, both audits): DBLP persons 0 / 6, undated ORCID 3 / 12, dated ORCID 20 / 7, roster ORCID 10 / 3, Crossref author search 21 / 32.</p>
+  <p>The failures had three causes: namesakes with common names (Kumar, Sharma, Singh, Das, Ghosh), papers from before a person joined or after they left, and ORCID or DBLP profiles of a different person. What we changed:</p>
+  <ol class="steps">
+    <li>The main file holds verified records and well-supported likely ones. Everything weaker goes to a separate file with the reason, so nothing is thrown away and nothing weak is analysed.</li>
+    <li>Co-author identities use the surname and the full first name, because surname plus initial collided massively.</li>
+    <li>For common surnames (carried by 8 or more different first names in the institute's own verified papers, 410 at Kharagpur), an initial alone such as "N. Kumar" is never matched to a person.</li>
+    <li>A name-ambiguity guard: if a name is much more common in Crossref than the person's verified papers explain, only ORCID or affiliation evidence, or two shared co-authors plus a shared venue, is accepted.</li>
+    <li>The snowball was removed from the main file. In one round, one common-name profile grew from 325 to 424 seed papers by taking in its own partly wrong matches.</li>
+    <li>The Europe PMC and Springer checks described above were added to confirm or refute records with real affiliation text.</li>
+  </ol>
+  <p class="why"><b>The trade-off, recorded honestly</b>Removing the snowball lowered recall on the Ropar pilot's golden set from 85.5% to 76.1%. Most of the difference sits in the separate file. In exchange, a large number of namesake errors left the dataset.</p>
+</div>
+</section>
+
+<!-- ============ 5 VALIDATE ============ -->
+<section class="part" id="validate">
+<div class="wrap">
+  <h2>Validation: zero violations, checked a second way</h2>
+  <p class="intro">A validation script ran over every record of every file (8–9 Oct). It checks the schema and required fields, the year range, DOI format, case and uniqueness, that no record is in both the main and the separate file, ISSN format, citation values, that references are DOIs, that no paper cites itself, the type values, that the list of open fields is right, and it re-runs the classifier on every verified record's affiliation.</p>
+  <div class="mini">
+    <div><b>0</b>violations on every check, all files</div>
+    <div><b>99–100%</b>title match, 200 random records per institute fetched again live from Crossref</div>
+    <div><b>99.5–100%</b>year and venue match on the same re-fetch</div>
+    <div><b>ρ 0.87 / 0.88</b>citation counts, Crossref against OpenCitations (Kharagpur / Roorkee), median difference 0</div>
+  </div>
+  <p>Semantic Scholar's citation counts agree less with Crossref (Spearman 0.32 to 0.67), so they are used only when Crossref has no count.</p>
+
+  <h3>Seven defects, fixed in the code</h3>
+  <p>Each defect the check found was fixed in the pipeline and the files rebuilt. None was patched by hand in the output.</p>
+  <ol class="steps">
+    <li>About 300 records had lost their Crossref metadata after an early failed batch. The retry logic was fixed, with a single-DOI retry for batch misses.</li>
+    <li>Duplicate registrations of one work (ASME twin DOIs, the German edition of <i>Angewandte</i>, Inderscience twins, IOP suffixes, several preprint versions) were merged, and the other DOIs kept. A conference paper and its later journal version stay two papers.</li>
+    <li>Publisher reference lists that cite the paper itself were cleaned.</li>
+    <li>INSPIRE hits with no IIT author affiliation became weak evidence only.</li>
+    <li>Years delivered as text were converted to numbers.</li>
+    <li>ISSNs from the journal-title lookup were normalised to the XXXX-XXXX form.</li>
+    <li>DOIs of supplementary material were excluded.</li>
+  </ol>
+
+  <h3>Resolving TODOs without guessing</h3>
+  <p>Open fields were filled only from a source record: a single-DOI retry in Crossref, doi.org content negotiation (works for any DOI agency), a title search in Crossref, DataCite and Semantic Scholar for records without a DOI, the ISSN from Crossref's journal registry by exact title, and Semantic Scholar's reference lists and counts as a last fallback. A title match was accepted only with title-word overlap of at least 0.9, a year within one and, when the authors are known, a shared author surname. It found 314 DOIs for Kharagpur and 175 for Roorkee. At Kharagpur, missing venues fell from 1,356 to 118, missing reference lists from 5,205 to 3,929 and missing DOIs from 1,072 to 928.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Field still TODO after the scrape</th><th class="n">Kharagpur</th><th class="n">Roorkee</th></tr></thead>
+    <tbody>
+      <tr><td>Affiliation (the likely records)</td><td class="n">12,243</td><td class="n">8,855</td></tr>
+      <tr><td>References</td><td class="n">3,929</td><td class="n">3,025</td></tr>
+      <tr><td>Authors</td><td class="n">1,075</td><td class="n">1,052</td></tr>
+      <tr><td>Citations</td><td class="n">968</td><td class="n">971</td></tr>
+      <tr><td>DOI</td><td class="n">928</td><td class="n">931</td></tr>
+      <tr><td>ISSN</td><td class="n">566</td><td class="n">577</td></tr>
+      <tr><td>Type</td><td class="n">303</td><td class="n">290</td></tr>
+      <tr><td>Venue</td><td class="n">118</td><td class="n">157</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-family:var(--ui); font-size:14px; color:var(--ink-3)">Counts over all records of the scraped files, before OpenAlex filled more of them. Each record lists its own open fields.</p>
+</div>
+</section>
+
+<!-- ============ 6 ENRICH ============ -->
+<section class="part" id="enrich">
+<div class="wrap">
+  <h2>Enrichment, scope and faculty links</h2>
+  <p class="intro">With an API key, OpenAlex filled what Crossref lacked. Then the scope was set, the ranks attached and every paper linked to the faculty who wrote it.</p>
+
+  <h3>OpenAlex fills gaps and never overwrites</h3>
+  <p>OpenAlex gave the work record for every DOI (100 per request), a title search for records without a DOI, the DOIs of cited works where the references were missing, and the Indian works that our papers cite and that cite them. Existing values were never overwritten. Only fields still marked TODO were filled, and every filled field records its source in the record.</p>
+  <p>A check script compares every enriched record with the original. It confirms that the records and their order are unchanged, that no original value changed except the documented ones, that every filled value is logged (and every logged one filled), that the open-field list is exact, that quartiles sit only on journal papers and come from the Scimago file of the publication year, that CORE ranks sit only on conference papers, and that the Indian-citation flags agree with the institutions listed. <b>Re-run on 29 October 2026: all checks passed for all 33,393 Kharagpur and 25,775 Roorkee records.</b></p>
+
+  <h3>Ranks</h3>
+  <p>A journal's quartile comes from Scimago by exact ISSN, using the file for the year of publication (2026 papers use the 2025 file). Scimago's site blocks scripts, so the ten yearly files were downloaded by hand. A conference's rank comes from the CORE edition in force that year: CORE2018 up to 2019, then CORE2020, CORE2021 for 2021–22, CORE2023 for 2023–25 and ICORE2026. A venue matches a CORE entry by name, or by its acronym together with overlapping name words, plus a short list of exact names checked by hand.</p>
+
+  <h3>Scope: science and engineering</h3>
+  <p>After the professor's review on 12 October we kept only papers whose OpenAlex topic is in the Physical Sciences or Life Sciences. This removed 4,069 papers at Kharagpur and 2,518 at Roorkee. Faculty of humanities, management, law, education and medical units are not reported, but their science papers still count for the institute.</p>
+  <div class="funnel" id="funnel"></div>
+
+  <h3>Linking papers to faculty</h3>
+  <p>The brief asks for one row per paper and faculty member. Five rules link a paper's authors to roster people, in order of reliability. A few extra checks stop wrong matches, such as two faculty who share a common surname.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Rule</th><th class="n">Kharagpur links</th><th class="n">Roorkee links</th></tr></thead>
+    <tbody>
+      <tr><td>ORCID iD on the paper</td><td class="n">16,467</td><td class="n">14,724</td></tr>
+      <tr><td>The person whose search found the paper</td><td class="n">11,258</td><td class="n">4,402</td></tr>
+      <tr><td>Exact name</td><td class="n">2,285</td><td class="n">2,231</td></tr>
+      <tr><td>Name and department</td><td class="n">618</td><td class="n">1,129</td></tr>
+      <tr><td>OpenAlex author id</td><td class="n">12</td><td class="n">0</td></tr>
+      <tr><td><b>Papers with at least one faculty member</b></td><td class="n"><b>82.8%</b> (21,481 of 25,950)</td><td class="n"><b>84.4%</b> (17,145 of 20,326)</td></tr>
+    </tbody>
+  </table></div>
+  <p>Faculty missing from the rosters were added only from the ORCID registry, and only when the ORCID record shows a faculty job at the IIT: 6 people and 48 second ORCID iDs at Kharagpur, 23 people and 43 iDs at Roorkee.</p>
+  <div class="mini">
+    <div><b>23 / 23</b>unit tests of the name and department rules pass, each a real case met in the data</div>
+    <div><b>0</b>links that conflict with an ORCID iD on the same paper, at both IITs</div>
+    <div><b>290 / 373</b>Kharagpur golden papers where the labelled faculty author is linked (Roorkee 255 / 345)</div>
+  </div>
+  <p>Many golden-set misses are vague labels such as "Hydrology faculty (dept list)", the same person under another form of the name, or another faculty co-author linked instead. These counts are from the check scripts re-run on 29 October 2026.</p>
+
+  <h3>The network files</h3>
+  <p>A last script checks the three network files against the brief and against the dataset: required columns, no self-citations or duplicate pairs, both ends of an internal edge in the submission, the cross-institute flag right on every edge, and the citation flags in the paper file consistent with the edges. <b>All network checks passed</b> for 86,090 internal citation edges, 185,184 citations from and 218,595 citations to other Indian institutions' works, and 137,473 author pairs.</p>
+</div>
+</section>
+
+<!-- ============ 7 ANALYSIS ============ -->
+<section class="part" id="analysis">
+<div class="wrap">
+  <h2>Checking the analysis</h2>
+  <p class="intro">No number went into the report until it was counted a second way. These are the checks behind the charts on the story page and in the full chapters.</p>
+  <ul class="steps">
+    <li>Faculty-to-faculty citations counted by a matrix product and by a loop: 50,372 both times.</li>
+    <li>Co-author distances against networkx (0 differ), and the bow-tie of the citation network by networkx and by SciPy (the same).</li>
+    <li>Papers with authors from several departments recounted from the submitted CSV (3,265 both times), and department paper counts against the department table (0 differ).</li>
+    <li>The professor's tables recounted cell by cell from the submitted CSV.</li>
+    <li>A second run of every new script: all 19 result files identical, because random rewiring now uses sorted edges and fixed seeds.</li>
+    <li>The profile explorer's builder recomputes papers, citations, h-index, i10-index and Q1 papers for all 1,410 faculty and refuses to write unless every value equals the faculty table: 0 mismatches. It found 8 DOIs that appear twice in OpenAlex (online-first year and issue year), and Crossref decided which record to keep.</li>
+    <li>Network results are compared with random networks of the same size and the same degrees. Louvain communities are checked over ten random seeds and against Leiden.</li>
+    <li>Every new reference in the report was checked on Crossref or PubMed.</li>
+  </ul>
+
+  <h3>What the checks and the data overturned</h3>
+  <p class="why"><b>Expected: PageRank finds the landmark papers</b>Found: it finds old papers cited by their own authors. 88% of internal citations are self-citations, so we added a PageRank without them and one rescaled by age.</p>
+  <p class="why"><b>Expected: a hub-dominated, "scale-free" network</b>Found: a lognormal fits citations better than a power law. Preferential attachment was measured directly, not assumed.</p>
+  <p class="why"><b>Expected: a robust collaboration web</b>Found: it is robust to random loss and fragile to targeted loss. Removing 7% of brokers halves it.</p>
+</div>
+</section>
+
+<!-- ============ 8 RULES ============ -->
+<section class="part" id="rules">
+<div class="wrap">
+  <h2>The rules behind the numbers</h2>
+  <div class="rules">
+    <p class="rules-lede">The fine print that every chart on the story page and in the full chapters follows.</p>
+    <dl>
+      <div><dt>Journal and conference ranks</dt><dd>A journal's quartile is Scimago's for the year the paper came out, and a conference's rank is from the CORE edition in force that year. A paper is never judged by a rank its venue earned later.</dd></div>
+      <div><dt>Impact factor</dt><dd>IF here is OpenAlex's two-year mean citedness, which runs higher than Clarivate's JIF. Citation counts are as of October 2026, so recent papers have had less time.</dd></div>
+      <div><dt>Influence and communities</dt><dd>PageRank uses a damping of 0.85, and is also run without self-citations and rescaled by age. Communities come from Louvain over ten random seeds, checked with Leiden. Robustness and SIR spreading are simulated on the faculty network.</dd></div>
+      <div><dt>Beyond pairs</dt><dd>Katz, communicability and HITS are computed from the adjacency matrix. Scores that are zero outside one part of the network are compared only where they are non-zero. Hypergraph and trio results use papers with a linked professor and at most 50 authors.</dd></div>
+      <div><dt>Two layers</dt><dd>Professor-to-professor citations use internal citations only; under the strict rule the two papers share no author. Pairs are compared with pairs of the same kind (department relation, subfield, output), and network results with random networks of the same degrees. FWCI is OpenAlex's.</dd></div>
+      <div><dt>Predicting departments</dt><dd>Department strengths use OpenAlex subfields. The test of whether a department moves into related areas predicts 2021–26 using only 2016–20 data.</dd></div>
+    </dl>
+  </div>
+</div>
+</section>
+
+<!-- ============ 9 INCIDENTS ============ -->
+<section class="part" id="incidents">
+<div class="wrap">
+  <h2>Things that broke</h2>
+  <p class="intro">Each incident and its fix is written down in the lab notebook, so it does not happen again.</p>
+  <ul class="steps">
+    <li>A <code>pkill</code> command matched its own shell and killed itself twice. Processes are now found by an anchored pattern and stopped by their id.</li>
+    <li>Two writers appended to one compressed file and corrupted it. Caches that grow across runs are now plain line files, readers accept a cut-off last line, and a script checks the compressed caches.</li>
+    <li>A laptop suspend left network calls hanging for three hours. The jobs were restarted, and every cache resumes where it stopped.</li>
+    <li>arXiv blocked two processes running at once, so arXiv now runs as one process at one request every five seconds.</li>
+    <li>Malformed DOIs from ORCID ("1-25", "doi 10.…") broke Crossref batch requests. DOIs are now cut to the <code>10.xxxx/…</code> pattern and anything else is dropped.</li>
+    <li>A usage limit stopped all sub-agents once. They were resumed from their saved state.</li>
+  </ul>
+
+  <div class="back">
+    <a href="./#output">Back to the story: chapter 2</a>
+    <a class="quiet" href="output.html">Chapter 2 in full: output</a>
+    <a class="quiet" href="explorer.html">Profile explorer</a>
+  </div>
+  <footer>Data collected 7–12 October 2026 from Crossref, Europe PMC, DOAJ, ORCID, DBLP, INSPIRE-HEP, arXiv, OpenAlex, Scimago and CORE. DPCN 2026, Group 3. Check results re-run on 29 October 2026.</footer>
+</div>
+</section>
+</main>
+
+<script src="../data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script src="making.js"></script>
+</body>
+</html>

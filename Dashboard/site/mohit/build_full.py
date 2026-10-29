@@ -1,4 +1,4 @@
-"""Build the two deep-dive pages of the story dashboard (output.html, networks.html) and its themed profile
+"""Build two deep-dive pages of the story dashboard (output.html, networks.html; making.html is written by hand) and its themed profile
 explorer (explorer.html) from the full dashboard in ../index.html and ../explorer.html.
 
 Every panel, chart and table of the full dashboard is kept; only the shell changes: the sidebar becomes the story
@@ -138,21 +138,21 @@ INST_SEG = ('<div class="seg" id="instSeg" role="group" aria-label="Institute"><
 
 PAGES = {
     "output.html": {
-        "title": "Output in Full", "no": "1", "crumb": "Chapter 1 in full: data analysis",
+        "title": "Output in Full", "no": "2", "crumb": "Chapter 2 in full: data analysis",
         "desc": "Every data-analysis panel for IIT Kharagpur and IIT Roorkee, 2016-2026: output, journal quality, people, most cited and big-team papers.",
         "sections": [("overview", "Overview"), ("output", "Output"), ("quality", "Quality"), ("people", "People"),
                      ("papers", "Most cited"), ("teams", "Big-team papers")],
-        "next": ('networks.html', 'Chapter 2 in full: networks'),
-        "back": ('./#networks', 'Back to the story: chapter 2'),
+        "next": ('networks.html', 'Chapter 3 in full: networks'),
+        "back": ('./#networks', 'Back to the story: chapter 3'),
     },
     "networks.html": {
-        "title": "Networks in Full", "no": "2", "crumb": "Chapter 2 in full: network analysis",
+        "title": "Networks in Full", "no": "3", "crumb": "Chapter 3 in full: network analysis",
         "desc": "Every network-analysis panel for IIT Kharagpur and IIT Roorkee: citations, Indian links, collaboration, dynamics, higher-order structure, two layers and partners.",
         "sections": [("citations", "Citation network"), ("flow", "Indian links"), ("collaboration", "Collaboration"),
                      ("dynamics", "Dynamics"), ("beyond", "Beyond pairs"), ("layers", "Two layers"),
                      ("partners", "Partners")],
-        "next": ('output.html', 'Chapter 1 in full: output'),
-        "back": ('./#making', 'Back to the story: chapter 3'),
+        "next": ('making.html', 'Chapter 1 in full: how the data was made'),
+        "back": ('./#blind', 'Back to the story: chapter 4'),
     },
 }
 
@@ -187,12 +187,12 @@ def build_pages():
         body = "\n\n".join(sections[s] for s, _ in P["sections"])
         if name == "output.html":
             body = body.replace('<p class="eyebrow">Research mapping · 2016 – 2026</p>\n    <h1>Two IITs.<br>A decade of research.</h1>',
-                                '<div class="ch-tag"><b aria-hidden="true">1</b><span>Data analysis, every panel</span></div>\n'
+                                '<div class="ch-tag"><b aria-hidden="true">2</b><span>Data analysis, every panel</span></div>\n'
                                 '    <h1>What they publish, in full.</h1>')
             body = body.replace('<p class="lede">Every confirmed publication',
                                 '<p class="lede">The story page shows the five charts that carry the argument. This page keeps every panel, table and paper list behind them. Every confirmed publication', 1)
         else:
-            body = body.replace('<section id="citations">', '<section id="citations">\n  <div class="wrap"><div class="ch-tag"><b aria-hidden="true">2</b><span>Network analysis, every panel</span></div></div>', 1)
+            body = body.replace('<section id="citations">', '<section id="citations">\n  <div class="wrap"><div class="ch-tag"><b aria-hidden="true">3</b><span>Network analysis, every panel</span></div></div>', 1)
         body = body.replace('<select class="field" id=', '<select class="combo" data-noun="departments" id=')
         nav = "".join(f'<a href="#{s}">{t}</a>' for s, t in P["sections"])
         page = f"""<!doctype html>

@@ -39,6 +39,17 @@ Both / Kharagpur / Roorkee filter for the whole page, light/dark toggle, interac
 (zoom, hover, click for details, faculty search), and a sortable, searchable faculty table. Reviewed by screenshots
 at desktop width in light and dark mode.
 
+**Update (29 Oct 2026): story chapters reordered, making of in full**
+- The story page now opens with how the data was made (chapter 1, eight steps), then data analysis (2), network
+  analysis (3), blind spots (4) and the arcade (5), with the bridges rewritten for that order.
+- `site/mohit/making.html` + `making.js`: chapter 1 in full. Every source tried, the search words, the classifier, the
+  rosters, verification tiers, recall and precision in detail, validation and the seven defects, enrichment, faculty
+  links, the analysis checks, the rules behind the numbers and the incidents. Numbers are from `WebScrape/PROCESS.md`,
+  `WebScrape/RESULTS.md`, the report and `TODO.md`. The check scripts (`verify.py`, `eval_faculty.py`,
+  `verify_networks.py`, `test_rules.py`) were re-run on 29 Oct for the counts quoted there.
+- `site/mohit/story.css`: the story page's styles, moved out of `index.html` so that `making.html` shares them.
+  `build_full.py` now numbers output and networks as chapters 2 and 3.
+
 **Update (29 Oct 2026): story dashboard at `/mohit/`**
 - `site/mohit/index.html` + `app.js`: a second, story-style dashboard that leaves the main one untouched. Five chapters:
   data analysis, network analysis, the making of the dataset (a timeline from PROCESS.md, RESULTS.md and the IIIT

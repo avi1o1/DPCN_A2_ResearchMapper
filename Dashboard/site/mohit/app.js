@@ -322,7 +322,7 @@ cvs.addEventListener("mousemove", e => {
 cvs.addEventListener("mouseleave", () => tip.style.opacity = 0);
 
 /* ---------------- chapter rail progress ---------------- */
-const chapters = ["output", "networks", "making", "arcade", "blind"].map(id => $("#" + id)), railA = $$(".rail a");
+const chapters = ["making", "output", "networks", "blind", "arcade"].map(id => $("#" + id)), railA = $$(".rail a");
 function rail() {
   // a chapter fills as its end nears the bottom of the screen, so the last one is full when the page ends
   const mid = scrollY + innerHeight * .35, end = scrollY + innerHeight, atEnd = end >= document.documentElement.scrollHeight - 4;
