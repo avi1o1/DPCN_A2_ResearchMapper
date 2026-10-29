@@ -48,3 +48,9 @@ Independent size check: NIRF 2026 (data of 30-01-2026) lists 23 faculty, 22 curr
 * The Former page layout broke around 2021-22; Sunil Dutt and Amandeep Singh first appear on it 2021-10.
 * DA-IICT mentors: ranges are listing ranges only; nothing shows when they actually taught.
 * The site prints "Dr. Sumit" as a one-word name.
+
+## Operator correction (2026-10-30, after the precision audit)
+The DBLP id of **Pratik Shah** (`https://dblp.org/pid/83/932`, accepted by `dblp_roster_ids` route R3 with 5 verified-DOI
+overlaps) is removed. The audit found 8 of its papers by namesakes at MIT, UC Irvine, USC, Acutus Medical and IIT Bombay:
+DBLP has merged several people into this profile, as with Pune's Sandeep Mishra (PROCESS_IIIT §6.1). The roster is
+re-run with `run_v2.sh final` only, not `pipeline_one.sh`, so that `dblp_roster_ids` does not fill the cell again.
