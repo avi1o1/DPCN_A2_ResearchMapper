@@ -30,6 +30,7 @@ jobs:
           mkdir -p _site
           cp Dashboard/site/index.html Dashboard/site/data.js Dashboard/site/papers.js _site/
           cp Dashboard/site/explorer.html Dashboard/site/profiles.js _site/
+          mkdir -p _site/mohit && cp Dashboard/site/mohit/index.html Dashboard/site/mohit/app.js _site/mohit/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -39,6 +39,13 @@ Both / Kharagpur / Roorkee filter for the whole page, light/dark toggle, interac
 (zoom, hover, click for details, faculty search), and a sortable, searchable faculty table. Reviewed by screenshots
 at desktop width in light and dark mode.
 
+**Update (29 Oct 2026): story dashboard at `/mohit/`**
+- `site/mohit/index.html` + `app.js`: a second, story-style dashboard that leaves the main one untouched. Five chapters:
+  data analysis, network analysis, the making of the dataset (a timeline from PROCESS.md, RESULTS.md and the IIIT
+  handoff), an arcade (higher or lower, prof vs prof, campus clash with your own college, roll a fact, guess-o-meter,
+  handshakes) and blind spots. It reads the same `../data.js`, so rebuilding `data.js` updates it too. Each finding has
+  a "Not in the numbers" note. Checked in headless Edge: no console errors, light and dark, no sideways scroll at 390 px.
+
 **Update (17 Oct 2026, network analysis beyond the brief)**
 - [x] Citation network: a "Reading the citation network with care" block: self-citation share (overall and per year),
       PageRank without self-citations and age-rescaled (tabs, with the top-1% bias check), measured preferential
