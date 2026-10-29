@@ -294,7 +294,10 @@ def process(p):
                     continue
                 affs = " | ".join(x.text or "" for x in me[0].findall("arxiv:affiliation", NS))
                 why = "affiliation" if affs and classify(inst, affs) == "iit" else None
-                if not why and not secondary:
+                # optional registry cap (unset for the IITs: behaviour unchanged): on collaboration papers with hundreds of
+                # authors one co-author name match is chance, so only the printed affiliation counts there
+                co_max = REG[inst].get("arxiv_coauthor_max_authors")
+                if not why and not secondary and not (co_max and len(names) > co_max):
                     shared = sum(1 for n in names if " " in n and gkey(n.rsplit(" ", 1)[0], n.rsplit(" ", 1)[1]) in co)
                     if shared >= 1:
                         why = f"coauthors={shared}"

@@ -20,6 +20,22 @@ os.makedirs(os.path.join(OUT, "golden"), exist_ok=True)
 from institutes import REG  # noqa: E402  (all institute facts: scripts/institutes.py)
 INSTITUTES = {k: {"name": v["name"], "ror": v["ror"]} for k, v in REG.items()}
 
+# Optional ORCID Public API token (free, personal; ORCID developer tools -> client_credentials, scope /read-public). The
+# anonymous public API has a small per-IP daily quota (exhausted by one full roster run on 2026-10-27). Read from the
+# environment or the git-ignored WebScrape/.env; never commit it. Without it, ORCID calls stay anonymous as before.
+def _dotenv(key):
+    try:
+        for line in open(os.path.join(ROOT, ".env"), encoding="utf-8"):
+            k, _, v = line.strip().partition("=")
+            if k == key:
+                return v.strip()
+    except OSError:
+        pass
+    return ""
+
+
+ORCID_TOKEN = os.environ.get("ORCID_TOKEN") or _dotenv("ORCID_TOKEN")
+
 _session = requests.Session()
 _session.headers["User-Agent"] = UA
 
@@ -29,7 +45,6 @@ _session.headers["User-Agent"] = UA
 CROSSREF_SLOTS = 3
 _SLOTDIR = os.path.join(LOGS, "crossref_slots")
 os.makedirs(_SLOTDIR, exist_ok=True)
-
 
 def try_lock(f):
     """Non-blocking exclusive lock on an open file; raises OSError if another process holds it.
@@ -78,6 +93,8 @@ def get(url, params=None, tries=8, timeout=120, **kw):
     """GET with exponential back-off on 429/5xx/network errors. Returns Response or raises."""
     for i in range(tries):
         try:
+            if ORCID_TOKEN and url.startswith("https://pub.orcid.org/"):
+                kw["headers"] = {**(kw.get("headers") or {}), "Authorization": "Bearer " + ORCID_TOKEN}
             with _Slot(url):
                 r = _session.get(url, params=params, timeout=timeout, **kw)
             if r.status_code == 200:

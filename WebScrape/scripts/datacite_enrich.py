@@ -29,7 +29,7 @@ def convert(d, doi):
     authors = []
     for cr in a.get("creators", []):
         authors.append({"given": cr.get("givenName"), "family": cr.get("familyName"), "name": cr.get("name"),
-                        "ORCID": next((n["nameIdentifier"] for n in cr.get("nameIdentifiers", []) if n.get("nameIdentifierScheme") == "ORCID"), None),
+                        "ORCID": next((n.get("nameIdentifier") for n in cr.get("nameIdentifiers", []) if n.get("nameIdentifierScheme") == "ORCID" and n.get("nameIdentifier")), None),
                         "affiliation": [{"name": x if isinstance(x, str) else x.get("name", "")} for x in cr.get("affiliation", [])]})
     t = (a.get("types") or {})
     typ = TYPES.get(t.get("resourceTypeGeneral"), "other")

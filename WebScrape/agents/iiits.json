@@ -1,0 +1,212 @@
+{
+ "iiit_jabalpur": {
+  "NAME": "PDPM IIITDM Jabalpur",
+  "CAMPUS_HINT": " (Dumna Airport Road campus, Jabalpur 482005; units are often called 'Disciplines')",
+  "SPECIAL": "* This is an IIIT (PDPM Indian Institute of Information Technology, Design and Manufacturing Jabalpur), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: IIITDM Kancheepuram (Chennai), IIITDM Kurnool, Jabalpur Engineering College, IIIT Jabalpur does not exist as a separate body. Faculty 'on contract' / 'temporary faculty' listed on the institute's faculty pages count as faculty (keep the designation).\n* If the institute was mentored by another institute in its first years, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\").",
+  "TARGET": "300",
+  "AUTHCOL": "iiitdmj_author"
+ },
+ "iiit_gwalior": {
+  "NAME": "ABV-IIITM Gwalior",
+  "CAMPUS_HINT": " (Atal Bihari Vajpayee Indian Institute of Information Technology and Management, Morena Link Road, Gwalior 474015; includes the management faculty)",
+  "SPECIAL": "* This is an IIIT (Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior, 'ABV-IIITM'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: IIITM-K / Digital University Kerala (Thiruvananthapuram), IITM (IIT Madras; Indian Institute of Tropical Meteorology, Pune), Jiwaji University, MITS Gwalior, Amity University Gwalior. Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "300",
+  "AUTHCOL": "abviiitm_author"
+ },
+ "iiit_kancheepuram": {
+  "NAME": "IIITDM Kancheepuram",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology, Design and Manufacturing Kancheepuram, Melakottaiyur / Vandalur-Kelambakkam Road, Chennai 600127)",
+  "SPECIAL": "* This is an IIIT (IIITDM Kancheepuram, Chennai), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* IIITDM Kancheepuram was set up with IIT Madras as mentor: IIT Madras faculty who only taught/mentored are `visiting` (\"Mentor faculty from IIT Madras (Y1-Y2)\"); someone who held a post at IIITDM (Director, Dean, regular appointment) is regular faculty.\n* Look-alikes that are NOT this institute: IIITDM Jabalpur, IIITDM Kurnool, IIT Madras, VIT Chennai, Sri Venkateswara College of Engineering. Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "300",
+  "AUTHCOL": "iiitdmk_author"
+ },
+ "iiit_allahabad": {
+  "NAME": "IIIT Allahabad",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Allahabad, Devghat, Jhalwa, Prayagraj 211015; city renamed Allahabad -> Prayagraj in 2018)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Allahabad), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: MNNIT Allahabad, University of Allahabad, IIIT Agartala ('IIITA' is ambiguous), IIIT Lucknow. Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "350",
+  "AUTHCOL": "iiita_author"
+ },
+ "iiit_bangalore": {
+  "NAME": "IIIT Bangalore",
+  "CAMPUS_HINT": " (International Institute of Information Technology Bangalore, Electronics City, Bengaluru 560100; include research centres/labs listed by the institute)",
+  "SPECIAL": "* This is an IIIT (International Institute of Information Technology Bangalore, 'IIIT-B'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: IIIT Bhubaneswar and IIIT Bhagalpur ('IIIT-B' is ambiguous), IIIT Dharwad, IIIT Raichur, REVA University. IIIT-B lists many adjunct / visiting / industry faculty: they are `adjunct` / `visiting` (they only contribute papers that print IIIT-B's affiliation). Research staff of centres are excluded unless the institute lists them as faculty.",
+  "TARGET": "300",
+  "AUTHCOL": "iiitb_author"
+ },
+ "iiit_pune": {
+  "NAME": "IIIT Pune",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Pune, founded 2016 as a PPP IIIT; transit campus(es) in Pune and permanent campus at Nanoli, Talegaon: establish every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Pune, 'IIITP'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* **Look-alike to keep out:** the private 'International Institute of Information Technology (I2IT / I²IT), Hinjawadi, Pune' (isquareit.ac.in) is a different organisation; also AISSMS IOIT, Vishwakarma Institute of Information Technology, PICT, COEP. If IIIT Pune had a mentor institute in its first years, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\"). Faculty 'on contract' listed on the institute's faculty pages count as faculty (keep the designation).",
+  "TARGET": "150",
+  "AUTHCOL": "iiitp_author"
+ },
+ "iiit_delhi": {
+  "NAME": "IIIT Delhi",
+  "CAMPUS_HINT": " (Indraprastha Institute of Information Technology Delhi, Okhla Industrial Estate Phase III, New Delhi 110020; a state university; include all departments and research centres listed by the institute)",
+  "SPECIAL": "* This is an IIIT (Indraprastha Institute of Information Technology Delhi, 'IIIT-Delhi', 'IIIT-D'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Look-alikes that are NOT this institute: Guru Gobind Singh Indraprastha University (GGSIPU), Indira Gandhi Delhi Technical University for Women (IGDTUW), IIT Delhi, IIITDM ('IIITD&M'), NSUT, DTU. Adjunct / visiting / honorary faculty are `adjunct` / `visiting`. Research staff of centres are excluded unless the institute lists them as faculty.",
+  "TARGET": "450",
+  "AUTHCOL": "iiitd_author"
+ },
+ "iiit_hyderabad": {
+  "NAME": "IIIT Hyderabad",
+  "CAMPUS_HINT": " (International Institute of Information Technology Hyderabad, Gachibowli, Hyderabad 500032; include every research centre / lab listed by the institute, e.g. CVIT, LTRC, KCIS, CSTAR, Spatial Informatics, Building Science, Robotics, CogSci, Data Sciences, Security, VLSI, and the humanities / natural sciences units)",
+  "SPECIAL": "* This is an IIIT (International Institute of Information Technology Hyderabad, 'IIIT-H'), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* IIIT Hyderabad is organised in research centres rather than departments: use the centre as `department` (primary centre; others in the notes). Research scientists / research staff are excluded unless the institute's faculty list shows them as faculty; adjunct, visiting, honorary and 'professor of practice' people are `adjunct` / `visiting` (they only contribute papers that print IIIT-H's affiliation).\n* Look-alikes that are NOT this institute: IIT Hyderabad (Kandi/Sangareddy), University of Hyderabad (also in Gachibowli), ISB, IIIT Naya Raipur, IIIT Bhubaneswar, the Department of Information Technology of Hyderabad engineering colleges (MLR, Vardhaman, GNITS, CBIT …).",
+  "TARGET": "550",
+  "AUTHCOL": "iiith_author"
+ },
+ "iiit_kurnool": {
+  "NAME": "IIITDM Kurnool",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology, Design and Manufacturing Kurnool; permanent campus Jagannathagattu, Kurnool 518008 from 2018; 2015-2018 classes at the mentor IIITDM Kancheepuram, Chennai: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology, Design and Manufacturing Kurnool), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: IIITDM Kancheepuram (2015-2019). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIITDM Kancheepuram, IIITDM Jabalpur, Kurnool Medical College, Rayalaseema University, G. Pulla Reddy Engineering College.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitdmkurnool_author"
+ },
+ "iiit_bhubaneswar": {
+  "NAME": "IIIT Bhubaneswar",
+  "CAMPUS_HINT": " (International Institute of Information Technology Bhubaneswar (state university, Odisha); Gothapatna, Malipada, Bhubaneswar 751003: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (International Institute of Information Technology Bhubaneswar (state university, Odisha)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: none (state institute). If there was one, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\").\n* **Look-alikes that are NOT this institute:** IIT Bhubaneswar, IIIT Bhagalpur (also abbreviated IIIT-BH; domain iiitbh.ac.in), KIIT, SOA University, CET Bhubaneswar.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitbh_author"
+ },
+ "iiit_naya_raipur": {
+  "NAME": "IIIT Naya Raipur",
+  "CAMPUS_HINT": " (Dr. Shyama Prasad Mukherjee International Institute of Information Technology, Naya Raipur (IIIT-NR); Plot 7, Sector 24, Uparwara, Atal Nagar (Naya Raipur) 493661; establish any earlier transit location: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Dr. Shyama Prasad Mukherjee International Institute of Information Technology, Naya Raipur (IIIT-NR)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: establish whether there was one. If there was one, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\").\n* **Look-alikes that are NOT this institute:** NIT Raipur, IIM Raipur, AIIMS Raipur, Pt. Ravishankar Shukla University, Kalinga University (Naya Raipur), IIIT Raichur.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitnr_author"
+ },
+ "iiit_sri_city": {
+  "NAME": "IIIT Sri City",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Sri City, Chittoor (PPP IIIT); 630 Gnan Marg, Sri City, Chittoor district 517646; establish whether early batches were taught at IIIT Hyderabad: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Sri City, Chittoor (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: IIIT Hyderabad (establish the years). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIIT Hyderabad, Krea University (also in Sri City), IIT Tirupati, IIIT Surat / IIIT Sonepat (also abbreviated IIITS).\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiits_author"
+ },
+ "iiit_guwahati": {
+  "NAME": "IIIT Guwahati",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Guwahati (PPP IIIT); permanent campus Bongora 781015 from July 2018; 2013-2018 transit campus at the Assam Textile Institute, Ambari: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Guwahati (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: establish whether there was one. If there was one, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\").\n* **Look-alikes that are NOT this institute:** IIT Guwahati, Gauhati University, IIM Guwahati, NIT Silchar.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitg_author"
+ },
+ "iiit_vadodara": {
+  "NAME": "IIIT Vadodara",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Vadodara (PPP IIIT); works from Gandhinagar (GEC campus, Sector 28, 382028; first years at DA-IICT) and, since 2020, the International Campus Diu (IIITV-ICD, Kevdi); the Dumad (Vadodara) campus had not opened: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Vadodara (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: DA-IICT Gandhinagar. Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIT Gandhinagar, DA-IICT, Government Engineering College Gandhinagar, MS University of Baroda.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitv_author"
+ },
+ "iiit_kota": {
+  "NAME": "IIIT Kota",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Kota (PPP IIIT); 2013-2023 at the mentor MNIT Jaipur (302017); since 2023 years 1-2 at the permanent Ranpur (Kota) campus, the rest still at MNIT Jaipur: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Kota (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: MNIT Jaipur (2013-present). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** MNIT Jaipur (its own faculty are not IIIT Kota faculty unless they held an IIIT Kota post), University of Kota, Rajasthan Technical University.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitkota_author"
+ },
+ "iiit_tiruchirappalli": {
+  "NAME": "IIIT Tiruchirappalli",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Tiruchirappalli (PPP IIIT); 2013-2016 BIT campus (Anna University), 2016-2020 NIT Trichy, 2020-2021 Oxford Engineering College; Sethurapatti 620012 from 2021: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Tiruchirappalli (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: NIT Tiruchirappalli (mentor director until 2019). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** NIT Tiruchirappalli, IIM Tiruchirappalli, Bharathidasan University.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitt_author"
+ },
+ "iiit_una": {
+  "NAME": "IIIT Una",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Una, Himachal Pradesh (PPP IIIT); 2014-2019/20 at the mentor NIT Hamirpur; then transit campus Chandpur, Haroli and permanent campus Saloh, Haroli, Una 177209: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Una, Himachal Pradesh (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: NIT Hamirpur (2014-2018). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** NIT Hamirpur, IIT Mandi.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitu_author"
+ },
+ "iiit_sonepat": {
+  "NAME": "IIIT Sonepat",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Sonepat, Haryana (PPP IIIT); 2014-2018 at the mentor NIT Kurukshetra; then IIT Delhi Techno Park, Rajiv Gandhi Education City, Rai, Sonepat 131029; from 2022 also the SBIT campus: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Sonepat, Haryana (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: NIT Kurukshetra (2014-2018). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** NIT Kurukshetra, IIT Delhi (Sonepat Techno Park), Ashoka University, O.P. Jindal Global University, DCRUST, NIFTEM.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitsonepat_author"
+ },
+ "iiit_kalyani": {
+  "NAME": "IIIT Kalyani",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Kalyani, West Bengal (PPP IIIT); Webel IT Park, Kalyani 741235 (2014-), permanent campus on the Kalyani Expressway: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Kalyani, West Bengal (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: IIEST Shibpur, then IIT Kharagpur (from 2017). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** University of Kalyani, BCKV, AIIMS Kalyani, NIBMG, Kalyani Government Engineering College.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitkalyani_author"
+ },
+ "iiit_lucknow": {
+  "NAME": "IIIT Lucknow",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Lucknow (PPP IIIT); 2015-2019 at the mentor IIIT Allahabad (Jhalwa, Prayagraj); Chak Ganjaria, Ahmamau, Lucknow 226002 from 2019: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Lucknow (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: IIIT Allahabad (2015-c.2019). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIIT Allahabad (its faculty are not IIIT Lucknow faculty unless they held an IIIT Lucknow post), IIM Lucknow, IIT Kanpur.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitl_author"
+ },
+ "iiit_dharwad": {
+  "NAME": "IIIT Dharwad",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Dharwad (PPP IIIT); 2015-c.2021 rented floor at the IT Park, Hubballi; Ittigatti Road, Dharwad 580009 from c.2021: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Dharwad (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: IIIT Bangalore. Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIT Dharwad, IIIT Delhi (IIITD), Karnatak University, KLE Technological University.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitdwd_author"
+ },
+ "iiit_kottayam": {
+  "NAME": "IIIT Kottayam",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Kottayam (PPP IIIT); 2015-2016 Amal Jyothi College (Koovappally); Dec 2016-2019 GIFT campus, Thiruvananthapuram; Valavoor, Pala 686635 from 2019: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Kottayam (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: NIT Calicut (2015-2016), IISER Thiruvananthapuram (from Dec 2016). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIITM-K / Digital University Kerala, IIIT Kalyani / IIITDM Kurnool / IIIT Kota (also abbreviated IIITK), Mahatma Gandhi University.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitkottayam_author"
+ },
+ "iiit_manipur": {
+  "NAME": "IIIT Manipur",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Senapati, Manipur (PPP IIIT); City Campus, Mantripukhri, Imphal 795002 (2015-); permanent campus (Senapati / Mayangkhang) under construction: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Senapati, Manipur (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: establish whether there was one. If there was one, mentor faculty who only taught are `visiting` (\"Mentor faculty from X (Y1-Y2)\").\n* **Look-alikes that are NOT this institute:** NIT Manipur, Manipur University, ABV-IIITM Gwalior (also abbreviated IIITM).\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitmanipur_author"
+ },
+ "iiit_nagpur": {
+  "NAME": "IIIT Nagpur",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Nagpur (PPP IIIT); 2016-2021 temporary campus at the BSNL RTTC, Nagpur; Waranga, Butibori 441108 from 2021: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Nagpur (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: VNIT Nagpur. Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** VNIT Nagpur, IIM Nagpur, AIIMS Nagpur, RTM Nagpur University.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "150",
+  "AUTHCOL": "iiitn_author"
+ },
+ "iiit_ranchi": {
+  "NAME": "IIIT Ranchi",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Ranchi (PPP IIIT); 2016-2019 at the mentor NIT Jamshedpur; 2019-2024 JUT campus, Namkum 834010; from c.2024 BSNL ARTTC, Getlatu 835217; permanent site Kanke: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Ranchi (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: NIT Jamshedpur. Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** NIT Jamshedpur, BIT Mesra, IIM Ranchi, IIIT Raichur (also abbreviated IIITR).\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitranchi_author"
+ },
+ "iiit_surat": {
+  "NAME": "IIIT Surat",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Surat (PPP IIIT); SVNIT campus, Ichchhanath, Surat 395007 since 2017; permanent site Kamrej: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Surat (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: SVNIT Surat. Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** SVNIT Surat, IIIT Sri City (IIITS), Veer Narmad South Gujarat University.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitsurat_author"
+ },
+ "iiit_bhopal": {
+  "NAME": "IIIT Bhopal",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Bhopal (PPP IIIT); MANIT campus, Bhopal 462003 since 2017; permanent site Fatehpur Dobra: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Bhopal (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: MANIT Bhopal. Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** MANIT Bhopal (its faculty are not IIIT Bhopal faculty unless they held an IIIT Bhopal post), IISER Bhopal, AIIMS Bhopal.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitbhopal_author"
+ },
+ "iiit_bhagalpur": {
+  "NAME": "IIIT Bhagalpur",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Bhagalpur (PPP IIIT); 2017-Feb 2024 at Bhagalpur College of Engineering, Sabour; own campus Rani Talab, Sabour 813210 from 2024: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Bhagalpur (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: IIT Guwahati (from 2017). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIIT Bhubaneswar (also IIIT-BH; domain iiit-bh.ac.in), Bhagalpur College of Engineering, Bihar Agricultural University.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitbhagalpur_author"
+ },
+ "iiit_agartala": {
+  "NAME": "IIIT Agartala",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Agartala (PPP IIIT); NIT Agartala campus, Barjala, Jirania 799046 since 2018; permanent site Bodhjungnagar not built: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Agartala (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: NIT Agartala. Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** NIT Agartala (its faculty are not IIIT Agartala faculty unless they held an IIIT Agartala post), Tripura University, IIIT Allahabad (IIITA).\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitagartala_author"
+ },
+ "iiit_raichur": {
+  "NAME": "IIIT Raichur",
+  "CAMPUS_HINT": " (Indian Institute of Information Technology Raichur (PPP IIIT); 2019-2020/21 at the mentor IIT Hyderabad (Kandi, Sangareddy 502285); then Government Engineering College campus, Yermarus Camp 584135; permanent campus Wadavatti: verify every campus, its address and PIN, and the years used, and record them in the notes)",
+  "SPECIAL": "* This is an IIIT (Indian Institute of Information Technology Raichur (PPP IIIT)), not an IIT: wherever this brief says 'IIT' or 'this IIT', read 'this institute'.\n* Mentor institute: IIT Hyderabad (from 2019; mentor director B. S. Murty). Mentor faculty who only taught or mentored are `visiting` (\"Mentor faculty from X (Y1-Y2)\"); someone who held a post at this institute (Director, Dean, regular appointment) is regular faculty.\n* **Look-alikes that are NOT this institute:** IIT Hyderabad (its faculty are not IIIT Raichur faculty unless they held an IIIT Raichur post), IIIT Ranchi (also IIITR), University of Agricultural Sciences Raichur.\n* Faculty 'on contract', 'adhoc', 'temporary' or 'assistant professor (contract)' listed on the institute's own faculty pages count as faculty (keep the designation). NIRF 'Faculty details' tables (2018-2026) are the main dated source for small new institutes.",
+  "TARGET": "100",
+  "AUTHCOL": "iiitraichur_author"
+ }
+}
