@@ -473,3 +473,42 @@ unchanged (§1–6).
   and `iitnone` strings were read. There were no false positives. The rules leave 5 strings uncertain in total. One is
   "IIITK, Dept. of ECE, Kottayam", left uncertain because IIITK is ambiguous. Three strings print "Indian Institute of Information
   Technology, Sri City 441108", which is IIIT Nagpur's PIN. They are left as `other` for Nagpur.
+
+### 7.3 Progress (2026-10-30, interim: pushed for review)
+Rosters, golden sets and precision audits are built by Sonnet sub-agents with the same briefs as §3 and §5.1. The
+pipeline is `raw/pipeline_one.sh` (first pass → `orcid_roster_ids` → `dblp_roster_ids` → `run_v2.sh final`) followed by
+`raw/verify_one.sh` (verify_epmc → verify_springer → resolve_todos → refresh + validate). `validate.py` reports 0
+violations for every institute below.
+
+| IIIT | main | verified | likely | unconfirmed | recall (golden) | DOI recall (n) | P verified | P likely | P possible |
+|---|---|---|---|---|---|---|---|---|---|
+| Bhubaneswar | 1,123 | 702 | 421 | 396 | 67.3 % (72/107) | 72.3 % (47) | 100 % | 91 % (32/35) | 13 % |
+| Naya Raipur | 1,195 | 822 | 373 | 96 | 76.2 % (96/126) | 91.7 % (36) | 100 % | 81 % (25/31) | 19 % |
+| Guwahati | 1,231 | 805 | 426 | 187 | 55.3 % (83/150) | 55.6 % (9) | 100 % | 82 % (28/34) | 21 % |
+| Sri City | 879 | 568 | 311 | 288 | 69.7 % (99/142) | 62.9 % (35) | 100 % | 71 % (25/35) | 36 % |
+| Lucknow | 240 | 176 | 64 | 70 | 81.5 % (44/54) | 85.7 % (21) | 100 % | 61 % (19/31) | 24 % |
+| Kurnool | 562 | 410 | 152 | 203 | 61.4 % (27/44) | 72.2 % (18) | 100 % | 50 % (15/30) | 15 % |
+| Vadodara | 384 | 241 | 143 | 166 | 64.6 % (64/99) | 81.0 % (21) | audit running | | |
+| Dharwad | 426 | 295 | 131 | 140 | golden set running | | audit running | | |
+| Kota | 225 | 148 | 77 | 161 | not yet | | not yet | | |
+
+Not started yet: Tiruchirappalli, Una, Sonepat, Kalyani, Kottayam, Manipur, Nagpur, Ranchi, Surat, Bhopal, Bhagalpur,
+Agartala, Raichur.
+
+**Main finding: the likely tier is weaker at young, high-turnover IIITs** (50–91 %, against 71–97 % for the first eight).
+Almost every `no` is a paper from the joining or leaving year, or from an ORCID employment window, that prints the person's
+previous or next employer. Examples are Din Bandhu (Kurnool 2022–23, then Manipal), Chandranath Adak (Lucknow, then Patna and
+JIS) and Ruhul Amin (Naya Raipur, earlier Thapar and IIT (ISM)). Crossref holds no affiliation for these papers, so
+`finalize`'s contradiction check (`rejected_contradicted`) cannot fire. The audits saw the other employer in OpenAlex's raw
+affiliation strings. An OpenAlex-based contradiction check would remove most of these errors. That is the same method
+decision as §6.2 (OpenAlex is out of discovery by handoff rule) and is left to the operator and the IIT team. The verified
+tier is 100 % in every audit.
+
+**Roster corrections made after audits:**
+* Kurnool: joining year 2025 for two people absent from NIRF 2026. This has no practical effect: `roster_channels`
+  already bounds a blank joining year by the first verified paper minus one.
+* Kota: ten post-holders (Director, Deans, Coordinators) are MNIT Jaipur faculty holding IIIT Kota posts. They are now
+  `adjunct`, so they contribute only papers that print IIIT Kota. Details are in the roster notes.
+
+**Golden sets are thin for the young IIITs**: Kurnool 44 and Lucknow 54 papers, because faculty pages list work from before
+joining and the institutes' own publication lists stop early. Their recall figures have wide uncertainty.
