@@ -9,7 +9,21 @@ Prints: <status>\t<path-of-cached-body>\t<final-url>
 """
 import sys, os, time, hashlib, json, urllib.parse
 import requests
-try:
+
+# blocking exclusive file lock: fcntl on Linux/macOS (unchanged); msvcrt byte-range lock on Windows (no fcntl there)
+if os.name == "nt":
+    import msvcrt
+
+    def _lock(f):
+        while True:
+            try:
+                f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1); return
+            except OSError:
+                time.sleep(0.05)
+
+    def _unlock(f):
+        f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
+else:
     import fcntl
 
     def _lock(f):
@@ -17,22 +31,6 @@ try:
 
     def _unlock(f):
         fcntl.flock(f, fcntl.LOCK_UN)
-except ImportError:
-    # Windows (IIIT team's machine) has no fcntl: a blocking msvcrt lock on one byte far past the data (the file holds the
-    # last-request time and is truncated under the lock). Linux behaviour is unchanged.
-    import msvcrt
-
-    def _lock(f):
-        while True:
-            f.seek(1 << 20)
-            try:
-                msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1)
-                return
-            except OSError:
-                time.sleep(0.05)
-
-    def _unlock(f):
-        f.seek(1 << 20); msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
 
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".runtime")   # git-ignored
 CACHE, LOCKS = os.path.join(BASE, "shared_cache"), os.path.join(BASE, "locks")

@@ -46,24 +46,24 @@ CROSSREF_SLOTS = 3
 _SLOTDIR = os.path.join(LOGS, "crossref_slots")
 os.makedirs(_SLOTDIR, exist_ok=True)
 
-try:
-    import fcntl
-
-    def _trylock(f):
+def try_lock(f):
+    """Non-blocking exclusive lock on an open file; raises OSError if another process holds it.
+    fcntl on Linux/macOS (unchanged behaviour); msvcrt byte-range lock on Windows, where fcntl does not exist."""
+    if os.name == "nt":
+        import msvcrt
+        f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1)
+    else:
+        import fcntl
         fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
 
-    def _unlock(f):
-        fcntl.flock(f, fcntl.LOCK_UN)
-except ImportError:
-    # Windows (IIIT team's machine) has no fcntl: lock one byte with msvcrt instead (raises OSError when taken, as flock
-    # does). Linux behaviour is unchanged.
-    import msvcrt
 
-    def _trylock(f):
-        f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1)
-
-    def _unlock(f):
+def unlock(f):
+    if os.name == "nt":
+        import msvcrt
         f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
+    else:
+        import fcntl
+        fcntl.flock(f, fcntl.LOCK_UN)
 
 
 class _Slot:
@@ -76,7 +76,7 @@ class _Slot:
             for k in range(CROSSREF_SLOTS):
                 f = open(os.path.join(_SLOTDIR, f"slot{k}"), "a")
                 try:
-                    _trylock(f)
+                    try_lock(f)
                     self.f = f
                     return self
                 except OSError:
@@ -86,7 +86,7 @@ class _Slot:
 
     def __exit__(self, *a):
         if self.f:
-            _unlock(self.f); self.f.close()
+            unlock(self.f); self.f.close()
 
 
 def get(url, params=None, tries=8, timeout=120, **kw):

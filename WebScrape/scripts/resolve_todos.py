@@ -67,7 +67,10 @@ print("R1/R2: DOIs with no metadata record:", len(never), flush=True)
 f1 = gzip.open(os.path.join(CRD, "single_retry.jsonl.gz"), "at")
 still = []
 for d in never:
-    r = get("https://api.crossref.org/works/" + urllib.parse.quote(d, safe="/()"), params={"mailto": MAILTO})
+    try:
+        r = get("https://api.crossref.org/works/" + urllib.parse.quote(d, safe="/()"), params={"mailto": MAILTO})
+    except RuntimeError:   # one persistently failing DOI must not abort the stage
+        still.append(d); continue
     if r.status_code == 200:
         it = r.json()["message"]; it["_q"] = d
         f1.write(json.dumps(it, ensure_ascii=False) + "\n")
@@ -101,6 +104,8 @@ for d in still:
 f2.close()
 print("R2 csl records", n2, flush=True)
 
+R3_WORKERS = int(os.environ.get("R3_WORKERS", "6"))
+
 # ---------------- R3 DOI-less title resolution (on candidate keys, so build_candidates can apply them)
 for inst in INSTS:
     outfn = os.path.join(RAW, f"doi_resolved2_{inst}.tsv")
@@ -109,8 +114,7 @@ for inst in INSTS:
     cands = [c for c in read_jsonl_gz(os.path.join(RAW, f"candidates_{inst}.jsonl.gz"))
              if not c["doi"] and c.get("title") and c["key"] not in done and "".join(sorted(toks(c["title"]))) in final_titles]
     print(f"R3 {inst}: DOI-less candidates to resolve", len(cands), flush=True)
-    out = open(outfn, "a"); hit = 0
-    for c in cands:
+    def resolve(c):
         T = toks(c["title"]); y = c["year"]
         names = c["meta"].get("epmc_authors") or c["meta"].get("doaj_authors") or []
         mine = surnames(names) | surnames([re.sub(r"[\(\[].*", "", p).strip() for p in c.get("persons", [])])
@@ -154,7 +158,13 @@ for inst in INSTS:
                                 break
                 except Exception:
                     pass
-        out.write(f"{c['key']}\t{best or ''}\n"); out.flush(); hit += bool(best)
+        return best
+
+    from concurrent.futures import ThreadPoolExecutor
+    out = open(outfn, "a"); hit = 0
+    with ThreadPoolExecutor(R3_WORKERS) as ex:   # lookups are I/O-bound; Crossref stays capped by the machine-wide slots in common._Slot
+        for c, best in zip(cands, ex.map(resolve, cands)):
+            out.write(f"{c['key']}\t{best or ''}\n"); out.flush(); hit += bool(best)
     out.close()
     print(f"R3 {inst}: resolved {hit}", flush=True)
 

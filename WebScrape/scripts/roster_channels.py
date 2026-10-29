@@ -119,6 +119,25 @@ for _r in verified:
 
 out, log = [], []
 arxiv_lock = threading.Lock(); last_arxiv = 0.0
+import contextlib, fcntl
+@contextlib.contextmanager
+def arxiv_gate(gap=3.5):
+    """Machine-wide pacing for export.arxiv.org: one request in flight and >= `gap` s between request starts, across all
+    processes (arXiv's API terms: 1 request / 3 s; several concurrent passes were answered with 429 and long back-offs)."""
+    path = os.path.join(LOGS, "arxiv_gate")
+    with open(path, "a+") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            f.seek(0); s = f.read().strip()
+            last = float(s) if s else 0.0
+            wait = gap - (time.time() - last)
+            if wait > 0:
+                time.sleep(wait)
+            yield
+        finally:
+            f.seek(0); f.truncate(); f.write(str(time.time())); f.flush()
+            fcntl.flock(f, fcntl.LOCK_UN)
+
 NS = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
 lock = threading.Lock()
 
@@ -262,12 +281,8 @@ def process(p):
     if ARXIV and gt and len(gt[0]) > 1 and start is not None:
         global last_arxiv
         try:
-            with arxiv_lock:
-                wait = 5.0 - (time.time() - last_arxiv)
-                if wait > 0:
-                    time.sleep(wait)
+            with arxiv_lock, arxiv_gate():
                 r = get("https://export.arxiv.org/api/query", params={"search_query": f'au:"{" ".join(gt + [fam])}"', "max_results": 300}, timeout=120)
-                last_arxiv = time.time()
             for e in ET.fromstring(r.text).findall("a:entry", NS):
                 y = int(e.find("a:published", NS).text[:4])
                 if not (YEAR_MIN <= y <= YEAR_MAX) or y < start or y > end:

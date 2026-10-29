@@ -66,6 +66,7 @@ Do NOT use IRINS/Scopus/OpenAlex/Google Scholar scraping or any API needing a ke
 * **Wayback density:** about two snapshots per year per page is enough; fetch denser only around years where the membership
   changed. Several agents share the 3-second Wayback slot.
 * Per-person notes (second unit, ambiguity, evidence for years) go in the notes file — do not add CSV columns.
+* **ORCID — use the offline index first:** `{WORK}/../orcid_index/{INST}_orcid_index.tsv (built from WebScrape/raw/orcid/{INST}.jsonl.gz)` lists every ORCID profile whose employment / education / invited-position record names this IIT (columns: orcid, name, kind, org, department, role, start, end), harvested for the pipeline. Match roster people against it (same name, compatible department/years; `kind` = employments for faculty); count these as the "ORCID affiliation record" route. Use the live API only for people left over.
 * **ORCID (shared daily quota for the whole machine — be frugal):** one affiliation search per institute (expanded-search by the
   institute's name/ROR, paged), then `/employments` checks only for name-matched candidates. No per-person name searches unless a
   person is left over. If the API answers 429, stop ORCID work and list the remaining people under "ORCID lookup pending" in notes.

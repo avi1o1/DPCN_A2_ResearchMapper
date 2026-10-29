@@ -15,7 +15,7 @@ from institutes import REG, NON_IIT, rx
 
 WS = re.compile(r"\s+")
 # fuzzy "Indian Institute of Technology" (covers Institue/Institite/Instituteof/Inst./missing 'of'); unchanged from v1
-IIT = re.compile(r"indi\w*\s*ins\w*\.?\s*(of\s*)?(te[ch]\w*|ropar|rupnagar|kharagpur|roorkee)|indian\s+intitute\s+of\s+tech|\biit\b|\bi\s*\.\s*i\s*\.\s*t\b|iit\s*-?\s*(rpr|ropar|kgp|kharagpur)"
+IIT = re.compile(r"indi\w*\s*ins\w*\.?\s*(of\s*)?(te[ch]\w*|ropar|rupnagar|kharagpur|roorkee)|indian\s+intitute\s+of\s+tech|\biit\b|(?<!i\.)(?<!i\.\s)\bi\s*\.\s*i\s*\.\s*t\b|iit\s*-?\s*(rpr|ropar|kgp|kharagpur)"
                  r"|iitkgp|iitrpr|indian\s+institute\s+technology|indi\s*\|\s*an\s+institute|[it]nstitute of technology,?\s*(\(iit\)\s*)?(kharagpur|ropar|rupnagar)"
                  r"|\biit\d|e\s*(&|&amp;|&#x0026;)\s*eceiit|@iitrpr\.ac\.in|@iitkgp\.ac\.in|iitkgp\.ac\.in|iitrpr\.ac\.in", re.I)
 NON_IIT_RX = re.compile(NON_IIT, re.I)
@@ -26,7 +26,7 @@ EMAIL = re.compile(r"\S+@\S+")
 # foreign postcode: "Yale School of Medicine, P.O. Box 208016, New Haven")
 FOREIGN = re.compile(r"\b(usa|u\.s\.a\.?|united states|united kingdom|uk|canada|australia|germany|france|italy|spain|japan|"
                      r"korea|taiwan|singapore|israel|netherlands|sweden|switzerland|p\.?\s*o\.?\s*box|new haven)\b", re.I)
-EXPL_PREFIX = r"(?:indi\w*\s*ins\w*\.?\s*(?:of\s*)?te[ch]\w*|\biit|\bi\s*\.\s*i\s*\.\s*t\.?)\s*(?:\(\s*iit\s*\))?\s*[,\-\u2013:]?\s*\(?\s*"
+EXPL_PREFIX = r"(?:indi\w*\s*ins\w*\.?\s*(?:of\s*)?te[ch]\w*|\biit|(?<!i\.)(?<!i\.\s)\bi\s*\.\s*i\s*\.\s*t\.?)\s*(?:\(\s*iit\s*\))?\s*[,\-\u2013:]?\s*\(?\s*"
 # "discipline" added in v2 (IIT Indore / Gandhinagar / Jodhpur name their units "Discipline of ...")
 DEPT = re.compile(r"\b(department|dept\.?|school|centre|center|coe\w*|discipline)\b", re.I)
 ORGWORD = re.compile(r"universit|college|institute of science|institute of biomedical|corporate|hospital|ltd|pvt|inc\b|gmbh|abb\b", re.I)
