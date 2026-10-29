@@ -380,6 +380,40 @@ details summary{color:var(--ink); text-decoration:underline; text-decoration-col
 .back a:hover{background:var(--ink); color:var(--paper)}
 .back a.quiet{border-color:var(--rule)}
 footer{border-top:1px solid var(--rule)}
+
+/* compact: each panel should fit a laptop screen (about 700px of viewport) */
+.wrap{max-width:1180px}
+section{padding-block:52px}
+.head{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:4px 40px; align-items:end; margin-bottom:24px}
+.head > *{grid-column:1}
+.head > .lede{grid-column:2; grid-row:1 / span 3; margin:0; align-self:end}
+h1{font-size:clamp(36px,4.6vw,56px)}
+h2{font-size:clamp(26px,2.9vw,36px); max-width:none}
+h3{font-size:18px}
+.lede{font-size:17.5px; line-height:1.45}
+.card, .inspector{padding:18px 20px}
+.grid2, .grid3, .stack, .strip, .net{gap:14px}
+.grid2{margin-top:14px}
+.card + .card, .card + .grid2, .grid2 + .card, .grid2 + .grid2, .card + .grid3, .grid3 + .card{margin-top:14px}
+.chart{height:290px}
+.chart.short{height:220px}
+.chart.tall{height:460px}
+.grid2 > .card > .chart{min-height:240px; max-height:340px}
+.lim:not(.open) > li:nth-child(n+5){display:none}
+.cap{font-size:14.5px; margin-top:8px}
+.tabs{margin:8px 0 6px}
+.kpis{margin-top:28px; gap:14px}
+.kpi{padding:16px 18px}
+.kfhead{margin-top:28px}
+.findings{gap:10px 40px; margin-top:12px}
+.findings li{font-size:15px}
+.rank li{padding:9px 0}
+th, td{padding:8px 10px}
+.stat{padding:16px 18px}
+.stat .big{font-size:28px}
+.ch-tag b{font-size:56px}
+@media (max-width:900px){ .head{grid-template-columns:1fr} .head > .lede{grid-column:1; grid-row:auto; margin-top:10px} }
+@media (max-width:720px){ section{padding-block:44px} .chart{height:280px} .chart.tall{height:400px} }
 </style>
 </head>
 <body>
@@ -390,7 +424,7 @@ footer{border-top:1px solid var(--rule)}
     <span class="sp"></span>
     <div class="seg" id="instSeg" role="group" aria-label="Institute"><span class="thumb"></span><button type="button" data-inst="both" aria-pressed="true">Both</button><button type="button" data-inst="IIT Kharagpur" aria-pressed="false"><span class="dot k"></span>Kharagpur</button><button type="button" data-inst="IIT Roorkee" aria-pressed="false"><span class="dot r"></span>Roorkee</button></div>
     <button type="button" class="theme themeBtn" aria-label="Switch light or dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
-    <nav class="menu" aria-label="Sections"><a href="#citations">Citation network</a><a href="#flow">Indian links</a><a href="#collaboration">Collaboration</a><a href="#dynamics">Dynamics</a><a href="#beyond">Beyond pairs</a><a href="#layers">Two layers</a><a href="#partners">Partners</a><a href="#method">Method</a></nav>
+    <nav class="menu" aria-label="Sections"><a href="#citations">Citation network</a><a href="#flow">Indian links</a><a href="#collaboration">Collaboration</a><a href="#dynamics">Dynamics</a><a href="#beyond">Beyond pairs</a><a href="#layers">Two layers</a><a href="#partners">Partners</a></nav>
   </div>
 </header>
 <main>
@@ -742,25 +776,6 @@ footer{border-top:1px solid var(--rule)}
         <p class="cap">Each dot is a partner. Higher means a more similar research mix; further right means more shared papers.</p>
         <div class="chart tall" id="chJac"></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="method" class="alt">
-  <div class="wrap">
-    <div class="head rv">
-      <p class="eyebrow">Method</p>
-      <h2>How this was built.</h2>
-    </div>
-    <div class="method rv">
-      <div><h3>Papers</h3><p>Scraped from Crossref, Europe PMC, DOAJ, INSPIRE, ORCID, DBLP and Semantic Scholar, then checked against OpenAlex. A paper counts only when the IIT is named in an author's affiliation on the paper itself.</p></div>
-      <div><h3>Faculty</h3><p>Papers are linked to faculty from the institutes' own lists by ORCID, then by name and department. Unclear names are left unlinked rather than guessed; about 83% of papers have a faculty author.</p></div>
-      <div><h3>Journals and conferences</h3><p>Journal quartiles come from Scimago for the year of publication. Conference ranks come from the CORE portal edition in force that year.</p></div>
-      <div><h3>Networks</h3><p>Citation links and Indian partners come from OpenAlex. Influence uses PageRank (damping 0.85), also without self-citations and rescaled by age; communities use Louvain over ten random seeds, checked with Leiden. Robustness and SIR spreading are simulated on the faculty network.</p></div>
-      <div><h3>Read with care</h3><p>h-index and i10 here cover 2016–2026 papers only, so they are about half a career value. IF is OpenAlex's 2-year mean citedness, which runs higher than Clarivate's JIF. Citation counts are as of October 2026. PageRank favours older papers, and 88% of citations inside an institute are self-citations.</p></div>
-      <div><h3>Beyond pairs</h3><p>Katz, communicability and HITS are computed from the adjacency matrix; scores that are zero outside one part of the network are compared only where they are non-zero. The hypergraph and trio results use the co-authorship file: papers with a linked faculty member and at most 50 authors. Every number was checked a second way.</p></div>
-      <div><h3>Two layers</h3><p>Faculty-to-faculty citations use internal citations only; under the strict rule the two papers share no author. Comparisons are made against faculty pairs of the same kind (department relation, main subfield, output), and network results against random networks with the same degrees. FWCI is OpenAlex's. Department strengths use OpenAlex subfields; the 2016–20 → 2021–26 test uses only 2016–20 data to predict.</p></div>
-      <div><h3>Scope</h3><p>Science and engineering only: papers whose OpenAlex topic is in the Physical or Life Sciences. Faculty of humanities, management, law, education and medical units are not included.</p></div>
     </div>
   </div>
 </section>
