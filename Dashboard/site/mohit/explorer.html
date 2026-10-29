@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Profile Explorer · IIT Research Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+:root{
+  --paper:#f5f7fa; --sheet:#ffffff; --ink:#14213d; --ink-2:#4a5570; --ink-3:#7b849a; --rule:#dfe4ec; --grid:#e9edf3; --tint:#eaf0f8;
+  --unseen:#f3eefb; --unseen-ink:#5b3f8c; --unseen-rule:#d9cdef;
+  --bg:var(--paper); --band:var(--paper); --card:var(--sheet); --fg:var(--ink); --fg2:var(--ink-2); --fg3:var(--ink-3);
+  --line:#cdd4e0; --hair:var(--grid); --link:var(--ink); --nav:rgba(245,247,250,.88);
+  --kgp:#2a78d6; --rkg:#eb6834; --joint:#8a8fa3; --muted-node:#c3c9d6;
+  --q1:#1c5cab; --q2:#3987e5; --q3:#86b6ef; --q4:#cde2fb;
+  --c1:#1baf7a; --c2:#eda100; --c3:#e87ba4; --c4:#008300; --c5:#4a3aa7; --c6:#e34948;
+  --thumb:#ffffff; --shadow:0 1px 2px rgba(20,33,61,.05), 0 8px 24px rgba(20,33,61,.07);
+  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-text:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+  --radius:16px; --ease:cubic-bezier(0.28, 0.11, 0.32, 1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#10162a; --sheet:#161e36; --ink:#e8ecf6; --ink-2:#aab3c9; --ink-3:#7d87a0; --rule:#2a3452; --grid:#222b46; --tint:#1a2440;
+    --unseen:#211b38; --unseen-ink:#cdb8f5; --unseen-rule:#3e3366;
+    --line:#34405f; --nav:rgba(16,22,42,.86);
+    --kgp:#4b93ea; --rkg:#e8622e; --joint:#8d93a8; --muted-node:#3a4566;
+    --q1:#9ec5f4; --q2:#5598e7; --q3:#2a78d6; --q4:#184f95;
+    --c1:#199e70; --c2:#c98500; --c3:#d55181; --c4:#2f9a2f; --c5:#9085e9; --c6:#e66767;
+    --thumb:#2c3757; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+    --paper:#10162a; --sheet:#161e36; --ink:#e8ecf6; --ink-2:#aab3c9; --ink-3:#7d87a0; --rule:#2a3452; --grid:#222b46; --tint:#1a2440;
+    --unseen:#211b38; --unseen-ink:#cdb8f5; --unseen-rule:#3e3366;
+    --line:#34405f; --nav:rgba(16,22,42,.86);
+    --kgp:#4b93ea; --rkg:#e8622e; --joint:#8d93a8; --muted-node:#3a4566;
+    --q1:#9ec5f4; --q2:#5598e7; --q3:#2a78d6; --q4:#184f95;
+    --c1:#199e70; --c2:#c98500; --c3:#d55181; --c4:#2f9a2f; --c5:#9085e9; --c6:#e66767;
+    --thumb:#2c3757; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    color-scheme:dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--band); color: var(--fg); font-family: var(--font-text); font-size: 15px; line-height: 1.45;
+  letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; } a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 6px; }
+.num { font-variant-numeric: tabular-nums; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 18px 60px; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 6px 14px; }
+header.top h1 { font: 600 26px/1.15 var(--font-display); letter-spacing: -0.025em; margin: 0; text-wrap: balance; }
+header.top p { margin: 4px 0 0; color: var(--fg2); font-size: 14px; max-width: 70ch; }
+.iconbtn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--fg); cursor: pointer;
+  display: grid; place-items: center; }
+.card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; min-width: 0; }
+.card h3 { font: 600 15px var(--font-display); margin: 0 0 10px; letter-spacing: -0.01em; }
+.card .sub { color: var(--fg2); font-size: 12.5px; margin: -6px 0 10px; }
+.controls { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 220px); gap: 12px; align-items: end; }
+@media (max-width: 900px) { .controls { grid-template-columns: minmax(0, 1fr); } }
+.seg { flex-wrap: nowrap; }
+.controls label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 600; color: var(--fg2);
+  text-transform: uppercase; letter-spacing: .05em; }
+select, input[type="search"] { font: 15px var(--font-text); color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 10px; padding: 8px 10px; width: 100%; min-width: 0; }
+/* native arrows sit at different heights per browser; draw one chevron, centred vertically */
+select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2386868b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center; background-size: 12px 8px; padding-right: 34px; line-height: 1.3; }
+.yr { display: flex; gap: 6px; } .yr select { flex: 1; }
+.seg { display: inline-flex; background: var(--hair); border-radius: 10px; padding: 2px; gap: 2px; flex-wrap: wrap; }
+.seg button { border: 0; background: transparent; color: var(--fg2); font: 500 13.5px var(--font-text); padding: 6px 11px; border-radius: 8px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--card); color: var(--fg); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.scopeline { margin: 14px 2px 4px; font-size: 14px; color: var(--fg2); }
+.scopeline b { color: var(--fg); font-weight: 600; }
+.kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.kpi { background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 12px 14px; min-width: 0; }
+.kpi .v { font: 600 24px/1.1 var(--font-display); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.kpi .l { color: var(--fg2); font-size: 12.5px; margin-top: 4px; }
+.kpi .x { color: var(--fg3); font-size: 11.5px; margin-top: 2px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+@media (max-width: 900px) { .grid2, .grid3 { grid-template-columns: minmax(0, 1fr); } }
+.chart { width: 100%; height: 260px; }
+.chart.tall { height: 420px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--hair); vertical-align: top; }
+th { color: var(--fg2); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.muted { color: var(--fg3); }
+.note { color: var(--fg2); font-size: 12.5px; margin-top: 8px; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.results { list-style: none; margin: 8px 0 0; padding: 0; max-height: 240px; overflow-y: auto; }
+.results li button { width: 100%; text-align: left; border: 0; background: transparent; color: var(--fg); font: 14px var(--font-text);
+  padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+.results li button:hover { background: var(--hair); }
+.pcard { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin-top: 10px; }
+.pcard div { background: var(--band); border-radius: 10px; padding: 8px 10px; min-width: 0; overflow-wrap: anywhere; }
+.pcard b { display: block; font: 600 16px var(--font-display); }
+.pcard span { color: var(--fg2); font-size: 12px; }
+#loading { padding: 60px 0; text-align: center; color: var(--fg2); }
+.bar { width: min(360px, 80%); height: 6px; margin: 12px auto 6px; background: var(--hair); border-radius: 3px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--link); border-radius: 3px; transition: width .15s linear; }
+.bar.busy i { width: 30%; animation: slide 1.1s ease-in-out infinite; }
+@keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(340%); } }
+#loadNote { font-size: 12.5px; color: var(--fg3); font-variant-numeric: tabular-nums; }
+.cmp td:nth-child(2), .cmp td:nth-child(3) { text-align: right; font-variant-numeric: tabular-nums; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: 0; }
+
+.lede, header.top p{font-family:var(--serif); font-size:17px}
+a{color:var(--ink); text-decoration:underline; text-decoration-color:var(--ink-3); text-underline-offset:3px}
+.card{border:1px solid var(--rule); background:var(--sheet); box-shadow:none}
+body{background:var(--paper)}
+header.top h1{font:800 34px/1.05 var(--font-display); letter-spacing:-.03em}
+.sbar{position:sticky; top:0; z-index:50; background:var(--nav); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--rule)}
+.sbar-in{max-width:1240px; margin:0 auto; padding:12px 16px; display:flex; gap:16px; align-items:baseline}
+.sbar .brand{font:800 17px var(--font-display); color:var(--ink); text-decoration:none}
+.row .cbx{flex:1}
+.sbar .crumb{font:500 15px var(--font-display); color:var(--ink-3)}
+.cbx-btn{min-height:40px; border-radius:10px}
+.controls label, th{text-transform:none; letter-spacing:0}
+.controls label{font-size:13px}
+</style>
+</head>
+<body>
+<header class="sbar"><div class="sbar-in"><a class="brand" href="./">Two IITs, ten years</a><span class="crumb">Profile explorer</span></div></header>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Profile explorer</h1>
+      <p>Pick both IITs, one IIT, a department or a faculty member and a year range. Every number is computed in your browser
+        from the same verified paper set as the rest of the <a href="./">dashboard</a> (2016–2026, science &amp;
+        engineering scope); the build step checked it against our faculty table for all 1,410 faculty.</p>
+    </div>
+    <button class="iconbtn" id="theme" aria-label="Switch light / dark theme" title="Light / dark">◐</button>
+  </header>
+
+  <div class="card">
+    <div class="controls">
+      <label>Institute
+        <div class="seg" role="group" aria-label="Institute" id="instSeg"></div>
+      </label>
+      <label for="dept">Department
+        <select class="combo" id="dept"></select>
+      </label>
+      <label for="fac">Faculty member
+        <select class="combo" id="fac"></select>
+      </label>
+      <label>Years
+        <div class="yr"><select id="y0" aria-label="From year"></select><select id="y1" aria-label="To year"></select></div>
+      </label>
+    </div>
+  </div>
+  <div id="loading" role="status"><div id="loadMsg">Loading 46,071 papers…</div>
+    <div class="bar" id="loadBar" role="progressbar" aria-label="Download progress" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+    <div id="loadNote"></div></div>
+  <div id="app" hidden>
+    <div class="scopeline" id="scopeline"></div>
+    <div class="kpis" id="kpis"></div>
+
+    <div class="grid2">
+      <div class="card"><h3>Papers per year, by journal quartile</h3><div class="sub">SCImago quartile of the journal; "other" = conference, chapter, preprint or unranked journal</div><div class="chart" id="chYear"></div></div>
+      <div class="card"><h3>Citations received per year</h3><div class="sub" id="cySub"></div><div class="chart" id="chCites"></div></div>
+    </div>
+    <div class="grid3">
+      <div class="card"><h3>Citations per paper, by publication year</h3><div class="sub">Older papers have had more time to be cited</div><div class="chart" id="chCpp"></div></div>
+      <div class="card"><h3>Single-author equivalent per year</h3><div class="sub">Each paper counts 1 / number of authors</div><div class="chart" id="chSae"></div></div>
+      <div class="card"><h3>Publication type</h3><div class="sub">&nbsp;</div><div class="chart" id="chType"></div></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card" id="egoCard">
+        <div class="row" style="justify-content:space-between"><h3 id="egoHead">Collaboration network</h3>
+          <div class="seg" role="group" aria-label="Number of co-authors" id="topN"></div></div>
+        <div class="sub" id="egoSub"></div>
+        <div class="chart tall" id="chEgo"></div>
+      </div>
+      <div class="card">
+        <h3 id="scHead">Researchers: papers and citations</h3>
+        <div class="sub" id="scSub"></div>
+        <div class="chart tall" id="chScatter"></div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card"><h3>Top journals and venues</h3><div class="tablewrap"><table id="tJour"></table></div></div>
+      <div class="card"><h3>Top research topics</h3><div class="sub">OpenAlex topic of each paper</div><div class="tablewrap"><table id="tTop"></table></div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Partner institutions</h3><div class="sub">Institutions of co-authors outside the IIT (OpenAlex), with the papers written together</div><div class="tablewrap"><table id="tInst"></table></div></div>
+      <div class="card"><h3>Most cited papers</h3><div class="tablewrap"><table id="tCited"></table></div></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>Find a paper</h3>
+        <input type="search" id="psearch" placeholder="Words from the title (within the current selection)" aria-label="Search paper titles">
+        <ul class="results" id="presults"></ul>
+        <div id="pcard"></div>
+      </div>
+      <div class="card">
+        <h3>Compare two faculty members</h3>
+        <div class="row"><select class="combo" id="cmpA" aria-label="First faculty member"></select><select class="combo" id="cmpB" aria-label="Second faculty member"></select></div>
+        <div class="tablewrap"><table class="cmp" id="tCmp"></table></div>
+        <div class="chart" id="chCmp" style="height:220px"></div>
+      </div>
+    </div>
+    <p class="note" id="defs"></p>
+  </div>
+</div>
+<script src="combo.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>
+(() => {
+"use strict";
+// ---------------------------------------------------------------- theme (same storage key as index.html: irm-theme)
+const root = document.documentElement;
+try { const t = JSON.parse(localStorage.getItem("rm_mohit_theme")); if (t) root.dataset.theme = t; } catch (e) {}
+document.getElementById("theme").addEventListener("click", () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("rm_mohit_theme", JSON.stringify(root.dataset.theme)); } catch (e) {}
+  render();
+});
+const css = n => getComputedStyle(root).getPropertyValue(n).trim();
+const fmt = (x, d = 0) => x == null || Number.isNaN(x) ? "–" : Number(x).toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// ---------------------------------------------------------------- data (profiles.js, ~13 MB, loaded after the page shows)
+// XHR rather than a plain <script src> so the download can drive a progress bar; progress counts bytes on the wire,
+// so it stays right when the server gzips. Over file:// (no XHR) it falls back to the script tag.
+let P, PAPERS, FAC, AUTHOR_INST, PAPER_FAC;
+const bar = document.getElementById("loadBar"), note = document.getElementById("loadNote");
+const mb = b => (b / 1e6).toFixed(1) + " MB";
+const fail = () => { document.getElementById("loading").textContent = "Could not load profiles.js."; };
+function runScript(attrs) {
+  const s = document.createElement("script");
+  Object.assign(s, attrs);
+  document.head.appendChild(s);
+}
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "../profiles.js");
+xhr.onprogress = e => {
+  if (e.lengthComputable) {
+    const pc = Math.min(100, 100 * e.loaded / e.total);
+    bar.classList.remove("busy"); bar.firstElementChild.style.width = pc + "%"; bar.setAttribute("aria-valuenow", Math.round(pc));
+    note.textContent = `${mb(e.loaded)} of ${mb(e.total)}`;
+  } else { bar.classList.add("busy"); note.textContent = mb(e.loaded); }
+};
+xhr.onload = () => {
+  if (xhr.status && xhr.status !== 200) return fail();
+  bar.classList.remove("busy"); bar.firstElementChild.style.width = "100%"; bar.setAttribute("aria-valuenow", 100);
+  document.getElementById("loadMsg").textContent = "Preparing the explorer…"; note.textContent = "";
+  // let the full bar paint before the parse blocks the main thread
+  requestAnimationFrame(() => setTimeout(() => { runScript({ text: xhr.responseText }); window.PROF ? init() : fail(); }, 0));
+};
+xhr.onerror = () => { bar.classList.add("busy"); runScript({ src: "../profiles.js", onload: init, onerror: fail }); };
+bar.classList.add("busy");
+xhr.send();
+
+const st = { inst: "both", dept: "", fac: -1, y0: 2016, y1: 2026, topN: 20, cmpA: -1, cmpB: -1 };
+
+function init() {
+  P = window.PROF;
+  const c = Object.fromEntries(P.cols.map((k, i) => [k, i]));
+  PAPERS = P.papers.map(r => ({ t: r[c.t], doi: r[c.doi], y: r[c.y], c: r[c.c], q: r[c.q], ty: r[c.ty], v: r[c.v], f: r[c.f], tp: r[c.tp],
+    n: r[c.n], fw: r[c.fw], pc: r[c.pc], cy: r[c.cy], ins: r[c.in], au: r[c.au], h: r[c.h] }));
+  FAC = P.faculty.map((f, i) => ({ ...f, idx: i, inst: P.insts.indexOf(f.i) }));
+  // which author ids are our own faculty (for colouring the ego network), and which faculty are on each paper
+  AUTHOR_INST = new Map(); PAPER_FAC = new Map();
+  for (const f of FAC) for (const [pi, pos, ai] of f.p) {
+    if (ai >= 0) AUTHOR_INST.set(PAPERS[pi].au[ai], f.inst);
+    if (!PAPER_FAC.has(pi)) PAPER_FAC.set(pi, []);
+    PAPER_FAC.get(pi).push(f.idx);
+  }
+  const instSeg = document.getElementById("instSeg");
+  [["both", "Both IITs"], ["0", "IIT Kharagpur"], ["1", "IIT Roorkee"]].forEach(([v, l]) => {
+    const b = document.createElement("button"); b.textContent = l; b.dataset.v = v;
+    b.setAttribute("aria-pressed", v === st.inst); b.onclick = () => { st.inst = v; st.dept = ""; st.fac = -1; fillSelects(); render(); };
+    instSeg.appendChild(b);
+  });
+  const yo = P.years.map(y => `<option value="${y}">${y}</option>`).join("");
+  ["y0", "y1"].forEach(id => { const e = document.getElementById(id); e.innerHTML = yo; e.value = st[id]; e.onchange = () => {
+    st[id] = +e.value; if (st.y0 > st.y1) [st.y0, st.y1] = [st.y1, st.y0]; document.getElementById("y0").value = st.y0;
+    document.getElementById("y1").value = st.y1; render(); }; });
+  document.getElementById("dept").onchange = e => { st.dept = e.target.value; st.fac = -1; fillSelects(); render(); };
+  document.getElementById("fac").onchange = e => { st.fac = +e.target.value; render(); };
+  const topN = document.getElementById("topN");
+  [10, 20, 40].forEach(n => { const b = document.createElement("button"); b.textContent = n === 40 ? "Top 40" : "Top " + n;
+    b.setAttribute("aria-pressed", n === st.topN); b.onclick = () => { st.topN = n; render(); }; topN.appendChild(b); });
+  document.getElementById("psearch").oninput = searchPapers;
+  const allOpts = '<option value="-1">Choose…</option>' + FAC.slice().sort((a, b) => a.n.localeCompare(b.n))
+    .map(f => `<option value="${f.idx}">${esc(f.n)} — ${esc(f.d)}, ${f.inst ? "Roorkee" : "KGP"}</option>`).join("");
+  ["cmpA", "cmpB"].forEach(id => { const e = document.getElementById(id); e.innerHTML = allOpts;
+    e.onchange = () => { st[id] = +e.value; renderCompare(); }; });
+  fillSelects();
+  document.getElementById("loading").hidden = true;
+  document.getElementById("app").hidden = false;
+  document.getElementById("defs").innerHTML = definitions();
+  // read-only hook for the automated check (check_explorer.py): the same functions the page uses for its tiles
+  window.__explorer = { st, FAC, selection, stats, render, fillSelects };
+  render();
+  window.addEventListener("resize", () => Object.values(charts).forEach(c => c.resize()));
+}
+
+function facInScope(f) {
+  return (st.inst === "both" || f.inst === +st.inst) && (!st.dept || f.d === st.dept);
+}
+function fillSelects() {
+  document.querySelectorAll("#instSeg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === st.inst));
+  const depts = [...new Set(FAC.filter(f => st.inst === "both" || f.inst === +st.inst).map(f => f.d))].sort();
+  const d = document.getElementById("dept");
+  d.innerHTML = `<option value="">All departments</option>` + depts.map(x => `<option${x === st.dept ? " selected" : ""}>${esc(x)}</option>`).join("");
+  const fs = FAC.filter(facInScope).sort((a, b) => a.n.localeCompare(b.n));
+  const f = document.getElementById("fac");
+  f.innerHTML = `<option value="-1">All faculty in this selection</option>` +
+    fs.map(x => `<option value="${x.idx}"${x.idx === st.fac ? " selected" : ""}>${esc(x.n)}${st.dept ? "" : " — " + esc(x.d)}${st.inst === "both" ? (x.inst ? " (Roorkee)" : " (KGP)") : ""}</option>`).join("");
+}
+
+// ---------------------------------------------------------------- selection -> papers (+ author positions)
+function selection(facIdx) {
+  const inY = p => p.y >= st.y0 && p.y <= st.y1;
+  if (facIdx >= 0) {
+    const f = FAC[facIdx];
+    const rows = f.p.filter(([pi]) => inY(PAPERS[pi]));
+    return { papers: rows.map(r => r[0]), pos: rows.map(r => r[1]), self: rows.map(r => r[2]), fac: [f] };
+  }
+  if (!st.dept) {           // whole institute(s): every paper of the analysis set, including those without a linked faculty
+    const bit = st.inst === "both" ? 3 : 1 << +st.inst;
+    const ps = []; PAPERS.forEach((p, i) => { if ((p.h & bit) && inY(p)) ps.push(i); });
+    return { papers: ps, fac: FAC.filter(facInScope) };
+  }
+  const fs = FAC.filter(facInScope), set = new Set();   // department: the unique papers of its faculty (as departments.csv)
+  for (const f of fs) for (const [pi] of f.p) if (inY(PAPERS[pi])) set.add(pi);
+  return { papers: [...set], fac: fs };
+}
+
+function hIndex(cs) { const c = cs.filter(x => x != null).sort((a, b) => b - a); let h = 0; c.forEach((x, i) => { if (x >= i + 1) h = i + 1; }); return h; }
+
+function stats(sel) {
+  const ps = sel.papers.map(i => PAPERS[i]);
+  const known = ps.filter(p => p.c != null), cs = known.map(p => p.c);
+  const tot = cs.reduce((a, b) => a + b, 0);
+  const fw = ps.filter(p => p.fw != null);
+  const top = known.slice().sort((a, b) => b.c - a.c)[0];
+  // author positions: for one faculty member from the stored position; for a group, a paper counts if any of its
+  // faculty in the selection holds the position
+  let first = 0, last = 0, unk = 0;
+  if (sel.pos) sel.pos.forEach(x => { if (x === 1 || x === 3) first++; if (x === 2 || x === 3) last++; if (x < 0) unk++; });
+  else {
+    const inScope = new Set(sel.fac.map(f => f.idx)), posOf = new Map();
+    for (const f of sel.fac) for (const [pi, pos] of f.p) { if (!posOf.has(pi)) posOf.set(pi, []); posOf.get(pi).push(pos); }
+    for (const pi of sel.papers) { const xs = posOf.get(pi) || []; if (xs.some(x => x === 1 || x === 3)) first++; if (xs.some(x => x === 2 || x === 3)) last++; }
+  }
+  const coauth = new Set(), insts = new Set();
+  sel.papers.forEach((pi, k) => { const p = PAPERS[pi]; p.au.forEach((a, j) => { if (!sel.self || j !== sel.self[k]) coauth.add(a); }); p.ins.forEach(x => insts.add(x)); });
+  const ys = ps.map(p => p.y);
+  return { n: ps.length, nKnown: known.length, cites: tot, cpp: known.length ? tot / known.length : null,
+    cited: known.length ? 100 * known.filter(p => p.c > 0).length / known.length : null, h: hIndex(cs), i10: cs.filter(x => x >= 10).length,
+    q1: ps.filter(p => p.q === 1).length, withQ: ps.filter(p => p.q > 0).length, top, fwci: fw.length ? fw.reduce((a, p) => a + p.fw, 0) / fw.length : null,
+    nFw: fw.length, sae: ps.reduce((a, p) => a + (p.n ? 1 / p.n : 0), 0), first, last, unk, coauth: coauth.size, insts: insts.size,
+    years: ys.length ? Math.max(...ys) - Math.min(...ys) + 1 : 0, ps };
+}
+
+// ---------------------------------------------------------------- render
+const charts = {};
+function chart(id) { const el = document.getElementById(id); if (!charts[id]) charts[id] = echarts.init(el, null, { renderer: "canvas" }); return charts[id]; }
+function base() {
+  return { textStyle: { fontFamily: css("--font-text"), color: css("--fg2") }, animationDuration: 300,
+    grid: { left: 8, right: 14, top: 26, bottom: 8, containLabel: true },
+    tooltip: { trigger: "axis", backgroundColor: css("--card"), borderColor: css("--line"), textStyle: { color: css("--fg") } } };
+}
+const axisX = data => ({ type: "category", data, axisLine: { lineStyle: { color: css("--line") } }, axisTick: { show: false }, axisLabel: { color: css("--fg2") } });
+const axisY = () => ({ type: "value", splitLine: { lineStyle: { color: css("--hair") } }, axisLabel: { color: css("--fg2") } });
+
+function render() {
+  if (!P) return;
+  const sel = selection(st.fac), S = stats(sel);
+  const instName = st.inst === "both" ? "IIT Kharagpur and IIT Roorkee" : P.insts[+st.inst];
+  const who = st.fac >= 0 ? `<b>${esc(FAC[st.fac].n)}</b> (${esc(FAC[st.fac].d)}, ${esc(FAC[st.fac].i)})` :
+    st.dept ? `<b>${esc(st.dept)}</b>, ${instName} (${sel.fac.length} faculty)` : `<b>${instName}</b> (all papers, ${sel.fac.length} faculty)`;
+  document.getElementById("scopeline").innerHTML = `${who} · papers published ${st.y0}–${st.y1}`;
+  const tiles = [
+    [fmt(S.n), "Papers", ""],
+    [fmt(S.cites), "Citations", S.n > S.nKnown ? `${fmt(S.n - S.nKnown)} papers without a count` : ""],
+    [fmt(S.cpp, 1), "Citations per paper", ""],
+    [S.cited == null ? "–" : fmt(S.cited, 1) + "%", "Cited papers", "at least one citation"],
+    [fmt(S.h), "h-index", "within these papers"],
+    [fmt(S.i10), "i10-index", "papers with ≥ 10 citations"],
+    [fmt(S.q1), "Q1 journal papers", S.withQ ? `${fmt(100 * S.q1 / S.withQ, 0)}% of ${fmt(S.withQ)} ranked` : ""],
+    [S.top ? fmt(S.top.c) : "–", "Most cited paper", S.top ? esc(S.top.t.slice(0, 48)) + (S.top.t.length > 48 ? "…" : "") : ""],
+    [fmt(S.fwci, 2), "Average FWCI", `OpenAlex, ${fmt(S.nFw)} papers; 1 = world average`],
+    [fmt(S.sae, 1), "Single-author equivalent", "Σ 1 / authors"],
+    [fmt(S.first), "First-author papers", st.fac >= 0 ? (S.unk ? `${fmt(S.unk)} positions unknown` : "incl. sole author") : "a selected faculty member first"],
+    [fmt(S.last), "Last-author papers", st.fac >= 0 ? "incl. sole author" : "a selected faculty member last"],
+    [fmt(S.coauth), st.fac >= 0 ? "Co-authors" : "Distinct authors", "OpenAlex author ids"],
+    [fmt(S.insts), "Partner institutions", "outside the IIT"],
+    [fmt(S.years), "Years active", S.n ? `${Math.min(...S.ps.map(p => p.y))}–${Math.max(...S.ps.map(p => p.y))}` : ""]];
+  document.getElementById("kpis").innerHTML = tiles.map(([v, l, x]) => `<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div>${x ? `<div class="x">${x}</div>` : ""}</div>`).join("");
+  const years = P.years.filter(y => y >= st.y0 && y <= st.y1);
+  // papers per year by quartile
+  const qcol = [css("--q1"), css("--q2"), css("--q3"), css("--q4"), css("--qn")];
+  const byQ = [1, 2, 3, 4, 0].map(q => years.map(y => S.ps.filter(p => p.y === y && p.q === q).length));
+  chart("chYear").setOption({ ...base(), legend: { top: 0, right: 0, textStyle: { color: css("--fg2") }, itemWidth: 10, itemHeight: 10 },
+    xAxis: axisX(years), yAxis: axisY(), series: ["Q1", "Q2", "Q3", "Q4", "other"].map((n, i) => ({ name: n, type: "bar", stack: "q", data: byQ[i], itemStyle: { color: qcol[i] }, barMaxWidth: 28 })) }, true);
+  // citations received per year (OpenAlex counts_by_year)
+  const withCy = S.ps.filter(p => p.cy);
+  const cyYears = P.years;
+  const cy = cyYears.map((y, k) => withCy.reduce((a, p) => a + p.cy[k], 0));
+  document.getElementById("cySub").textContent = `Citations each calendar year to these papers (OpenAlex), ${fmt(withCy.length)} of ${fmt(S.n)} papers covered; 2026 is partial`;
+  chart("chCites").setOption({ ...base(), xAxis: axisX(cyYears), yAxis: axisY(),
+    series: [{ type: "line", data: cy, symbolSize: 6, lineStyle: { width: 2, color: css("--fg") }, itemStyle: { color: css("--fg") }, areaStyle: { color: css("--hair") } }] }, true);
+  const cpp = years.map(y => { const ps = S.ps.filter(p => p.y === y && p.c != null); return ps.length ? +(ps.reduce((a, p) => a + p.c, 0) / ps.length).toFixed(1) : null; });
+  chart("chCpp").setOption({ ...base(), xAxis: axisX(years), yAxis: axisY(),
+    series: [{ type: "line", data: cpp, symbolSize: 6, lineStyle: { width: 2, color: css("--kgp") }, itemStyle: { color: css("--kgp") } }] }, true);
+  const sae = years.map(y => +S.ps.filter(p => p.y === y).reduce((a, p) => a + (p.n ? 1 / p.n : 0), 0).toFixed(1));
+  chart("chSae").setOption({ ...base(), xAxis: axisX(years), yAxis: axisY(),
+    series: [{ type: "line", data: sae, symbolSize: 6, lineStyle: { width: 2, color: css("--c5") }, itemStyle: { color: css("--c5") } }] }, true);
+  const tcount = P.types.map((t, i) => ({ name: t, value: S.ps.filter(p => p.ty === i).length })).filter(d => d.value).sort((a, b) => b.value - a.value);
+  const tcol = [css("--c1"), css("--c2"), css("--c3"), css("--c4"), css("--c5"), css("--c6"), css("--fg3")];
+  chart("chType").setOption({ tooltip: { trigger: "item", backgroundColor: css("--card"), borderColor: css("--line"), textStyle: { color: css("--fg") } },
+    legend: { bottom: 0, textStyle: { color: css("--fg2") }, itemWidth: 10, itemHeight: 10 },
+    series: [{ type: "pie", radius: ["48%", "72%"], center: ["50%", "44%"], data: tcount, label: { show: false }, itemStyle: { borderColor: css("--card"), borderWidth: 2 },
+      color: tcol }] }, true);
+  renderTables(S);
+  renderEgo(sel);
+  renderScatter(sel);
+  searchPapers();
+  renderCompare();
+}
+
+function table(id, head, rows) {
+  document.getElementById(id).innerHTML = `<thead><tr>${head.map(h => `<th${h[1] ? ' class="n"' : ""}>${h[0]}</th>`).join("")}</tr></thead>` +
+    `<tbody>${rows.length ? rows.map(r => `<tr>${r.map((c, i) => `<td${head[i][1] ? ' class="n"' : ""}>${c}</td>`).join("")}</tr>`).join("") : `<tr><td class="muted" colspan="${head.length}">No papers</td></tr>`}</tbody>`;
+}
+function renderTables(S) {
+  const cnt = (key, list) => { const m = new Map(); S.ps.forEach(p => { const k = p[key]; if (k >= 0) m.set(k, (m.get(k) || 0) + 1); }); return [...m].sort((a, b) => b[1] - a[1]).slice(0, 10).map(([k, n]) => [esc(list[k]), fmt(n)]); };
+  table("tJour", [["Journal / venue"], ["Papers", 1]], cnt("v", P.venues));
+  table("tTop", [["Topic"], ["Papers", 1]], cnt("tp", P.topics));
+  const im = new Map();
+  S.ps.forEach(p => p.ins.forEach(i => { const e = im.get(i) || { n: 0, c: 0, fw: 0, nfw: 0 }; e.n++; e.c += p.c || 0; if (p.fw != null) { e.fw += p.fw; e.nfw++; } im.set(i, e); }));
+  table("tInst", [["Institution"], ["Papers", 1], ["Citations", 1], ["Avg FWCI", 1]],
+    [...im].sort((a, b) => b[1].n - a[1].n).slice(0, 10).map(([i, e]) => [esc(P.coinst[i]), fmt(e.n), fmt(e.c), e.nfw ? fmt(e.fw / e.nfw, 2) : "–"]));
+  table("tCited", [["Year", 1], ["Title"], ["Citations", 1], ["FWCI", 1]],
+    S.ps.filter(p => p.c != null).sort((a, b) => b.c - a.c).slice(0, 8).map(p => [p.y, p.doi ? `<a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">${esc(p.t)}</a>` : esc(p.t), fmt(p.c), fmt(p.fw, 2)]));
+}
+
+// ego network: real co-authors of one faculty member and the real ties among them (papers written together)
+function renderEgo(sel) {
+  const card = chart("chEgo");
+  document.querySelectorAll("#topN button").forEach(b => b.setAttribute("aria-pressed", b.textContent.endsWith(" " + st.topN) || (st.topN === 40 && b.textContent === "Top 40")));
+  if (st.fac < 0) {
+    document.getElementById("egoHead").textContent = "Collaboration network";
+    document.getElementById("egoSub").textContent = "Choose a faculty member to see their co-authors.";
+    card.clear(); return;
+  }
+  const f = FAC[st.fac], w = new Map();
+  sel.papers.forEach((pi, k) => PAPERS[pi].au.forEach((a, j) => { if (j !== sel.self[k] && sel.self[k] >= 0) w.set(a, (w.get(a) || 0) + 1); }));
+  const top = [...w].sort((a, b) => b[1] - a[1]).slice(0, st.topN), ids = new Set(top.map(t => t[0]));
+  const rank = new Map(top.map((t, i) => [t[0], i]));     // only the 8 closest co-authors are labelled; hover shows all
+  const ties = new Map();
+  sel.papers.forEach((pi, k) => { if (sel.self[k] < 0) return; const on = PAPERS[pi].au.filter(a => ids.has(a));
+    for (let i = 0; i < on.length; i++) for (let j = i + 1; j < on.length; j++) { const key = on[i] < on[j] ? on[i] + "|" + on[j] : on[j] + "|" + on[i]; ties.set(key, (ties.get(key) || 0) + 1); } });
+  const known = sel.self.filter(x => x >= 0).length;
+  document.getElementById("egoHead").textContent = `Co-authors of ${f.n}`;
+  document.getElementById("egoSub").textContent = `Top ${top.length} of ${fmt(w.size)} co-authors by papers written together, ${st.y0}–${st.y1}; ` +
+    `blue / orange = IIT Kharagpur / IIT Roorkee faculty, grey = others` +
+    `; lines between co-authors = papers they share among these ${fmt(known)}` + (known < sel.papers.length ? ` (${sel.papers.length - known} papers without a matched author position left out)` : "");
+  const col = i => i === 0 ? css("--kgp") : i === 1 ? css("--rkg") : css("--muted-node");
+  const max = Math.max(1, ...top.map(t => t[1]));
+  const nodes = [{ id: "ego", name: f.n, symbolSize: 34, itemStyle: { color: css("--fg") }, label: { show: true, color: css("--fg"), fontWeight: 600 }, value: sel.papers.length }]
+    .concat(top.map(([a, n]) => ({ id: "a" + a, name: P.authors[a], value: n, symbolSize: 8 + 22 * Math.sqrt(n / max),
+      itemStyle: { color: col(AUTHOR_INST.has(a) ? AUTHOR_INST.get(a) : -1) }, label: { show: rank.get(a) < 8, color: css("--fg2"), fontSize: 11 } })));
+  const links = top.map(([a, n]) => ({ source: "ego", target: "a" + a, value: n, lineStyle: { width: 1 + 3 * n / max, color: css("--line"), opacity: 0.9 } }))
+    .concat([...ties].map(([k, n]) => { const [a, b] = k.split("|"); return { source: "a" + a, target: "a" + b, value: n, lineStyle: { width: 0.6 + Math.min(2, n / 3), color: css("--line"), opacity: 0.5 } }; }));
+  card.setOption({ tooltip: { backgroundColor: css("--card"), borderColor: css("--line"), textStyle: { color: css("--fg") },
+      formatter: x => x.dataType === "edge" ? `${fmt(x.value)} shared paper${x.value === 1 ? "" : "s"}` : x.data.id === "ego" ? `${esc(x.name)}: ${fmt(x.value)} papers` : `${esc(x.name)}: ${fmt(x.value)} paper${x.value === 1 ? "" : "s"} with ${esc(f.n)}` },
+    legend: [{ data: [], show: false }],
+    series: [{ type: "graph", layout: "force", roam: true, draggable: true, data: nodes, links, force: { repulsion: 140, edgeLength: [40, 120], gravity: 0.08 },
+      emphasis: { focus: "adjacency" } }] }, true);
+}
+
+// researcher scatter (Power BI page 9): faculty in the selection, papers vs citations in the year range
+function renderScatter(sel) {
+  const fs = st.fac >= 0 ? FAC.filter(facInScope) : sel.fac;
+  const pts = fs.map(f => { const ps = f.p.map(r => PAPERS[r[0]]).filter(p => p.y >= st.y0 && p.y <= st.y1);
+    return { f, n: ps.length, c: ps.reduce((a, p) => a + (p.c || 0), 0) }; }).filter(d => d.n);
+  document.getElementById("scSub").textContent = `${fmt(pts.length)} faculty with papers in ${st.y0}–${st.y1}; hover for names` + (st.fac >= 0 ? "; selected person ringed" : "");
+  const lab = new Set(pts.slice().sort((a, b) => b.c - a.c).slice(0, 4).map(d => d.f.idx));
+  chart("chScatter").setOption({ ...base(), grid: { left: 30, right: 18, top: 16, bottom: 30, containLabel: true },
+    tooltip: { trigger: "item", backgroundColor: css("--card"), borderColor: css("--line"), textStyle: { color: css("--fg") },
+      formatter: x => `${esc(x.data.name)}<br>${esc(x.data.dept)}<br>${fmt(x.data.value[0])} papers · ${fmt(x.data.value[1])} citations` },
+    xAxis: { ...axisY(), name: "Papers", nameLocation: "middle", nameGap: 26, nameTextStyle: { color: css("--fg2") } },
+    yAxis: { ...axisY(), name: "Citations", nameLocation: "middle", nameGap: 40, nameTextStyle: { color: css("--fg2") } },
+    series: [{ type: "scatter", data: pts.map(d => ({ name: d.f.n, dept: d.f.d, value: [d.n, d.c],
+      symbolSize: d.f.idx === st.fac ? 14 : 7,
+      itemStyle: { color: d.f.inst ? css("--rkg") : css("--kgp"), opacity: 0.8, borderColor: d.f.idx === st.fac ? css("--fg") : "transparent", borderWidth: 2 },
+      label: { show: lab.has(d.f.idx) || d.f.idx === st.fac, formatter: d.f.n, position: "right", color: css("--fg2"), fontSize: 11 } })) }] }, true);
+}
+
+function searchPapers() {
+  const q = document.getElementById("psearch").value.trim().toLowerCase();
+  const ul = document.getElementById("presults");
+  if (q.length < 3) { ul.innerHTML = ""; return; }
+  const words = q.split(/\s+/);
+  const sel = selection(st.fac), hits = sel.papers.filter(i => { const t = PAPERS[i].t.toLowerCase(); return words.every(w => t.includes(w)); }).slice(0, 20);
+  ul.innerHTML = hits.length ? hits.map(i => `<li><button data-i="${i}">${esc(PAPERS[i].t)} <span class="muted">(${PAPERS[i].y})</span></button></li>`).join("") : `<li class="muted">No title matches in this selection</li>`;
+  ul.querySelectorAll("button").forEach(b => b.onclick = () => paperCard(+b.dataset.i));
+}
+function paperCard(i) {
+  const p = PAPERS[i], facs = (PAPER_FAC.get(i) || []).map(k => FAC[k]);
+  const cell = (v, l) => `<div><b>${v}</b><span>${l}</span></div>`;
+  document.getElementById("pcard").innerHTML = `<p style="margin:12px 0 0;font-weight:600">${esc(p.t)}</p>
+    <div class="pcard">${cell(p.y, "Year")}${cell(fmt(p.c), "Citations")}${cell(fmt(p.fw, 2), "FWCI (OpenAlex)")}${cell(p.q ? "Q" + p.q : "–", "Journal quartile")}
+    ${cell(esc(P.types[p.ty]), "Type")}${cell(p.n ? (p.n >= 100 ? "100+" : p.n) : "–", "Authors")}${cell(fmt(p.ins.length), "Partner institutions")}
+    ${cell(p.pc == null ? "–" : fmt(100 * p.pc, 0), "Citation percentile")}</div>
+    <p class="note">${p.v >= 0 ? esc(P.venues[p.v]) + " · " : ""}${p.tp >= 0 ? "Topic: " + esc(P.topics[p.tp]) + " · " : ""}${p.f >= 0 ? "Field: " + esc(P.fields[p.f]) : ""}
+    ${p.doi ? `<br><a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">doi:${esc(p.doi)}</a>` : ""}
+    ${facs.length ? `<br>Our faculty on this paper: ${facs.map(f => esc(f.n) + " (" + esc(f.d) + ")").join(", ")}` : ""}
+    ${p.ins.length ? `<br>Partner institutions: ${p.ins.slice(0, 12).map(x => esc(P.coinst[x])).join("; ")}${p.ins.length > 12 ? "; …" : ""}` : ""}</p>`;
+}
+
+function renderCompare() {
+  const A = st.cmpA, B = st.cmpB, t = document.getElementById("tCmp");
+  if (A < 0 || B < 0) { t.innerHTML = `<tbody><tr><td class="muted">Choose two faculty members (uses the year range above).</td></tr></tbody>`; chart("chCmp").clear(); return; }
+  const a = stats(selection(A)), b = stats(selection(B));
+  const rows = [["Papers", a.n, b.n, 0], ["Citations", a.cites, b.cites, 0], ["Most cited paper", a.top ? a.top.c : null, b.top ? b.top.c : null, 0],
+    ["Cited papers %", a.cited, b.cited, 1], ["h-index", a.h, b.h, 0], ["Citations per paper", a.cpp, b.cpp, 1], ["Single-author equivalent", a.sae, b.sae, 1],
+    ["Co-authors", a.coauth, b.coauth, 0], ["Average FWCI", a.fwci, b.fwci, 2], ["First-author papers", a.first, b.first, 0], ["Last-author papers", a.last, b.last, 0],
+    ["Q1 journal papers", a.q1, b.q1, 0]];
+  t.innerHTML = `<thead><tr><th></th><th class="n">${esc(FAC[A].n)}</th><th class="n">${esc(FAC[B].n)}</th></tr></thead><tbody>` +
+    rows.map(([l, x, y, d]) => `<tr><td>${l}</td><td>${fmt(x, d)}</td><td>${fmt(y, d)}</td></tr>`).join("") + "</tbody>";
+  const years = P.years.filter(y => y >= st.y0 && y <= st.y1);
+  chart("chCmp").setOption({ ...base(), legend: { top: 0, textStyle: { color: css("--fg2") } }, xAxis: axisX(years), yAxis: axisY(),
+    series: [[a, FAC[A].n, css("--kgp")], [b, FAC[B].n, css("--rkg")]].map(([S, n, c]) => ({ name: n, type: "bar", data: years.map(y => S.ps.filter(p => p.y === y).length), itemStyle: { color: c }, barMaxWidth: 16 })) }, true);
+}
+
+function definitions() {
+  const n = P.notes;
+  return `Definitions. Papers: the analysis set (verified affiliation, science &amp; engineering scope); a department's papers are the unique papers of its faculty; a whole IIT includes papers with no linked faculty.
+  Citations: the count used in all our statistics (Crossref first). h-index and i10-index over the selected papers only (not a career value).
+  FWCI: OpenAlex field-weighted citation impact (citations / expected for papers of the same field, year and type) for ${fmt(n.fwci_papers)} of ${fmt(P.papers.length)} papers.
+  Citations per year: OpenAlex counts of citations received each year (they differ slightly from the Crossref totals).
+  Single-author equivalent and co-authors use OpenAlex author lists, which stop at 100 authors.
+  Author position known for ${fmt(n.positions_known)} of ${fmt(n.positions_total)} faculty–paper pairs (by name among the authors; never guessed).
+  Not shown: Scopus-only measures of the reference dashboard (CiteScore, topic prominence).`;
+}
+})();
+</script>
+</body>
+</html>
