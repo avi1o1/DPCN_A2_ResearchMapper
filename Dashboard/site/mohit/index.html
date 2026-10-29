@@ -244,11 +244,6 @@ select.ginput option{color:#171233}
 .banner{margin-top:18px; border-radius:16px; padding:14px 18px; background:var(--g1); color:#171233; font-weight:700; font-size:18px; display:none}
 .banner.show{display:block; animation:pop .4s}
 @keyframes pop{0%{transform:scale(.92); opacity:0}100%{transform:scale(1); opacity:1}}
-details.custom{margin-top:12px; font-size:14.5px}
-details.custom summary{cursor:pointer; color:var(--hall-ink-2)}
-.cform{display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-top:10px}
-.cform label{display:grid; gap:3px; font-size:13px; color:var(--hall-ink-2)}
-.cform .full{grid-column:1/3}
 .suggest{position:relative}
 .suggest ul{position:absolute; left:0; right:0; top:100%; z-index:5; list-style:none; margin:4px 0 0; padding:4px; background:#fff; color:#171233; border-radius:12px; max-height:260px; overflow:auto; box-shadow:0 8px 24px rgba(0,0,0,.35); display:none}
 .suggest ul.open{display:block}
@@ -330,20 +325,7 @@ noscript{display:block; padding:24px; font-family:var(--ui)}
 .barlink:hover{border-color:var(--ink)}
 @media (max-width:760px){ .barlink{display:none} }
 
-/* ---------- arcade: your profile, pickers ---------- */
-.you{margin:0 0 18px}
-.you-row{display:grid; grid-template-columns:1fr 1fr; gap:14px}
-@media (max-width:760px){ .you-row{grid-template-columns:1fr} }
-.you-card{display:grid; grid-template-columns:46px 1fr auto; gap:14px; align-items:center; background:var(--hall-2); border:1px solid rgba(255,255,255,.1); border-radius:18px; padding:14px 16px; font-family:var(--ui)}
-.you-card.on{border-color:var(--g5)}
-.you-av{width:46px; height:46px; border-radius:14px; display:grid; place-items:center; font-size:22px; background:var(--g5); color:#171233}
-.you-card:nth-child(2) .you-av{background:var(--g4)}
-.you-txt{min-width:0}
-.you-txt b{display:block; font-family:var(--display); font-size:18px; letter-spacing:-.01em}
-.you-txt span{display:block; color:var(--hall-ink-2); font-size:14px; line-height:1.35}
-.you-card .gbtn{padding:9px 16px; font-size:14.5px}
-@media (max-width:480px){ .you-card{grid-template-columns:40px 1fr} .you-av{width:40px; height:40px} .you-card .gbtn{grid-column:1/3} }
-.you-form{background:var(--hall-2); border-radius:18px; padding:16px; margin-top:12px; font-family:var(--ui)}
+/* ---------- arcade pickers ---------- */
 .pp{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:6px}
 .pp label{display:grid; gap:4px; min-width:0}
 .pp label > span{font-family:var(--ui); font-size:12.5px; color:var(--hall-ink-2)}
@@ -822,11 +804,10 @@ noscript{display:block; padding:24px; font-family:var(--ui)}
     <span class="coin"><i style="background:var(--g2)">★</i>Best higher-lower streak: <span id="bestStreak">0</span></span>
     <span class="coin"><i style="background:var(--g4)">?</i>Facts found: <span id="factsSeen">0</span></span>
   </div>
-  <section class="you" id="you" aria-label="Your profile and your college"></section>
   <div class="games" role="group" aria-label="Choose a game">
     <button class="gtile" data-game="hl" aria-pressed="false"><div><strong>Higher or lower</strong><span>Which paper has more citations? Which professor has the higher h-index?</span></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l7 8h-4v4H9v-4H5zM9 17h6v4H9z"/></svg></button>
-    <button class="gtile" data-game="duel" aria-pressed="false"><div><strong>Prof vs prof</strong><span>Pick any two of 1,410 professors, or enter yourself, and compare them round by round.</span></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3l7 7-2 2-7-7zM20 3l-7 7 2 2 7-7zM7 14l3 3-4 4-3-3zM17 14l-3 3 4 4 3-3z"/></svg></button>
-    <button class="gtile" data-game="clash" aria-pressed="false"><div><strong>Campus clash</strong><span>Kharagpur, Roorkee, any of 64 departments, or your own college.</span></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V9l9-6 9 6v12h-6v-6H9v6z"/></svg></button>
+    <button class="gtile" data-game="duel" aria-pressed="false"><div><strong>Prof vs prof</strong><span>Pick any two of 1,410 professors by college and department, and compare them round by round.</span></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3l7 7-2 2-7-7zM20 3l-7 7 2 2 7-7zM7 14l3 3-4 4-3-3zM17 14l-3 3 4 4 3-3z"/></svg></button>
+    <button class="gtile" data-game="clash" aria-pressed="false"><div><strong>Campus clash</strong><span>Kharagpur against Roorkee, or any department against any other.</span></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 21V9l9-6 9 6v12h-6v-6H9v6z"/></svg></button>
     <button class="gtile" data-game="dice" aria-pressed="false"><div><strong>Roll a fact</strong><span>Roll the die for a surprising fact. How many can you collect?</span></div><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/></svg></button>
     <button class="gtile" data-game="guess" aria-pressed="false"><div><strong>Guess-o-meter</strong><span>Drag a slider to guess a percentage, and see how close your instinct is.</span></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a10 10 0 00-10 10h3a7 7 0 0114 0h3A10 10 0 0012 4zm-1 10l5-6-3 7z"/></svg></button>
     <button class="gtile" data-game="hops" aria-pressed="false"><div><strong>Handshakes</strong><span>How many co-author steps separate two professors? Guess, then see the path.</span></div><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="3"/><circle cx="19" cy="6" r="3"/><circle cx="19" cy="18" r="3"/><path d="M7 11l10-4v2L7 13zM7 12l10 5v2L7 14z"/></svg></button>

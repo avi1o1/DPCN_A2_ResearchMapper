@@ -365,11 +365,11 @@ const giant = (() => { let bestC = []; const seenN = new Set();
 heroCore = () => giant; sizeHero();
 
 /* professor picker: college, then department, then professor; each a searchable list sorted A to Z (combo.js) */
-function profPicker(host, pool, onPick, allowMe) {
+function profPicker(host, pool, onPick) {
   host.innerHTML = `<div class="pp"><label><span>College</span><select aria-label="College" data-noun="colleges"></select></label>
     <label><span>Department</span><select aria-label="Department" data-noun="departments" data-placeholder="Search departments"></select></label>
     <label class="wide"><span>Professor</span><select aria-label="Professor" data-noun="professors" data-placeholder="Type a name"></select></label></div>`;
-  const [sC, sD, sP] = $$("select", host), me = () => allowMe ? store.get("me", null) : null;
+  const [sC, sD, sP] = $$("select", host);
   let inst = "", dept = "";
   sC.innerHTML = `<option value="">Any college</option>` + INSTS.map(i => `<option value="${esc(i)}">${esc(i)}</option>`).join("");
   const fillD = () => {
@@ -379,56 +379,24 @@ function profPicker(host, pool, onPick, allowMe) {
     sD.value = keys.includes(dept) ? dept : (dept = "");
   };
   const fillP = () => {
-    const cur = sP.value, m = me(), list = pool.filter(p => (!inst || p.inst === inst) && (!dept || p.inst + "|" + p.dept === dept));
-    sP.innerHTML = `<option value="" hidden>Choose a professor</option>` + (m && !inst && !dept ? `<option value="me" data-pin data-sub="your own numbers">You: ${esc(m.name)}</option>` : "") +
+    const cur = sP.value, list = pool.filter(p => (!inst || p.inst === inst) && (!dept || p.inst + "|" + p.dept === dept));
+    sP.innerHTML = `<option value="" hidden>Choose a professor</option>` +
       list.map(p => `<option value="${esc(p.id)}" data-sub="${esc(p.dept)}, ${short(p.inst)}">${esc(p.name)}</option>`).join("");
     sP.value = [...sP.options].some(o => o.value === cur) ? cur : "";
   };
   sC.onchange = () => { inst = sC.value; dept = ""; fillD(); fillP(); };
   sD.onchange = () => { dept = sD.value; if (dept && !inst) { inst = dept.split("|")[0]; sC.value = inst; fillD(); } fillP(); };
-  sP.onchange = () => { if (sP.value) onPick(sP.value === "me" ? me() : byId.get(sP.value)); };
+  sP.onchange = () => { if (sP.value) onPick(byId.get(sP.value)); };
   [sC, sD, sP].forEach(s => combo(s));
   fillD(); fillP();
   return {
     set(p) {
       // filters go back to "any", so the next search covers everyone; the player card shows the department
-      inst = dept = ""; sC.value = ""; fillD(); fillP(); sP.value = p.id ? p.id : "me";
+      inst = dept = ""; sC.value = ""; fillD(); fillP(); sP.value = p.id;
     },
   };
 }
 
-/* your profile and your college: entered once, used by Prof vs prof and Campus clash */
-let curGame = null;
-const ME_FIELDS = [["name", "Name", "text"], ["papers", "Papers, 2016–2026"], ["cites", "Citations"], ["h", "h-index"], ["i10", "i10-index"], ["q1", "Q1 journal papers"], ["coauthors", "Co-authors"]];
-const COL_FIELDS = [["name", "College name", "text"], ["faculty", "Faculty"], ["papers", "Papers, 2016–2026"], ["cites", "Citations"], ["q1", "Q1 share of journal papers, %"], ["mh", "Median faculty h-index"]];
-function renderYou(editing) {
-  const me = store.get("me", null), col = store.get("college", null), box = $("#you");
-  const card = (k, title, v, line, empty) => `<div class="you-card${editing === k ? " on" : ""}"><div class="you-av" aria-hidden="true">${k === "me" ? "★" : "⌂"}</div>
-    <div class="you-txt"><b>${v ? esc(v.name) : title}</b><span>${v ? line : empty}</span></div>
-    <button class="gbtn ${v ? "alt" : "v"}" data-ed="${k}" aria-expanded="${editing === k}">${v ? "Edit" : k === "me" ? "Add yourself" : "Add your college"}</button></div>`;
-  box.innerHTML = `<div class="you-row">` +
-    card("me", "Your profile", me, me && `${fmt(me.papers)} papers, ${fmt(me.cites)} citations, h-index ${me.h}. Pick “You” in Prof vs prof.`, "Enter your own numbers and take on any of 1,410 professors.") +
-    card("college", "Your college", col, col && `${fmt(col.faculty)} faculty, ${fmt(col.papers)} papers. Pick it in Campus clash.`, "Put your own college in the ring against Kharagpur, Roorkee or any department.") + `</div>`;
-  if (editing) {
-    const F = editing === "me" ? ME_FIELDS : COL_FIELDS, v = (editing === "me" ? me : col) || {}, isCol = editing === "college";
-    box.insertAdjacentHTML("beforeend", `<form class="cform you-form" id="youForm">${F.map(([k, l, t]) => `<label class="${t ? "full" : ""}">${l}<input class="ginput" name="${k}" type="${t || "number"}" min="0"${k === "q1" && isCol ? ' max="100"' : ""}
-      value="${esc(v[k] == null ? "" : k === "q1" && isCol ? Math.round(v[k] * 100) : v[k])}"${t ? ` placeholder="${isCol ? "for example, IIIT Hyderabad" : "Your name"}"` : ""}></label>`).join("")}
-      <div class="full grow"><button class="gbtn y" type="submit">Save</button><button class="gbtn alt" type="button" data-cancel>Cancel</button>${v.name ? `<button class="gbtn alt" type="button" data-del>Remove</button>` : ""}
-      <span style="font-size:13.5px;color:var(--hall-ink-2)">Stored only in this browser.</span></div></form>`);
-    const form = $("#youForm"), n = k => Math.max(0, +form.elements[k].value || 0);
-    form.elements[0].focus();
-    form.onsubmit = e => {
-      e.preventDefault();
-      if (!isCol) store.set("me", { id: null, name: form.elements.name.value.trim() || "You", dept: "Your entry", inst: "", papers: n("papers"), cites: n("cites"), h: n("h"), i10: n("i10"), q1: n("q1"), coauthors: n("coauthors"), oa_h: null });
-      else store.set("college", { name: form.elements.name.value.trim() || "My college", inst: "", faculty: Math.max(1, n("faculty")), papers: n("papers"), cites: n("cites"), q1: Math.min(100, n("q1")) / 100, mh: n("mh") });
-      renderYou(); if (curGame === gameDuel || curGame === gameClash) curGame(editing);
-    };
-    $("[data-cancel]", form).onclick = () => renderYou();
-    const del = $("[data-del]", form);
-    if (del) del.onclick = () => { store.set(editing, null); renderYou(); if (curGame === gameDuel || curGame === gameClash) curGame(); };
-  }
-  $$("[data-ed]", box).forEach(b => b.onclick = () => renderYou(editing === b.dataset.ed ? null : b.dataset.ed));
-}
 function countUp(el, to, f = fmt, ms = 650) {
   if (reduced) { el.textContent = f(to); return; }
   const t0 = performance.now(); const st = now => { const t = Math.min(1, (now - t0) / ms), e = 1 - (1 - t) ** 3; el.textContent = f(to * e); if (t < 1) requestAnimationFrame(st); }; requestAnimationFrame(st);
@@ -445,7 +413,6 @@ const HL_MODES = {
   depts: { label: "Department papers", unit: "papers", pool: () => D.departments.filter(d => d.papers >= 20).map(d => ({ title: d.dept, meta: `${short(d.inst)}, ${d.faculty} faculty`, inst: d.inst, v: d.papers })) },
 };
 function gameHL() {
-  curGame = gameHL;
   let mode = "papers", pool, L, R, streak = 0, locked = false;
   stageEl.innerHTML = `<h3>Higher or lower</h3><p class="sub">The left card shows its number. Does the right one have more or fewer? A correct guess earns 10 coins, and a streak is worth chasing.</p>
     <div class="grow" style="margin-bottom:16px" role="group" aria-label="Mode">${Object.entries(HL_MODES).map(([k, m]) => `<button class="gbtn ${k === mode ? "y" : "alt"}" data-m="${k}">${m.label}</button>`).join("")}</div>
@@ -469,8 +436,11 @@ function gameHL() {
 
 /* ---- duel rounds renderer (shared by prof and campus) ---- */
 function runRounds(host, A, B, rounds, onDone) {
+  // a new comparison cancels the one still animating, so rows and score always belong to the same pair
+  const run = host.__run = (host.__run || 0) + 1;
   host.innerHTML = ""; let a = 0, b = 0, i = 0;
   const go = () => {
+    if (host.__run !== run || !host.isConnected) return;
     if (i >= rounds.length) { onDone(a, b); return; }
     const r = rounds[i++], va = r.get(A), vb = r.get(B);
     if (va == null || vb == null || isNaN(va) || isNaN(vb)) { go(); return; }
@@ -484,16 +454,15 @@ function runRounds(host, A, B, rounds, onDone) {
 }
 
 /* ---- game 2: prof vs prof ---- */
-function gameDuel(justSaved) {
-  curGame = gameDuel;
-  const me = store.get("me", null); let A = null, B = null;
-  stageEl.innerHTML = `<h3>Prof vs prof</h3><p class="sub">Narrow by college and department, or just type a name, and compare two professors on eight measures. Every value counts only papers from 2016 to 2026 with the IIT on them.${me ? "" : " Add your own profile above to play yourself."}</p>
+function gameDuel() {
+  let A = null, B = null;
+  stageEl.innerHTML = `<h3>Prof vs prof</h3><p class="sub">Narrow by college and department, or just type a name, and compare two professors on eight measures. Every value counts only papers from 2016 to 2026 with the IIT on them.</p>
     <div class="duel"><div class="fighter"><div id="pA"></div><div id="fA"></div></div><div class="fighter"><div id="pB"></div><div id="fB"></div></div></div>
     <div class="grow" style="margin-top:14px"><button class="gbtn y" id="fight">Compare</button><button class="gbtn alt" id="rnd">Random pair</button><button class="gbtn alt" id="rival">Random rivals (same department)</button></div>
     <div class="rounds" id="rounds"></div><div class="banner" id="banner"></div>`;
   const show = (slot, p) => { $(slot).innerHTML = p ? `<h4>${esc(p.name)}</h4><div class="m">${instDot(p.inst)}${esc(p.dept || "")}${p.inst ? ", " + short(p.inst) : ""}</div>` : `<h4 style="color:var(--hall-ink-2)">Choose a professor</h4>`; };
-  const pa = profPicker($("#pA"), people, p => { A = p; show("#fA", A); fight(); }, true);
-  const pb = profPicker($("#pB"), people, p => { B = p; show("#fB", B); fight(); }, true);
+  const pa = profPicker($("#pA"), people, p => { A = p; show("#fA", A); fight(); });
+  const pb = profPicker($("#pB"), people, p => { B = p; show("#fB", B); fight(); });
   const setPair = (x, y) => { A = x; B = y; pa.set(x); pb.set(y); show("#fA", A); show("#fB", B); fight(); };
   const R = [
     { label: "Papers", get: p => p.papers, f: fmt }, { label: "Citations", get: p => p.cites, f: fmt },
@@ -505,8 +474,8 @@ function gameDuel(justSaved) {
     if (!A || !B) { $("#banner").className = "banner show"; $("#banner").textContent = "Choose two players first."; return; }
     $("#banner").className = "banner";
     runRounds($("#rounds"), A, B, R, (a, b) => {
-      const p = A.id && B.id ? path(A.id, B.id) : null;
-      const hop = p ? (p.length - 1 === 1 ? "They have written a paper together." : `They are ${p.length - 1} co-author steps apart: ${p.map(id => esc(byId.get(id)?.name || id)).join(" → ")}.`) : (!A.id || !B.id ? "" : "They are not connected through faculty co-authors.");
+      const p = path(A.id, B.id);
+      const hop = p ? (p.length - 1 === 1 ? "They have written a paper together." : `They are ${p.length - 1} co-author steps apart: ${p.map(id => esc(byId.get(id)?.name || id)).join(" → ")}.`) : "They are not connected through faculty co-authors.";
       $("#banner").innerHTML = (a === b ? `A draw, ${a}–${b}.` : `${esc((a > b ? A : B).name)} wins ${Math.max(a, b)}–${Math.min(a, b)}.`) + (hop ? `<div style="font-weight:500;font-size:15px;margin-top:6px">${hop}</div>` : "");
       $("#banner").className = "banner show"; addCoins(5);
     });
@@ -517,15 +486,13 @@ function gameDuel(justSaved) {
   $("#rival").onclick = () => { const x = pick(big()); const ys = big().filter(p => p.dept === x.dept && p.inst === x.inst && p !== x); setPair(x, ys.length ? pick(ys) : pick(people)); };
   show("#fA"); show("#fB");
   const top = [...people].sort((x, y) => y.h - x.h);
-  if (justSaved === "me" && me) setPair(me, top[0]); else setPair(top[0], top.find(p => p.inst === RK));
+  setPair(top[0], top.find(p => p.inst === RK));
 }
 
 /* ---- game 3: campus clash ---- */
-function gameClash(justSaved) {
-  curGame = gameClash;
-  const mine = store.get("college", null);
-  const find = k => k === "inst:mine" ? { ...mine, key: k } : units.find(u => u.key === k);
-  stageEl.innerHTML = `<h3>Campus clash</h3><p class="sub">Choose a college on each side, then the whole college or one of its departments. Department numbers count the papers of that department's faculty.${mine ? "" : " Add your own college above to put it in the ring."}</p>
+function gameClash() {
+  const find = k => units.find(u => u.key === k);
+  stageEl.innerHTML = `<h3>Campus clash</h3><p class="sub">Choose a college on each side, then the whole college or one of its departments. Department numbers count the papers of that department's faculty.</p>
     <div class="duel"><div class="fighter" id="sA"></div><div class="fighter" id="sB"></div></div>
     <div class="grow" style="margin-top:14px"><button class="gbtn c" id="cGo">Compare</button><button class="gbtn alt" id="cRnd">Random departments</button><button class="gbtn alt" id="cSame">Same department, both IITs</button></div>
     <div class="rounds" id="rounds"></div><div class="banner" id="banner"></div>`;
@@ -534,16 +501,14 @@ function gameClash(justSaved) {
     host.innerHTML = `<div class="pp"><label><span>College</span><select aria-label="College" data-noun="colleges"></select></label>
       <label><span>Department</span><select aria-label="Department" data-noun="choices" data-placeholder="Search departments"></select></label></div><h4></h4>`;
     const [sC, sD] = $$("select", host), h = $("h4", host);
-    sC.innerHTML = INSTS.map(i => `<option value="${esc(i)}">${esc(i)}</option>`).join("") + (mine ? `<option value="mine" data-sub="your college">${esc(mine.name)}</option>` : "");
+    sC.innerHTML = INSTS.map(i => `<option value="${esc(i)}">${esc(i)}</option>`).join("");
     const fillD = () => {
       const c = sC.value;
-      sD.innerHTML = c === "mine" ? `<option value="inst:mine">Whole college</option>` :
-        `<option value="inst:${esc(c)}" data-sub="${fmt(K[c].faculty)} faculty">Whole institute</option>` +
+      sD.innerHTML = `<option value="inst:${esc(c)}" data-sub="${fmt(K[c].faculty)} faculty">Whole institute</option>` +
         units.filter(u => u.key.startsWith("dept:" + c + "|")).map(u => `<option value="${esc(u.key)}" data-sub="${fmt(u.faculty)} faculty, ${fmt(u.papers)} papers">${esc(u.name)}</option>`).join("");
-      sD.disabled = c === "mine";
     };
     const paint = () => { const u = find(sD.value); h.innerHTML = instDot(u.inst) + esc(u.name) + (u.key.startsWith("dept:") ? `<div class="m">${short(u.inst)}</div>` : ""); };
-    const set = k => { sC.value = k === "inst:mine" ? "mine" : k.replace(/^(inst|dept):/, "").split("|")[0]; fillD(); sD.value = k; paint(); };
+    const set = k => { sC.value = k.replace(/^(inst|dept):/, "").split("|")[0]; fillD(); sD.value = k; paint(); };
     sC.onchange = () => { fillD(); paint(); go(); };
     sD.onchange = () => { paint(); go(); };
     combo(sC); combo(sD); set(key);
@@ -560,7 +525,7 @@ function gameClash(justSaved) {
     runRounds($("#rounds"), A, B, R, (x, y) => { $("#banner").innerHTML = (x === y ? `A draw, ${x}–${y}.` : `${esc((x > y ? A : B).name)} takes it ${Math.max(x, y)}–${Math.min(x, y)}.`) +
       `<div style="font-weight:500;font-size:15px;margin-top:6px">Bigger is not always better here: a small department can win on citations per paper and Q1 share.</div>`; $("#banner").className = "banner show"; addCoins(5); });
   }
-  const sa = side($("#sA"), "inst:" + KG), sb = side($("#sB"), justSaved === "college" && mine ? "inst:mine" : "inst:" + RK);
+  const sa = side($("#sA"), "inst:" + KG), sb = side($("#sB"), "inst:" + RK);
   ready = true;
   $("#cGo").onclick = go;
   const ds = () => units.filter(u => u.key.startsWith("dept:") && u.papers >= 100);
@@ -657,7 +622,6 @@ function buildFacts() {
   return F;
 }
 function gameDice() {
-  curGame = gameDice;
   const pips = { 1: [5], 2: [1, 9], 3: [1, 5, 9], 4: [1, 3, 7, 9], 5: [1, 3, 5, 7, 9], 6: [1, 3, 4, 6, 7, 9] };
   const face = n => `<div class="face f${n}">${[...Array(9)].map((_, i) => pips[n].includes(i + 1) ? "<i></i>" : "<span></span>").join("")}</div>`;
   const rot = { 1: [0, 0], 2: [0, -90], 3: [0, 180], 4: [0, 90], 5: [-90, 0], 6: [90, 0] };
@@ -706,7 +670,6 @@ const QUIZ = [
   { q: "What share of Roorkee's papers are in Environmental Science?", a: D.areas[RK].find(a => a.field === "Environmental Science").share * 100, why: "About 13%, the second-largest field at Roorkee, mostly water science and hydrology." },
 ];
 function gameGuess() {
-  curGame = gameGuess;
   let order = shuffle([...QUIZ.keys()]), qi = 0, total = 0, done = 0;
   const render = () => {
     const Q = QUIZ[order[qi % order.length]];
@@ -731,7 +694,6 @@ function gameGuess() {
 
 /* ---- game 6: handshakes ---- */
 function gameHops() {
-  curGame = gameHops;
   const pool = giant.map(id => byId.get(id)).filter(Boolean);
   let A, B, P;
   stageEl.innerHTML = `<h3>Handshakes</h3><p class="sub">Two professors in the connected part of the network. How many co-author steps apart are they? A step is one paper written together. An exact guess earns 20 coins, and one step off earns 5.</p>
@@ -762,6 +724,5 @@ $$(".gtile").forEach(t => t.addEventListener("click", () => {
   $$(".gtile").forEach(x => x.setAttribute("aria-pressed", x === t)); GAMES[t.dataset.game]();
   const r = stageEl.getBoundingClientRect(); if (r.top > innerHeight * .7 || r.top < 0) stageEl.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
 }));
-renderYou();
 $(".gtile[data-game=dice]").setAttribute("aria-pressed", "true"); gameDice();
 })();
