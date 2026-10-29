@@ -247,6 +247,8 @@ for c in cands:
             ys = PERSON_YEARS.get(p)
             if ys and min(ys) - 1 <= year <= max(ys) + 1:
                 tier = "likely"
+        if "institute_list" in ev:
+            tier = "likely"   # listed in the institute's own publication repository (IIIT team, operator decision 2026-10-30)
         stats["unverified_" + tier] += 1
         status = (f"TODO: unverified-{tier} - found via person channel ({','.join(sorted(set(ev)))}); "
                   "no affiliation metadata available to confirm")
@@ -443,7 +445,8 @@ final = [r for r in final if id(r) not in drop]
 # person-channel evidence that is dated/specific is kept when the year is consistent with the
 # person's affiliation-verified years ("likely"); undated DBLP / undated ORCID evidence alone and
 # the "possible" tier (audit precision ~12%) go to candidates_unconfirmed_<inst>.json.
-STRONG_PERSON = {"orcid_tenure", "roster_orcid", "roster_crossref_author", "roster_arxiv", "roster_dblp"}
+STRONG_PERSON = {"orcid_tenure", "roster_orcid", "roster_crossref_author", "roster_arxiv", "roster_dblp",
+                 "institute_list"}   # institute_list: only produced by the IIIT team's iiith_publist.py; absent for the IITs
 main, unconfirmed = [], []
 for r in final:
     s_ = r["affiliation_status"]

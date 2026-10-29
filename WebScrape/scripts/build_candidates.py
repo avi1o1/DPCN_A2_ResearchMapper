@@ -175,7 +175,8 @@ if os.path.exists(fn):
             {"dblp_person": r["person_name"], "dblp_venue": r.get("venue"), "dblp_type": r.get("type", "").split("#")[-1], "dblp_pub": r.get("pub")})
 
 # --- B3-B5 roster-driven person channels (roster_channels.py)
-for fn in [os.path.join(RAW, "roster", inst + sfx + ".jsonl.gz") for sfx in ("", "_arxiv", "_loose")]:
+# "_publist": the institute's own publication repository, where one exists (IIIT team: iiith_publist.py); absent for the IITs
+for fn in [os.path.join(RAW, "roster", inst + sfx + ".jsonl.gz") for sfx in ("", "_arxiv", "_loose", "_publist")]:
     if not os.path.exists(fn):
         continue
     for r in read_jsonl_gz(fn):
