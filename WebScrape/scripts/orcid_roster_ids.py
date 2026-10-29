@@ -50,10 +50,10 @@ todo = [r for r in rows if not (r.get("orcid") or "").strip() and r.get("status"
 recs = [r for r in json.load(open(os.path.join(OUT, inst + ".json"), encoding="utf-8"))["records"]
         if r["affiliation_status"] == "verified" and isinstance(r["authors"], list)]
 print(inst, "roster", len(rows), "to fill", len(todo), "verified records", len(recs), flush=True)
-ror = REG[inst]["ror"].rsplit("/", 1)[-1]
+ror = (REG[inst]["ror"] or "").rsplit("/", 1)[-1]   # four IIITs have no ROR record (PROCESS_IIIT.md §7.1): R2 is skipped
 # everyone whose ORCID record lists this institute (ROR) as an affiliation: faculty, but also students -> unique match only
 ROR_PEOPLE, start = [], 0
-while True:
+while ror:
     d = get("https://pub.orcid.org/v3.0/expanded-search/", params={"q": f'ror-org-id:"https://ror.org/{ror}"', "rows": 1000,
             "start": start}, headers={"Accept": "application/json"}).json()
     page = d.get("expanded-result") or []
