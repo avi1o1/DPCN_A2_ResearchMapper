@@ -321,3 +321,85 @@ Result after verification (main file = verified + unverified-likely; "possible" 
 | Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % | 66.0 % (47) |
 
 Verification raised the verified count from 1,030 to 1,265 for Kancheepuram and from 1,264 to 1,849 for Jabalpur. Bangalore's main file also holds 2 `ambiguous` records (an IIHS Bangalore + IIIT Delhi string).
+
+## 5. Precision audits and the fixes they triggered (2026-10-29)
+
+### 5.1 Method
+`precision_sample.py <key>` (seed 20261007) draws 25 verified and 40 likely records from the main file. The shared sampler reads
+only the main file, so the 40 "possible" rows were drawn from `candidates_unconfirmed_<key>.json` with the same seed by a
+scratch script (shared script unchanged), to match the layout of the IIT audits. One Sonnet sub-agent per institute (two at a
+time) judged every row against the affiliation printed on or deposited for the paper: OpenAlex raw affiliation strings,
+Crossref, Europe PMC, then arXiv / open-access PDFs or publisher pages where robots.txt allowed. Anything behind a 403, a
+Cloudflare or IEEE challenge, or a CAPTCHA stayed `unknown`. Files: `golden/precision_audit_<key>.csv` (verdict yes / no /
+unknown, evidence URL, quoted affiliation).
+
+### 5.2 Fixes
+* **arXiv co-author route on collaboration papers.** The Jabalpur audit found a LIGO/Virgo/KAGRA paper (about 1,770 authors)
+  credited to the roster's "Anil Kumar": the arXiv person channel (B6) accepts a paper when one co-author name matches, which
+  on such lists happens by chance. 23 Jabalpur and 1 Delhi likely records had this shape. `roster_channels.py` now reads an
+  optional registry field `arxiv_coauthor_max_authors` (shared commit 76a5cd0; no IIT entry sets it, so IIT behaviour is
+  identical); every IIIT entry sets 50 (ec69ebc). Papers above the cap enter only through the printed affiliation. After the
+  rerun Jabalpur lost the 23 records and recall was unchanged.
+* **DBLP catch-all profiles.** Pune's likely tier was 55 % (18 yes / 15 no): 13 of its wrong rows came from the DBLP id
+  `166/1095` accepted for Sushant Kumar. That is DBLP's undisambiguated "Sushant Kumar" profile (120 papers of several people,
+  4 of them ours), which got through the homonym exemption of §4.3, because it is the only DBLP person with exactly that name.
+  The exemption now also requires that no other DBLP name extends the matched one (11 "Sushant Kumar …" persons exist); see
+  beb270c. Re-derived for all eight rosters: removed Sushant Kumar (Pune), Aman Kumar (Delhi; catch-all `77/4697`) and Abhishek
+  Kumar (Delhi; the DBLP ORCID differs from the roster ORCID filled in §4.5); newly accepted on the grown verified set: Sonam
+  Maurya (Pune), 2 Jabalpur, 3 Delhi, 3 Hyderabad ids. Roster stage rerun for Pune, Jabalpur, Delhi, Hyderabad
+  (`raw/final_iiit_5.log`), then `run_v2.sh refresh` for all eight: 0 violations.
+* Pune's sample was redrawn from the corrected output; 67 of 105 rows carried their verdicts over by DOI (the verdict depends on
+  the paper only) and the 38 new rows were audited. The Jabalpur and Delhi audits describe the output before these two fixes
+  (Delhi: after the arXiv cap); both fixes only remove person-channel matches, so those figures are lower bounds for the likely
+  tier.
+
+### 5.3 What the audits show
+* Verified: 25 / 25 at every institute.
+* The wrong likely rows fall into three groups: (a) roster people credited with papers from before they joined or after they
+  left (Kancheepuram: Dixit at IIT Madras 2019, Gajrani at IIT Bombay 2021; Allahabad: Bhattacharjee at IIT Gandhinagar, Dubey at IIIT Chittoor; Hyderabad: Roy at
+  TU Delft 2019); (b) common-name namesakes (Jabalpur "Sanjeev Jain" at SMVDU; Allahabad "Manish Kumar" ×3); (c) the two
+  channel faults fixed above.
+* The possible tier is right for only 21–58 % of decided rows, which is what keeping it out of the main file is for. Much of it
+  comes from ORCID records that list the institute without dates (S. Kannadhasan of Tamil Nadu colleges: 233 Gwalior candidates,
+  2 in the main file; Partha Pratim Roy, IIT Roorkee, for Allahabad) and from faculty who moved on (Tanmoy Chakraborty's IIT
+  Delhi papers for IIIT Delhi; M. Mohamed Asan Basiri's IIITDM Kurnool papers for Kancheepuram).
+* Classifier-level confusables seen only in the possible tier: VIT Chennai prints the Kancheepuram PIN 600127 (registered as
+  `shared`, not an anchor); bare "Indian Institute of Information Technology, Design and Manufacturing" without a city
+  (Kancheepuram, Jabalpur or Kurnool) was judged unknown.
+
+## 6. Final results (2026-10-29)
+
+Main file = verified + unverified-likely (`v2/<key>.json`); unconfirmed = "possible" candidates
+(`v2/candidates_unconfirmed_<key>.json`). Recall against the independent golden sets; precision = yes / (yes + no) in the audit
+(n = 25 / 40 / 40; unknowns excluded; at n = 40 a likely-tier figure carries about ±10 points).
+
+| IIIT | main | verified | likely | unconfirmed | recall | DOI recall (n) | P verified | P likely | P possible |
+|---|---|---|---|---|---|---|---|---|---|
+| Delhi | 4,695 | 2,568 | 2,127 | 1,003 | 85.0 % (368/433) | 86.6 % (247) | 100 % | 97 % (34/35) | 21 % |
+| Allahabad | 3,137 | 2,107 | 1,030 | 557 | 83.8 % (222/265) | 100 % (2) | 100 % | 80 % (28/35) | 30 % |
+| Gwalior | 2,146 | 1,378 | 768 | 713 | 81.3 % (217/267) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
+| Bangalore | 1,642 | 1,091 | 549 | 329 | 79.7 % (208/261) | 88.3 % (137) | 100 % | 97 % (32/33) | 29 % |
+| Jabalpur | 3,064 | 1,849 | 1,215 | 398 | 74.5 % (204/274) | 88.4 % (69) | 100 % | 91 % (30/33) | 58 % |
+| Hyderabad | 5,237 | 2,895 | 2,342 | 1,004 | 71.7 % (231/322) | 57.1 % (7) | 100 % | 92 % (35/38) | 24 % |
+| Pune | 235 | 164 | 71 | 87 | 62.8 % (59/94) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
+| Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (151/297) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
+
+Bangalore's main file also holds 2 `ambiguous` records. `validate.py`: 0 violations for all eight.
+
+### 6.1 Open problems
+* **Kancheepuram recall (50.8 %).** Most misses are papers on faculty pages in venues no index covers; some golden titles carry
+  the venue inside the title. 29 more misses sit in the unconfirmed file because of the year-window "possible" rule.
+* **Hyderabad and Allahabad golden sets have almost no DOIs** (7 and 2), so their DOI recall says little; Hyderabad's set is thin
+  for 2016–2021 (§4.3) and Allahabad's is 2023-heavy.
+* **Delhi golden set** is 87 % from the institute's year-wise list, which looks Scopus-derived: weaker independence.
+* **Likely tier** still contains tenure-boundary errors (people credited with papers from other employers). A per-person
+  check of the printed affiliation where one exists would remove them, but needs a change to the IIT team's `finalize.py`.
+* **Pune likely tier (71 %).** After the DBLP fix, 7 of its 10 wrong likely rows come from Sandeep Mishra's DBLP profile
+  (`180/4051`), accepted correctly by his ORCID (R1), into which DBLP has merged papers of namesakes at UT Austin, BAE Systems,
+  Microsoft and Jaypee. No identifier rule can catch an ORCID-linked profile that DBLP itself conflates; dropping the id would
+  also drop his DBLP-only papers, so it is left and reported here. Pune is small (71 likely records), so one person moves the
+  tier by many points.
+* **Shared-code items for the IIT team:** 5a8ebda (Windows file locks), 3ab0f3c (optional ORCID token), 8002355 (DataCite
+  KeyError), 76a5cd0 (optional arXiv co-author cap); and, not changed: `split_name()` on Tamil patronymic-initial names (§4.2),
+  `polite_get` caching transient DNS failures as dead, `python3 -I` ignoring PYTHONUTF8, and the I.I.I.T. pattern in the IIT
+  explicit rule.
