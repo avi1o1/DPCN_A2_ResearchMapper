@@ -403,3 +403,73 @@ Bangalore's main file also holds 2 `ambiguous` records. `validate.py`: 0 violati
   KeyError), 76a5cd0 (optional arXiv co-author cap); and, not changed: `split_name()` on Tamil patronymic-initial names (§4.2),
   `polite_get` caching transient DNS failures as dead, `python3 -I` ignoring PYTHONUTF8, and the I.I.I.T. pattern in the IIT
   explicit rule.
+
+### 6.2 Comparison with DPCN Group 9's dataset (2026-10-29)
+A sub-agent compared our Hyderabad and Delhi data with Group 9's "IIIT-H × IIIT-D Research Map"
+(github.com/ShreeLite/Citation-Network-Analysis, `site/src/data/papers.json`). That pipeline starts from a faculty roster and pulls each person's works
+from OpenAlex (primary), DBLP, the IIIT-H portal and Crossref, and keeps a work if it prints the institute **or** falls after the
+person's joining year. It holds journals and conferences only, without author lists or per-paper references.
+
+| | IIIT-H | IIIT-D |
+|---|---|---|
+| theirs / ours (all types) / ours (journal + conference) | 4,678 / 5,237 / 4,027 | 4,309 / 4,695 / 3,667 |
+| overlap (DOI, then title + year) | 3,815 | 3,143 |
+| only theirs: institute in OpenAlex/Crossref metadata (yes / no / unknown) | 330 / 332 / 58 | 274 / 770 / 55 |
+| only ours: same check | 855 / 185 / 278 (82 % of decided) | 977 / 154 / 265 (86 %) |
+| golden-set recall (fuzzy title), theirs vs ours | 73.6 % vs 70.8 % | 86.4 % vs 83.8 % |
+
+* Our extra records are far more often affiliated (82–86 % vs 28–59 %). Ours also have author lists and references.
+* Theirs find **604 affiliated papers we lack**. In our pipeline: 364 never discovered, 208 in the unconfirmed file, 32 rejected
+  candidates. The cause is the handoff rule that keeps OpenAlex out of discovery (HANDOFF_IIITs §8; PROCESS.md §1: OpenAlex
+  needs a key). Using OpenAlex is a method decision for both teams and is not taken here. The list is kept outside the repository
+  (`rm_work/compare_shreelite/missed_by_us.csv`).
+* Their citation counts are higher on ~40 % of shared papers (OpenAlex counts vs our Crossref counts).
+
+## 7. The 22 further IIITs (from 2026-10-29)
+The handoff assigned eight IIITs (course brief Groups 9–11). On 2026-10-29 the operator extended the run to every IIIT named
+"IIIT" by the Government of India: IIITDM Kurnool, the two state IIITs Bhubaneswar and Naya Raipur, and the 19 PPP IIITs. It
+leaves out the RGUKT campuses (Basar, Nuzvid, RK Valley, Ongole) and IIITM-K / Digital University Kerala. The method is
+unchanged (§1–6).
+
+### 7.1 Reconnaissance
+* **ROR** (v2 `query=`, checked against name, city and website). There is no ROR record for **IIIT Tiruchirappalli, IIIT Bhagalpur,
+  IIIT Agartala, IIIT Raichur** (searched by name, "IIIT <city>" and "Information Technology <city>"). Their `ror` is None:
+  `orcid_people` matches only by name and city, and `orcid_roster_ids` skips its ROR route (R2).
+* **Campuses.** Two sub-agents gathered campus facts from the institutes' sites, NIRF, annual reports and Wikipedia. Most PPP IIITs
+  spent years at a mentor's campus and printed its address. Those that did:
+  - Kota: MNIT Jaipur, 2013 to now (since 2023 only years 1 and 2 are at Ranpur).
+  - Una: NIT Hamirpur.
+  - Sonepat: NIT Kurukshetra, then IIT Delhi's Sonepat Techno Park.
+  - Lucknow: IIIT Allahabad, Jhalwa, until 2019.
+  - Kurnool: IIITDM Kancheepuram, until 2018.
+  - Raichur: IIT Hyderabad, 2019–2020/21.
+  - Agartala: NIT Agartala.
+  - Surat: SVNIT.
+  - Bhopal: MANIT.
+  - Ranchi: NIT Jamshedpur, then the JUT campus, Namkum.
+  - Tiruchirappalli: BIT, then NIT Trichy, then Oxford Engineering College.
+  - Kottayam: Amal Jyothi College, then the GIFT campus in Thiruvananthapuram.
+  - Vadodara: Gandhinagar throughout, plus Diu since 2020.
+  The facts and their sources are in the registry comments.
+* **Crossref sweeps** (light records, 80 tokens: city names, campus localities, PINs and abbreviations; `raw/run_sweeps_iiit2.sh`
+  and `raw/run_sweeps_iiit3.sh`). "Sri City" is not swept, because Crossref treats it as an OR on "city" (595k hits); Chittoor, 517646 and
+  Satyavedu stand in for it. Mentor cities are not swept: papers from those years name the IIIT with its own city ("IIIT Kota,
+  MNIT Campus, Jaipur").
+
+### 7.2 Registry
+* Same design as §2.3: anchors are e-mail domains only, every place token is `shared` (it needs an IIIT mention), and mentor
+  cities are not place tokens. Adding them would make every loose IIIT string of Prayagraj, Hyderabad or Chennai ambiguous for the
+  IIIT registered there.
+* The first eight used one list of "unregistered IIITs named with their city" as a strong exclusion and as confusables. Each new
+  IIIT drops only its own city and abbreviations from those lists (`_own_lists`). The first eight's lists are byte-identical to
+  before.
+* Ambiguous abbreviations stay confusable for everyone: IIITK (Kota / Kottayam / Kalyani / Kurnool), IIITR (Ranchi / Raichur),
+  IIITBH / IIIT-BH (Bhubaneswar / Bhagalpur) and IIITS (Sri City / Surat / Sonepat).
+* **Regression check.** Every swept author string that names an IIIT, "information", or any of the new place tokens was
+  classified for all 31 institutes registered before. That is 179,096 strings, classified with the old and the new
+  `institutes_iiit.py`. **One verdict changed:** `iit_delhi` went from uncertain to None on "Indian Institute of Information
+  Technology (IIIT) Sonepat, Techno Park, IITD Sonipat Campus", which is correct. `test_affil.py`: 112/112.
+* **String review** (`review_strings.py`, all 22). Accepted strings were sampled for each institute, and all `other`, `uncertain`
+  and `iitnone` strings were read. There were no false positives. The rules leave 5 strings uncertain in total. One is
+  "IIITK, Dept. of ECE, Kottayam", left uncertain because IIITK is ambiguous. Three strings print "Indian Institute of Information
+  Technology, Sri City 441108", which is IIIT Nagpur's PIN. They are left as `other` for Nagpur.
