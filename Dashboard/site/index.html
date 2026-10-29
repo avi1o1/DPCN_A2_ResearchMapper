@@ -92,6 +92,8 @@ main, footer { margin-left: var(--side); }
 .menu a { display: block; padding: 7px 10px; border-radius: 8px; color: var(--fg2); font-size: 14.5px; transition: background .2s, color .2s; }
 .menu a:hover { color: var(--fg); background: var(--band); text-decoration: none; }
 .menu a.on { color: var(--fg); background: var(--hair); font-weight: 500; }
+.menu a.ext { display: flex; align-items: center; gap: 6px; color: var(--link); font-weight: 500; }
+.menu a.ext svg { width: 14px; height: 14px; flex: none; }
 .side .foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 12px; border-top: 1px solid var(--hair); }
 .side .foot .menu { flex: 1; }
 .mbar, .scrim { display: none; }
@@ -227,7 +229,9 @@ section.alt .kpi { background: var(--card); }
   font: 15px var(--font-text); color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
   padding: 9px 12px; min-width: 0;
 }
-section:not(.alt) .field { background: var(--card); }
+section:not(.alt) .field { background-color: var(--card); }
+select.field { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2386868b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center; background-size: 12px 8px; padding-right: 34px; }
 .field:focus { outline: none; border-color: var(--link); box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 25%, transparent); }
 input.field { flex: 1 1 220px; }
 .tablewrap { overflow-x: auto; }
@@ -364,6 +368,8 @@ footer p { margin: 4px 0; }
 
 <nav class="side" id="side" aria-label="Sections">
   <div class="brand">IIT Research Map<span>Group 3 · 2016–2026</span></div>
+  <div class="menu"><a class="ext" href="explorer.html" target="_blank" rel="noopener">Profile explorer
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="(opens in a new tab)" role="img"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
   <div class="instbox">
     <p class="navh">Institute</p>
     <div class="seg" id="instSeg" role="group" aria-label="Institute">
@@ -386,7 +392,7 @@ footer p { margin: 4px 0; }
     </div>
   </div>
   <div class="foot">
-    <div class="menu"><a href="explorer.html">Profile explorer</a><a href="#method">Method</a></div>
+    <div class="menu"><a href="#method">Method</a></div>
     <button type="button" class="iconbtn themeBtn" aria-label="Switch light or dark appearance">
       <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.6 6.6 0 0 0 10.7 10.7z"/></svg>
       <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
