@@ -1,1 +1,1 @@
-window.PROFILES={"note":"random"};
+window.PROFILES = {};
