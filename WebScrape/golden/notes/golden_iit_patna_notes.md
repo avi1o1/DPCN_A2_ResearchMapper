@@ -34,3 +34,11 @@ CSE 69, Physics 65, HSS 45, Chemistry 42, Civil 39, Mechanical 29, Chemical 28, 
 * Years 2016-2017 and 2026 are thin: faculty lists are newest-first and tenure filtering removes pre-joining papers; the 2016 archived list gives upper-bound joining years.
 * Faculty with no own publication list online are absent; former faculty and non-faculty-led papers are almost absent (only via arXiv).
 * Faculty with 0 hits in parsed lists were not covered (Computer Center, Endangered-language centre have no faculty data).
+
+<!-- SUPPLEMENT 2026-10-28 (extension pass) -->
+## Supplement: extension pass (+49 rows)
+* Annual Report 2018-19 (complete 31 MB Wayback PDF, `pdftotext -raw` fixes the two-column garbling): 711 journal+conference entries parsed from the 10 department sections; 42 kept as new annual_report rows (medium; tenure rule (b) via roster joining_year strictly before paper year; max 8/person across all rows; entries already present skipped; entries with ambiguous initial-only author matches skipped).
+* Annual Report 2017-18 (1 MB truncated copy, text via Ghostscript txtwrite): most entries had lost text after column splitting; only 8 fully intact entries (3 from 2016, 5 from 2017, conference/journal) kept. 313 entries without a printed year were skipped.
+* Annual Reports 2016-17, 2019-20: truncated copies unreadable (no xref; gs/pdftotext fail). 2020-21 to 2023-24: iitp.ac.in copies return 404; Wayback fetches of the 2021-22/2022-23/2023-24 PDFs failed with connection errors. Not used.
+* Not done (session interrupted twice, time): new faculty homepages, department/centre dated lists, further arXiv PDFs, news pages. Source mix therefore remains faculty_page-dominated; no dept_page/news rows; 2026 still thin.
+* Bias: new rows are tenure-based medium; added mostly 2018-2019 (the readable report), small gain for 2016-17.

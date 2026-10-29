@@ -49,6 +49,6 @@ def w():
             f.write(json.dumps(row) + "\n"); f.flush()
 
 
-ts = [threading.Thread(target=w) for _ in range(4)]
+ts = [threading.Thread(target=w) for _ in range(int(os.environ.get("OC_WORKERS", "8")))]
 [t.start() for t in ts]; [t.join() for t in ts]
 f.close(); print("done")

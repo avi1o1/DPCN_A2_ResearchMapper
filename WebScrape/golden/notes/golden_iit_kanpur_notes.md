@@ -57,3 +57,29 @@ Joining year: own profile page, else roster (WebScrape/rosters/iit_kanpur_facult
 * Almost all rows are medium (tenure rule only); only arXiv/news are affiliation-verified.
 * Titles parsed from free-text citation lists; venue strings may be messy ("venue not parsed" when absent); some type labels are heuristic.
 * DOI only where printed on the source; DOIs are sparse by design.
+
+<!-- SUPPLEMENT 2026-10-28: extension pass (432 -> 573 rows) -->
+## Supplement (extension pass)
+Result: +141 rows (all faculty_page, medium), 573 total, target 600 still not reached. Years 2016-2021: 286 rows (was ~215).
+Added units: Chemical Eng +18, Mgmt +12, Materials Science Programme +11, Chemistry +11, Mech +10, Econ +9, Civil +8, BSBE +7 (2 -> 9), Math/Physics +7 each, Intelligent Systems +6, Photonics +5 (2 -> 7), Sustainable Energy +4 (1 -> 5), Earth Sciences +3 (1 -> 4), CSE +4, Statistics & Data Science +3, Cognitive Science +2. Thin units remain thin.
+
+### Sources and yields
+| Source | fetched | rows added | note |
+|---|---|---|---|
+| Institute-hosted faculty CV PDFs (iitk.ac.in/data/cv/*, home.iitk.ac.in/~x/*CV.pdf) found by re-scanning links in the 665 cached profile pages that the first pass ignored | 34 PDFs | ~25 | publication sections parsed with a numbered-entry splitter |
+| Faculty/lab pages not reached before (home.iitk.ac.in/~bushra/PI.html, bsbe/index.php/<name> x30, Misra lab Google Sites publications page, che/old/*.htm) | ~45 | ~25 (Misra lab page, BSBE pages have no lists) | |
+| Re-parse of cached profile/homepage text with two new parsers (PubMed-style "Authors. Title. Journal" and "Authors, Title. Journal" lists) | cached | ~90 | earlier pass failed on these formats, which is why BSBE/Earth/Photonics were thin; the earlier cap of 3 per person was raised to max 3-5 (thin units) within the 8-per-person total |
+| Annual reports | re-checked 2016-17, 2020-21, 2024-25 with `pdftotext -raw` (no column crop needed: text is one stream) | 0 | grep for journal/vol./pp./Transactions finds 0-13 hits, all project-output notes (Sahay, Goel, already used). No per-faculty research-output list exists in these reports. 2018-19 is image-only (no OCR tool available). 2019-20, 2021-22, 2022-23, 2023-24 PDFs (iitk.ac.in/data/...) were requested but the shared fetch had not returned them at the end of the run, not checked. |
+| R&D newsletters (39 monthly PDFs listed at dord/publication/publication-r-d-newsletter), research-highlights list | 2 PDFs sampled, list page | 0 | newsletters carry project/event news, no paper titles; research highlights are funded projects, not papers |
+| arXiv via web search restricted to arxiv.org (4 queries: BSBE, Earth Sciences, Photonics, Sustainable Energy) | search only | 0 | no hit with a printed IIT Kanpur affiliation in these units; no new arXiv rows, no /search use |
+| News | 0 new | 0 | no new titled-paper pages found beyond the earlier 108 |
+
+### Rejected / dropped
+Auto-parsed candidates 2,319 -> 414 sampled -> 192 after format filters -> 141 after manual removal (author-list fragments as titles, news lines such as "paper accepted at ...", talks, workshops, patents, titles with venue fused in, truncated titles, "Copyright" footers). One Sahay row removed to keep 8 papers per person. No joining year: 63 candidate entries dropped.
+
+### Biases and caveats
+* Source mix drifted further to faculty_page (about 75 %); annual reports and news did not contribute.
+* Titles from CVs and lab pages are free-text parses; venue is "(venue not parsed from listing)" where authors leaked into the venue field. Some venue strings still carry volume/page text.
+* Tenure rule only (medium); join years from profile/roster/NIRF as before. 2024-26 still about 33 % of rows because most lists are newest-first.
+* BSBE, Earth Sciences, Photonics and Sustainable Energy faculty mostly publish through external lab sites or Google Scholar/IRINS, which are excluded; fewer than half of those faculty have any parseable list.
+<!-- /SUPPLEMENT -->

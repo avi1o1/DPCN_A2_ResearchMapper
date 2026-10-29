@@ -88,3 +88,46 @@ Search strings (WebSearch, restricted to iitm.ac.in subdomains) were generic ("I
 
 ### Coverage after supplement (department x year, 2016..2026)
 Totals by year: 2016:27 2017:89 2018:43 2019:82 2020:41 2021:32 2022:32 2023:38 2024:48 2025:44 2026:25. Department totals: Civil 61, Mathematics 56, Mechanical 50, Data Science and AI 46, Electrical 45, HSS 30, Management 27, CSE 25, Aerospace 24, Physics 22, MME 19, ChemE 19, ED 19, Biotech 11, Ocean 11, Chemistry 10, Applied Mechanics (both labels) 26.
+
+---
+## SUPPLEMENT 2 (third pass): 501 -> 629 rows (target 650 NOT reached; status PARTIAL)
+Rows added: 128 (faculty/lab pages +100 [evidence_source faculty_page; includes PACE Lab and MT2RL lab pages], arXiv +28). Existing 501 rows unchanged. DOI share now 29 %.
+
+### Sources and yields (entries parsed in all years -> kept)
+| source | unit | parsed | kept |
+|---|---|---|---|
+| pace.cse.iitm.ac.in/pubs.php (PACE Lab, multi-author, roster match) | CSE | 74 usable | 29 |
+| home.iitm.ac.in/mt2rl/publications/ (lab, roster match) | Mechanical | 63 | 11 |
+| home.iitm.ac.in/shukla/publications.html | MME | 34 | 6 |
+| home.iitm.ac.in/kanjarla/publications.html | MME | 19 | 8 |
+| physics.iitm.ac.in/.../abhishekmisra.html (own page) | Physics | 10 | 6 |
+| home.iitm.ac.in/pnayak/publication.html (former faculty 2017-2022) | Physics | 20 | 6 |
+| home.iitm.ac.in/sinha/publications.html | Biotechnology | 18 | 5 |
+| home.iitm.ac.in/rinku/publications.html | Applied Mechanics & BME | 54 | 8 |
+| home.iitm.ac.in/abhijit/ | Chemical Eng. | 10 | 7 |
+| civil.iitm.ac.in/faculty/{mash,smohan,aspara,vbmaji}/publication.php (capped at 4 per person to avoid Civil dominating) | Civil | 83 | 15 |
+| arXiv PDFs (first 2 pages read via shared fetcher): 16 new PDFs fetched this pass + 26 PDFs fetched in earlier passes but never turned into rows | various | 42 | 28 |
+Search strings (WebSearch, restricted to iitm.ac.in domains or arxiv.org): "IIT Madras professor Journal Publications 2022 2023 2024 list of papers group page"; "IIT Madras lab publications page conference papers 2018 2020 2021 journal papers"; per-unit variants for physics, metallurgy, aerospace, biotechnology, electrical, chemical, ocean/civil/management; arXiv: Department of Chemistry / HSS+Management / Biotechnology (Bhupat and Jyoti Mehta School) / Ocean+Chemical Engineering with "Indian Institute of Technology Madras". Fetches only via polite_get; no API/Scholar/Scopus/IRINS/Crossref; publications.iitm.ac.in surfaced in results and was not used.
+
+### Annual reports (still not recovered)
+Retried Wayback timestamps (2020, 2021, 2022, 2023, 2024, 2025) for AnnualReport-2018-19.pdf, annualreport-2016-17.pdf and the 2020-21 .. 2024-25 reports: the archive returns truncated bodies (1 MB / 5 MB cut-offs, no xref/trailer, pdftotext and -raw yield 0 bytes) or times out (several 90 s timeouts, ConnectionError for the Annual Reports/ sub-folder). Live iitm.ac.in returns an HTML wall for these files. No new annual-report rows; the loop was stopped after ~4 fetches because each took minutes. 2016, 2018, 2020 and 2026 therefore got rows from other sources only.
+
+### Sampling choices
+- 2017 and 2019 entries were again excluded from new faculty-page rows (they are over-represented via the 2017-18 and 2019-20 reports); arXiv rows kept at their v1 year including 2018/2019-era ones not present (no 2017/2019 PDFs added).
+- Faculty-page entries spread evenly through the eligible list; max 8 per person over all rows, enforced by roster-name matching (merge script); rows dropped for the cap: 5 (Pallab Sinha Mahapatra, Arvind Pattamatta, Anubhab Roy x3).
+- Tenure rule (b) via roster joining year (NIRF upper bound), paper year strictly after; former faculty Mohan S limited to 2024, Pramoda K. Nayak to the page entries after his 2017 joining year. arXiv rows are `high`: affiliation quoted from the PDF first page; v1 year from the arXiv id.
+- `department` for AI4Bharat / Speech Lab papers is taken from the department string printed on the PDF where present (CSE, EE) or the unit's known home (MILU: CSE via AI4Bharat; SPRING-INX: EE) - noted per row. Robert Bosch Centre paper filed under Data Science and AI.
+
+### Rejected / not used
+- arXiv PDFs without a usable IIT Madras affiliation line or with the IIT Madras person not identifiable by department: 1903.10744 (Isaac et al.), 2103.11408 and 2411.17661 and 2101.04899 (L3Cube papers: only "Indian Institute of Technology Madras, Chennai" for one author, no department), 2412.15245 (perovskite laser, IITM address only in a long affiliation list), 2407.16584 (88 authors), 2211.06714 (MIT), and earlier "NO" PDFs.
+- ee.iitm.ac.in/~dj/publications/papers.pdf (Jalihal): mostly pre-2016 items; mahesh, vjkumar, srikanthan, lakshmin pages: free-form lines without a reliable title/venue split, not parsed; K. Ramesh Publications.html: roster lists him under Mathematics (conflicting), skipped; pbl.biotech.iitm.ac.in: TLS failure; Chemistry still CAPTCHA (not bypassed).
+- Entries dropped: patents, "to appear"/"accepted", year <= joining year, year > 2026, titles <15 characters.
+
+### Coverage after supplement 2
+Year totals: 2016:30 2017:89 2018:68 2019:82 2020:58 2021:42 2022:44 2023:48 2024:74 2025:62 2026:32. Source mix: annual reports 25 %, faculty pages 41 %, dept pages 25 %, arXiv 8 %, news 0.5 %. Confidence: 576 medium, 53 high.
+Unit totals: Civil 77, CSE 59, Mechanical 62, Mathematics 57, Electrical 48, Data Science and AI 47, Physics 36, MME 34, Management 27, Aerospace 27, Applied Mechanics 26 + AMBE 11, Chemical 26, ED 20, Biotechnology 19, Ocean 13, Chemistry 10, HSS 30.
+### Biases
+- CSE rows are 27 % from a single lab page (PACE Lab: Madhu Mutyam, Rupesh Nasre, V. Krishna Nandivada; 8 per person cap) and PACE lists 2018-2020 heavily; its 2021-2023 items are sparse.
+- 2016 stays thin (30) since only a few faculty lists reach back that far after the 'strictly after joining year' filter.
+- Titles from PDF lists with commas inside titles may have venue splits off; DOIs are as printed on the pages (pnayak pages print a placeholder-looking DOI for one entry, kept as printed).
+- Lab pages (mt2rl, PACE) credit the roster-matched IIT Madras co-author, not necessarily the page owner; initial-only author matches could be false roster matches.
