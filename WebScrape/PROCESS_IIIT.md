@@ -488,12 +488,31 @@ violations for every institute below.
 | Sri City | 879 | 568 | 311 | 288 | 69.7 % (99/142) | 62.9 % (35) | 100 % | 71 % (25/35) | 36 % |
 | Lucknow | 240 | 176 | 64 | 70 | 81.5 % (44/54) | 85.7 % (21) | 100 % | 61 % (19/31) | 24 % |
 | Kurnool | 562 | 410 | 152 | 203 | 61.4 % (27/44) | 72.2 % (18) | 100 % | 50 % (15/30) | 15 % |
-| Vadodara | 384 | 241 | 143 | 166 | 64.6 % (64/99) | 81.0 % (21) | audit running | | |
-| Dharwad | 426 | 295 | 131 | 140 | golden set running | | audit running | | |
-| Kota | 225 | 148 | 77 | 161 | not yet | | not yet | | |
+| Vadodara | 364 | 241 | 123 | 153 | 63.6 % (63/99) | 81.0 % (21) | 100 % | 66 % (25/38)* | 7 % |
+| Dharwad | 426 | 295 | 131 | 140 | 68.8 % (55/80) | 77.8 % (27) | 100 % | 74 % (25/34) | 36 % |
+| Kota | 225 | 148 | 77 | 161 | 58.1 % (43/74) | 56.0 % (25) | 100 % | 48 % (15/31) | 6 % |
+| Sonepat | 188 | 153 | 35 | 14 | 88.2 % (15/17) | 92.3 % (13) | 100 % | 82 % (23/28) | 0 % |
+| Una | 246 | 183 | 63 | 100 | 57.0 % (57/100) | 63.0 % (54) | 100 % | 63 % (22/35) | 23 % |
+| Tiruchirappalli | 187 | 148 | 39 | 65 | 61.5 % (24/39) | 70.6 % (17) | 100 % | 69 % (22/32) | 24 % |
+| Kalyani | 439 | 289 | 150 | 85 | 76.2 % (77/101) | 70.8 % (24) | 100 % | 87 % (34/39) | 14 % |
+| Kottayam | 716 | 566 | 150 | 129 | 59.3 % (86/145) | 69.8 % (43) | 100 % | 76 % (28/37) | 12 % |
+| Manipur | 132 | 95 | 37 | 84 | 49.0 % (24/49) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
 
-Not started yet: Tiruchirappalli, Una, Sonepat, Kalyani, Kottayam, Manipur, Nagpur, Ranchi, Surat, Bhopal, Bhagalpur,
-Agartala, Raichur.
+\* Vadodara was audited before the conflated DBLP profile of Pratik Shah (8 of its 13 likely `no`) was removed; the rebuilt
+file has 20 fewer likely records. Kota's verified 25/25 includes one operator correction (a Springer page prints IIIT Kota as
+the second affiliation; OpenAlex lists only the first). Golden sets under ~60 papers (Kurnool, Lucknow, Sonepat, Tiruchirappalli,
+Manipur) give recall with wide uncertainty.
+
+**IIIT Hyderabad with the institute repository (2026-10-30, operator decision):** `iiith_publist.py` adds the 6,667 items of
+https://www.iiit.ac.in/publications/index.php as evidence `institute_list` (tier likely, main file; contradicted records still
+rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall against the golden set rises to 95.3 %, but 260 of its
+322 papers came from that repository, so the independent figure stays 71.7 % (§6).
+
+**Roster corrections after audits or on review:** Pratik Shah's DBLP id removed (Vadodara); MNIT post-holders `adjunct` (Kota);
+the IIT Roorkee Director-in-charge `adjunct` (Sonepat); 31 lab faculty `adjunct` (Kottayam); later roster briefs ask agents to file
+post-holders employed elsewhere and lab-only staff as `adjunct` directly.
+
+In progress (2026-10-30): Nagpur, Ranchi, Surat; not started: Bhopal, Bhagalpur, Agartala, Raichur.
 
 **Main finding: the likely tier is weaker at young, high-turnover IIITs** (50–91 %, against 71–97 % for the first eight).
 Almost every `no` is a paper from the joining or leaving year, or from an ORCID employment window, that prints the person's
