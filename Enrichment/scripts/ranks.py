@@ -9,7 +9,7 @@ Conferences: CORE edition in force at publication: <=2019 CORE2018, 2020 CORE202
 Scimago files: put the CSVs downloaded from https://www.scimagojr.com/journalrank.php (one per year,
            'Download data') into cache/scimago/ ; the year is read from the file name."""
 import os, re, csv, glob
-from oa import CACHE
+from oa import SHARED_CACHE as CACHE   # rank files are shared by all runs
 
 STOP = {"of", "the", "on", "and", "in", "for", "a", "an", "&", "to"}
 

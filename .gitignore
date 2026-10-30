@@ -36,3 +36,6 @@ WebScrape/agents/.runtime/
 WebScrape/agents/briefs/
 # v2 datasets: first-pass outputs are not committed until the final run (PROCESS.md §15)
 WebScrape/v2/*.json
+
+# Enrichment v2 run (ENRICH_*_DIR env vars, see Enrichment/scripts/oa.py)
+Enrichment/cache_v2/
