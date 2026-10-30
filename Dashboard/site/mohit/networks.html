@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>No internet</title>
+<style>
+:root{--bg:#fff;--fg:#202124;--fg2:#5f6368;--game:#535353;--link:#1a73e8}
+@media (prefers-color-scheme:dark){:root{--bg:#202124;--fg:#e8eaed;--fg2:#9aa0a6;--game:#acacac;--link:#8ab4f8}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg2);font-family:system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:1em;line-height:1.55}
+.interstitial{max-width:600px;margin:0 auto;padding:100px 20px 40px}
+canvas{display:block;width:100%;max-width:600px;aspect-ratio:600/150;margin:0 0 20px;touch-action:manipulation}
+.icon{display:none}
+h1{color:var(--fg);font-size:1.6em;font-weight:500;line-height:1.25;margin:0 0 16px}
+p{margin:0 0 10px;font-size:1em}
+ul{margin:0 0 16px;padding-left:1.4em}
+li{margin:0}
+.code{font-size:.8em;color:var(--fg2);text-transform:none;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="interstitial">
+<canvas id="c" width="600" height="150" tabindex="0"></canvas>
+<h1>No internet</h1>
+<p>Try:</p>
+<ul>
+<li>Checking the network cables, modem, and router</li>
+<li>Reconnecting to Wi-Fi</li>
+</ul>
+<div class="code">ERR_INTERNET_DISCONNECTED</div>
+</div>
+<script>
+const cv=document.getElementById('c'),x=cv.getContext('2d');
+const W=600,H=150,G=120;
+let fg=getComputedStyle(document.documentElement).getPropertyValue('--fg').trim();
+matchMedia('(prefers-color-scheme:dark)').onchange=()=>fg=getComputedStyle(document.documentElement).getPropertyValue('--fg').trim();
+let d,obs,clouds,speed,score,best=0,over,started,t=0;
+function reset(){d={y:G-40,vy:0,duck:false};obs=[];clouds=[{x:120,y:30},{x:400,y:50}];speed=5;score=0;over=false;t=0}
+reset();started=false;
+function jump(){if(!started){started=true;return}if(over){reset();started=true;return}if(d.y>=G-40){d.vy=-11.5}}
+addEventListener('keydown',e=>{if(e.code==='Space'||e.code==='ArrowUp'){e.preventDefault();jump()}if(e.code==='ArrowDown'){e.preventDefault();d.duck=true}});
+addEventListener('keyup',e=>{if(e.code==='ArrowDown')d.duck=false});
+cv.addEventListener('pointerdown',jump);
+function box(){return d.duck&&d.y>=G-40?{x:50,y:G-22,w:52,h:22}:{x:50,y:d.y,w:36,h:40}}
+function spawn(){const bird=score>300&&Math.random()<.3;
+ if(bird)obs.push({x:W+20,y:G-[20,45,70][Math.random()*3|0]-20,w:34,h:20,bird:true});
+ else{const n=1+(Math.random()*3|0);obs.push({x:W+20,y:G-34,w:14*n,h:34,n})}}
+function step(){
+ if(!started||over)return;
+ t++;score+=speed/40;speed=Math.min(14,5+score/150);
+ d.vy+=0.6;d.y=Math.min(G-40,d.y+d.vy);if(d.y>=G-40)d.vy=0;
+ if(!obs.length||obs[obs.length-1].x<W-220-Math.random()*300-speed*8)spawn();
+ obs.forEach(o=>o.x-=speed);obs=obs.filter(o=>o.x>-60);
+ clouds.forEach(c=>{c.x-=speed*.2;if(c.x<-50){c.x=W+20;c.y=20+Math.random()*50}});
+ const b=box();
+ for(const o of obs)if(b.x<o.x+o.w-3&&b.x+b.w>o.x+3&&b.y<o.y+o.h-3&&b.y+b.h>o.y+3){over=true;best=Math.max(best,score|0)}
+}
+function draw(){
+ x.clearRect(0,0,W,H);if(!started){x.fillStyle=fg;x.fillRect(0,0,0,0)}x.fillStyle=x.strokeStyle=fg;x.lineWidth=2;
+ x.globalAlpha=.25;clouds.forEach(c=>{x.fillRect(c.x,c.y,40,8);x.fillRect(c.x+8,c.y-6,24,6)});x.globalAlpha=1;
+ x.beginPath();x.moveTo(0,G+.5);x.lineTo(W,G+.5);x.stroke();
+ for(let i=0;i<20;i++){const gx=((i*97-t*speed)%W+W)%W;x.fillRect(gx,G+6+(i%3)*5,3,2)}
+ // dino (own pixel sprite)
+ const b=box();
+ if(b.h===22){x.fillRect(b.x,b.y+6,40,16);x.fillRect(b.x+34,b.y,18,14);x.clearRect(b.x+44,b.y+3,3,3)}
+ else{x.fillRect(b.x+6,b.y+14,22,18);x.fillRect(b.x+14,b.y,22,16);x.fillRect(b.x,b.y+16,8,6);x.fillRect(b.x+2,b.y+22,6,6);
+  x.clearRect(b.x+28,b.y+4,4,4);
+  const l=(d.y>=G-40&&started&&!over&&((t>>2)&1));x.fillRect(b.x+10,b.y+32,6,8-(l?4:0));x.fillRect(b.x+20,b.y+32,6,8-(l?0:4))}
+ obs.forEach(o=>{if(o.bird){const f=(t>>3)&1;x.fillRect(o.x+6,o.y+7,24,6);x.fillRect(o.x,o.y+(f?0:12),12,5);x.fillRect(o.x+24,o.y+(f?0:12),10,5)}
+  else for(let i=0;i<o.n;i++){const cx=o.x+i*14;x.fillRect(cx+4,o.y,6,34);x.fillRect(cx,o.y+10,4,10);x.fillRect(cx+10,o.y+6,4,12)}});
+ x.font='bold 14px monospace';x.textAlign='right';
+ x.fillText((best?'HI '+String(best).padStart(5,'0')+'  ':'')+String(score|0).padStart(5,'0'),W-10,20);
+ x.textAlign='center';x.font='16px monospace';
+ 
+ if(over){x.font='bold 18px monospace';x.fillText('G A M E   O V E R',W/2,60);x.font='14px monospace';x.fillText('Press space or tap to restart',W/2,85)}
+}
+(function loop(){step();draw();requestAnimationFrame(loop)})();
+</script>
+</body>
+</html>

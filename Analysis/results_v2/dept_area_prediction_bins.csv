@@ -1,0 +1,7 @@
+﻿bin,density_min,density_max,pairs,entries,entry_rate
+density 0,0.0,0.0,7061,58,0.0082
+quintile 1,0.0011,0.0215,2121,41,0.0193
+quintile 2,0.0215,0.05,2121,47,0.0222
+quintile 3,0.05,0.0941,2123,84,0.0396
+quintile 4,0.0944,0.1789,2122,178,0.0839
+quintile 5,0.1789,1.0,2122,308,0.1451

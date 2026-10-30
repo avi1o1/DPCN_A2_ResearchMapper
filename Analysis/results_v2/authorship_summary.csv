@@ -1,0 +1,11 @@
+﻿metric,value
+faculty (nodes),4405
+faculty pairs with >= 1 joint paper (edges),7358
+cross-institute faculty pairs,1187
+isolated faculty (no faculty co-author),1080
+mean faculty co-authors,3.34
+density,0.0008
+Louvain communities (seed 42),1199
+communities with >= 5 faculty,32
+"modularity Q (seed 42, weighted)",0.852
+mean ARI between Louvain seeds,0.8176

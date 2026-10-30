@@ -11,6 +11,17 @@ densification, robustness to faculty loss, SIR spreading). Sources: `stats_citat
 `stats_authorship_dynamics.py`. Also a subsection on papers with more than 10 authors (`stats_large_collab.py`):
 headline numbers with and without them, citation premium, departments, venues, faculty most affected. The numbers in sections 3–4 of this README are from the
 old all-fields scope; the report itself has the current ones.
+**26 Oct 2026 (second round):** Key findings list in the Introduction; PRL and Nature tables (III-E); high-IF papers
+by team size (III-J); new section "Beyond Pairs and PageRank" (Katz, eigenvector localisation, communicability and
+the campus link, early connectors, Katz / HITS on citations and a prediction test, hypergraph centrality, simplicial
+closure); one closing paragraph. Sources: `stats_if_authors.py`, `stats_matrix_centrality.py`, `stats_hypergraph.py`,
+`stats_simplicial.py`. The new tables are generated, not typed: run `python make_tables.py` (writes `tables/*.tex`,
+read by `\inputrows` in `report.tex`), then `latexmk -pdf report.tex`. Copy new figures from `Analysis/figures/`.
+**28 Oct 2026:** four more subsections at the end of VIII (now 19 pages): citing co-authors (VIII-G, Table XIV),
+bow-tie core of the faculty citation network and department SpringRank (VIII-H, Table XV), mixed-department teams vs
+FWCI (VIII-I), department strengths and relatedness prediction, fitness-complexity (VIII-J); two key findings and one
+closing sentence. Sources: `stats_coauthor_citation.py`, `stats_bowtie.py`, `stats_cross_dept.py`, `stats_dept_areas.py`;
+tables `coauthor_distance.tex`, `bowtie.tex` from `make_tables.py`. New references checked on Crossref.
 
 The brief (`DPCN_Instruction_Note.pdf`, section 8; checklist in section 11) asks for **a statistics report of at most
 10 slides or 5 pages**, covering IIT Kharagpur and IIT Roorkee at **faculty, department and institution level**, due

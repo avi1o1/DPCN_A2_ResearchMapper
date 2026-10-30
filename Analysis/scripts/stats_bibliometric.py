@@ -5,7 +5,7 @@ Outputs (results/):
   quartiles.csv          journal papers by Scimago quartile; Q1 fraction of ranked journal papers and of all journal papers
   core_ranks.csv         conference papers by CORE rank
   top_journals.csv       top 10 journals per institute by paper count, with the IF (OpenAlex 2-year mean citedness)
-  most_cited.csv         top 10 most-cited papers per institute (+ 'Both' = the two institutes together)
+  most_cited.csv         top 10 most-cited papers per institute (+ 'Both' = the two institutes together; 'All' for any other number)
   research_areas.csv     share of papers per OpenAlex field (primary topic), per institute
   faculty.csv            per faculty member: papers, citations, h-index, i10-index, top journal, Q1 papers, years active,
                          and the OpenAlex all-career h / i10 of the person's OpenAlex author profile (for comparison;
@@ -18,7 +18,8 @@ usage: python stats_bibliometric.py"""
 import collections as C
 import numpy as np
 from common import (INSTS, YEARS, PARTIAL_YEAR, load_records, paper_key, cites, write_csv, h_index, i10_index, style,
-                    save, impact_factor, oa_extra, COLOR, ORDINAL, TEXT2, MUTED, plt)
+                    save, impact_factor, oa_extra, COLOR, ORDINAL, TEXT2, MUTED, plt, bar_layout, panels, safe_div,
+                    note_skip, oa_have, ALL_LABEL)
 
 TYPES = ["journal", "conference", "book-chapter", "preprint"]
 TOP_JOURNALS = 10
@@ -38,18 +39,19 @@ def main():
             row["partial_year"] = y == PARTIAL_YEAR
             rows.append(row)
     write_csv("trend.csv", rows)
-    fig, ax = plt.subplots(figsize=(8, 4.2))             # yearly counts are discrete: grouped bars, 2026 faded
+    fig, ax = plt.subplots(figsize=(8 if len(recs) <= 2 else 12, 4.2))   # yearly counts are discrete: grouped bars, 2026 faded
     x = np.arange(len(YEARS))
+    offs, bw = bar_layout(len(recs))
     for k, name in enumerate(recs):
         ys = [r["total"] for r in rows if r["institution"] == name]
-        xs = x + (k - 0.5) * 0.38
-        ax.bar(xs[:-1], ys[:-1], width=0.36, color=COLOR[name], label=name)
-        ax.bar(xs[-1], ys[-1], width=0.36, color=COLOR[name], alpha=0.25, edgecolor=COLOR[name], linestyle="--", linewidth=1)
+        xs = x + offs[k]
+        ax.bar(xs[:-1], ys[:-1], width=bw, color=COLOR[name], label=name)
+        ax.bar(xs[-1], ys[-1], width=bw, color=COLOR[name], alpha=0.25, edgecolor=COLOR[name], linestyle="--", linewidth=1)
     ax.set_title("Papers per year, 2016-2026")
     ax.set_ylabel("papers (IIT affiliation confirmed)")
     ax.set_xticks(x, YEARS)
     ax.grid(axis="x", visible=False)
-    ax.legend(loc="upper left")
+    ax.legend(loc="upper left", ncol=1 if len(recs) <= 4 else 2, fontsize=9 if len(recs) <= 4 else 7)
     ax.text(x[-1], ax.get_ylim()[1] * 0.97, "2026 partial\n(to Oct)", ha="center", va="top", fontsize=8, color=MUTED)
     save(fig, "trend.png")
 
@@ -60,17 +62,21 @@ def main():
         q = C.Counter((r.get("quartile") or {}).get("quartile") for r in j)
         ranked = sum(q[k] for k in ("Q1", "Q2", "Q3", "Q4"))
         qrows.append({"institution": name, "journal_papers": len(j), "Q1": q["Q1"], "Q2": q["Q2"], "Q3": q["Q3"],
-                      "Q4": q["Q4"], "not_in_scimago": q[None], "ranked_share": round(ranked / len(j), 4),
-                      "q1_fraction_of_ranked": round(q["Q1"] / ranked, 4),
-                      "q1_fraction_of_all_journal": round(q["Q1"] / len(j), 4)})
+                      "Q4": q["Q4"], "not_in_scimago": q[None], "ranked_share": safe_div(ranked, len(j)),
+                      "q1_fraction_of_ranked": safe_div(q["Q1"], ranked),
+                      "q1_fraction_of_all_journal": safe_div(q["Q1"], len(j))})
         conf = [r for r in rs if r["type"] == "conference"]
         cr = C.Counter((r.get("core") or {}).get("core_rank") for r in conf)
         crows.append({"institution": name, "conference_papers": len(conf), "A*": cr["A*"], "A": cr["A"], "B": cr["B"],
                       "C": cr["C"], "not_core_ranked": cr[None]})
     write_csv("quartiles.csv", qrows)
     write_csv("core_ranks.csv", crows)
-    fig, ax = plt.subplots(figsize=(8, 2.6))
-    for i, qr in enumerate(qrows):
+    qplot = [qr for qr in qrows if qr["Q1"] + qr["Q2"] + qr["Q3"] + qr["Q4"]]
+    if not qplot:
+        note_skip("stats_bibliometric.py", "journal quartile chart (quartiles.png)", "no journal paper has a Scimago quartile yet",
+                  "Scimago SJR CSVs (Enrichment/scripts/ranks.py) for the publication years")
+    fig, ax = plt.subplots(figsize=(8, 2.6 if len(qplot) <= 2 else 0.9 + 0.4 * len(qplot)))
+    for i, qr in enumerate(qplot):
         left = 0
         ranked = qr["Q1"] + qr["Q2"] + qr["Q3"] + qr["Q4"]
         for k, col in zip(("Q1", "Q2", "Q3", "Q4"), ORDINAL):
@@ -81,14 +87,17 @@ def main():
                         color="white" if k in ("Q1", "Q2") else "#0b0b0b")
             left += w
         ax.text(100.8, i, f"Q4 {qr['Q4'] / ranked * 100:.1f}%", va="center", fontsize=8, color=TEXT2)
-    ax.set_yticks(range(len(qrows)), [qr["institution"] for qr in qrows])
+    ax.set_yticks(range(len(qplot)), [qr["institution"] for qr in qplot])
     ax.invert_yaxis()
     ax.set_xlim(0, 109)
     ax.set_xticks(range(0, 101, 20))
     ax.set_xlabel("% of journal papers with a Scimago quartile")
     ax.grid(axis="y", visible=False)
     ax.set_title("Journal quartile mix (Scimago SJR, publication year)")
-    save(fig, "quartiles.png")
+    if qplot:
+        save(fig, "quartiles.png")
+    else:
+        plt.close(fig)
 
     # ------------------------------------------------ top journals, most cited
     trows, mrows = [], []
@@ -104,7 +113,7 @@ def main():
     for name, rs in recs.items():
         for r in rs:
             both.setdefault(paper_key(r), (r, set()))[1].add(name)
-    for name, pool in list(recs.items()) + [("Both", [v[0] for v in both.values()])]:
+    for name, pool in list(recs.items()) + [(ALL_LABEL, [v[0] for v in both.values()])]:
         top = sorted((r for r in pool if cites(r) is not None), key=lambda r: -cites(r))[:10]
         for rank, r in enumerate(top, 1):
             mrows.append({"scope": name, "rank": rank, "title": r["title"], "journal": r["venue"], "year": r["year"],
@@ -125,17 +134,18 @@ def main():
     for a in arows:
         tot[a["field"]] += a["share"]
     fields = [f for f, _ in tot.most_common(12) if f != "Unknown"]
-    fig, ax = plt.subplots(figsize=(8, 5.2))
+    fig, ax = plt.subplots(figsize=(8, 5.2 if len(recs) <= 2 else 9))
     yy = np.arange(len(fields))
+    offs, bh = bar_layout(len(recs), ratio=0.8947)
     for k, name in enumerate(recs):
         share = {a["field"]: a["share"] for a in arows if a["institution"] == name}
         vals = [share.get(f, 0) * 100 for f in fields]
-        ax.barh(yy + (k - 0.5) * 0.38, vals, height=0.34, color=COLOR[name], label=name)
+        ax.barh(yy + offs[k], vals, height=bh, color=COLOR[name], label=name)
     ax.set_yticks(yy, fields)
     ax.invert_yaxis()
     ax.set_xlabel("% of the institute's papers (OpenAlex primary-topic field)")
     ax.grid(axis="y", visible=False)
-    ax.legend(loc="lower right")
+    ax.legend(loc="lower right", ncol=1 if len(recs) <= 4 else 2, fontsize=9 if len(recs) <= 4 else 7)
     ax.set_title("Research areas: top 12 fields")
     save(fig, "research_areas.png")
 
@@ -191,10 +201,12 @@ def main():
                       "mean_i10": round(float(np.mean([fr["i10_index"] for fr in fl])), 2)})
     drows.sort(key=lambda x: (x["institution"], -x["papers"]))
     write_csv("departments.csv", drows)
-    fig, axes = plt.subplots(1, 2, figsize=(9, 3.6), sharey=True)
+    fig, axes = panels(len(recs), (9, 3.6), sharey=True)
     bins = np.arange(0, max(fr["h_index"] for fr in frows) + 3, 2)
     for ax, name in zip(axes, recs):
         hs = [fr["h_index"] for fr in frows if fr["institution"] == name]
+        if not hs:
+            continue
         ax.hist(hs, bins=bins, color=COLOR[name], rwidth=0.88)
         ax.set_title(f"{name}  (n={len(hs)}, median {np.median(hs):.0f})", fontsize=10)
         ax.set_xlabel("h-index (papers 2016-2026)")
@@ -203,11 +215,18 @@ def main():
     save(fig, "h_index_hist.png")
 
     for q in qrows:
-        print(f"{q['institution']}: journal papers {q['journal_papers']}, Q1 of ranked {q['q1_fraction_of_ranked']:.1%}, "
-              f"ranked {q['ranked_share']:.1%}")
+        print(f"{q['institution']}: journal papers {q['journal_papers']}, Q1 of ranked {q['q1_fraction_of_ranked']}, "
+              f"ranked {q['ranked_share']}")
     for name in recs:
         hs = [fr["h_index"] for fr in frows if fr["institution"] == name]
-        print(f"{name}: faculty {len(hs)}, median h {np.median(hs):.0f}, max h {max(hs)}")
+        if hs:
+            print(f"{name}: faculty {len(hs)}, median h {np.median(hs):.0f}, max h {max(hs)}")
+    if not oa_have("sources", "paper_source"):
+        note_skip("stats_bibliometric.py", "top_journals.csv: IF (OpenAlex) column", "no OpenAlex source cache for these institutes",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_sources.json, oa_paper_source.json")
+    if not oa_have("authors"):
+        note_skip("stats_bibliometric.py", "faculty.csv: OpenAlex all-career h / i10 columns", "no OpenAlex author profiles cached",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_authors.json")
 
 
 if __name__ == "__main__":

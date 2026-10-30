@@ -5,6 +5,37 @@ Roorkee**, shown to the class, due **Week 3**. All the numbers it needs are alre
 is a presentation job: read the CSVs below, draw them, and make them filterable. You don't need to touch the
 scraping or enrichment code.
 
+**26 Oct 2026 (second round):** Key findings under the overview tiles (numbers built from the CSVs in
+`build_data.py`); in Quality, the PRL group lists all 16 papers (titles with maths taken from Crossref), plus cards
+for the Nature journals with IF and for journal papers by quality and team size; a new section "Beyond pairs"
+(Katz path, campus bridges, early connectors, citation-prediction test, hypergraph localisation, trio formation),
+built from `stats_matrix_centrality.py`, `stats_hypergraph.py`, `stats_simplicial.py`. Partners and Method swapped
+background bands so the sections still alternate. Checked in headless Edge, light and dark, no console errors.
+**28 Oct 2026:** new section "Two layers" (`#layers`): citation rate by co-authorship distance, which comes first
+(citing or co-authoring), bow-tie core of the faculty citation network, department SpringRank, mixed-department teams vs
+FWCI, relatedness prediction of new department strengths, and a department picker (strengths, rising, nearby areas).
+Built in `build_data.py` (`D.layers`) from `stats_coauthor_citation.py`, `stats_bowtie.py`, `stats_cross_dept.py`,
+`stats_dept_areas.py`; two more key findings. Layers is shaded, Partners plain, Method shaded, so the bands alternate.
+Checked in headless Edge: light and dark, 400 px phone width without sideways scroll, no console errors, every shown
+number equal to the result CSVs.
+
+## Draft for the 14 newer IITs: `site/v2/` (30 Oct 2026)
+
+A separate page, `site/v2/index.html`, with its data `site/v2/data_v2.js` (about 1 MB, aggregates only), for IIT Bombay,
+Madras, Kanpur, Goa, Tirupati, Patna, Palakkad, Guwahati, Hyderabad, Bhubaneswar, (BHU) Varanasi, Gandhinagar, Indore and
+Mandi. The existing site is untouched. Pick an institute (or "All 14" for the overview table, papers-per-year lines and
+the shared-paper heat map), optionally a second one to compare: papers per year and type, faculty counts and h-index
+summary / histogram / top faculty / departments, journal quartile share, CORE ranks (mix, ranked share by year, top
+venues), most-cited papers, partner institutions and faculty collaborators, the citation-network summary (edges, in-degree,
+self-citation share, Indian in/out flow by year, PageRank leaders, faculty network), research areas, and a list of the
+panels that could not be computed yet and what they need.
+
+Rebuild: `ANALYSIS_PROFILE=v2 ANALYSIS_IN_DIR=<Enrichment/out_v2> sh Analysis/scripts/run_all.sh`, then
+`python Dashboard/site/v2/build_data_v2.py` (reads `Analysis/results_v2/`; `DASH_RES`, `DASH_ROSTERS`, `DASH_OUT` override the
+folders). The institutes come from the tables, so a refreshed run needs no edit. Charts need internet (ECharts 5.5.0 from
+cdnjs). Data status: pre-A2 enrichment output; quartiles wait for the Scimago tables; the `fix-categorisation` rules for
+type and CORE are not applied to this data.
+
 ## Status (11 Oct 2026): a working dashboard exists in `site/`
 
 A first full version is built as a **static website** (the "no server" option in section 3), following the design
@@ -15,11 +46,38 @@ rules in section 3b. Open `Dashboard/site/index.html` in a browser. It needs int
 | `site/index.html` | the page: layout, light/dark mode, all charts (ECharts 5.5.0 from cdnjs) and interactions |
 | `site/data.js` | all the numbers the page shows, built from `Analysis/results` (+ titles and network edges from `Enrichment/out`) |
 | `site/build_data.py` | rebuilds `data.js`: `python Dashboard/site/build_data.py`, after `Analysis/scripts/run_all.sh` if stats change |
+| `site/explorer.html` | **profile explorer** (27 Oct, modelled on the Power BI dashboard of J. F. F. Mendes's research page): both IITs / one IIT / a department / a faculty member and a year range; KPI tiles (papers, citations, citations per paper, cited %, h, i10, Q1, most cited, average FWCI, single-author equivalent, first / last author, co-authors, partner institutions, years active), per-year charts, type mix, ego co-author network, researcher scatter, top journals / topics / partner institutions, most-cited papers, paper search, compare two faculty. Linked from the dashboard menu. |
+| `site/profiles.js` | the explorer's data (12.9 MB, loaded only by `explorer.html`): one row per paper of the analysis set + each faculty member's papers with their author position |
+| `site/build_profiles.py` | rebuilds `profiles.js` offline (needs `Analysis/cache/oa_fwci.json` and `oa_counts_by_year.json` from `fetch_openalex_extra.py`). Stops unless every faculty member's papers, citations, h, i10 and Q1 equal `results/faculty.csv`. |
+| `site/check_explorer.py` | second check in a real browser (Edge via Playwright): the page's own code for all 1,410 faculty vs `faculty.csv` and 64 departments vs `departments.csv`, console errors, screenshots. Last run 27 Oct: 0 mismatches, 0 errors. |
 
 **Done:** all 11 required panels plus the Indian-links, communities, null-model and partner panels. A
 Both / Kharagpur / Roorkee filter for the whole page, light/dark toggle, interactive citation and faculty networks
 (zoom, hover, click for details, faculty search), and a sortable, searchable faculty table. Reviewed by screenshots
 at desktop width in light and dark mode.
+
+**Update (29 Oct 2026): story chapters reordered, making of in full**
+- The story page now opens with how the data was made (chapter 1, eight steps), then data analysis (2), network
+  analysis (3), blind spots (4) and the arcade (5), with the bridges rewritten for that order.
+- `site/mohit/making.html` + `making.js`: chapter 1 in full. Every source tried, the search words, the classifier, the
+  rosters, verification tiers, recall and precision in detail, validation and the seven defects, enrichment, faculty
+  links, the analysis checks, the rules behind the numbers and the incidents. Numbers are from `WebScrape/PROCESS.md`,
+  `WebScrape/RESULTS.md`, the report and `TODO.md`. The check scripts (`verify.py`, `eval_faculty.py`,
+  `verify_networks.py`, `test_rules.py`) were re-run on 29 Oct for the counts quoted there.
+- `site/mohit/story.css`: the story page's styles, moved out of `index.html` so that `making.html` shares them.
+  `build_full.py` now numbers output and networks as chapters 2 and 3.
+
+**Update (29 Oct 2026): story dashboard at `/mohit/`**
+- `site/mohit/index.html` + `app.js`: a second, story-style dashboard that leaves the main one untouched. Five chapters:
+  data analysis, network analysis, the making of the dataset (a timeline from PROCESS.md, RESULTS.md and the IIIT
+  handoff), an arcade (higher or lower, prof vs prof, campus clash, roll a fact, guess-o-meter,
+  handshakes) and blind spots. It reads the same `../data.js`, so rebuilding `data.js` updates it too. Each finding has
+  a "Not in the numbers" note. Checked in headless Edge: no console errors, light and dark, no sideways scroll at 390 px.
+- `site/mohit/output.html`, `networks.html`, `explorer.html`: chapters 1 and 2 in full (every panel of the main
+  dashboard) and the profile explorer, in the story page's theme, linked after each chapter. They are generated by
+  `site/mohit/build_full.py` from `../index.html` and `../explorer.html`; rerun it after changing either.
+- `site/mohit/combo.js`: searchable, A-to-Z dropdowns used by the arcade (college, then department, then professor),
+  the faculty table and the explorer.
 
 **Update (17 Oct 2026, network analysis beyond the brief)**
 - [x] Citation network: a "Reading the citation network with care" block: self-citation share (overall and per year),

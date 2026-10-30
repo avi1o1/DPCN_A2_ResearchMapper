@@ -1,0 +1,208 @@
+﻿institution,department,faculty,CORE,IN,OUT,TUBES,TENDRILS,OTHER,ISOLATED,core_share
+IIT Bombay,Electrical Engineering,81,52,9,11,0,0,0,9,0.642
+IIT Bombay,Mechanical Engineering,72,48,5,5,0,0,1,13,0.667
+IIT Kanpur,Electrical Engineering,62,36,11,3,0,0,0,12,0.581
+IIT Bombay,Civil Engineering,61,44,4,3,0,1,0,9,0.721
+IIT Bhubaneswar,School of Basic Sciences,58,22,6,4,0,5,1,20,0.379
+IIT Madras,Civil Engineering,58,36,9,5,0,1,0,7,0.621
+IIT Madras,Mechanical Engineering,58,38,8,6,0,1,0,5,0.655
+IIT Bombay,Mathematics,57,3,4,2,1,5,6,36,0.053
+IIT Madras,Electrical Engineering,57,34,7,8,0,1,0,7,0.596
+IIT Bhubaneswar,School of Electrical and Computer Sciences,56,24,14,3,0,0,1,14,0.429
+IIT Bombay,Computer Science and Engineering,56,12,11,15,0,4,2,12,0.214
+IIT Guwahati,Electronics and Electrical Engineering,56,33,9,6,0,0,0,8,0.589
+IIT Guwahati,Mechanical Engineering,55,41,8,0,0,0,0,6,0.745
+IIT Kanpur,Physics,55,41,5,2,0,0,0,7,0.745
+IIT Bombay,Chemistry,53,41,2,5,0,0,0,5,0.774
+IIT Madras,,53,18,6,6,0,1,1,21,0.34
+IIT Mandi,School of Computing & Electrical Engineering,53,20,19,4,0,0,1,9,0.377
+IIT Guwahati,Civil Engineering,52,37,8,1,0,1,0,5,0.712
+IIT Bombay,Physics,51,40,1,4,0,1,0,5,0.784
+IIT Bombay,Chemical Engineering,49,27,8,10,0,0,0,4,0.551
+IIT Madras,Physics,49,41,2,1,0,0,0,5,0.837
+IIT Guwahati,Physics,47,33,5,2,0,1,0,6,0.702
+IIT Kanpur,Mechanical Engineering,47,31,7,3,0,0,0,6,0.66
+IIT Kanpur,Civil Engineering,44,29,8,2,0,2,0,3,0.659
+IIT Kanpur,Mathematics and Statistics,44,4,1,2,0,3,6,28,0.091
+IIT (BHU) Varanasi,Department of Mechanical Engineering,43,29,6,0,0,0,0,8,0.674
+IIT Guwahati,Biosciences and Bioengineering,42,32,6,2,0,0,0,2,0.762
+IIT Madras,Mathematics,42,9,3,2,1,5,7,15,0.214
+IIT Madras,Chemistry,41,26,7,3,0,0,0,5,0.634
+IIT Guwahati,Chemistry,40,39,1,0,0,0,0,0,0.975
+IIT (BHU) Varanasi,Department of Civil Engineering,39,24,10,1,0,0,0,4,0.615
+IIT Hyderabad,Electrical Engineering,39,22,2,4,0,0,1,10,0.564
+IIT Madras,Applied Mechanics and Biomedical Engineering,38,26,6,3,0,0,0,3,0.684
+IIT Madras,Computer Science and Engineering,38,13,1,9,0,3,2,10,0.342
+IIT Bombay,Aerospace Engineering,37,18,6,7,0,0,0,6,0.486
+IIT Bombay,Biosciences and Bioengineering,37,17,6,2,0,1,2,9,0.459
+IIT Bombay,Metallurgical Engineering and Materials Science,37,26,4,1,0,0,0,6,0.703
+IIT Guwahati,Mathematics,37,8,3,4,0,4,7,11,0.216
+IIT Hyderabad,Mechanical & Aerospace Engineering,37,19,9,4,0,1,0,4,0.514
+IIT Kanpur,Computer Science and Engineering,37,10,5,6,0,3,1,12,0.27
+IIT Madras,Biotechnology,37,23,4,5,0,0,0,5,0.622
+IIT Guwahati,Chemical Engineering,36,31,1,2,0,0,0,2,0.861
+IIT Hyderabad,Computer Science & Engineering,36,12,5,3,0,2,3,11,0.333
+IIT Hyderabad,Physics,36,23,8,1,0,0,0,4,0.639
+IIT Kanpur,Chemistry,36,31,2,2,0,0,0,1,0.861
+IIT Madras,Aerospace Engineering,36,19,8,1,0,0,0,8,0.528
+IIT Guwahati,Computer Science and Engineering,35,9,10,3,0,2,1,10,0.257
+IIT Madras,Chemical Engineering,34,27,2,3,0,0,0,2,0.794
+IIT Bhubaneswar,School of Infrastructure,33,22,6,1,0,0,0,4,0.667
+IIT Hyderabad,Civil Engineering,33,18,4,4,1,1,0,5,0.545
+IIT Kanpur,Materials Science and Engineering,32,23,5,2,0,0,0,2,0.719
+IIT Kanpur,Aerospace Engineering,32,22,2,1,0,0,0,7,0.688
+IIT Madras,Metallurgical and Materials Engineering,32,27,2,3,0,0,0,0,0.844
+IIT Hyderabad,Chemistry,31,24,5,0,0,1,0,1,0.774
+IIT Kanpur,,30,12,8,4,0,0,0,6,0.4
+IIT Bombay,Earth Sciences,29,16,6,1,0,0,0,6,0.552
+IIT Mandi,School of Mechanical & Materials Engineering,29,20,4,0,0,0,0,5,0.69
+IIT (BHU) Varanasi,Department of Mathematical Sciences,28,7,5,4,0,0,3,9,0.25
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,28,18,9,0,0,1,0,0,0.643
+IIT (BHU) Varanasi,Department of Electronics Engineering,27,15,7,1,0,0,0,4,0.556
+IIT Kanpur,Chemical Engineering,27,20,1,2,0,0,0,4,0.741
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,26,21,3,1,0,0,0,1,0.808
+IIT (BHU) Varanasi,Department of Physics,26,19,5,1,0,0,0,1,0.731
+IIT Bombay,Energy Science and Engineering,26,20,3,1,0,1,0,1,0.769
+IIT Madras,Ocean Engineering,26,16,4,1,0,0,0,5,0.615
+IIT (BHU) Varanasi,Department of Electrical Engineering,25,17,6,0,0,0,0,2,0.68
+IIT Hyderabad,Chemical Engineering,25,18,4,0,0,0,0,3,0.72
+IIT Patna,Electrical Engineering,25,16,4,2,0,0,0,3,0.64
+IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",24,11,5,2,0,0,0,6,0.458
+IIT Indore,Physics,24,18,3,0,0,0,1,2,0.75
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,23,15,3,1,0,0,0,4,0.652
+IIT (BHU) Varanasi,Department of Chemistry,23,20,1,0,0,0,0,2,0.87
+IIT Hyderabad,Mathematics,23,2,3,0,0,2,1,15,0.087
+IIT Indore,Computer Science and Engineering,23,12,2,2,0,2,2,3,0.522
+IIT Indore,Electrical Engineering,23,17,5,0,0,1,0,0,0.739
+IIT Kanpur,Biological Sciences and Bioengineering,23,10,1,5,0,0,0,7,0.435
+IIT Patna,Civil and Environmental Engineering,23,13,7,1,0,0,0,2,0.565
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,22,17,2,0,0,0,0,3,0.773
+IIT Bhubaneswar,School of Mechanical Sciences,22,17,2,0,0,1,0,2,0.773
+IIT Hyderabad,Materials Science and Metallurgical Engineering,22,18,1,1,0,0,0,2,0.818
+IIT Mandi,School of Civil & Environmental Engineering,22,13,7,0,0,0,0,2,0.591
+IIT Patna,Mechanical Engineering,22,18,3,0,0,0,0,1,0.818
+IIT Gandhinagar,Electrical Engineering,21,13,2,3,0,0,0,3,0.619
+IIT Palakkad,Mechanical Engineering,21,11,5,1,0,0,0,4,0.524
+IIT (BHU) Varanasi,,20,3,4,1,0,1,0,11,0.15
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",20,9,3,2,0,0,0,6,0.45
+IIT Bombay,IDC School of Design,20,0,1,3,0,1,1,14,0.0
+IIT Hyderabad,BioTechnology,20,9,1,2,0,0,0,8,0.45
+IIT Palakkad,Electrical Engineering,20,7,6,0,0,1,0,6,0.35
+IIT Tirupati,Civil and Environmental Engineering,20,9,7,1,0,0,0,3,0.45
+IIT Indore,Metallurgical Engineering and Materials Science,19,15,2,1,0,0,0,1,0.789
+IIT Indore,Chemistry,19,16,2,1,0,0,0,0,0.842
+IIT Mandi,School of Physical Sciences,19,10,5,2,0,0,0,2,0.526
+IIT Patna,Physics,19,15,3,0,0,0,0,1,0.789
+IIT Tirupati,Electrical Engineering,19,9,4,1,0,0,0,5,0.474
+IIT Indore,Civil Engineering,18,10,6,1,0,0,0,1,0.556
+IIT Patna,Computer Science and Engineering,18,13,4,0,0,0,0,1,0.722
+IIT Tirupati,Mechanical Engineering,18,8,5,1,0,0,1,3,0.444
+IIT (BHU) Varanasi,Department of Mining Engineering,17,9,4,2,0,0,0,2,0.529
+IIT Gandhinagar,Mathematics,17,0,0,0,0,2,3,12,0.0
+IIT Gandhinagar,Physics,17,14,0,0,0,0,0,3,0.824
+IIT Gandhinagar,Computer Science and Engineering,17,4,6,0,0,1,0,6,0.235
+IIT Gandhinagar,Civil Engineering,17,8,5,1,0,0,0,3,0.471
+IIT Guwahati,,17,3,4,1,0,0,0,9,0.176
+IIT Indore,Mathematics,17,5,1,0,0,1,3,7,0.294
+IIT (BHU) Varanasi,Department of Ceramic Engineering,16,14,0,0,0,1,0,1,0.875
+IIT Bombay,Environmental Science and Engineering,16,12,3,0,0,0,0,1,0.75
+IIT Indore,Mechanical Engineering,16,13,0,2,0,1,0,0,0.812
+IIT Indore,Biosciences and Biomedical Engineering,16,11,0,1,0,0,0,4,0.688
+IIT Tirupati,Chemistry,16,7,4,1,0,0,0,4,0.438
+IIT (BHU) Varanasi,School of Biochemical Engineering,15,10,0,2,0,0,0,3,0.667
+IIT Bombay,Centre of Studies in Resources Engineering,15,7,3,1,0,0,0,4,0.467
+IIT Gandhinagar,Mechanical Engineering,15,5,3,0,0,0,2,5,0.333
+IIT Kanpur,Earth Sciences,15,9,1,1,0,0,0,4,0.6
+IIT Kanpur,Management Sciences,15,3,1,0,0,0,0,11,0.2
+IIT Mandi,,15,6,3,1,0,0,0,5,0.4
+IIT Patna,Mathematics,15,5,5,0,0,0,1,4,0.333
+IIT Gandhinagar,Chemical Engineering,14,10,2,1,0,0,0,1,0.714
+IIT Gandhinagar,Materials Engineering,14,10,2,0,0,0,0,2,0.714
+IIT Gandhinagar,Chemistry,14,11,1,0,0,0,0,2,0.786
+IIT Mandi,School of Chemical Sciences,14,9,4,0,0,0,0,1,0.643
+IIT Palakkad,Chemistry,14,9,2,0,0,0,0,3,0.643
+IIT Palakkad,Physics,14,7,3,1,0,0,0,3,0.5
+IIT Patna,Chemical and Biochemical Engineering,14,10,1,1,0,0,0,2,0.714
+IIT Tirupati,Chemical Engineering,14,5,8,0,0,0,0,1,0.357
+IIT (BHU) Varanasi,School of Biomedical Engineering,13,9,3,1,0,0,0,0,0.692
+IIT Bombay,Shailesh J. Mehta School of Management,13,1,3,1,0,2,0,6,0.077
+IIT Goa,Mechanical Engineering,13,8,4,0,0,0,0,1,0.615
+IIT Goa,Electrical Engineering,13,7,4,0,0,1,0,1,0.538
+IIT Hyderabad,Liberal Arts,13,0,0,1,0,1,0,11,0.0
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",13,4,2,0,0,1,0,6,0.308
+IIT Palakkad,Civil Engineering,13,6,4,1,0,0,0,2,0.462
+IIT Palakkad,Computer Science and Engineering,13,1,2,0,0,4,1,5,0.077
+IIT Tirupati,Physics,13,6,4,1,0,0,0,2,0.462
+IIT (BHU) Varanasi,School of Materials Science and Technology,12,10,1,0,0,0,0,1,0.833
+IIT Bombay,Industrial Engineering and Operations Research,12,1,2,3,0,0,0,6,0.083
+IIT Hyderabad,Biomedical Engineering,12,7,3,0,0,0,0,2,0.583
+IIT Madras,Engineering Design,12,8,1,0,0,0,0,3,0.667
+IIT Patna,Chemistry,12,11,0,0,0,0,0,1,0.917
+IIT Tirupati,Computer Science and Engineering,12,1,2,1,0,0,0,8,0.083
+IIT Bombay,Centre for Systems and Control Engineering,11,5,3,2,0,0,0,1,0.455
+IIT Gandhinagar,Earth Sciences,11,3,0,2,0,0,0,6,0.273
+IIT Mandi,School of Mathematical & Statistical Sciences,11,3,0,1,0,1,1,5,0.273
+IIT Palakkad,Mathematics,11,1,0,0,0,2,2,6,0.091
+IIT Bombay,Centre for Climate Studies,10,4,3,0,0,0,0,3,0.4
+IIT Gandhinagar,Biological Sciences and Engineering,10,7,0,1,0,0,0,2,0.7
+IIT Indore,,10,5,4,0,0,0,0,1,0.5
+IIT Mandi,School of Biosciences & Bio Engineering,10,4,0,2,0,0,0,4,0.4
+IIT Patna,Metallurgical and Materials Engineering,10,8,2,0,0,0,0,0,0.8
+IIT (BHU) Varanasi,Department of Humanistic Studies,9,1,2,0,0,0,0,6,0.111
+IIT Bombay,Ashank Desai Centre for Policy Studies,9,1,3,0,0,1,0,4,0.111
+IIT Goa,Computer Science and Engineering,9,0,1,1,0,1,0,6,0.0
+IIT Kanpur,Economic Sciences,9,0,2,1,0,0,0,6,0.0
+IIT Tirupati,Mathematics and Statistics,9,1,1,0,0,0,0,7,0.111
+IIT Guwahati,Mehta Family School of Data Science and Artificial Intelligence,8,2,4,0,0,0,0,2,0.25
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",8,6,1,0,0,0,0,1,0.75
+IIT (BHU) Varanasi,"Department of Architecture, Planning and Design",7,1,2,0,0,0,0,4,0.143
+IIT Hyderabad,Artificial Intelligence,7,0,1,1,0,1,0,4,0.0
+IIT Kanpur,Statistics and Data Science,7,2,2,1,0,0,0,2,0.286
+IIT Mandi,School of Engineering (defunct),7,3,1,3,0,0,0,0,0.429
+IIT Palakkad,Data Science,7,0,2,0,0,0,1,4,0.0
+IIT Bhubaneswar,"School of Humanities, Social Sciences and Management",6,3,0,0,0,0,0,3,0.5
+IIT Bombay,Centre for Technology Alternatives for Rural Areas,6,3,1,1,0,0,0,1,0.5
+IIT Bombay,Economics,6,0,1,1,0,0,0,4,0.0
+IIT Gandhinagar,Cognitive and Brain Sciences,6,1,1,1,0,1,0,2,0.167
+IIT Goa,Chemistry,6,2,3,0,0,0,0,1,0.333
+IIT Goa,Physics,6,4,0,0,0,0,0,2,0.667
+IIT Guwahati,School of Energy Science and Engineering,6,2,4,0,0,0,0,0,0.333
+IIT Indore,Mehta Family School of Sustainability,6,0,5,0,0,0,0,1,0.0
+IIT Bombay,Centre for Educational Technology,5,1,0,3,0,0,0,1,0.2
+IIT Bombay,Koita Centre for Digital Health,5,0,0,0,0,2,0,3,0.0
+IIT Guwahati,School of Agro and Rural Technology,5,2,3,0,0,0,0,0,0.4
+IIT Kanpur,Cognitive Science,5,0,1,1,0,0,0,3,0.0
+IIT Kanpur,Sustainable Energy Engineering,5,4,0,0,0,0,0,1,0.8
+IIT Kanpur,Gangwal School of Medical Sciences and Technology,5,0,1,1,0,0,0,3,0.0
+IIT Mandi,IKSMHA Center,5,0,1,0,0,0,0,4,0.0
+IIT Patna,,5,0,0,3,0,0,0,2,0.0
+IIT Indore,Chemical Engineering,4,1,1,0,0,0,0,2,0.25
+IIT Kanpur,Kotak School of Sustainability,4,1,2,0,0,0,0,1,0.25
+IIT Mandi,School of Basic Sciences (defunct),4,3,0,0,0,0,0,1,0.75
+IIT Mandi,School of Humanities & Social Sciences,4,0,1,1,0,0,0,2,0.0
+IIT Mandi,Centre of Artificial Intelligence and Robotics (CAIR),4,1,3,0,0,0,0,0,0.25
+IIT Palakkad,Biological Sciences and Engineering,4,2,0,0,0,0,0,2,0.5
+IIT Bombay,Centre for Urban Science and Engineering,3,2,1,0,0,0,0,0,0.667
+IIT Guwahati,School of Business,3,0,0,0,0,0,0,3,0.0
+IIT Hyderabad,Entrepreneurship and Management,3,0,0,0,0,0,1,2,0.0
+IIT Kanpur,Intelligent Systems,3,0,0,1,0,0,0,2,0.0
+IIT Mandi,Center for Quantum Science and Technologies (CQST),3,0,0,0,0,0,0,3,0.0
+IIT Mandi,School of Management,3,0,0,0,0,0,1,2,0.0
+IIT Palakkad,Environmental Sciences and Sustainable Engineering Centre,3,1,1,0,0,0,0,1,0.333
+IIT Bhubaneswar,,2,0,0,0,0,0,0,2,0.0
+IIT Goa,Chemical Engineering,2,1,0,0,0,0,0,1,0.5
+IIT Goa,Mathematics,2,0,0,0,0,0,0,2,0.0
+IIT Goa,Materials Engineering,2,0,1,0,0,0,0,1,0.0
+IIT Guwahati,Centre for Linguistic Science and Technology,2,0,0,0,0,0,1,1,0.0
+IIT Hyderabad,Climate Change,2,0,0,0,0,0,0,2,0.0
+IIT Bombay,,1,0,0,0,0,0,0,1,0.0
+IIT Bombay,Centre for Traditional Indian Knowledge and Skills,1,0,0,0,0,0,0,1,0.0
+IIT Bombay,Desai Sethi School of Entrepreneurship,1,0,0,0,0,0,0,1,0.0
+IIT Gandhinagar,Maritime Engineering,1,0,0,0,0,0,0,1,0.0
+IIT Gandhinagar,,1,0,0,0,0,0,0,1,0.0
+IIT Goa,,1,0,0,0,0,0,0,1,0.0
+IIT Goa,Mentor IIT Bombay (various),1,0,0,1,0,0,0,0,0.0
+IIT Guwahati,Centre for Disaster Management and Research,1,1,0,0,0,0,0,0,1.0
+IIT Hyderabad,,1,0,0,0,0,0,0,1,0.0
+IIT Hyderabad,Heritage Science & Technology,1,0,0,0,0,0,0,1,0.0
+IIT Tirupati,"Life Sciences (courses, listed under faculty/others)",1,0,0,0,0,0,0,1,0.0

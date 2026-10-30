@@ -29,6 +29,8 @@ jobs:
         run: |
           mkdir -p _site
           cp Dashboard/site/index.html Dashboard/site/data.js Dashboard/site/papers.js _site/
+          cp Dashboard/site/explorer.html Dashboard/site/profiles.js _site/
+          mkdir -p _site/mohit && cp Dashboard/site/mohit/index.html Dashboard/site/mohit/story.css Dashboard/site/mohit/app.js Dashboard/site/mohit/making.html Dashboard/site/mohit/making.js Dashboard/site/mohit/combo.js Dashboard/site/mohit/output.html Dashboard/site/mohit/networks.html Dashboard/site/mohit/explorer.html _site/mohit/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

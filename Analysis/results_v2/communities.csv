@@ -1,0 +1,33 @@
+﻿community,faculty,internal_edges,IIT Bombay,IIT Madras,IIT Kanpur,IIT Goa,IIT Tirupati,IIT Patna,IIT Palakkad,IIT Guwahati,IIT Hyderabad,IIT Bhubaneswar,IIT (BHU) Varanasi,IIT Gandhinagar,IIT Indore,IIT Mandi,top_department,top_department_share,departments,most_connected_member
+1,361,824,5,290,2,0,13,6,15,2,3,3,3,2,16,1,Mechanical Engineering,0.13,29,M S Ramachandra Rao
+2,183,422,1,0,7,2,0,4,0,0,1,0,168,0,0,0,Department of Mechanical Engineering,0.126,24,Pralay Maiti
+3,173,300,1,1,3,0,2,0,0,143,14,2,6,0,1,0,Electronics and Electrical Engineering,0.214,17,Siddhartha S. Ghosh
+4,165,343,8,7,3,1,3,2,2,133,0,1,2,1,0,2,Mechanical Engineering,0.255,18,Sachin Kumar
+5,158,319,7,1,0,5,0,8,2,0,131,2,1,1,0,0,Chemistry,0.222,18,Aravind Kumar Rengan
+6,152,294,1,0,128,0,2,0,2,0,3,1,10,3,1,1,Materials Science and Engineering,0.145,27,Krishanu Biswas
+7,137,219,0,3,3,0,2,0,2,2,8,114,0,1,1,1,School of Electrical and Computer Sciences,0.241,17,Kisor Kumar Sahu
+8,135,203,6,104,2,0,1,0,5,0,4,4,1,4,0,4,Electrical Engineering,0.274,24,Karthik Raman
+9,130,193,65,8,19,0,2,0,2,3,0,2,0,12,9,8,Civil Engineering,0.362,29,Subimal Ghosh
+10,108,155,9,5,61,0,1,0,2,2,2,1,0,3,6,16,Electrical Engineering,0.315,27,L. Behera
+11,106,226,90,0,6,0,0,0,0,0,0,4,5,0,0,1,Chemistry,0.264,27,Dinesh Kabra
+12,97,136,14,4,9,0,1,0,5,0,51,0,0,12,1,0,Computer Science and Engineering,0.278,16,Abhinav Kumar
+13,95,193,80,0,3,3,1,0,0,0,0,0,0,8,0,0,Electrical Engineering,0.326,18,Rakesh G. MOTE
+14,95,202,89,2,0,0,0,0,0,2,0,0,0,0,2,0,Mechanical Engineering,0.474,12,Indradev Samajdar
+15,94,171,0,0,3,0,2,8,0,3,0,0,2,0,0,76,School of Computing & Electrical Engineering,0.266,18,Satinder Sharma
+16,91,118,59,2,19,0,1,0,2,3,3,0,0,1,0,1,Electrical Engineering,0.198,23,Kumar Appaiah
+17,88,139,0,1,0,3,0,7,0,2,0,0,72,0,0,3,Department of Electrical Engineering,0.261,14,Sanjay Kumar Singh
+18,87,148,63,0,1,9,0,0,0,0,1,1,8,0,0,4,Biosciences and Bioengineering,0.241,20,Rohit Srivastava
+19,81,126,55,0,11,2,1,4,0,0,1,1,1,0,1,4,Chemical Engineering,0.222,26,Tarun Gupta
+20,79,146,1,2,4,0,0,4,14,0,1,0,1,0,51,1,Chemistry,0.316,16,Rajesh Kumar
+21,69,97,0,1,17,0,0,32,1,12,1,1,3,0,1,0,Civil Engineering,0.377,14,Sriparna Saha
+22,69,148,4,3,1,0,0,1,1,0,0,0,0,58,1,0,Electrical Engineering,0.174,14,Dhiraj D Bhatia
+23,67,98,8,4,1,0,18,0,0,24,0,1,0,3,0,8,Civil Engineering,0.433,15,Lingaraj Sahoo
+24,59,82,1,0,43,0,7,0,0,3,0,0,0,0,4,1,Mechanical Engineering,0.271,14,Krishnamurthy Muralidhar
+25,55,79,0,5,0,2,5,33,6,0,1,0,1,0,1,1,Physics,0.4,12,Anup Kumar Keshri
+26,50,73,2,0,2,4,1,3,0,2,1,3,5,0,27,0,Electrical Engineering,0.32,13,Ram Bilas Pachori
+27,34,44,2,2,10,1,0,0,0,10,5,0,1,3,0,0,Physics,0.912,4,Arijit Kundu
+28,32,44,15,0,0,0,2,0,0,1,0,0,0,6,8,0,Electrical Engineering,0.625,7,Himanshu J. Bahirat
+29,31,44,0,0,0,0,0,0,0,0,0,0,31,0,0,0,Department of Civil Engineering,0.71,8,Shyam Bihari Dwivedi
+30,18,26,0,18,0,0,0,0,0,0,0,0,0,0,0,0,Ocean Engineering,0.556,5,S A Sannasiraj
+31,18,18,5,4,7,0,0,0,0,0,1,0,0,0,1,0,Aerospace Engineering,0.333,8,R I Sujith
+32,12,27,3,2,2,1,0,0,0,0,0,0,0,1,1,2,Physics,0.667,4,Raghunath Sahoo

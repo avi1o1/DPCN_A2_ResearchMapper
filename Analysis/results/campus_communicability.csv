@@ -1,0 +1,4 @@
+﻿pair,faculty_in_giant_component,direct_coauthor_pairs,mean_cos_angle,median_cos_angle
+Kharagpur - Kharagpur,621 x 621,1651,0.3462,0.2519
+Roorkee - Roorkee,489 x 489,991,0.1356,0.0464
+Kharagpur - Roorkee,621 x 489,77,0.0655,0.0186

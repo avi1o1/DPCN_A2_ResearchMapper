@@ -1,0 +1,16 @@
+﻿field,papers,citations_given,share_to_same_field,expected_share_if_random,most_cited_other_field
+Engineering,51399,101623,0.848,0.389,Materials Science
+Materials Science,15734,43361,0.731,0.119,Engineering
+Computer Science,14903,17016,0.842,0.113,Engineering
+Physics and Astronomy,13529,47641,0.94,0.102,Materials Science
+Environmental Science,8225,20726,0.744,0.062,Engineering
+Chemistry,7572,23559,0.82,0.057,Materials Science
+"Biochemistry, Genetics and Molecular Biology",5473,10506,0.692,0.041,Materials Science
+Energy,3574,9795,0.619,0.027,Materials Science
+Mathematics,3340,4546,0.874,0.025,Engineering
+Earth and Planetary Sciences,2911,7055,0.755,0.022,Environmental Science
+Chemical Engineering,1725,5278,0.682,0.013,Engineering
+Agricultural and Biological Sciences,1550,2349,0.505,0.012,Environmental Science
+Neuroscience,1273,1809,0.779,0.01,Computer Science
+"Pharmacology, Toxicology and Pharmaceutics",481,996,0.367,0.004,Chemistry
+Immunology and Microbiology,355,629,0.529,0.003,"Biochemistry, Genetics and Molecular Biology"

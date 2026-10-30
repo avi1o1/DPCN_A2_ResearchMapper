@@ -26,7 +26,7 @@ output: out/<inst>_enriched.json  (same layout: {summary, records})
 usage: python merge.py <inst_key> [...]"""
 import os, sys, json, collections as C
 from oa import read_jsonl, norm_doi, CACHE, OUT, DATA, INST
-from oa_extract import facts
+from oa_extract import facts, mega_flag
 from scope import scope
 from ranks import quartile, core_rank, SJR
 
@@ -171,6 +171,8 @@ def merge(inst):
         if w:
             apply_openalex(r, w, via, inst, refdoi, filled, stats)
         apply_indian_links(r, links, INST[inst]["oa"], cited_by_index)
+        r["author_count"], r["mega_collab"], r["mega_basis"] = mega_flag(r)       # sanity audit F3 (>100 authors)
+        stats["mega_collab_" + str(r["mega_collab"])] += 1
         stats["cites_indian_inst_" + str(r["cites_indian_inst"])] += 1
         stats["cited_by_indian_inst_" + str(r["cited_by_indian_inst"])] += 1
         r["sci_eng_scope"] = scope(r, r.get("research_area"))

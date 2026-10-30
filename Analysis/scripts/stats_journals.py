@@ -20,7 +20,7 @@ usage: python stats_journals.py"""
 import os, collections as C
 import numpy as np
 from common import (INSTS, YEARS, RES, load_records, paper_key, cites, read_csv, write_csv, impact_factor, source_of,
-                    n_authors, style, save, COLOR, plt)
+                    n_authors, style, save, COLOR, plt, bar_layout, note_skip, oa_have)
 
 LARGE = 10                    # 'more than 10 authors'
 NATURE_PUBLISHERS = ("Nature Portfolio", "Springer Nature", "Springer Science+Business Media")
@@ -53,6 +53,14 @@ def main():
     style()
     recs = {name: load_records(inst) for inst, name in INSTS.items()}
     dept = {(f["institution"], f["roster_id"]): f["department"] for f in read_csv(os.path.join(RES, "faculty.csv"))}
+    have_src = oa_have("sources", "paper_source")
+    if not have_src:
+        note_skip("stats_journals.py", "important journals: APS, SPIE, Nature groups (important_journals.csv)",
+                  "the publisher of a venue comes from the OpenAlex source cache, which does not exist for these institutes (PRL and JACS are matched by name and are filled)",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_sources.json, oa_paper_source.json")
+        note_skip("stats_journals.py", "impact factor bands (impact_factor.csv, impact_factor_over5.png)",
+                  "IF (OpenAlex) is a journal-level number from the OpenAlex source cache; counts are written, IF columns are empty",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_sources.json, oa_paper_source.json")
 
     # ------------------------------------------------ important journals
     irows, plist = [], []
@@ -96,17 +104,19 @@ def main():
         for d, ps in sorted(by_d.items(), key=lambda x: -len(x[1])):
             band(list(ps.values()), institution=name, scope="all years", department=d)
     write_csv("impact_factor.csv", frows)
-    fig, ax = plt.subplots(figsize=(8, 3.6))
-    x = np.arange(len(YEARS))
-    for k, name in enumerate(recs):
-        yr = {fr["scope"]: fr for fr in frows if fr["institution"] == name and fr["department"] == "" and fr["scope"] != "all years"}
-        ax.bar(x + (k - 0.5) * 0.38, [yr[str(y)]["share_if_over_5"] * 100 for y in YEARS], width=0.36, color=COLOR[name], label=name)
-    ax.set_xticks(x, YEARS)
-    ax.set_ylabel("% of journal papers")
-    ax.grid(axis="x", visible=False)
-    ax.legend(loc="upper left")
-    ax.set_title("Journal papers in journals with IF (OpenAlex) above 5")
-    save(fig, "impact_factor_over5.png")
+    if have_src:
+        fig, ax = plt.subplots(figsize=(8 if len(recs) <= 2 else 12, 3.6))
+        x = np.arange(len(YEARS))
+        offs, bw = bar_layout(len(recs))
+        for k, name in enumerate(recs):
+            yr = {fr["scope"]: fr for fr in frows if fr["institution"] == name and fr["department"] == "" and fr["scope"] != "all years"}
+            ax.bar(x + offs[k], [(yr.get(str(y), {}).get("share_if_over_5") or 0) * 100 for y in YEARS], width=bw, color=COLOR[name], label=name)
+        ax.set_xticks(x, YEARS)
+        ax.set_ylabel("% of journal papers")
+        ax.grid(axis="x", visible=False)
+        ax.legend(loc="upper left", ncol=1 if len(recs) <= 4 else 2, fontsize=9 if len(recs) <= 4 else 7)
+        ax.set_title("Journal papers in journals with IF (OpenAlex) above 5")
+        save(fig, "impact_factor_over5.png")
 
     # ------------------------------------------------ large collaborations
     lrows, lpapers = [], []

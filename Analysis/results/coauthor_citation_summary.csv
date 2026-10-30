@@ -1,0 +1,31 @@
+﻿metric,value
+faculty,1410
+papers,46071
+internal citation pairs (paper -> paper),86090
+"faculty citations, all (a on citing paper, b on cited paper, a != b)",50372
+"faculty citations, pure",15429
+"faculty citations, strict",10205
+check: faculty citations (all) by matrix route,50372
+"co-author pairs (faculty, papers <= 50 authors)",2738
+check: co-author pairs in stats_authorship.faculty_graph,2719
+"check: pairs in one but not the other (faculty.csv credits both on the paper, the authorship file matched only one of them to an author slot)",19
+check: distances differing from networkx (50 sampled sources),0
+paper-count bands (terciles): cut points,"10, 35"
+share of ordered faculty pairs that are co-authors,0.00276
+faculty active before and after 2020,928
+pure: share of faculty citations that go to a co-author,0.2718
+pure: citing pairs a -> b,6626
+pure: reciprocity (share of a -> b with b -> a),0.2665
+"pure: reciprocity expected, configuration model (analytic)",0.0255
+"pure: reciprocity, 10 degree-preserving rewirings: mean (min-max)",0.0277 (0.0244-0.0326)
+pure: citing pairs that are co-author pairs,1130
+pure: reciprocity among co-author pairs,0.4867
+pure: reciprocity among pairs that never co-authored,0.2213
+strict: share of faculty citations that go to a co-author,0.2198
+strict: citing pairs a -> b,4999
+strict: reciprocity (share of a -> b with b -> a),0.2344
+"strict: reciprocity expected, configuration model (analytic)",0.0218
+"strict: reciprocity, 10 degree-preserving rewirings: mean (min-max)",0.0248 (0.0208-0.0272)
+strict: citing pairs that are co-author pairs,765
+strict: reciprocity among co-author pairs,0.4392
+strict: reciprocity among pairs that never co-authored,0.1974

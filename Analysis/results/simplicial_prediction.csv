@@ -1,0 +1,11 @@
+﻿cap,score,open_triangles,closed,random_precision,average_precision,ap_over_random,roc_auc,p_value_auc_above_half
+25,arithmetic mean of edge weights,3938,147,0.0373,0.0415,1.11,0.544,0.0325
+25,geometric mean of edge weights,3938,147,0.0373,0.0447,1.2,0.553,0.013
+25,harmonic mean of edge weights,3938,147,0.0373,0.0481,1.29,0.562,0.00465
+25,common neighbours of all three,3938,147,0.0373,0.0412,1.1,0.537,0.0602
+25,sum of degrees,3938,147,0.0373,0.0364,0.97,0.476,0.836
+10,arithmetic mean of edge weights,3200,85,0.0266,0.0292,1.1,0.521,0.255
+10,geometric mean of edge weights,3200,85,0.0266,0.032,1.2,0.53,0.17
+10,harmonic mean of edge weights,3200,85,0.0266,0.0348,1.31,0.54,0.104
+10,common neighbours of all three,3200,85,0.0266,0.0239,0.9,0.465,0.866
+10,sum of degrees,3200,85,0.0266,0.0242,0.91,0.426,0.99

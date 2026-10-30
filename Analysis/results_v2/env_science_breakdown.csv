@@ -1,0 +1,428 @@
+﻿institution,by,name,papers,share_of_env_papers
+IIT Bombay,subfield,Global and Planetary Change,452,0.2353
+IIT Bombay,subfield,Environmental Engineering,447,0.2327
+IIT Bombay,subfield,Water Science and Technology,392,0.2041
+IIT Bombay,subfield,Pollution,143,0.0744
+IIT Bombay,subfield,Waste Management and Disposal,141,0.0734
+IIT Bombay,subfield,Ecology,132,0.0687
+IIT Bombay,subfield,"Health, Toxicology and Mutagenesis",91,0.0474
+IIT Bombay,subfield,Environmental Chemistry,59,0.0307
+IIT Bombay,subfield,"Management, Monitoring, Policy and Law",54,0.0281
+IIT Bombay,subfield,Ecological Modeling,8,0.0042
+IIT Bombay,subfield,Nature and Landscape Conservation,2,0.001
+IIT Bombay,topic,Climate variability and models,157,0.0817
+IIT Bombay,topic,Hydrology and Watershed Management Studies,133,0.0692
+IIT Bombay,topic,Flood Risk Assessment and Management,91,0.0474
+IIT Bombay,topic,Soil Moisture and Remote Sensing,82,0.0427
+IIT Bombay,topic,Membrane Separation Technologies,79,0.0411
+IIT Bombay,topic,Remote Sensing in Agriculture,66,0.0344
+IIT Bombay,topic,Advanced oxidation water treatment,64,0.0333
+IIT Bombay,topic,CO2 Sequestration and Geologic Interactions,58,0.0302
+IIT Bombay,topic,Hydrology and Drought Analysis,57,0.0297
+IIT Bombay,topic,Municipal Solid Waste Management,49,0.0255
+IIT Bombay,department,Civil Engineering,583,0.3035
+IIT Bombay,department,(no faculty identified),443,0.2306
+IIT Bombay,department,Environmental Science and Engineering,329,0.1713
+IIT Bombay,department,Centre of Studies in Resources Engineering,118,0.0614
+IIT Bombay,department,Chemical Engineering,115,0.0599
+IIT Bombay,department,Earth Sciences,84,0.0437
+IIT Bombay,department,Biosciences and Bioengineering,61,0.0318
+IIT Bombay,department,Energy Science and Engineering,52,0.0271
+IIT Bombay,department,Centre for Climate Studies,44,0.0229
+IIT Bombay,department,Metallurgical Engineering and Materials Science,33,0.0172
+IIT Bombay,department,Centre for Urban Science and Engineering,27,0.0141
+IIT Bombay,department,Ashank Desai Centre for Policy Studies,26,0.0135
+IIT Bombay,total,Environmental Science,1921,0.0786
+IIT Madras,subfield,Water Science and Technology,250,0.2059
+IIT Madras,subfield,Environmental Engineering,218,0.1796
+IIT Madras,subfield,Environmental Chemistry,182,0.1499
+IIT Madras,subfield,Global and Planetary Change,176,0.145
+IIT Madras,subfield,Pollution,130,0.1071
+IIT Madras,subfield,Waste Management and Disposal,81,0.0667
+IIT Madras,subfield,"Health, Toxicology and Mutagenesis",76,0.0626
+IIT Madras,subfield,Ecology,53,0.0437
+IIT Madras,subfield,Ecological Modeling,32,0.0264
+IIT Madras,subfield,"Management, Monitoring, Policy and Law",10,0.0082
+IIT Madras,subfield,Nature and Landscape Conservation,6,0.0049
+IIT Madras,topic,Methane Hydrates and Related Phenomena,142,0.117
+IIT Madras,topic,Adsorption and biosorption for pollutant removal,85,0.07
+IIT Madras,topic,Advanced oxidation water treatment,81,0.0667
+IIT Madras,topic,Groundwater flow and contamination studies,53,0.0437
+IIT Madras,topic,Atmospheric aerosols and clouds,53,0.0437
+IIT Madras,topic,CO2 Sequestration and Geologic Interactions,42,0.0346
+IIT Madras,topic,Climate variability and models,37,0.0305
+IIT Madras,topic,Pharmaceutical and Antibiotic Environmental Impacts,33,0.0272
+IIT Madras,topic,Erosion and Abrasive Machining,32,0.0264
+IIT Madras,topic,Air Quality and Health Impacts,29,0.0239
+IIT Madras,department,Civil Engineering,469,0.3863
+IIT Madras,department,(no faculty identified),366,0.3015
+IIT Madras,department,Chemical Engineering,179,0.1474
+IIT Madras,department,Ocean Engineering,62,0.0511
+IIT Madras,department,Chemistry,53,0.0437
+IIT Madras,department,Applied Mechanics and Biomedical Engineering,36,0.0297
+IIT Madras,department,Biotechnology,34,0.028
+IIT Madras,department,Aerospace Engineering,27,0.0222
+IIT Madras,department,Mechanical Engineering,24,0.0198
+IIT Madras,department,Metallurgical and Materials Engineering,17,0.014
+IIT Madras,department,Electrical Engineering,15,0.0124
+IIT Madras,department,,9,0.0074
+IIT Madras,total,Environmental Science,1214,0.0505
+IIT Kanpur,subfield,Environmental Engineering,157,0.2282
+IIT Kanpur,subfield,Water Science and Technology,149,0.2166
+IIT Kanpur,subfield,Global and Planetary Change,105,0.1526
+IIT Kanpur,subfield,"Health, Toxicology and Mutagenesis",64,0.093
+IIT Kanpur,subfield,Ecology,59,0.0858
+IIT Kanpur,subfield,Environmental Chemistry,57,0.0828
+IIT Kanpur,subfield,Pollution,44,0.064
+IIT Kanpur,subfield,"Management, Monitoring, Policy and Law",22,0.032
+IIT Kanpur,subfield,Waste Management and Disposal,18,0.0262
+IIT Kanpur,subfield,Nature and Landscape Conservation,10,0.0145
+IIT Kanpur,subfield,Ecological Modeling,3,0.0044
+IIT Kanpur,topic,Adsorption and biosorption for pollutant removal,53,0.077
+IIT Kanpur,topic,Hydrology and Sediment Transport Processes,31,0.0451
+IIT Kanpur,topic,Atmospheric aerosols and clouds,30,0.0436
+IIT Kanpur,topic,Microbial Fuel Cells and Bioremediation,29,0.0422
+IIT Kanpur,topic,Arsenic contamination and mitigation,28,0.0407
+IIT Kanpur,topic,Methane Hydrates and Related Phenomena,25,0.0363
+IIT Kanpur,topic,Air Quality Monitoring and Forecasting,24,0.0349
+IIT Kanpur,topic,Air Quality and Health Impacts,24,0.0349
+IIT Kanpur,topic,Hydrology and Watershed Management Studies,24,0.0349
+IIT Kanpur,topic,Soil Moisture and Remote Sensing,22,0.032
+IIT Kanpur,department,(no faculty identified),211,0.3067
+IIT Kanpur,department,Civil Engineering,197,0.2863
+IIT Kanpur,department,Earth Sciences,88,0.1279
+IIT Kanpur,department,Mechanical Engineering,76,0.1105
+IIT Kanpur,department,Chemical Engineering,63,0.0916
+IIT Kanpur,department,Biological Sciences and Bioengineering,16,0.0233
+IIT Kanpur,department,Materials Science and Engineering,14,0.0203
+IIT Kanpur,department,Chemistry,11,0.016
+IIT Kanpur,department,Computer Science and Engineering,9,0.0131
+IIT Kanpur,department,Kotak School of Sustainability,9,0.0131
+IIT Kanpur,department,Economic Sciences,6,0.0087
+IIT Kanpur,department,Physics,6,0.0087
+IIT Kanpur,total,Environmental Science,688,0.0396
+IIT Goa,subfield,"Health, Toxicology and Mutagenesis",5,0.5
+IIT Goa,subfield,Environmental Engineering,2,0.2
+IIT Goa,subfield,Ecology,1,0.1
+IIT Goa,subfield,Water Science and Technology,1,0.1
+IIT Goa,subfield,Waste Management and Disposal,1,0.1
+IIT Goa,topic,Air Quality and Health Impacts,3,0.3
+IIT Goa,topic,Indoor Air Quality and Microbial Exposure,2,0.2
+IIT Goa,topic,Air Quality Monitoring and Forecasting,2,0.2
+IIT Goa,topic,Hydrology and Sediment Transport Processes,1,0.1
+IIT Goa,topic,Adsorption and biosorption for pollutant removal,1,0.1
+IIT Goa,topic,Recycling and Waste Management Techniques,1,0.1
+IIT Goa,department,Mechanical Engineering,7,0.7
+IIT Goa,department,(no faculty identified),2,0.2
+IIT Goa,department,Chemistry,1,0.1
+IIT Goa,total,Environmental Science,10,0.0122
+IIT Tirupati,subfield,Water Science and Technology,39,0.3714
+IIT Tirupati,subfield,Environmental Engineering,23,0.219
+IIT Tirupati,subfield,Global and Planetary Change,16,0.1524
+IIT Tirupati,subfield,Pollution,10,0.0952
+IIT Tirupati,subfield,"Management, Monitoring, Policy and Law",5,0.0476
+IIT Tirupati,subfield,Environmental Chemistry,5,0.0476
+IIT Tirupati,subfield,"Health, Toxicology and Mutagenesis",3,0.0286
+IIT Tirupati,subfield,Waste Management and Disposal,3,0.0286
+IIT Tirupati,subfield,Ecological Modeling,1,0.0095
+IIT Tirupati,topic,Adsorption and biosorption for pollutant removal,10,0.0952
+IIT Tirupati,topic,Membrane Separation Technologies,10,0.0952
+IIT Tirupati,topic,Energy and Environment Impacts,8,0.0762
+IIT Tirupati,topic,Advanced oxidation water treatment,8,0.0762
+IIT Tirupati,topic,Urban Stormwater Management Solutions,7,0.0667
+IIT Tirupati,topic,Climate variability and models,7,0.0667
+IIT Tirupati,topic,Hydrology and Watershed Management Studies,5,0.0476
+IIT Tirupati,topic,Air Quality Monitoring and Forecasting,4,0.0381
+IIT Tirupati,topic,Flood Risk Assessment and Management,3,0.0286
+IIT Tirupati,topic,Landslides and related hazards,3,0.0286
+IIT Tirupati,department,Civil and Environmental Engineering,60,0.5714
+IIT Tirupati,department,(no faculty identified),20,0.1905
+IIT Tirupati,department,Chemical Engineering,12,0.1143
+IIT Tirupati,department,Chemistry,6,0.0571
+IIT Tirupati,department,Physics,5,0.0476
+IIT Tirupati,department,Mechanical Engineering,4,0.0381
+IIT Tirupati,department,Mathematics and Statistics,2,0.019
+IIT Tirupati,department,Electrical Engineering,1,0.0095
+IIT Tirupati,total,Environmental Science,105,0.0734
+IIT Patna,subfield,Environmental Engineering,58,0.2358
+IIT Patna,subfield,Water Science and Technology,47,0.1911
+IIT Patna,subfield,Waste Management and Disposal,41,0.1667
+IIT Patna,subfield,Ecology,28,0.1138
+IIT Patna,subfield,Pollution,24,0.0976
+IIT Patna,subfield,Environmental Chemistry,19,0.0772
+IIT Patna,subfield,Global and Planetary Change,14,0.0569
+IIT Patna,subfield,"Management, Monitoring, Policy and Law",7,0.0285
+IIT Patna,subfield,"Health, Toxicology and Mutagenesis",6,0.0244
+IIT Patna,subfield,Ecological Modeling,2,0.0081
+IIT Patna,topic,Adsorption and biosorption for pollutant removal,27,0.1098
+IIT Patna,topic,Recycling and Waste Management Techniques,24,0.0976
+IIT Patna,topic,Hydrology and Sediment Transport Processes,22,0.0894
+IIT Patna,topic,Microbial Applications in Construction Materials,13,0.0528
+IIT Patna,topic,Microbial Fuel Cells and Bioremediation,12,0.0488
+IIT Patna,topic,Microplastics and Plastic Pollution,12,0.0488
+IIT Patna,topic,Air Quality Monitoring and Forecasting,11,0.0447
+IIT Patna,topic,Advanced oxidation water treatment,10,0.0407
+IIT Patna,topic,Municipal Solid Waste Management,8,0.0325
+IIT Patna,topic,Hydrological Forecasting Using AI,8,0.0325
+IIT Patna,department,Civil and Environmental Engineering,147,0.5976
+IIT Patna,department,Computer Science and Engineering,39,0.1585
+IIT Patna,department,(no faculty identified),26,0.1057
+IIT Patna,department,Chemistry,21,0.0854
+IIT Patna,department,Chemical and Biochemical Engineering,19,0.0772
+IIT Patna,department,Metallurgical and Materials Engineering,9,0.0366
+IIT Patna,department,Mechanical Engineering,8,0.0325
+IIT Patna,department,Mathematics,6,0.0244
+IIT Patna,department,Physics,5,0.0203
+IIT Patna,department,Electrical Engineering,2,0.0081
+IIT Patna,total,Environmental Science,246,0.0391
+IIT Palakkad,subfield,Global and Planetary Change,36,0.36
+IIT Palakkad,subfield,Environmental Engineering,20,0.2
+IIT Palakkad,subfield,Water Science and Technology,19,0.19
+IIT Palakkad,subfield,"Management, Monitoring, Policy and Law",10,0.1
+IIT Palakkad,subfield,Waste Management and Disposal,7,0.07
+IIT Palakkad,subfield,Pollution,3,0.03
+IIT Palakkad,subfield,Nature and Landscape Conservation,2,0.02
+IIT Palakkad,subfield,"Health, Toxicology and Mutagenesis",2,0.02
+IIT Palakkad,subfield,Ecology,1,0.01
+IIT Palakkad,topic,Climate variability and models,15,0.15
+IIT Palakkad,topic,Hydrology and Drought Analysis,12,0.12
+IIT Palakkad,topic,Hydrology and Watershed Management Studies,10,0.1
+IIT Palakkad,topic,Landslides and related hazards,10,0.1
+IIT Palakkad,topic,Microbial Fuel Cells and Bioremediation,9,0.09
+IIT Palakkad,topic,Soil Moisture and Remote Sensing,5,0.05
+IIT Palakkad,topic,Ecosystem dynamics and resilience,3,0.03
+IIT Palakkad,topic,Adsorption and biosorption for pollutant removal,3,0.03
+IIT Palakkad,topic,Landfill Environmental Impact Studies,2,0.02
+IIT Palakkad,topic,Air Quality Monitoring and Forecasting,2,0.02
+IIT Palakkad,department,Civil Engineering,71,0.71
+IIT Palakkad,department,(no faculty identified),15,0.15
+IIT Palakkad,department,Chemistry,7,0.07
+IIT Palakkad,department,Biological Sciences and Engineering,5,0.05
+IIT Palakkad,department,Environmental Sciences and Sustainable Engineering Centre,4,0.04
+IIT Palakkad,department,Computer Science and Engineering,1,0.01
+IIT Palakkad,department,Electrical Engineering,1,0.01
+IIT Palakkad,total,Environmental Science,100,0.0572
+IIT Guwahati,subfield,Water Science and Technology,527,0.3607
+IIT Guwahati,subfield,Pollution,215,0.1472
+IIT Guwahati,subfield,Environmental Engineering,193,0.1321
+IIT Guwahati,subfield,Ecology,190,0.13
+IIT Guwahati,subfield,Waste Management and Disposal,133,0.091
+IIT Guwahati,subfield,Global and Planetary Change,76,0.052
+IIT Guwahati,subfield,Environmental Chemistry,71,0.0486
+IIT Guwahati,subfield,"Health, Toxicology and Mutagenesis",29,0.0198
+IIT Guwahati,subfield,"Management, Monitoring, Policy and Law",23,0.0157
+IIT Guwahati,subfield,Nature and Landscape Conservation,4,0.0027
+IIT Guwahati,topic,Adsorption and biosorption for pollutant removal,187,0.128
+IIT Guwahati,topic,Hydrology and Sediment Transport Processes,173,0.1184
+IIT Guwahati,topic,Membrane Separation Technologies,139,0.0951
+IIT Guwahati,topic,Microbial bioremediation and biosurfactants,75,0.0513
+IIT Guwahati,topic,Landfill Environmental Impact Studies,73,0.05
+IIT Guwahati,topic,Microbial Fuel Cells and Bioremediation,69,0.0472
+IIT Guwahati,topic,Advanced oxidation water treatment,52,0.0356
+IIT Guwahati,topic,Heavy metals in environment,50,0.0342
+IIT Guwahati,topic,Water Quality and Pollution Assessment,47,0.0322
+IIT Guwahati,topic,Wastewater Treatment and Nitrogen Removal,37,0.0253
+IIT Guwahati,department,Civil Engineering,588,0.4025
+IIT Guwahati,department,Chemical Engineering,326,0.2231
+IIT Guwahati,department,(no faculty identified),283,0.1937
+IIT Guwahati,department,Biosciences and Bioengineering,265,0.1814
+IIT Guwahati,department,Chemistry,43,0.0294
+IIT Guwahati,department,School of Agro and Rural Technology,41,0.0281
+IIT Guwahati,department,Centre for Disaster Management and Research,37,0.0253
+IIT Guwahati,department,Mechanical Engineering,28,0.0192
+IIT Guwahati,department,Mathematics,6,0.0041
+IIT Guwahati,department,School of Energy Science and Engineering,4,0.0027
+IIT Guwahati,department,,2,0.0014
+IIT Guwahati,department,Electronics and Electrical Engineering,2,0.0014
+IIT Guwahati,total,Environmental Science,1461,0.0825
+IIT Hyderabad,subfield,Water Science and Technology,87,0.2417
+IIT Hyderabad,subfield,Environmental Engineering,66,0.1833
+IIT Hyderabad,subfield,Ecology,48,0.1333
+IIT Hyderabad,subfield,"Health, Toxicology and Mutagenesis",45,0.125
+IIT Hyderabad,subfield,Pollution,43,0.1194
+IIT Hyderabad,subfield,Global and Planetary Change,39,0.1083
+IIT Hyderabad,subfield,Waste Management and Disposal,20,0.0556
+IIT Hyderabad,subfield,Environmental Chemistry,8,0.0222
+IIT Hyderabad,subfield,"Management, Monitoring, Policy and Law",4,0.0111
+IIT Hyderabad,topic,Pharmaceutical and Antibiotic Environmental Impacts,27,0.075
+IIT Hyderabad,topic,Hydrology and Sediment Transport Processes,27,0.075
+IIT Hyderabad,topic,Adsorption and biosorption for pollutant removal,25,0.0694
+IIT Hyderabad,topic,Hydrology and Watershed Management Studies,19,0.0528
+IIT Hyderabad,topic,Microbial Fuel Cells and Bioremediation,18,0.05
+IIT Hyderabad,topic,Groundwater flow and contamination studies,16,0.0444
+IIT Hyderabad,topic,Mercury impact and mitigation studies,14,0.0389
+IIT Hyderabad,topic,Landfill Environmental Impact Studies,13,0.0361
+IIT Hyderabad,topic,Remote Sensing in Agriculture,13,0.0361
+IIT Hyderabad,topic,Advanced oxidation water treatment,10,0.0278
+IIT Hyderabad,department,Civil Engineering,181,0.5028
+IIT Hyderabad,department,(no faculty identified),97,0.2694
+IIT Hyderabad,department,Chemical Engineering,37,0.1028
+IIT Hyderabad,department,Electrical Engineering,19,0.0528
+IIT Hyderabad,department,BioTechnology,16,0.0444
+IIT Hyderabad,department,Chemistry,14,0.0389
+IIT Hyderabad,department,Liberal Arts,6,0.0167
+IIT Hyderabad,department,Mechanical & Aerospace Engineering,4,0.0111
+IIT Hyderabad,department,Materials Science and Metallurgical Engineering,3,0.0083
+IIT Hyderabad,department,Climate Change,3,0.0083
+IIT Hyderabad,department,Biomedical Engineering,2,0.0056
+IIT Hyderabad,department,Computer Science & Engineering,1,0.0028
+IIT Hyderabad,total,Environmental Science,360,0.0367
+IIT Bhubaneswar,subfield,Global and Planetary Change,124,0.2851
+IIT Bhubaneswar,subfield,Environmental Engineering,105,0.2414
+IIT Bhubaneswar,subfield,Waste Management and Disposal,65,0.1494
+IIT Bhubaneswar,subfield,Water Science and Technology,49,0.1126
+IIT Bhubaneswar,subfield,Pollution,45,0.1034
+IIT Bhubaneswar,subfield,Ecology,16,0.0368
+IIT Bhubaneswar,subfield,Environmental Chemistry,13,0.0299
+IIT Bhubaneswar,subfield,"Health, Toxicology and Mutagenesis",9,0.0207
+IIT Bhubaneswar,subfield,"Management, Monitoring, Policy and Law",6,0.0138
+IIT Bhubaneswar,subfield,Ecological Modeling,3,0.0069
+IIT Bhubaneswar,topic,Climate variability and models,76,0.1747
+IIT Bhubaneswar,topic,Microbial Fuel Cells and Bioremediation,48,0.1103
+IIT Bhubaneswar,topic,Constructed Wetlands for Wastewater Treatment,32,0.0736
+IIT Bhubaneswar,topic,Atmospheric aerosols and clouds,27,0.0621
+IIT Bhubaneswar,topic,Wastewater Treatment and Nitrogen Removal,23,0.0529
+IIT Bhubaneswar,topic,Urban Heat Island Mitigation,22,0.0506
+IIT Bhubaneswar,topic,Adsorption and biosorption for pollutant removal,19,0.0437
+IIT Bhubaneswar,topic,Wastewater Treatment and Reuse,17,0.0391
+IIT Bhubaneswar,topic,Advanced oxidation water treatment,13,0.0299
+IIT Bhubaneswar,topic,Hydrology and Drought Analysis,10,0.023
+IIT Bhubaneswar,department,School of Infrastructure,245,0.5632
+IIT Bhubaneswar,department,"School of Earth, Ocean and Climate Sciences",134,0.308
+IIT Bhubaneswar,department,(no faculty identified),42,0.0966
+IIT Bhubaneswar,department,School of Mechanical Sciences,11,0.0253
+IIT Bhubaneswar,department,School of Electrical and Computer Sciences,8,0.0184
+IIT Bhubaneswar,department,School of Basic Sciences,6,0.0138
+IIT Bhubaneswar,department,"School of Humanities, Social Sciences and Management",5,0.0115
+IIT Bhubaneswar,department,"School of Minerals, Metallurgical and Materials Engineering",3,0.0069
+IIT Bhubaneswar,total,Environmental Science,435,0.0828
+IIT (BHU) Varanasi,subfield,Water Science and Technology,263,0.3583
+IIT (BHU) Varanasi,subfield,Environmental Engineering,135,0.1839
+IIT (BHU) Varanasi,subfield,Pollution,86,0.1172
+IIT (BHU) Varanasi,subfield,Environmental Chemistry,54,0.0736
+IIT (BHU) Varanasi,subfield,Global and Planetary Change,50,0.0681
+IIT (BHU) Varanasi,subfield,Waste Management and Disposal,47,0.064
+IIT (BHU) Varanasi,subfield,Ecology,46,0.0627
+IIT (BHU) Varanasi,subfield,"Health, Toxicology and Mutagenesis",33,0.045
+IIT (BHU) Varanasi,subfield,"Management, Monitoring, Policy and Law",11,0.015
+IIT (BHU) Varanasi,subfield,Ecological Modeling,9,0.0123
+IIT (BHU) Varanasi,topic,Adsorption and biosorption for pollutant removal,132,0.1798
+IIT (BHU) Varanasi,topic,Arsenic contamination and mitigation,40,0.0545
+IIT (BHU) Varanasi,topic,Microbial bioremediation and biosurfactants,39,0.0531
+IIT (BHU) Varanasi,topic,Advanced oxidation water treatment,38,0.0518
+IIT (BHU) Varanasi,topic,Soil Moisture and Remote Sensing,29,0.0395
+IIT (BHU) Varanasi,topic,Water Quality and Pollution Assessment,26,0.0354
+IIT (BHU) Varanasi,topic,Recycling and Waste Management Techniques,24,0.0327
+IIT (BHU) Varanasi,topic,Urban Heat Island Mitigation,23,0.0313
+IIT (BHU) Varanasi,topic,Microbial Fuel Cells and Bioremediation,21,0.0286
+IIT (BHU) Varanasi,topic,Remote Sensing in Agriculture,17,0.0232
+IIT (BHU) Varanasi,department,Department of Civil Engineering,181,0.2466
+IIT (BHU) Varanasi,department,Department of Chemical Engineering and Technology,146,0.1989
+IIT (BHU) Varanasi,department,(no faculty identified),129,0.1757
+IIT (BHU) Varanasi,department,Department of Chemistry,66,0.0899
+IIT (BHU) Varanasi,department,School of Biochemical Engineering,66,0.0899
+IIT (BHU) Varanasi,department,Department of Physics,63,0.0858
+IIT (BHU) Varanasi,department,Department of Metallurgical Engineering,37,0.0504
+IIT (BHU) Varanasi,department,Department of Mining Engineering,22,0.03
+IIT (BHU) Varanasi,department,"Department of Architecture, Planning and Design",16,0.0218
+IIT (BHU) Varanasi,department,Department of Pharmaceutical Engineering and Technology,12,0.0163
+IIT (BHU) Varanasi,department,Department of Humanistic Studies,11,0.015
+IIT (BHU) Varanasi,department,Department of Mechanical Engineering,6,0.0082
+IIT (BHU) Varanasi,total,Environmental Science,734,0.0635
+IIT Gandhinagar,subfield,Global and Planetary Change,176,0.3444
+IIT Gandhinagar,subfield,Environmental Engineering,91,0.1781
+IIT Gandhinagar,subfield,Water Science and Technology,89,0.1742
+IIT Gandhinagar,subfield,Ecology,52,0.1018
+IIT Gandhinagar,subfield,Pollution,34,0.0665
+IIT Gandhinagar,subfield,Environmental Chemistry,30,0.0587
+IIT Gandhinagar,subfield,"Health, Toxicology and Mutagenesis",23,0.045
+IIT Gandhinagar,subfield,Waste Management and Disposal,7,0.0137
+IIT Gandhinagar,subfield,"Management, Monitoring, Policy and Law",6,0.0117
+IIT Gandhinagar,subfield,Nature and Landscape Conservation,2,0.0039
+IIT Gandhinagar,subfield,Ecological Modeling,1,0.002
+IIT Gandhinagar,topic,Hydrology and Drought Analysis,54,0.1057
+IIT Gandhinagar,topic,Climate variability and models,53,0.1037
+IIT Gandhinagar,topic,Flood Risk Assessment and Management,47,0.092
+IIT Gandhinagar,topic,Hydrology and Watershed Management Studies,39,0.0763
+IIT Gandhinagar,topic,Hydrology and Sediment Transport Processes,35,0.0685
+IIT Gandhinagar,topic,Arsenic contamination and mitigation,24,0.047
+IIT Gandhinagar,topic,Adsorption and biosorption for pollutant removal,22,0.0431
+IIT Gandhinagar,topic,Pharmaceutical and Antibiotic Environmental Impacts,19,0.0372
+IIT Gandhinagar,topic,Hydrological Forecasting Using AI,17,0.0333
+IIT Gandhinagar,topic,Urban Heat Island Mitigation,15,0.0294
+IIT Gandhinagar,department,Civil Engineering,300,0.5871
+IIT Gandhinagar,department,(no faculty identified),130,0.2544
+IIT Gandhinagar,department,Earth Sciences,34,0.0665
+IIT Gandhinagar,department,Chemical Engineering,14,0.0274
+IIT Gandhinagar,department,Computer Science and Engineering,13,0.0254
+IIT Gandhinagar,department,Mechanical Engineering,9,0.0176
+IIT Gandhinagar,department,Chemistry,6,0.0117
+IIT Gandhinagar,department,Materials Engineering,5,0.0098
+IIT Gandhinagar,department,Physics,4,0.0078
+IIT Gandhinagar,department,Biological Sciences and Engineering,4,0.0078
+IIT Gandhinagar,total,Environmental Science,511,0.1017
+IIT Indore,subfield,Global and Planetary Change,103,0.283
+IIT Indore,subfield,"Management, Monitoring, Policy and Law",68,0.1868
+IIT Indore,subfield,Environmental Engineering,67,0.1841
+IIT Indore,subfield,Water Science and Technology,58,0.1593
+IIT Indore,subfield,Pollution,19,0.0522
+IIT Indore,subfield,Ecology,15,0.0412
+IIT Indore,subfield,Waste Management and Disposal,15,0.0412
+IIT Indore,subfield,"Health, Toxicology and Mutagenesis",10,0.0275
+IIT Indore,subfield,Ecological Modeling,5,0.0137
+IIT Indore,subfield,Environmental Chemistry,4,0.011
+IIT Indore,topic,Landslides and related hazards,64,0.1758
+IIT Indore,topic,Climate variability and models,46,0.1264
+IIT Indore,topic,Microbial Applications in Construction Materials,29,0.0797
+IIT Indore,topic,Hydrology and Watershed Management Studies,23,0.0632
+IIT Indore,topic,Hydrology and Drought Analysis,16,0.044
+IIT Indore,topic,Flood Risk Assessment and Management,13,0.0357
+IIT Indore,topic,Adsorption and biosorption for pollutant removal,12,0.033
+IIT Indore,topic,Municipal Solid Waste Management,12,0.033
+IIT Indore,topic,Remote Sensing in Agriculture,11,0.0302
+IIT Indore,topic,Fire effects on ecosystems,11,0.0302
+IIT Indore,department,(no faculty identified),157,0.4313
+IIT Indore,department,Civil Engineering,149,0.4093
+IIT Indore,department,Mehta Family School of Sustainability,16,0.044
+IIT Indore,department,"Astronomy, Astrophysics and Space Engineering",13,0.0357
+IIT Indore,department,Biosciences and Biomedical Engineering,12,0.033
+IIT Indore,department,Chemistry,5,0.0137
+IIT Indore,department,Metallurgical Engineering and Materials Science,5,0.0137
+IIT Indore,department,Mechanical Engineering,4,0.011
+IIT Indore,department,Computer Science and Engineering,4,0.011
+IIT Indore,department,Physics,2,0.0055
+IIT Indore,department,Mathematics,1,0.0027
+IIT Indore,department,,1,0.0027
+IIT Indore,total,Environmental Science,364,0.0412
+IIT Mandi,subfield,"Management, Monitoring, Policy and Law",81,0.2883
+IIT Mandi,subfield,Water Science and Technology,53,0.1886
+IIT Mandi,subfield,Environmental Engineering,46,0.1637
+IIT Mandi,subfield,Global and Planetary Change,39,0.1388
+IIT Mandi,subfield,Pollution,26,0.0925
+IIT Mandi,subfield,"Health, Toxicology and Mutagenesis",11,0.0391
+IIT Mandi,subfield,Environmental Chemistry,8,0.0285
+IIT Mandi,subfield,Waste Management and Disposal,7,0.0249
+IIT Mandi,subfield,Ecological Modeling,6,0.0214
+IIT Mandi,subfield,Ecology,4,0.0142
+IIT Mandi,topic,Landslides and related hazards,78,0.2776
+IIT Mandi,topic,Adsorption and biosorption for pollutant removal,21,0.0747
+IIT Mandi,topic,Advanced oxidation water treatment,13,0.0463
+IIT Mandi,topic,Groundwater flow and contamination studies,12,0.0427
+IIT Mandi,topic,Energy and Environment Impacts,12,0.0427
+IIT Mandi,topic,Hydrology and Drought Analysis,12,0.0427
+IIT Mandi,topic,Climate variability and models,11,0.0391
+IIT Mandi,topic,Hydrological Forecasting Using AI,8,0.0285
+IIT Mandi,topic,Arsenic contamination and mitigation,7,0.0249
+IIT Mandi,topic,Microbial Applications in Construction Materials,7,0.0249
+IIT Mandi,department,School of Civil & Environmental Engineering,146,0.5196
+IIT Mandi,department,(no faculty identified),48,0.1708
+IIT Mandi,department,School of Computing & Electrical Engineering,39,0.1388
+IIT Mandi,department,School of Mechanical & Materials Engineering,34,0.121
+IIT Mandi,department,School of Chemical Sciences,13,0.0463
+IIT Mandi,department,School of Mathematical & Statistical Sciences,9,0.032
+IIT Mandi,department,School of Biosciences & Bio Engineering,9,0.032
+IIT Mandi,department,School of Humanities & Social Sciences,8,0.0285
+IIT Mandi,department,School of Engineering (defunct),6,0.0214
+IIT Mandi,department,,2,0.0071
+IIT Mandi,department,IKSMHA Center,1,0.0036
+IIT Mandi,total,Environmental Science,281,0.0564

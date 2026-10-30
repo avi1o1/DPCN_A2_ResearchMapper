@@ -16,7 +16,7 @@ Figure: large_collab_effect.png
 usage: python stats_large_collab.py"""
 import statistics as st, collections as C
 import numpy as np
-from common import INSTS, load_records, paper_key, cites, n_authors, h_index, write_csv, style, save, COLOR, TEXT2, plt
+from common import INSTS, load_records, paper_key, cites, n_authors, h_index, write_csv, style, save, COLOR, TEXT2, plt, bar_layout, safe_div
 
 LARGE = 10
 BANDS = [("11-20", 11, 20), ("21-50", 21, 50), ("51-99", 51, 99), ("100+", 100, 10 ** 6)]
@@ -38,11 +38,11 @@ def headline(rs):
     top10 = sorted(rs, key=lambda r: -(cites(r) or 0))[:10]
     return {"papers": len(rs), "citations": sum(cs), "citations per paper": round(sum(cs) / len(cs), 2),
             "median citations per paper": st.median(cs),
-            "Q1 share of ranked journal papers": round(sum(r["quartile"]["quartile"] == "Q1" for r in ranked) / len(ranked), 4),
+            "Q1 share of ranked journal papers": safe_div(sum(r["quartile"]["quartile"] == "Q1" for r in ranked), len(ranked)),
             "papers with >= 100 citations": sum(1 for c in cs if c >= 100),
             "large papers among the 10 most cited": sum(1 for r in top10 if is_large(r)),
-            "faculty with papers": len(hs), "median faculty h-index": float(np.median(list(hs.values()))),
-            "mean faculty h-index": round(float(np.mean(list(hs.values()))), 2), "max faculty h-index": max(hs.values()),
+            "faculty with papers": len(hs), "median faculty h-index": float(np.median(list(hs.values()))) if hs else "",
+            "mean faculty h-index": round(float(np.mean(list(hs.values()))), 2) if hs else "", "max faculty h-index": max(hs.values(), default=""),
             "institute h-index": h_index(cs)}, hs
 
 
@@ -59,14 +59,14 @@ def main():
         b, h_rest = headline(rest)
         for k in a:
             row = {"institution": name, "metric": k, "all_papers": a[k], "without_large": b[k]}
-            if isinstance(a[k], (int, float)) and a[k]:
+            if isinstance(a[k], (int, float)) and a[k] and isinstance(b[k], (int, float)):
                 row["change"] = round(b[k] - a[k], 4)
                 row["change_pct"] = round(100 * (b[k] - a[k]) / a[k], 2)
             srows.append(row)
         drop = {rid: h_all[rid] - h_rest.get(rid, 0) for rid in h_all}
         hit = [d for d in drop.values() if d > 0]
         srows += [{"institution": name, "metric": "faculty whose h-index drops", "all_papers": "", "without_large": len(hit),
-                   "change": "", "change_pct": round(100 * len(hit) / len(h_all), 2)},
+                   "change": "", "change_pct": round(100 * len(hit) / len(h_all), 2) if h_all else ""},
                   {"institution": name, "metric": "faculty who lose all their papers", "all_papers": "",
                    "without_large": sum(1 for rid in h_all if rid not in h_rest), "change": "", "change_pct": ""}]
 
@@ -80,7 +80,7 @@ def main():
                              "median_citations_other": st.median(co), "ratio": round(st.median(cb) / max(st.median(co), 1), 2)})
                 ratios.append(st.median(cb) / max(st.median(co), 1))
         prem.append({"institution": name, "year": "2016-2024 (median of yearly ratios)", "large_papers": "", "median_citations_large": "",
-                     "median_citations_other": "", "ratio": round(st.median(ratios), 2)})
+                     "median_citations_other": "", "ratio": round(st.median(ratios), 2) if ratios else ""})
 
         # ---------------- where: departments
         dept_all, dept_big = C.Counter(), C.Counter()
@@ -115,19 +115,19 @@ def main():
             for k in sorted(set(cb) | set(co), key=str):
                 if k is not None:
                     vrows.append({"institution": name, "kind": label, "label": k, "large_papers": cb[k],
-                                  "share_large": round(cb[k] / sum(v for x, v in cb.items() if x is not None), 4),
-                                  "share_other": round(co[k] / sum(v for x, v in co.items() if x is not None), 4)})
+                                  "share_large": safe_div(cb[k], sum(v for x, v in cb.items() if x is not None)),
+                                  "share_other": safe_div(co[k], sum(v for x, v in co.items() if x is not None))})
         foreign = lambda r: any(i.get("country") not in ("IN", None) for i in (r.get("coauthor_institutions") or []))
         for lab, sub in (("large", big), ("other", rest)):
             vrows.append({"institution": name, "kind": "foreign co-author", "label": lab, "large_papers": sum(map(foreign, sub)),
-                          "share_large": round(sum(map(foreign, sub)) / len(sub), 4)})
+                          "share_large": safe_div(sum(map(foreign, sub)), len(sub))})
 
         # ---------------- team size bands
         for band, lo, hi in BANDS:
             sub = [r for r in big if lo <= n_authors(r) <= hi]
             cs = [cites(r) for r in sub if cites(r) is not None]
             brows.append({"institution": name, "authors": band, "papers": len(sub), "citations": sum(cs),
-                          "median_citations": st.median(cs) if cs else "", "share_of_large": round(len(sub) / len(big), 4)})
+                          "median_citations": st.median(cs) if cs else "", "share_of_large": safe_div(len(sub), len(big))})
 
         # ---------------- faculty most affected
         info = {f["roster_id"]: f for r in rs for f in r["faculty"]}
@@ -147,22 +147,24 @@ def main():
     show = [("citations", "citations"), ("papers with >= 100 citations", "papers with 100+ citations"), ("institute h-index", "institute h-index"),
             ("citations per paper", "citations per paper"), ("max faculty h-index", "highest faculty h-index"),
             ("median faculty h-index", "median faculty h-index"), ("Q1 share of ranked journal papers", "Q1 share of journal papers")]
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.2))
+    fig, axes = plt.subplots(1, 2, figsize=(11 if len(INSTS) <= 2 else 14, 4.2 if len(INSTS) <= 2 else 6))
     ax = axes[0]
+    offs, bh = bar_layout(len(INSTS), ratio=0.9444, total=0.72)
     for k, name in enumerate(INSTS.values()):
-        vals = [next(r["change_pct"] for r in srows if r["institution"] == name and r["metric"] == m) for m, _ in show]
-        ax.barh(np.arange(len(show)) + (k - 0.5) * 0.36, vals, height=0.34, color=COLOR[name], label=name)
+        vals = [next((r.get("change_pct") or 0 for r in srows if r["institution"] == name and r["metric"] == m), 0) for m, _ in show]
+        ax.barh(np.arange(len(show)) + offs[k], vals, height=bh, color=COLOR[name], label=name)
     ax.set_yticks(range(len(show)), [lab for _, lab in show], fontsize=9)
     ax.invert_yaxis()
     ax.axvline(0, color=TEXT2, linewidth=0.8)
     ax.grid(axis="y", visible=False)
     ax.set_xlabel("% change without papers of more than 10 authors")
     ax.set_title("What changes without them", fontsize=10)
-    ax.legend(loc="lower left", fontsize=8)
+    ax.legend(loc="lower left", fontsize=8 if len(INSTS) <= 4 else 6, ncol=1 if len(INSTS) <= 4 else 2)
     ax = axes[1]
+    offs, bw = bar_layout(len(INSTS))
     for k, name in enumerate(INSTS.values()):
         rows = [r for r in prem if r["institution"] == name and isinstance(r["year"], int)]
-        ax.bar(np.array([r["year"] for r in rows]) + (k - 0.5) * 0.38, [r["ratio"] for r in rows], width=0.36, color=COLOR[name], label=name)
+        ax.bar(np.array([r["year"] for r in rows]) + offs[k], [r["ratio"] for r in rows], width=bw, color=COLOR[name], label=name)
     ax.axhline(1, color=TEXT2, linewidth=0.8, linestyle=(0, (3, 3)))
     ax.set_xticks(range(2016, 2025))
     ax.grid(axis="x", visible=False)

@@ -39,3 +39,11 @@ WebScrape/v2/*.json
 
 # Enrichment v2 run (ENRICH_*_DIR env vars, see Enrichment/scripts/oa.py)
 Enrichment/cache_v2/
+
+# explorer check screenshots (check_explorer.py)
+Dashboard/site/screens/
+
+# Analysis: pickled records (a speed-up, rebuilt on demand) and per-run temporary files
+Analysis/.rec_cache/
+Analysis/results_v2/paper_citation_metrics.csv
+Analysis/results*/.mem

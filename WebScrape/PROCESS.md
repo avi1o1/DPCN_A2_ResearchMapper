@@ -1129,3 +1129,51 @@ Delhi precision audit (65 sampled; yes needs affiliation text on the paper, tenu
 * NIRF "Other" staff rule (visiting everywhere): not yet applied. Guwahati's 72 excluded "Other" people are Regular staff who joined 1999-2024, not visiting
   (roster notes section 2), so a blanket `visiting` label would be wrong for them; applying the rule to Bhubaneswar (22), Guwahati (72), Indore (25) also means
   re-running the roster, verify and refresh stages and the enrichment for those three. Decision pending.
+
+### 15.17 Sanity-audit rules F1-F6 (2026-10-30)
+The sanity audit of the 23 v2 files (scratchpad `sanity_report.md`, sections A-C) found four rule gaps in the likely tier and in the
+institute comparison. The rules below are implemented in `scripts/sanity_rules.py` (tests: `scripts/test_sanity_rules.py`, run first by
+`run_v2.sh`; `Enrichment/scripts/test_rules.py` for the OpenAlex fallback of F3). F0 (re-run the three old IITs on the v2 procedure) and
+F2(a) (fill the missing joining years) are separate tasks. The branch-categorisation fix is not part of this work.
+* **F6 dates** (`institutes.py` `DATES`): `founded`, `became_iit`, `former_names` for every IIT, from Wikipedia through the polite
+  fetcher on 2026-10-30 (IIT list table, plus the pages of Roorkee, Delhi, ISM, BHU): ISM 1926 / 25 May 2016, BHU 1919 / 2012, Roorkee 1847 /
+  2001 (ordinance of 21 Sep 2001; the list prints 2002, the Act), Delhi 1961 / 1963, Guwahati 1994, Kharagpur 1951, 2008-09 and 2015-16 as
+  before. The start-year bound uses `founded`, never `became_iit`: an "Indian School of Mines" paper of 2016 belongs to IIT (ISM) and is
+  not dropped (the classifier already counts it; case in the tests).
+* **F1 start year** for the likely tier (person-channel records): a record is kept if at least one linked roster person has
+  `year >= max(founded, start - lag)`, with `start` = roster joining_year (for people who are not current and have none: the first year of
+  the `(YYYY-YYYY)` range in the designation), `lag` = 1, and 0 for institutes founded 2015 or later. It fails only if every linked person is a
+  roster person with a start year after the paper; people without a start year or without a roster row (ORCID-profile people, whose ORCID
+  tenure dates were already applied by `build_candidates.py`) can validate a record. Applied in `finalize.py`, i.e. by every `refresh`, from the
+  stored `found_via_person` and the roster file: **no roster pass needed**. Failing records are not deleted: they move to
+  `candidates_unconfirmed_<inst>.json` (`demoted_by`, `unconfirmed_reason`) and are listed in `v2/logs/startyear_demoted_<inst>.jsonl.gz`.
+  `roster_channels.py` (new roster passes only): the ORCID path no longer bypasses the start year (a paper before the start year, or before the
+  founding year, is dropped); the affiliation path keeps the row (a printed affiliation makes it a paper of the IIT, found as `verified`) but no
+  longer credits the roster person before the start year.
+  The demotions (F1, F5) apply to the IITs only; other institution types registered by their own teams (IIITs) get the informational fields
+  (F2b, F3) but no demotion unless `RM_SANITY_RULES=all` is set.
+* **F2(b) `affiliation_substatus`** on every likely record: `likely-timed` (a linked person's start year was tested and is not after the paper),
+  `likely-untimed` (every linked roster person has no start year: the part F1 cannot test; the dashboard can switch these off),
+  `likely-nonroster` (linked only to ORCID-profile people who are not in the roster). `null` for verified / ambiguous records. The summary
+  counts them (`n_likely_timed`, `n_likely_untimed`, `n_likely_nonroster`).
+* **F3 `mega_collab`** (more than 100 authors) with `author_count` and `mega_basis` on every record: Crossref author list (`crossref`), else the
+  channel list (`channel`); Enrichment `merge.py` adds the OpenAlex list as the last fallback (`openalex_capped`: OpenAlex lists at most 100, so
+  100 counts as mega) and keeps the unknown case as `null`. `group3_data.csv` / `group3_data_all.csv` have the columns `mega_collab`,
+  `mega_basis`, `affiliation_substatus`. `Analysis/scripts/stats_mega_collab.py` writes `mega_by_institute.csv`, `mega_with_without.csv` (every
+  per-institute statistic with and without the mega papers) and `mega_ranks.csv` (rank with / without; rank_change negative = the institute falls
+  without them).
+* **F4 cohort** (`Analysis/scripts/stats_faculty_cohort.py`): current faculty in field scope with joining_year <= 2017 (at least 9 of the
+  11 window years) as the seniority-controlled cohort, per-member papers / citations / h with zeros for members without a paper,
+  `faculty_cohort.csv`; `roster_completeness.csv` compares current roster rows with the NIRF counts the roster notes documented
+  (`rosters/nirf_faculty_counts.csv`; blank where none was extracted) and the share of current people with a joining year. Cohorts below 20 people
+  print a WARNING and carry a `warning` text (today: Gandhinagar 4, Goa 3 on the 14-institute data, caused by missing joining years: F2(a)).
+* **F5 namesake guard**: a person whose family name or first given name is generic (hand seed + tokens carried by >= 0.5 % of all roster
+  people of the family + `COMMON_SURNAMES` of `roster_channels.py`) is credited with a paper only through ORCID identity (roster ORCID works, ORCID
+  profile tenure, DBLP pid), a printed affiliation, or >= 2 shared affiliation-verified co-authors; one co-author plus a venue match, or one
+  shared co-author on arXiv, is no longer enough. In `roster_channels.py` for new passes; at refresh in `finalize.py` from the stored
+  `why` strings (`build_candidates.py` now keeps all of them as `meta.roster_whys`, before only the first survived). Demoted records go to the
+  unconfirmed file and to `v2/logs/namesake_demoted_<inst>.jsonl.gz`. Records without a stored `why` are not touched.
+* **Dry run before applying** (`scripts/dry_run.sh`, `scripts/compare_runs.py`): old and new code on copies of one institute's inputs in a scratch
+  folder. IIT Bhilai (live file of 2026-10-30, reproduced exactly by the old code): verified 1,299 -> 1,299, likely 500 -> 458 (F1 13, F5 29;
+  42 records move to the unconfirmed file, nothing else changes), 2 `likely-untimed`; golden recall 72.1 % -> 71.4 % (two arXiv rows). IIT Kanpur
+  (inputs newer than the live file): likely 7,038 -> 7,002 (F1 32, F5 4), verified unchanged.

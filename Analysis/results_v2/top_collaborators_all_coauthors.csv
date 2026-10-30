@@ -1,0 +1,141 @@
+﻿institution,faculty,department,distinct_coauthors,faculty_coauthors
+IIT Bombay,Varun Bhalerao,Physics,777,11
+IIT Bombay,Gopalan Rajaraman,Chemistry,530,17
+IIT Bombay,Debabrata Maiti,Chemistry,473,14
+IIT Bombay,Rohit Srivastava,Biosciences and Bioengineering,421,23
+IIT Bombay,S. Srivastava,Biosciences and Bioengineering,379,12
+IIT Bombay,Subimal Ghosh,Civil Engineering,365,17
+IIT Bombay,Arnab Dutta,Chemistry,363,23
+IIT Bombay,Dinesh Kabra,Physics,351,27
+IIT Bombay,Chandra Venkataraman,Chemical Engineering,295,13
+IIT Bombay,Maryam Shojaei Baghini,Electrical Engineering,278,18
+IIT Madras,Pradeep Thalappil,Chemistry,563,24
+IIT Madras,Tiju Thomas,Metallurgical and Materials Engineering,514,17
+IIT Madras,M S Ramachandra Rao,Physics,450,38
+IIT Madras,Sachin S Gunthe,Civil Engineering,354,11
+IIT Madras,Birabar Ranjit Kumar Nanda,Physics,241,23
+IIT Madras,Ramesh L Gardas,Chemistry,240,17
+IIT Madras,Anil Prabhakar,Electrical Engineering,235,13
+IIT Madras,R Sarathi,Electrical Engineering,235,26
+IIT Madras,R Kothandaraman,Chemistry,228,21
+IIT Madras,S M Shiva Nagendra,Civil Engineering,223,14
+IIT Kanpur,Amit Agarwal,Physics,437,13
+IIT Kanpur,Yogesh Singh Chauhan,Electrical Engineering,416,15
+IIT Kanpur,Krishanu Biswas,Materials Science and Engineering,352,25
+IIT Kanpur,Gupta Raju Kumar,Chemical Engineering,300,21
+IIT Kanpur,Tarun Gupta,Civil Engineering,294,21
+IIT Kanpur,Ashish Garg,Sustainable Energy Engineering,276,19
+IIT Kanpur,Rajiv Sinha,Earth Sciences,251,4
+IIT Kanpur,Kantesh Balani,Materials Science and Engineering,231,21
+IIT Kanpur,Arun Kumar Shukla,Biological Sciences and Bioengineering,221,0
+IIT Kanpur,Avinash Kumar Agarwal,Mechanical Engineering,194,9
+IIT Goa,Santosh Kumar Das,Physics,124,8
+IIT Goa,Sudipta Kanungo,Physics,124,5
+IIT Goa,Bidyadhar Subudhi,Electrical Engineering,93,5
+IIT Goa,Thaseem Thajudeen,Mechanical Engineering,54,9
+IIT Goa,Sharad Sinha,Computer Science and Engineering,54,1
+IIT Goa,Rishikesh Narayan,Chemistry,53,4
+IIT Goa,Santosh Kumar,Physics,47,0
+IIT Goa,Raja Mitra,Chemistry,42,7
+IIT Goa,E. Siva Subramaniam Iyer,Chemistry,42,2
+IIT Goa,Bidhan Pramanick,Electrical Engineering,40,4
+IIT Tirupati,Mamilla Ravi Sankar,Mechanical Engineering,122,5
+IIT Tirupati,Rama Krishna Sai Gorthi,Electrical Engineering,110,3
+IIT Tirupati,Shihabudheen M. Maliyekkal,Civil and Environmental Engineering,93,10
+IIT Tirupati,Sridhar Chimalakonda,Computer Science and Engineering,78,2
+IIT Tirupati,Degala Venkata Kiran,Mechanical Engineering,78,6
+IIT Tirupati,Subrahmanyam Gorthi,Electrical Engineering,68,3
+IIT Tirupati,Arun K Manna,Chemistry,65,2
+IIT Tirupati,Rudra Sekhar Manna,Physics,52,3
+IIT Tirupati,N. Venkaiah,Mechanical Engineering,50,4
+IIT Tirupati,Reetesh Kumar Gangwar,Physics,50,4
+IIT Patna,Sriparna Saha,Computer Science and Engineering,386,11
+IIT Patna,Asif Ekbal,Computer Science and Engineering,231,9
+IIT Patna,Manoranjan Kar,Physics,194,7
+IIT Patna,Anup Kumar Keshri,Metallurgical and Materials Engineering,180,11
+IIT Patna,Jimson Mathew,Computer Science and Engineering,169,10
+IIT Patna,Rajiv Misra,Computer Science and Engineering,163,7
+IIT Patna,Naveen Kumar Nischal,Physics,147,3
+IIT Patna,Neeladri Das,Chemistry,137,6
+IIT Patna,T N Singh,Civil and Environmental Engineering,110,10
+IIT Patna,Preetam Kumar,Electrical Engineering,94,1
+IIT Palakkad,Shanmugaraju Sankarasekaran,Chemistry,161,5
+IIT Palakkad,Sukomal Dey,Electrical Engineering,95,2
+IIT Palakkad,Jagadeesh Bayry,Biological Sciences and Engineering,94,1
+IIT Palakkad,Santhakumar Mohan,Mechanical Engineering,84,5
+IIT Palakkad,Rositha Kuniyil,Chemistry,84,2
+IIT Palakkad,Yugender Goud Kotagiri,Chemistry,82,1
+IIT Palakkad,Abdul Rasheed P,Biological Sciences and Engineering,79,3
+IIT Palakkad,Deepak Jaiswal,Environmental Sciences and Sustainable Engineering Centre,67,0
+IIT Palakkad,Projjwal Banerjee,Physics,62,0
+IIT Palakkad,Athira P,Civil Engineering,62,6
+IIT Guwahati,A. B. Kunnumakkara,Biosciences and Bioengineering,317,16
+IIT Guwahati,Parameswar Krishnan Iyer,Chemistry,274,19
+IIT Guwahati,Vimal Katiyar,Chemical Engineering,238,20
+IIT Guwahati,Sachin Kumar,Biosciences and Bioengineering,236,20
+IIT Guwahati,Sukumar Nandi,Computer Science and Engineering,204,12
+IIT Guwahati,Lingaraj Sahoo,Biosciences and Bioengineering,200,12
+IIT Guwahati,A.S. Achalkumar,Chemistry,196,8
+IIT Guwahati,Santosha K. Dwivedy,Mechanical Engineering,194,14
+IIT Guwahati,Uttam Manna,Chemistry,187,10
+IIT Guwahati,Lalit Mohan Pandey,Biosciences and Bioengineering,186,17
+IIT Hyderabad,Shantanu Desai,Physics,433,3
+IIT Hyderabad,Aravind Kumar Rengan,Biomedical Engineering,327,27
+IIT Hyderabad,Amit Acharyya,Electrical Engineering,248,6
+IIT Hyderabad,Saurabh Kumar Singh,Chemistry,239,14
+IIT Hyderabad,Rajalakshmi P.,Electrical Engineering,232,10
+IIT Hyderabad,Sai Santosh Kumar Raavi,Physics,213,11
+IIT Hyderabad,Asif Qureshi,Civil Engineering,209,9
+IIT Hyderabad,Shiv Govind Singh,Electrical Engineering,185,14
+IIT Hyderabad,Vineeth N Balasubramanian,Computer Science & Engineering,177,5
+IIT Hyderabad,Surendra Kumar Martha,Chemistry,175,10
+IIT Bhubaneswar,Saroj Kumar Nayak,School of Basic Sciences,192,9
+IIT Bhubaneswar,Raj K. Singh,"School of Earth, Ocean and Climate Sciences",177,1
+IIT Bhubaneswar,Rajan Jha,School of Basic Sciences,142,12
+IIT Bhubaneswar,Kisor Kumar Sahu,"School of Minerals, Metallurgical and Materials Engineering",126,16
+IIT Bhubaneswar,U. C. Mohanty,"School of Earth, Ocean and Climate Sciences",120,9
+IIT Bhubaneswar,Debi Prosad Dogra,School of Electrical and Computer Sciences,111,5
+IIT Bhubaneswar,Vinoj. V,"School of Earth, Ocean and Climate Sciences",105,8
+IIT Bhubaneswar,Subhransu Ranjan Samantaray,School of Electrical and Computer Sciences,95,7
+IIT Bhubaneswar,Niharika Mohapatra,School of Basic Sciences,89,7
+IIT Bhubaneswar,Navjeet Bagga,School of Electrical and Computer Sciences,86,2
+IIT (BHU) Varanasi,Pralay Maiti,School of Materials Science and Technology,353,26
+IIT (BHU) Varanasi,Rajiv Prakash,School of Materials Science and Technology,278,21
+IIT (BHU) Varanasi,Bhola Nath Pal,School of Materials Science and Technology,225,22
+IIT (BHU) Varanasi,Santanu Das,Department of Ceramic Engineering,218,15
+IIT (BHU) Varanasi,Sandip Chatterjee,Department of Physics,217,8
+IIT (BHU) Varanasi,"Ram Sharan Singh, FBRS, FIE",Department of Chemical Engineering and Technology,210,14
+IIT (BHU) Varanasi,Avanish Singh Parmar,Department of Physics,201,17
+IIT (BHU) Varanasi,M. S. Muthu,Department of Pharmaceutical Engineering and Technology,195,15
+IIT (BHU) Varanasi,R. K. Saket,Department of Electrical Engineering,184,9
+IIT (BHU) Varanasi,Satyabrata Jit,Department of Electronics Engineering,183,15
+IIT Gandhinagar,Dhiraj D Bhatia,Biological Sciences and Engineering,429,21
+IIT Gandhinagar,Vimal Mishra,Civil Engineering,255,5
+IIT Gandhinagar,Sudhanshu Sharma,Chemistry,214,20
+IIT Gandhinagar,Superb Kumar Misra,Materials Engineering,148,12
+IIT Gandhinagar,Rupak Banerjee,Physics,138,6
+IIT Gandhinagar,Udit Bhatia,Civil Engineering,131,12
+IIT Gandhinagar,Chandra Sekhar Tiwary,Materials Engineering,127,5
+IIT Gandhinagar,Nihar Ranjan Mohapatra,Electrical Engineering,123,12
+IIT Gandhinagar,Bhaskar Datta,Chemistry,122,12
+IIT Gandhinagar,Vijay Thiruvenkatam,Biological Sciences and Engineering,120,5
+IIT Indore,Abhirup Datta,"Astronomy, Astrophysics and Space Engineering",500,8
+IIT Indore,Biswarup Pathak,Chemistry,364,17
+IIT Indore,Vimal Bhatia,Electrical Engineering,313,10
+IIT Indore,Shaikh M Mobin,Chemistry,309,17
+IIT Indore,Rajesh Kumar,Physics,302,21
+IIT Indore,Raghunath Sahoo,Physics,299,9
+IIT Indore,Hem Chandra Jha,Biosciences and Biomedical Engineering,263,13
+IIT Indore,Ram Bilas Pachori,Electrical Engineering,239,15
+IIT Indore,Suman Majumdar,"Astronomy, Astrophysics and Space Engineering",226,4
+IIT Indore,Rupesh Shivaji Devan,Metallurgical Engineering and Materials Science,226,8
+IIT Mandi,Aditya Nigam,School of Computing & Electrical Engineering,267,11
+IIT Mandi,Varun Dutt,School of Computing & Electrical Engineering,199,4
+IIT Mandi,Ajay Soni,School of Physical Sciences,191,10
+IIT Mandi,Satinder Sharma,School of Computing & Electrical Engineering,183,22
+IIT Mandi,Viswanath Balakrishnan,School of Mechanical & Materials Engineering,180,19
+IIT Mandi,Shyam Kumar Masakapalli,School of Biosciences & Bio Engineering,180,9
+IIT Mandi,Aditi Halder,School of Chemical Sciences,145,14
+IIT Mandi,Amit Jaiswal,School of Biosciences & Bio Engineering,143,4
+IIT Mandi,Suman Kalyan Pal,School of Physical Sciences,132,5
+IIT Mandi,Rahul Vaish,School of Mechanical & Materials Engineering,130,10

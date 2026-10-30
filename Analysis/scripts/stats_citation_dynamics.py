@@ -1,5 +1,5 @@
 """Citation network beyond the brief: self-citation, PageRank corrections, distribution fits, preferential attachment.
-Same graph as stats_citation.py (internal edges between analysis-set papers of both IITs).
+Same graph as stats_citation.py (internal edges between analysis-set papers of the institutes of the run).
   self-citation      an internal edge whose citing and cited paper share an author (same OpenAlex author id, or the
                      same faculty member by roster id). The brief's in-degree "within your institution's corpus" is
                      mostly this, so every ranking below is also given on the network without self-citations.
@@ -31,11 +31,10 @@ import networkx as nx
 import powerlaw
 from scipy.optimize import curve_fit
 from scipy.stats import spearmanr
-from common import INSTS, YEARS, PARTIAL_YEAR, write_csv, style, save, COLOR, TEXT2, MUTED, plt
+from common import INSTS, YEARS, PARTIAL_YEAR, write_csv, style, save, COLOR, TEXT2, MUTED, plt, CLUSTER, safe_div
 from stats_citation import citation_graph, node_of
 
 warnings.filterwarnings("ignore", module="powerlaw")
-CLUSTER = "Cluster (both IITs)"
 
 
 def main():
@@ -52,7 +51,7 @@ def main():
     for scope, keep in scopes.items():
         es = [e for e in G.edges if keep(e[0]) and keep(e[1])]
         ns = sum(is_self[e] for e in es)
-        srows.append({"scope": scope, "citation_edges": len(es), "self_citations": ns, "self_share": round(ns / len(es), 4),
+        srows.append({"scope": scope, "citation_edges": len(es), "self_citations": ns, "self_share": safe_div(ns, len(es)),
                       "non_self_edges": len(es) - ns,
                       "papers_cited_at_least_once": len({v for _, v in es}),
                       "papers_cited_at_least_once_non_self": len({e[1] for e in es if not is_self[e]})})
@@ -70,15 +69,19 @@ def main():
           "self_citations": sum(is_self[(u, n)] for u in G.predecessors(n)), "global_citations": 0} for n in out],
         key=lambda r: -r["internal_in_degree"]))
 
-    fig, ax = plt.subplots(figsize=(6.5, 4))
+    fig, ax = plt.subplots(figsize=(6.5, 4 if len(INSTS) <= 2 else 5))
+    low = 100
     for name in INSTS.values():
         rs = [r for r in yrows if r["scope"] == name and r["self_share"] != ""]
+        if not rs:
+            continue
+        low = min(low, min(100 * r["self_share"] for r in rs))
         ax.plot([r["year"] for r in rs], [100 * r["self_share"] for r in rs], color=COLOR[name], marker="o", markersize=4, label=name)
-    ax.set_ylim(70, 100)
+    ax.set_ylim(70 if low >= 70 else max(0, 10 * int(low / 10) - 10), 100)
     ax.set_ylabel("% of internal citations that are self-citations")
     ax.set_xlabel("year of the citing paper (2026 partial)")
     ax.set_title("Most citations inside an institute come from the same authors")
-    ax.legend(loc="lower left")
+    ax.legend(loc="lower left", ncol=1 if len(INSTS) <= 4 else 2, fontsize=9 if len(INSTS) <= 4 else 6)
     save(fig, "self_citation_yearly.png")
 
     # ------------------------------------------------ PageRank variants

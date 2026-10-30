@@ -15,7 +15,7 @@ usage: python stats_faculty.py"""
 import os, collections as C
 import numpy as np
 from common import (INSTS, YEARS, RES, load_records, paper_key, cites, read_csv, write_csv, h_index, i10_index, oa_extra,
-                    style, save, COLOR, MUTED, plt)
+                    style, save, COLOR, MUTED, plt, bar_layout, panels, note_skip, oa_have)
 
 
 def summary(vals):
@@ -75,6 +75,8 @@ def main():
     srows = []
     for name in recs:
         cr = [c for c in crow if c["institution"] == name and c["h_openalex_all_career"] is not None]
+        if not cr:
+            continue
         a = np.array([c["h_our_counts"] for c in cr]); b = np.array([c["h_openalex_counts"] for c in cr])
         c_ = np.array([c["h_openalex_all_career"] for c in cr])
         srows.append({"institution": name, "faculty_compared": len(cr),
@@ -83,10 +85,16 @@ def main():
                       "mean_h_our_counts": round(a.mean(), 2), "mean_h_openalex_all_career": round(c_.mean(), 2),
                       "share_below_career_h": round(float(np.mean(a < c_)), 3),
                       "median_ratio_ours_to_career": round(float(np.median(a[c_ > 0] / c_[c_ > 0])), 3)})
-    write_csv("h_index_check_summary.csv", srows)
-    fig, axes = plt.subplots(1, 2, figsize=(9, 4), sharey=True)
+    if not srows:
+        note_skip("stats_faculty.py", "h-index vs OpenAlex all-career h (h_index_check_summary.csv, h_index_check.png)",
+                  "no OpenAlex author profiles cached", "fetch_openalex_extra.py (OpenAlex credits): oa_authors.json")
+    else:
+        write_csv("h_index_check_summary.csv", srows)
+    fig, axes = panels(len(recs), (9, 4), sharey=True)
     for ax, name in zip(axes, recs):
         cr = [c for c in crow if c["institution"] == name and c["h_openalex_all_career"] is not None]
+        if not cr:
+            continue
         x = [c["h_openalex_all_career"] for c in cr]; y = [c["h_our_counts"] for c in cr]
         ax.scatter(x, y, s=9, color=COLOR[name], alpha=0.45, linewidths=0)
         m = max(max(x), max(y)) + 2
@@ -96,11 +104,14 @@ def main():
     axes[0].set_ylabel("h-index, our data (2016-2026)")
     fig.suptitle("Our h-index against the OpenAlex all-career h-index (dashed: equal)", x=0.01, y=1.03, ha="left",
                  fontweight="bold", fontsize=12)
-    save(fig, "h_index_check.png")
+    if srows:
+        save(fig, "h_index_check.png")
+    else:
+        plt.close(fig)
 
     # ------------------------------------------------ h-index at the end of each year
     yrows = []
-    for name, rs in recs.items():
+    for name, rs in recs.items() if oa_have("counts_by_year") else ():
         fl = [f for f in fac if f["institution"] == name]
         for y in YEARS:
             def cum(r):
@@ -112,27 +123,38 @@ def main():
                 if ps:
                     hs.append(h_index(cum(r) for r in ps))
             inst_h = h_index(cum(r) for r in rs if r["year"] <= y)
+            if not hs:
+                continue
             yrows.append({"institution": name, "year": y, "faculty_with_papers": len(hs),
                           "mean_h": round(float(np.mean(hs)), 2), "median_h": float(np.median(hs)),
                           "p90_h": float(np.percentile(hs, 90)), "max_h": max(hs), "institute_h_index": inst_h,
                           "partial_year": y == YEARS[-1]})
+    if not yrows:
+        note_skip("stats_faculty.py", "h-index at the end of each year (h_index_by_year.csv)",
+                  "needs yearly citation counts per paper (OpenAlex counts_by_year), not cached for these institutes",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_counts_by_year.json")
+        return _report(srows, yrows)
     write_csv("h_index_by_year.csv", yrows)
-    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.8))
+    fig, axes = plt.subplots(1, 2, figsize=(9.5 if len(recs) <= 2 else 14, 3.8))
     x = np.arange(len(YEARS))
+    offs, bw = bar_layout(len(recs))
     for k, name in enumerate(recs):
-        yr = [r for r in yrows if r["institution"] == name]
-        xs = x + (k - 0.5) * 0.38
-        axes[0].bar(xs, [r["mean_h"] for r in yr], width=0.36, color=COLOR[name], label=name)
-        axes[1].bar(xs, [r["institute_h_index"] for r in yr], width=0.36, color=COLOR[name], label=name)
+        yr = {r["year"]: r for r in yrows if r["institution"] == name}
+        xs = x + offs[k]
+        axes[0].bar(xs, [yr.get(y, {}).get("mean_h", 0) for y in YEARS], width=bw, color=COLOR[name], label=name)
+        axes[1].bar(xs, [yr.get(y, {}).get("institute_h_index", 0) for y in YEARS], width=bw, color=COLOR[name], label=name)
     for ax, t in zip(axes, ("Mean faculty h-index at year end", "Institute h-index at year end")):
         ax.set_xticks(x, [str(y)[2:] for y in YEARS])
         ax.set_title(t, fontsize=10)
         ax.grid(axis="x", visible=False)
-    axes[0].legend(loc="upper left")
+    axes[0].legend(loc="upper left", ncol=1 if len(recs) <= 4 else 2, fontsize=9 if len(recs) <= 4 else 6)
     fig.suptitle("h-index over the years (papers and citations up to each year; 2026 to October)", x=0.01, y=1.04,
                  ha="left", fontweight="bold", fontsize=12)
     save(fig, "h_index_by_year.png")
+    _report(srows, yrows)
 
+
+def _report(srows, yrows):
     for s in srows:
         print(s)
     for r in yrows:

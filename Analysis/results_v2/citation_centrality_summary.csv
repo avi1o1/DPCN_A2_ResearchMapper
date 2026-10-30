@@ -1,0 +1,35 @@
+﻿metric,value
+papers (nodes),132600
+citations (edges),297975
+spectral radius rho,4.7467
+Katz a,0.1053
+papers with Katz score > 0 (cited at least once),70050
+HITS: s1/s2,1.3985
+HITS: hub support,5532
+HITS: authority support,4408
+HITS: one sign,True
+in-degree: Spearman with worldwide citations (n = 132600),0.684
+in-degree: top-100 share from 2016-2017,0.34
+PageRank: Spearman with worldwide citations (n = 132600),0.666
+PageRank: top-100 share from 2016-2017,0.82
+Katz: Spearman with worldwide citations (n = 132600),0.685
+Katz: top-100 share from 2016-2017,0.62
+HITS authority: Spearman with worldwide citations (n = 4408),0.256
+HITS authority: top-100 share from 2016-2017,0.18
+Spearman in-degree vs PageRank (n = 132600),0.959
+Spearman in-degree vs Katz (n = 132600),0.995
+Spearman in-degree vs HITS authority (n = 4408),0.322
+Spearman PageRank vs Katz (n = 132600),0.961
+Spearman PageRank vs HITS authority (n = 4408),0.104
+Spearman Katz vs HITS authority (n = 4408),0.365
+in-degree: top-100 most common field,Physics and Astronomy (71)
+in-degree: top-100 papers of the most frequent faculty member,17 (Seema Bahinipati (IIT Bhubaneswar))
+PageRank: top-100 most common field,Physics and Astronomy (33)
+PageRank: top-100 papers of the most frequent faculty member,6 (Raghunath Sahoo (IIT Indore))
+Katz: top-100 most common field,Physics and Astronomy (80)
+Katz: top-100 papers of the most frequent faculty member,16 (Shantanu Desai (IIT Hyderabad))
+HITS authority: top-100 most common field,Physics and Astronomy (100)
+HITS authority: top-100 papers of the most frequent faculty member,80 (Seema Bahinipati (IIT Bhubaneswar))
+citation cycles: strongly connected groups of >= 2 papers,346
+papers inside citation cycles,917
+"largest cycle group: papers, citations, faculty","38, 208, Archana Pai (IIT Bombay) 4; Surendra Nadh Somala (IIT Hyderabad) 3"
