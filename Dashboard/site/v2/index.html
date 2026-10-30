@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>IIT Research Map: 14 newer IITs (draft)</title>
+<title>IIT Research Map: newer IITs (draft)</title>
 <style>
 :root {
   --bg: #ffffff; --band: #f5f5f7; --card: #ffffff; --fg: #1d1d1f; --fg2: #6e6e73; --line: #d2d2d7; --hair: #e8e8ed;
@@ -65,8 +65,8 @@ footer { padding: 28px 0 60px; color: var(--fg2); font-size: 13px; }
 <body>
 <header class="top">
   <div class="wrap">
-    <h1>IIT Research Map: the 14 newer IITs</h1>
-    <p class="sub">Papers, faculty, journals, conferences, collaborators and citation networks for IIT Bombay, Madras, Kanpur, Goa, Tirupati, Patna, Palakkad, Guwahati, Hyderabad, Bhubaneswar, (BHU) Varanasi, Gandhinagar, Indore and Mandi, 2016 to October 2026.</p>
+    <h1 id="h1">IIT Research Map: the newer IITs</h1>
+    <p class="sub" id="subtitle"></p>
     <div class="draft"><b>Draft.</b> Built from the pre-A2 enrichment output: the OpenAlex title-search stage (A2) has not run yet, journal quartiles are waiting for the Scimago tables, and the categorisation fixes (branch fix-categorisation) are not applied to this data. Panels that cannot be computed yet are listed at the bottom. Numbers will change when the files are refreshed.</div>
   </div>
 </header>
@@ -98,12 +98,14 @@ const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const fmt = (x, d = 0) => x == null || x === "" ? "n/a" : Number(x).toLocaleString("en", {maximumFractionDigits: d, minimumFractionDigits: d});
 const pct = (x, d = 1) => x == null ? "n/a" : (100 * x).toFixed(d) + "%";
+document.getElementById("h1").textContent = `IIT Research Map: ${NAMES.length} newer IITs`;
+document.getElementById("subtitle").textContent = `Papers, faculty, journals, conferences, collaborators and citation networks for ${NAMES.map(n => n.replace("IIT ", "")).join(", ")}, 2016 to October 2026.`;
 const short = n => n.replace("IIT (BHU) Varanasi", "BHU").replace("IIT ", "");
 let charts = [];
 
 // ------------------------------------------------------------------ state
 const selA = document.getElementById("selA"), selB = document.getElementById("selB");
-selA.innerHTML = `<option value="${ALL}">All 14 (overview)</option>` + NAMES.map(n => `<option>${esc(n)}</option>`).join("");
+selA.innerHTML = `<option value="${ALL}">All ${NAMES.length} (overview)</option>` + NAMES.map(n => `<option>${esc(n)}</option>`).join("");
 selB.innerHTML = `<option value="">none</option>` + NAMES.map(n => `<option>${esc(n)}</option>`).join("");
 const q = new URLSearchParams(location.hash.slice(1));
 selA.value = NAMES.includes(q.get("a")) || q.get("a") === ALL ? q.get("a") : ALL;
@@ -159,7 +161,7 @@ function secOverview(st) {
     {h: "Citations / paper", n: 1}, {h: "Median faculty h", n: 1}, {h: "Institute h", n: 1}, {h: "Conf. papers with CORE rank", n: 1}, {h: ">10-author papers", n: 1}, {h: "Self-citation share", n: 1}, {h: "Indian in/out citation ratio", n: 1}],
     rows.map(r => [`<span class="sw"><span class="dot" style="background:${COLOR[r.n]}"></span><a href="#a=${encodeURIComponent(r.n)}" onclick="selA.value='${esc(r.n)}';selB.value='';render();">${esc(r.n)}</a></span>`,
       fmt(r.pap), fmt(r.fac), fmt(r.roster), fmt(r.cit), fmt(r.cpp, 1), fmt(r.h, 0), fmt(r.ih), pct(r.core), pct(r.big), pct(r.self, 0), fmt(r.ratio, 2)]).map(r => r), "");
-  return `<section id="overview"><div class="wrap"><h2>All 14 institutes</h2>
+  return `<section id="overview"><div class="wrap"><h2>All ${NAMES.length} institutes</h2>
   <p class="sub">Pick an institute above to see its own panels, or two to compare them. "Faculty with papers" = faculty on the institute's pages with at least one paper in the analysis set; "roster listed" = everyone on those pages (all statuses, departments in scope).</p>
   <div class="grid"><div class="card">${tbl}</div></div>
   <div class="grid two" style="margin-top:16px">
@@ -313,7 +315,7 @@ function secCollab(st) {
   const fc = perInst(st, (n, p, i) => card(`${sw(n, i)}: faculty with most faculty co-authors`, table(
     [{h: "Faculty"}, {h: "Department"}, {h: "Faculty co-authors", n: 1}, {h: "Joint papers", n: 1}],
     p.collaborators.map(c => [c.name, c.dept, c.faculty_coauthors, c.joint_papers])),
-    "Faculty network of all 14 institutes together: an edge = two faculty on one paper."));
+    "Faculty network of all the institutes together: an edge = two faculty on one paper."));
   return `<section id="collab"><div class="wrap"><h2>Collaborators and partner institutions</h2><p class="sub">Indian partner institutions ranked by co-authored papers (OpenAlex institution of the co-authors).</p>
   <div class="grid two">${card("Top partner institutions", '<div id="pt" class="chart tall"></div>')}${card("Partners by kind of institution", '<div id="pc" class="chart tall"></div>', "Course clusters: old and large IITs, newer IITs, IIITs, NITs, IISc / TIFR / IISERs, CSIR labs and others.")}</div>
   <div style="margin-top:16px">${fc}</div></div></section>`;
@@ -346,10 +348,10 @@ function secNet(st) {
     R("Mean / max faculty co-authors", x => `${fmt(x.faculty_net.mean_ties, 1)} / ${fmt(x.faculty_net.max_ties)}`),
     R("Communities touched", x => fmt(x.faculty_net.communities))], "kpis");
   const pr = perInst(st, (n, p, i) => card(`${sw(n, i)}: papers ranked highest by PageRank`, table([{h: "Title", cls: "title", raw: 1}, {h: "Year", n: 1}, {h: "In-degree", n: 1}, {h: "Citations", n: 1}],
-    p.network.pagerank.map(t => [doi(t.title, t.doi), t.year, t.in_degree, fmt(t.citations)])), "PageRank on the citation network of all 14 institutes; it favours older papers."));
+    p.network.pagerank.map(t => [doi(t.title, t.doi), t.year, t.in_degree, fmt(t.citations)])), "PageRank on the citation network of all the institutes; it favours older papers."));
   const cn = D.cluster_net, key = Object.keys(cn)[0];
   return `<section id="net"><div class="wrap"><h2>Citation network</h2>
-  <p class="sub">Nodes: analysis-set papers; edge: one cites the other (OpenAlex reference lists), across all 14 institutes${key ? `: ${fmt(cn[key].papers)} papers, ${fmt(cn[key].citation_edges)} citations` : ""}. A paper of two institutes is a node of both institute networks.</p>
+  <p class="sub">Nodes: analysis-set papers; edge: one cites the other (OpenAlex reference lists), across all ${NAMES.length} institutes${key ? `: ${fmt(cn[key].papers)} papers, ${fmt(cn[key].citation_edges)} citations` : ""}. A paper of two institutes is a node of both institute networks.</p>
   <div class="grid two">${card("Summary", tbl)}${card("Citation flow with other Indian institutions, by year of the citing paper", '<div id="fl" class="chart tall"></div>', "Solid: in-flow (they cite us). Dashed: out-flow (we cite them). 2026 is partial.")}</div>
   <div style="margin-top:16px">${pr}</div></div></section>`;
 }

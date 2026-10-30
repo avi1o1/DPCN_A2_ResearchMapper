@@ -1,8 +1,9 @@
 """Shared loading, definitions and chart style for the Group 3 statistics.
 Which institutes, where the data is and where results go are set by environment variables. The defaults are the original
 Kharagpur / Roorkee analysis (same paths, same numbers as before):
-  ANALYSIS_INSTS       comma list of registry keys (iit_kharagpur,iit_roorkee,...) or a preset: 'v2' = the 14 newer IITs
-                       (default: iit_kharagpur,iit_roorkee)
+  ANALYSIS_INSTS       comma list of registry keys (iit_kharagpur,iit_roorkee,...) or a preset: 'v2' / 'auto' = every newer IIT
+                       in the registry that is complete in the input folder (the 14 first, later Delhi, ISM, Jodhpur,
+                       Jammu, Bhilai, Dharwad as they land); default: iit_kharagpur,iit_roorkee
   ANALYSIS_PROFILE     'v2' sets the defaults of every variable below for the 14-institute run (Enrichment/out_v2 ->
                        Analysis/results_v2, figures_v2, cache_v2, offline). Any variable can still be set on its own.
   ANALYSIS_IN_DIR      folder with <inst>_enriched.json, group3_data.csv, citation_network.csv, authorship_network.csv,
@@ -51,15 +52,60 @@ REGISTRY = {
     "iit_gandhinagar": ("IIT Gandhinagar", "Indian Institute of Technology Gandhinagar", "I27674431", "gandhinagar", "#7a7a7a"),
     "iit_indore": ("IIT Indore", "Indian Institute of Technology Indore", "I64295750", "indore", "#d4572b"),
     "iit_mandi": ("IIT Mandi", "Indian Institute of Technology Mandi", "I9579091", "mandi", "#4ea3c9"),
+    # the next six land in Enrichment/out_v2 after the first 14; their display names are read from group3_data.csv
+    "iit_delhi": ("IIT Delhi", "Indian Institute of Technology Delhi", "I68891433", "delhi", "#a05195"),
+    "iit_ism": ("IIT (ISM) Dhanbad", "Indian Institute of Technology Dhanbad", "I189109744", "ism", "#665191"),
+    "iit_jodhpur": ("IIT Jodhpur", "Indian Institute of Technology Jodhpur", "I154549908", "jodhpur", "#f95d6a"),
+    "iit_jammu": ("IIT Jammu", "Indian Institute of Technology Jammu", "I4210127441", "jammu", "#2f4b7c"),
+    "iit_bhilai": ("IIT Bhilai", "Indian Institute of Technology Bhilai", "I4210121466", "bhilai", "#ff7c43"),
+    "iit_dharwad": ("IIT Dharwad", "Indian Institute of Technology Dharwad", "I4210152718", "dharwad", "#00876c"),
 }
 PRESETS = {
     "default": ["iit_kharagpur", "iit_roorkee"],
-    "v2": ["iit_bombay", "iit_madras", "iit_kanpur", "iit_goa", "iit_tirupati", "iit_patna", "iit_palakkad", "iit_guwahati",
-           "iit_hyderabad", "iit_bhubaneswar", "iit_bhu", "iit_gandhinagar", "iit_indore", "iit_mandi"],
+    # 'v2' / 'auto': every registered institute except the default pair whose enriched JSON is in the input folder AND which
+    # appears in group3_data.csv (an institute whose enrichment is half-written is left out until it is complete)
+    "v2": [k for k in REGISTRY if k not in ("iit_kharagpur", "iit_roorkee")],
 }
+PRESETS["auto"] = PRESETS["v2"]
+_SPARE = ["#b5651d", "#5f9ea0", "#c71585", "#556b2f"]
 PROFILE = os.environ.get("ANALYSIS_PROFILE", "").strip()
 _sel = os.environ.get("ANALYSIS_INSTS", "").strip() or (PROFILE if PROFILE in PRESETS else "default")
-INST_KEYS = PRESETS[_sel] if _sel in PRESETS else [k.strip() for k in _sel.split(",") if k.strip()]
+_v2 = PROFILE == "v2"
+
+
+def _path(var, default):
+    v = os.environ.get(var, "").strip()
+    return os.path.abspath(v if os.path.isabs(v) else os.path.join(ROOT, v)) if v else default
+
+
+DATA = _path("ANALYSIS_IN_DIR", os.path.join(ENRICH, "out_v2" if _v2 else "out"))
+
+
+def _present_in_group3():
+    """{record_id prefix (institute key): institution name} for the institutes that have rows in group3_data.csv."""
+    fn = os.path.join(DATA, "group3_data.csv")
+    if not os.path.exists(fn):
+        return {}
+    out = {}
+    with open(fn, encoding="utf-8-sig", newline="") as fh:
+        for r in csv.DictReader(fh):
+            k = r["record_id"].rsplit("-", 1)[0]
+            if k not in out:
+                out[k] = r["institution"]
+    return out
+
+
+if _sel in PRESETS and _sel != "default":
+    _present = _present_in_group3()
+    _extra = sorted(k for k in _present if k not in REGISTRY and os.path.exists(os.path.join(DATA, k + "_enriched.json")))
+    for _i, _k in enumerate(_extra):                          # an institute nobody registered: generic names
+        _s = _k.replace("iit_", "")
+        REGISTRY[_k] = (_present[_k], "Indian Institute of Technology " + _s.title(), "", _s, _SPARE[_i % len(_SPARE)])
+    INST_KEYS = [k for k in PRESETS[_sel] + _extra if k in _present and os.path.exists(os.path.join(DATA, k + "_enriched.json"))]
+    for _k in INST_KEYS:                                      # the name in the data wins over the registry's
+        REGISTRY[_k] = (_present[_k],) + REGISTRY[_k][1:]
+else:
+    INST_KEYS = PRESETS[_sel] if _sel in PRESETS else [k.strip() for k in _sel.split(",") if k.strip()]
 for _k in INST_KEYS:
     if _k not in REGISTRY:
         raise SystemExit(f"ANALYSIS_INSTS: unknown institute '{_k}' (registry: {', '.join(REGISTRY)}; presets: {', '.join(PRESETS)})")
@@ -77,13 +123,6 @@ PAIR_LABEL = "Kharagpur-Roorkee" if N_INST == 2 else "cross-institute"   # label
 INST_PHRASE = "both IITs" if N_INST == 2 else f"all {N_INST} IITs"
 
 
-def _path(var, default):
-    v = os.environ.get(var, "").strip()
-    return os.path.abspath(v if os.path.isabs(v) else os.path.join(ROOT, v)) if v else default
-
-
-_v2 = PROFILE == "v2"
-DATA = _path("ANALYSIS_IN_DIR", os.path.join(ENRICH, "out_v2" if _v2 else "out"))
 RES = _path("ANALYSIS_OUT_DIR", os.path.join(ROOT, "results_v2" if _v2 else "results"))
 FIG = _path("ANALYSIS_FIG_DIR", os.path.join(ROOT, "figures_v2" if _v2 else "figures"))
 CACHE = _path("ANALYSIS_CACHE_DIR", os.path.join(ROOT, "cache_v2" if _v2 else "cache"))
