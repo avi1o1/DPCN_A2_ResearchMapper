@@ -376,13 +376,13 @@ Main file = verified + unverified-likely (`v2/<key>.json`); unconfirmed = "possi
 | IIIT | main | verified | likely | unconfirmed | recall | DOI recall (n) | P verified | P likely | P possible |
 |---|---|---|---|---|---|---|---|---|---|
 | Delhi | 4,695 | 2,568 | 2,127 | 1,003 | 85.0 % (368/433) | 86.6 % (247) | 100 % | 97 % (34/35) | 21 % |
-| Allahabad | 3,137 | 2,107 | 1,030 | 557 | 83.8 % (222/265) | 100 % (2) | 100 % | 80 % (28/35) | 30 % |
-| Gwalior | 2,146 | 1,378 | 768 | 713 | 81.3 % (217/267) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
+| Allahabad | 3,137 | 2,107 | 1,030 | 557 | 84.1 % (222/264) | 100.0 % (2) | 100 % | 80 % (28/35) | 30 % |
+| Gwalior | 2,146 | 1,378 | 768 | 713 | 81.9 % (217/265) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
 | Bangalore | 1,642 | 1,091 | 549 | 329 | 79.7 % (208/261) | 88.3 % (137) | 100 % | 97 % (32/33) | 29 % |
 | Jabalpur | 3,064 | 1,849 | 1,215 | 398 | 74.5 % (204/274) | 88.4 % (69) | 100 % | 91 % (30/33) | 58 % |
-| Hyderabad | 6,352 | 2,957 | 3,395 | 835 | 94.7 % (305/322) | 100 % (7) | 100 % | 92 % (35/38)* | 24 % |
-| Pune | 235 | 164 | 71 | 87 | 62.8 % (59/94) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
-| Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (151/297) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
+| Hyderabad | 6,352 | 2,957 | 3,395 | 835 | 94.7 % (303/320) | 100.0 % (7) | 100 % | 92 % (35/38)* | 24 % |
+| Pune | 235 | 164 | 71 | 87 | 62.6 % (57/91) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
+| Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (150/295) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
 
 Bangalore's main file also holds 2 `ambiguous` records. \* Hyderabad includes the institute repository (§7.3); its precision audit predates it. `validate.py`: 0 violations for all eight.
 
@@ -483,28 +483,28 @@ violations for every institute below.
 
 | IIIT | main | verified | likely | unconfirmed | recall (golden) | DOI recall (n) | P verified | P likely | P possible |
 |---|---|---|---|---|---|---|---|---|---|
-| Bhubaneswar | 1,123 | 702 | 421 | 396 | 67.3 % (72/107) | 72.3 % (47) | 100 % | 91 % (32/35) | 13 % |
+| Bhubaneswar | 1,123 | 702 | 421 | 396 | 67.0 % (71/106) | 71.7 % (46) | 100 % | 91 % (32/35) | 13 % |
 | Naya Raipur | 1,195 | 822 | 373 | 96 | 76.2 % (96/126) | 91.7 % (36) | 100 % | 81 % (25/31) | 19 % |
-| Guwahati | 1,231 | 805 | 426 | 187 | 55.3 % (83/150) | 55.6 % (9) | 100 % | 82 % (28/34) | 21 % |
+| Guwahati | 1,231 | 805 | 426 | 187 | 56.5 % (83/147) | 55.6 % (9) | 100 % | 82 % (28/34) | 21 % |
 | Sri City | 879 | 568 | 311 | 288 | 69.7 % (99/142) | 62.9 % (35) | 100 % | 71 % (25/35) | 36 % |
-| Lucknow | 240 | 176 | 64 | 70 | 81.5 % (44/54) | 85.7 % (21) | 100 % | 61 % (19/31) | 24 % |
-| Kurnool | 562 | 410 | 152 | 203 | 61.4 % (27/44) | 72.2 % (18) | 100 % | 50 % (15/30) | 15 % |
-| Vadodara | 364 | 241 | 123 | 153 | 63.6 % (63/99) | 81.0 % (21) | 100 % | 66 % (25/38)* | 7 % |
-| Dharwad | 426 | 295 | 131 | 140 | 68.8 % (55/80) | 77.8 % (27) | 100 % | 74 % (25/34) | 36 % |
+| Lucknow | 240 | 176 | 64 | 70 | 83.0 % (44/53) | 85.7 % (21) | 100 % | 61 % (19/31) | 24 % |
+| Kurnool | 562 | 410 | 152 | 203 | 62.8 % (27/43) | 77.8 % (18) | 100 % | 50 % (15/30) | 15 % |
+| Vadodara | 364 | 241 | 123 | 153 | 63.5 % (61/96) | 80.0 % (20) | 100 % | 66 % (25/38)* | 7 % |
+| Dharwad | 426 | 295 | 131 | 140 | 71.4 % (55/77) | 77.8 % (27) | 100 % | 74 % (25/34) | 36 % |
 | Kota | 225 | 148 | 77 | 161 | 58.1 % (43/74) | 56.0 % (25) | 100 % | 48 % (15/31) | 6 % |
 | Sonepat | 188 | 153 | 35 | 14 | 88.2 % (15/17) | 92.3 % (13) | 100 % | 82 % (23/28) | 0 % |
-| Una | 246 | 183 | 63 | 100 | 57.0 % (57/100) | 63.0 % (54) | 100 % | 63 % (22/35) | 23 % |
+| Una | 246 | 183 | 63 | 100 | 60.6 % (57/94) | 66.7 % (51) | 100 % | 63 % (22/35) | 23 % |
 | Tiruchirappalli | 187 | 148 | 39 | 65 | 61.5 % (24/39) | 70.6 % (17) | 100 % | 69 % (22/32) | 24 % |
-| Kalyani | 439 | 289 | 150 | 85 | 76.2 % (77/101) | 70.8 % (24) | 100 % | 87 % (34/39) | 14 % |
-| Kottayam | 716 | 566 | 150 | 129 | 59.3 % (86/145) | 69.8 % (43) | 100 % | 76 % (28/37) | 12 % |
-| Manipur | 132 | 95 | 37 | 84 | 49.0 % (24/49) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
-| Nagpur | 441 | 310 | 131 | 112 | 55.2 % (69/125) | 70.7 % (41) | 100 % | 86 % (25/29) | 23 % |
-| Ranchi | 367 | 248 | 119 | 43 | 59.8 % (49/82) | 79.2 % (24) | 100 % | 80 % (24/30) | 29 % |
+| Kalyani | 439 | 289 | 150 | 85 | 77.8 % (77/99) | 73.9 % (23) | 100 % | 87 % (34/39) | 14 % |
+| Kottayam | 716 | 566 | 150 | 129 | 59.7 % (86/144) | 69.8 % (43) | 100 % | 76 % (28/37) | 12 % |
+| Manipur | 132 | 95 | 37 | 84 | 51.1 % (24/47) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
+| Nagpur | 441 | 310 | 131 | 112 | 55.6 % (69/124) | 70.7 % (41) | 100 % | 86 % (25/29) | 23 % |
+| Ranchi | 367 | 248 | 119 | 43 | 61.3 % (49/80) | 79.2 % (24) | 100 % | 80 % (24/30) | 29 % |
 | Surat | 164 | 96 | 68 | 64 | 78.6 % (11/14) | – (0) | 100 % | 42 % (16/38)† | 15 % |
-| Bhopal | 249 | 188 | 61 | 76 | 66.1 % (39/59) | 80.0 % (35) | 100 % | 40 % (10/25)† | 0 % |
-| Bhagalpur | 388 | 290 | 98 | 41 | 65.4 % (53/81) | 67.9 % (28) | 100 % | 75 % (24/32) | 17 % |
-| Agartala | 25 | 15 | 10 | 2 | 25.0 % (1/4) | 33.3 % (3) | 100 % (15/15) | 50 % (2/4) | 0/2 |
-| Raichur | 82 | 53 | 29 | 37 | 66.7 % (26/39) | 75.0 % (4) | 100 % | 79 % (22/28) | 9 % |
+| Bhopal | 249 | 188 | 61 | 76 | 69.6 % (39/56) | 87.5 % (32) | 100 % | 40 % (10/25)† | 0 % |
+| Bhagalpur | 388 | 290 | 98 | 41 | 67.9 % (53/78) | 70.4 % (27) | 100 % | 75 % (24/32) | 17 % |
+| Agartala | 25 | 15 | 10 | 2 | 33.3 % (1/3) | 33.3 % (3) | 100 % (15/15) | 50 % (2/4) | 0/2 |
+| Raichur | 82 | 53 | 29 | 37 | 65.8 % (25/38) | 75.0 % (4) | 100 % | 79 % (22/28) | 9 % |
 
 \* Vadodara was audited before the conflated DBLP profile of Pratik Shah (8 of its 13 likely `no`) was removed; the rebuilt
 file has 20 fewer likely records. Kota's verified 25/25 includes one operator correction (a Springer page prints IIIT Kota as
@@ -519,7 +519,7 @@ Granada and IISc before joining; its IIT Hyderabad mentors are `visiting`.
 
 **IIIT Hyderabad with the institute repository (2026-10-30, operator decision):** `iiith_publist.py` adds the 6,667 items of
 https://www.iiit.ac.in/publications/index.php as evidence `institute_list` (tier likely, main file; contradicted records still
-rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall against the golden set is 94.7 % (305/322; 97.1 % without
+rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall against the golden set is 94.7 % (303/320 after the validity audit, §7.4; 97.1 % without
 the 8 golden rows that the papers' own affiliations refute). Many golden rows also appear in the repository.
 
 **Roster corrections after audits or on review:** Pratik Shah's DBLP id removed (Vadodara); MNIT post-holders `adjunct` (Kota);
@@ -551,3 +551,38 @@ tier is 100 % in every audit.
 
 **Golden sets are thin for the young IIITs**: Kurnool 44 and Lucknow 54 papers, because faculty pages list work from before
 joining and the institutes' own publication lists stop early. Their recall figures have wide uncertainty.
+
+### 7.4 Golden-set validity audit, all 30 IIITs (2026-10-30)
+The same audit as the IIT team's (PROCESS.md §15.16), requested by the IIT team so the IIIT data matches the quality bar of
+`v2-all-institutes`. Per IIIT a seeded sample (seed 20261030) of up to 30 medium-confidence golden rows, stratified by source
+(`v2/golden/golden_validity_sample_<inst>.csv`), checked by independent Sonnet agents against the affiliation printed on each
+paper (OpenAlex raw strings, Crossref, Europe PMC, arXiv, publisher pages). The agents were told not to open the pipeline
+outputs. A paper counts as right when any author prints the IIIT, so co-author-only rows are right at paper level, as in §15.16.
+Results in `v2/golden/golden_validity_<inst>.csv`.
+
+| IIIT | right | wrong | undecidable | error rate | IIIT | right | wrong | undecidable | error rate |
+|---|---|---|---|---|---|---|---|---|---|
+| Delhi | 25 | 1* | 4 | 3.8 % | Kottayam | 24 | 1 | 5 | 4.0 % |
+| Hyderabad | 23 | 2 | 5 | 8.0 % | Kurnool | 28 | 1 | 1 | 3.4 % |
+| Allahabad | 28 | 1 | 1 | 3.4 % | Lucknow | 26 | 1 | 3 | 3.7 % |
+| Bangalore | 25 | 0 | 5 | 0 % | Manipur | 17 | 2 | 11 | 10.5 % |
+| Gwalior | 28 | 2 | 0 | 6.7 % | Nagpur | 27 | 1 | 2 | 3.6 % |
+| Jabalpur | 28 | 0 | 2 | 0 % | Ranchi | 21 | 2 | 7 | 8.7 % |
+| Kancheepuram | 26 | 2 | 2 | 7.1 % | Raichur | 25 | 1 | 4 | 3.8 % |
+| Pune | 22 | 3 | 5 | 12.0 % | Una | 21 | 6 | 3 | 22.2 % |
+| Sri City | 27 | 0 | 2 | 0 % | Vadodara | 19 | 3 | 8 | 13.6 % |
+| Naya Raipur | 26 | 0 | 4 | 0 % | Tiruchirappalli | 26 | 0 | 4 | 0 % |
+| Bhubaneswar | 27 | 1 | 2 | 3.6 % | Bhagalpur | 25 | 3 | 2 | 10.7 % |
+| Guwahati | 20 | 3 | 7 | 13.0 % | Bhopal | 24 | 3 | 3 | 11.1 % |
+| Dharwad | 27 | 3 | 0 | 10.0 % | Surat | 12 | 0 | 0 | 0 % (12 rows) |
+| Kalyani | 26 | 2 | 2 | 7.1 % | Sonepat | 2 | 0 | 0 | (2 rows) |
+| Kota | 26 | 0 | 4 | 0 % | Agartala | 0 | 1 | 0 | (1 row) |
+
+Pooled: 681 right, 45 wrong, 98 undecidable; error rate 6.2 % among decidable rows (IIT golden sets: 0–22 %), and 12 % of
+rows undecidable (IIT: 27–72 %). The wrong rows are papers from before joining or from the person's other employer (most;
+e.g. Una, Dharwad, Bhopal's MANIT papers, Manipur's IIT Guwahati papers), same-name people at another institute (Pune's DIAT
+namesake), non-papers (talks, a poster, edited books: Allahabad, Gwalior, Guwahati, Vadodara) and one other IIIT (Vadodara).
+44 of the 45 were dropped from the golden sets and recall recomputed (tables in §6 and §7.3 updated). \* Delhi's one wrong row is
+kept: the COMSNETS 2017 paper by Anubha Gupta (IIIT-Delhi faculty) is deposited with "IIT-Delhi" for all four authors, an
+indexing error rather than a golden-set error. Kurnool line 27 had the DOI of another paper; corrected to
+10.1049/iet-cdt.2020.0038. Recall changes are within ±3.6 points; Una rises most (57.0 → 60.6 %).
