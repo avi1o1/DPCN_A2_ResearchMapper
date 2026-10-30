@@ -380,11 +380,11 @@ Main file = verified + unverified-likely (`v2/<key>.json`); unconfirmed = "possi
 | Gwalior | 2,146 | 1,378 | 768 | 713 | 81.3 % (217/267) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
 | Bangalore | 1,642 | 1,091 | 549 | 329 | 79.7 % (208/261) | 88.3 % (137) | 100 % | 97 % (32/33) | 29 % |
 | Jabalpur | 3,064 | 1,849 | 1,215 | 398 | 74.5 % (204/274) | 88.4 % (69) | 100 % | 91 % (30/33) | 58 % |
-| Hyderabad | 5,237 | 2,895 | 2,342 | 1,004 | 71.7 % (231/322) | 57.1 % (7) | 100 % | 92 % (35/38) | 24 % |
+| Hyderabad | 6,352 | 2,957 | 3,395 | 835 | 94.7 % (305/322) | 100 % (7) | 100 % | 92 % (35/38)* | 24 % |
 | Pune | 235 | 164 | 71 | 87 | 62.8 % (59/94) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
 | Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (151/297) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
 
-Bangalore's main file also holds 2 `ambiguous` records. `validate.py`: 0 violations for all eight.
+Bangalore's main file also holds 2 `ambiguous` records. \* Hyderabad includes the institute repository (§7.3); its precision audit predates it. `validate.py`: 0 violations for all eight.
 
 ### 6.1 Open problems
 * **Kancheepuram recall (50.8 %).** Most misses are papers on faculty pages in venues no index covers; some golden titles carry
@@ -519,8 +519,8 @@ Granada and IISc before joining; its IIT Hyderabad mentors are `visiting`.
 
 **IIIT Hyderabad with the institute repository (2026-10-30, operator decision):** `iiith_publist.py` adds the 6,667 items of
 https://www.iiit.ac.in/publications/index.php as evidence `institute_list` (tier likely, main file; contradicted records still
-rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall against the golden set rises to 95.3 %, but 260 of its
-322 papers came from that repository, so the independent figure stays 71.7 % (§6).
+rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall against the golden set is 94.7 % (305/322; 97.1 % without
+the 8 golden rows that the papers' own affiliations refute). Many golden rows also appear in the repository.
 
 **Roster corrections after audits or on review:** Pratik Shah's DBLP id removed (Vadodara); MNIT post-holders `adjunct` (Kota);
 the IIT Roorkee Director-in-charge `adjunct` (Sonepat); 31 lab faculty `adjunct` (Kottayam); later roster briefs ask agents to file
