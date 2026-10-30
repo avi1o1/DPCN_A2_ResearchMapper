@@ -20,12 +20,11 @@ YEARLY = os.path.join(A2, "WebScrape", "rosters", "yearly")
 
 def main():
     style()
-    rows, drows, lrows, have = [], [], [], {}
+    rows, drows, lrows, have, missing = [], [], [], {}, []
     for inst, name in INSTS.items():
         fn = os.path.join(YEARLY, f"{inst}_faculty_by_year.csv")
         if not os.path.exists(fn):
-            note_skip("stats_rosters.py", f"faculty per year, {name}", f"no archived-roster file {os.path.basename(fn)}",
-                      f"WebScrape/scripts/wayback_rosters.py {inst} (Wayback Machine snapshots of the institute's faculty pages)")
+            missing.append(inst)
             continue
         ros = [r for r in read_csv(fn) if r["department"] not in FACULTY_DEPT_OUT]
         cov = {int(c["year"]): int(c["snapshots_used"]) for c in read_csv(os.path.join(YEARLY, f"{inst}_coverage.csv"))}
@@ -59,6 +58,10 @@ def main():
         tot = sum(flags.values())
         for k, v in flags.most_common():
             lrows.append({"institution": name, "faculty_paper_links": k, "count": v, "share": round(v / tot, 4)})
+    if missing:
+        note_skip("stats_rosters.py", "faculty per year from archived institute websites (faculty_by_year*.csv, roster_link_check.csv)",
+                  f"no archived-roster file for {len(missing)} of {len(INSTS)} institutes ({', '.join(missing)})",
+                  "WebScrape/scripts/wayback_rosters.py <institute> (Wayback Machine snapshots of the faculty pages)")
     if not rows:
         return
     write_csv("faculty_by_year.csv", rows)

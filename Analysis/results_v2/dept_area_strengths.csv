@@ -1,0 +1,726 @@
+﻿institution,department,subfield,papers,share_of_department,rca
+IIT (BHU) Varanasi,Department of Ceramic Engineering,Biomedical Engineering,74,0.183,3.31
+IIT (BHU) Varanasi,Department of Ceramic Engineering,Materials Chemistry,69,0.17,2.37
+IIT (BHU) Varanasi,Department of Ceramic Engineering,"Electronic, Optical and Magnetic Materials",64,0.158,5.69
+IIT (BHU) Varanasi,Department of Ceramic Engineering,"Renewable Energy, Sustainability and the Environment",40,0.099,3.7
+IIT (BHU) Varanasi,Department of Ceramic Engineering,Mechanical Engineering,33,0.081,1.57
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,Biomedical Engineering,122,0.203,3.68
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,Water Science and Technology,77,0.128,8.97
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,Materials Chemistry,51,0.085,1.18
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,"Renewable Energy, Sustainability and the Environment",47,0.078,2.93
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,Pollution,42,0.07,11.3
+IIT (BHU) Varanasi,Department of Chemistry,Organic Chemistry,137,0.195,5.13
+IIT (BHU) Varanasi,Department of Chemistry,"Renewable Energy, Sustainability and the Environment",137,0.195,7.32
+IIT (BHU) Varanasi,Department of Chemistry,Materials Chemistry,123,0.175,2.44
+IIT (BHU) Varanasi,Department of Chemistry,Biomedical Engineering,64,0.091,1.65
+IIT (BHU) Varanasi,Department of Chemistry,Water Science and Technology,50,0.071,4.98
+IIT (BHU) Varanasi,Department of Civil Engineering,Civil and Structural Engineering,265,0.374,9.68
+IIT (BHU) Varanasi,Department of Civil Engineering,Water Science and Technology,52,0.073,5.13
+IIT (BHU) Varanasi,Department of Civil Engineering,Environmental Engineering,44,0.062,5.56
+IIT (BHU) Varanasi,Department of Civil Engineering,Mechanics of Materials,40,0.056,2.78
+IIT (BHU) Varanasi,Department of Civil Engineering,Building and Construction,35,0.049,6.33
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,Computer Vision and Pattern Recognition,185,0.23,11.79
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,Artificial Intelligence,136,0.169,5.14
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,Computer Networks and Communications,105,0.13,6.95
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,Information Systems,105,0.13,20.97
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,Signal Processing,43,0.053,11.08
+IIT (BHU) Varanasi,Department of Electrical Engineering,Electrical and Electronic Engineering,467,0.539,4.42
+IIT (BHU) Varanasi,Department of Electrical Engineering,Control and Systems Engineering,251,0.29,11.62
+IIT (BHU) Varanasi,Department of Electrical Engineering,Computer Networks and Communications,17,0.02,1.05
+IIT (BHU) Varanasi,Department of Electrical Engineering,Automotive Engineering,11,0.013,2.04
+IIT (BHU) Varanasi,Department of Electrical Engineering,"Safety, Risk, Reliability and Quality",11,0.013,2.42
+IIT (BHU) Varanasi,Department of Electronics Engineering,Electrical and Electronic Engineering,328,0.31,2.54
+IIT (BHU) Varanasi,Department of Electronics Engineering,Aerospace Engineering,239,0.226,7.57
+IIT (BHU) Varanasi,Department of Electronics Engineering,"Atomic and Molecular Physics, and Optics",80,0.076,3.14
+IIT (BHU) Varanasi,Department of Electronics Engineering,Materials Chemistry,79,0.075,1.04
+IIT (BHU) Varanasi,Department of Electronics Engineering,"Electronic, Optical and Magnetic Materials",76,0.072,2.59
+IIT (BHU) Varanasi,Department of Mathematical Sciences,Modeling and Simulation,114,0.198,65.38
+IIT (BHU) Varanasi,Department of Mathematical Sciences,Applied Mathematics,65,0.113,21.76
+IIT (BHU) Varanasi,Department of Mathematical Sciences,Computational Theory and Mathematics,64,0.111,9.34
+IIT (BHU) Varanasi,Department of Mathematical Sciences,Mechanics of Materials,63,0.11,5.4
+IIT (BHU) Varanasi,Department of Mathematical Sciences,Numerical Analysis,47,0.082,47.68
+IIT (BHU) Varanasi,Department of Mechanical Engineering,Mechanical Engineering,348,0.406,7.82
+IIT (BHU) Varanasi,Department of Mechanical Engineering,Biomedical Engineering,127,0.148,2.68
+IIT (BHU) Varanasi,Department of Mechanical Engineering,Mechanics of Materials,65,0.076,3.74
+IIT (BHU) Varanasi,Department of Mechanical Engineering,Computational Mechanics,41,0.048,1.38
+IIT (BHU) Varanasi,Department of Mechanical Engineering,"Renewable Energy, Sustainability and the Environment",36,0.042,1.57
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,Mechanical Engineering,192,0.385,7.42
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,Materials Chemistry,112,0.224,3.12
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,"Electronic, Optical and Magnetic Materials",24,0.048,1.73
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,Mechanics of Materials,24,0.048,2.37
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,Waste Management and Disposal,21,0.042,10.11
+IIT (BHU) Varanasi,Department of Mining Engineering,"Safety, Risk, Reliability and Quality",35,0.271,51.8
+IIT (BHU) Varanasi,Department of Mining Engineering,Mechanics of Materials,20,0.155,7.65
+IIT (BHU) Varanasi,Department of Mining Engineering,Control and Systems Engineering,10,0.078,3.11
+IIT (BHU) Varanasi,Department of Mining Engineering,Atmospheric Science,7,0.054,6.09
+IIT (BHU) Varanasi,Department of Mining Engineering,Mechanical Engineering,7,0.054,1.05
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,Biomaterials,136,0.196,14.07
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,Molecular Biology,102,0.147,5.23
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,Pharmaceutical Science,82,0.118,52.43
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,Computational Theory and Mathematics,70,0.101,8.47
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,Materials Chemistry,66,0.095,1.32
+IIT (BHU) Varanasi,Department of Physics,Materials Chemistry,230,0.249,3.46
+IIT (BHU) Varanasi,Department of Physics,Astronomy and Astrophysics,159,0.172,11.97
+IIT (BHU) Varanasi,Department of Physics,"Atomic and Molecular Physics, and Optics",94,0.102,4.23
+IIT (BHU) Varanasi,Department of Physics,"Electronic, Optical and Magnetic Materials",83,0.09,3.24
+IIT (BHU) Varanasi,Department of Physics,Nuclear and High Energy Physics,52,0.056,1.36
+IIT (BHU) Varanasi,School of Biochemical Engineering,Biomedical Engineering,77,0.176,3.19
+IIT (BHU) Varanasi,School of Biochemical Engineering,Electrical and Electronic Engineering,57,0.13,1.07
+IIT (BHU) Varanasi,School of Biochemical Engineering,Molecular Biology,57,0.13,4.63
+IIT (BHU) Varanasi,School of Biochemical Engineering,Biomaterials,36,0.082,5.91
+IIT (BHU) Varanasi,School of Biochemical Engineering,"Renewable Energy, Sustainability and the Environment",27,0.062,2.31
+IIT (BHU) Varanasi,School of Biomedical Engineering,Biomedical Engineering,72,0.211,3.81
+IIT (BHU) Varanasi,School of Biomedical Engineering,Cognitive Neuroscience,53,0.155,31.12
+IIT (BHU) Varanasi,School of Biomedical Engineering,Biomaterials,44,0.129,9.22
+IIT (BHU) Varanasi,School of Biomedical Engineering,Materials Chemistry,31,0.091,1.26
+IIT (BHU) Varanasi,School of Biomedical Engineering,Computer Vision and Pattern Recognition,17,0.05,2.55
+IIT (BHU) Varanasi,School of Materials Science and Technology,Materials Chemistry,240,0.283,3.93
+IIT (BHU) Varanasi,School of Materials Science and Technology,Electrical and Electronic Engineering,172,0.203,1.66
+IIT (BHU) Varanasi,School of Materials Science and Technology,"Electronic, Optical and Magnetic Materials",124,0.146,5.26
+IIT (BHU) Varanasi,School of Materials Science and Technology,Biomedical Engineering,69,0.081,1.47
+IIT (BHU) Varanasi,School of Materials Science and Technology,"Renewable Energy, Sustainability and the Environment",64,0.075,2.83
+IIT Bhubaneswar,School of Basic Sciences,Nuclear and High Energy Physics,1005,0.538,13.0
+IIT Bhubaneswar,School of Basic Sciences,Geometry and Topology,83,0.044,13.5
+IIT Bhubaneswar,School of Basic Sciences,"Atomic and Molecular Physics, and Optics",57,0.031,1.27
+IIT Bhubaneswar,School of Basic Sciences,Spectroscopy,20,0.011,1.99
+IIT Bhubaneswar,School of Basic Sciences,Physical and Theoretical Chemistry,17,0.009,1.94
+IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",Atmospheric Science,174,0.412,46.25
+IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",Global and Planetary Change,83,0.197,24.39
+IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",Oceanography,75,0.178,68.31
+IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",Environmental Engineering,27,0.064,5.74
+IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",Geophysics,14,0.033,7.63
+IIT Bhubaneswar,School of Electrical and Computer Sciences,Electrical and Electronic Engineering,483,0.443,3.63
+IIT Bhubaneswar,School of Electrical and Computer Sciences,Control and Systems Engineering,116,0.106,4.27
+IIT Bhubaneswar,School of Electrical and Computer Sciences,Artificial Intelligence,78,0.072,2.18
+IIT Bhubaneswar,School of Electrical and Computer Sciences,Computer Networks and Communications,73,0.067,3.57
+IIT Bhubaneswar,School of Electrical and Computer Sciences,Computer Vision and Pattern Recognition,56,0.051,2.64
+IIT Bhubaneswar,School of Infrastructure,Civil and Structural Engineering,199,0.312,8.09
+IIT Bhubaneswar,School of Infrastructure,Environmental Engineering,70,0.11,9.85
+IIT Bhubaneswar,School of Infrastructure,Waste Management and Disposal,60,0.094,22.64
+IIT Bhubaneswar,School of Infrastructure,Water Science and Technology,38,0.06,4.17
+IIT Bhubaneswar,School of Infrastructure,Pollution,36,0.057,9.12
+IIT Bhubaneswar,School of Mechanical Sciences,Mechanical Engineering,153,0.411,7.93
+IIT Bhubaneswar,School of Mechanical Sciences,Computational Mechanics,33,0.089,2.56
+IIT Bhubaneswar,School of Mechanical Sciences,Mechanics of Materials,27,0.073,3.58
+IIT Bhubaneswar,School of Mechanical Sciences,Aerospace Engineering,25,0.067,2.25
+IIT Bhubaneswar,School of Mechanical Sciences,Atmospheric Science,15,0.04,4.52
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",Materials Chemistry,63,0.281,3.91
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",Mechanical Engineering,51,0.228,4.39
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",Biomaterials,15,0.067,4.8
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",Aerospace Engineering,11,0.049,1.64
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",Mechanics of Materials,10,0.045,2.2
+IIT Bombay,Aerospace Engineering,Aerospace Engineering,267,0.329,11.01
+IIT Bombay,Aerospace Engineering,Computational Mechanics,167,0.206,5.94
+IIT Bombay,Aerospace Engineering,Fluid Flow and Transfer Processes,76,0.094,12.26
+IIT Bombay,Aerospace Engineering,Mechanics of Materials,62,0.076,3.77
+IIT Bombay,Aerospace Engineering,Control and Systems Engineering,48,0.059,2.37
+IIT Bombay,Biosciences and Bioengineering,Molecular Biology,178,0.176,6.27
+IIT Bombay,Biosciences and Bioengineering,Biomedical Engineering,159,0.158,2.85
+IIT Bombay,Biosciences and Bioengineering,Materials Chemistry,75,0.074,1.03
+IIT Bombay,Biosciences and Bioengineering,Cell Biology,65,0.064,21.74
+IIT Bombay,Biosciences and Bioengineering,Biomaterials,63,0.062,4.48
+IIT Bombay,Centre for Systems and Control Engineering,Control and Systems Engineering,145,0.485,19.47
+IIT Bombay,Centre for Systems and Control Engineering,Computer Networks and Communications,36,0.12,6.43
+IIT Bombay,Centre for Systems and Control Engineering,Aerospace Engineering,21,0.07,2.35
+IIT Bombay,Centre for Systems and Control Engineering,Computer Vision and Pattern Recognition,19,0.064,3.26
+IIT Bombay,Centre for Systems and Control Engineering,Spectroscopy,14,0.047,8.68
+IIT Bombay,Centre of Studies in Resources Engineering,Aerospace Engineering,175,0.27,9.06
+IIT Bombay,Centre of Studies in Resources Engineering,Media Technology,126,0.195,60.45
+IIT Bombay,Centre of Studies in Resources Engineering,Artificial Intelligence,72,0.111,3.39
+IIT Bombay,Centre of Studies in Resources Engineering,Atmospheric Science,49,0.076,8.49
+IIT Bombay,Centre of Studies in Resources Engineering,Environmental Engineering,48,0.074,6.65
+IIT Bombay,Chemical Engineering,Biomedical Engineering,153,0.119,2.15
+IIT Bombay,Chemical Engineering,Molecular Biology,136,0.105,3.74
+IIT Bombay,Chemical Engineering,Control and Systems Engineering,100,0.078,3.11
+IIT Bombay,Chemical Engineering,Computational Mechanics,77,0.06,1.72
+IIT Bombay,Chemical Engineering,"Renewable Energy, Sustainability and the Environment",60,0.047,1.74
+IIT Bombay,Chemistry,Organic Chemistry,1017,0.377,9.88
+IIT Bombay,Chemistry,Materials Chemistry,322,0.119,1.66
+IIT Bombay,Chemistry,"Electronic, Optical and Magnetic Materials",249,0.092,3.32
+IIT Bombay,Chemistry,Molecular Biology,222,0.082,2.92
+IIT Bombay,Chemistry,Inorganic Chemistry,159,0.059,7.33
+IIT Bombay,Civil Engineering,Civil and Structural Engineering,658,0.317,8.22
+IIT Bombay,Civil Engineering,Global and Planetary Change,211,0.102,12.62
+IIT Bombay,Civil Engineering,Environmental Engineering,136,0.066,5.88
+IIT Bombay,Civil Engineering,"Safety, Risk, Reliability and Quality",124,0.06,11.42
+IIT Bombay,Civil Engineering,Building and Construction,119,0.057,7.36
+IIT Bombay,Computer Science and Engineering,Artificial Intelligence,221,0.293,8.92
+IIT Bombay,Computer Science and Engineering,Computational Theory and Mathematics,130,0.172,14.46
+IIT Bombay,Computer Science and Engineering,Computer Networks and Communications,58,0.077,4.11
+IIT Bombay,Computer Science and Engineering,Computer Vision and Pattern Recognition,57,0.076,3.88
+IIT Bombay,Computer Science and Engineering,Information Systems,55,0.073,11.74
+IIT Bombay,Earth Sciences,Geophysics,191,0.256,58.85
+IIT Bombay,Earth Sciences,Mechanics of Materials,125,0.168,8.26
+IIT Bombay,Earth Sciences,Paleontology,65,0.087,120.41
+IIT Bombay,Earth Sciences,Geochemistry and Petrology,60,0.08,66.69
+IIT Bombay,Earth Sciences,Environmental Engineering,42,0.056,5.05
+IIT Bombay,Electrical Engineering,Electrical and Electronic Engineering,1368,0.421,3.45
+IIT Bombay,Electrical Engineering,"Atomic and Molecular Physics, and Optics",198,0.061,2.53
+IIT Bombay,Electrical Engineering,Computer Networks and Communications,179,0.055,2.94
+IIT Bombay,Electrical Engineering,Control and Systems Engineering,171,0.053,2.11
+IIT Bombay,Electrical Engineering,Aerospace Engineering,157,0.048,1.62
+IIT Bombay,Energy Science and Engineering,Electrical and Electronic Engineering,391,0.372,3.05
+IIT Bombay,Energy Science and Engineering,Control and Systems Engineering,132,0.126,5.05
+IIT Bombay,Energy Science and Engineering,"Renewable Energy, Sustainability and the Environment",93,0.089,3.32
+IIT Bombay,Energy Science and Engineering,Materials Chemistry,76,0.072,1.01
+IIT Bombay,Energy Science and Engineering,Computational Mechanics,44,0.042,1.21
+IIT Bombay,Environmental Science and Engineering,Water Science and Technology,105,0.191,13.34
+IIT Bombay,Environmental Science and Engineering,Atmospheric Science,55,0.1,11.22
+IIT Bombay,Environmental Science and Engineering,"Health, Toxicology and Mutagenesis",53,0.096,33.49
+IIT Bombay,Environmental Science and Engineering,Environmental Engineering,50,0.091,8.15
+IIT Bombay,Environmental Science and Engineering,Waste Management and Disposal,49,0.089,21.41
+IIT Bombay,Industrial Engineering and Operations Research,Artificial Intelligence,24,0.189,5.75
+IIT Bombay,Industrial Engineering and Operations Research,Computer Networks and Communications,21,0.165,8.83
+IIT Bombay,Industrial Engineering and Operations Research,Industrial and Manufacturing Engineering,7,0.055,44.13
+IIT Bombay,Industrial Engineering and Operations Research,Pollution,7,0.055,8.9
+IIT Bombay,Industrial Engineering and Operations Research,Molecular Biology,6,0.047,1.68
+IIT Bombay,Mathematics,Computational Mechanics,51,0.155,4.49
+IIT Bombay,Mathematics,Statistics and Probability,44,0.134,33.06
+IIT Bombay,Mathematics,Algebra and Number Theory,35,0.107,59.55
+IIT Bombay,Mathematics,Computational Theory and Mathematics,31,0.095,7.93
+IIT Bombay,Mathematics,Mathematical Physics,31,0.095,40.48
+IIT Bombay,Mechanical Engineering,Mechanical Engineering,579,0.303,5.85
+IIT Bombay,Mechanical Engineering,Computational Mechanics,293,0.154,4.43
+IIT Bombay,Mechanical Engineering,Materials Chemistry,138,0.072,1.0
+IIT Bombay,Mechanical Engineering,Biomedical Engineering,134,0.07,1.27
+IIT Bombay,Mechanical Engineering,Mechanics of Materials,116,0.061,3.0
+IIT Bombay,Metallurgical Engineering and Materials Science,Materials Chemistry,246,0.22,3.06
+IIT Bombay,Metallurgical Engineering and Materials Science,Electrical and Electronic Engineering,221,0.198,1.62
+IIT Bombay,Metallurgical Engineering and Materials Science,Mechanical Engineering,168,0.15,2.9
+IIT Bombay,Metallurgical Engineering and Materials Science,Biomedical Engineering,106,0.095,1.72
+IIT Bombay,Metallurgical Engineering and Materials Science,"Electronic, Optical and Magnetic Materials",74,0.066,2.38
+IIT Bombay,Physics,Nuclear and High Energy Physics,304,0.194,4.68
+IIT Bombay,Physics,Electrical and Electronic Engineering,206,0.131,1.08
+IIT Bombay,Physics,"Atomic and Molecular Physics, and Optics",203,0.129,5.36
+IIT Bombay,Physics,Materials Chemistry,170,0.108,1.5
+IIT Bombay,Physics,Astronomy and Astrophysics,156,0.099,6.89
+IIT Gandhinagar,Biological Sciences and Engineering,Molecular Biology,139,0.355,12.63
+IIT Gandhinagar,Biological Sciences and Engineering,Materials Chemistry,52,0.133,1.85
+IIT Gandhinagar,Biological Sciences and Engineering,Biomedical Engineering,36,0.092,1.67
+IIT Gandhinagar,Biological Sciences and Engineering,Biomaterials,33,0.084,6.05
+IIT Gandhinagar,Biological Sciences and Engineering,Molecular Medicine,19,0.049,16.74
+IIT Gandhinagar,Chemical Engineering,Materials Chemistry,59,0.181,2.51
+IIT Gandhinagar,Chemical Engineering,Biomedical Engineering,35,0.107,1.94
+IIT Gandhinagar,Chemical Engineering,Molecular Biology,23,0.071,2.51
+IIT Gandhinagar,Chemical Engineering,Control and Systems Engineering,18,0.055,2.22
+IIT Gandhinagar,Chemical Engineering,Physical and Theoretical Chemistry,17,0.052,11.13
+IIT Gandhinagar,Chemistry,"Renewable Energy, Sustainability and the Environment",89,0.189,7.09
+IIT Gandhinagar,Chemistry,Materials Chemistry,75,0.16,2.22
+IIT Gandhinagar,Chemistry,Organic Chemistry,67,0.143,3.74
+IIT Gandhinagar,Chemistry,Molecular Biology,62,0.132,4.69
+IIT Gandhinagar,Chemistry,"Electronic, Optical and Magnetic Materials",18,0.038,1.38
+IIT Gandhinagar,Civil Engineering,Civil and Structural Engineering,163,0.304,7.88
+IIT Gandhinagar,Civil Engineering,Global and Planetary Change,147,0.274,34.01
+IIT Gandhinagar,Civil Engineering,Environmental Engineering,55,0.103,9.2
+IIT Gandhinagar,Civil Engineering,Water Science and Technology,41,0.076,5.35
+IIT Gandhinagar,Civil Engineering,Ecology,31,0.058,12.16
+IIT Gandhinagar,Computer Science and Engineering,Artificial Intelligence,45,0.204,6.2
+IIT Gandhinagar,Computer Science and Engineering,Computational Theory and Mathematics,33,0.149,12.52
+IIT Gandhinagar,Computer Science and Engineering,Computer Networks and Communications,20,0.09,4.83
+IIT Gandhinagar,Computer Science and Engineering,Information Systems,17,0.077,12.38
+IIT Gandhinagar,Computer Science and Engineering,Computer Vision and Pattern Recognition,16,0.072,3.72
+IIT Gandhinagar,Earth Sciences,Ecology,19,0.171,36.0
+IIT Gandhinagar,Earth Sciences,Earth-Surface Processes,18,0.162,61.52
+IIT Gandhinagar,Earth Sciences,Civil and Structural Engineering,13,0.117,3.03
+IIT Gandhinagar,Earth Sciences,Geophysics,10,0.09,20.71
+IIT Gandhinagar,Earth Sciences,Atmospheric Science,9,0.081,9.09
+IIT Gandhinagar,Electrical Engineering,Electrical and Electronic Engineering,249,0.368,3.02
+IIT Gandhinagar,Electrical Engineering,Computer Vision and Pattern Recognition,70,0.104,5.32
+IIT Gandhinagar,Electrical Engineering,Computational Mechanics,60,0.089,2.56
+IIT Gandhinagar,Electrical Engineering,Biomedical Engineering,48,0.071,1.28
+IIT Gandhinagar,Electrical Engineering,Signal Processing,32,0.047,9.83
+IIT Gandhinagar,Materials Engineering,Mechanical Engineering,62,0.227,4.38
+IIT Gandhinagar,Materials Engineering,Materials Chemistry,60,0.22,3.05
+IIT Gandhinagar,Materials Engineering,"Renewable Energy, Sustainability and the Environment",17,0.062,2.33
+IIT Gandhinagar,Materials Engineering,Organic Chemistry,14,0.051,1.35
+IIT Gandhinagar,Materials Engineering,Inorganic Chemistry,13,0.048,5.93
+IIT Gandhinagar,Mechanical Engineering,Computational Mechanics,49,0.213,6.15
+IIT Gandhinagar,Mechanical Engineering,Biomedical Engineering,44,0.191,3.46
+IIT Gandhinagar,Mechanical Engineering,Mechanical Engineering,22,0.096,1.84
+IIT Gandhinagar,Mechanical Engineering,Control and Systems Engineering,19,0.083,3.32
+IIT Gandhinagar,Mechanical Engineering,Aerospace Engineering,12,0.052,1.75
+IIT Gandhinagar,Physics,Nuclear and High Energy Physics,154,0.4,9.67
+IIT Gandhinagar,Physics,Astronomy and Astrophysics,82,0.213,14.78
+IIT Gandhinagar,Physics,"Atomic and Molecular Physics, and Optics",25,0.065,2.69
+IIT Gandhinagar,Physics,Condensed Matter Physics,20,0.052,5.25
+IIT Gandhinagar,Physics,Statistical and Nonlinear Physics,9,0.023,4.11
+IIT Goa,Electrical Engineering,Electrical and Electronic Engineering,144,0.505,4.14
+IIT Goa,Electrical Engineering,Control and Systems Engineering,44,0.154,6.2
+IIT Goa,Electrical Engineering,Acoustics and Ultrasonics,13,0.046,86.8
+IIT Goa,Electrical Engineering,Computer Vision and Pattern Recognition,11,0.039,1.98
+IIT Goa,Electrical Engineering,"Renewable Energy, Sustainability and the Environment",10,0.035,1.31
+IIT Goa,Mechanical Engineering,Mechanical Engineering,24,0.18,3.48
+IIT Goa,Mechanical Engineering,Computational Mechanics,19,0.143,4.12
+IIT Goa,Mechanical Engineering,Materials Chemistry,10,0.075,1.04
+IIT Goa,Mechanical Engineering,Cell Biology,10,0.075,25.37
+IIT Goa,Mechanical Engineering,Mechanics of Materials,10,0.075,3.71
+IIT Goa,Physics,Nuclear and High Energy Physics,69,0.531,12.83
+IIT Goa,Physics,Materials Chemistry,14,0.108,1.5
+IIT Goa,Physics,"Atomic and Molecular Physics, and Optics",13,0.1,4.15
+IIT Goa,Physics,Condensed Matter Physics,11,0.085,8.56
+IIT Goa,Physics,"Electronic, Optical and Magnetic Materials",7,0.054,1.94
+IIT Guwahati,,Molecular Biology,25,0.174,6.17
+IIT Guwahati,,Electrical and Electronic Engineering,19,0.132,1.08
+IIT Guwahati,,Computer Vision and Pattern Recognition,15,0.104,5.35
+IIT Guwahati,,Materials Chemistry,14,0.097,1.35
+IIT Guwahati,,Artificial Intelligence,10,0.069,2.11
+IIT Guwahati,Biosciences and Bioengineering,Molecular Biology,430,0.231,8.2
+IIT Guwahati,Biosciences and Bioengineering,Biomedical Engineering,185,0.099,1.8
+IIT Guwahati,Biosciences and Bioengineering,Water Science and Technology,118,0.063,4.43
+IIT Guwahati,Biosciences and Bioengineering,Biomaterials,109,0.059,4.2
+IIT Guwahati,Biosciences and Bioengineering,Plant Science,102,0.055,12.49
+IIT Guwahati,Chemical Engineering,Biomedical Engineering,355,0.2,3.61
+IIT Guwahati,Chemical Engineering,Water Science and Technology,220,0.124,8.64
+IIT Guwahati,Chemical Engineering,Biomaterials,147,0.083,5.92
+IIT Guwahati,Chemical Engineering,Mechanical Engineering,144,0.081,1.56
+IIT Guwahati,Chemical Engineering,"Renewable Energy, Sustainability and the Environment",111,0.062,2.34
+IIT Guwahati,Chemistry,Organic Chemistry,733,0.324,8.5
+IIT Guwahati,Chemistry,Materials Chemistry,266,0.117,1.63
+IIT Guwahati,Chemistry,"Renewable Energy, Sustainability and the Environment",116,0.051,1.92
+IIT Guwahati,Chemistry,Inorganic Chemistry,116,0.051,6.38
+IIT Guwahati,Chemistry,Molecular Biology,106,0.047,1.66
+IIT Guwahati,Civil Engineering,Civil and Structural Engineering,605,0.336,8.72
+IIT Guwahati,Civil Engineering,Ecology,173,0.096,20.23
+IIT Guwahati,Civil Engineering,Building and Construction,112,0.062,7.99
+IIT Guwahati,Civil Engineering,Water Science and Technology,90,0.05,3.5
+IIT Guwahati,Civil Engineering,Waste Management and Disposal,89,0.049,11.9
+IIT Guwahati,Computer Science and Engineering,Computer Networks and Communications,212,0.234,12.5
+IIT Guwahati,Computer Science and Engineering,Artificial Intelligence,184,0.203,6.19
+IIT Guwahati,Computer Science and Engineering,Hardware and Architecture,157,0.173,26.39
+IIT Guwahati,Computer Science and Engineering,Computer Vision and Pattern Recognition,94,0.104,5.34
+IIT Guwahati,Computer Science and Engineering,Information Systems,33,0.036,5.87
+IIT Guwahati,Electronics and Electrical Engineering,Electrical and Electronic Engineering,781,0.411,3.37
+IIT Guwahati,Electronics and Electrical Engineering,Control and Systems Engineering,163,0.086,3.45
+IIT Guwahati,Electronics and Electrical Engineering,Artificial Intelligence,133,0.07,2.13
+IIT Guwahati,Electronics and Electrical Engineering,Computer Vision and Pattern Recognition,128,0.067,3.46
+IIT Guwahati,Electronics and Electrical Engineering,"Electronic, Optical and Magnetic Materials",93,0.049,1.76
+IIT Guwahati,Mathematics,Computational Mechanics,106,0.174,5.03
+IIT Guwahati,Mathematics,Applied Mathematics,55,0.09,17.41
+IIT Guwahati,Mathematics,Computer Networks and Communications,55,0.09,4.83
+IIT Guwahati,Mathematics,Numerical Analysis,48,0.079,46.05
+IIT Guwahati,Mathematics,Computational Theory and Mathematics,47,0.077,6.48
+IIT Guwahati,Mechanical Engineering,Mechanical Engineering,619,0.284,5.49
+IIT Guwahati,Mechanical Engineering,Computational Mechanics,311,0.143,4.13
+IIT Guwahati,Mechanical Engineering,Biomedical Engineering,308,0.142,2.56
+IIT Guwahati,Mechanical Engineering,Aerospace Engineering,145,0.067,2.23
+IIT Guwahati,Mechanical Engineering,Control and Systems Engineering,125,0.057,2.31
+IIT Guwahati,Physics,Nuclear and High Energy Physics,709,0.365,8.83
+IIT Guwahati,Physics,"Atomic and Molecular Physics, and Optics",275,0.142,5.88
+IIT Guwahati,Physics,Materials Chemistry,218,0.112,1.56
+IIT Guwahati,Physics,"Electronic, Optical and Magnetic Materials",212,0.109,3.93
+IIT Guwahati,Physics,Astronomy and Astrophysics,133,0.069,4.76
+IIT Guwahati,School of Agro and Rural Technology,Pollution,18,0.138,22.35
+IIT Guwahati,School of Agro and Rural Technology,Soil Science,17,0.131,85.28
+IIT Guwahati,School of Agro and Rural Technology,Plant Science,14,0.108,24.56
+IIT Guwahati,School of Agro and Rural Technology,Building and Construction,12,0.092,11.84
+IIT Guwahati,School of Agro and Rural Technology,"Renewable Energy, Sustainability and the Environment",12,0.092,3.46
+IIT Guwahati,School of Energy Science and Engineering,Biomedical Engineering,29,0.186,3.36
+IIT Guwahati,School of Energy Science and Engineering,"Renewable Energy, Sustainability and the Environment",18,0.115,4.32
+IIT Guwahati,School of Energy Science and Engineering,Mechanical Engineering,14,0.09,1.73
+IIT Guwahati,School of Energy Science and Engineering,Control and Systems Engineering,13,0.083,3.34
+IIT Guwahati,School of Energy Science and Engineering,Computational Mechanics,12,0.077,2.22
+IIT Hyderabad,BioTechnology,Molecular Biology,127,0.474,16.83
+IIT Hyderabad,BioTechnology,Cell Biology,15,0.056,18.89
+IIT Hyderabad,BioTechnology,Endocrine and Autonomic Systems,11,0.041,128.77
+IIT Hyderabad,BioTechnology,Genetics,9,0.034,13.92
+IIT Hyderabad,BioTechnology,Computational Theory and Mathematics,9,0.034,2.82
+IIT Hyderabad,Biomedical Engineering,Biomedical Engineering,200,0.405,7.32
+IIT Hyderabad,Biomedical Engineering,Biomaterials,63,0.128,9.14
+IIT Hyderabad,Biomedical Engineering,Molecular Biology,26,0.053,1.87
+IIT Hyderabad,Biomedical Engineering,"Atomic and Molecular Physics, and Optics",25,0.051,2.1
+IIT Hyderabad,Biomedical Engineering,Cognitive Neuroscience,13,0.026,5.29
+IIT Hyderabad,Chemical Engineering,Electrical and Electronic Engineering,137,0.163,1.34
+IIT Hyderabad,Chemical Engineering,Computational Mechanics,129,0.153,4.43
+IIT Hyderabad,Chemical Engineering,Biomedical Engineering,85,0.101,1.83
+IIT Hyderabad,Chemical Engineering,"Electronic, Optical and Magnetic Materials",42,0.05,1.8
+IIT Hyderabad,Chemical Engineering,Biomaterials,36,0.043,3.07
+IIT Hyderabad,Chemistry,Organic Chemistry,323,0.237,6.22
+IIT Hyderabad,Chemistry,Electrical and Electronic Engineering,201,0.147,1.21
+IIT Hyderabad,Chemistry,"Electronic, Optical and Magnetic Materials",152,0.112,4.01
+IIT Hyderabad,Chemistry,Materials Chemistry,140,0.103,1.43
+IIT Hyderabad,Chemistry,"Renewable Energy, Sustainability and the Environment",115,0.084,3.16
+IIT Hyderabad,Civil Engineering,Civil and Structural Engineering,304,0.351,9.1
+IIT Hyderabad,Civil Engineering,Building and Construction,90,0.104,13.35
+IIT Hyderabad,Civil Engineering,Mechanics of Materials,64,0.074,3.65
+IIT Hyderabad,Civil Engineering,"Safety, Risk, Reliability and Quality",63,0.073,13.91
+IIT Hyderabad,Civil Engineering,Water Science and Technology,35,0.04,2.83
+IIT Hyderabad,Computer Science & Engineering,Computer Networks and Communications,181,0.243,12.95
+IIT Hyderabad,Computer Science & Engineering,Artificial Intelligence,161,0.216,6.57
+IIT Hyderabad,Computer Science & Engineering,Computational Theory and Mathematics,87,0.117,9.78
+IIT Hyderabad,Computer Science & Engineering,Computer Vision and Pattern Recognition,77,0.103,5.3
+IIT Hyderabad,Computer Science & Engineering,Information Systems,48,0.064,10.36
+IIT Hyderabad,Electrical Engineering,Electrical and Electronic Engineering,563,0.382,3.13
+IIT Hyderabad,Electrical Engineering,Biomedical Engineering,133,0.09,1.63
+IIT Hyderabad,Electrical Engineering,Computer Vision and Pattern Recognition,84,0.057,2.93
+IIT Hyderabad,Electrical Engineering,Artificial Intelligence,76,0.052,1.57
+IIT Hyderabad,Electrical Engineering,Computer Networks and Communications,68,0.046,2.46
+IIT Hyderabad,Materials Science and Metallurgical Engineering,Mechanical Engineering,163,0.325,6.26
+IIT Hyderabad,Materials Science and Metallurgical Engineering,Materials Chemistry,68,0.135,1.88
+IIT Hyderabad,Materials Science and Metallurgical Engineering,Electrical and Electronic Engineering,66,0.131,1.08
+IIT Hyderabad,Materials Science and Metallurgical Engineering,"Atomic and Molecular Physics, and Optics",46,0.092,3.8
+IIT Hyderabad,Materials Science and Metallurgical Engineering,"Electronic, Optical and Magnetic Materials",39,0.078,2.8
+IIT Hyderabad,Mathematics,Computational Mechanics,32,0.162,4.69
+IIT Hyderabad,Mathematics,Computational Theory and Mathematics,26,0.132,11.07
+IIT Hyderabad,Mathematics,Applied Mathematics,25,0.127,24.43
+IIT Hyderabad,Mathematics,Mathematical Physics,25,0.127,54.36
+IIT Hyderabad,Mathematics,Astronomy and Astrophysics,14,0.071,4.93
+IIT Hyderabad,Mechanical & Aerospace Engineering,Computational Mechanics,163,0.266,7.69
+IIT Hyderabad,Mechanical & Aerospace Engineering,Mechanical Engineering,105,0.172,3.31
+IIT Hyderabad,Mechanical & Aerospace Engineering,Biomedical Engineering,51,0.083,1.51
+IIT Hyderabad,Mechanical & Aerospace Engineering,Mechanics of Materials,45,0.074,3.63
+IIT Hyderabad,Mechanical & Aerospace Engineering,Civil and Structural Engineering,36,0.059,1.52
+IIT Hyderabad,Physics,Astronomy and Astrophysics,409,0.27,18.72
+IIT Hyderabad,Physics,Nuclear and High Energy Physics,400,0.264,6.38
+IIT Hyderabad,Physics,"Atomic and Molecular Physics, and Optics",174,0.115,4.76
+IIT Hyderabad,Physics,Materials Chemistry,155,0.102,1.42
+IIT Hyderabad,Physics,"Electronic, Optical and Magnetic Materials",90,0.059,2.14
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",Astronomy and Astrophysics,248,0.713,49.45
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",Aerospace Engineering,31,0.089,2.98
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",Nuclear and High Energy Physics,31,0.089,2.15
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",Ecology,8,0.023,4.83
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",Computer Vision and Pattern Recognition,8,0.023,1.18
+IIT Indore,Biosciences and Biomedical Engineering,Molecular Biology,127,0.283,10.05
+IIT Indore,Biosciences and Biomedical Engineering,Computational Theory and Mathematics,48,0.107,8.97
+IIT Indore,Biosciences and Biomedical Engineering,Biomedical Engineering,39,0.087,1.57
+IIT Indore,Biosciences and Biomedical Engineering,Immunology,35,0.078,76.04
+IIT Indore,Biosciences and Biomedical Engineering,Biomaterials,30,0.067,4.79
+IIT Indore,Chemistry,Materials Chemistry,255,0.204,2.84
+IIT Indore,Chemistry,Organic Chemistry,226,0.181,4.75
+IIT Indore,Chemistry,"Renewable Energy, Sustainability and the Environment",118,0.095,3.54
+IIT Indore,Chemistry,Inorganic Chemistry,84,0.067,8.38
+IIT Indore,Chemistry,Biomaterials,76,0.061,4.37
+IIT Indore,Civil Engineering,Civil and Structural Engineering,135,0.296,7.67
+IIT Indore,Civil Engineering,"Management, Monitoring, Policy and Law",62,0.136,57.6
+IIT Indore,Civil Engineering,Atmospheric Science,49,0.107,12.05
+IIT Indore,Civil Engineering,Environmental Engineering,34,0.075,6.68
+IIT Indore,Civil Engineering,Building and Construction,31,0.068,8.72
+IIT Indore,Computer Science and Engineering,Hardware and Architecture,202,0.301,45.73
+IIT Indore,Computer Science and Engineering,Artificial Intelligence,139,0.207,6.3
+IIT Indore,Computer Science and Engineering,Computer Vision and Pattern Recognition,63,0.094,4.82
+IIT Indore,Computer Science and Engineering,Computer Networks and Communications,57,0.085,4.53
+IIT Indore,Computer Science and Engineering,Signal Processing,53,0.079,16.38
+IIT Indore,Electrical Engineering,Electrical and Electronic Engineering,696,0.48,3.94
+IIT Indore,Electrical Engineering,Aerospace Engineering,133,0.092,3.07
+IIT Indore,Electrical Engineering,Cognitive Neuroscience,100,0.069,13.86
+IIT Indore,Electrical Engineering,Biomedical Engineering,82,0.057,1.02
+IIT Indore,Electrical Engineering,Computer Networks and Communications,60,0.041,2.21
+IIT Indore,Mathematics,Artificial Intelligence,112,0.381,11.59
+IIT Indore,Mathematics,Applied Mathematics,31,0.105,20.3
+IIT Indore,Mathematics,Algebra and Number Theory,27,0.092,51.25
+IIT Indore,Mathematics,Mechanics of Materials,18,0.061,3.02
+IIT Indore,Mathematics,Statistics and Probability,18,0.061,15.09
+IIT Indore,Mechanical Engineering,Mechanical Engineering,232,0.395,7.62
+IIT Indore,Mechanical Engineering,Materials Chemistry,98,0.167,2.32
+IIT Indore,Mechanical Engineering,Control and Systems Engineering,65,0.111,4.44
+IIT Indore,Mechanical Engineering,Mechanics of Materials,15,0.026,1.26
+IIT Indore,Mechanical Engineering,Industrial and Manufacturing Engineering,12,0.02,16.37
+IIT Indore,Metallurgical Engineering and Materials Science,Mechanical Engineering,139,0.246,4.74
+IIT Indore,Metallurgical Engineering and Materials Science,Electrical and Electronic Engineering,95,0.168,1.38
+IIT Indore,Metallurgical Engineering and Materials Science,Materials Chemistry,76,0.135,1.87
+IIT Indore,Metallurgical Engineering and Materials Science,"Renewable Energy, Sustainability and the Environment",76,0.135,5.04
+IIT Indore,Metallurgical Engineering and Materials Science,"Electronic, Optical and Magnetic Materials",52,0.092,3.31
+IIT Indore,Physics,Nuclear and High Energy Physics,720,0.486,11.73
+IIT Indore,Physics,Materials Chemistry,208,0.14,1.95
+IIT Indore,Physics,"Electronic, Optical and Magnetic Materials",128,0.086,3.11
+IIT Indore,Physics,"Renewable Energy, Sustainability and the Environment",82,0.055,2.07
+IIT Indore,Physics,Polymers and Plastics,73,0.049,8.61
+IIT Kanpur,,Electrical and Electronic Engineering,83,0.191,1.56
+IIT Kanpur,,Mechanics of Materials,62,0.143,7.03
+IIT Kanpur,,Computer Vision and Pattern Recognition,52,0.12,6.14
+IIT Kanpur,,Artificial Intelligence,32,0.074,2.24
+IIT Kanpur,,Fluid Flow and Transfer Processes,32,0.074,9.64
+IIT Kanpur,Aerospace Engineering,Computational Mechanics,313,0.345,9.96
+IIT Kanpur,Aerospace Engineering,Aerospace Engineering,241,0.266,8.9
+IIT Kanpur,Aerospace Engineering,Mechanics of Materials,47,0.052,2.56
+IIT Kanpur,Aerospace Engineering,Control and Systems Engineering,39,0.043,1.73
+IIT Kanpur,Aerospace Engineering,Fluid Flow and Transfer Processes,19,0.021,2.74
+IIT Kanpur,Biological Sciences and Bioengineering,Molecular Biology,176,0.373,13.25
+IIT Kanpur,Biological Sciences and Bioengineering,Biomedical Engineering,55,0.117,2.11
+IIT Kanpur,Biological Sciences and Bioengineering,Genetics,33,0.07,28.99
+IIT Kanpur,Biological Sciences and Bioengineering,Cellular and Molecular Neuroscience,33,0.07,78.8
+IIT Kanpur,Biological Sciences and Bioengineering,Biomaterials,21,0.044,3.19
+IIT Kanpur,Chemical Engineering,Materials Chemistry,115,0.118,1.63
+IIT Kanpur,Chemical Engineering,"Renewable Energy, Sustainability and the Environment",106,0.108,4.06
+IIT Kanpur,Chemical Engineering,Biomedical Engineering,65,0.066,1.2
+IIT Kanpur,Chemical Engineering,Fluid Flow and Transfer Processes,60,0.061,8.04
+IIT Kanpur,Chemical Engineering,Computational Mechanics,59,0.06,1.74
+IIT Kanpur,Chemistry,Organic Chemistry,393,0.277,7.27
+IIT Kanpur,Chemistry,Materials Chemistry,167,0.118,1.63
+IIT Kanpur,Chemistry,"Atomic and Molecular Physics, and Optics",137,0.097,4.01
+IIT Kanpur,Chemistry,Inorganic Chemistry,107,0.075,9.39
+IIT Kanpur,Chemistry,"Renewable Energy, Sustainability and the Environment",79,0.056,2.09
+IIT Kanpur,Civil Engineering,Civil and Structural Engineering,416,0.385,9.97
+IIT Kanpur,Civil Engineering,Atmospheric Science,113,0.105,11.72
+IIT Kanpur,Civil Engineering,Aerospace Engineering,60,0.056,1.86
+IIT Kanpur,Civil Engineering,Environmental Engineering,53,0.049,4.39
+IIT Kanpur,Civil Engineering,"Health, Toxicology and Mutagenesis",51,0.047,16.4
+IIT Kanpur,Computer Science and Engineering,Artificial Intelligence,127,0.24,7.31
+IIT Kanpur,Computer Science and Engineering,Computational Theory and Mathematics,59,0.112,9.35
+IIT Kanpur,Computer Science and Engineering,Computer Vision and Pattern Recognition,49,0.093,4.76
+IIT Kanpur,Computer Science and Engineering,Hardware and Architecture,49,0.093,14.09
+IIT Kanpur,Computer Science and Engineering,Information Systems,44,0.083,13.39
+IIT Kanpur,Earth Sciences,Geophysics,115,0.307,70.49
+IIT Kanpur,Earth Sciences,Atmospheric Science,35,0.093,10.47
+IIT Kanpur,Earth Sciences,Ecology,30,0.08,16.82
+IIT Kanpur,Earth Sciences,Astronomy and Astrophysics,22,0.059,4.07
+IIT Kanpur,Earth Sciences,Water Science and Technology,22,0.059,4.1
+IIT Kanpur,Electrical Engineering,Electrical and Electronic Engineering,1241,0.439,3.6
+IIT Kanpur,Electrical Engineering,Aerospace Engineering,387,0.137,4.58
+IIT Kanpur,Electrical Engineering,Control and Systems Engineering,260,0.092,3.69
+IIT Kanpur,Electrical Engineering,Computer Networks and Communications,129,0.046,2.44
+IIT Kanpur,Electrical Engineering,"Electronic, Optical and Magnetic Materials",101,0.036,1.29
+IIT Kanpur,Materials Science and Engineering,Materials Chemistry,286,0.302,4.2
+IIT Kanpur,Materials Science and Engineering,Mechanical Engineering,246,0.26,5.02
+IIT Kanpur,Materials Science and Engineering,Electrical and Electronic Engineering,118,0.125,1.02
+IIT Kanpur,Materials Science and Engineering,Ceramics and Composites,43,0.045,27.2
+IIT Kanpur,Materials Science and Engineering,"Renewable Energy, Sustainability and the Environment",27,0.029,1.07
+IIT Kanpur,Mathematics and Statistics,Applied Mathematics,46,0.13,24.95
+IIT Kanpur,Mathematics and Statistics,Mathematical Physics,36,0.101,43.44
+IIT Kanpur,Mathematics and Statistics,Mechanical Engineering,33,0.093,1.79
+IIT Kanpur,Mathematics and Statistics,Geometry and Topology,26,0.073,22.26
+IIT Kanpur,Mathematics and Statistics,Biomaterials,25,0.07,5.05
+IIT Kanpur,Mechanical Engineering,Biomedical Engineering,244,0.134,2.43
+IIT Kanpur,Mechanical Engineering,Computational Mechanics,228,0.125,3.62
+IIT Kanpur,Mechanical Engineering,Mechanical Engineering,219,0.12,2.32
+IIT Kanpur,Mechanical Engineering,Fluid Flow and Transfer Processes,199,0.109,14.34
+IIT Kanpur,Mechanical Engineering,Aerospace Engineering,84,0.046,1.55
+IIT Kanpur,Physics,Nuclear and High Energy Physics,351,0.225,5.44
+IIT Kanpur,Physics,"Atomic and Molecular Physics, and Optics",330,0.212,8.78
+IIT Kanpur,Physics,Materials Chemistry,144,0.092,1.28
+IIT Kanpur,Physics,Astronomy and Astrophysics,111,0.071,4.94
+IIT Kanpur,Physics,Computational Mechanics,89,0.057,1.65
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",Astronomy and Astrophysics,36,0.353,24.49
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",Information Systems,21,0.206,33.15
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",Signal Processing,13,0.127,26.47
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",Computer Networks and Communications,9,0.088,4.71
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",Artificial Intelligence,6,0.059,1.79
+IIT Kanpur,Statistics and Data Science,Statistics and Probability,149,0.793,195.33
+IIT Kanpur,Statistics and Data Science,Applied Mathematics,25,0.133,25.6
+IIT Kanpur,Statistics and Data Science,"Safety, Risk, Reliability and Quality",4,0.021,4.06
+IIT Kanpur,Statistics and Data Science,Global and Planetary Change,2,0.011,1.32
+IIT Kanpur,Statistics and Data Science,Numerical Analysis,1,0.005,3.1
+IIT Kanpur,Sustainable Energy Engineering,Electrical and Electronic Engineering,111,0.539,4.42
+IIT Kanpur,Sustainable Energy Engineering,Biomedical Engineering,23,0.112,2.02
+IIT Kanpur,Sustainable Energy Engineering,Materials Chemistry,23,0.112,1.55
+IIT Kanpur,Sustainable Energy Engineering,"Electronic, Optical and Magnetic Materials",22,0.107,3.84
+IIT Kanpur,Sustainable Energy Engineering,Automotive Engineering,5,0.024,3.9
+IIT Madras,,Nuclear and High Energy Physics,139,0.181,4.37
+IIT Madras,,Mechanical Engineering,128,0.166,3.21
+IIT Madras,,Computational Mechanics,56,0.073,2.1
+IIT Madras,,"Renewable Energy, Sustainability and the Environment",55,0.072,2.68
+IIT Madras,,"Atomic and Molecular Physics, and Optics",35,0.046,1.89
+IIT Madras,Aerospace Engineering,Computational Mechanics,315,0.324,9.37
+IIT Madras,Aerospace Engineering,Aerospace Engineering,177,0.182,6.1
+IIT Madras,Aerospace Engineering,Mechanics of Materials,137,0.141,6.96
+IIT Madras,Aerospace Engineering,Polymers and Plastics,43,0.044,7.74
+IIT Madras,Aerospace Engineering,Statistical and Nonlinear Physics,37,0.038,6.69
+IIT Madras,Applied Mechanics and Biomedical Engineering,Biomedical Engineering,184,0.15,2.71
+IIT Madras,Applied Mechanics and Biomedical Engineering,Mechanical Engineering,122,0.099,1.91
+IIT Madras,Applied Mechanics and Biomedical Engineering,Computational Mechanics,117,0.095,2.75
+IIT Madras,Applied Mechanics and Biomedical Engineering,Mechanics of Materials,68,0.055,2.73
+IIT Madras,Applied Mechanics and Biomedical Engineering,Aerospace Engineering,65,0.053,1.77
+IIT Madras,Biotechnology,Molecular Biology,437,0.411,14.6
+IIT Madras,Biotechnology,Biomedical Engineering,59,0.056,1.0
+IIT Madras,Biotechnology,Organic Chemistry,53,0.05,1.31
+IIT Madras,Biotechnology,Cancer Research,51,0.048,26.91
+IIT Madras,Biotechnology,Computational Theory and Mathematics,45,0.042,3.55
+IIT Madras,Chemical Engineering,Biomedical Engineering,168,0.146,2.65
+IIT Madras,Chemical Engineering,Environmental Chemistry,114,0.099,26.72
+IIT Madras,Chemical Engineering,Materials Chemistry,91,0.079,1.1
+IIT Madras,Chemical Engineering,Computational Mechanics,71,0.062,1.78
+IIT Madras,Chemical Engineering,Ocean Engineering,65,0.057,7.31
+IIT Madras,Chemistry,Organic Chemistry,661,0.341,8.95
+IIT Madras,Chemistry,Materials Chemistry,228,0.118,1.63
+IIT Madras,Chemistry,Inorganic Chemistry,114,0.059,7.33
+IIT Madras,Chemistry,"Renewable Energy, Sustainability and the Environment",93,0.048,1.8
+IIT Madras,Chemistry,"Electronic, Optical and Magnetic Materials",89,0.046,1.65
+IIT Madras,Civil Engineering,Civil and Structural Engineering,614,0.364,9.42
+IIT Madras,Civil Engineering,Building and Construction,126,0.075,9.57
+IIT Madras,Civil Engineering,Global and Planetary Change,99,0.059,7.27
+IIT Madras,Civil Engineering,Environmental Engineering,97,0.057,5.15
+IIT Madras,Civil Engineering,Water Science and Technology,85,0.05,3.52
+IIT Madras,Computer Science and Engineering,Artificial Intelligence,230,0.291,8.86
+IIT Madras,Computer Science and Engineering,Computer Vision and Pattern Recognition,94,0.119,6.11
+IIT Madras,Computer Science and Engineering,Computational Theory and Mathematics,75,0.095,7.96
+IIT Madras,Computer Science and Engineering,Computer Networks and Communications,66,0.084,4.46
+IIT Madras,Computer Science and Engineering,Hardware and Architecture,37,0.047,7.13
+IIT Madras,Electrical Engineering,Electrical and Electronic Engineering,673,0.373,3.06
+IIT Madras,Electrical Engineering,Materials Chemistry,182,0.101,1.4
+IIT Madras,Electrical Engineering,Computer Networks and Communications,139,0.077,4.11
+IIT Madras,Electrical Engineering,Biomedical Engineering,135,0.075,1.35
+IIT Madras,Electrical Engineering,Artificial Intelligence,130,0.072,2.19
+IIT Madras,Engineering Design,Biomedical Engineering,144,0.242,4.38
+IIT Madras,Engineering Design,Materials Chemistry,44,0.074,1.03
+IIT Madras,Engineering Design,Control and Systems Engineering,38,0.064,2.56
+IIT Madras,Engineering Design,Mechanical Engineering,37,0.062,1.2
+IIT Madras,Engineering Design,Mechanics of Materials,35,0.059,2.9
+IIT Madras,Mathematics,Geometry and Topology,138,0.219,66.57
+IIT Madras,Mathematics,Mathematical Physics,85,0.135,57.79
+IIT Madras,Mathematics,Artificial Intelligence,74,0.117,3.58
+IIT Madras,Mathematics,Computational Theory and Mathematics,72,0.114,9.59
+IIT Madras,Mathematics,Applied Mathematics,45,0.071,13.75
+IIT Madras,Mechanical Engineering,Mechanical Engineering,314,0.189,3.65
+IIT Madras,Mechanical Engineering,Mechanics of Materials,233,0.141,6.93
+IIT Madras,Mechanical Engineering,Computational Mechanics,218,0.131,3.8
+IIT Madras,Mechanical Engineering,Biomedical Engineering,205,0.124,2.24
+IIT Madras,Mechanical Engineering,Fluid Flow and Transfer Processes,80,0.048,6.32
+IIT Madras,Metallurgical and Materials Engineering,Mechanical Engineering,284,0.25,4.83
+IIT Madras,Metallurgical and Materials Engineering,Materials Chemistry,206,0.182,2.52
+IIT Madras,Metallurgical and Materials Engineering,"Renewable Energy, Sustainability and the Environment",98,0.086,3.24
+IIT Madras,Metallurgical and Materials Engineering,"Electronic, Optical and Magnetic Materials",72,0.063,2.29
+IIT Madras,Metallurgical and Materials Engineering,Biomaterials,44,0.039,2.78
+IIT Madras,Ocean Engineering,Ocean Engineering,314,0.321,41.55
+IIT Madras,Ocean Engineering,Earth-Surface Processes,114,0.117,44.27
+IIT Madras,Ocean Engineering,Civil and Structural Engineering,68,0.07,1.8
+IIT Madras,Ocean Engineering,Computational Mechanics,65,0.067,1.92
+IIT Madras,Ocean Engineering,Oceanography,64,0.066,25.18
+IIT Madras,Physics,Nuclear and High Energy Physics,607,0.286,6.92
+IIT Madras,Physics,Materials Chemistry,356,0.168,2.33
+IIT Madras,Physics,"Electronic, Optical and Magnetic Materials",144,0.068,2.44
+IIT Madras,Physics,"Atomic and Molecular Physics, and Optics",140,0.066,2.74
+IIT Madras,Physics,Condensed Matter Physics,137,0.065,6.53
+IIT Mandi,,Aerospace Engineering,50,0.394,13.18
+IIT Mandi,,Electrical and Electronic Engineering,22,0.173,1.42
+IIT Mandi,,Biomedical Engineering,10,0.079,1.42
+IIT Mandi,,Molecular Biology,9,0.071,2.52
+IIT Mandi,,Spectroscopy,5,0.039,7.3
+IIT Mandi,School of Biosciences & Bio Engineering,Molecular Biology,47,0.2,7.1
+IIT Mandi,School of Biosciences & Bio Engineering,Biomedical Engineering,35,0.149,2.69
+IIT Mandi,School of Biosciences & Bio Engineering,Plant Science,24,0.102,23.29
+IIT Mandi,School of Biosciences & Bio Engineering,Biomaterials,17,0.072,5.19
+IIT Mandi,School of Biosciences & Bio Engineering,"Electronic, Optical and Magnetic Materials",14,0.06,2.14
+IIT Mandi,School of Chemical Sciences,"Renewable Energy, Sustainability and the Environment",87,0.215,8.05
+IIT Mandi,School of Chemical Sciences,Organic Chemistry,56,0.138,3.63
+IIT Mandi,School of Chemical Sciences,Materials Chemistry,53,0.131,1.82
+IIT Mandi,School of Chemical Sciences,Biomedical Engineering,29,0.072,1.3
+IIT Mandi,School of Chemical Sciences,Biomaterials,15,0.037,2.66
+IIT Mandi,School of Civil & Environmental Engineering,Civil and Structural Engineering,149,0.362,9.37
+IIT Mandi,School of Civil & Environmental Engineering,"Management, Monitoring, Policy and Law",65,0.158,66.84
+IIT Mandi,School of Civil & Environmental Engineering,Atmospheric Science,31,0.075,8.44
+IIT Mandi,School of Civil & Environmental Engineering,Environmental Engineering,20,0.049,4.35
+IIT Mandi,School of Civil & Environmental Engineering,Global and Planetary Change,20,0.049,6.02
+IIT Mandi,School of Computing & Electrical Engineering,Electrical and Electronic Engineering,351,0.314,2.57
+IIT Mandi,School of Computing & Electrical Engineering,Control and Systems Engineering,87,0.078,3.12
+IIT Mandi,School of Computing & Electrical Engineering,Computer Vision and Pattern Recognition,74,0.066,3.4
+IIT Mandi,School of Computing & Electrical Engineering,Signal Processing,68,0.061,12.63
+IIT Mandi,School of Computing & Electrical Engineering,Artificial Intelligence,65,0.058,1.77
+IIT Mandi,School of Mathematical & Statistical Sciences,Applied Mathematics,53,0.306,58.98
+IIT Mandi,School of Mathematical & Statistical Sciences,Computational Mechanics,25,0.145,4.17
+IIT Mandi,School of Mathematical & Statistical Sciences,Computer Networks and Communications,13,0.075,4.01
+IIT Mandi,School of Mathematical & Statistical Sciences,Modeling and Simulation,12,0.069,22.88
+IIT Mandi,School of Mathematical & Statistical Sciences,Biomedical Engineering,11,0.064,1.15
+IIT Mandi,School of Mechanical & Materials Engineering,Materials Chemistry,114,0.146,2.03
+IIT Mandi,School of Mechanical & Materials Engineering,Mechanics of Materials,113,0.145,7.15
+IIT Mandi,School of Mechanical & Materials Engineering,Mechanical Engineering,93,0.119,2.3
+IIT Mandi,School of Mechanical & Materials Engineering,"Renewable Energy, Sustainability and the Environment",85,0.109,4.09
+IIT Mandi,School of Mechanical & Materials Engineering,Biomedical Engineering,58,0.074,1.35
+IIT Mandi,School of Physical Sciences,Materials Chemistry,118,0.295,4.1
+IIT Mandi,School of Physical Sciences,Electrical and Electronic Engineering,60,0.15,1.23
+IIT Mandi,School of Physical Sciences,Condensed Matter Physics,56,0.14,14.16
+IIT Mandi,School of Physical Sciences,Nuclear and High Energy Physics,55,0.138,3.32
+IIT Mandi,School of Physical Sciences,"Atomic and Molecular Physics, and Optics",49,0.122,5.08
+IIT Palakkad,Chemistry,Organic Chemistry,62,0.272,7.14
+IIT Palakkad,Chemistry,Materials Chemistry,35,0.154,2.13
+IIT Palakkad,Chemistry,Spectroscopy,34,0.149,27.65
+IIT Palakkad,Chemistry,Molecular Biology,13,0.057,2.03
+IIT Palakkad,Chemistry,"Renewable Energy, Sustainability and the Environment",10,0.044,1.64
+IIT Palakkad,Civil Engineering,Civil and Structural Engineering,48,0.308,7.97
+IIT Palakkad,Civil Engineering,Global and Planetary Change,30,0.192,23.85
+IIT Palakkad,Civil Engineering,Environmental Engineering,15,0.096,8.62
+IIT Palakkad,Civil Engineering,"Management, Monitoring, Policy and Law",10,0.064,27.16
+IIT Palakkad,Civil Engineering,"Safety, Risk, Reliability and Quality",9,0.058,11.02
+IIT Palakkad,Electrical Engineering,Electrical and Electronic Engineering,116,0.245,2.01
+IIT Palakkad,Electrical Engineering,Aerospace Engineering,108,0.228,7.65
+IIT Palakkad,Electrical Engineering,Biomedical Engineering,64,0.135,2.45
+IIT Palakkad,Electrical Engineering,Control and Systems Engineering,43,0.091,3.65
+IIT Palakkad,Electrical Engineering,Computer Networks and Communications,23,0.049,2.6
+IIT Palakkad,Mechanical Engineering,Mechanical Engineering,74,0.264,5.1
+IIT Palakkad,Mechanical Engineering,Electrical and Electronic Engineering,39,0.139,1.14
+IIT Palakkad,Mechanical Engineering,Computational Mechanics,36,0.129,3.71
+IIT Palakkad,Mechanical Engineering,Control and Systems Engineering,30,0.107,4.3
+IIT Palakkad,Mechanical Engineering,Biomedical Engineering,27,0.096,1.74
+IIT Palakkad,Physics,Materials Chemistry,28,0.217,3.01
+IIT Palakkad,Physics,Astronomy and Astrophysics,17,0.132,9.14
+IIT Palakkad,Physics,Artificial Intelligence,16,0.124,3.78
+IIT Palakkad,Physics,Statistical and Nonlinear Physics,14,0.109,19.06
+IIT Palakkad,Physics,"Atomic and Molecular Physics, and Optics",12,0.093,3.86
+IIT Patna,Chemical and Biochemical Engineering,Catalysis,27,0.164,38.07
+IIT Patna,Chemical and Biochemical Engineering,"Renewable Energy, Sustainability and the Environment",21,0.127,4.77
+IIT Patna,Chemical and Biochemical Engineering,Materials Chemistry,19,0.115,1.6
+IIT Patna,Chemical and Biochemical Engineering,Control and Systems Engineering,17,0.103,4.14
+IIT Patna,Chemical and Biochemical Engineering,Biomedical Engineering,13,0.079,1.43
+IIT Patna,Chemistry,Organic Chemistry,143,0.289,7.6
+IIT Patna,Chemistry,Materials Chemistry,115,0.233,3.23
+IIT Patna,Chemistry,Molecular Biology,36,0.073,2.59
+IIT Patna,Chemistry,Inorganic Chemistry,22,0.045,5.55
+IIT Patna,Chemistry,Physical and Theoretical Chemistry,19,0.038,8.21
+IIT Patna,Civil and Environmental Engineering,Civil and Structural Engineering,212,0.408,10.58
+IIT Patna,Civil and Environmental Engineering,Mechanical Engineering,59,0.114,2.19
+IIT Patna,Civil and Environmental Engineering,Waste Management and Disposal,37,0.071,17.13
+IIT Patna,Civil and Environmental Engineering,Environmental Engineering,37,0.071,6.39
+IIT Patna,Civil and Environmental Engineering,"Safety, Risk, Reliability and Quality",24,0.046,8.83
+IIT Patna,Computer Science and Engineering,Artificial Intelligence,564,0.436,13.28
+IIT Patna,Computer Science and Engineering,Computer Vision and Pattern Recognition,179,0.138,7.11
+IIT Patna,Computer Science and Engineering,Information Systems,119,0.092,14.82
+IIT Patna,Computer Science and Engineering,Computer Networks and Communications,98,0.076,4.05
+IIT Patna,Computer Science and Engineering,Molecular Biology,51,0.039,1.4
+IIT Patna,Electrical Engineering,Electrical and Electronic Engineering,542,0.537,4.41
+IIT Patna,Electrical Engineering,Artificial Intelligence,118,0.117,3.56
+IIT Patna,Electrical Engineering,Control and Systems Engineering,94,0.093,3.74
+IIT Patna,Electrical Engineering,Aerospace Engineering,64,0.063,2.12
+IIT Patna,Electrical Engineering,Computer Vision and Pattern Recognition,40,0.04,2.04
+IIT Patna,Mathematics,Statistics and Probability,133,0.258,63.65
+IIT Patna,Mathematics,Artificial Intelligence,129,0.25,7.62
+IIT Patna,Mathematics,Computational Theory and Mathematics,54,0.105,8.79
+IIT Patna,Mathematics,Numerical Analysis,45,0.087,50.97
+IIT Patna,Mathematics,Applied Mathematics,40,0.078,14.95
+IIT Patna,Mechanical Engineering,Mechanical Engineering,262,0.363,7.01
+IIT Patna,Mechanical Engineering,Biomedical Engineering,133,0.184,3.34
+IIT Patna,Mechanical Engineering,Mechanics of Materials,64,0.089,4.38
+IIT Patna,Mechanical Engineering,Computational Mechanics,39,0.054,1.56
+IIT Patna,Mechanical Engineering,Civil and Structural Engineering,30,0.042,1.08
+IIT Patna,Metallurgical and Materials Engineering,Materials Chemistry,65,0.259,3.6
+IIT Patna,Metallurgical and Materials Engineering,Ceramics and Composites,51,0.203,121.58
+IIT Patna,Metallurgical and Materials Engineering,Mechanical Engineering,43,0.171,3.3
+IIT Patna,Metallurgical and Materials Engineering,Aerospace Engineering,31,0.124,4.14
+IIT Patna,Metallurgical and Materials Engineering,"Electronic, Optical and Magnetic Materials",11,0.044,1.58
+IIT Patna,Physics,Materials Chemistry,195,0.243,3.37
+IIT Patna,Physics,"Atomic and Molecular Physics, and Optics",122,0.152,6.3
+IIT Patna,Physics,Electrical and Electronic Engineering,118,0.147,1.2
+IIT Patna,Physics,Nuclear and High Energy Physics,85,0.106,2.55
+IIT Patna,Physics,"Electronic, Optical and Magnetic Materials",80,0.1,3.58
+IIT Tirupati,Chemical Engineering,Electrical and Electronic Engineering,17,0.163,1.34
+IIT Tirupati,Chemical Engineering,Control and Systems Engineering,10,0.096,3.86
+IIT Tirupati,Chemical Engineering,Food Science,10,0.096,48.96
+IIT Tirupati,Chemical Engineering,"Renewable Energy, Sustainability and the Environment",10,0.096,3.6
+IIT Tirupati,Chemical Engineering,Mechanical Engineering,9,0.087,1.67
+IIT Tirupati,Chemistry,Organic Chemistry,45,0.298,7.82
+IIT Tirupati,Chemistry,Materials Chemistry,15,0.099,1.38
+IIT Tirupati,Chemistry,Statistical and Nonlinear Physics,12,0.079,13.96
+IIT Tirupati,Chemistry,Inorganic Chemistry,12,0.079,9.9
+IIT Tirupati,Chemistry,Physical and Theoretical Chemistry,11,0.073,15.54
+IIT Tirupati,Civil and Environmental Engineering,Civil and Structural Engineering,47,0.303,7.86
+IIT Tirupati,Civil and Environmental Engineering,Water Science and Technology,24,0.155,10.82
+IIT Tirupati,Civil and Environmental Engineering,Environmental Engineering,15,0.097,8.67
+IIT Tirupati,Civil and Environmental Engineering,Global and Planetary Change,8,0.052,6.4
+IIT Tirupati,Civil and Environmental Engineering,Building and Construction,7,0.045,5.79
+IIT Tirupati,Computer Science and Engineering,Information Systems,61,0.377,60.63
+IIT Tirupati,Computer Science and Engineering,Electrical and Electronic Engineering,21,0.13,1.06
+IIT Tirupati,Computer Science and Engineering,Computer Vision and Pattern Recognition,19,0.117,6.02
+IIT Tirupati,Computer Science and Engineering,Artificial Intelligence,18,0.111,3.38
+IIT Tirupati,Computer Science and Engineering,Hardware and Architecture,12,0.074,11.27
+IIT Tirupati,Electrical Engineering,Electrical and Electronic Engineering,97,0.391,3.21
+IIT Tirupati,Electrical Engineering,Computer Vision and Pattern Recognition,47,0.19,9.73
+IIT Tirupati,Electrical Engineering,Computer Networks and Communications,28,0.113,6.03
+IIT Tirupati,Electrical Engineering,"Atomic and Molecular Physics, and Optics",19,0.077,3.18
+IIT Tirupati,Electrical Engineering,Aerospace Engineering,8,0.032,1.08
+IIT Tirupati,Mechanical Engineering,Mechanical Engineering,73,0.349,6.74
+IIT Tirupati,Mechanical Engineering,Biomedical Engineering,29,0.139,2.51
+IIT Tirupati,Mechanical Engineering,Automotive Engineering,20,0.096,15.39
+IIT Tirupati,Mechanical Engineering,Materials Chemistry,16,0.077,1.06
+IIT Tirupati,Mechanical Engineering,Computational Mechanics,10,0.048,1.38
+IIT Tirupati,Physics,"Atomic and Molecular Physics, and Optics",52,0.486,20.16
+IIT Tirupati,Physics,Materials Chemistry,9,0.084,1.17
+IIT Tirupati,Physics,Condensed Matter Physics,7,0.065,6.62
+IIT Tirupati,Physics,Astronomy and Astrophysics,5,0.047,3.24
+IIT Tirupati,Physics,Water Science and Technology,5,0.047,3.27

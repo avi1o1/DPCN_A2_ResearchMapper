@@ -67,7 +67,7 @@ footer { padding: 28px 0 60px; color: var(--fg2); font-size: 13px; }
   <div class="wrap">
     <h1 id="h1">IIT Research Map: the newer IITs</h1>
     <p class="sub" id="subtitle"></p>
-    <div class="draft"><b>Draft.</b> Built from the pre-A2 enrichment output: the OpenAlex title-search stage (A2) has not run yet, journal quartiles are waiting for the Scimago tables, and the categorisation fixes (branch fix-categorisation) are not applied to this data. Panels that cannot be computed yet are listed at the bottom. Numbers will change when the files are refreshed.</div>
+    <div class="draft"><b>Draft.</b> Built from the enrichment output of 30 October 2026 (including the OpenAlex title-search results). Journal quartiles come from the Scimago tables for 2016 and 2020, with the nearest of those years used for the other years; the categorisation fixes (branch fix-categorisation) are not applied to this data. Panels that cannot be computed yet are listed at the bottom. Numbers will change when the files are refreshed.</div>
   </div>
 </header>
 
@@ -157,7 +157,7 @@ function secOverview(st) {
     return {n, pap, fac: p.faculty.with_papers, roster: p.faculty.roster_listed, cit: p.headline.citations, cpp: p.headline.citations_per_paper,
       h: p.faculty.h.median, ih: p.headline.institute_h, core: conf ? ranked / conf : null, big: p.large.share, self: p.network.citation.self_share, ratio: p.network.flow.ratio};
   });
-  const tbl = table([{h: "Institute"}, {h: "Papers", n: 1}, {h: "Faculty with papers", n: 1}, {h: "Roster listed", n: 1}, {h: "Citations", n: 1},
+  const tbl = table([{h: "Institute", raw: 1}, {h: "Papers", n: 1}, {h: "Faculty with papers", n: 1}, {h: "Roster listed", n: 1}, {h: "Citations", n: 1},
     {h: "Citations / paper", n: 1}, {h: "Median faculty h", n: 1}, {h: "Institute h", n: 1}, {h: "Conf. papers with CORE rank", n: 1}, {h: ">10-author papers", n: 1}, {h: "Self-citation share", n: 1}, {h: "Indian in/out citation ratio", n: 1}],
     rows.map(r => [`<span class="sw"><span class="dot" style="background:${COLOR[r.n]}"></span><a href="#a=${encodeURIComponent(r.n)}" onclick="selA.value='${esc(r.n)}';selB.value='';render();">${esc(r.n)}</a></span>`,
       fmt(r.pap), fmt(r.fac), fmt(r.roster), fmt(r.cit), fmt(r.cpp, 1), fmt(r.h, 0), fmt(r.ih), pct(r.core), pct(r.big), pct(r.self, 0), fmt(r.ratio, 2)]).map(r => r), "");
@@ -270,9 +270,9 @@ function drawFaculty(st) {
 
 function secJournals(st) {
   const none = st.list.every(n => D.per[n].quartiles.Q1 + D.per[n].quartiles.Q2 + D.per[n].quartiles.Q3 + D.per[n].quartiles.Q4 === 0);
-  const banner = none ? `<div class="banner">Scimago quartiles are not loaded yet, so every journal paper is counted as "no quartile". The chart fills in when the Scimago tables are added and the analysis is re-run.</div>` : "";
+  const banner = none ? `<div class="banner">No journal paper has a Scimago quartile in this run, so every journal paper is counted as "no quartile".</div>` : "";
   return `<section id="journals"><div class="wrap"><h2>Journals and quartiles</h2><p class="sub">Journal quartile share: Q1 to Q4 of the journal papers that have a Scimago SJR quartile (publication year).</p>${banner}
-  <div class="grid two">${card("Quartile mix of journal papers", '<div id="qt" class="chart"></div>')}
+  <div class="grid two">${card("Quartile mix of journal papers (Scimago SJR; 2016 and 2020 tables, nearest year for the others)", '<div id="qt" class="chart"></div>')}
   ${card("Journal papers", table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))),
     [["Journal papers"].concat(st.list.map(n => fmt(D.per[n].quartiles.journal_papers))), ["with a quartile"].concat(st.list.map(n => { const q = D.per[n].quartiles; return fmt(q.Q1 + q.Q2 + q.Q3 + q.Q4); })),
      ["Q1 share of ranked"].concat(st.list.map(n => { const q = D.per[n].quartiles, r = q.Q1 + q.Q2 + q.Q3 + q.Q4; return r ? pct(q.Q1 / r) : "n/a"; }))], "kpis"))}</div></div></div></section>`;
@@ -397,7 +397,7 @@ function render() {
   html += secSkipped(); jump.push(["skipped", "Not computed"]);
   document.getElementById("main").innerHTML = html;
   document.getElementById("jump").innerHTML = jump.map(j => `<a href="#${j[0]}" onclick="document.getElementById('${j[0]}').scrollIntoView();return false;">${j[1]}</a>`).join("");
-  document.getElementById("foot").innerHTML = `Draft built ${esc(D.generated)} from Analysis/results_v2 (pre-A2 enrichment output). Citation counts: Crossref, OpenAlex where Crossref had none. Source tables: Analysis/README.md.`;
+  document.getElementById("foot").innerHTML = `Draft built ${esc(D.generated)} from Analysis/results_v2 (enrichment output of 30 October 2026). Citation counts: Crossref, OpenAlex where Crossref had none. Source tables: Analysis/README.md.`;
   if (st.all) drawOverview();
   else { drawPapers(st); drawFaculty(st); drawJournals(st); drawCore(st); drawCollab(st); drawNet(st); }
 }

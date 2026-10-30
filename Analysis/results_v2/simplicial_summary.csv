@@ -1,0 +1,20 @@
+﻿metric,value
+"all authors, papers <= 25 authors, all years: triangles in the pairwise graph",1350690
+"all authors, papers <= 25 authors, all years: share of triangles closed by one paper",0.9654
+"all authors, papers <= 10 authors, all years: triangles in the pairwise graph",732313
+"all authors, papers <= 10 authors, all years: share of triangles closed by one paper",0.9523
+papers with >= 3 faculty (only these can close a faculty triangle in one paper),1750
+faculty network (all papers): triangles,2795
+faculty network: share of triangles closed by one paper with all three faculty,0.6104
+cap 25: train papers (<= 2021) / test papers (> 2021),45169 / 59229
+cap 25: open triangles at end of 2021,12398
+cap 25: open triangles that became a joint paper after 2021,354
+cap 10: train papers (<= 2021) / test papers (> 2021),44637 / 58028
+cap 10: open triangles at end of 2021,10137
+cap 10: open triangles that became a joint paper after 2021,204
+"check (names split): papers <= 25 authors, all years: share of triangles closed by one paper",0.9685
+"check (names split): cap 25: closure probability, 0 edges",3.82e-10 (10226 of 26799238885551)
+"check (names split): cap 25: closure probability, 1 edge",1.9e-06 (21960 of 11578114072)
+"check (names split): cap 25: closure probability, 2 edges (open wedge)",0.00371 (11103 of 2992458)
+"check (names split): cap 25: closure probability, 3 edges, no joint paper (open triangle)",0.03 (344 of 11454)
+"check (names split): cap 25: harmonic mean score, ROC AUC (p)",0.575 (9.21e-07)

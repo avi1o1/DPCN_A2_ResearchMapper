@@ -1,0 +1,252 @@
+﻿definition,metric,value
+pure,faculty,4405
+pure,faculty with at least one citation link (either direction),3504
+pure,citing pairs between institutes (of 14),20102
+pure,CORE members citing or cited by another institute's faculty within the CORE,2359
+pure,citing pairs a -> b,27765
+pure,CORE (faculty),2395
+pure,IN (faculty),656
+pure,OUT (faculty),296
+pure,TUBES (faculty),3
+pure,TENDRILS (faculty),85
+pure,OTHER (faculty),69
+pure,ISOLATED (faculty),901
+pure,CORE share of linked faculty,0.6835
+pure,CORE size in 10 degree-preserving rewirings: mean (min-max),2473 (2464-2481)
+pure,"check: networkx and scipy give the same CORE, IN and OUT",True
+pure,IIT Bombay: CORE,401
+pure,IIT Bombay: IN,93
+pure,IIT Bombay: OUT,82
+pure,IIT Bombay: TUBES,1
+pure,IIT Bombay: TENDRILS,19
+pure,IIT Bombay: OTHER,12
+pure,IIT Bombay: ISOLATED,172
+pure,IIT Madras: CORE,361
+pure,IIT Madras: IN,70
+pure,IIT Madras: OUT,56
+pure,IIT Madras: TUBES,1
+pure,IIT Madras: TENDRILS,12
+pure,IIT Madras: OTHER,10
+pure,IIT Madras: ISOLATED,101
+pure,IIT Kanpur: CORE,292
+pure,IIT Kanpur: IN,68
+pure,IIT Kanpur: OUT,40
+pure,IIT Kanpur: TUBES,0
+pure,IIT Kanpur: TENDRILS,9
+pure,IIT Kanpur: OTHER,7
+pure,IIT Kanpur: ISOLATED,134
+pure,IIT Goa: CORE,22
+pure,IIT Goa: IN,13
+pure,IIT Goa: OUT,2
+pure,IIT Goa: TUBES,0
+pure,IIT Goa: TENDRILS,2
+pure,IIT Goa: OTHER,0
+pure,IIT Goa: ISOLATED,16
+pure,IIT Tirupati: CORE,46
+pure,IIT Tirupati: IN,35
+pure,IIT Tirupati: OUT,6
+pure,IIT Tirupati: TUBES,0
+pure,IIT Tirupati: TENDRILS,0
+pure,IIT Tirupati: OTHER,1
+pure,IIT Tirupati: ISOLATED,34
+pure,IIT Patna: CORE,109
+pure,IIT Patna: IN,29
+pure,IIT Patna: OUT,7
+pure,IIT Patna: TUBES,0
+pure,IIT Patna: TENDRILS,0
+pure,IIT Patna: OTHER,1
+pure,IIT Patna: ISOLATED,17
+pure,IIT Palakkad: CORE,45
+pure,IIT Palakkad: IN,25
+pure,IIT Palakkad: OUT,3
+pure,IIT Palakkad: TUBES,0
+pure,IIT Palakkad: TENDRILS,7
+pure,IIT Palakkad: OTHER,4
+pure,IIT Palakkad: ISOLATED,36
+pure,IIT Guwahati: CORE,273
+pure,IIT Guwahati: IN,66
+pure,IIT Guwahati: OUT,21
+pure,IIT Guwahati: TUBES,0
+pure,IIT Guwahati: TENDRILS,8
+pure,IIT Guwahati: OTHER,9
+pure,IIT Guwahati: ISOLATED,65
+pure,IIT Hyderabad: CORE,172
+pure,IIT Hyderabad: IN,46
+pure,IIT Hyderabad: OUT,21
+pure,IIT Hyderabad: TUBES,1
+pure,IIT Hyderabad: TENDRILS,9
+pure,IIT Hyderabad: OTHER,6
+pure,IIT Hyderabad: ISOLATED,86
+pure,IIT Bhubaneswar: CORE,108
+pure,IIT Bhubaneswar: IN,36
+pure,IIT Bhubaneswar: OUT,12
+pure,IIT Bhubaneswar: TUBES,0
+pure,IIT Bhubaneswar: TENDRILS,6
+pure,IIT Bhubaneswar: OTHER,2
+pure,IIT Bhubaneswar: ISOLATED,57
+pure,IIT (BHU) Varanasi: CORE,259
+pure,IIT (BHU) Varanasi: IN,73
+pure,IIT (BHU) Varanasi: OUT,15
+pure,IIT (BHU) Varanasi: TUBES,0
+pure,IIT (BHU) Varanasi: TENDRILS,3
+pure,IIT (BHU) Varanasi: OTHER,3
+pure,IIT (BHU) Varanasi: ISOLATED,66
+pure,IIT Gandhinagar: CORE,86
+pure,IIT Gandhinagar: IN,22
+pure,IIT Gandhinagar: OUT,9
+pure,IIT Gandhinagar: TUBES,0
+pure,IIT Gandhinagar: TENDRILS,4
+pure,IIT Gandhinagar: OTHER,5
+pure,IIT Gandhinagar: ISOLATED,49
+pure,IIT Indore: CORE,129
+pure,IIT Indore: IN,32
+pure,IIT Indore: OUT,8
+pure,IIT Indore: TUBES,0
+pure,IIT Indore: TENDRILS,5
+pure,IIT Indore: OTHER,6
+pure,IIT Indore: ISOLATED,23
+pure,IIT Mandi: CORE,92
+pure,IIT Mandi: IN,48
+pure,IIT Mandi: OUT,14
+pure,IIT Mandi: TUBES,0
+pure,IIT Mandi: TENDRILS,1
+pure,IIT Mandi: OTHER,3
+pure,IIT Mandi: ISOLATED,45
+strict,faculty,4405
+strict,faculty with at least one citation link (either direction),3306
+strict,citing pairs between institutes (of 14),18207
+strict,CORE members citing or cited by another institute's faculty within the CORE,2148
+strict,citing pairs a -> b,22967
+strict,CORE (faculty),2167
+strict,IN (faculty),675
+strict,OUT (faculty),320
+strict,TUBES (faculty),0
+strict,TENDRILS (faculty),69
+strict,OTHER (faculty),75
+strict,ISOLATED (faculty),1099
+strict,CORE share of linked faculty,0.6555
+strict,CORE size in 10 degree-preserving rewirings: mean (min-max),2239 (2232-2246)
+strict,"check: networkx and scipy give the same CORE, IN and OUT",True
+strict,IIT Bombay: CORE,360
+strict,IIT Bombay: IN,84
+strict,IIT Bombay: OUT,86
+strict,IIT Bombay: TUBES,0
+strict,IIT Bombay: TENDRILS,21
+strict,IIT Bombay: OTHER,12
+strict,IIT Bombay: ISOLATED,217
+strict,IIT Madras: CORE,329
+strict,IIT Madras: IN,78
+strict,IIT Madras: OUT,57
+strict,IIT Madras: TUBES,0
+strict,IIT Madras: TENDRILS,9
+strict,IIT Madras: OTHER,11
+strict,IIT Madras: ISOLATED,127
+strict,IIT Kanpur: CORE,262
+strict,IIT Kanpur: IN,67
+strict,IIT Kanpur: OUT,44
+strict,IIT Kanpur: TUBES,0
+strict,IIT Kanpur: TENDRILS,8
+strict,IIT Kanpur: OTHER,7
+strict,IIT Kanpur: ISOLATED,162
+strict,IIT Goa: CORE,19
+strict,IIT Goa: IN,15
+strict,IIT Goa: OUT,1
+strict,IIT Goa: TUBES,0
+strict,IIT Goa: TENDRILS,2
+strict,IIT Goa: OTHER,0
+strict,IIT Goa: ISOLATED,18
+strict,IIT Tirupati: CORE,39
+strict,IIT Tirupati: IN,37
+strict,IIT Tirupati: OUT,5
+strict,IIT Tirupati: TUBES,0
+strict,IIT Tirupati: TENDRILS,1
+strict,IIT Tirupati: OTHER,1
+strict,IIT Tirupati: ISOLATED,39
+strict,IIT Patna: CORE,99
+strict,IIT Patna: IN,34
+strict,IIT Patna: OUT,9
+strict,IIT Patna: TUBES,0
+strict,IIT Patna: TENDRILS,1
+strict,IIT Patna: OTHER,0
+strict,IIT Patna: ISOLATED,20
+strict,IIT Palakkad: CORE,40
+strict,IIT Palakkad: IN,26
+strict,IIT Palakkad: OUT,4
+strict,IIT Palakkad: TUBES,0
+strict,IIT Palakkad: TENDRILS,2
+strict,IIT Palakkad: OTHER,7
+strict,IIT Palakkad: ISOLATED,41
+strict,IIT Guwahati: CORE,250
+strict,IIT Guwahati: IN,68
+strict,IIT Guwahati: OUT,25
+strict,IIT Guwahati: TUBES,0
+strict,IIT Guwahati: TENDRILS,7
+strict,IIT Guwahati: OTHER,9
+strict,IIT Guwahati: ISOLATED,83
+strict,IIT Hyderabad: CORE,152
+strict,IIT Hyderabad: IN,49
+strict,IIT Hyderabad: OUT,26
+strict,IIT Hyderabad: TUBES,0
+strict,IIT Hyderabad: TENDRILS,7
+strict,IIT Hyderabad: OTHER,9
+strict,IIT Hyderabad: ISOLATED,98
+strict,IIT Bhubaneswar: CORE,96
+strict,IIT Bhubaneswar: IN,36
+strict,IIT Bhubaneswar: OUT,15
+strict,IIT Bhubaneswar: TUBES,0
+strict,IIT Bhubaneswar: TENDRILS,3
+strict,IIT Bhubaneswar: OTHER,5
+strict,IIT Bhubaneswar: ISOLATED,66
+strict,IIT (BHU) Varanasi: CORE,245
+strict,IIT (BHU) Varanasi: IN,76
+strict,IIT (BHU) Varanasi: OUT,15
+strict,IIT (BHU) Varanasi: TUBES,0
+strict,IIT (BHU) Varanasi: TENDRILS,1
+strict,IIT (BHU) Varanasi: OTHER,4
+strict,IIT (BHU) Varanasi: ISOLATED,78
+strict,IIT Gandhinagar: CORE,74
+strict,IIT Gandhinagar: IN,26
+strict,IIT Gandhinagar: OUT,8
+strict,IIT Gandhinagar: TUBES,0
+strict,IIT Gandhinagar: TENDRILS,3
+strict,IIT Gandhinagar: OTHER,2
+strict,IIT Gandhinagar: ISOLATED,62
+strict,IIT Indore: CORE,119
+strict,IIT Indore: IN,30
+strict,IIT Indore: OUT,10
+strict,IIT Indore: TUBES,0
+strict,IIT Indore: TENDRILS,3
+strict,IIT Indore: OTHER,5
+strict,IIT Indore: ISOLATED,36
+strict,IIT Mandi: CORE,83
+strict,IIT Mandi: IN,49
+strict,IIT Mandi: OUT,15
+strict,IIT Mandi: TUBES,0
+strict,IIT Mandi: TENDRILS,1
+strict,IIT Mandi: OTHER,3
+strict,IIT Mandi: ISOLATED,52
+pure,CORE: median papers,35.0
+pure,CORE: median citations,391.0
+pure,CORE: median h_index,10.0
+pure,IN: median papers,8.0
+pure,IN: median citations,24.0
+pure,IN: median h_index,3.0
+pure,OUT: median papers,9.0
+pure,OUT: median citations,86.0
+pure,OUT: median h_index,4.0
+pure,TUBES: median papers,13.0
+pure,TUBES: median citations,64.0
+pure,TUBES: median h_index,5.0
+pure,TENDRILS: median papers,6.0
+pure,TENDRILS: median citations,25.0
+pure,TENDRILS: median h_index,3.0
+pure,OTHER: median papers,6.0
+pure,OTHER: median citations,21.0
+pure,OTHER: median h_index,3.0
+pure,ISOLATED: median papers,2.0
+pure,ISOLATED: median citations,5.0
+pure,ISOLATED: median h_index,1.0
+pure,departments in the hierarchy (>= 5 faculty),177
+pure,check: Spearman SpringRank vs net balance,0.971
+pure,citations between departments (weighted edges),54858
+pure,citations within a department,9832

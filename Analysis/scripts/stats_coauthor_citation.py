@@ -122,6 +122,9 @@ def main():
     inst = np.array([F[a]["institution"] for a in fac])
     msub = main_subfield(P, ok)
     sub = np.array([msub.get(a, "") for a in fac])
+    # compare people by integer codes: indexing a string array with all n^2 pairs needs hundreds of bytes per pair (11 GB)
+    has_sub = sub != ""
+    dept, inst, sub = (np.unique(v, return_inverse=True)[1] for v in (dept, inst, sub))
     npap = np.array([int(F[a]["papers"]) for a in fac])
     cuts = np.quantile(npap, [1 / 3, 2 / 3])
     pb = np.array([band(x, cuts) for x in npap])
@@ -131,7 +134,7 @@ def main():
     d = D[I, J]
     dc = np.where(d == 1, "1", np.where(d == 2, "2", np.where(d == 3, "3", "far")))
     same_dept, same_inst = dept[I] == dept[J], inst[I] == inst[J]
-    same_sub = (sub[I] == sub[J]) & (sub[I] != "")
+    same_sub = (sub[I] == sub[J]) & has_sub[I]
     stratum = (np.where(same_dept, 2, np.where(same_inst, 1, 0)) * 2 + same_sub) * 9 + pb[I] * 3 + pb[J]
     far = dc == "far"
     scopes = {"all pairs": np.ones(len(I), bool), "same department": same_dept,
@@ -151,7 +154,7 @@ def main():
         FCO[ix[a_], ix[b_]] = FCO[ix[b_], ix[a_]] = y_
     fco = FCO[iu, ju]
     sd = np.where(dept[iu] == dept[ju], 2, np.where(inst[iu] == inst[ju], 1, 0))
-    ss = (sub[iu] == sub[ju]) & (sub[iu] != "")
+    ss = (sub[iu] == sub[ju]) & has_sub[iu]
     st = (sd * 2 + ss) * 9 + np.minimum(pb[iu], pb[ju]) * 3 + np.maximum(pb[iu], pb[ju])
     summ.append((f"faculty active before and after {SPLIT_YEAR}", int(active.sum())))
 

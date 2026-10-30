@@ -1,0 +1,334 @@
+﻿institution,kind,label,large_papers,rank,share_large,share_other
+IIT Bombay,venue,Physics Letters B,132,Q1,,
+IIT Bombay,venue,Journal of High Energy Physics,118,Q2,,
+IIT Bombay,venue,The European Physical Journal C,92,Q1,,
+IIT Bombay,venue,Physical Review Letters,75,Q1,,
+IIT Bombay,venue,Physical Review C,72,Q1,,
+IIT Bombay,venue,Physical Review D,60,Q1,,
+IIT Bombay,venue,The Astrophysical Journal,50,Q1,,
+IIT Bombay,venue,The Astrophysical Journal Letters,36,Q1,,
+IIT Bombay,venue,arXiv,33,,,
+IIT Bombay,venue,Nature Communications,16,Q1,,
+IIT Bombay,type,book,0,,0.0,0.0006
+IIT Bombay,type,book-chapter,12,,0.009,0.0541
+IIT Bombay,type,conference,48,,0.0358,0.1895
+IIT Bombay,type,journal,1209,,0.9022,0.7157
+IIT Bombay,type,other,0,,0.0,0.0017
+IIT Bombay,type,preprint,66,,0.0493,0.0382
+IIT Bombay,type,report,5,,0.0037,0.0002
+IIT Bombay,quartile,Q1,957,,0.7916,0.6721
+IIT Bombay,quartile,Q2,188,,0.1555,0.2044
+IIT Bombay,quartile,Q3,11,,0.0091,0.0445
+IIT Bombay,quartile,Q4,1,,0.0008,0.0066
+IIT Bombay,quartile,unranked,52,,0.043,0.0724
+IIT Bombay,foreign co-author,large,1136,,0.8478,
+IIT Bombay,foreign co-author,other,6478,,0.2806,
+IIT Madras,venue,Physical Review D,555,Q1,,
+IIT Madras,venue,Journal of High Energy Physics,459,Q2,,
+IIT Madras,venue,Physical Review Letters,279,Q1,,
+IIT Madras,venue,Physics Letters B,176,Q1,,
+IIT Madras,venue,arXiv,127,,,
+IIT Madras,venue,The European Physical Journal C,125,Q1,,
+IIT Madras,venue,Journal of Instrumentation,54,Q1,,
+IIT Madras,venue,The Astrophysical Journal,38,Q1,,
+IIT Madras,venue,"Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",26,Q1,,
+IIT Madras,venue,The Astrophysical Journal Letters,25,Q1,,
+IIT Madras,type,TODO,0,,0.0,0.0
+IIT Madras,type,book,1,,0.0004,0.0005
+IIT Madras,type,book-chapter,11,,0.0044,0.0511
+IIT Madras,type,conference,61,,0.0246,0.1786
+IIT Madras,type,journal,2249,,0.9058,0.7393
+IIT Madras,type,other,0,,0.0,0.0015
+IIT Madras,type,preprint,159,,0.064,0.0288
+IIT Madras,type,report,2,,0.0008,0.0
+IIT Madras,quartile,Q1,1676,,0.7452,0.6504
+IIT Madras,quartile,Q2,514,,0.2285,0.2228
+IIT Madras,quartile,Q3,3,,0.0013,0.0504
+IIT Madras,quartile,Q4,0,,0.0,0.0092
+IIT Madras,quartile,unranked,56,,0.0249,0.0672
+IIT Madras,foreign co-author,large,2193,,0.8832,
+IIT Madras,foreign co-author,other,5707,,0.265,
+IIT Kanpur,venue,Journal of High Energy Physics,42,Q2,,
+IIT Kanpur,venue,Physical Review D,26,Q1,,
+IIT Kanpur,venue,Nature Communications,25,Q1,,
+IIT Kanpur,venue,Physical Review Letters,23,Q1,,
+IIT Kanpur,venue,Physics Letters B,15,Q1,,
+IIT Kanpur,venue,Physical Review B,14,Q1,,
+IIT Kanpur,venue,Journal of Instrumentation,14,Q1,,
+IIT Kanpur,venue,Atmospheric Chemistry and Physics,12,Q1,,
+IIT Kanpur,venue,The European Physical Journal C,11,Q1,,
+IIT Kanpur,venue,Proceedings of 37th International Cosmic Ray Conference — PoS(ICRC2021),11,,,
+IIT Kanpur,type,book,0,,0.0,0.0007
+IIT Kanpur,type,book-chapter,2,,0.003,0.0512
+IIT Kanpur,type,conference,73,,0.108,0.1925
+IIT Kanpur,type,journal,569,,0.8417,0.7164
+IIT Kanpur,type,other,0,,0.0,0.0012
+IIT Kanpur,type,preprint,32,,0.0473,0.0378
+IIT Kanpur,type,report,0,,0.0,0.0001
+IIT Kanpur,type,thesis,0,,0.0,0.0001
+IIT Kanpur,quartile,Q1,443,,0.7786,0.6689
+IIT Kanpur,quartile,Q2,79,,0.1388,0.202
+IIT Kanpur,quartile,Q3,8,,0.0141,0.051
+IIT Kanpur,quartile,Q4,1,,0.0018,0.0045
+IIT Kanpur,quartile,unranked,38,,0.0668,0.0736
+IIT Kanpur,foreign co-author,large,585,,0.8654,
+IIT Kanpur,foreign co-author,other,4446,,0.2663,
+IIT Goa,venue,Physical Review B,6,Q1,,
+IIT Goa,venue,International Journal of Modern Physics E,5,Q2,,
+IIT Goa,venue,Physical Review Materials,2,Q1,,
+IIT Goa,venue,Langmuir,1,Q1,,
+IIT Goa,venue,Physical Review C,1,Q1,,
+IIT Goa,venue,Frontiers in Microbiology,1,Q1,,
+IIT Goa,venue,Journal of Colloid and Interface Science,1,Q1,,
+IIT Goa,venue,ACS Biomaterials Science & Engineering,1,Q1,,
+IIT Goa,venue,Angewandte Chemie International Edition,1,Q1,,
+IIT Goa,venue,arXiv,1,,,
+IIT Goa,type,book,0,,0.0,0.0013
+IIT Goa,type,book-chapter,0,,0.0,0.0616
+IIT Goa,type,conference,2,,0.0769,0.2503
+IIT Goa,type,journal,22,,0.8462,0.6277
+IIT Goa,type,other,0,,0.0,0.0013
+IIT Goa,type,preprint,2,,0.0769,0.0579
+IIT Goa,quartile,Q1,17,,0.7727,0.6433
+IIT Goa,quartile,Q2,5,,0.2273,0.1964
+IIT Goa,quartile,Q3,0,,0.0,0.0541
+IIT Goa,quartile,Q4,0,,0.0,0.02
+IIT Goa,quartile,unranked,0,,0.0,0.0862
+IIT Goa,foreign co-author,large,23,,0.8846,
+IIT Goa,foreign co-author,other,256,,0.322,
+IIT Tirupati,venue,Physical Review B,3,Q1,,
+IIT Tirupati,venue,Lecture Notes in Computer Science,2,,,
+IIT Tirupati,venue,Advanced Functional Materials,2,Q1,,
+IIT Tirupati,venue,arXiv,2,,,
+IIT Tirupati,venue,"Journal of Physics B: Atomic, Molecular and Optical Physics",2,Q2,,
+IIT Tirupati,venue,Physical Review Letters,1,Q1,,
+IIT Tirupati,venue,npj Quantum Materials,1,Q1,,
+IIT Tirupati,venue,Nature Communications,1,Q1,,
+IIT Tirupati,venue,2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW),1,,,
+IIT Tirupati,venue,MICRO-54: 54th Annual IEEE/ACM International Symposium on Microarchitecture,1,,,
+IIT Tirupati,type,book-chapter,3,,0.1,0.0557
+IIT Tirupati,type,conference,3,,0.1,0.2448
+IIT Tirupati,type,journal,22,,0.7333,0.6502
+IIT Tirupati,type,other,0,,0.0,0.0057
+IIT Tirupati,type,preprint,2,,0.0667,0.0435
+IIT Tirupati,quartile,Q1,18,,0.8182,0.6136
+IIT Tirupati,quartile,Q2,2,,0.0909,0.2097
+IIT Tirupati,quartile,Q3,0,,0.0,0.0626
+IIT Tirupati,quartile,Q4,0,,0.0,0.0066
+IIT Tirupati,quartile,unranked,2,,0.0909,0.1076
+IIT Tirupati,foreign co-author,large,29,,0.9667,
+IIT Tirupati,foreign co-author,other,305,,0.2177,
+IIT Patna,venue,Physical Review C,37,Q1,,
+IIT Patna,venue,Physical Review Letters,28,Q1,,
+IIT Patna,venue,Physics Letters B,23,Q1,,
+IIT Patna,venue,Physical Review D,15,Q1,,
+IIT Patna,venue,Journal of High Energy Physics,5,Q2,,
+IIT Patna,venue,RSC Advances,4,Q1,,
+IIT Patna,venue,Chinese Physics C,2,Q1,,
+IIT Patna,venue,Langmuir,2,Q1,,
+IIT Patna,venue,Journal of Materials Chemistry A,2,Q1,,
+IIT Patna,venue,Nature,2,Q1,,
+IIT Patna,type,book,0,,0.0,0.0002
+IIT Patna,type,book-chapter,0,,0.0,0.0643
+IIT Patna,type,conference,1,,0.0061,0.2082
+IIT Patna,type,journal,162,,0.9878,0.7082
+IIT Patna,type,other,0,,0.0,0.0005
+IIT Patna,type,preprint,1,,0.0061,0.0186
+IIT Patna,quartile,Q1,138,,0.8519,0.5594
+IIT Patna,quartile,Q2,14,,0.0864,0.2663
+IIT Patna,quartile,Q3,2,,0.0123,0.0809
+IIT Patna,quartile,Q4,0,,0.0,0.0136
+IIT Patna,quartile,unranked,8,,0.0494,0.0798
+IIT Patna,foreign co-author,large,143,,0.872,
+IIT Patna,foreign co-author,other,1312,,0.2142,
+IIT Palakkad,venue,The Astrophysical Journal,2,Q1,,
+IIT Palakkad,venue,"Volume 3: Coal, Biomass, Hydrogen, and Alternative Fuels; Cycle Innovations; Electric Power; Industrial and Cogeneration; Organic Rankine Cycle Power Systems",1,,,
+IIT Palakkad,venue,2021 IEEE International Electron Devices Meeting (IEDM),1,,,
+IIT Palakkad,venue,Climatic Change,1,Q1,,
+IIT Palakkad,venue,Genomics,1,Q3,,
+IIT Palakkad,venue,IEEE Transactions on Electron Devices,1,Q1,,
+IIT Palakkad,venue,Supramolecular Coordination Complexes,1,,,
+IIT Palakkad,venue,The Journal of Chemical Physics,1,Q1,,
+IIT Palakkad,venue,Nutrient Cycling in Agroecosystems,1,Q1,,
+IIT Palakkad,venue,New Phytologist,1,Q1,,
+IIT Palakkad,type,book,0,,0.0,0.0006
+IIT Palakkad,type,book-chapter,2,,0.0833,0.0968
+IIT Palakkad,type,conference,4,,0.1667,0.2452
+IIT Palakkad,type,journal,17,,0.7083,0.6139
+IIT Palakkad,type,preprint,1,,0.0417,0.0429
+IIT Palakkad,type,report,0,,0.0,0.0006
+IIT Palakkad,quartile,Q1,14,,0.8235,0.6185
+IIT Palakkad,quartile,Q2,1,,0.0588,0.2153
+IIT Palakkad,quartile,Q3,1,,0.0588,0.0538
+IIT Palakkad,quartile,Q4,0,,0.0,0.0057
+IIT Palakkad,quartile,unranked,1,,0.0588,0.1067
+IIT Palakkad,foreign co-author,large,21,,0.875,
+IIT Palakkad,foreign co-author,other,438,,0.2539,
+IIT Guwahati,venue,Physical Review D,135,Q1,,
+IIT Guwahati,venue,Physical Review Letters,48,Q1,,
+IIT Guwahati,venue,arXiv,46,,,
+IIT Guwahati,venue,Journal of Instrumentation,15,Q1,,
+IIT Guwahati,venue,The European Physical Journal C,15,Q1,,
+IIT Guwahati,venue,"Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",12,Q1,,
+IIT Guwahati,venue,Journal of High Energy Physics,9,Q2,,
+IIT Guwahati,venue,Small,6,Q1,,
+IIT Guwahati,venue,Advanced Functional Materials,6,Q1,,
+IIT Guwahati,venue,Proceedings of The 27th International Workshop on Vertex Detectors — PoS(VERTEX2018),5,,,
+IIT Guwahati,type,TODO,1,,0.0018,0.0
+IIT Guwahati,type,book,0,,0.0,0.0013
+IIT Guwahati,type,book-chapter,14,,0.0256,0.0894
+IIT Guwahati,type,conference,18,,0.0329,0.1378
+IIT Guwahati,type,journal,464,,0.8483,0.7451
+IIT Guwahati,type,other,0,,0.0,0.0022
+IIT Guwahati,type,preprint,47,,0.0859,0.024
+IIT Guwahati,type,report,3,,0.0055,0.0002
+IIT Guwahati,quartile,Q1,384,,0.8276,0.6203
+IIT Guwahati,quartile,Q2,54,,0.1164,0.2471
+IIT Guwahati,quartile,Q3,4,,0.0086,0.06
+IIT Guwahati,quartile,Q4,5,,0.0108,0.0084
+IIT Guwahati,quartile,unranked,17,,0.0366,0.0641
+IIT Guwahati,foreign co-author,large,479,,0.8757,
+IIT Guwahati,foreign co-author,other,3178,,0.1852,
+IIT Hyderabad,venue,Physical Review D,190,Q1,,
+IIT Hyderabad,venue,Monthly Notices of the Royal Astronomical Society,167,Q1,,
+IIT Hyderabad,venue,The Astrophysical Journal,77,Q1,,
+IIT Hyderabad,venue,Physical Review Letters,59,Q1,,
+IIT Hyderabad,venue,arXiv,53,,,
+IIT Hyderabad,venue,Journal of High Energy Physics,47,Q2,,
+IIT Hyderabad,venue,The Astrophysical Journal Letters,25,Q1,,
+IIT Hyderabad,venue,The Astrophysical Journal Supplement Series,17,Q1,,
+IIT Hyderabad,venue,Astronomy & Astrophysics,14,Q1,,
+IIT Hyderabad,venue,The European Physical Journal C,14,Q1,,
+IIT Hyderabad,type,book,0,,0.0,0.0002
+IIT Hyderabad,type,book-chapter,2,,0.0022,0.0543
+IIT Hyderabad,type,conference,11,,0.0121,0.2141
+IIT Hyderabad,type,journal,832,,0.9143,0.7015
+IIT Hyderabad,type,other,0,,0.0,0.0009
+IIT Hyderabad,type,preprint,61,,0.067,0.0287
+IIT Hyderabad,type,report,4,,0.0044,0.0002
+IIT Hyderabad,quartile,Q1,732,,0.8798,0.6694
+IIT Hyderabad,quartile,Q2,69,,0.0829,0.2079
+IIT Hyderabad,quartile,Q3,5,,0.006,0.048
+IIT Hyderabad,quartile,Q4,0,,0.0,0.0059
+IIT Hyderabad,quartile,unranked,26,,0.0312,0.0688
+IIT Hyderabad,foreign co-author,large,811,,0.8912,
+IIT Hyderabad,foreign co-author,other,2236,,0.251,
+IIT Bhubaneswar,venue,Journal of High Energy Physics,351,Q2,,
+IIT Bhubaneswar,venue,Physical Review D,172,Q1,,
+IIT Bhubaneswar,venue,Physics Letters B,144,Q1,,
+IIT Bhubaneswar,venue,Physical Review Letters,126,Q1,,
+IIT Bhubaneswar,venue,The European Physical Journal C,112,Q1,,
+IIT Bhubaneswar,venue,Journal of Instrumentation,37,Q1,,
+IIT Bhubaneswar,venue,arXiv,25,,,
+IIT Bhubaneswar,venue,"Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",20,Q1,,
+IIT Bhubaneswar,venue,Physical Review C,11,Q1,,
+IIT Bhubaneswar,venue,Proceedings of The 27th International Workshop on Vertex Detectors — PoS(VERTEX2018),5,,,
+IIT Bhubaneswar,type,book,0,,0.0,0.0005
+IIT Bhubaneswar,type,book-chapter,1,,0.0009,0.0576
+IIT Bhubaneswar,type,conference,31,,0.028,0.183
+IIT Bhubaneswar,type,journal,1047,,0.9467,0.7064
+IIT Bhubaneswar,type,other,1,,0.0009,0.0055
+IIT Bhubaneswar,type,preprint,25,,0.0226,0.047
+IIT Bhubaneswar,type,report,1,,0.0009,0.0
+IIT Bhubaneswar,quartile,Q1,675,,0.6447,0.5495
+IIT Bhubaneswar,quartile,Q2,357,,0.341,0.3034
+IIT Bhubaneswar,quartile,Q3,4,,0.0038,0.0628
+IIT Bhubaneswar,quartile,Q4,0,,0.0,0.0072
+IIT Bhubaneswar,quartile,unranked,11,,0.0105,0.0771
+IIT Bhubaneswar,foreign co-author,large,999,,0.9033,
+IIT Bhubaneswar,foreign co-author,other,933,,0.2249,
+IIT (BHU) Varanasi,venue,Physical Review C,13,Q1,,
+IIT (BHU) Varanasi,venue,Monthly Notices of the Royal Astronomical Society,8,Q1,,
+IIT (BHU) Varanasi,venue,Physical Review B,7,Q1,,
+IIT (BHU) Varanasi,venue,Journal of Physics: Condensed Matter,6,Q1,,
+IIT (BHU) Varanasi,venue,Journal of Alloys and Compounds,5,Q1,,
+IIT (BHU) Varanasi,venue,Bioresource Technology,4,Q1,,
+IIT (BHU) Varanasi,venue,Materials Science and Engineering: C,4,Q1,,
+IIT (BHU) Varanasi,venue,Ceramics International,4,Q1,,
+IIT (BHU) Varanasi,venue,ACS Applied Materials & Interfaces,4,Q1,,
+IIT (BHU) Varanasi,venue,Journal of Materials Chemistry B,4,Q1,,
+IIT (BHU) Varanasi,type,book,0,,0.0,0.0005
+IIT (BHU) Varanasi,type,book-chapter,2,,0.0067,0.0609
+IIT (BHU) Varanasi,type,conference,3,,0.01,0.1368
+IIT (BHU) Varanasi,type,journal,285,,0.95,0.7829
+IIT (BHU) Varanasi,type,other,0,,0.0,0.0032
+IIT (BHU) Varanasi,type,preprint,10,,0.0333,0.0157
+IIT (BHU) Varanasi,quartile,Q1,201,,0.7053,0.5163
+IIT (BHU) Varanasi,quartile,Q2,54,,0.1895,0.3076
+IIT (BHU) Varanasi,quartile,Q3,12,,0.0421,0.0839
+IIT (BHU) Varanasi,quartile,Q4,1,,0.0035,0.0155
+IIT (BHU) Varanasi,quartile,unranked,17,,0.0596,0.0766
+IIT (BHU) Varanasi,foreign co-author,large,213,,0.71,
+IIT (BHU) Varanasi,foreign co-author,other,2256,,0.2004,
+IIT Gandhinagar,venue,Physical Review D,46,Q1,,
+IIT Gandhinagar,venue,The Astrophysical Journal,39,Q1,,
+IIT Gandhinagar,venue,The Astrophysical Journal Letters,29,Q1,,
+IIT Gandhinagar,venue,Physical Review Letters,27,Q1,,
+IIT Gandhinagar,venue,Journal of High Energy Physics,22,Q2,,
+IIT Gandhinagar,venue,arXiv,10,,,
+IIT Gandhinagar,venue,The European Physical Journal C,10,Q1,,
+IIT Gandhinagar,venue,Monthly Notices of the Royal Astronomical Society,9,Q1,,
+IIT Gandhinagar,venue,Classical and Quantum Gravity,8,Q1,,
+IIT Gandhinagar,venue,Physical Review X,6,Q1,,
+IIT Gandhinagar,type,book,0,,0.0,0.0002
+IIT Gandhinagar,type,book-chapter,3,,0.0087,0.0417
+IIT Gandhinagar,type,conference,1,,0.0029,0.1626
+IIT Gandhinagar,type,journal,322,,0.9388,0.7201
+IIT Gandhinagar,type,other,0,,0.0,0.0002
+IIT Gandhinagar,type,preprint,17,,0.0496,0.0752
+IIT Gandhinagar,quartile,Q1,274,,0.8509,0.6929
+IIT Gandhinagar,quartile,Q2,37,,0.1149,0.1801
+IIT Gandhinagar,quartile,Q3,0,,0.0,0.0347
+IIT Gandhinagar,quartile,Q4,0,,0.0,0.0047
+IIT Gandhinagar,quartile,unranked,11,,0.0342,0.0875
+IIT Gandhinagar,foreign co-author,large,294,,0.8571,
+IIT Gandhinagar,foreign co-author,other,1327,,0.2835,
+IIT Indore,venue,Physics Letters B,126,Q1,,
+IIT Indore,venue,Journal of High Energy Physics,96,Q2,,
+IIT Indore,venue,The European Physical Journal C,69,Q1,,
+IIT Indore,venue,Physical Review C,59,Q1,,
+IIT Indore,venue,Physical Review Letters,51,Q1,,
+IIT Indore,venue,arXiv,40,,,
+IIT Indore,venue,Physical Review D,29,Q1,,
+IIT Indore,venue,Monthly Notices of the Royal Astronomical Society,15,Q1,,
+IIT Indore,venue,The Astrophysical Journal,13,Q1,,
+IIT Indore,venue,The Astrophysical Journal Letters,12,Q1,,
+IIT Indore,type,TODO,0,,0.0,0.0001
+IIT Indore,type,book,0,,0.0,0.0023
+IIT Indore,type,book-chapter,2,,0.0027,0.0607
+IIT Indore,type,conference,31,,0.0413,0.14
+IIT Indore,type,journal,678,,0.9028,0.7668
+IIT Indore,type,other,0,,0.0,0.0012
+IIT Indore,type,preprint,40,,0.0533,0.0286
+IIT Indore,type,report,0,,0.0,0.0001
+IIT Indore,type,thesis,0,,0.0,0.0001
+IIT Indore,quartile,Q1,533,,0.7861,0.633
+IIT Indore,quartile,Q2,121,,0.1785,0.236
+IIT Indore,quartile,Q3,3,,0.0044,0.054
+IIT Indore,quartile,Q4,2,,0.0029,0.0048
+IIT Indore,quartile,unranked,19,,0.028,0.0722
+IIT Indore,foreign co-author,large,666,,0.8868,
+IIT Indore,foreign co-author,other,2499,,0.3089,
+IIT Mandi,venue,Journal of High Energy Physics,11,Q2,,
+IIT Mandi,venue,Physical Review Letters,7,Q1,,
+IIT Mandi,venue,Physical Review B,5,Q1,,
+IIT Mandi,venue,Physics Letters B,5,Q1,,
+IIT Mandi,venue,Physical Review D,4,Q1,,
+IIT Mandi,venue,Scientific Reports,3,Q1,,
+IIT Mandi,venue,ACS Applied Nano Materials,3,Q1,,
+IIT Mandi,venue,International Journal of Modern Physics E,3,Q2,,
+IIT Mandi,venue,Nature Communications,2,Q1,,
+IIT Mandi,venue,arXiv,2,,,
+IIT Mandi,type,book,0,,0.0,0.0002
+IIT Mandi,type,book-chapter,1,,0.007,0.075
+IIT Mandi,type,conference,9,,0.0634,0.1719
+IIT Mandi,type,journal,126,,0.8873,0.7101
+IIT Mandi,type,other,0,,0.0,0.0019
+IIT Mandi,type,preprint,6,,0.0423,0.0409
+IIT Mandi,quartile,Q1,94,,0.746,0.6237
+IIT Mandi,quartile,Q2,24,,0.1905,0.2221
+IIT Mandi,quartile,Q3,2,,0.0159,0.0463
+IIT Mandi,quartile,Q4,0,,0.0,0.0084
+IIT Mandi,quartile,unranked,6,,0.0476,0.0995
+IIT Mandi,foreign co-author,large,100,,0.7042,
+IIT Mandi,foreign co-author,other,1210,,0.2501,

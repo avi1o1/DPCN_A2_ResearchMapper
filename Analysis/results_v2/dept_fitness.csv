@@ -1,0 +1,146 @@
+﻿institution,department,faculty,papers,strong_subfields,fitness_rank,log10_fitness
+IIT Guwahati,Biosciences and Bioengineering,42,1871,31,1,2.16
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,22,695,16,2,-20.7
+IIT Hyderabad,BioTechnology,20,269,11,3,-20.74
+IIT Indore,Biosciences and Biomedical Engineering,16,452,15,4,-21.1
+IIT Madras,Chemistry,41,1944,20,5,-21.34
+IIT Mandi,School of Biosciences & Bio Engineering,10,235,9,6,-21.44
+IIT Kanpur,Mechanical Engineering,47,1822,17,7,-21.57
+IIT Gandhinagar,Biological Sciences and Engineering,10,393,14,8,-22.83
+IIT Bombay,Biosciences and Bioengineering,37,1015,20,9,-27.93
+IIT Kanpur,Biological Sciences and Bioengineering,23,484,15,10,-27.95
+IIT Madras,Biotechnology,37,1071,21,11,-27.99
+IIT Bombay,Earth Sciences,29,747,14,12,-28.12
+IIT Gandhinagar,Earth Sciences,11,111,8,13,-28.29
+IIT Guwahati,,17,144,8,14,-28.33
+IIT Hyderabad,Chemical Engineering,25,843,21,15,-28.35
+IIT Guwahati,Chemistry,40,2268,18,16,-28.36
+IIT Kanpur,Chemistry,36,1422,18,17,-28.4
+IIT Bhubaneswar,School of Basic Sciences,58,1888,14,18,-28.5
+IIT Bombay,Mechanical Engineering,72,1915,14,19,-28.52
+IIT Kanpur,Civil Engineering,44,1085,22,20,-28.54
+IIT Kanpur,Earth Sciences,15,376,15,21,-28.54
+IIT Kanpur,Chemical Engineering,27,983,21,22,-28.59
+IIT Mandi,School of Chemical Sciences,14,407,16,23,-28.66
+IIT Hyderabad,Chemistry,31,1364,16,24,-28.67
+IIT Mandi,School of Computing & Electrical Engineering,53,1121,19,25,-28.69
+IIT Bombay,Chemistry,53,2703,14,26,-28.69
+IIT Hyderabad,Electrical Engineering,39,1479,18,27,-28.71
+IIT Bombay,Chemical Engineering,49,1294,28,28,-28.74
+IIT Guwahati,Civil Engineering,52,1808,20,29,-28.76
+IIT Bombay,Civil Engineering,61,2081,21,30,-28.77
+IIT Gandhinagar,Civil Engineering,17,538,14,31,-28.81
+IIT Guwahati,Mathematics,37,610,17,32,-28.87
+IIT Kanpur,Computer Science and Engineering,37,533,13,33,-28.92
+IIT Guwahati,Chemical Engineering,36,1785,20,34,-28.94
+IIT Madras,Mechanical Engineering,58,1663,15,35,-28.97
+IIT Indore,Chemistry,19,1252,12,36,-28.99
+IIT Hyderabad,Civil Engineering,33,869,18,37,-28.99
+IIT Hyderabad,Physics,36,1539,10,38,-29.0
+IIT Bombay,Physics,51,1584,12,39,-29.01
+IIT Madras,Applied Mechanics and Biomedical Engineering,38,1233,23,40,-29.04
+IIT Mandi,School of Mechanical & Materials Engineering,29,782,14,41,-29.05
+IIT Madras,Computer Science and Engineering,38,793,16,42,-29.05
+IIT Patna,Computer Science and Engineering,18,1297,17,43,-29.05
+IIT (BHU) Varanasi,Department of Civil Engineering,39,711,18,44,-29.05
+IIT Bombay,Computer Science and Engineering,56,766,15,45,-29.06
+IIT Madras,Civil Engineering,58,1696,17,46,-29.06
+IIT Madras,Chemical Engineering,34,1150,19,47,-29.06
+IIT Guwahati,School of Agro and Rural Technology,5,132,9,48,-29.06
+IIT Madras,Engineering Design,12,597,15,49,-29.06
+IIT (BHU) Varanasi,School of Biochemical Engineering,15,437,15,50,-29.07
+IIT Hyderabad,Computer Science & Engineering,36,754,12,51,-29.07
+IIT Madras,Metallurgical and Materials Engineering,32,1136,12,52,-29.1
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,28,606,16,53,-29.1
+IIT Guwahati,Computer Science and Engineering,35,909,13,54,-29.1
+IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",24,423,8,55,-29.1
+IIT Hyderabad,Mathematics,23,197,12,56,-29.11
+IIT Kanpur,Mathematics and Statistics,44,358,13,57,-29.11
+IIT (BHU) Varanasi,Department of Mathematical Sciences,28,576,13,58,-29.12
+IIT Bombay,Mathematics,57,332,11,59,-29.12
+IIT Guwahati,Electronics and Electrical Engineering,56,1907,16,60,-29.14
+IIT Bombay,Electrical Engineering,81,3259,14,61,-29.15
+IIT Indore,Mathematics,17,296,11,62,-29.15
+IIT Gandhinagar,Electrical Engineering,21,682,15,63,-29.17
+IIT Patna,Mathematics,15,517,11,64,-29.17
+IIT Madras,Mathematics,42,630,12,65,-29.19
+IIT Bhubaneswar,School of Electrical and Computer Sciences,56,1099,14,66,-29.19
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,26,502,9,67,-29.22
+IIT Indore,Civil Engineering,18,462,12,68,-29.24
+IIT Bombay,Energy Science and Engineering,26,1052,13,69,-29.25
+IIT Bombay,Environmental Science and Engineering,16,551,12,70,-29.25
+IIT Bombay,Metallurgical Engineering and Materials Science,37,1121,14,71,-29.26
+IIT Kanpur,Physics,55,1581,14,72,-29.28
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,23,810,13,73,-29.29
+IIT Madras,Ocean Engineering,26,981,12,74,-29.3
+IIT Patna,Civil and Environmental Engineering,23,519,13,75,-29.31
+IIT Hyderabad,Biomedical Engineering,12,495,10,76,-29.32
+IIT Gandhinagar,Chemical Engineering,14,326,16,77,-29.36
+IIT Mandi,School of Civil & Environmental Engineering,22,417,11,78,-29.36
+IIT Gandhinagar,Materials Engineering,14,274,11,79,-29.38
+IIT (BHU) Varanasi,School of Biomedical Engineering,13,342,10,80,-29.38
+IIT Gandhinagar,Chemistry,14,471,12,81,-29.41
+IIT Bhubaneswar,School of Infrastructure,33,642,13,82,-29.42
+IIT Kanpur,Materials Science and Engineering,32,950,11,83,-29.43
+IIT Bombay,Industrial Engineering and Operations Research,12,127,8,84,-29.45
+IIT Tirupati,Computer Science and Engineering,12,162,6,85,-29.46
+IIT Palakkad,Civil Engineering,13,156,8,86,-29.47
+IIT Gandhinagar,Computer Science and Engineering,17,226,9,87,-29.47
+IIT Patna,Mechanical Engineering,22,723,12,88,-29.47
+IIT (BHU) Varanasi,Department of Chemistry,23,701,11,89,-29.49
+IIT Patna,Chemistry,12,494,10,90,-29.5
+IIT Mandi,School of Mathematical & Statistical Sciences,11,175,9,91,-29.51
+IIT Goa,Mechanical Engineering,13,135,10,92,-29.52
+IIT Indore,Physics,24,1490,9,93,-29.53
+IIT Patna,Electrical Engineering,25,1013,9,94,-29.53
+IIT (BHU) Varanasi,Department of Mechanical Engineering,43,860,12,95,-29.54
+IIT (BHU) Varanasi,School of Materials Science and Technology,12,851,12,96,-29.55
+IIT Guwahati,Mechanical Engineering,55,2182,14,97,-29.55
+IIT (BHU) Varanasi,Department of Electronics Engineering,27,1064,11,98,-29.6
+IIT Palakkad,Electrical Engineering,20,476,11,99,-29.6
+IIT Bombay,Centre of Studies in Resources Engineering,15,648,10,100,-29.61
+IIT Kanpur,Aerospace Engineering,32,909,11,101,-29.61
+IIT Bombay,Centre for Systems and Control Engineering,11,305,8,102,-29.62
+IIT Indore,Computer Science and Engineering,23,674,9,103,-29.64
+IIT Madras,Aerospace Engineering,36,974,11,104,-29.65
+IIT Kanpur,,30,435,11,105,-29.65
+IIT Indore,Electrical Engineering,23,1454,12,106,-29.65
+IIT Tirupati,Chemistry,16,151,8,107,-29.66
+IIT (BHU) Varanasi,Department of Physics,26,924,10,108,-29.67
+IIT Madras,Physics,49,2126,10,109,-29.67
+IIT Gandhinagar,Mechanical Engineering,15,230,13,110,-29.67
+IIT Indore,Mechanical Engineering,16,589,9,111,-29.67
+IIT Kanpur,Electrical Engineering,62,2838,12,112,-29.67
+IIT Palakkad,Chemistry,14,231,9,113,-29.69
+IIT Guwahati,School of Energy Science and Engineering,6,156,10,114,-29.71
+IIT (BHU) Varanasi,Department of Mining Engineering,17,129,9,115,-29.75
+IIT Guwahati,Physics,47,1960,9,116,-29.76
+IIT Tirupati,Civil and Environmental Engineering,20,156,7,117,-29.76
+IIT Madras,,53,770,11,118,-29.78
+IIT Palakkad,Mechanical Engineering,21,281,10,119,-29.8
+IIT Madras,Electrical Engineering,57,1812,10,120,-29.81
+IIT (BHU) Varanasi,Department of Ceramic Engineering,16,405,8,121,-29.83
+IIT Patna,Metallurgical and Materials Engineering,10,252,9,122,-29.83
+IIT Hyderabad,Mechanical & Aerospace Engineering,37,613,10,123,-29.87
+IIT Patna,Physics,19,806,10,124,-29.92
+IIT (BHU) Varanasi,Department of Electrical Engineering,25,871,6,125,-29.94
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",8,353,6,126,-29.96
+IIT Patna,Chemical and Biochemical Engineering,14,165,7,127,-29.96
+IIT Goa,Electrical Engineering,13,285,5,128,-29.98
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",13,102,6,129,-29.99
+IIT Hyderabad,Materials Science and Metallurgical Engineering,22,504,9,130,-29.99
+IIT Bhubaneswar,School of Mechanical Sciences,22,374,7,131,-30.0
+IIT Palakkad,Physics,14,129,8,132,-30.01
+IIT Tirupati,Chemical Engineering,14,106,6,133,-30.01
+IIT Tirupati,Mechanical Engineering,18,211,7,134,-30.02
+IIT Indore,Metallurgical Engineering and Materials Science,19,565,9,135,-30.03
+IIT Bombay,Aerospace Engineering,37,815,7,136,-30.06
+IIT Mandi,,15,127,6,137,-30.08
+IIT Goa,Physics,6,132,7,138,-30.1
+IIT Kanpur,Statistics and Data Science,7,191,2,139,-30.1
+IIT Tirupati,Electrical Engineering,19,248,7,140,-30.19
+IIT Mandi,School of Physical Sciences,19,407,7,141,-30.2
+IIT Gandhinagar,Physics,17,389,5,142,-30.25
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",20,227,6,143,-30.26
+IIT Tirupati,Physics,13,107,5,144,-30.29
+IIT Kanpur,Sustainable Energy Engineering,5,207,5,145,-30.42

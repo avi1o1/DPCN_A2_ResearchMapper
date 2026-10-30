@@ -1,0 +1,21 @@
+﻿faculty,institution,department,expected_outbreak_share,degree,k_core,betweenness
+Dinesh Kabra,IIT Bombay,Physics,0.166,27,7,0.00578
+M S Ramachandra Rao,IIT Madras,Physics,0.1652,38,5,0.0138
+Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.1649,28,5,0.00526
+Rakesh G. MOTE,IIT Bombay,Mechanical Engineering,0.1643,24,8,0.00619
+Arindam Chowdhury,IIT Bombay,Chemistry,0.1641,24,5,0.00512
+Aftab Alam,IIT Bombay,Physics,0.1615,24,5,0.00657
+Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.1601,25,5,0.01315
+Anindya Datta,IIT Bombay,Chemistry,0.16,23,5,0.00877
+Suddhasatta Mahapatra,IIT Bombay,Physics,0.1599,20,8,0.00279
+Tiju Thomas,IIT Madras,Metallurgical and Materials Engineering,0.1595,17,5,0.00394
+Balasubramaniam Kavaipatti,IIT Bombay,Energy Science and Engineering,0.1594,18,7,0.00089
+R Sarathi,IIT Madras,Electrical Engineering,0.1593,26,5,0.00908
+Anil Kottantharayil,IIT Bombay,Electrical Engineering,0.1593,21,7,0.00445
+Siddharth Tallur,IIT Bombay,Electrical Engineering,0.1593,19,8,0.00401
+Arnab Dutta,IIT Bombay,Chemistry,0.1579,23,5,0.01474
+Apurba Laha,IIT Bombay,Electrical Engineering,0.1575,16,5,0.00134
+Birabar Ranjit Kumar Nanda,IIT Madras,Physics,0.1574,23,5,0.00759
+B S Murty,IIT Madras,,0.1566,20,5,0.00676
+Deepak Marla,IIT Bombay,Mechanical Engineering,0.1561,15,8,0.00075
+Kiran Kondabagil,IIT Bombay,Biosciences and Bioengineering,0.1549,17,5,0.00272

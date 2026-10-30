@@ -30,4 +30,5 @@ Dashboard/site/screens/
 
 # Analysis: pickled records (a speed-up, rebuilt on demand) and per-run temporary files
 Analysis/.rec_cache/
+Analysis/results_v2/paper_citation_metrics.csv
 Analysis/results*/.mem
