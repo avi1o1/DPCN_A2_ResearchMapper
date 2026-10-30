@@ -21,6 +21,7 @@ import xml.etree.ElementTree as ET
 from common import get, RAW, OUT, ROOT, LOGS, MAILTO, norm_doi, write_jsonl_gz, YEAR_MIN, YEAR_MAX
 from affil import classify, bare_mention
 from institutes import REG
+import sanity_rules as SR
 
 
 def bare_iit(s):
@@ -109,6 +110,10 @@ for _r in verified:
                 _fn[asc(_f)].add(_t[0])
 COMMON_SURNAMES.update(f for f, gs in _fn.items() if len(gs) >= 8)
 print("common surnames:", len(COMMON_SURNAMES), sorted(COMMON_SURNAMES)[:40], flush=True)
+# F5 (sanity_rules.py): generic names = hand seed + roster-frequency tokens + COMMON_SURNAMES; for such names a Crossref/arXiv
+# name match needs >= 2 shared co-authors (one co-author plus a venue match is not enough) or an ORCID / printed affiliation
+GENERIC = SR.generic_tokens(os.path.join(ROOT, "rosters"), family=inst.split("_")[0], extra=COMMON_SURNAMES)
+print("generic name tokens:", len(GENERIC), flush=True)
 # surname index of verified records (speed: avoids scanning all records per person)
 BY_FAM = collections.defaultdict(list)
 for _r in verified:
@@ -200,6 +205,8 @@ def process(p):
     # affiliation elsewhere; their ORCID/DBLP works and co-author matches would bring in home-institution papers. For them a
     # paper is accepted only if this IIT's affiliation is printed on it (PROCESS.md §15.6)
     secondary = p.get("status") in ("visiting", "adjunct")
+    generic_name = SR.is_generic_name(p["name"], GENERIC)    # F5
+    founded = REG[inst].get("founded") or 0                  # F1/F6: never before the institution existed
     stat = {"name": p["name"], "dept": p.get("department"), "seeds": len(seeds), "orcids": sorted(orcids), "start": start, "end": end if end != 9999 else None,
             "cr_accepted": 0, "orcid_works": 0, "dblp_works": 0}
     person = f"{p['name']} [roster:{p.get('department', '')}]"
@@ -249,13 +256,21 @@ def process(p):
                 if strict:
                     if shared >= 2 and vmatch:
                         why = f"coauthors={shared},venue={vmatch},ambiguous_name"
-                elif shared >= 2 or (shared >= 1 and vmatch):
+                elif shared >= 2 or (shared >= 1 and vmatch and not generic_name):   # F5: generic names need >= 2 co-authors
                     why = f"coauthors={shared},venue={vmatch}"
                 # (round-2 "fullname" relaxation removed: 0/3 precision in audit)
+            # F1: the identity paths no longer bypass the start-year check.  An ORCID match tells who the author is, not that the
+            # person was already at this IIT; a paper dated before the start year (or the founding year) is dropped.  A printed
+            # affiliation does make it a paper of this IIT (it stays in the dataset through the affiliation channels as 'verified'),
+            # but before the start year it is not credited to this roster person: the row is kept without the person link.
+            prestart = (start is not None and y < start) or y < founded
+            if why == "orcid" and prestart:
+                stat["orcid_prestart_skipped"] = stat.get("orcid_prestart_skipped", 0) + 1
+                continue
             if why:
                 rows.append({"doi": norm_doi(it["DOI"]), "title": (it.get("title") or [None])[0], "year": y,
                              "channel": "roster_crossref_author_loose" if LOOSE else "roster_crossref_author",
-                             "why": why, "person": person})
+                             "why": why, "person": None if (why == "affiliation" and prestart) else person})
                 stat["cr_accepted"] += 1
     # ---- B4 ORCID works for roster ORCID
     if p.get("orcid") and not ONLY_ARXIV and not LOOSE and not secondary:
@@ -317,7 +332,7 @@ def process(p):
                 co_max = REG[inst].get("arxiv_coauthor_max_authors")
                 if not why and not secondary and not (co_max and len(names) > co_max):
                     shared = sum(1 for n in names if " " in n and gkey(n.rsplit(" ", 1)[0], n.rsplit(" ", 1)[1]) in co)
-                    if shared >= 1:
+                    if shared >= (2 if generic_name else 1):     # F5: generic names need >= 2 shared co-authors
                         why = f"coauthors={shared}"
                 if why:
                     aid = e.find("a:id", NS).text.rsplit("/abs/", 1)[-1]
@@ -352,6 +367,6 @@ os.makedirs(os.path.join(RAW, "roster"), exist_ok=True)
 suffix = "_arxiv" if ONLY_ARXIV else "_loose" if LOOSE else ""
 write_jsonl_gz(os.path.join(RAW, "roster", f"{inst}{suffix}.jsonl.gz"), out)
 with open(os.path.join(LOGS, f"roster_channels_{inst}{suffix}.tsv"), "w") as f:
-    w_ = csv.DictWriter(f, fieldnames=["name", "dept", "seeds", "name_hits", "amb", "orcids", "start", "end", "cr_accepted", "orcid_works", "dblp_works", "arxiv_works", "error", "orcid_error", "dblp_error", "arxiv_error"], delimiter="\t")
+    w_ = csv.DictWriter(f, fieldnames=["name", "dept", "seeds", "name_hits", "amb", "orcids", "start", "end", "cr_accepted", "orcid_works", "dblp_works", "arxiv_works", "orcid_prestart_skipped", "error", "orcid_error", "dblp_error", "arxiv_error"], delimiter="\t")
     w_.writeheader(); [w_.writerow(s) for s in log]
 print("done", len(out))

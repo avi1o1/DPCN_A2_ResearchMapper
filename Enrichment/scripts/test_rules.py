@@ -54,5 +54,18 @@ for paper, person, want in [("Piyush Kumar", kumars[0], False), ("Ashok Kumar", 
     got = fits(paper, None, person, {}, by_s)
     fails += got != want
     print("OK  " if got == want else "FAIL", "common surname", paper, "->", person["name"], got)
+# mega-collaboration flag (sanity audit F3): more than 100 authors; the scraped value wins, OpenAlex's list is capped at 100
+from oa_extract import mega_flag
+for label, rec, want in [
+        ("Seema Bahinipati / CMS paper, set by finalize.py", {"mega_collab": True, "author_count": 2600, "mega_basis": "crossref", "authors": [{}] * 3}, (2600, True, "crossref")),
+        ("finalize.py says no: OpenAlex is not consulted", {"mega_collab": False, "author_count": 8, "mega_basis": "crossref", "authors_openalex": [{}] * 100}, (8, False, "crossref")),
+        ("older file without the flag, 101 scraped authors", {"authors": [{}] * 101}, (101, True, "scraped_list")),
+        ("older file, exactly 100 scraped authors", {"authors": [{}] * 100}, (100, False, "scraped_list")),
+        ("no scraped list, OpenAlex list at its cap of 100 = 100 or more", {"authors": "TODO", "authors_openalex": [{}] * 100}, (100, True, "openalex_capped")),
+        ("no scraped list, OpenAlex 40 authors", {"authors": "TODO", "authors_openalex": [{}] * 40}, (40, False, "openalex_capped")),
+        ("no author list at all: unknown, not False", {"authors": "TODO"}, (None, None, None))]:
+    got = mega_flag(rec)
+    fails += got != want
+    print("OK  " if got == want else "FAIL", "mega", label, "->", got)
 print("failures:", fails)
 sys.exit(1 if fails else 0)

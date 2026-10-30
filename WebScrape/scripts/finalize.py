@@ -18,8 +18,10 @@ Field rules are documented in METHODOLOGY.md §5.
 usage: python3 finalize.py <inst_key>
 """
 import os, re, sys, glob, json, html, collections, datetime, unicodedata
-from common import read_jsonl_gz, write_jsonl_gz, norm_doi, RAW, OUT, LOGS, YEAR_MIN, YEAR_MAX, INSTITUTES
+from common import read_jsonl_gz, write_jsonl_gz, norm_doi, RAW, OUT, LOGS, ROOT, YEAR_MIN, YEAR_MAX, INSTITUTES
 from affil import classify, bare_mention
+from institutes import REG
+import sanity_rules as SR   # start-year rule F1, untimed sub-tier F2b, mega-collaboration flag F3, namesake guard F5
 
 inst = sys.argv[1]
 TODO = "TODO"
@@ -112,6 +114,12 @@ if os.path.exists(os.path.join(RAW, "s2", "s2.jsonl")):
             _k = _r["q"].split(":", 1)[1].lower()
             S2[("10.48550/arxiv." + _k) if _r["q"].startswith("ARXIV:") else _k] = _r
 ROSTER_JOIN = {}  # optional: name -> joining year, from roster (used for dblp/roster person channels)
+ROSTER = SR.Roster.load(inst, os.path.join(ROOT, "rosters"))
+GENERIC = SR.generic_tokens(os.path.join(ROOT, "rosters"), family=inst.split("_")[0])
+# F1/F5 demotions are decided for the IITs (sanity audit of the 23 IIT files); other institution types registered by their own teams
+# (IIITs: different roster conventions, their own audits) only get the informational fields (substatus, mega flag) unless
+# RM_SANITY_RULES=all is set
+APPLY_DEMOTION = REG[inst].get("family", "iit") == "iit" or os.environ.get("RM_SANITY_RULES") == "all"
 
 cands = list(read_jsonl_gz(os.path.join(RAW, f"candidates_{inst}.jsonl.gz")))
 
@@ -354,6 +362,11 @@ for c in cands:
         "arxiv": m.get("arxiv"),
         "found_via_person": c.get("persons", []),
     }
+    # F3: mega-collaboration flag (Crossref author list; channel list as fallback; Enrichment adds the OpenAlex fallback)
+    n_ch = len(m.get("epmc_authors") or m.get("doaj_authors") or m.get("inspire_authors") or [])
+    rec["author_count"], rec["mega_collab"], rec["mega_basis"] = SR.mega_collab(len(cr.get("author") or []) if cr else None, n_ch)
+    rec["affiliation_substatus"] = None   # F2b, set below for the person-channel (likely) records
+    rec["_whys"] = sorted(set(m.get("roster_whys") or ([m["roster_why"]] if m.get("roster_why") else [])))   # removed before output
     rec["todo_fields"] = [k for k in ("title", "authors", "year", "type", "venue", "issn", "doi", "citations", "references")
                           if rec[k] == TODO] + (["affiliation"] if status != "verified" else [])
     records.append(rec)
@@ -371,6 +384,7 @@ for r in records:
         if twin:
             twin["evidence"] = sorted(set(twin["evidence"]) | set(r["evidence"]))
             twin["found_via_person"] = sorted(set(twin["found_via_person"]) | set(r["found_via_person"]))
+            twin["_whys"] = sorted(set(twin["_whys"]) | set(r["_whys"]))
             stats["merged_nodoi_into_doi"] += 1
             continue
     final.append(r)
@@ -394,6 +408,7 @@ for r in final:
         if tw:
             tw[0]["evidence"] = sorted(set(tw[0]["evidence"]) | set(r["evidence"]))
             tw[0]["found_via_person"] = sorted(set(tw[0]["found_via_person"]) | set(r["found_via_person"]))
+            tw[0]["_whys"] = sorted(set(tw[0]["_whys"]) | set(r["_whys"]))
             tw[0].setdefault("preprint_versions", []).append(r["doi"])
             r["duplicate_of_published_version"] = True; pre_dup += 1
 final = [r for r in final if not r.get("duplicate_of_published_version")]
@@ -435,6 +450,7 @@ for g in groups.values():
         keep.setdefault("duplicate_dois", []).append(o["doi"])
         keep["evidence"] = sorted(set(keep["evidence"]) | set(o["evidence"]))
         keep["found_via_person"] = sorted(set(keep["found_via_person"]) | set(o["found_via_person"]))
+        keep["_whys"] = sorted(set(keep["_whys"]) | set(o["_whys"]))
         if o["affiliation_status"] == "verified" and keep["affiliation_status"] != "verified":
             keep["affiliation_status"] = "verified"; keep["institute_affiliations_matched"] = o["institute_affiliations_matched"]
             keep["todo_fields"] = [f for f in keep["todo_fields"] if f != "affiliation"]
@@ -462,16 +478,57 @@ for r in final:
         else:
             r["unconfirmed_reason"] = "only undated person evidence (DBLP current affiliation / ORCID affiliation without dates)"
         unconfirmed.append(r)
+# ----- sanity rules on the person-channel ("likely") records of the main file (sanity_rules.py; PROCESS.md section 15.17).
+# They work on the stored evidence (found_via_person, evidence, the roster-channel `why` strings) and the roster file, so they are
+# applied by every refresh without re-running the roster pass.  Records that fail are NOT deleted: they move to the unconfirmed
+# candidates file with the reason and are listed in logs/startyear_demoted_<inst>.jsonl.gz / namesake_demoted_<inst>.jsonl.gz.
+#   F1  year before max(founded, start - lag) for every linked roster person with a start year        -> demoted
+#   F5  generic-name person(s) only, no ORCID/DBLP-pid identity, no printed affiliation, < 2 shared co-authors -> demoted
+#   F2b records that pass but rest only on roster people without a start year -> affiliation_substatus "likely-untimed"
+audit = []
+kept = []
+for r in main:
+    if "unverified-likely" not in r["affiliation_status"]:
+        kept.append(r)
+        continue
+    j = SR.judge_start(inst, ROSTER, r["found_via_person"], r["year"])
+    ns = None if j["violates"] else SR.judge_namesake(r["found_via_person"], r["evidence"], r["_whys"], GENERIC)
+    if APPLY_DEMOTION and (j["violates"] or ns):
+        rule = "F1_start_year" if j["violates"] else "F5_namesake_guard"
+        if j["violates"]:
+            why_txt = ("start-year rule: every linked roster person has a start year after the paper's year - " +
+                       "; ".join(f"{p['roster_name']} ({p['status']}, {p['start_basis']} {p['start']}, lag {p['lag']}, bound {p['bound']})" for p in j["persons"]))
+        else:
+            why_txt = ns["reason"] + f" ({', '.join(ns['persons'])}; why={ns['whys']})"
+        r["unconfirmed_reason"] = why_txt
+        r["demoted_by"] = rule
+        unconfirmed.append(r)
+        audit.append((r, rule, j["persons"] if j["violates"] else ns))
+        stats["demoted_" + rule] += 1
+        continue
+    r["affiliation_substatus"] = j["substatus"]
+    stats["substatus_" + str(j["substatus"])] += 1
+    kept.append(r)
+main = kept
 stats["moved_to_unconfirmed"] = len(unconfirmed)
 for lst, pref in ((unconfirmed, "U"),):
     lst.sort(key=lambda r: (r["year"], r["title"] if isinstance(r["title"], str) else ""))
     for i, r in enumerate(lst):
         r["record_id"] = f"{inst}-{pref}{i + 1:06d}"
+for _rule, _fn in (("F1_start_year", "startyear_demoted"), ("F5_namesake_guard", "namesake_demoted")):
+    write_jsonl_gz(os.path.join(OUT, "logs", f"{_fn}_{inst}.jsonl.gz"),
+                   [{"record_id": r["record_id"], "rule": rule, "year": r["year"], "title": r["title"], "doi": r["doi"],
+                     "evidence": r["evidence"], "found_via_person": r["found_via_person"], "reason": r["unconfirmed_reason"], "detail": det}
+                    for r, rule, det in audit if rule == _rule])
+for r in unconfirmed:
+    r.pop("_whys", None)
 with open(os.path.join(OUT, f"candidates_unconfirmed_{inst}.json"), "w") as f:
     json.dump({"note": "Person-channel candidates NOT included in the main file (low estimated precision). "
                        "Kept for manual follow-up; see METHODOLOGY.md §9.", "n_records": len(unconfirmed), "records": unconfirmed},
               f, ensure_ascii=False, separators=(",", ":"))
 final = main
+for r in final:
+    r.pop("_whys", None)
 final.sort(key=lambda r: (r["year"], r["title"] if isinstance(r["title"], str) else ""))
 for i, r in enumerate(final):
     r["record_id"] = f"{inst}-{i + 1:06d}"
@@ -480,6 +537,11 @@ summary = {
     "generated": datetime.date.today().isoformat(), "n_records": len(final),
     "n_verified": sum(1 for r in final if r["affiliation_status"] == "verified"),
     "n_unverified_likely": sum(1 for r in final if "unverified-likely" in r["affiliation_status"]),
+    "n_likely_untimed": sum(1 for r in final if r.get("affiliation_substatus") == "likely-untimed"),
+    "n_likely_timed": sum(1 for r in final if r.get("affiliation_substatus") == "likely-timed"),
+    "n_likely_nonroster": sum(1 for r in final if r.get("affiliation_substatus") == "likely-nonroster"),
+    "n_demoted_start_year": stats["demoted_F1_start_year"], "n_demoted_namesake": stats["demoted_F5_namesake_guard"],
+    "n_mega_collab": sum(1 for r in final if r.get("mega_collab")),
     "n_unconfirmed_candidates_in_separate_file": len(unconfirmed),
     "by_year": dict(sorted(collections.Counter(r["year"] for r in final).items())),
     "by_type": dict(collections.Counter(r["type"] for r in final).most_common()),

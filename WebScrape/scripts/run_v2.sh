@@ -16,6 +16,7 @@ export RM_OUT=v2
 STAGE=$1; shift
 INSTS=${*:-$(python3 -c "from institutes import ALL; print(' '.join(ALL))")}
 python3 test_affil.py > /dev/null && echo "classifier rule tests passed"
+python3 test_sanity_rules.py > /dev/null && echo "sanity rule tests passed (start year, untimed tier, mega flag, namesake guard)"
 post() {  # OpenCitations fallback, finalize, recall, TODO sheet
   python3 opencitations.py $1
   python3 finalize.py $1 > ../logs/finalize_v2_$1.json

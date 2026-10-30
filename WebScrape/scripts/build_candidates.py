@@ -46,6 +46,10 @@ def add(doi, title, year, ev, meta=None):
     if meta:
         for k, v in meta.items():
             c["meta"].setdefault(k, v)
+        if meta.get("roster_why"):   # every roster-channel `why` is kept (the setdefault above keeps only the first): namesake guard, F5
+            ws = c["meta"].setdefault("roster_whys", [])
+            if meta["roster_why"] not in ws:
+                ws.append(meta["roster_why"])
         for pk in ("orcid_person", "dblp_person", "roster_person"):
             if meta.get(pk):
                 ps = c.setdefault("persons", [])
@@ -198,6 +202,9 @@ for fn in (os.path.join(RAW, f"doi_resolved_{inst}.tsv"), os.path.join(RAW, f"do
                 t["evidence"] = t["evidence"] + [e for e in c["evidence"] if e not in t["evidence"]]
                 for mk, mv in c["meta"].items():
                     t["meta"].setdefault(mk, mv)
+                t["meta"]["roster_whys"] = sorted(set(t["meta"].get("roster_whys", [])) | set(c["meta"].get("roster_whys", []))) or None
+                if t["meta"]["roster_whys"] is None:
+                    del t["meta"]["roster_whys"]
                 t["persons"] = t.get("persons", []) + [p for p in c.get("persons", []) if p not in t.get("persons", [])]
             else:
                 c["doi"] = d; c["key"] = d; c["meta"]["doi_resolved_by_title"] = True

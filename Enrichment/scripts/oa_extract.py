@@ -76,3 +76,22 @@ def facts(w, inst, inst_oa_id):
         "research_area": area,
         "coauthor_institutions": sorted(co.values(), key=lambda i: (i["country"] != "IN", i["name"] or "")),
     }
+
+
+MEGA_LIMIT = 100
+
+
+def mega_flag(r):
+    """(author_count, mega_collab, basis) of a record: more than 100 authors = mega-collaboration (sanity audit F3).
+    The value set by WebScrape/scripts/finalize.py (Crossref author list; channel list as fallback) wins; then the scraped author
+    list; then OpenAlex's list, which holds at most 100 authors, so there 100 means 100 or more and counts as mega ('openalex_capped').
+    None when no author list exists (never False by default)."""
+    if r.get("mega_collab") is not None:
+        return r.get("author_count"), r["mega_collab"], r.get("mega_basis")
+    a = r.get("authors")
+    if isinstance(a, list) and a:
+        return len(a), len(a) > MEGA_LIMIT, "scraped_list"
+    o = r.get("authors_openalex")
+    if isinstance(o, list) and o:
+        return len(o), len(o) >= MEGA_LIMIT, "openalex_capped"
+    return None, None, None

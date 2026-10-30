@@ -43,8 +43,10 @@ run() {
 if [ "$OFFLINE" = "1" ]; then echo "offline: fetch_openalex_extra.py not run"; else run fetch_openalex_extra.py; fi   # only fetches ids missing from the cache
 run stats_bibliometric.py       # writes faculty.csv, used by the next three
 run stats_faculty.py
+run stats_faculty_cohort.py     # seniority-controlled cohort (current, joined by 2017) and roster completeness against NIRF; warns if the cohort is < 20
 run stats_journals.py
 run stats_large_collab.py       # papers with more than 10 authors: effect on the headline numbers, where they are
+run stats_mega_collab.py        # papers with more than 100 authors: every per-institute statistic with and without them, rank changes
 run stats_areas.py
 run stats_citation.py           # writes citation_flow_partners.csv, used by stats_connectivity.py
 run stats_authorship.py

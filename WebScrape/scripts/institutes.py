@@ -469,6 +469,41 @@ for _mod in ("institutes_iiit", "institutes_other"):
         _c.setdefault("tenure_lag", 1)
         REG[_k] = _c
 
+# ---------------------------------------------------------------------------------------------- founding dates (F6)
+# (founded, became_iit, former names).  Used by startyear.py: a person-channel ("likely") record must not be older than the
+# institution it is credited to, and `founded` - NOT `became_iit` - is the bound, because the predecessor institution is the
+# same institution (an "Indian School of Mines" paper of 2016 belongs to IIT (ISM) Dhanbad; the classifier already counts it,
+# PHRASES above).  `became_iit` is kept as information and for the dashboard's age labels; no rule drops a record before it.
+# Verified 2026-10-30 against Wikipedia, fetched through WebScrape/agents/polite_get.py ("Indian Institutes of Technology" table
+# of established / IIT year, plus the infobox and history of IIT Roorkee, Delhi, (ISM) Dhanbad and (BHU) Varanasi):
+#   Roorkee 1847 (Thomason College 1854, University of Roorkee 1947, declared an IIT by ordinance of 21 Sep 2001; the list table
+#   prints 2002, the year of the Act); Delhi 1961, "decreed an Institute of National Importance" by the Institutes of Technology
+#   (Amendment) Act 1963; BHU 1919 as Banaras Engineering College, IT-BHU 1968, IIT 2012; ISM founded 9 Dec 1926, IIT 25 May 2016;
+#   Guwahati 1994 (first intake 1995); Kharagpur 1951 in the list table (the IIT system page says first IIT 15 May 1950; both lie
+#   before the 2016-2026 window, which is all that matters here); Palakkad / Tirupati 2015; Bhilai, Dharwad, Jammu, Goa 2016.
+DATES = {
+    "iit_kharagpur": (1951, 1951, ()), "iit_bombay": (1958, 1958, ()), "iit_kanpur": (1959, 1959, ()),
+    "iit_madras": (1959, 1959, ()),
+    "iit_delhi": (1961, 1963, ("College of Engineering and Technology, Delhi",)),
+    "iit_guwahati": (1994, 1994, ()),
+    "iit_roorkee": (1847, 2001, ("University of Roorkee", "Thomason College of Civil Engineering")),
+    "iit_ropar": (2008, 2008, ()), "iit_bhubaneswar": (2008, 2008, ()), "iit_gandhinagar": (2008, 2008, ()),
+    "iit_hyderabad": (2008, 2008, ()), "iit_patna": (2008, 2008, ()),
+    "iit_jodhpur": (2008, 2008, ("Indian Institute of Technology Rajasthan",)),
+    "iit_indore": (2009, 2009, ()), "iit_mandi": (2009, 2009, ()),
+    "iit_bhu": (1919, 2012, ("Institute of Technology, Banaras Hindu University", "IT-BHU", "Banaras Engineering College",
+                             "College of Mining and Metallurgy")),
+    "iit_palakkad": (2015, 2015, ()), "iit_tirupati": (2015, 2015, ()),
+    "iit_ism": (1926, 2016, ("Indian School of Mines", "ISM Dhanbad")),
+    "iit_bhilai": (2016, 2016, ()), "iit_dharwad": (2016, 2016, ()), "iit_jammu": (2016, 2016, ()), "iit_goa": (2016, 2016, ()),
+}
+for _k, (_f, _b, _fn) in DATES.items():
+    REG[_k]["founded"], REG[_k]["became_iit"], REG[_k]["former_names"] = _f, _b, tuple(_fn)
+for _k in REG:                     # other institution types (IIITs ...): dates not registered here; rules that need them skip
+    REG[_k].setdefault("founded", None)
+    REG[_k].setdefault("became_iit", None)
+    REG[_k].setdefault("former_names", ())
+
 V1 = ("iit_ropar", "iit_kharagpur", "iit_roorkee")
 IITS = tuple(k for k in REG if REG[k].get("family", "iit") == "iit")
 ALL = tuple(REG)

@@ -12,7 +12,10 @@ Required columns: group, institution, author, title, year, type, journal_name, i
 Unknown values are left blank (never the string TODO, never a guess).
 Extra columns: department, faculty_match, faculty_source, affiliation_status, in_scope, scope_basis,
   research_field, research_domain, record_id, openalex_id, quartile_basis, coauthor_institutes_all,
-  n_authors (OpenAlex author list; OpenAlex lists at most 100, so 100 means 100 or more), more_than_10_authors
+  n_authors (OpenAlex author list; OpenAlex lists at most 100, so 100 means 100 or more), more_than_10_authors,
+  mega_collab (TRUE = more than 100 authors: Crossref author list, else the scraped list, else OpenAlex's capped list; blank = no
+  author list; basis in mega_basis), affiliation_substatus (likely-timed / likely-untimed / likely-nonroster for person-channel
+  records that are not 'verified'; blank otherwise)
 Outputs: out/group3_data.csv      papers with affiliation_status 'verified' and in_scope true (the submission)
          out/group3_data_all.csv  every paper except 'rejected' ones (for the team to filter differently)
 usage: python export_csv.py"""
@@ -24,7 +27,7 @@ REQUIRED = ["group", "institution", "author", "title", "year", "type", "journal_
             "quartile", "coauthor_institutes", "cites_indian_inst", "cited_by_indian_inst"]
 EXTRA = ["department", "faculty_match", "faculty_source", "affiliation_status", "in_scope", "scope_basis",
          "research_field", "research_domain", "record_id", "openalex_id", "quartile_basis", "coauthor_institutes_all",
-         "n_authors", "more_than_10_authors"]
+         "n_authors", "more_than_10_authors", "mega_collab", "mega_basis", "affiliation_substatus"]
 
 
 def val(v):
@@ -62,6 +65,8 @@ def rows_for(r, inst_name):
         "record_id": r["record_id"], "openalex_id": r.get("openalex_id") or "", "quartile_basis": basis,
         "coauthor_institutes_all": ";".join(i["name"] for i in co if i.get("name")),
         "n_authors": "" if na is None else na, "more_than_10_authors": "" if na is None else tf(na > 10),
+        "mega_collab": tf(r.get("mega_collab")), "mega_basis": r.get("mega_basis") or "",
+        "affiliation_substatus": r.get("affiliation_substatus") or "",
     }
     if not r["faculty"]:
         return [dict(base, author=inst_name, department="", faculty_match="none (institute)", faculty_source="")]
