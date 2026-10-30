@@ -2,10 +2,10 @@
 Writes cache/ref_dois.jsonl rows {id, doi}; doi is null when OpenAlex has the work but no DOI for it.
 usage: python stage_refdoi.py"""
 import os, json
-from oa import get, read_jsonl, norm_doi, CACHE, OUT, credits
+from oa import get, read_jsonl, norm_doi, CACHE, OUT, credits, RUN_INSTS
 
 need = set()
-for inst in ("iit_kharagpur", "iit_roorkee"):
+for inst in RUN_INSTS:   # default Kharagpur + Roorkee; ENRICH_INSTS overrides
     with open(os.path.join(OUT, f"{inst}_enriched.json"), encoding="utf8") as f:
         for line in f:
             line = line.strip().rstrip(",")

@@ -18,10 +18,10 @@ indian_connections.csv
   every joint Kharagpur-Roorkee submission paper is counted in both directions of that pair
 usage: python verify_networks.py"""
 import os, csv, json, collections as C
-from oa import OUT, norm_doi
+from oa import OUT, norm_doi, INST, RUN_INSTS
 
 csv.field_size_limit(10 ** 8)
-NAMES = {"iit_kharagpur": "IIT Kharagpur", "iit_roorkee": "IIT Roorkee"}
+NAMES = {k: INST[k]["name"] for k in RUN_INSTS}
 err, info = C.Counter(), C.Counter()
 MISS = []
 

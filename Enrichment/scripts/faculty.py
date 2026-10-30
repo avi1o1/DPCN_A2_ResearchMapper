@@ -30,6 +30,18 @@ from scope import FACULTY_DEPT_OUT
 
 ROSTERS = os.path.join(REPO, "WebScrape", "rosters")
 LAG = {"iit_kharagpur": 1, "iit_roorkee": 4}
+try:   # v2 institutes: tenure_lag from the scrape pipeline's registry (never overrides the two above)
+    import sys as _sys
+    _d = os.path.join(REPO, "WebScrape", "scripts")
+    _sys.path.insert(0, _d)
+    try:
+        from institutes import REG as _REG
+    finally:
+        _sys.path.remove(_d)   # must not shadow this directory's affil.py etc.
+    for _k, _c in _REG.items():
+        LAG.setdefault(_k, _c.get("tenure_lag", 1))
+except Exception:
+    pass
 TITLES = {"dr", "prof", "professor", "mr", "mrs", "ms", "sri", "shri", "smt"}
 
 

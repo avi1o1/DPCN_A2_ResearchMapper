@@ -1097,3 +1097,35 @@ Kanpur precision audit (65 sampled; yes needs affiliation text on the paper, ten
 Gandhinagar pipeline finished: Golden papers: 415; found: 266; **recall = 64.1%**
 
 Gandhinagar precision audit (65 sampled; yes needs affiliation text on the paper, tenure-only left unknown): verified 23 yes/0 no/2 unknown; likely 6 yes/3 no/31 unknown. The nos are wrong-person matches (author at RKMVERI; at Kyoto Yukawa Institute at the paper's date; all authors at PRL Ahmedabad). The visiting/adjunct flag requested in the brief was not applied by the agent.
+
+Jodhpur pipeline finished: Golden papers: 485; found: 355; **recall = 73.2%**
+
+Jodhpur precision audit (65 sampled; yes needs affiliation text on the paper, tenure-only left unknown): verified 15 yes/0 no/10 unknown; likely 4 yes/2 no/34 unknown. The nos: 10.1016/j.arr.2019.100937 (author at JNU, not IIT Jodhpur, per Europe PMC) and 10.1007/978-3-031-71044-5 (Springer lists the author at RMIT Melbourne; possibly a visiting/adjunct roster person). Seven yes rows confirm an IIT Jodhpur author but no specific roster person.
+
+ISM pipeline finished: Golden papers: 539; found: 355; **recall = 65.9%**
+
+ISM precision audit (65 sampled; yes needs affiliation text on the paper, tenure-only left unknown): verified 13 yes/0 no/12 unknown; likely 4 yes/0 no/36 unknown. First audit with no wrong-person match in either tier; 48 of 65 rows could not be checked (blocked publisher pages).
+
+Jammu pipeline finished: Golden papers: 348; found: 250; **recall = 71.8%**
+
+Jammu precision audit (65 sampled; yes needs affiliation text on the paper, tenure-only left unknown): verified 10 yes/0 no/15 unknown; likely 2 yes/4 no/34 unknown. The nos: an 'Arun K. Verma' paper at ICAR-CIRG Mathura (name collision); two Tekade RK papers at NIPER in 2019 (roster tenure may be later or visiting); a 2018 paper listing Jinwala at SVNIT Surat.
+
+Delhi pipeline finished: Golden papers: 504; found: 330; **recall = 65.5%**
+
+Bhilai pipeline finished: Golden papers: 287; found: 198; **recall = 69.0%**
+
+Dharwad pipeline finished: Golden papers: 297; found: 194; **recall = 65.3%**
+
+Bhilai precision audit (65 sampled; yes needs affiliation text on the paper, tenure-only left unknown): verified 6 yes/0 no/19 unknown; likely 1 yes/3 no/36 unknown. All three nos are Sudhanwa Patra papers from 2017-2018 where INSPIRE/DOAJ give Siksha O Anusandhan University, Bhubaneswar (his Bhilai start is later than these papers).
+Dharwad precision audit (65 sampled, same rule): verified 9 yes/0 no/16 unknown; likely 0 yes/1 no/39 unknown. The no (10.1016/j.ccell.2017.05.003) lists Sudhanshu Shukla at the University of Michigan Medical School.
+
+Delhi precision audit (65 sampled; yes needs affiliation text on the paper, tenure-only left unknown): verified 15 yes/0 no/10 unknown; likely 3 yes/1 no/36 unknown. The no (10.1016/j.tim.2026.05.015) lists the matched authors at Cranfield University; IIT Delhi came only from ORCID tenure. Three yes rows are dual-affiliation papers (IIT Delhi plus another institute); two have an IIT Delhi author but no roster person.
+
+### Golden-set decisions (2026-10-30)
+* Guwahati library PDFs (`iitg.ac.in/lib/IITCouncil/*`, a Scopus export): stay excluded (Scopus is not an allowed golden-set source).
+* Bhubaneswar library-list rows (122, tagged `websearch`): kept in the golden set; recall is reported both ways. All rows: 290/449 = 64.6 %. Excluding the
+  `websearch` rows (48 % recall on 122 rows: conference-name titles, garbled fields): 231/327 = 70.6 %.
+* Mandi CAIR rows (15, institute page): kept.
+* NIRF "Other" staff rule (visiting everywhere): not yet applied. Guwahati's 72 excluded "Other" people are Regular staff who joined 1999-2024, not visiting
+  (roster notes section 2), so a blanket `visiting` label would be wrong for them; applying the rule to Bhubaneswar (22), Guwahati (72), Indore (25) also means
+  re-running the roster, verify and refresh stages and the enrichment for those three. Decision pending.

@@ -17,9 +17,9 @@ Outputs: out/group3_data.csv      papers with affiliation_status 'verified' and 
          out/group3_data_all.csv  every paper except 'rejected' ones (for the team to filter differently)
 usage: python export_csv.py"""
 import os, csv, json, collections as C
-from oa import OUT
+from oa import OUT, INST, RUN_INSTS
 
-INSTS = {"iit_kharagpur": "IIT Kharagpur", "iit_roorkee": "IIT Roorkee"}
+INSTS = {k: INST[k]["name"] for k in RUN_INSTS}   # default: Kharagpur + Roorkee (ENRICH_INSTS overrides)
 REQUIRED = ["group", "institution", "author", "title", "year", "type", "journal_name", "issn", "doi", "citations",
             "quartile", "coauthor_institutes", "cites_indian_inst", "cited_by_indian_inst"]
 EXTRA = ["department", "faculty_match", "faculty_source", "affiliation_status", "in_scope", "scope_basis",

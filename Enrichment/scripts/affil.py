@@ -83,7 +83,29 @@ def norm(s):
     return WS.sub(" ", s or "").strip()
 
 
+_v2 = []
+
+
+def _classify_v2(inst, s):
+    """Institutes without hand-tuned rules here (the 20 v2 IITs): use the registry-driven v2 classifier of the scrape
+    pipeline (WebScrape/scripts/affil.py + institutes.py), the same rules that decided the v2 affiliation_status."""
+    if not _v2:
+        import importlib.util, sys
+        d = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "WebScrape", "scripts")
+        sys.path.insert(0, d)
+        try:
+            spec = importlib.util.spec_from_file_location("webscrape_affil_v2", os.path.join(d, "affil.py"))
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+        finally:
+            sys.path.remove(d)
+        _v2.append(mod)
+    return _v2[0].classify(inst, s)
+
+
 def classify(inst, s):
+    if inst not in CITY:
+        return _classify_v2(inst, s)
     s = norm(s)
     if not CITY[inst].search(s) and not UNITS[inst].search(s):
         if IIT.search(s) and STATE[inst].search(s):

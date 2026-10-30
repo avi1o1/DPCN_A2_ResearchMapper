@@ -34,7 +34,8 @@ out/indian_connections.csv - one row per (our institute, Indian partner institut
                          University / Other (pattern-based; used to flag cross-cluster links)
 usage: python build_networks.py"""
 import os, re, csv, json, collections as C
-from oa import OUT, CACHE, INST, read_jsonl, norm_doi
+from oa import OUT, CACHE, INST as _ALL_INST, RUN_INSTS, read_jsonl, norm_doi
+INST = {k: _ALL_INST[k] for k in RUN_INSTS}   # default: Kharagpur + Roorkee (ENRICH_INSTS overrides)
 from faculty import compatible, load_roster
 
 MAX_AUTHORS = 50
