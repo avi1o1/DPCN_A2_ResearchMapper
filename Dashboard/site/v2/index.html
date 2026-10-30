@@ -159,10 +159,9 @@ function secOverview(st) {
     {h: "Citations / paper", n: 1}, {h: "Median faculty h", n: 1}, {h: "Institute h", n: 1}, {h: "Conf. papers with CORE rank", n: 1}, {h: ">10-author papers", n: 1}, {h: "Self-citation share", n: 1}, {h: "Indian in/out citation ratio", n: 1}],
     rows.map(r => [`<span class="sw"><span class="dot" style="background:${COLOR[r.n]}"></span><a href="#a=${encodeURIComponent(r.n)}" onclick="selA.value='${esc(r.n)}';selB.value='';render();">${esc(r.n)}</a></span>`,
       fmt(r.pap), fmt(r.fac), fmt(r.roster), fmt(r.cit), fmt(r.cpp, 1), fmt(r.h, 0), fmt(r.ih), pct(r.core), pct(r.big), pct(r.self, 0), fmt(r.ratio, 2)]).map(r => r), "");
-  const tbl2 = tbl.replace(/<td class=" ">/g, '<td>');
   return `<section id="overview"><div class="wrap"><h2>All 14 institutes</h2>
   <p class="sub">Pick an institute above to see its own panels, or two to compare them. "Faculty with papers" = faculty on the institute's pages with at least one paper in the analysis set; "roster listed" = everyone on those pages (all statuses, departments in scope).</p>
-  <div class="grid"><div class="card">${tbl2}</div></div>
+  <div class="grid"><div class="card">${tbl}</div></div>
   <div class="grid two" style="margin-top:16px">
     ${card("Papers per year", '<div id="ovYear" class="chart tall"></div>', "2026 is partial (collected October 2026).")}
     ${card("Papers and faculty", '<div id="ovBars" class="chart tall"></div>')}
@@ -232,7 +231,7 @@ function drawPapers(st) {
   }
   const pal = ["#3987e5", "#eda100", "#1baf7a", "#e87ba4", "#8a8984"];
   chart("yr2", {color: cols.length === 2 ? [colA(), colB()] : [colA()], legend: {data: st.list},
-    xAxis: {type: "category", data: types}, yAxis: {type: "value", name: "share of papers (%)"}, tooltip: {valueFormatter: v => v.toFixed(1) + "%"},
+    xAxis: {type: "category", data: types, axisLabel: {interval: 0}}, yAxis: {type: "value", name: "share of papers (%)"}, tooltip: {valueFormatter: v => v.toFixed(1) + "%"},
     series: st.list.map(n => {
       const tot = D.per[n].papers.total.reduce((a, b) => a + b, 0);
       return {name: n, type: "bar", data: types.map(t => +(100 * D.per[n].papers[t].reduce((a, b) => a + b, 0) / tot).toFixed(2))};

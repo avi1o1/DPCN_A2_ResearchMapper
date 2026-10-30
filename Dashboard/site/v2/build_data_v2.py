@@ -117,7 +117,7 @@ def main():
         hh = hrow.get("h-index", {})
         ii = hrow.get("i10-index", {})
         p["faculty"] = {
-            "with_papers": len(fl), "departments": len(dept.get(n, [])), "roster_listed": listed, "roster_regular": regular,
+            "with_papers": len(fl), "departments": len(dept.get(n, [])), "roster_listed": listed,
             "h": {k: num(hh.get(k)) for k in ("n", "mean", "sd", "min", "q1", "median", "q3", "p90", "max")},
             "i10": {k: num(ii.get(k)) for k in ("mean", "median", "p90", "max")},
             "h_hist": {"edges": bins, "counts": hist},
