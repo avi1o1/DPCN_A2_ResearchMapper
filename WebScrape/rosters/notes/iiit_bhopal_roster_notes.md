@@ -47,3 +47,8 @@ Output: `rosters/iiit_bhopal_faculty.csv` (128 rows: 49 current, 8 adjunct, 50 v
 ## Known gaps
 * No NIRF, no Wayback faculty pages, no 2016-17..2017-18, 2020-21, 2021-22 reports and unreadable 2024-25 report: former-faculty coverage for 2016-2018 and 2021-2022 and 2024-25 is the weakest; faculty who left before the 2018-19 report or between reports may be missing; last-year values may be too early.
 * People whose pages exist only as photos (listed above) and anyone who joined after the profile pages were uploaded (Oct 2026) may be missing.
+
+## Operator correction (2026-10-30, after the precision audit)
+**Ashutosh Kumar Singh** (Director since 2023) is set from `current` to `adjunct`. His papers during the directorship print NIT
+Kurukshetra, where he is a professor, and the audit found 8 of them in the likely tier. As adjunct he contributes only papers that
+print IIIT Bhopal. This is the same rule as for post-holders employed by another institute at Kota and Sonepat (PROCESS_IIIT §7.3).
