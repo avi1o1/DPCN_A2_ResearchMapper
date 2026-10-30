@@ -119,7 +119,8 @@ for inst in sys.argv[1:]:
     pairs_s2 = [(r["citations_by_source"]["crossref"], r["citations_by_source"]["semantic_scholar"]) for r in R
                 if r.get("citations_by_source", {}).get("crossref") is not None and r["citations_by_source"].get("semantic_scholar") is not None]
     # 9 live re-check
-    rnd = random.Random(7); sample = rnd.sample([r for r in R if not istodo(r["doi"]) and r.get("type_raw") and "10.48550" not in r["doi"]], 200)
+    pool = [r for r in R if not istodo(r["doi"]) and r.get("type_raw") and "10.48550" not in r["doi"]]
+    rnd = random.Random(7); sample = rnd.sample(pool, min(200, len(pool)))   # small institutes (IIIT team) have < 200
     live = collections.Counter(); live_ex = []
     for r in sample:
         d = r["doi"][16:]

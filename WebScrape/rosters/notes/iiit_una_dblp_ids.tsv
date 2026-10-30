@@ -1,0 +1,74 @@
+roster_name	dblp_person	decision	route_or_reason	verified_doi_overlap
+Jaspreet Kaur	https://dblp.org/pid/71/11477	not accepted	no route	0
+Parmeet Kaur Chahal	https://dblp.org/pid/379/8734	not accepted	no route	0
+Satendra Kumar	https://dblp.org/pid/147/4819	not accepted	no route	0
+Ambigavathi M	https://dblp.org/pid/225/6161	accepted	R1 orcid	4
+Ashwini Kumar Malviya	https://dblp.org/pid/185/7968;https://dblp.org/pid/323/8379	not accepted	no route	1
+Manish Gaur	https://dblp.org/pid/84/7582	accepted	R1 orcid	2
+Mrityunjay Singh	https://dblp.org/pid/18/8038	not accepted	no route	1
+Narendra Kumar	https://dblp.org/pid/82/2913-1	rejected	different ORCID 0000-0001-9999-8971	0
+Narendra Kumar	https://dblp.org/pid/82/2913-2	rejected	different ORCID 0000-0003-1682-9051	0
+Narendra Kumar	https://dblp.org/pid/82/2913	not accepted	no route	0
+Neha Sharma	https://dblp.org/pid/25/9554	rejected	overlap 2 < 5% of 76 DBLP DOIs (namesake profile?)	2
+Neha Sharma	https://dblp.org/pid/25/9554-3;https://dblp.org/pid/25/9554-4;https://dblp.org/pid/25/9554-5;https://dblp.org/pid/25/9554-6;https://dblp.org/pid/25/9554-7;https://dblp.org/pid/25/9554-8;https://dblp.org/pid/25/9554-9;https://dblp.org/pid/25/9554;https://dblp.org/pid/56/3969-2;https://dblp.org/pid/56/3969	not accepted	no route	0
+Nisha	https://dblp.org/pid/81/10606	not accepted	no route	0
+Nishtha Hooda	https://dblp.org/pid/212/4688	not accepted	no route	1
+Prachi Arora	https://dblp.org/pid/403/6033	not accepted	no route	0
+Pramesh Kumar	https://dblp.org/pid/269/7259	not accepted	no route	0
+Prince Sharma	https://dblp.org/pid/298/1617	not accepted	no route	0
+Sanjit Ningthoujam	https://dblp.org/pid/244/9960	not accepted	no route	0
+Shatrughan Modi	https://dblp.org/pid/139/0910	not accepted	no route	0
+Shiv Dutt Sharma	https://dblp.org/pid/393/0939	not accepted	no route	0
+Sumit Kumar	https://dblp.org/pid/01/6902	rejected	overlap 1 < 5% of 191 DBLP DOIs (namesake profile?)	1
+Sumit Kumar	https://dblp.org/pid/01/6902-1;https://dblp.org/pid/01/6902-2;https://dblp.org/pid/01/6902-3;https://dblp.org/pid/01/6902-4;https://dblp.org/pid/01/6902-5;https://dblp.org/pid/01/6902-6;https://dblp.org/pid/01/6902-7;https://dblp.org/pid/01/6902-8;https://dblp.org/pid/01/6902	not accepted	no route	0
+Vishal Kaushal	https://dblp.org/pid/171/3568	not accepted	no route	0
+Akhil Walia	https://dblp.org/pid/329/8799	not accepted	no route	0
+Ankur Thakur	https://dblp.org/pid/240/3276	not accepted	no route	1
+Gurpreet Kaur	https://dblp.org/pid/86/10669	not accepted	no route	0
+Naman Garg	https://dblp.org/pid/197/6361	not accepted	no route	0
+Naveen Cheggoju	https://dblp.org/pid/216/2433	not accepted	no route	0
+Nikunj Goyal	https://dblp.org/pid/442/4858	not accepted	no route	0
+Pranshu Sharma	https://dblp.org/pid/134/5395	not accepted	no route	0
+Satish Kumar	https://dblp.org/pid/32/2367	not accepted	no route	0
+Tanu Wadhera	https://dblp.org/pid/292/7838	accepted	R3 verified	5
+Ashish Maurya	https://dblp.org/pid/331/6451	not accepted	no route	0
+Bhavna	https://dblp.org/pid/386/4170	not accepted	no route	0
+Kushal Sharma	https://dblp.org/pid/261/1516	not accepted	no route	0
+Payal Sharma	https://dblp.org/pid/292/9299	not accepted	no route	0
+Sukriti	https://dblp.org/pid/282/3512	not accepted	no route	0
+Akanksha Puri	https://dblp.org/pid/439/8091	not accepted	no route	0
+Divyansh Thakur	https://dblp.org/pid/243/1653	not accepted	no route	0
+Himani Joshi	https://dblp.org/pid/190/3728	not accepted	no route	0
+Jaspal Kaur Saini	https://dblp.org/pid/241/9061	not accepted	no route	0
+Mandeep Kumar	https://dblp.org/pid/218/1824	not accepted	no route	0
+Neha Mahajan	https://dblp.org/pid/56/9693	not accepted	no route	0
+Richa Thakur	https://dblp.org/pid/406/5978	not accepted	no route	0
+Rishabh Deo Pandey	https://dblp.org/pid/329/3643;https://dblp.org/pid/387/0314	not accepted	no route	0
+S. Selvakumar	https://dblp.org/pid/124/0044-10	rejected	different ORCID 0000-0001-7245-9847	0
+S. Selvakumar	https://dblp.org/pid/354/0074	rejected	different ORCID 0000-0001-8056-097X	0
+S. Selvakumar	https://dblp.org/pid/92/1249-2	rejected	different ORCID 0000-0001-7148-125X	0
+S. Selvakumar	https://dblp.org/pid/124/0044	accepted	R1 orcid	0
+Sahil	https://dblp.org/pid/175/1781	accepted	R1 orcid	1
+Satish Kumar	https://dblp.org/pid/32/2367	not accepted	no route	0
+Shawli Bardhan	https://dblp.org/pid/371/0043	not accepted	no route	0
+Sonali	https://dblp.org/pid/186/2975	not accepted	no route	0
+Vandana Kushwaha	https://dblp.org/pid/150/2264	not accepted	no route	0
+Vikram Kumar	https://dblp.org/pid/90/9586	rejected	overlap 1 < 5% of 29 DBLP DOIs (namesake profile?)	1
+Vikram Kumar	https://dblp.org/pid/90/9586	not accepted	no route	0
+Ankur Kumar	https://dblp.org/pid/148/6249	not accepted	no route	0
+Girdhar Gopal	https://dblp.org/pid/264/2274	not accepted	no route	0
+Jasleen Kaur	https://dblp.org/pid/25/531-1;https://dblp.org/pid/25/531-2;https://dblp.org/pid/25/531-3;https://dblp.org/pid/25/531-4;https://dblp.org/pid/25/531	not accepted	no route	0
+Nitish Katal	https://dblp.org/pid/142/1593	not accepted	no route	0
+Priyabrat Garanayak	https://dblp.org/pid/261/8411	not accepted	no route	0
+Vanita Arora	https://dblp.org/pid/323/7884	not accepted	no route	1
+Amar Nath Gill	https://dblp.org/pid/44/9595	not accepted	no route	0
+Kamlesh Dutta	https://dblp.org/pid/02/8042	not accepted	no route	0
+Madhu	https://dblp.org/pid/316/0556	not accepted	no route	0
+Narottam Chand	https://dblp.org/pid/66/4057	not accepted	no route	0
+Naveen Chauhan	https://dblp.org/pid/79/9554	not accepted	no route	0
+Siddhartha Chauhan	https://dblp.org/pid/146/2265	not accepted	no route	0
+T. P. Sharma	https://dblp.org/pid/396/0366	not accepted	no route	0
+Gargi Khanna	https://dblp.org/pid/141/6707	not accepted	no route	0
+Rajeevan Chandel	https://dblp.org/pid/61/2921	not accepted	no route	0
+Surinder Soni	https://dblp.org/pid/299/0395	not accepted	no route	0
+Vinod Kumar Kapoor	https://dblp.org/pid/21/10839	not accepted	no route	0

@@ -119,14 +119,32 @@ for _r in verified:
 
 out, log = [], []
 arxiv_lock = threading.Lock(); last_arxiv = 0.0
-import contextlib, fcntl
+import contextlib
+try:
+    import fcntl
+    _gate_lock = lambda f: fcntl.flock(f, fcntl.LOCK_EX)
+    _gate_unlock = lambda f: fcntl.flock(f, fcntl.LOCK_UN)
+except ImportError:   # Windows (IIIT team's machine): blocking msvcrt lock on byte 0, as in agents/polite_get.py
+    import msvcrt
+
+    def _gate_lock(f):
+        while True:
+            try:
+                f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1); return
+            except OSError:
+                time.sleep(0.05)
+
+    def _gate_unlock(f):
+        f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
+
+
 @contextlib.contextmanager
 def arxiv_gate(gap=3.5):
     """Machine-wide pacing for export.arxiv.org: one request in flight and >= `gap` s between request starts, across all
     processes (arXiv's API terms: 1 request / 3 s; several concurrent passes were answered with 429 and long back-offs)."""
     path = os.path.join(LOGS, "arxiv_gate")
     with open(path, "a+") as f:
-        fcntl.flock(f, fcntl.LOCK_EX)
+        _gate_lock(f)
         try:
             f.seek(0); s = f.read().strip()
             last = float(s) if s else 0.0
@@ -136,7 +154,7 @@ def arxiv_gate(gap=3.5):
             yield
         finally:
             f.seek(0); f.truncate(); f.write(str(time.time())); f.flush()
-            fcntl.flock(f, fcntl.LOCK_UN)
+            _gate_unlock(f)
 
 NS = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
 lock = threading.Lock()

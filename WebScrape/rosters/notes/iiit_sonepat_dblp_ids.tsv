@@ -1,0 +1,22 @@
+roster_name	dblp_person	decision	route_or_reason	verified_doi_overlap
+Mukesh Mann	https://dblp.org/pid/214/1539	not accepted	no route	1
+Sourabh Jain	https://dblp.org/pid/86/6858	accepted	R3 verified	2
+Bhoopesh Singh Bhati	https://dblp.org/pid/186/2137	accepted	R3 verified	3
+Wakar Ahmad	https://dblp.org/pid/286/1303	not accepted	no route	1
+Vinay Pathak	https://dblp.org/pid/247/6434	not accepted	no route	0
+Rajiv Verma	https://dblp.org/pid/46/9778	not accepted	no route	0
+Chanchal Kumar	https://dblp.org/pid/56/3951	not accepted	no route	0
+Vinay Kaushik	https://dblp.org/pid/232/1964	accepted	R3 verified	5
+Ramesh Saha	https://dblp.org/pid/283/3528	accepted	R3 verified	2
+Mohan Bansal	https://dblp.org/pid/226/8366	accepted	R3 verified	3
+Tayyab Khan	https://dblp.org/pid/244/1211	not accepted	no route	0
+Md. Arquam	https://dblp.org/pid/160/6172	not accepted	no route	1
+Gourav Jain	https://dblp.org/pid/55/6533	not accepted	no route	0
+Ashish Ranjan	https://dblp.org/pid/96/10413-1	rejected	different ORCID 0000-0003-2434-0475	0
+Ashish Ranjan	https://dblp.org/pid/96/10413-2	rejected	different ORCID 0000-0003-1278-3463	0
+Ashish Ranjan	https://dblp.org/pid/96/10413-3	rejected	different ORCID 0000-0002-0091-1088	0
+Ashish Ranjan	https://dblp.org/pid/96/10413-6	rejected	different ORCID 0009-0009-6977-2387	0
+Ashish Ranjan	https://dblp.org/pid/96/10413-4	accepted	R1 orcid	2
+Diwakar Tripathi	https://dblp.org/pid/216/9021	accepted	R1 orcid	0
+Manisha Sharma	https://dblp.org/pid/32/9046	not accepted	no route	0
+M. N. Doja	https://dblp.org/pid/73/7630	not accepted	no route	1
