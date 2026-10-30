@@ -59,3 +59,9 @@ Operator: Arihant Tripathy (IIIT team). Run date 2026-10-30. Output: `rosters/ii
 4. No annual reports found.
 5. LAST years of Gopal Agarwal, Abhinav Kumar, Shriman Narayana, Archana Balmik, Radadiya, Pramila Jakhar rest on single or self-declared sources.
 6. Department blank for 18 rows (9 of them current/former/visiting: Dhiraj Patel, Jiby T C, Nidhi Desai, Rishi Sharma, Shraddha Patel, Bhathena, Chokkas, Bhat, Radadiya; rest SVNIT officers, professors of practice, Sejal/Rahul).
+
+## Operator correction (2026-10-30, after the precision audit)
+`joining_year` = 2026 for **Pradeep Singh** (Mathematics and Computational Sciences), from his ORCID record 0000-0002-5372-3355:
+IIT Delhi 2017-2022, IIT Roorkee 2022-2026, IIIT Surat from 2026. He is one of the 2025-26 hires known only from ORCID, so
+the roster had no dated source. The ORCID dates are self-declared, but they agree with his absence from NIRF 2025. With no joining
+year, 9 of his IIT Roorkee and IIT Delhi papers entered the likely tier. The roster stage is re-run without refilling ids.
