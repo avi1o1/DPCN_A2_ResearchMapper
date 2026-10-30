@@ -2,14 +2,17 @@
 Citing papers = the same set as the citation in-flow in stats_citation.py: works of another Indian institution that cite
 the institute's papers ('in_from_indian' edges), plus papers of the other IIT that cite it (cross-institute 'internal'
 edges). They are ranked by their own worldwide citation count (OpenAlex cited_by_count, at fetch time).
+OpenAlex sometimes keeps a paper twice (the journal version and a repository copy, e.g. SciPy 1.0), so works with the
+same normalised title are counted once, keeping the most-cited record.
 Online step: one OpenAlex request per 100 citing works (~1,410 requests). Counts are cached in
 ../cache/citing_counts.json and details of the top papers in ../cache/citing_details.json, so a re-run is offline.
 An OpenAlex key (OPENALEX_API_KEY) is used when set; the works endpoint also answers without one.
+Offline (ANALYSIS_OFFLINE=1): nothing is requested; without the cache the script skips and says so.
 Output (results/): top_citing_papers.csv
 usage: python stats_citing_top.py"""
-import os, json, time, collections as C
+import os, re, json, time, collections as C
 import requests
-from common import INSTS, DATA, CACHE, read_csv, write_csv
+from common import INSTS, DATA, CACHE, iter_csv, write_csv, OFFLINE, note_skip
 
 COUNTS = os.path.join(CACHE, "citing_counts.json")
 DETAILS = os.path.join(CACHE, "citing_details.json")
@@ -41,7 +44,9 @@ def load(path):
 
 
 def fill(cache, path, ids, select, row):
-    todo = sorted(set(ids) - set(cache))
+    todo = [] if OFFLINE else sorted(set(ids) - set(cache))
+    if not todo:
+        return cache
     try:
         for n in range(0, len(todo), 100):
             chunk = todo[n:n + 100]
@@ -57,8 +62,13 @@ def fill(cache, path, ids, select, row):
 
 
 def main():
+    if OFFLINE and not os.path.exists(COUNTS):
+        note_skip("stats_citing_top.py", "top citing papers (top_citing_papers.csv)",
+                  "needs the worldwide citation counts of ~1,400 citing works per institute, fetched from OpenAlex; live calls are off",
+                  "OpenAlex requests (no key needed, ~1,400 per institute): citing_counts.json, citing_details.json")
+        return
     cited = C.defaultdict(lambda: C.defaultdict(set))   # institute -> citing W-id -> our W-ids it cites
-    for e in read_csv(os.path.join(DATA, "citation_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "citation_network.csv")):
         s, t = e["source_openalex"], e["target_openalex"]
         if not s or not t:
             continue
@@ -74,17 +84,25 @@ def main():
     print(f"{len(allids):,} distinct citing works")
     counts = fill(load(COUNTS), COUNTS, allids, "id,cited_by_count", lambda w: w["cited_by_count"])
 
-    tops = {inst: sorted((w for w in d if counts.get(w) is not None), key=lambda w: -counts[w])[:TOP]
-            for inst, d in cited.items() if inst in INSTS.values()}
-    details = fill(load(DETAILS), DETAILS, {w for ws in tops.values() for w in ws},
+    ranked = {inst: sorted((w for w in d if counts.get(w) is not None), key=lambda w: -counts[w])[:3 * TOP]
+              for inst, d in cited.items() if inst in INSTS.values()}
+    details = fill(load(DETAILS), DETAILS, {w for ws in ranked.values() for w in ws},
                    "id,doi,display_name,publication_year,primary_location,authorships",
                    lambda w: {"title": w["display_name"], "doi": w["doi"], "year": w["publication_year"],
                               "journal": ((w.get("primary_location") or {}).get("source") or {}).get("display_name"),
                               "institutions": sorted({i["display_name"] for a in w["authorships"] for i in a["institutions"]
                                                       if i.get("country_code") == "IN"})})
+    tops = {}
+    for inst, ws in ranked.items():                # drop duplicate records of the same paper (lower count goes)
+        seen, tops[inst] = set(), []
+        for w in ws:
+            key = re.sub(r"[^a-z0-9]", "", ((details.get(w) or {}).get("title") or w).lower())
+            if key not in seen and len(tops[inst]) < TOP:
+                seen.add(key)
+                tops[inst].append(w)
     rows = []
     for inst in INSTS.values():
-        for rank, w in enumerate(tops[inst], 1):
+        for rank, w in enumerate(tops.get(inst, []), 1):
             d = details.get(w) or {}
             rows.append({"scope": inst, "rank": rank, "title": d.get("title"), "journal": d.get("journal"),
                          "year": d.get("year"), "citations": counts[w], "doi": d.get("doi"),

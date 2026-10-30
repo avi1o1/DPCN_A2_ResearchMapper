@@ -1,0 +1,35 @@
+﻿metric,value
+papers (nodes),46072
+citations (edges),86090
+spectral radius rho,2.9259
+Katz a,0.1709
+papers with Katz score > 0 (cited at least once),23297
+HITS: s1/s2,1.0536
+HITS: hub support,5939
+HITS: authority support,5086
+HITS: one sign,True
+in-degree: Spearman with worldwide citations (n = 46072),0.635
+in-degree: top-100 share from 2016-2017,0.33
+PageRank: Spearman with worldwide citations (n = 46072),0.619
+PageRank: top-100 share from 2016-2017,0.73
+Katz: Spearman with worldwide citations (n = 46072),0.637
+Katz: top-100 share from 2016-2017,0.42
+HITS authority: Spearman with worldwide citations (n = 5086),0.131
+HITS authority: top-100 share from 2016-2017,0.07
+Spearman in-degree vs PageRank (n = 46072),0.963
+Spearman in-degree vs Katz (n = 46072),0.993
+Spearman in-degree vs HITS authority (n = 5086),0.258
+Spearman PageRank vs Katz (n = 46072),0.963
+Spearman PageRank vs HITS authority (n = 5086),0.107
+Spearman Katz vs HITS authority (n = 5086),0.291
+in-degree: top-100 most common field,Engineering (32)
+in-degree: top-100 papers of the most frequent faculty member,10 (Makarand Madhao Ghangrekar (IIT Kharagpur))
+PageRank: top-100 most common field,Engineering (35)
+PageRank: top-100 papers of the most frequent faculty member,4 (Monojit Bag (IIT Roorkee))
+Katz: top-100 most common field,Engineering (36)
+Katz: top-100 papers of the most frequent faculty member,26 (Madhab Chandra Das (IIT Kharagpur))
+HITS authority: top-100 most common field,Chemistry (59)
+HITS authority: top-100 papers of the most frequent faculty member,72 (Madhab Chandra Das (IIT Kharagpur))
+citation cycles: strongly connected groups of >= 2 papers,76
+papers inside citation cycles,180
+"largest cycle group: papers, citations, faculty","10, 29, Manil T. Mohan (IIT Roorkee) 10"

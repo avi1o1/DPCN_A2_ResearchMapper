@@ -1,0 +1,49 @@
+﻿institution,department,faculty,springrank,cited_by_other_departments,cites_other_departments,net_balance,citations_within_department,within_share_of_received
+IIT Kharagpur,Cryogenic Engineering,9,0.548,52,22,0.405,0,0.0
+IIT Kharagpur,G.S Sanyal School of Telecommunication,8,0.461,10,7,0.176,2,0.167
+IIT Kharagpur,Electrical Engineering,45,0.457,244,69,0.559,95,0.28
+IIT Kharagpur,Electronics and Electrical Communication Engg.,46,0.451,326,157,0.35,63,0.162
+IIT Kharagpur,Mechanical Engineering,54,0.417,625,314,0.331,387,0.382
+IIT Kharagpur,Rubber Technology,9,0.402,271,159,0.26,241,0.471
+IIT Kharagpur,Bioscience and Biotechnology,22,0.256,286,210,0.153,93,0.245
+IIT Kharagpur,Industrial and Systems Engineering,16,0.251,69,48,0.179,30,0.303
+IIT Kharagpur,Chemistry,42,0.248,225,166,0.151,123,0.353
+IIT Kharagpur,Physics,48,0.243,285,252,0.061,114,0.286
+IIT Kharagpur,Chemical Engineering,35,0.238,436,322,0.15,129,0.228
+IIT Kharagpur,Metallurgical and Materials Engineering,33,0.226,476,408,0.077,503,0.514
+IIT Kharagpur,Geology and Geophysics,36,0.201,392,201,0.322,158,0.287
+IIT Kharagpur,Mathematics,44,0.163,132,126,0.023,20,0.132
+IIT Kharagpur,Architecture and Regional Planning,18,0.145,70,39,0.284,6,0.079
+IIT Kharagpur,Materials Science Centre,15,0.138,315,352,-0.055,87,0.216
+IIT Kharagpur,Computer Science and Engineering,51,0.088,163,163,0.0,185,0.532
+IIT Kharagpur,Mining Engineering,23,0.078,101,102,-0.005,8,0.073
+IIT Kharagpur,Artificial Intelligence,9,0.072,35,32,0.045,0,0.0
+IIT Kharagpur,Ocean Engg and Naval Architecture,22,0.063,68,68,0.0,17,0.2
+IIT Roorkee,Computer Science and Engineering,26,0.057,94,88,0.033,11,0.105
+IIT Roorkee,Metallurgical and Materials Engineering,30,0.05,225,245,-0.043,72,0.242
+IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",13,0.038,230,177,0.13,89,0.279
+IIT Kharagpur,Agricultural and Food Engineering,52,-0.011,477,432,0.05,383,0.445
+IIT Roorkee,Electronics and Communication Engineering,45,-0.044,144,194,-0.148,136,0.486
+IIT Roorkee,Biosciences and Bioengineering,40,-0.085,294,297,-0.005,279,0.487
+IIT Kharagpur,Civil Engineering,45,-0.088,578,647,-0.056,227,0.282
+IIT Roorkee,Polymer and Process Engineering,16,-0.106,236,295,-0.111,67,0.221
+IIT Roorkee,Earth Sciences,33,-0.108,230,277,-0.093,47,0.17
+IIT Roorkee,Physics,44,-0.112,137,171,-0.11,119,0.465
+IIT Roorkee,Paper Technology,14,-0.113,126,133,-0.027,83,0.397
+IIT Kharagpur,School of Water Resources,6,-0.118,172,203,-0.083,21,0.109
+IIT Roorkee,Mechanical and Industrial Engineering,53,-0.143,258,393,-0.207,381,0.596
+IIT Roorkee,Hydro and Renewable Energy,20,-0.151,159,173,-0.042,55,0.257
+IIT Kharagpur,Aerospace Engineering,23,-0.173,55,79,-0.179,33,0.375
+IIT Roorkee,Chemistry,38,-0.188,155,224,-0.182,120,0.436
+IIT Roorkee,Civil Engineering,75,-0.192,422,484,-0.068,381,0.474
+IIT Roorkee,Chemical Engineering,35,-0.199,292,431,-0.192,193,0.398
+IIT Roorkee,Centre for Nanotechnology,5,-0.201,5,10,-0.333,0,0.0
+IIT Roorkee,Electrical Engineering,48,-0.213,106,255,-0.413,321,0.752
+IIT Kharagpur,Energy Science and Engineering,5,-0.234,52,137,-0.45,0,0.0
+IIT Roorkee,Earthquake Engineering,22,-0.265,70,103,-0.191,65,0.481
+IIT Roorkee,Mathematics,38,-0.265,31,86,-0.47,22,0.415
+IIT Kharagpur,Subir Chowdhury School of Quality and Reliability,6,-0.327,9,28,-0.514,2,0.182
+IIT Roorkee,Water Resources Development and Management,19,-0.344,248,381,-0.211,152,0.38
+IIT Roorkee,Hydrology,11,-0.441,170,341,-0.335,81,0.323
+IIT Roorkee,Architecture and Planning,18,-0.524,19,49,-0.441,4,0.174
+IIT Kharagpur,Centre for Interdisciplinary and Convergent Technologies,13,-0.645,3,28,-0.806,0,0.0

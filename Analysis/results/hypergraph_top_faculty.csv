@@ -1,0 +1,104 @@
+﻿model,rank,faculty,institution,department,papers_in_hypergraph,distinct_coauthors,share_papers_over_10_authors,rank_linear,rank_log-exp,rank_max,rank_distinct co-authors (pairwise),rank_distinct co-authors without >10-author papers
+linear,1,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,326,728,0.199,1,4,24,1,1
+linear,2,Manas Paliwal,IIT Kharagpur,Metallurgical and Materials Engineering,69,182,0.087,2,4,69,49,45
+linear,3,Basudev Lahiri,IIT Kharagpur,Electronics and Electrical Communication Engg.,51,134,0.216,3,4,94,91,112
+linear,4,Tarun Kumar Kundu,IIT Kharagpur,Metallurgical and Materials Engineering,59,96,0.034,4,4,87,165,146
+linear,5,Ashok Kumar Gupta,IIT Kharagpur,Civil Engineering,125,113,0.016,5,4,61,129,109
+linear,6,Amreesh Chandra,IIT Kharagpur,Physics,97,164,0.041,6,4,113,55,52
+linear,7,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,311,280,0.013,7,4,51,15,8
+linear,8,Jayanta Bhattacharya,IIT Kharagpur,Mining Engineering,74,93,0.014,8,4,107,175,157
+linear,9,Prasanta Kumar Datta,IIT Kharagpur,Physics,104,308,0.077,9,4,119,9,10
+linear,10,Brajesh Kumar Dubey,IIT Kharagpur,Civil Engineering,142,232,0.014,10,4,108,30,22
+linear,11,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,321,419,0.009,11,4,23,6,3
+linear,12,Samit Kumar Ray,IIT Kharagpur,Physics,213,401,0.042,12,4,78,7,5
+linear,13,Sushanta Kumar Panda,IIT Kharagpur,Mechanical Engineering,96,122,0.0,13,4,16,110,86
+linear,14,Vidya Kochat,IIT Kharagpur,Materials Science Centre,16,70,0.375,14,4,153,263,423
+linear,15,Narayan Chandra Das,IIT Kharagpur,Rubber Technology,204,234,0.044,15,4,80,29,24
+linear,16,Rintu Banerjee,IIT Kharagpur,Agricultural and Food Engineering,54,117,0.037,16,4,167,119,124
+linear,17,Subhendu Mishra,IIT Kharagpur,Mining Engineering,7,34,0.143,17,4,186,578,675
+linear,18,Partha Sarathi Ghosal,IIT Kharagpur,School of Water Resources,39,57,0.051,18,4,144,339,360
+linear,19,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,153,293,0.02,19,4,102,13,7
+linear,20,Indranil Manna,IIT Kharagpur,Metallurgical and Materials Engineering,72,100,0.042,20,4,66,155,179
+log-exp,1,Sandeep Kumar,IIT Roorkee,Computer Science and Engineering,111,62,0.0,887,1,711,309,269
+log-exp,2,Soumya Kanti Ghosh,IIT Kharagpur,Computer Science and Engineering,180,187,0.017,362,2,27,46,61
+log-exp,3,Shreya Ghosh,IIT Kharagpur,Artificial Intelligence,4,8,0.0,805,3,249,1122,1110
+max,1,Sudip Misra,IIT Kharagpur,Computer Science and Engineering,343,258,0.003,97,4,1,18,12
+max,2,Surjya Kanta Pal,IIT Kharagpur,Mechanical Engineering,185,192,0.016,51,4,2,44,28
+max,3,Narendra Singh Raghuwanshi,IIT Kharagpur,Agricultural and Food Engineering,57,53,0.0,290,4,3,369,332
+max,4,Chandranath Chatterjee,IIT Kharagpur,Agricultural and Food Engineering,94,94,0.0,303,4,4,173,139
+max,5,Chittaranjan Mandal,IIT Kharagpur,Computer Science and Engineering,36,40,0.0,328,4,5,507,477
+max,6,Jhareswar Maiti,IIT Kharagpur,Industrial and Systems Engineering,64,97,0.0,298,4,6,162,127
+max,7,Debashish Chakravarty,IIT Kharagpur,Mining Engineering,104,139,0.029,155,4,7,85,74
+max,8,Pabitra Mitra,IIT Kharagpur,Computer Science and Engineering,158,253,0.0,186,4,8,19,10
+max,9,Subhasish Basu Majumder,IIT Kharagpur,Materials Science Centre,101,159,0.04,87,4,9,61,58
+max,10,Sajal Kumar Das,IIT Kharagpur,Electronics and Electrical Communication Engg.,2,6,0.0,467,4,10,1178,1166
+max,11,Shiv Brat Singh,IIT Kharagpur,Metallurgical and Materials Engineering,102,141,0.0,75,4,11,82,58
+max,12,Bhabagrahi Sahoo,IIT Kharagpur,School of Water Resources,81,68,0.012,253,4,12,278,293
+max,13,Manoj Kumar Tiwari,IIT Kharagpur,Industrial and Systems Engineering,106,200,0.019,60,4,13,39,31
+max,14,Sudipto Chakraborty,IIT Kharagpur,Chemical Engineering,49,53,0.02,170,4,14,369,411
+max,15,Partha Pratim Chakrabarti,IIT Kharagpur,Computer Science and Engineering,64,120,0.0,61,4,15,114,89
+max,16,Sushanta Kumar Panda,IIT Kharagpur,Mechanical Engineering,96,122,0.0,13,4,16,110,86
+max,17,Damodhara Rao Mailapalli,IIT Kharagpur,Agricultural and Food Engineering,47,54,0.021,484,4,17,361,423
+max,18,Mihir Kumar Dash,IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",32,55,0.0,413,4,18,353,316
+max,19,Ashok Mishra,IIT Kharagpur,Agricultural and Food Engineering,38,46,0.0,488,4,19,426,397
+max,20,Sandip Chakraborty,IIT Kharagpur,Computer Science and Engineering,197,242,0.0,475,4,20,25,18
+linear without >10-author papers,1,Sudip Misra,IIT Kharagpur,Computer Science and Engineering,343,258,0.003,97,4,1,18,12
+linear without >10-author papers,2,Surjya Kanta Pal,IIT Kharagpur,Mechanical Engineering,185,192,0.016,51,4,2,44,28
+linear without >10-author papers,3,Narendra Singh Raghuwanshi,IIT Kharagpur,Agricultural and Food Engineering,57,53,0.0,290,4,3,369,332
+linear without >10-author papers,4,Chandranath Chatterjee,IIT Kharagpur,Agricultural and Food Engineering,94,94,0.0,303,4,4,173,139
+linear without >10-author papers,5,Chittaranjan Mandal,IIT Kharagpur,Computer Science and Engineering,36,40,0.0,328,4,5,507,477
+linear without >10-author papers,6,Jhareswar Maiti,IIT Kharagpur,Industrial and Systems Engineering,64,97,0.0,298,4,6,162,127
+linear without >10-author papers,7,Debashish Chakravarty,IIT Kharagpur,Mining Engineering,104,139,0.029,155,4,7,85,74
+linear without >10-author papers,8,Pabitra Mitra,IIT Kharagpur,Computer Science and Engineering,158,253,0.0,186,4,8,19,10
+linear without >10-author papers,9,Subhasish Basu Majumder,IIT Kharagpur,Materials Science Centre,101,159,0.04,87,4,9,61,58
+linear without >10-author papers,10,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,311,280,0.013,7,4,51,15,8
+linear without >10-author papers,11,Bhabagrahi Sahoo,IIT Kharagpur,School of Water Resources,81,68,0.012,253,4,12,278,293
+linear without >10-author papers,12,Shiv Brat Singh,IIT Kharagpur,Metallurgical and Materials Engineering,102,141,0.0,75,4,11,82,58
+linear without >10-author papers,13,Sajal Kumar Das,IIT Kharagpur,Electronics and Electrical Communication Engg.,2,6,0.0,467,4,10,1178,1166
+linear without >10-author papers,14,Sudipto Chakraborty,IIT Kharagpur,Chemical Engineering,49,53,0.02,170,4,14,369,411
+linear without >10-author papers,15,Damodhara Rao Mailapalli,IIT Kharagpur,Agricultural and Food Engineering,47,54,0.021,484,4,17,361,423
+linear without >10-author papers,16,Partha Pratim Chakrabarti,IIT Kharagpur,Computer Science and Engineering,64,120,0.0,61,4,15,114,89
+linear without >10-author papers,17,Manoj Kumar Tiwari,IIT Kharagpur,Industrial and Systems Engineering,106,200,0.019,60,4,13,39,31
+linear without >10-author papers,18,Sushanta Kumar Panda,IIT Kharagpur,Mechanical Engineering,96,122,0.0,13,4,16,110,86
+linear without >10-author papers,19,Mihir Kumar Dash,IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",32,55,0.0,413,4,18,353,316
+linear without >10-author papers,20,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,321,419,0.009,11,4,23,6,3
+distinct co-authors (pairwise),1,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,326,728,0.199,1,4,24,1,1
+distinct co-authors (pairwise),2,P. C. Srivastava,IIT Roorkee,Physics,119,492,0.319,659,4,616,2,185
+distinct co-authors (pairwise),3,Abhijit Mukherjee,IIT Kharagpur,Geology and Geophysics,179,484,0.128,33,4,89,3,13
+distinct co-authors (pairwise),4,Partha Roy,IIT Roorkee,Biosciences and Bioengineering,175,444,0.057,262,4,550,4,2
+distinct co-authors (pairwise),5,Pradip K. Maji,IIT Roorkee,Polymer and Process Engineering,211,431,0.052,114,4,366,5,4
+distinct co-authors (pairwise),6,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,321,419,0.009,11,4,23,6,3
+distinct co-authors (pairwise),7,Samit Kumar Ray,IIT Kharagpur,Physics,213,401,0.042,12,4,78,7,5
+distinct co-authors (pairwise),8,Soumitra Satapathi,IIT Roorkee,Physics,163,355,0.092,194,4,478,8,9
+distinct co-authors (pairwise),9,Prasanta Kumar Datta,IIT Kharagpur,Physics,104,308,0.077,9,4,119,9,10
+distinct co-authors (pairwise),10,Somsubhra Chakraborty,IIT Kharagpur,Agricultural and Food Engineering,116,305,0.103,100,4,202,10,15
+distinct co-authors (pairwise),11,Tapas Kumar Maiti,IIT Kharagpur,Bioscience and Biotechnology,98,297,0.224,63,4,146,11,35
+distinct co-authors (pairwise),12,Chandra Shekhar Prasad Ojha,IIT Roorkee,Civil Engineering,177,295,0.023,323,4,137,12,16
+distinct co-authors (pairwise),13,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,153,293,0.02,19,4,102,13,7
+distinct co-authors (pairwise),14,Brajesh Kumar Kaushik,IIT Roorkee,Electronics and Communication Engineering,292,285,0.0,435,4,271,14,6
+distinct co-authors (pairwise),15,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,311,280,0.013,7,4,51,15,8
+distinct co-authors (pairwise),16,Pawan Goyal,IIT Kharagpur,Computer Science and Engineering,129,270,0.023,401,4,140,16,14
+distinct co-authors (pairwise),17,Mukunda Dev Behera,IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",131,266,0.099,368,4,155,17,34
+distinct co-authors (pairwise),18,Sudip Misra,IIT Kharagpur,Computer Science and Engineering,343,258,0.003,97,4,1,18,12
+distinct co-authors (pairwise),19,Amit Kumar Das,IIT Kharagpur,Bioscience and Biotechnology,92,253,0.087,21,4,138,19,27
+distinct co-authors (pairwise),19,Pabitra Mitra,IIT Kharagpur,Computer Science and Engineering,158,253,0.0,186,4,8,19,10
+distinct co-authors without >10-author papers,1,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,326,728,0.199,1,4,24,1,1
+distinct co-authors without >10-author papers,2,Partha Roy,IIT Roorkee,Biosciences and Bioengineering,175,444,0.057,262,4,550,4,2
+distinct co-authors without >10-author papers,3,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,321,419,0.009,11,4,23,6,3
+distinct co-authors without >10-author papers,4,Pradip K. Maji,IIT Roorkee,Polymer and Process Engineering,211,431,0.052,114,4,366,5,4
+distinct co-authors without >10-author papers,5,Samit Kumar Ray,IIT Kharagpur,Physics,213,401,0.042,12,4,78,7,5
+distinct co-authors without >10-author papers,6,Brajesh Kumar Kaushik,IIT Roorkee,Electronics and Communication Engineering,292,285,0.0,435,4,271,14,6
+distinct co-authors without >10-author papers,7,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,153,293,0.02,19,4,102,13,7
+distinct co-authors without >10-author papers,8,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,311,280,0.013,7,4,51,15,8
+distinct co-authors without >10-author papers,9,Soumitra Satapathi,IIT Roorkee,Physics,163,355,0.092,194,4,478,8,9
+distinct co-authors without >10-author papers,10,Prasanta Kumar Datta,IIT Kharagpur,Physics,104,308,0.077,9,4,119,9,10
+distinct co-authors without >10-author papers,10,Pabitra Mitra,IIT Kharagpur,Computer Science and Engineering,158,253,0.0,186,4,8,19,10
+distinct co-authors without >10-author papers,12,Sudip Misra,IIT Kharagpur,Computer Science and Engineering,343,258,0.003,97,4,1,18,12
+distinct co-authors without >10-author papers,13,Abhijit Mukherjee,IIT Kharagpur,Geology and Geophysics,179,484,0.128,33,4,89,3,13
+distinct co-authors without >10-author papers,14,Pawan Goyal,IIT Kharagpur,Computer Science and Engineering,129,270,0.023,401,4,140,16,14
+distinct co-authors without >10-author papers,15,Somsubhra Chakraborty,IIT Kharagpur,Agricultural and Food Engineering,116,305,0.103,100,4,202,10,15
+distinct co-authors without >10-author papers,16,Chandra Shekhar Prasad Ojha,IIT Roorkee,Civil Engineering,177,295,0.023,323,4,137,12,16
+distinct co-authors without >10-author papers,17,Partha Pratim Roy,IIT Roorkee,Computer Science and Engineering,217,245,0.0,589,4,256,24,17
+distinct co-authors without >10-author papers,18,Sandip Chakraborty,IIT Kharagpur,Computer Science and Engineering,197,242,0.0,475,4,20,25,18
+distinct co-authors without >10-author papers,19,Niloy Ganguly,IIT Kharagpur,Computer Science and Engineering,140,229,0.007,464,4,92,31,19
+distinct co-authors without >10-author papers,20,Debdeep Mukhopadhyay,IIT Kharagpur,Computer Science and Engineering,234,235,0.004,206,4,34,28,20

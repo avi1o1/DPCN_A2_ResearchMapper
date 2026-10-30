@@ -15,7 +15,9 @@ Louvain communities are read from results/faculty_centrality.csv (seed 42), so r
   centrality vs      Spearman rho of degree / betweenness with h-index, citations and papers (results/faculty.csv),
   impact             and the partial rho of each with h-index holding the paper count fixed (rank residuals)
   robustness         share of faculty in the largest component as faculty are removed: at random (mean of 20 orders),
-                     by degree and by betweenness (both recomputed after every step, 'adaptive' attacks); f_50 = share
+                     by degree and by betweenness (both recomputed after every step, 'adaptive' attacks; on networks of
+                     more than BC_EXACT_MAX faculty the betweenness is estimated from BC_SAMPLE random source nodes,
+                     seed 0, because exact betweenness 40 times over takes hours); f_50 = share
                      removed when the largest component falls to half its size. Molloy-Reed kappa = <k^2>/<k>.
   spreading (SIR)    SIR with transmission probability T per tie and recovery after one step is exactly bond
                      percolation with occupation T (Newman 2002): the outbreak started by faculty i = the size of i's
@@ -23,10 +25,13 @@ Louvain communities are read from results/faculty_centrality.csv (seed 42), so r
                      T_c = <k> / (<k^2> - <k>). Spreader ranking at T = 0.2 (just above T_c): Spearman rho between each
                      centrality and the expected outbreak size (Kitsak et al. 2010: k-core beats degree).
   growth             cumulative network at the end of each year (ties by first joint paper): faculty with a tie, ties,
-                     mean degree, largest component, transitivity, Kharagpur-Roorkee ties; densification exponent a
+                     mean degree, largest component, transitivity, ties between two institutes of the run (Kharagpur-Roorkee
+                     ties by default); densification exponent a
                      in E ~ N^a (Leskovec et al. 2005)
   tie types          every row of authorship_network.csv with a faculty end, by the other author's institution: faculty
                      of our IITs / same IIT, not faculty (students, staff) / other Indian / foreign / unknown
+                     (with more than two institutes in the run: 'other IIT of the run, not faculty' is its own class and
+                     'same IIT' means the faculty member's own institute)
 Outputs (results/): authorship_structure.csv, leiden_comparison.csv, rich_club.csv, robustness.csv, sir_outbreaks.csv,
   spreader_ranking.csv, top_spreaders.csv, network_growth.csv, centrality_vs_impact.csv, coauthor_tie_types.csv,
   top_collaborators_all_coauthors.csv
@@ -35,16 +40,21 @@ usage: python stats_authorship_dynamics.py   (needs: pip install python-igraph l
 import os, random, collections as C
 import numpy as np
 import networkx as nx
+import scipy.sparse as sp
+from scipy.sparse.csgraph import connected_components
 import igraph as ig
 import leidenalg as la
 from scipy.stats import spearmanr, rankdata
 from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
-from common import INSTS, YEARS, DATA, RES, read_csv, write_csv, style, save, COLOR, TEXT2, MUTED, GRID, plt
+from common import (INSTS, YEARS, DATA, RES, read_csv, iter_csv, write_csv, style, save, COLOR, TEXT2, MUTED, GRID, plt, OA_NAME,
+                    PAIR_LABEL, N_INST)
 from stats_authorship import faculty_graph
 
 CATEGORICAL = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"]
-OWN = {"IIT Kharagpur", "IIT Roorkee", "Indian Institute of Technology Kharagpur", "Indian Institute of Technology Roorkee"}
+OWN = set(INSTS.values()) | {OA_NAME[n] for n in INSTS.values()}      # the institutes of the run, under both names
 T_RANK = 0.2
+BC_EXACT_MAX = 2500        # adaptive-attack betweenness: exact up to this many faculty, sampled above
+BC_SAMPLE = 400
 
 
 def giant_share(H, n):
@@ -58,6 +68,13 @@ def attack(G, order_fn, steps, per):
         out.append(giant_share(H, n))
         H.remove_nodes_from(order_fn(H)[:per])
     return out
+
+
+def _betweenness(H, n):
+    """Betweenness for the adaptive attack: exact on networks of up to BC_EXACT_MAX faculty, else from BC_SAMPLE sources."""
+    if n <= BC_EXACT_MAX:
+        return nx.betweenness_centrality(H)
+    return nx.betweenness_centrality(H, k=min(BC_SAMPLE, H.number_of_nodes()), seed=0)
 
 
 def partial_rho(x, y, z):
@@ -185,7 +202,7 @@ def main():
     rnd = [attack(G, lambda H, s=s: random.Random(s).sample(list(H), H.number_of_nodes()), steps, per) for s in range(20)]
     curves = {"random": list(np.mean(rnd, axis=0)),
               "degree (adaptive)": attack(G, lambda H: sorted(H, key=lambda v: -H.degree(v)), steps, per),
-              "betweenness (adaptive)": attack(G, lambda H: sorted((b := nx.betweenness_centrality(H)), key=lambda v: -b[v]), steps, per)}
+              "betweenness (adaptive)": attack(G, lambda H: sorted((b := _betweenness(H, n)), key=lambda v: -b[v]), steps, per)}
     frac = [i * per / n for i in range(steps + 1)]
     write_csv("robustness.csv", [{"fraction_removed": round(f, 4), **{k: round(v[i], 4) for k, v in curves.items()}} for i, f in enumerate(frac)])
     for k, v in curves.items():
@@ -210,15 +227,14 @@ def main():
     k_c = k1 / (k2 - k1)
     rng = np.random.default_rng(0)
 
+    ends = np.array([(idx[a], idx[b]) for a, b in edges]).reshape(-1, 2)
+
     def outbreaks(T, R):
         tot = np.zeros(n)
         for _ in range(R):
-            H = nx.Graph()
-            H.add_nodes_from(nodes)
-            H.add_edges_from(e for e, u in zip(edges, rng.random(len(edges))) if u < T)
-            for comp in nx.connected_components(H):
-                for v in comp:
-                    tot[idx[v]] += len(comp)
+            keep = ends[rng.random(len(edges)) < T]                # same draws as keeping each tie with probability T
+            _, lab = connected_components(sp.coo_matrix((np.ones(len(keep)), (keep[:, 0], keep[:, 1])), shape=(n, n)), directed=False)
+            tot += np.bincount(lab)[lab]                           # every faculty member gets the size of their cluster
         return tot / R
 
     srows = []
@@ -261,10 +277,12 @@ def main():
     for Y in YEARS:
         H = nx.Graph([(a, b) for a, b, d in G.edges(data=True) if d["first_year"] and d["first_year"] <= Y])
         N, E = H.number_of_nodes(), H.number_of_edges()
+        if not N:
+            continue
         grows.append({"year": Y, "faculty_with_a_tie": N, "ties": E, "mean_degree": round(2 * E / N, 3),
                       "largest_component": max(len(c) for c in nx.connected_components(H)), "largest_component_share": round(giant_share(H, N), 4),
                       "transitivity": round(nx.transitivity(H), 4),
-                      "kharagpur_roorkee_ties": sum(1 for a, b in H.edges if info[a]["institution"] != info[b]["institution"])})
+                      PAIR_LABEL.lower().replace("-", "_") + "_ties": sum(1 for a, b in H.edges if info[a]["institution"] != info[b]["institution"])})
     write_csv("network_growth.csv", grows)
     a_dens = np.polyfit(np.log([r["faculty_with_a_tie"] for r in grows]), np.log([r["ties"] for r in grows]), 1)[0]
     summary.append(("densification exponent a, ties ~ faculty^a", a_dens))
@@ -291,15 +309,18 @@ def main():
     # ------------------------------------------------ tie types and all co-authors
     indian = {r["partner_inst"] for r in read_csv(os.path.join(DATA, "indian_connections.csv"))}
     types, coauthors = C.Counter(), C.defaultdict(set)
-    for e in read_csv(os.path.join(DATA, "authorship_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "authorship_network.csv")):
         for me, mine, other in (("author_a_id", "a_is_faculty", "author_b_id"), ("author_b_id", "b_is_faculty", "author_a_id")):
             if e[mine] == "TRUE" and e[me] in info:
                 coauthors[e[me]].add(e[other])
         if e["a_is_faculty"] == "TRUE" and e["b_is_faculty"] == "TRUE":
-            types["faculty of our two IITs"] += 1
+            types["faculty of our two IITs" if N_INST == 2 else f"faculty of our {N_INST} IITs"] += 1
             continue
-        other = [x for x in (e["inst_b"] if e["a_is_faculty"] == "TRUE" else e["inst_a"]).split(";") if x]
-        types["unknown institution" if not other else "same IIT, not faculty (students, staff)" if OWN & set(other)
+        fac_side, oth_side = ("inst_a", "inst_b") if e["a_is_faculty"] == "TRUE" else ("inst_b", "inst_a")
+        other = [x for x in e[oth_side].split(";") if x]
+        own = OWN if N_INST == 2 else {y for x in e[fac_side].split(";") if x in INSTS.values() for y in (x, OA_NAME[x])}
+        types["unknown institution" if not other else "same IIT, not faculty (students, staff)" if own & set(other)
+              else "other IIT of the run, not faculty" if OWN & set(other)
               else "other Indian institution" if indian & set(other) else "foreign institution"] += 1
     tot = sum(types.values())
     write_csv("coauthor_tie_types.csv", [{"tie_type": k, "pair_paper_rows": v, "share": round(v / tot, 4)} for k, v in types.most_common()])
@@ -324,7 +345,8 @@ def main():
     for c, col in zip(top_c, CATEGORICAL):
         vv = [v for v in giant if com[v] == c]
         r = comrows.get(c, {})
-        lab = f"{c}: {r.get('top_department', '')} ({'KGP' if int(r.get('IIT Kharagpur', 0)) >= int(r.get('IIT Roorkee', 0)) else 'Roorkee'}, {len(vv)})"
+        campus = max(INSTS.values(), key=lambda nm: int(r.get(nm, 0)))      # the institute with most faculty in the community
+        lab = f"{c}: {r.get('top_department', '')} ({'KGP' if campus == 'IIT Kharagpur' else campus.replace('IIT ', '')}, {len(vv)})"
         nx.draw_networkx_nodes(giant, pos, nodelist=vv, ax=ax, node_size=[6 + 2.5 * giant.degree(v) for v in vv], node_color=col,
                                linewidths=0.4, edgecolors="#fcfcfb", label=lab)
         cx, cy = np.mean([pos[v] for v in vv], axis=0)

@@ -1,0 +1,84 @@
+﻿definition,metric,value
+pure,faculty,1410
+pure,faculty with at least one citation link (either direction),1110
+pure,citing pairs between the two IITs,1828
+pure,CORE members citing or cited by the other IIT within the CORE,612
+pure,citing pairs a -> b,6626
+pure,CORE (faculty),741
+pure,IN (faculty),182
+pure,OUT (faculty),134
+pure,TUBES (faculty),2
+pure,TENDRILS (faculty),25
+pure,OTHER (faculty),26
+pure,ISOLATED (faculty),300
+pure,CORE share of linked faculty,0.6676
+pure,CORE size in 10 degree-preserving rewirings: mean (min-max),761 (753-767)
+pure,"check: networkx and scipy give the same CORE, IN and OUT",True
+pure,IIT Kharagpur: CORE,406
+pure,IIT Kharagpur: IN,96
+pure,IIT Kharagpur: OUT,74
+pure,IIT Kharagpur: TUBES,2
+pure,IIT Kharagpur: TENDRILS,17
+pure,IIT Kharagpur: OTHER,12
+pure,IIT Kharagpur: ISOLATED,163
+pure,IIT Roorkee: CORE,335
+pure,IIT Roorkee: IN,86
+pure,IIT Roorkee: OUT,60
+pure,IIT Roorkee: TUBES,0
+pure,IIT Roorkee: TENDRILS,8
+pure,IIT Roorkee: OTHER,14
+pure,IIT Roorkee: ISOLATED,137
+strict,faculty,1410
+strict,faculty with at least one citation link (either direction),1017
+strict,citing pairs between the two IITs,1700
+strict,CORE members citing or cited by the other IIT within the CORE,536
+strict,citing pairs a -> b,4999
+strict,CORE (faculty),622
+strict,IN (faculty),187
+strict,OUT (faculty),151
+strict,TUBES (faculty),2
+strict,TENDRILS (faculty),34
+strict,OTHER (faculty),21
+strict,ISOLATED (faculty),393
+strict,CORE share of linked faculty,0.6116
+strict,CORE size in 10 degree-preserving rewirings: mean (min-max),651 (643-659)
+strict,"check: networkx and scipy give the same CORE, IN and OUT",True
+strict,IIT Kharagpur: CORE,336
+strict,IIT Kharagpur: IN,93
+strict,IIT Kharagpur: OUT,86
+strict,IIT Kharagpur: TUBES,2
+strict,IIT Kharagpur: TENDRILS,16
+strict,IIT Kharagpur: OTHER,8
+strict,IIT Kharagpur: ISOLATED,229
+strict,IIT Roorkee: CORE,286
+strict,IIT Roorkee: IN,94
+strict,IIT Roorkee: OUT,65
+strict,IIT Roorkee: TUBES,0
+strict,IIT Roorkee: TENDRILS,18
+strict,IIT Roorkee: OTHER,13
+strict,IIT Roorkee: ISOLATED,164
+pure,CORE: median papers,39.0
+pure,CORE: median citations,480.0
+pure,CORE: median h_index,12.0
+pure,IN: median papers,13.0
+pure,IN: median citations,58.5
+pure,IN: median h_index,4.0
+pure,OUT: median papers,13.0
+pure,OUT: median citations,169.5
+pure,OUT: median h_index,6.0
+pure,TUBES: median papers,22.0
+pure,TUBES: median citations,174.0
+pure,TUBES: median h_index,8.0
+pure,TENDRILS: median papers,10.0
+pure,TENDRILS: median citations,57.0
+pure,TENDRILS: median h_index,4.0
+pure,OTHER: median papers,14.0
+pure,OTHER: median citations,71.5
+pure,OTHER: median h_index,5.0
+pure,ISOLATED: median papers,3.0
+pure,ISOLATED: median citations,11.5
+pure,ISOLATED: median h_index,2.0
+pure,departments in the hierarchy (>= 5 faculty),48
+pure,check: Spearman SpringRank vs net balance,0.941
+pure,citations between departments (weighted edges),9578
+pure,citations within a department,5612

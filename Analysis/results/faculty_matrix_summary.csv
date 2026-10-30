@@ -1,0 +1,43 @@
+﻿metric,value
+faculty (nodes),1410
+edges,2719
+lambda_1,12.547
+lambda_2,9.866
+sqrt(max degree),6.403
+eigenvector: faculty with a non-zero score (its component),1110
+eigenvector: one sign on its support (check),True
+eigenvector IPR,0.0283
+IPR if spread evenly (1/n),0.00071
+eigenvector weight (sum v^2) on its top 10 faculty,0.452
+eigenvector top 10: institutions,IIT Kharagpur 10
+eigenvector top 10: departments,Rubber Technology 2; Physics 2; Materials Science Centre 2; Bioscience and Biotechnology 2; Metallurgical and Materials Engineering 1; Mechanical Engineering 1
+"Spearman degree vs betweenness (giant component, n = 1110)",0.86
+"Spearman degree vs eigenvector (giant component, n = 1110)",0.608
+"Spearman degree vs Katz (f=0.5) (giant component, n = 1110)",0.969
+"Spearman degree vs subgraph centrality (giant component, n = 1110)",0.816
+"Spearman degree vs total communicability (giant component, n = 1110)",0.648
+degree: top-10 overlap with degree top-10,10
+"Spearman betweenness vs eigenvector (giant component, n = 1110)",0.408
+"Spearman betweenness vs Katz (f=0.5) (giant component, n = 1110)",0.794
+"Spearman betweenness vs subgraph centrality (giant component, n = 1110)",0.59
+"Spearman betweenness vs total communicability (giant component, n = 1110)",0.441
+betweenness: top-10 overlap with degree top-10,7
+"Spearman eigenvector vs Katz (f=0.5) (giant component, n = 1110)",0.74
+"Spearman eigenvector vs subgraph centrality (giant component, n = 1110)",0.885
+"Spearman eigenvector vs total communicability (giant component, n = 1110)",0.992
+eigenvector: top-10 overlap with degree top-10,8
+"Spearman Katz (f=0.5) vs subgraph centrality (giant component, n = 1110)",0.925
+"Spearman Katz (f=0.5) vs total communicability (giant component, n = 1110)",0.782
+Katz (f=0.5): top-10 overlap with degree top-10,9
+"Spearman subgraph centrality vs total communicability (giant component, n = 1110)",0.923
+subgraph centrality: top-10 overlap with degree top-10,8
+total communicability: top-10 overlap with degree top-10,8
+share of eigenvector weight (sum v^2) on Roorkee faculty,0.0127
+Roorkee share of faculty,0.4539
+"max k-core: k, faculty, institutions","6, 23, IIT Kharagpur 23"
+eigenvector top 10 inside the max k-core,9
+campus communicability ratio rho_KR,0.3168
+rho_KR lost by removing the single most important faculty member,0.3087
+faculty whose removal lowers rho_KR by more than 5%,18
+Spearman of rho_KR loss with betweenness (faculty with degree > 0),0.1
+top-10 overlap: rho_KR loss vs betweenness,5

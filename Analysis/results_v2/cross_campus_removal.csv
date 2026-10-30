@@ -1,0 +1,21 @@
+﻿rank,faculty,institution,department,campus_ratio_lost,degree,rank_betweenness,rank_degree,direct_cross_campus_coauthors
+1,Arindam Chowdhury,IIT Bombay,Chemistry,0.115,24,81,8,1
+2,Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.1033,28,78,2,3
+3,Dillip Kumar Satapathy,IIT Madras,Physics,0.0935,15,157,81,2
+4,Murugaiyan Amirthalingam,IIT Madras,Metallurgical and Materials Engineering,0.091,20,33,27,3
+5,Anand Krishna Kanjarla,IIT Madras,Metallurgical and Materials Engineering,0.0884,9,347,353,3
+6,Anindya Datta,IIT Bombay,Chemistry,0.0868,23,18,12,1
+7,Tarak Kumar Patra,IIT Madras,Chemical Engineering,0.0772,14,121,106,3
+8,Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,0.0651,18,27,44,1
+9,Sushil Mishra,IIT Bombay,Mechanical Engineering,0.062,20,61,27,1
+10,Aftab Alam,IIT Bombay,Physics,0.0569,24,48,8,0
+11,Abhijit Chatterjee,IIT Bombay,Chemical Engineering,0.0532,10,125,275,3
+12,Smrutiranjan Parida,IIT Bombay,Metallurgical Engineering and Materials Science,0.053,9,747,353,1
+13,Sagar Mitra,IIT Bombay,Energy Science and Engineering,0.0395,13,21,131,1
+14,Biswarup Pathak,IIT Indore,Chemistry,0.0384,17,39,54,4
+15,Arnab Dutta,IIT Bombay,Chemistry,0.0379,23,1,12,1
+16,Mithun Chowdhury,IIT Bombay,Metallurgical Engineering and Materials Science,0.0378,5,1938,922,2
+17,Srinivasa Rao Bakshi,IIT Madras,Metallurgical and Materials Engineering,0.0355,15,108,81,2
+18,Sivasurender Chandran,IIT Kanpur,Physics,0.033,7,518,566,3
+19,Amartya Mukhopadhyay,IIT Bombay,Metallurgical Engineering and Materials Science,0.0299,14,80,106,0
+20,Sivasambu Mahesh,IIT Madras,Aerospace Engineering,0.0295,4,1160,1172,2

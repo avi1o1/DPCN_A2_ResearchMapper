@@ -1,0 +1,17 @@
+﻿metric,value
+papers with >= 2 faculty (with an author count),7954
+cross-campus: papers,135
+cross-department: papers,3130
+one department: papers,4689
+"check: papers with faculty of >= 2 departments, this script",3265
+check: the same from group3_data.csv,3265
+same faculty member: faculty with both one-department and cross-department papers,450
+same faculty member: median of (mean log(1+FWCI) cross-dept - one-dept),0.0307
+same faculty member: share of faculty with a higher value on cross-department papers,0.5444
+same faculty member: Wilcoxon signed-rank p,0.82
+<= 2023 | cross-campus,papers 99; median_fwci 0.818; mean_log1p_fwci 0.7027; top10_share 0.1414; median_authors 4.0; median_faculty 2.0
+<= 2023 | cross-department,papers 1978; median_fwci 1.014; mean_log1p_fwci 0.8185; top10_share 0.1931; median_authors 4.0; median_faculty 2.0
+<= 2023 | one department,papers 2956; median_fwci 1.014; mean_log1p_fwci 0.791; top10_share 0.1783; median_authors 4.0; median_faculty 2.0
+all years | cross-campus,papers 128; median_fwci 0.747; mean_log1p_fwci 0.67; top10_share 0.1484; median_authors 4.0; median_faculty 2.0
+all years | cross-department,papers 2929; median_fwci 0.902; mean_log1p_fwci 0.75; top10_share 0.1721; median_authors 4.0; median_faculty 2.0
+all years | one department,papers 4446; median_fwci 0.878; mean_log1p_fwci 0.721; top10_share 0.164; median_authors 4.0; median_faculty 2.0

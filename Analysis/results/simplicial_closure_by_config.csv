@@ -1,0 +1,15 @@
+﻿cap,class,triples,closed_later,share_of_new_trios,closure_probability,ci95_low,ci95_high
+25,0 edges,1225578029100,3603,0.2012,2.94e-09,2.85e-09,3.04e-09
+25,1 edge,1507970961,8835,0.4934,5.86e-06,5.74e-06,5.98e-06
+25,2 edges (open wedge),1179779,5323,0.2972,0.00451,0.00439,0.00463
+25,"3 edges, no joint paper (open triangle)",3938,147,0.0082,0.0373,0.0318,0.0437
+25,"open triangle, weakest edge 1 joint paper",3733,132,,0.0354,0.0299,0.0418
+25,"open triangle, weakest edge 2 joint papers",170,14,,0.0824,0.0497,0.133
+25,"open triangle, weakest edge 3+ joint papers",35,1,,0.0286,0.00506,0.145
+10,0 edges,984378958844,1975,0.1712,2.01e-09,1.92e-09,2.1e-09
+10,1 edge,1128153189,5671,0.4917,5.03e-06,4.9e-06,5.16e-06
+10,2 edges (open wedge),881532,3802,0.3297,0.00431,0.00418,0.00445
+10,"3 edges, no joint paper (open triangle)",3200,85,0.0074,0.0266,0.0215,0.0327
+10,"open triangle, weakest edge 1 joint paper",2994,73,,0.0244,0.0194,0.0305
+10,"open triangle, weakest edge 2 joint papers",171,11,,0.0643,0.0363,0.112
+10,"open triangle, weakest edge 3+ joint papers",35,1,,0.0286,0.00506,0.145

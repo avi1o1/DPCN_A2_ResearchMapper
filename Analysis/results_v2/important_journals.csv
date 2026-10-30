@@ -1,0 +1,85 @@
+﻿institution,group,total,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026
+IIT Bombay,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bombay,PRL,113,8,10,9,12,13,12,8,11,10,11,9
+IIT Bombay,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bombay,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bombay,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bombay,JACS,44,6,5,2,2,6,0,3,2,5,4,9
+IIT Madras,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Madras,PRL,313,7,20,32,31,24,23,29,28,34,41,44
+IIT Madras,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Madras,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Madras,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Madras,JACS,11,0,2,1,0,0,1,0,0,1,1,5
+IIT Kanpur,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kanpur,PRL,57,0,1,6,3,3,7,3,3,4,8,19
+IIT Kanpur,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kanpur,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kanpur,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kanpur,JACS,15,3,0,1,0,0,1,0,1,3,5,1
+IIT Goa,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Goa,PRL,2,0,0,0,1,0,0,0,0,0,0,1
+IIT Goa,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Goa,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Goa,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Goa,JACS,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Tirupati,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Tirupati,PRL,2,0,0,1,0,0,1,0,0,0,0,0
+IIT Tirupati,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Tirupati,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Tirupati,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Tirupati,JACS,2,0,0,0,0,0,0,0,0,1,1,0
+IIT Patna,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Patna,PRL,31,0,0,0,1,1,5,6,6,2,6,4
+IIT Patna,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Patna,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Patna,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Patna,JACS,3,0,0,0,0,0,0,0,0,0,1,2
+IIT Palakkad,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Palakkad,PRL,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Palakkad,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Palakkad,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Palakkad,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Palakkad,JACS,1,0,0,0,0,0,0,1,0,0,0,0
+IIT Guwahati,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Guwahati,PRL,53,6,10,5,8,7,6,6,1,2,1,1
+IIT Guwahati,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Guwahati,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Guwahati,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Guwahati,JACS,6,0,2,0,0,0,0,0,2,1,1,0
+IIT Hyderabad,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Hyderabad,PRL,71,1,4,8,11,6,10,3,3,3,5,17
+IIT Hyderabad,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Hyderabad,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Hyderabad,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Hyderabad,JACS,5,0,0,0,1,0,0,0,2,1,1,0
+IIT Bhubaneswar,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhubaneswar,PRL,132,4,11,24,15,12,11,8,7,14,12,14
+IIT Bhubaneswar,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhubaneswar,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhubaneswar,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhubaneswar,JACS,2,0,0,0,0,0,0,0,1,1,0,0
+IIT (BHU) Varanasi,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT (BHU) Varanasi,PRL,4,0,0,0,0,0,1,1,0,0,1,1
+IIT (BHU) Varanasi,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT (BHU) Varanasi,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT (BHU) Varanasi,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT (BHU) Varanasi,JACS,4,1,0,0,0,0,2,0,0,0,1,0
+IIT Gandhinagar,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Gandhinagar,PRL,30,6,5,5,3,3,2,1,0,0,2,3
+IIT Gandhinagar,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Gandhinagar,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Gandhinagar,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Gandhinagar,JACS,3,0,1,0,0,0,1,0,0,0,0,1
+IIT Indore,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Indore,PRL,53,4,4,3,4,4,6,4,6,7,5,6
+IIT Indore,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Indore,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Indore,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Indore,JACS,7,0,0,1,0,0,2,0,0,2,2,0
+IIT Mandi,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Mandi,PRL,14,0,0,0,0,0,0,0,2,2,1,9
+IIT Mandi,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Mandi,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Mandi,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Mandi,JACS,7,0,0,0,1,1,0,0,0,1,2,2

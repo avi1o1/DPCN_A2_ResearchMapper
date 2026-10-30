@@ -1,0 +1,11 @@
+﻿metric,value
+fit A(k) = c (k + k0)^alpha: alpha,0.874
+alpha standard error,0.027
+k0 (initial attractiveness),2.26
+c,0.2863
+naive log-log slope for k >= 1 (no k0),0.708
+largest k with >= 50 paper-years,53
+field assortativity (all edges),0.771
+field assortativity (no self-citations),0.772
+same-field share (all edges),0.8125
+same-field share (no self-citations),0.8135

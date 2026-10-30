@@ -1,0 +1,104 @@
+﻿model,rank,faculty,institution,department,papers_in_hypergraph,distinct_coauthors,share_papers_over_10_authors,rank_linear,rank_log-exp,rank_max,rank_distinct co-authors (pairwise),rank_distinct co-authors without >10-author papers
+linear,1,Raghunath Sahoo,IIT Indore,Physics,215,299,0.121,1,4,1006,28,224
+linear,2,Samiran Mahapatra,IIT Kanpur,Chemical Engineering,7,63,1.0,2,4,2602,900,4324
+linear,3,Manoneeta Chakraborty,IIT Indore,"Astronomy, Astrophysics and Space Engineering",17,118,0.294,3,4,1876,306,2141
+linear,4,Sunil Gupta,IIT Kanpur,Computer Science and Engineering,1,24,1.0,4,4,3063,2123,4324
+linear,5,Santosh Kumar Das,IIT Goa,Physics,51,124,0.078,5,4,1800,274,1149
+linear,6,Prabhakar Palni,IIT Mandi,School of Physical Sciences,12,89,0.25,6,4,2479,536,2589
+linear,7,Amal Sarkar,IIT Mandi,School of Physical Sciences,14,88,0.214,7,4,2478,551,3012
+linear,8,Vinod Chandra,IIT Gandhinagar,Physics,52,85,0.019,8,4,2284,583,1268
+linear,9,Basanta Kumar Nandi,IIT Bombay,Physics,42,50,0.0,9,4,2589,1177,1042
+linear,10,Sumanta Samal,IIT Indore,Metallurgical Engineering and Materials Science,56,72,0.018,10,4,208,736,628
+linear,11,Raghava Varma,IIT Bombay,Physics,15,70,0.067,11,4,2545,767,1860
+linear,12,Taraknath Mandal,IIT Kanpur,Physics,23,73,0.13,12,4,2657,727,1688
+linear,13,Varun Bhalerao,IIT Bombay,Physics,94,777,0.564,13,4,588,1,167
+linear,14,Raj Ganesh Santharam Pala,IIT Kanpur,Chemical Engineering,91,117,0.011,14,4,239,312,258
+linear,15,Sovan Chakraborty,IIT Guwahati,Physics,20,33,0.0,15,4,3063,1718,1591
+linear,16,Sadhana Dash,IIT Bombay,Physics,70,68,0.0,16,4,2316,808,685
+linear,17,Rahul Kumar Kothari,IIT Mandi,School of Physical Sciences,4,7,0.0,17,4,3063,3371,3314
+linear,18,Pinaki Prasad Bhattacharjee,IIT Hyderabad,Materials Science and Metallurgical Engineering,96,149,0.01,18,4,872,188,129
+linear,19,Somnath Nag,IIT (BHU) Varanasi,Department of Physics,22,146,0.864,19,4,1855,199,3203
+linear,20,Vinod Kumar,IIT Indore,Metallurgical Engineering and Materials Science,57,64,0.0,20,4,521,876,748
+log-exp,1,Anirban Sengupta,IIT Indore,Computer Science and Engineering,187,49,0.0,1750,1,1971,1208,1069
+log-exp,2,Mahendrakumar Madhavan,IIT Hyderabad,Civil Engineering,87,31,0.0,1750,2,3023,1818,1688
+log-exp,3,Bhabani Shankar Mallik,IIT Hyderabad,Chemistry,140,109,0.014,1363,3,1422,368,361
+max,1,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,423,413,0.024,193,4,1,12,5
+max,2,Amit Agarwal,IIT Kanpur,Physics,185,437,0.151,292,4,2,8,30
+max,3,Somnath Bhowmick,IIT Kanpur,Materials Science and Engineering,81,104,0.012,163,4,3,396,351
+max,4,Amit Verma,IIT Kanpur,Electrical Engineering,64,110,0.016,493,4,4,359,365
+max,5,Vimal Bhatia,IIT Indore,Electrical Engineering,422,313,0.009,1143,4,5,24,15
+max,6,Avinash Lahgere,IIT Kanpur,Electrical Engineering,26,45,0.0,755,4,6,1316,1184
+max,7,Shubham Sahay,IIT Kanpur,Sustainable Energy Engineering,46,92,0.043,754,4,7,507,685
+max,8,Aloke Dutta,IIT Kanpur,Electrical Engineering,16,14,0.0,779,4,8,2755,2671
+max,9,Nihar Ranjan Mohapatra,IIT Gandhinagar,Electrical Engineering,94,123,0.011,623,4,9,281,227
+max,10,Nagaditya Poluri,IIT Kanpur,Electrical Engineering,11,20,0.0,863,4,10,2379,2277
+max,11,Kumar Vaibhav Srivastava,IIT Kanpur,Electrical Engineering,217,107,0.0,512,4,11,377,277
+max,12,Souvik Mahapatra,IIT Bombay,Electrical Engineering,106,186,0.057,886,4,12,103,258
+max,13,Rik Dey,IIT Kanpur,Electrical Engineering,10,22,0.0,921,4,13,2248,2141
+max,14,Mohit D. Ganeriwala,IIT Kanpur,Electrical Engineering,5,15,0.0,995,4,14,2674,2589
+max,15,Anand Sandeep,IIT Kanpur,Electrical Engineering,54,61,0.0,646,4,15,936,800
+max,16,Rajdip Mukherjee,IIT Kanpur,Materials Science and Engineering,34,50,0.0,259,4,16,1177,1042
+max,17,Soumik Mukhopadhyay,IIT Kanpur,Physics,36,44,0.0,453,4,17,1354,1219
+max,18,Ajay Kumar Kushwaha,IIT Indore,Metallurgical Engineering and Materials Science,47,97,0.085,930,4,18,450,619
+max,19,Sanjeev Sharma,IIT (BHU) Varanasi,Department of Electronics Engineering,80,85,0.0,826,4,19,583,468
+max,20,Amit Ranjan Trivedi,IIT Kanpur,Electrical Engineering,1,3,0.0,1329,4,20,3892,3856
+linear without >10-author papers,1,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,423,413,0.024,193,4,1,12,5
+linear without >10-author papers,2,Amit Agarwal,IIT Kanpur,Physics,185,437,0.151,292,4,2,8,30
+linear without >10-author papers,3,Somnath Bhowmick,IIT Kanpur,Materials Science and Engineering,81,104,0.012,163,4,3,396,351
+linear without >10-author papers,4,Amit Verma,IIT Kanpur,Electrical Engineering,64,110,0.016,493,4,4,359,365
+linear without >10-author papers,5,Avinash Lahgere,IIT Kanpur,Electrical Engineering,26,45,0.0,755,4,6,1316,1184
+linear without >10-author papers,6,Shubham Sahay,IIT Kanpur,Sustainable Energy Engineering,46,92,0.043,754,4,7,507,685
+linear without >10-author papers,7,Aloke Dutta,IIT Kanpur,Electrical Engineering,16,14,0.0,779,4,8,2755,2671
+linear without >10-author papers,8,Nihar Ranjan Mohapatra,IIT Gandhinagar,Electrical Engineering,94,123,0.011,623,4,9,281,227
+linear without >10-author papers,9,Kumar Vaibhav Srivastava,IIT Kanpur,Electrical Engineering,217,107,0.0,512,4,11,377,277
+linear without >10-author papers,10,Nagaditya Poluri,IIT Kanpur,Electrical Engineering,11,20,0.0,863,4,10,2379,2277
+linear without >10-author papers,11,Souvik Mahapatra,IIT Bombay,Electrical Engineering,106,186,0.057,886,4,12,103,258
+linear without >10-author papers,12,Mohit D. Ganeriwala,IIT Kanpur,Electrical Engineering,5,15,0.0,995,4,14,2674,2589
+linear without >10-author papers,13,Rik Dey,IIT Kanpur,Electrical Engineering,10,22,0.0,921,4,13,2248,2141
+linear without >10-author papers,14,Anand Sandeep,IIT Kanpur,Electrical Engineering,54,61,0.0,646,4,15,936,800
+linear without >10-author papers,15,Rajdip Mukherjee,IIT Kanpur,Materials Science and Engineering,34,50,0.0,259,4,16,1177,1042
+linear without >10-author papers,16,Soumik Mukhopadhyay,IIT Kanpur,Physics,36,44,0.0,453,4,17,1354,1219
+linear without >10-author papers,17,Ajay Kumar Kushwaha,IIT Indore,Metallurgical Engineering and Materials Science,47,97,0.085,930,4,18,450,619
+linear without >10-author papers,18,Amit Ranjan Trivedi,IIT Kanpur,Electrical Engineering,1,3,0.0,1329,4,20,3892,3856
+linear without >10-author papers,19,Saikat Ghosh,IIT Kanpur,Physics,15,29,0.0,1136,4,21,1882,1766
+linear without >10-author papers,20,Anish Upadhyaya,IIT Kanpur,Materials Science and Engineering,26,39,0.038,269,4,23,1499,1547
+distinct co-authors (pairwise),1,Varun Bhalerao,IIT Bombay,Physics,94,777,0.564,13,4,588,1,167
+distinct co-authors (pairwise),2,Pradeep Thalappil,IIT Madras,Chemistry,308,563,0.088,288,4,59,2,2
+distinct co-authors (pairwise),3,Gopalan Rajaraman,IIT Bombay,Chemistry,265,530,0.098,118,4,308,3,4
+distinct co-authors (pairwise),4,Tiju Thomas,IIT Madras,Metallurgical and Materials Engineering,262,514,0.038,290,4,95,4,1
+distinct co-authors (pairwise),5,Abhirup Datta,IIT Indore,"Astronomy, Astrophysics and Space Engineering",185,500,0.168,33,4,547,5,39
+distinct co-authors (pairwise),6,Debabrata Maiti,IIT Bombay,Chemistry,294,473,0.02,393,4,311,6,3
+distinct co-authors (pairwise),7,M S Ramachandra Rao,IIT Madras,Physics,183,450,0.071,249,4,160,7,9
+distinct co-authors (pairwise),8,Amit Agarwal,IIT Kanpur,Physics,185,437,0.151,292,4,2,8,30
+distinct co-authors (pairwise),9,Shantanu Desai,IIT Hyderabad,Physics,126,433,0.167,21,4,1138,9,453
+distinct co-authors (pairwise),10,Dhiraj D Bhatia,IIT Gandhinagar,Biological Sciences and Engineering,217,429,0.041,108,4,150,10,7
+distinct co-authors (pairwise),11,Rohit Srivastava,IIT Bombay,Biosciences and Bioengineering,213,421,0.094,531,4,519,11,8
+distinct co-authors (pairwise),12,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,423,413,0.024,193,4,1,12,5
+distinct co-authors (pairwise),13,Sriparna Saha,IIT Patna,Computer Science and Engineering,363,386,0.0,1077,4,203,13,6
+distinct co-authors (pairwise),14,S. Srivastava,IIT Bombay,Biosciences and Bioengineering,98,379,0.153,384,4,943,14,32
+distinct co-authors (pairwise),15,Subimal Ghosh,IIT Bombay,Civil Engineering,205,365,0.044,1537,4,1662,15,22
+distinct co-authors (pairwise),16,Biswarup Pathak,IIT Indore,Chemistry,306,364,0.042,178,4,85,16,11
+distinct co-authors (pairwise),17,Arnab Dutta,IIT Bombay,Chemistry,129,363,0.093,174,4,155,17,14
+distinct co-authors (pairwise),18,Sachin S Gunthe,IIT Madras,Civil Engineering,83,354,0.422,1467,4,797,18,105
+distinct co-authors (pairwise),19,Pralay Maiti,IIT (BHU) Varanasi,School of Materials Science and Technology,191,353,0.042,365,4,289,19,10
+distinct co-authors (pairwise),20,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,171,352,0.058,34,4,24,20,13
+distinct co-authors without >10-author papers,1,Tiju Thomas,IIT Madras,Metallurgical and Materials Engineering,262,514,0.038,290,4,95,4,1
+distinct co-authors without >10-author papers,2,Pradeep Thalappil,IIT Madras,Chemistry,308,563,0.088,288,4,59,2,2
+distinct co-authors without >10-author papers,3,Debabrata Maiti,IIT Bombay,Chemistry,294,473,0.02,393,4,311,6,3
+distinct co-authors without >10-author papers,4,Gopalan Rajaraman,IIT Bombay,Chemistry,265,530,0.098,118,4,308,3,4
+distinct co-authors without >10-author papers,5,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,423,413,0.024,193,4,1,12,5
+distinct co-authors without >10-author papers,6,Sriparna Saha,IIT Patna,Computer Science and Engineering,363,386,0.0,1077,4,203,13,6
+distinct co-authors without >10-author papers,7,Dhiraj D Bhatia,IIT Gandhinagar,Biological Sciences and Engineering,217,429,0.041,108,4,150,10,7
+distinct co-authors without >10-author papers,8,Rohit Srivastava,IIT Bombay,Biosciences and Bioengineering,213,421,0.094,531,4,519,11,8
+distinct co-authors without >10-author papers,9,M S Ramachandra Rao,IIT Madras,Physics,183,450,0.071,249,4,160,7,9
+distinct co-authors without >10-author papers,10,Pralay Maiti,IIT (BHU) Varanasi,School of Materials Science and Technology,191,353,0.042,365,4,289,19,10
+distinct co-authors without >10-author papers,11,Biswarup Pathak,IIT Indore,Chemistry,306,364,0.042,178,4,85,16,11
+distinct co-authors without >10-author papers,12,Shaikh M Mobin,IIT Indore,Chemistry,264,309,0.004,231,4,445,25,12
+distinct co-authors without >10-author papers,13,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,171,352,0.058,34,4,24,20,13
+distinct co-authors without >10-author papers,14,Arnab Dutta,IIT Bombay,Chemistry,129,363,0.093,174,4,155,17,14
+distinct co-authors without >10-author papers,15,Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,134,300,0.045,202,4,77,27,15
+distinct co-authors without >10-author papers,15,Vimal Bhatia,IIT Indore,Electrical Engineering,422,313,0.009,1143,4,5,24,15
+distinct co-authors without >10-author papers,17,A. B. Kunnumakkara,IIT Guwahati,Biosciences and Bioengineering,161,317,0.099,1553,4,879,23,17
+distinct co-authors without >10-author papers,18,Rajesh Kumar,IIT Indore,Physics,236,302,0.068,119,4,305,26,18
+distinct co-authors without >10-author papers,19,Rajiv Prakash,IIT (BHU) Varanasi,School of Materials Science and Technology,196,278,0.005,132,4,509,31,19
+distinct co-authors without >10-author papers,20,Maryam Shojaei Baghini,IIT Bombay,Electrical Engineering,181,278,0.017,437,4,102,31,20
