@@ -138,6 +138,9 @@ except ImportError:   # Windows (IIIT team's machine): blocking msvcrt lock on b
         f.seek(0); msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
 
 
+ARXIV_GAP = float(os.environ.get("ARXIV_GAP", "5.0"))
+
+
 @contextlib.contextmanager
 def arxiv_gate(gap=3.5):
     """Machine-wide pacing for export.arxiv.org: one request in flight and >= `gap` s between request starts, across all
@@ -299,8 +302,15 @@ def process(p):
     if ARXIV and gt and len(gt[0]) > 1 and start is not None:
         global last_arxiv
         try:
-            with arxiv_lock, arxiv_gate():
-                r = get("https://export.arxiv.org/api/query", params={"search_query": f'au:"{" ".join(gt + [fam])}"', "max_results": 300}, timeout=120)
+            for _attempt in range(8):   # arXiv answers 429 when it throttles us: wait it out (minutes) instead of losing the person
+                try:
+                    with arxiv_lock, arxiv_gate(ARXIV_GAP):
+                        r = get("https://export.arxiv.org/api/query", params={"search_query": f'au:"{" ".join(gt + [fam])}"', "max_results": 300}, timeout=120, tries=3)
+                    break
+                except RuntimeError:
+                    if _attempt == 7:
+                        raise
+                    time.sleep(300)
             for e in ET.fromstring(r.text).findall("a:entry", NS):
                 y = int(e.find("a:published", NS).text[:4])
                 if not (YEAR_MIN <= y <= YEAR_MAX) or y < start or y > end:
