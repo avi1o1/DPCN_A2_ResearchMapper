@@ -1,0 +1,17 @@
+name,department,joining_year,kind,source_url,evidence,confidence
+Chandra M. R. Volla,Chemistry,2014,exact,https://www.chem.iitb.ac.in/facultyuserview/chandra-volla,"Assistant Professor, IIT Bombay (2014-2018)",medium
+Sajal Sen,Chemistry,2026,exact,https://www.chem.iitb.ac.in/facultyuserview/sajal-sen,"Professional Experience: Assistant Professor, IIT Bombay (May 2026 – present)",medium
+Satyadeep Waiba,Chemistry,2025,exact,https://www.chem.iitb.ac.in/facultyuserview/satyadeep-waiba,"Assistant Professor, IIT Bombay (November 2025- Present)",medium
+Srinivasan Ramakrishnan,Chemistry,2021,exact,https://www.chem.iitb.ac.in/facultyuserview/srinivasan-ramakrishnan,"Assistant Professor, IIT Bombay (2021-2026)",medium
+Venkateswarlu Yarlagadda,Chemistry,2022,exact,https://www.chem.iitb.ac.in/facultyuserview/venkateswarlu-yarlagadda,"Assistant Professor, IIT Bombay (June 2022 – present)",medium
+Prakash Nanthagopalan,Civil Engineering,2024,exact,https://www.civil.iitb.ac.in/faculty/details/prakash-nanthagopalan,"Professor, Indian Institute of Technology Bombay, Since February 2024.",medium
+Ashutosh Gupta,Computer Science and Engineering,2018,exact,https://www.cse.iitb.ac.in/~akg,"I am a faculty member in the department of computer science and engineering at IIT Bombay , since early 2018.",high
+Deepak B. Phatak,Computer Science and Engineering,1971,exact,https://www.cse.iitb.ac.in/~dbp,He has been serving with IIT Bombay since 1971.,high
+Supratim Biswas,Computer Science and Engineering,2014,exact,https://www.cse.iitb.ac.in/~sb,"Member Board of Governors (BOG) , IIT Bombay, since January 2014",medium
+Opinder Kaur,Economics,2026,exact,https://www.economics.iitb.ac.in/opinder.html,"2026- Present : Assistant Professor, Department of Economics, IIT Bombay, India",medium
+Dayadeep Monder,Energy Science and Engineering,2014,exact,https://www.ese.iitb.ac.in/faculty/dayadeep-monder,Assistant Professor Indian Institute of Technology Bombay 2014–2018,medium
+Arman Ovla,IDC School of Design,2026,exact,https://www.idc.iitb.ac.in/arman-ovla,"Assistant Professor, IDC School of Design, IIT Bombay, India (2026–Present)",medium
+Hrishikesh Gajanan Danawe,Mechanical Engineering,2025,exact,https://www.me.iitb.ac.in/faculty/ hgdanawe,"Assistant Professor, Mechanical Engineering, IIT Bombay, India (Dec 2025-present)",medium
+Neeraj Kumbhakarna,Mechanical Engineering,2014,exact,https://www.me.iitb.ac.in/faculty/prof-neeraj-kumbhakarna,"Assistant Professor, Department of Mechanical Engineering, IIT Bombay (December 2014 - Present)",medium
+Priyanshu Agarwal,Mechanical Engineering,2025,exact,https://www.me.iitb.ac.in/faculty/pagarwal,"Assistant Professor, Mechanical Engineering, IIT Bombay (2025-present)",medium
+Shyamprasad Karagadde,Mechanical Engineering,2019,upper_bound,https://www.me.iitb.ac.in/faculty/prof-shyamprasad-karagadde,"Associate Professor, Indian Institute of Technology Bombay, India Aug 2019 - Present",low

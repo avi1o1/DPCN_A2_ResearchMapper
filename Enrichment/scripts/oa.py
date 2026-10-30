@@ -41,6 +41,7 @@ def api_key():
 INST = {
     "iit_kharagpur": {"oa": "I145894827", "ror": "https://ror.org/03w5sq511", "name": "IIT Kharagpur"},
     "iit_roorkee": {"oa": "I154851008", "ror": "https://ror.org/00582g326", "name": "IIT Roorkee"},
+    "iit_ropar": {"oa": "I119241673", "ror": "https://ror.org/02qkhhn56", "name": "IIT Ropar"},   # id read from cached OpenAlex records; ROR from institutes.py
 # IIT v2 institutes (WebScrape/v2): OpenAlex ids looked up 2026-10-30 via /institutions?filter=ror:...; ROR from WebScrape/scripts/institutes.py
     "iit_bhilai": {"oa": "I4210121466", "ror": "https://ror.org/02sscsx71", "name": "IIT Bhilai"},
     "iit_bhu": {"oa": "I56404289", "ror": "https://ror.org/01kh5gc44", "name": "IIT (BHU) Varanasi"},

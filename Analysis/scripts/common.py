@@ -38,6 +38,7 @@ ENRICH = os.path.join(A2, "Enrichment")
 REGISTRY = {
     "iit_kharagpur": ("IIT Kharagpur", "Indian Institute of Technology Kharagpur", "I145894827", "kharagpur", "#2a78d6"),
     "iit_roorkee": ("IIT Roorkee", "Indian Institute of Technology Roorkee", "I154851008", "roorkee", "#eb6834"),
+    "iit_ropar": ("IIT Ropar", "Indian Institute of Technology Ropar", "I119241673", "ropar", "#8a6bbf"),
     "iit_bombay": ("IIT Bombay", "Indian Institute of Technology Bombay", "I162827531", "bombay", "#1baf7a"),
     "iit_madras": ("IIT Madras", "Indian Institute of Technology Madras", "I24676775", "madras", "#e34948"),
     "iit_kanpur": ("IIT Kanpur", "Indian Institute of Technology Kanpur", "I94234084", "kanpur", "#6250d6"),
