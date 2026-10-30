@@ -1,19 +1,19 @@
 """Shared inputs for the second-round faculty analyses (stats_coauthor_citation.py, stats_bowtie.py,
-stats_cross_dept.py, stats_dept_areas.py): one table of unique papers for both IITs, the faculty table, and the
+stats_cross_dept.py, stats_dept_areas.py): one table of unique papers for all institutes of the run, the faculty table, and the
 faculty -> faculty citation layer.
 
 Papers: the analysis set of both institutes (common.load_records), one entry per paper_key. 8 DOIs occur twice in the
 IIT Kharagpur set (online-first year and issue year); as in results/faculty.csv the later-year record is kept (checked on
 Crossref, see Dashboard/site/build_profiles.py) and the faculty of both copies are credited. A paper in both IITs' sets
 is one entry with both institutes.
-Faculty: the 1,410 people of results/faculty.csv (institution, department, roster_id). Department = faculty.csv's.
+Faculty: the people of results/faculty.csv (1,410 for Kharagpur + Roorkee) (institution, department, roster_id). Department = faculty.csv's.
 Citation layer: the 'internal' edges of citation_network.csv (a paper of our set citing another paper of our set,
 from OpenAlex reference lists). Faculty a cites faculty b when a is on the citing paper and b on the cited paper, a != b.
   'pure' citation: also a is not an author of the cited paper and b is not an author of the citing paper (otherwise a
   is partly citing their own paper). Used by default, so co-authors are not counted as citing each other just because
   one of them cites a paper they wrote together."""
 import os, json, collections as C
-from common import INSTS, DATA, RES, CACHE, load_records, paper_key, cites, n_authors, read_csv
+from common import INSTS, DATA, RES, CACHE, load_records, paper_key, cites, n_authors, read_csv, iter_csv
 
 
 def faculty_table():
@@ -68,7 +68,7 @@ def citation_edges(P):
         return by_oa.get(oa) or by_doi.get((doi or "").lower())
 
     E = set()
-    for e in read_csv(os.path.join(DATA, "citation_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "citation_network.csv")):
         if e["edge_type"] != "internal":
             continue
         u, v = find(e["source_openalex"], e["source_doi"]), find(e["target_openalex"], e["target_doi"])

@@ -13,7 +13,7 @@ offline (only missing ids are fetched).
 Cost: one credit per 100 ids (about 600 credits in total). Key: OPENALEX_API_KEY or OPENALEX_KEY_FILE (see oa.py).
 usage: python fetch_openalex_extra.py"""
 import os, json, glob, collections as C
-from common import INSTS, CACHE, ENRICH, load_records
+from common import INSTS, CACHE, ENRICH, ENRICH_CACHE, OFFLINE, load_records
 from oa import get, credits
 from faculty import compatible
 
@@ -61,7 +61,7 @@ def paper_sources(wanted):
     out = load(F_PSRC)
     if wanted <= set(out):
         return out
-    for fn in sorted(glob.glob(os.path.join(ENRICH, "cache", "a*_works_*.jsonl"))):
+    for fn in sorted(glob.glob(os.path.join(ENRICH_CACHE, "a*_works_*.jsonl"))):
         with open(fn, encoding="utf-8") as fh:
             for line in fh:
                 tag = '"id": "https://openalex.org/'
@@ -91,6 +91,8 @@ def faculty_author_ids(recs):
 
 
 def main():
+    if OFFLINE:
+        raise SystemExit("ANALYSIS_OFFLINE is set: not calling OpenAlex (unset it, with OPENALEX_API_KEY or OPENALEX_KEY_FILE, to fetch)")
     recs = [r for i in INSTS for r in load_records(i)]
     works = {r["openalex_id"] for r in recs if r.get("openalex_id")}
     print(len(recs), "analysis records,", len(works), "with an OpenAlex id")

@@ -12,7 +12,7 @@ Outputs (results/):
   q1_if_author_grid.csv          the grid, per institute
 usage: python stats_if_authors.py"""
 import collections as C
-from common import INSTS, load_records, cites, write_csv, impact_factor, source_of, n_authors
+from common import INSTS, load_records, cites, write_csv, impact_factor, source_of, n_authors, oa_have, note_skip
 from stats_journals import groups_of
 
 LIMIT = 10
@@ -41,6 +41,10 @@ def row_of(name, r):
 
 def main():
     recs = {name: [r for r in load_records(inst) if r["type"] == "journal"] for inst, name in INSTS.items()}
+    if not oa_have("sources", "paper_source"):
+        note_skip("stats_if_authors.py", "Nature journals with IF, IF > 10 papers, Q1 / IF grid rows that use IF (nature_journals_if.csv, if10_small_team_*.csv, q1_if_author_grid.csv)",
+                  "IF (OpenAlex) and the Nature-journal publisher test come from the OpenAlex source cache, which does not exist for these institutes (PRL list and the Q1 row are filled)",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_sources.json, oa_paper_source.json")
 
     # ------------------------------------------------ PRL
     prl = [row_of(name, r) for name, rs in recs.items() for r in rs if "PRL" in groups_of(r)]

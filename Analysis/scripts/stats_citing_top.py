@@ -7,11 +7,12 @@ same normalised title are counted once, keeping the most-cited record.
 Online step: one OpenAlex request per 100 citing works (~1,410 requests). Counts are cached in
 ../cache/citing_counts.json and details of the top papers in ../cache/citing_details.json, so a re-run is offline.
 An OpenAlex key (OPENALEX_API_KEY) is used when set; the works endpoint also answers without one.
+Offline (ANALYSIS_OFFLINE=1): nothing is requested; without the cache the script skips and says so.
 Output (results/): top_citing_papers.csv
 usage: python stats_citing_top.py"""
 import os, re, json, time, collections as C
 import requests
-from common import INSTS, DATA, CACHE, read_csv, write_csv
+from common import INSTS, DATA, CACHE, iter_csv, write_csv, OFFLINE, note_skip
 
 COUNTS = os.path.join(CACHE, "citing_counts.json")
 DETAILS = os.path.join(CACHE, "citing_details.json")
@@ -43,7 +44,9 @@ def load(path):
 
 
 def fill(cache, path, ids, select, row):
-    todo = sorted(set(ids) - set(cache))
+    todo = [] if OFFLINE else sorted(set(ids) - set(cache))
+    if not todo:
+        return cache
     try:
         for n in range(0, len(todo), 100):
             chunk = todo[n:n + 100]
@@ -59,8 +62,13 @@ def fill(cache, path, ids, select, row):
 
 
 def main():
+    if OFFLINE and not os.path.exists(COUNTS):
+        note_skip("stats_citing_top.py", "top citing papers (top_citing_papers.csv)",
+                  "needs the worldwide citation counts of ~1,400 citing works per institute, fetched from OpenAlex; live calls are off",
+                  "OpenAlex requests (no key needed, ~1,400 per institute): citing_counts.json, citing_details.json")
+        return
     cited = C.defaultdict(lambda: C.defaultdict(set))   # institute -> citing W-id -> our W-ids it cites
-    for e in read_csv(os.path.join(DATA, "citation_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "citation_network.csv")):
         s, t = e["source_openalex"], e["target_openalex"]
         if not s or not t:
             continue
@@ -94,7 +102,7 @@ def main():
                 tops[inst].append(w)
     rows = []
     for inst in INSTS.values():
-        for rank, w in enumerate(tops[inst], 1):
+        for rank, w in enumerate(tops.get(inst, []), 1):
             d = details.get(w) or {}
             rows.append({"scope": inst, "rank": rank, "title": d.get("title"), "journal": d.get("journal"),
                          "year": d.get("year"), "citations": counts[w], "doi": d.get("doi"),

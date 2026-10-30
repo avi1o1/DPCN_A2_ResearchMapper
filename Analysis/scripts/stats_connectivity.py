@@ -4,25 +4,29 @@ Partners and counts come from out/indian_connections.csv and results/citation_fl
   cluster        the course PPT's institution clusters (Old & large IITs, Newer IITs, IIITs, NITs, Central
                  Universities, IISc/TIFR/IISERs, Premier science institutes, CSIR labs, DAE institutes), matched by
                  institution name; anything else = 'Not a course cluster'. Our cluster: Old & large IITs.
-  cross_cluster  partner's cluster differs from ours
+  cross_cluster  partner's cluster differs from the institute's own cluster (the cluster its OpenAlex name falls in:
+                 'Old & large IITs' for Kharagpur and Roorkee)
   Jaccard        topic profile of an institution = its top-N OpenAlex subfields by number of 2016-2026 works, in
                  the same field scope as our dataset (Enrichment/scripts/scope.py SCOPE_MODE: 'all' = every
                  domain; 'sci_eng' = Physical + Life Sciences only); one OpenAlex group_by request per institution
                  (1 credit), the same method for our two IITs and for every partner. J = |A n B| / |A u B|. N = 20 reported; 10 and 30 in the CSV.
                  Partners: the top TOP_PARTNERS per institute by shared papers.
 Online: needs OpenAlex (set OPENALEX_API_KEY or OPENALEX_KEY_FILE); results cached per scope in cache/topic_profiles_<SCOPE_MODE>.json.
+Offline (ANALYSIS_OFFLINE=1): profiles missing from that cache are not fetched; when one of the institutes' own profiles is
+missing the Jaccard part is skipped (partners.csv and cluster_summary.csv are written without the Jaccard column).
 Outputs (results/): partners.csv, cluster_summary.csv, jaccard_topics.csv
 Figures: top_partners.png, jaccard_vs_shared.png
 usage: python stats_connectivity.py"""
 import os, re, json, collections as C
-from common import INSTS, DATA, RES, CACHE, read_csv, write_csv, style, save, COLOR, TEXT2, MUTED, plt, short_name
+from common import (INSTS, DATA, RES, CACHE, read_csv, write_csv, style, save, COLOR, TEXT2, MUTED, plt, short_name, OA_ID,
+                    OA_NAME, OFFLINE, note_skip, panels)
 from scope import SCOPE_MODE, OPENALEX_DOMAIN_IDS                  # Enrichment/scripts/scope.py
 
 PROFILE_CACHE = os.path.join(CACHE, f"topic_profiles_{SCOPE_MODE}.json")
 
 TOP_PARTNERS = 25
 NS = (10, 20, 30)
-OURS = {"IIT Kharagpur": "I145894827", "IIT Roorkee": "I154851008"}
+OURS = {name: OA_ID[name] for name in INSTS.values()}
 CLUSTERS = [  # (cluster, name pattern) - course PPT slides 3-9
     ("Old & large IITs", r"Indian Institute of Technology (Bombay|Madras|Delhi|Kanpur|Kharagpur|Roorkee|Guwahati|Hyderabad)\b"),
     ("Newer IITs", r"Indian Institute of Technology (Gandhinagar|Jodhpur|Patna|\(BHU\)|BHU|Indore|Mandi|Bhubaneswar|Tirupati|"
@@ -54,6 +58,8 @@ def cluster(name):
 def topic_profile(oa_id, cache):
     if oa_id in cache:
         return cache[oa_id]
+    if OFFLINE:
+        return None
     from oa import get                                            # Enrichment/scripts/oa.py
     dom = OPENALEX_DOMAIN_IDS[SCOPE_MODE]
     j = get("/works", {"filter": f"authorships.institutions.lineage:{oa_id},publication_year:2016-2026"
@@ -70,7 +76,7 @@ def jaccard(a, b):
 
 def main():
     style()
-    conns = read_csv(os.path.join(DATA, "indian_connections.csv"))
+    conns = [r for r in read_csv(os.path.join(DATA, "indian_connections.csv")) if r["your_inst"] in INSTS.values()]
     flows = {(r["institution"], r["partner"]): r for r in read_csv(os.path.join(RES, "citation_flow_partners.csv"))}
     cache = json.load(open(PROFILE_CACHE, encoding="utf8")) if os.path.exists(PROFILE_CACHE) else {}
 
@@ -78,11 +84,12 @@ def main():
     for r in conns:
         f = flows.get((r["your_inst"], r["partner_inst"]), {})
         cl = cluster(r["partner_inst"])
+        own_cl = cluster(OA_NAME[r["your_inst"]])
         prow.append({"institution": r["your_inst"], "partner": r["partner_inst"], "partner_openalex": r["partner_openalex"],
                      "shared_papers": int(r["shared_papers"]), "citations_of_shared_papers": int(r["total_citations"]),
                      "citations_from_partner": int(f.get("citations_from_partner") or 0),
                      "citations_to_partner": int(f.get("citations_to_partner") or 0),
-                     "cluster": cl, "cross_cluster": cl != "Old & large IITs"})
+                     "cluster": cl, "cross_cluster": cl != own_cl})
     prow.sort(key=lambda x: (x["institution"], -x["shared_papers"]))
     rank = C.Counter()
     for p in prow:
@@ -92,15 +99,21 @@ def main():
     # Jaccard topic similarity
     profiles = {name: topic_profile(oid, cache) for name, oid in OURS.items()}
     jrows = []
-    for name in INSTS.values():
+    if any(v is None for v in profiles.values()):
+        note_skip("stats_connectivity.py", "Jaccard topic similarity (jaccard_topics.csv, partners.csv column, jaccard_vs_shared.png)",
+                  "OpenAlex topic profiles of the institutes are not cached and live OpenAlex calls are off",
+                  "OpenAlex credits: topic_profiles_<scope>.json (1 credit per institution, ~25 partners each)")
+    for name in INSTS.values() if all(v is not None for v in profiles.values()) else ():
         top = [p for p in prow if p["institution"] == name and p["shared_papers"] > 0][:TOP_PARTNERS]
         for other in INSTS.values():
             if other != name and not any(p["partner_openalex"] == OURS[other] for p in top):
-                top.append({"partner": "Indian Institute of Technology " + other.split()[-1], "partner_openalex": OURS[other],
+                top.append({"partner": OA_NAME[other], "partner_openalex": OURS[other],
                             "shared_papers": next((p["shared_papers"] for p in prow if p["institution"] == name and p["partner_openalex"] == OURS[other]), 0),
-                            "cluster": "Old & large IITs"})
+                            "cluster": cluster(OA_NAME[other])})
         for p in top:
             prof = topic_profile(p["partner_openalex"], cache)
+            if prof is None:                                  # offline and not cached: leave this partner out
+                continue
             row = {"institution": name, "partner": p["partner"], "shared_papers": p["shared_papers"], "cluster": p["cluster"],
                    "partner_works_in_scope": sum(c for _, c in prof)}
             for n in NS:
@@ -109,7 +122,8 @@ def main():
                 row[f"jaccard_top{n}"] = round(jaccard(a, b), 3)
             row["shared_subfields_top20"] = "; ".join(sorted({s for s, _ in profiles[name][:20]} & {s for s, _ in prof[:20]}))
             jrows.append(row)
-    write_csv("jaccard_topics.csv", jrows)
+    if jrows:
+        write_csv("jaccard_topics.csv", jrows)
     jac = {(r["institution"], r["partner"]): r["jaccard_top20"] for r in jrows}
     for p in prow:
         p["jaccard_top20"] = jac.get((p["institution"], p["partner"]), "")
@@ -125,12 +139,12 @@ def main():
                 b["partners"] += 1; b["shared_papers"] += p["shared_papers"]
                 b["citations_from_partner"] += p["citations_from_partner"]; b["citations_to_partner"] += p["citations_to_partner"]
         for cl, b in sorted(by.items(), key=lambda x: -x[1]["shared_papers"]):
-            crow.append({"institution": name, "cluster": cl, "cross_cluster": cl != "Old & large IITs", **b})
+            crow.append({"institution": name, "cluster": cl, "cross_cluster": cl != cluster(OA_NAME[name]), **b})
     write_csv("cluster_summary.csv", crow, ["institution", "cluster", "cross_cluster", "partners", "shared_papers",
                                             "citations_from_partner", "citations_to_partner"])
 
     # figures
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.6))
+    fig, axes = panels(len(INSTS), (11, 4.6))
     for ax, name in zip(axes, INSTS.values()):
         top = [p for p in prow if p["institution"] == name][:12]
         ax.barh(range(len(top)), [p["shared_papers"] for p in top], color=COLOR[name], height=0.6)
@@ -140,14 +154,14 @@ def main():
         for i, p in enumerate(top):
             ax.text(p["shared_papers"], i, f" {p['shared_papers']}", va="center", fontsize=8, color=TEXT2)
         ax.set_title(f"{name}: co-authored papers per partner", fontsize=10)
-        ax.set_xlabel("shared papers (· = same cluster: old & large IITs)")
+        ax.set_xlabel("shared papers (· = same cluster: old & large IITs)" if len(INSTS) == 2 else "shared papers (· = same cluster as the institute)")
         ax.margins(x=0.12)
     fig.suptitle("Top 12 Indian partner institutions by co-authored papers", x=0.01, y=1.03, ha="left", fontweight="bold", fontsize=12)
     fig.tight_layout()
     save(fig, "top_partners.png")
 
-    fig, ax = plt.subplots(figsize=(7.5, 4.8))
-    for name in INSTS.values():
+    fig, ax = plt.subplots(figsize=(7.5, 4.8 if len(INSTS) <= 2 else 7))
+    for ix, name in enumerate(INSTS.values()):
         rs = [r for r in jrows if r["institution"] == name]
         ax.scatter([r["shared_papers"] for r in rs], [r["jaccard_top20"] for r in rs], color=COLOR[name], s=34,
                    edgecolors="#fcfcfb", linewidths=1.5, label=name, zorder=3)
@@ -157,16 +171,19 @@ def main():
                 picks.append(r)
         for k, r in enumerate(picks):
             ax.annotate(short_name(r["partner"], 32), (r["shared_papers"], r["jaccard_top20"]),
-                        xytext=(6, 6 if (k + (name == "IIT Roorkee")) % 2 == 0 else -11), textcoords="offset points",
+                        xytext=(6, 6 if (k + ix) % 2 == 0 else -11), textcoords="offset points",
                         fontsize=7.5, color=TEXT2)
     ax.set_xlabel("shared papers")
     ax.set_ylabel("Jaccard similarity of top-20 research subfields")
     ax.set_ylim(0, 1)
-    ax.legend(loc="upper right")
+    ax.legend(loc="upper right", ncol=1 if len(INSTS) <= 4 else 2, fontsize=9 if len(INSTS) <= 4 else 6)
     ax.set_title("Do we collaborate most with institutions that research the same things?")
-    save(fig, "jaccard_vs_shared.png")
+    if jrows:
+        save(fig, "jaccard_vs_shared.png")
+    else:
+        plt.close(fig)
 
-    for name in INSTS.values():
+    for name in INSTS.values() if jrows else ():
         rs = sorted([r for r in jrows if r["institution"] == name], key=lambda r: -r["jaccard_top20"])
         print(name, "most similar:", [(short_name(r["partner"], 24), r["jaccard_top20"]) for r in rs[:3]],
               "| least:", [(short_name(r["partner"], 24), r["jaccard_top20"]) for r in rs[-3:]])

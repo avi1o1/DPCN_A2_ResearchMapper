@@ -27,3 +27,7 @@ Enrichment/out/group3_data_all.csv
 
 # explorer check screenshots (check_explorer.py)
 Dashboard/site/screens/
+
+# Analysis: pickled records (a speed-up, rebuilt on demand) and per-run temporary files
+Analysis/.rec_cache/
+Analysis/results*/.mem

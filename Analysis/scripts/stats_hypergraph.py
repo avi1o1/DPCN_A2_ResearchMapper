@@ -24,7 +24,7 @@ import scipy.sparse as sp
 from scipy.sparse.linalg import svds
 from scipy.special import logsumexp
 from scipy.stats import spearmanr, rankdata
-from common import DATA, RES, read_csv, write_csv
+from common import DATA, RES, read_csv, iter_csv, write_csv
 
 LARGE = 10
 ALPHA = 10                      # max model exponent (the paper's choice)
@@ -42,7 +42,7 @@ def load_hypergraph(split_names=False):
     split_names=True treats a name-keyed author as a different person on every paper (robustness check: a short name
     like 'R. Dutta' could otherwise join different people into one node)."""
     members, meta = C.defaultdict(set), {}
-    for e in read_csv(os.path.join(DATA, "authorship_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "authorship_network.csv")):
         p = e["paper_doi"]
         if not p:
             continue
@@ -153,9 +153,13 @@ def main():
     pap = np.asarray(B.sum(axis=1)).ravel()
     P = (B > 0).astype(float)
     big_share = np.asarray((B @ sp.diags(big.astype(float))).sum(axis=1)).ravel() / np.maximum(pap, 1)
-    coauth = np.asarray(((P @ P.T) > 0).sum(axis=1)).ravel() - 1          # distinct co-authors (pairwise view)
+    # distinct co-authors (pairwise view), only for the faculty rows: the full author x author product of a large network
+    # (papers with hundreds of authors) does not fit in memory, and nothing else reads the other rows
+    coauth = np.zeros(len(authors), dtype=np.int64)
+    coauth[fidx] = np.asarray(((P[fidx] @ P.T) > 0).sum(axis=1)).ravel() - 1
     Ps = (Bs > 0).astype(float)
-    coauth_s = np.asarray(((Ps @ Ps.T) > 0).sum(axis=1)).ravel() - (np.asarray(Ps.sum(axis=1)).ravel() > 0)
+    coauth_s = np.zeros(len(authors), dtype=np.int64)
+    coauth_s[fidx] = np.asarray(((Ps[fidx] @ Ps.T) > 0).sum(axis=1)).ravel() - (np.asarray(Ps[fidx].sum(axis=1)).ravel() > 0)
     frows = []
     fscore = {k: x[fidx] for k, (x, _) in scores.items()}
     fscore["distinct co-authors (pairwise)"] = coauth[fidx].astype(float)

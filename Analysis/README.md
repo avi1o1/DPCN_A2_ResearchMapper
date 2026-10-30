@@ -6,7 +6,31 @@ Reads the enriched data and network files in `../Enrichment/out/` (never modifie
 **Analysis set:** papers whose IIT affiliation is confirmed on the paper, in science and engineering only
 (OpenAlex domain Physical or Life Sciences; since 2026-10-12, after the professor's review — `SCOPE_MODE = "sci_eng"` in
 `../Enrichment/scripts/scope.py`). Faculty of humanities, management, law, education and medical units are left out
-(`FACULTY_DEPT_OUT` there). The same papers as `group3_data.csv`. A joint Kharagpur–Roorkee paper counts for both institutes.
+(`FACULTY_DEPT_OUT` there). The same papers as `group3_data.csv`. A joint paper counts for every institute of the run
+(Kharagpur–Roorkee by default).
+
+## Other institutes: the 14 newer IITs (`results_v2/`)
+
+The scripts take the institutes, folders and online/offline mode from environment variables (list and defaults in the
+docstring of `scripts/common.py`; the defaults are the Kharagpur/Roorkee run above and reproduce `results/` file for
+file). The institute registry (display name, OpenAlex name and id, colour) is `REGISTRY` in `common.py`; `ANALYSIS_INSTS`
+takes any subset, `v2` is the preset for Bombay, Madras, Kanpur, Goa, Tirupati, Patna, Palakkad, Guwahati, Hyderabad,
+Bhubaneswar, (BHU) Varanasi, Gandhinagar, Indore, Mandi.
+
+```
+cd Analysis/scripts
+ANALYSIS_PROFILE=v2 ANALYSIS_IN_DIR=/path/to/Enrichment/out_v2 ANALYSIS_KEEP_GOING=1 sh run_all.sh
+python ../../Dashboard/site/v2/build_data_v2.py     # then open Dashboard/site/v2/index.html
+```
+
+`ANALYSIS_PROFILE=v2` writes `results_v2/`, `figures_v2/`, reads and writes OpenAlex extras in `cache_v2/` and is offline
+(never calls OpenAlex). Steps that need OpenAlex data that is not cached are skipped, never filled with zeros, and listed in
+`results_v2/skipped_panels.csv` with what they need; `results_v2/run_times.csv` has the wall time and peak memory of every
+script. The run is repeatable: when the enrichment files are refreshed, run the same two commands again (every script
+re-reads its inputs and overwrites its outputs; `PYTHONHASHSEED` is fixed to 0 so ties in rankings do not move between runs).
+With more than two institutes the "cluster" of the network scripts is all of them together (`Cluster (all 14 IITs)`), every
+per-institute table has one block per institute, and the two-campus tests of `stats_matrix_centrality.py` use the pair of
+institutes with the most direct co-author ties.
 
 | Script | Brief section | Tables (`results/`) | Charts (`figures/`) |
 |---|---|---|---|

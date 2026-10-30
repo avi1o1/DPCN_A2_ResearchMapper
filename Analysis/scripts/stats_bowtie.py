@@ -26,7 +26,7 @@ import networkx as nx
 import scipy.sparse as sp
 from scipy.sparse.csgraph import connected_components, breadth_first_order
 from scipy.stats import spearmanr
-from common import INSTS, write_csv, style, save, COLOR, plt
+from common import INSTS, write_csv, style, save, COLOR, plt, N_INST
 from faculty_layers import faculty_table, paper_table, citation_edges, faculty_citations
 
 RANDOM_GRAPHS = 10
@@ -106,9 +106,9 @@ def main():
         active = sum(1 for v in fac if G.degree(v) > 0)
         summ += [{"definition": defn, "metric": "faculty", "value": len(fac)},
                  {"definition": defn, "metric": "faculty with at least one citation link (either direction)", "value": active},
-                 {"definition": defn, "metric": "citing pairs between the two IITs",
+                 {"definition": defn, "metric": "citing pairs between the two IITs" if N_INST == 2 else f"citing pairs between institutes (of {N_INST})",
                   "value": sum(1 for a, b in G.edges if F[a]["institution"] != F[b]["institution"])},
-                 {"definition": defn, "metric": "CORE members citing or cited by the other IIT within the CORE",
+                 {"definition": defn, "metric": "CORE members citing or cited by the other IIT within the CORE" if N_INST == 2 else "CORE members citing or cited by another institute's faculty within the CORE",
                   "value": len({x for a, b in G.subgraph(core).edges if F[a]["institution"] != F[b]["institution"] for x in (a, b)})},
                  {"definition": defn, "metric": "citing pairs a -> b", "value": G.number_of_edges()}]
         summ += [{"definition": defn, "metric": f"{p} (faculty)", "value": cnt[p]} for p in PARTS]

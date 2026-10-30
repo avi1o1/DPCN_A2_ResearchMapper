@@ -1,6 +1,6 @@
 """Authorship network statistics (brief section 6b, 7b) with a null-model comparison (course: ER / configuration models).
-Network analysed (within our institutes): nodes = faculty of IIT Kharagpur and IIT Roorkee with >= 1 analysis-set
-paper; edge = the two co-authored >= 1 paper; weight = number of joint papers (from authorship_network.csv rows where
+Network analysed (within our institutes): nodes = faculty of the institutes of the run (IIT Kharagpur and IIT Roorkee by
+default; ANALYSIS_INSTS in common.py) with >= 1 analysis-set paper; edge = the two co-authored >= 1 paper; weight = number of joint papers (from authorship_network.csv rows where
 both ends are faculty). Faculty without faculty co-authors are isolated nodes.
   degree centrality   networkx degree_centrality (distinct faculty co-authors / (n-1)); also weighted degree
   betweenness         networkx betweenness_centrality, unweighted, normalised
@@ -20,7 +20,8 @@ import os, random, statistics as st, collections as C
 import numpy as np
 import networkx as nx
 from sklearn.metrics import adjusted_rand_score
-from common import (INSTS, DATA, load_records, read_csv, write_csv, style, save, COLOR, TEXT2, MUTED, GRID, plt, short_name)
+from common import (INSTS, DATA, load_records, read_csv, iter_csv, write_csv, style, save, COLOR, TEXT2, MUTED, GRID, plt,
+                    short_name, OA_NAME, PAIR_LABEL)
 
 SEEDS = list(range(10))
 REPORT_SEED = 42
@@ -58,7 +59,7 @@ def faculty_graph():
     for rid, d in info.items():
         G.add_node(rid, **d)
     pairs, first = C.defaultdict(set), {}
-    for e in read_csv(os.path.join(DATA, "authorship_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "authorship_network.csv")):
         if e["a_is_faculty"] == "TRUE" and e["b_is_faculty"] == "TRUE" and e["author_a_id"] in info and e["author_b_id"] in info:
             p = frozenset((e["author_a_id"], e["author_b_id"]))
             pairs[p].add(e["paper_doi"] or e["author_a_id"] + e["year"])
@@ -113,7 +114,7 @@ def main():
         hub = max(c, key=lambda v: G.degree(v))
         internal = G.subgraph(c).number_of_edges()
         comrows.append({"community": i, "faculty": len(c), "internal_edges": internal,
-                        "IIT Kharagpur": insts["IIT Kharagpur"], "IIT Roorkee": insts["IIT Roorkee"],
+                        **{name: insts[name] for name in INSTS.values()},
                         "top_department": depts.most_common(1)[0][0],
                         "top_department_share": round(depts.most_common(1)[0][1] / len(c), 3),
                         "departments": len(depts), "most_connected_member": info[hub]["name"]})
@@ -142,14 +143,13 @@ def main():
     # ------------------------------------------------ bridging faculty (Indian partner institutions)
     indian = {r["partner_inst"] for r in read_csv(os.path.join(DATA, "indian_connections.csv"))}
     partners = C.defaultdict(set)
-    for e in read_csv(os.path.join(DATA, "authorship_network.csv")):
+    own_oa = {OA_NAME[n] for n in INSTS.values()}                 # the institutes of the run, under their OpenAlex names
+    for e in iter_csv(os.path.join(DATA, "authorship_network.csv")):
         for me, other_inst, other_fac in (("author_a_id", "inst_b", "b_is_faculty"), ("author_b_id", "inst_a", "a_is_faculty")):
             fac_side = "a_is_faculty" if me == "author_a_id" else "b_is_faculty"
             if e[fac_side] == "TRUE" and e["cross_inst"] == "TRUE" and e[me] in info:
                 for x in e[other_inst].split(";"):
-                    if x in indian and x not in ("Indian Institute of Technology Kharagpur", "Indian Institute of Technology Roorkee") \
-                            or (x in ("Indian Institute of Technology Kharagpur", "Indian Institute of Technology Roorkee")
-                                and not x.endswith(info[e[me]]["institution"].split()[-1])):
+                    if x in indian and x not in own_oa or (x in own_oa and x != OA_NAME[info[e[me]]["institution"]]):
                         partners[e[me]].add(x)
     brow = []
     for name in INSTS.values():
@@ -162,7 +162,7 @@ def main():
     # ------------------------------------------------ summary
     summ = [{"metric": k, "value": v} for k, v in [
         ("faculty (nodes)", n), ("faculty pairs with >= 1 joint paper (edges)", m),
-        ("Kharagpur-Roorkee faculty pairs", len(cross)), ("isolated faculty (no faculty co-author)", sum(1 for v in G if G.degree(v) == 0)),
+        (f"{PAIR_LABEL} faculty pairs", len(cross)), ("isolated faculty (no faculty co-author)", sum(1 for v in G if G.degree(v) == 0)),
         ("mean faculty co-authors", round(2 * m / n, 2)), ("density", f"{nx.density(G):.4f}"),
         ("Louvain communities (seed 42)", len(comms)), ("communities with >= 5 faculty", len(comrows)),
         ("modularity Q (seed 42, weighted)", round(Q, 4)), ("mean ARI between Louvain seeds", round(st.mean(ari), 4))]]

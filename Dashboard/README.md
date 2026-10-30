@@ -19,6 +19,23 @@ Built in `build_data.py` (`D.layers`) from `stats_coauthor_citation.py`, `stats_
 Checked in headless Edge: light and dark, 400 px phone width without sideways scroll, no console errors, every shown
 number equal to the result CSVs.
 
+## Draft for the 14 newer IITs: `site/v2/` (30 Oct 2026)
+
+A separate page, `site/v2/index.html`, with its data `site/v2/data_v2.js` (about 1 MB, aggregates only), for IIT Bombay,
+Madras, Kanpur, Goa, Tirupati, Patna, Palakkad, Guwahati, Hyderabad, Bhubaneswar, (BHU) Varanasi, Gandhinagar, Indore and
+Mandi. The existing site is untouched. Pick an institute (or "All 14" for the overview table, papers-per-year lines and
+the shared-paper heat map), optionally a second one to compare: papers per year and type, faculty counts and h-index
+summary / histogram / top faculty / departments, journal quartile share, CORE ranks (mix, ranked share by year, top
+venues), most-cited papers, partner institutions and faculty collaborators, the citation-network summary (edges, in-degree,
+self-citation share, Indian in/out flow by year, PageRank leaders, faculty network), research areas, and a list of the
+panels that could not be computed yet and what they need.
+
+Rebuild: `ANALYSIS_PROFILE=v2 ANALYSIS_IN_DIR=<Enrichment/out_v2> sh Analysis/scripts/run_all.sh`, then
+`python Dashboard/site/v2/build_data_v2.py` (reads `Analysis/results_v2/`; `DASH_RES`, `DASH_ROSTERS`, `DASH_OUT` override the
+folders). The institutes come from the tables, so a refreshed run needs no edit. Charts need internet (ECharts 5.5.0 from
+cdnjs). Data status: pre-A2 enrichment output; quartiles wait for the Scimago tables; the `fix-categorisation` rules for
+type and CORE are not applied to this data.
+
 ## Status (11 Oct 2026): a working dashboard exists in `site/`
 
 A first full version is built as a **static website** (the "no server" option in section 3), following the design

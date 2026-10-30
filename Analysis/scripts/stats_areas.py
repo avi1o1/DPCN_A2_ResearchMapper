@@ -10,7 +10,7 @@ Figure (figures/): env_science_subfields.png
 usage: python stats_areas.py"""
 import os, collections as C
 import numpy as np
-from common import INSTS, RES, load_records, paper_key, read_csv, write_csv, style, save, COLOR, plt
+from common import INSTS, RES, load_records, paper_key, read_csv, write_csv, style, save, COLOR, plt, bar_layout
 
 ENV = "Environmental Science"
 
@@ -56,16 +56,17 @@ def main():
         if e["by"] == "subfield":
             tot[e["name"]] += e["papers"]
     subs = [s for s, _ in tot.most_common(8)]
-    fig, ax = plt.subplots(figsize=(8, 3.8))
+    fig, ax = plt.subplots(figsize=(8, 3.8 if len(recs) <= 2 else 7))
     yy = np.arange(len(subs))
+    offs, bh = bar_layout(len(recs), ratio=0.8947)
     for k, name in enumerate(recs):
         v = {e["name"]: e["share_of_env_papers"] * 100 for e in erows if e["institution"] == name and e["by"] == "subfield"}
-        ax.barh(yy + (k - 0.5) * 0.38, [v.get(s, 0) for s in subs], height=0.34, color=COLOR[name], label=name)
+        ax.barh(yy + offs[k], [v.get(s, 0) for s in subs], height=bh, color=COLOR[name], label=name)
     ax.set_yticks(yy, subs)
     ax.invert_yaxis()
     ax.set_xlabel("% of the institute's Environmental Science papers")
     ax.grid(axis="y", visible=False)
-    ax.legend(loc="lower right")
+    ax.legend(loc="lower right", ncol=1 if len(recs) <= 4 else 2, fontsize=9 if len(recs) <= 4 else 7)
     ax.set_title("What 'Environmental Science' contains (OpenAlex subfields)")
     save(fig, "env_science_subfields.png")
 

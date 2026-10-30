@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IIT Research Map: 14 newer IITs (draft)</title>
+<style>
+:root {
+  --bg: #ffffff; --band: #f5f5f7; --card: #ffffff; --fg: #1d1d1f; --fg2: #6e6e73; --line: #d2d2d7; --hair: #e8e8ed;
+  --link: #0066cc; --a: #2a78d6; --b: #eb6834; --warn-bg: #fff7e0; --warn-fg: #6b4e00; --warn-line: #ecd48a;
+  --font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #000000; --band: #0f0f10; --card: #1c1c1e; --fg: #f5f5f7; --fg2: #a1a1a6; --line: #3a3a3c; --hair: #2c2c2e;
+    --link: #2997ff; --a: #3987e5; --b: #e8743f; --warn-bg: #2b2410; --warn-fg: #f0d98c; --warn-line: #5c4a13;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #000000; --band: #0f0f10; --card: #1c1c1e; --fg: #f5f5f7; --fg2: #a1a1a6; --line: #3a3a3c; --hair: #2c2c2e;
+  --link: #2997ff; --a: #3987e5; --b: #e8743f; --warn-bg: #2b2410; --warn-fg: #f0d98c; --warn-line: #5c4a13; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+header.top { padding: 28px 0 8px; }
+h1 { font-size: 28px; line-height: 1.15; margin: 0 0 4px; letter-spacing: -0.02em; }
+h2 { font-size: 21px; margin: 0 0 4px; letter-spacing: -0.015em; }
+h3 { font-size: 15px; margin: 18px 0 6px; color: var(--fg2); font-weight: 600; }
+p.sub { color: var(--fg2); margin: 0 0 12px; max-width: 70ch; }
+.draft { background: var(--warn-bg); color: var(--warn-fg); border: 1px solid var(--warn-line); border-radius: 12px; padding: 10px 14px; font-size: 14px; margin: 12px 0; }
+.draft b { font-weight: 600; }
+.controls { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--hair); padding: 10px 0; }
+.controls .wrap { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.controls label { font-size: 13px; color: var(--fg2); display: flex; align-items: center; gap: 8px; }
+select { font: inherit; font-size: 15px; padding: 7px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--fg); min-width: 190px; max-width: 100%; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+nav.jump { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; margin-left: auto; }
+section { padding: 26px 0 8px; border-top: 1px solid var(--hair); }
+section:nth-of-type(even) { background: var(--band); }
+.grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); }
+.card { background: var(--card); border: 1px solid var(--hair); border-radius: 16px; padding: 14px 16px; overflow: hidden; }
+.chart { width: 100%; height: 320px; }
+.chart.tall { height: 420px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--hair); vertical-align: top; }
+th { color: var(--fg2); font-weight: 600; font-size: 12px; text-transform: none; position: sticky; top: 0; background: var(--card); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scroll { overflow-x: auto; max-height: 460px; }
+.kpis th:first-child, .kpis td:first-child { color: var(--fg2); }
+.sw { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.note { font-size: 13px; color: var(--fg2); margin: 6px 0 0; }
+.banner { font-size: 13px; background: var(--warn-bg); color: var(--warn-fg); border: 1px solid var(--warn-line); border-radius: 10px; padding: 8px 12px; margin: 0 0 10px; }
+.tag { font-size: 11px; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; color: var(--fg2); white-space: nowrap; }
+td.title { max-width: 520px; }
+.hide { display: none !important; }
+footer { padding: 28px 0 60px; color: var(--fg2); font-size: 13px; }
+@media (max-width: 640px) { h1 { font-size: 23px; } nav.jump { margin-left: 0; } .chart { height: 280px; } select { min-width: 150px; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>IIT Research Map: the 14 newer IITs</h1>
+    <p class="sub">Papers, faculty, journals, conferences, collaborators and citation networks for IIT Bombay, Madras, Kanpur, Goa, Tirupati, Patna, Palakkad, Guwahati, Hyderabad, Bhubaneswar, (BHU) Varanasi, Gandhinagar, Indore and Mandi, 2016 to October 2026.</p>
+    <div class="draft"><b>Draft.</b> Built from the pre-A2 enrichment output: the OpenAlex title-search stage (A2) has not run yet, journal quartiles are waiting for the Scimago tables, and the categorisation fixes (branch fix-categorisation) are not applied to this data. Panels that cannot be computed yet are listed at the bottom. Numbers will change when the files are refreshed.</div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <label><span class="dot" id="dotA"></span>Institute <select id="selA"></select></label>
+    <label><span class="dot" id="dotB"></span>Compare with <select id="selB"></select></label>
+    <nav class="jump" id="jump"></nav>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+
+<footer class="wrap">
+  <div id="foot"></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script src="data_v2.js"></script>
+<script>
+"use strict";
+const D = window.DASH_V2;
+const NAMES = D.insts.map(i => i.name);
+const COLOR = Object.fromEntries(D.insts.map(i => [i.name, i.color]));
+const YEARS = D.years;
+const ALL = "__all__";
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const fmt = (x, d = 0) => x == null || x === "" ? "n/a" : Number(x).toLocaleString("en", {maximumFractionDigits: d, minimumFractionDigits: d});
+const pct = (x, d = 1) => x == null ? "n/a" : (100 * x).toFixed(d) + "%";
+const short = n => n.replace("IIT (BHU) Varanasi", "BHU").replace("IIT ", "");
+let charts = [];
+
+// ------------------------------------------------------------------ state
+const selA = document.getElementById("selA"), selB = document.getElementById("selB");
+selA.innerHTML = `<option value="${ALL}">All 14 (overview)</option>` + NAMES.map(n => `<option>${esc(n)}</option>`).join("");
+selB.innerHTML = `<option value="">none</option>` + NAMES.map(n => `<option>${esc(n)}</option>`).join("");
+const q = new URLSearchParams(location.hash.slice(1));
+selA.value = NAMES.includes(q.get("a")) || q.get("a") === ALL ? q.get("a") : ALL;
+selB.value = NAMES.includes(q.get("b")) ? q.get("b") : "";
+selA.onchange = selB.onchange = () => { location.hash = `a=${encodeURIComponent(selA.value)}&b=${encodeURIComponent(selB.value)}`; render(); };
+window.addEventListener("resize", () => charts.forEach(c => c.resize()));
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+
+// ------------------------------------------------------------------ helpers
+function sel() {
+  const a = selA.value, b = selB.value;
+  const list = a === ALL ? [] : [a].concat(b && b !== a ? [b] : []);
+  return {a, b: list[1] || "", list, all: a === ALL};
+}
+const colA = () => css("--a"), colB = () => css("--b");
+function seriesColors(list) { return list.length === 2 ? [colA(), colB()] : [list.length ? colA() : null]; }
+function chart(id, option) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const fg = css("--fg2"), line = css("--hair");
+  const c = echarts.init(el, null, {renderer: "svg"});
+  option.textStyle = {fontFamily: css("--font"), color: fg};
+  option.grid = Object.assign({left: 56, right: 16, top: 36, bottom: 34, containLabel: true}, option.grid || {});
+  for (const ax of ["xAxis", "yAxis"]) if (option[ax]) {
+    const f = a => Object.assign({axisLabel: {color: fg}, axisLine: {lineStyle: {color: line}}, splitLine: {lineStyle: {color: line}}, nameTextStyle: {color: fg}}, a);
+    option[ax] = Array.isArray(option[ax]) ? option[ax].map(f) : f(option[ax]);
+  }
+  option.legend = option.legend && Object.assign({textStyle: {color: fg}, top: 0, type: "scroll"}, option.legend);
+  option.tooltip = Object.assign({trigger: "axis", confine: true}, option.tooltip || {});
+  option.animation = false;
+  c.setOption(option);
+  charts.push(c);
+}
+const card = (title, body, note) => `<div class="card">${title ? `<h3 style="margin-top:0">${title}</h3>` : ""}${body}${note ? `<p class="note">${note}</p>` : ""}</div>`;
+const sw = (n, i) => `<span class="sw"><span class="dot" style="background:${i === 0 ? "var(--a)" : "var(--b)"}"></span>${esc(n)}</span>`;
+function table(cols, rows, cls = "") {
+  return `<div class="scroll"><table class="${cls}"><thead><tr>${cols.map(c => `<th class="${c.n ? "n" : ""}">${esc(c.h)}</th>`).join("")}</tr></thead><tbody>` +
+    rows.map(r => `<tr>${cols.map((c, i) => `<td class="${c.n ? "n" : ""} ${c.cls || ""}">${c.raw ? r[i] : esc(r[i])}</td>`).join("")}</tr>`).join("") + `</tbody></table></div>`;
+}
+const doi = (t, d) => d && d.startsWith("http") ? `<a href="${esc(d)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t);
+// one block per selected institute, side by side when two are compared
+const perInst = (st, fn) => `<div class="grid ${st.list.length > 1 ? "two" : ""}">` + st.list.map((n, i) => fn(n, D.per[n], i)).join("") + `</div>`;
+
+// ------------------------------------------------------------------ sections
+function secOverview(st) {
+  const rows = NAMES.map(n => {
+    const p = D.per[n], pap = p.papers.total.reduce((a, b) => a + b, 0);
+    const conf = p.core.conference_papers || 0, ranked = conf - (p.core.not_ranked || 0);
+    return {n, pap, fac: p.faculty.with_papers, roster: p.faculty.roster_listed, cit: p.headline.citations, cpp: p.headline.citations_per_paper,
+      h: p.faculty.h.median, ih: p.headline.institute_h, core: conf ? ranked / conf : null, big: p.large.share, self: p.network.citation.self_share, ratio: p.network.flow.ratio};
+  });
+  const tbl = table([{h: "Institute"}, {h: "Papers", n: 1}, {h: "Faculty with papers", n: 1}, {h: "Roster listed", n: 1}, {h: "Citations", n: 1},
+    {h: "Citations / paper", n: 1}, {h: "Median faculty h", n: 1}, {h: "Institute h", n: 1}, {h: "Conf. papers with CORE rank", n: 1}, {h: ">10-author papers", n: 1}, {h: "Self-citation share", n: 1}, {h: "Indian in/out citation ratio", n: 1}],
+    rows.map(r => [`<span class="sw"><span class="dot" style="background:${COLOR[r.n]}"></span><a href="#a=${encodeURIComponent(r.n)}" onclick="selA.value='${esc(r.n)}';selB.value='';render();">${esc(r.n)}</a></span>`,
+      fmt(r.pap), fmt(r.fac), fmt(r.roster), fmt(r.cit), fmt(r.cpp, 1), fmt(r.h, 0), fmt(r.ih), pct(r.core), pct(r.big), pct(r.self, 0), fmt(r.ratio, 2)]).map(r => r), "");
+  const tbl2 = tbl.replace(/<td class=" ">/g, '<td>');
+  return `<section id="overview"><div class="wrap"><h2>All 14 institutes</h2>
+  <p class="sub">Pick an institute above to see its own panels, or two to compare them. "Faculty with papers" = faculty on the institute's pages with at least one paper in the analysis set; "roster listed" = everyone on those pages (all statuses, departments in scope).</p>
+  <div class="grid"><div class="card">${tbl2}</div></div>
+  <div class="grid two" style="margin-top:16px">
+    ${card("Papers per year", '<div id="ovYear" class="chart tall"></div>', "2026 is partial (collected October 2026).")}
+    ${card("Papers and faculty", '<div id="ovBars" class="chart tall"></div>')}
+    ${card("Median faculty h-index", '<div id="ovH" class="chart tall"></div>', "h-index over the faculty member's papers in this dataset, 2016 to 2026.")}
+    ${card("Papers shared between the institutes", '<div id="ovMat" class="chart tall"></div>', "Joint papers (co-authors at both institutes), read from the partner tables.")}
+  </div></div></section>`;
+}
+function drawOverview() {
+  const fgc = css("--fg2");
+  chart("ovYear", {color: NAMES.map(n => COLOR[n]), legend: {data: NAMES.map(short)},
+    xAxis: {type: "category", data: YEARS}, yAxis: {type: "value", name: "papers"},
+    series: NAMES.map(n => ({name: short(n), type: "line", showSymbol: false, data: D.per[n].papers.total, lineStyle: {width: 1.6}}))});
+  const ord = NAMES.slice().sort((a, b) => D.per[b].faculty.with_papers - D.per[a].faculty.with_papers);
+  chart("ovBars", {legend: {data: ["Papers (2016-26)", "Faculty with papers"]}, color: [css("--a"), css("--b")],
+    xAxis: {type: "category", data: ord.map(short), axisLabel: {rotate: 40, color: fgc}},
+    yAxis: [{type: "value", name: "papers"}, {type: "value", name: "faculty", splitLine: {show: false}}],
+    series: [{name: "Papers (2016-26)", type: "bar", data: ord.map(n => D.per[n].papers.total.reduce((a, b) => a + b, 0))},
+      {name: "Faculty with papers", type: "bar", yAxisIndex: 1, data: ord.map(n => D.per[n].faculty.with_papers)}]});
+  const o2 = NAMES.slice().sort((a, b) => (D.per[b].faculty.h.median || 0) - (D.per[a].faculty.h.median || 0));
+  chart("ovH", {xAxis: {type: "value", name: "median h"}, yAxis: {type: "category", data: o2.map(short).reverse(), axisLabel: {color: fgc}},
+    grid: {left: 10}, tooltip: {trigger: "item"},
+    series: [{type: "bar", data: o2.map(n => ({value: D.per[n].faculty.h.median, itemStyle: {color: COLOR[n]}})).reverse(), label: {show: true, position: "right", color: fgc}}]});
+  const data = [];
+  D.shared_matrix.forEach((row, i) => row.forEach((v, j) => { if (i !== j) data.push([j, i, v]); }));
+  const mx = Math.max(1, ...data.map(d => d[2]));
+  chart("ovMat", {tooltip: {trigger: "item", formatter: p => `${NAMES[p.value[1]]} and ${NAMES[p.value[0]]}: ${fmt(p.value[2])} papers`},
+    grid: {left: 10, top: 10, bottom: 70, right: 10}, xAxis: {type: "category", data: NAMES.map(short), axisLabel: {rotate: 50, color: fgc}, splitLine: {show: false}},
+    yAxis: {type: "category", data: NAMES.map(short), inverse: true, axisLabel: {color: fgc}, splitLine: {show: false}},
+    visualMap: {min: 0, max: mx, show: false, inRange: {color: [css("--card"), css("--a")]}},
+    series: [{type: "heatmap", data, itemStyle: {borderColor: css("--card"), borderWidth: 1}}]});
+}
+
+function secKpis(st) {
+  const P = st.list.map(n => D.per[n]);
+  const conf = p => p.core.conference_papers || 0;
+  const rows = [
+    ["Papers 2016-2026", p => fmt(p.papers.total.reduce((a, b) => a + b, 0))],
+    ["Faculty with papers", p => fmt(p.faculty.with_papers)],
+    ["Faculty on the pages (roster)", p => fmt(p.faculty.roster_listed)],
+    ["Departments with papers", p => fmt(p.faculty.departments)],
+    ["Citations (at collection date)", p => fmt(p.headline.citations)],
+    ["Citations per paper", p => fmt(p.headline.citations_per_paper, 1)],
+    ["Papers with 100+ citations", p => fmt(p.headline.papers_100)],
+    ["Institute h-index", p => fmt(p.headline.institute_h)],
+    ["Median faculty h-index", p => fmt(p.faculty.h.median, 0)],
+    ["Journal papers", p => fmt(p.quartiles.journal_papers)],
+    ["Conference papers", p => fmt(conf(p))],
+    ["Papers with more than 10 authors", p => `${fmt(p.large.more_than_10)} (${pct(p.large.share)})`]];
+  return `<section id="kpi"><div class="wrap"><h2>${st.list.map((n, i) => sw(n, i)).join(" &nbsp;vs&nbsp; ")}</h2>
+  <div class="card" style="margin-top:12px">${table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))), rows.map(r => [r[0]].concat(P.map(r[1]))), "kpis")}</div></div></section>`;
+}
+
+function secPapers(st) {
+  return `<section id="papers"><div class="wrap"><h2>Papers per year</h2><p class="sub">Analysis set: confirmed IIT affiliation, science and engineering. 2026 is partial.</p>
+  <div class="grid two">${card("", '<div id="yr1" class="chart"></div>', st.list.length > 1 ? "Bars: total papers per year." : "Stacked by publication type.")}
+  ${card("Types, all years", '<div id="yr2" class="chart"></div>')}</div></div></section>`;
+}
+function drawPapers(st) {
+  const cols = seriesColors(st.list), types = ["journal", "conference", "book-chapter", "preprint", "other"];
+  if (st.list.length > 1) {
+    chart("yr1", {color: cols, legend: {data: st.list}, xAxis: {type: "category", data: YEARS}, yAxis: {type: "value", name: "papers"},
+      series: st.list.map(n => ({name: n, type: "bar", data: D.per[n].papers.total}))});
+  } else {
+    const pal = [css("--a"), "#eda100", "#1baf7a", "#e87ba4", "#8a8984"];
+    chart("yr1", {color: pal, legend: {data: types}, xAxis: {type: "category", data: YEARS}, yAxis: {type: "value", name: "papers"},
+      series: types.map(t => ({name: t, type: "bar", stack: "t", data: D.per[st.a].papers[t]}))});
+  }
+  const pal = ["#3987e5", "#eda100", "#1baf7a", "#e87ba4", "#8a8984"];
+  chart("yr2", {color: cols.length === 2 ? [colA(), colB()] : [colA()], legend: {data: st.list},
+    xAxis: {type: "category", data: types}, yAxis: {type: "value", name: "share of papers (%)"}, tooltip: {valueFormatter: v => v.toFixed(1) + "%"},
+    series: st.list.map(n => {
+      const tot = D.per[n].papers.total.reduce((a, b) => a + b, 0);
+      return {name: n, type: "bar", data: types.map(t => +(100 * D.per[n].papers[t].reduce((a, b) => a + b, 0) / tot).toFixed(2))};
+    })});
+}
+
+function secFaculty(st) {
+  const hrow = (lab, f) => [lab].concat(st.list.map(n => f(D.per[n].faculty)));
+  const sum = table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))), [
+    hrow("Faculty with papers", f => fmt(f.with_papers)), hrow("Roster listed", f => fmt(f.roster_listed)),
+    hrow("h-index mean (SD)", f => `${fmt(f.h.mean, 1)} (${fmt(f.h.sd, 1)})`), hrow("h-index median", f => fmt(f.h.median, 0)),
+    hrow("h-index quartiles Q1 / Q3", f => `${fmt(f.h.q1, 0)} / ${fmt(f.h.q3, 0)}`), hrow("h-index 90th percentile", f => fmt(f.h.p90, 0)),
+    hrow("h-index maximum", f => fmt(f.h.max, 0)), hrow("i10-index mean / median", f => `${fmt(f.i10.mean, 1)} / ${fmt(f.i10.median, 0)}`)], "kpis");
+  const top = perInst(st, (n, p, i) => card(`${sw(n, i)}: top 10 faculty by h-index`, table(
+    [{h: "Faculty"}, {h: "Department"}, {h: "h", n: 1}, {h: "Papers", n: 1}, {h: "Citations", n: 1}],
+    p.faculty.top.map(f => [f.name, f.dept, f.h, fmt(f.papers), fmt(f.citations)]))));
+  const dep = perInst(st, (n, p, i) => card(`${sw(n, i)}: largest departments`, table(
+    [{h: "Department"}, {h: "Faculty", n: 1}, {h: "Papers", n: 1}, {h: "Mean h", n: 1}, {h: "Max h", n: 1}],
+    p.faculty.depts.map(d => [d.name, d.faculty, fmt(d.papers), fmt(d.mean_h, 1), d.max_h]))));
+  return `<section id="faculty"><div class="wrap"><h2>Faculty and h-index</h2>
+  <p class="sub">h-index = Hirsch index over the faculty member's papers in this dataset (2016 to 2026), so it is lower than a career h-index. Faculty are matched to papers by the institute's own pages; a paper can credit several faculty.</p>
+  <div class="grid two">${card("Summary", sum)}${card("h-index distribution (share of faculty)", '<div id="hh" class="chart"></div>')}</div>
+  <div style="margin-top:16px">${top}</div><div style="margin-top:16px">${dep}</div></div></section>`;
+}
+function drawFaculty(st) {
+  const e = D.per[st.list[0]].faculty.h_hist.edges, lab = e.slice(0, -1).map((lo, i) => e[i + 1] >= 1000 ? `${lo}+` : `${lo}-${e[i + 1] - 1}`);
+  chart("hh", {color: seriesColors(st.list), legend: {data: st.list}, xAxis: {type: "category", data: lab, name: "h-index"}, yAxis: {type: "value", name: "% of faculty"},
+    tooltip: {valueFormatter: v => v.toFixed(1) + "%"},
+    series: st.list.map(n => {
+      const h = D.per[n].faculty.h_hist.counts, t = h.reduce((a, b) => a + b, 0) || 1;
+      return {name: n, type: "bar", data: h.map(v => +(100 * v / t).toFixed(2))};
+    })});
+}
+
+function secJournals(st) {
+  const none = st.list.every(n => D.per[n].quartiles.Q1 + D.per[n].quartiles.Q2 + D.per[n].quartiles.Q3 + D.per[n].quartiles.Q4 === 0);
+  const banner = none ? `<div class="banner">Scimago quartiles are not loaded yet, so every journal paper is counted as "no quartile". The chart fills in when the Scimago tables are added and the analysis is re-run.</div>` : "";
+  return `<section id="journals"><div class="wrap"><h2>Journals and quartiles</h2><p class="sub">Journal quartile share: Q1 to Q4 of the journal papers that have a Scimago SJR quartile (publication year).</p>${banner}
+  <div class="grid two">${card("Quartile mix of journal papers", '<div id="qt" class="chart"></div>')}
+  ${card("Journal papers", table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))),
+    [["Journal papers"].concat(st.list.map(n => fmt(D.per[n].quartiles.journal_papers))), ["with a quartile"].concat(st.list.map(n => { const q = D.per[n].quartiles; return fmt(q.Q1 + q.Q2 + q.Q3 + q.Q4); })),
+     ["Q1 share of ranked"].concat(st.list.map(n => { const q = D.per[n].quartiles, r = q.Q1 + q.Q2 + q.Q3 + q.Q4; return r ? pct(q.Q1 / r) : "n/a"; }))], "kpis"))}</div></div></div></section>`;
+}
+function drawJournals(st) {
+  const ks = ["Q1", "Q2", "Q3", "Q4", "no quartile"], pal = ["#0d366b", "#1c5cab", "#3987e5", "#86b6ef", "#c9c8c3"];
+  chart("qt", {color: pal, legend: {data: ks}, xAxis: {type: "value", max: 100, name: "% of journal papers"}, yAxis: {type: "category", data: st.list, inverse: true},
+    tooltip: {trigger: "item"},
+    series: ks.map((k, j) => ({name: k, type: "bar", stack: "q", data: st.list.map(n => { const q = D.per[n].quartiles; return +(100 * (j < 4 ? q[k] : q.not_in_scimago) / q.journal_papers).toFixed(2); })}))});
+}
+
+function secCore(st) {
+  const tv = perInst(st, (n, p, i) => card(`${sw(n, i)}: top CORE-ranked conferences`, table([{h: "Conference"}, {h: "CORE", n: 1}, {h: "Papers", n: 1}],
+    p.core.top_venues.map(v => [v.venue, v.rank, v.papers]))));
+  return `<section id="core"><div class="wrap"><h2>Conference papers and CORE ranks</h2><p class="sub">CORE rank of the conference (A*, A, B, C) for conference papers; the rest are unranked or not in the CORE portal.</p>
+  <div class="grid two">${card("CORE rank mix", '<div id="cr" class="chart"></div>', "Share of all conference papers.")}${card("Ranked share by year", '<div id="cy" class="chart"></div>', "Conference papers with an A*, A, B or C venue / all conference papers that year.")}</div>
+  <div style="margin-top:16px">${tv}</div></div></section>`;
+}
+function drawCore(st) {
+  const ks = ["A*", "A", "B", "C", "not ranked"], pal = ["#0d366b", "#1c5cab", "#3987e5", "#86b6ef", "#c9c8c3"];
+  chart("cr", {color: pal, legend: {data: ks}, xAxis: {type: "value", max: 100, name: "% of conference papers"}, yAxis: {type: "category", data: st.list, inverse: true},
+    tooltip: {trigger: "item"},
+    series: ks.map((k, j) => ({name: k, type: "bar", stack: "c", data: st.list.map(n => { const c = D.per[n].core; return +(100 * (j < 4 ? c[k] : c.not_ranked) / c.conference_papers).toFixed(2); })}))});
+  chart("cy", {color: seriesColors(st.list), legend: {data: st.list}, xAxis: {type: "category", data: YEARS}, yAxis: {type: "value", name: "% ranked"},
+    tooltip: {valueFormatter: v => v == null ? "n/a" : v.toFixed(1) + "%"},
+    series: st.list.map(n => {
+      const b = D.per[n].core.by_year;
+      return {name: n, type: "line", data: YEARS.map((y, i) => b.conference_papers[i] ? +(100 * (b["A*"][i] + b.A[i] + b.B[i] + b.C[i]) / b.conference_papers[i]).toFixed(1) : null)};
+    })});
+}
+
+function secTop(st) {
+  const body = perInst(st, (n, p, i) => card(`${sw(n, i)}: ten most-cited papers`, table(
+    [{h: "#", n: 1}, {h: "Title", cls: "title", raw: 1}, {h: "Journal / venue"}, {h: "Year", n: 1}, {h: "Citations", n: 1}],
+    p.top_papers.map((t, k) => [k + 1, doi(t.title, t.doi), t.journal, t.year, fmt(t.citations)]))));
+  return `<section id="top"><div class="wrap"><h2>Top papers</h2><p class="sub">Most cited papers of the analysis set (citation counts at collection date; a paper counts for every institute that has it).</p>${body}</div></section>`;
+}
+
+function secCollab(st) {
+  const fc = perInst(st, (n, p, i) => card(`${sw(n, i)}: faculty with most faculty co-authors`, table(
+    [{h: "Faculty"}, {h: "Department"}, {h: "Faculty co-authors", n: 1}, {h: "Joint papers", n: 1}],
+    p.collaborators.map(c => [c.name, c.dept, c.faculty_coauthors, c.joint_papers])),
+    "Faculty network of all 14 institutes together: an edge = two faculty on one paper."));
+  return `<section id="collab"><div class="wrap"><h2>Collaborators and partner institutions</h2><p class="sub">Indian partner institutions ranked by co-authored papers (OpenAlex institution of the co-authors).</p>
+  <div class="grid two">${card("Top partner institutions", '<div id="pt" class="chart tall"></div>')}${card("Partners by kind of institution", '<div id="pc" class="chart tall"></div>', "Course clusters: old and large IITs, newer IITs, IIITs, NITs, IISc / TIFR / IISERs, CSIR labs and others.")}</div>
+  <div style="margin-top:16px">${fc}</div></div></section>`;
+}
+function drawCollab(st) {
+  const n0 = st.list[0], p0 = D.per[n0].partners.slice(0, 12);
+  const names = p0.map(x => x.name.replace(/^Indian Institute of Technology/, "IIT").replace("Indian Institute of Science", "IISc").slice(0, 42));
+  chart("pt", {color: seriesColors(st.list), legend: {data: st.list}, grid: {left: 8}, tooltip: {trigger: "axis", axisPointer: {type: "shadow"}},
+    xAxis: {type: "value", name: "shared papers"}, yAxis: {type: "category", data: names, inverse: true, axisLabel: {color: css("--fg2"), width: 190, overflow: "truncate"}},
+    series: st.list.map(n => ({name: n, type: "bar", data: p0.map(x => (D.per[n].partners.find(y => y.name === x.name) || {shared: 0}).shared)}))});
+  const cl = [...new Set(st.list.flatMap(n => D.per[n].partner_clusters.map(c => c.cluster)))];
+  chart("pc", {color: seriesColors(st.list), legend: {data: st.list}, grid: {left: 8}, tooltip: {trigger: "axis", axisPointer: {type: "shadow"}},
+    xAxis: {type: "value", name: "share of shared papers (%)"}, yAxis: {type: "category", data: cl, inverse: true, axisLabel: {color: css("--fg2")}},
+    series: st.list.map(n => {
+      const t = D.per[n].partner_clusters.reduce((a, c) => a + c.shared, 0) || 1;
+      return {name: n, type: "bar", data: cl.map(c => +(100 * ((D.per[n].partner_clusters.find(x => x.cluster === c) || {shared: 0}).shared) / t).toFixed(1))};
+    })});
+}
+
+function secNet(st) {
+  const R = (lab, f) => [lab].concat(st.list.map(n => f(D.per[n].network)));
+  const tbl = table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))), [
+    R("Papers (nodes)", x => fmt(x.citation.papers)), R("Citations between our papers (edges)", x => fmt(x.citation.edges)),
+    R("Mean in-degree", x => fmt(x.citation.mean_in_degree, 2)), R("Papers cited at least once", x => `${fmt(x.citation.cited_once)} (${pct(x.citation.cited_once / x.citation.papers, 0)})`),
+    R("Largest connected group", x => fmt(x.citation.largest_component)), R("Self-citation share of edges", x => pct(x.citation.self_share)),
+    R("Spearman: PageRank vs year", x => fmt(x.citation.pagerank_vs_year, 2)),
+    R("Citations in from other Indian institutions", x => fmt(x.flow.in)), R("Citations out to other Indian institutions", x => fmt(x.flow.out)),
+    R("In / out ratio", x => fmt(x.flow.ratio, 2)),
+    R("Faculty in the co-authorship network", x => fmt(x.faculty_net.nodes)), R("with a faculty co-author", x => `${fmt(x.faculty_net.with_tie)} (${pct(x.faculty_net.with_tie / x.faculty_net.nodes, 0)})`),
+    R("Mean / max faculty co-authors", x => `${fmt(x.faculty_net.mean_ties, 1)} / ${fmt(x.faculty_net.max_ties)}`),
+    R("Communities touched", x => fmt(x.faculty_net.communities))], "kpis");
+  const pr = perInst(st, (n, p, i) => card(`${sw(n, i)}: papers ranked highest by PageRank`, table([{h: "Title", cls: "title", raw: 1}, {h: "Year", n: 1}, {h: "In-degree", n: 1}, {h: "Citations", n: 1}],
+    p.network.pagerank.map(t => [doi(t.title, t.doi), t.year, t.in_degree, fmt(t.citations)])), "PageRank on the citation network of all 14 institutes; it favours older papers."));
+  const cn = D.cluster_net, key = Object.keys(cn)[0];
+  return `<section id="net"><div class="wrap"><h2>Citation network</h2>
+  <p class="sub">Nodes: analysis-set papers; edge: one cites the other (OpenAlex reference lists), across all 14 institutes${key ? `: ${fmt(cn[key].papers)} papers, ${fmt(cn[key].citation_edges)} citations` : ""}. A paper of two institutes is a node of both institute networks.</p>
+  <div class="grid two">${card("Summary", tbl)}${card("Citation flow with other Indian institutions, by year of the citing paper", '<div id="fl" class="chart tall"></div>', "Solid: in-flow (they cite us). Dashed: out-flow (we cite them). 2026 is partial.")}</div>
+  <div style="margin-top:16px">${pr}</div></div></section>`;
+}
+function drawNet(st) {
+  const cols = seriesColors(st.list), s = [];
+  st.list.forEach((n, i) => {
+    s.push({name: n + " in", type: "line", showSymbol: false, data: D.per[n].network.flow_yearly.in, color: cols[i]});
+    s.push({name: n + " out", type: "line", showSymbol: false, lineStyle: {type: "dashed"}, data: D.per[n].network.flow_yearly.out, color: cols[i]});
+  });
+  chart("fl", {legend: {data: s.map(x => x.name)}, xAxis: {type: "category", data: YEARS}, yAxis: {type: "value", name: "citations"}, series: s});
+}
+
+function secAreas(st) {
+  const body = perInst(st, (n, p, i) => card(`${sw(n, i)}: research areas`, table([{h: "OpenAlex field"}, {h: "Papers", n: 1}, {h: "Share", n: 1}],
+    p.areas.map(a => [a.field, fmt(a.papers), pct(a.share)]))));
+  return `<section id="areas"><div class="wrap"><h2>Research areas</h2><p class="sub">Share of papers by OpenAlex field of the primary topic.</p>${body}</div></section>`;
+}
+
+function secSkipped() {
+  const rows = D.skipped.map(s => [s.panel, s.reason, s.needs]);
+  const t = D.run_times, tot = t.reduce((a, r) => a + (r.seconds || 0), 0), mem = Math.max(0, ...t.map(r => r.memory_mb || 0)), bad = t.filter(r => r.exit);
+  return `<section id="skipped"><div class="wrap"><h2>Not computed yet</h2>
+  <p class="sub">Panels that need an input this run does not have. They are skipped, never filled with zeros, and fill in on the next run once the input exists.</p>
+  <div class="card">${rows.length ? table([{h: "Panel"}, {h: "Why"}, {h: "Needs"}], rows) : "<p>Nothing skipped.</p>"}</div>
+  <p class="note">Analysis run: ${t.length} scripts, ${fmt(tot / 60, 1)} minutes in total, peak memory ${fmt(mem / 1024, 1)} GB${bad.length ? `, failed: ${bad.map(r => esc(r.script)).join(", ")}` : ", no failures"}.</p></div></section>`;
+}
+
+// ------------------------------------------------------------------ render
+function render() {
+  charts.forEach(c => c.dispose());
+  charts = [];
+  const st = sel();
+  document.getElementById("dotA").style.background = st.all ? "var(--fg2)" : "var(--a)";
+  document.getElementById("dotB").style.background = st.b ? "var(--b)" : "var(--line)";
+  selB.disabled = st.all;
+  let html = "", jump = [];
+  if (st.all) {
+    html += secOverview(st); jump.push(["overview", "Overview"]);
+  } else {
+    html += secKpis(st) + secPapers(st) + secFaculty(st) + secJournals(st) + secCore(st) + secTop(st) + secCollab(st) + secNet(st) + secAreas(st);
+    jump = [["kpi", "Summary"], ["papers", "Papers"], ["faculty", "Faculty"], ["journals", "Journals"], ["core", "CORE"], ["top", "Top papers"], ["collab", "Partners"], ["net", "Citations"], ["areas", "Areas"]];
+  }
+  html += secSkipped(); jump.push(["skipped", "Not computed"]);
+  document.getElementById("main").innerHTML = html;
+  document.getElementById("jump").innerHTML = jump.map(j => `<a href="#${j[0]}" onclick="document.getElementById('${j[0]}').scrollIntoView();return false;">${j[1]}</a>`).join("");
+  document.getElementById("foot").innerHTML = `Draft built ${esc(D.generated)} from Analysis/results_v2 (pre-A2 enrichment output). Citation counts: Crossref, OpenAlex where Crossref had none. Source tables: Analysis/README.md.`;
+  if (st.all) drawOverview();
+  else { drawPapers(st); drawFaculty(st); drawJournals(st); drawCore(st); drawCollab(st); drawNet(st); }
+}
+render();
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 """Who cites their own co-authors, and does citing come before working together (research_directions.md §3b;
 Wallace, Lariviere & Gingras 2012, PLoS ONE 7, e33339; Martin, Ball, Karrer & Newman 2013, PRE 88, 012814).
-Two layers on the same 1,410 faculty (faculty_layers.py):
+Two layers on the same faculty (results/faculty.csv; faculty_layers.py):
   co-authorship  faculty a and b wrote a paper together (papers with at most MAX_AUTHORS authors, the rule of the
                  faculty network in stats_authorship.py; faculty credited as in faculty.csv)
   citation       a cites b, in two definitions:
@@ -146,8 +146,10 @@ def main():
     iu, ju = np.triu_indices(n, 1)
     keep = active[iu] & active[ju]
     iu, ju = iu[keep], ju[keep]
-    upairs = [(fac[i], fac[j]) for i, j in zip(iu, ju)]
-    fco = np.array([first_co.get(p, 9999) for p in upairs])
+    FCO = np.full((n, n), 9999, dtype=np.int32)             # first joint year per pair, as a matrix (no list of n^2/2 tuples)
+    for (a_, b_), y_ in first_co.items():
+        FCO[ix[a_], ix[b_]] = FCO[ix[b_], ix[a_]] = y_
+    fco = FCO[iu, ju]
     sd = np.where(dept[iu] == dept[ju], 2, np.where(inst[iu] == inst[ju], 1, 0))
     ss = (sub[iu] == sub[ju]) & (sub[iu] != "")
     st = (sd * 2 + ss) * 9 + np.minimum(pb[iu], pb[ju]) * 3 + np.maximum(pb[iu], pb[ju])
@@ -156,14 +158,16 @@ def main():
     drows, prow = [], []
     for defn, cl in defs.items():
         cited = np.zeros((n, n), bool)
-        ncit = np.zeros((n, n), int)
+        ncit = np.zeros((n, n), np.int32)
         first_cite = {}
+        FCI = np.full((n, n), 9999, dtype=np.int32)
         for a, b, _, _, y in cl:
             i, j = ix[a], ix[b]
             cited[i, j] = True
             ncit[i, j] += 1
             k = (min(a, b), max(a, b))
             first_cite[k] = min(first_cite.get(k, 9999), y)
+            FCI[i, j] = FCI[j, i] = first_cite[k]
 
         # ---- 1. distance
         cy = cited[I, J]
@@ -182,7 +186,7 @@ def main():
                      round(sum(1 for a, b, *_ in cl if D[ix[a], ix[b]] == 1) / len(cl), 4)))
 
         # ---- 2. order in time
-        fci = np.array([first_cite.get(p, 9999) for p in upairs])
+        fci = FCI[iu, ju]
 
         def test(name, base, exposed, outcome):
             ref_ = {s: outcome[base & ~exposed & (st == s)].mean() for s in np.unique(st[base & ~exposed])}
@@ -270,7 +274,7 @@ def main():
     ax.legend()
     save(fig, "coauthor_citation_distance.png")
 
-    fig, ax = plt.subplots(figsize=(7.2, 3.4))
+    fig, ax = plt.subplots(figsize=(7.2, 3.4 if len(INSTS) <= 2 else 5))
     for name in INSTS.values():
         rs = [r for r in irows if r["institution"] == name and r["publication_year"] != "all" and r["inwardness"] != ""]
         ax.plot([r["publication_year"] for r in rs], [100 * r["inwardness"] for r in rs], color=COLOR[name], marker="o",
@@ -280,7 +284,7 @@ def main():
     ax.set_ylabel("% of a paper's citations from\nits own institute (our set)")
     ax.set_xlabel("publication year (dashed: without author self-citations)")
     ax.set_title("Institute inwardness")
-    ax.legend()
+    ax.legend(ncol=1 if len(INSTS) <= 4 else 2, fontsize=9 if len(INSTS) <= 4 else 6)
     save(fig, "institute_inwardness.png")
 
 

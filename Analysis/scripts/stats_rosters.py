@@ -12,7 +12,7 @@ Figure (figures/): faculty_by_year.png
 usage: python stats_rosters.py"""
 import os, csv, collections as C
 import numpy as np
-from common import INSTS, YEARS, RES, A2, load_records, read_csv, write_csv, style, save, COLOR, plt
+from common import INSTS, YEARS, RES, A2, load_records, read_csv, write_csv, style, save, COLOR, plt, bar_layout, note_skip
 from scope import FACULTY_DEPT_OUT
 
 YEARLY = os.path.join(A2, "WebScrape", "rosters", "yearly")
@@ -24,7 +24,8 @@ def main():
     for inst, name in INSTS.items():
         fn = os.path.join(YEARLY, f"{inst}_faculty_by_year.csv")
         if not os.path.exists(fn):
-            print("no yearly roster for", inst, "- run WebScrape/scripts/wayback_rosters.py", inst)
+            note_skip("stats_rosters.py", f"faculty per year, {name}", f"no archived-roster file {os.path.basename(fn)}",
+                      f"WebScrape/scripts/wayback_rosters.py {inst} (Wayback Machine snapshots of the institute's faculty pages)")
             continue
         ros = [r for r in read_csv(fn) if r["department"] not in FACULTY_DEPT_OUT]
         cov = {int(c["year"]): int(c["snapshots_used"]) for c in read_csv(os.path.join(YEARLY, f"{inst}_coverage.csv"))}
@@ -66,9 +67,10 @@ def main():
     fig, ax = plt.subplots(figsize=(8, 3.6))
     x = np.arange(len(YEARS))
     names = [n for n in INSTS.values() if n in have]
+    offs, bw = bar_layout(len(names))
     for k, name in enumerate(names):
         yr = [r for r in rows if r["institution"] == name]
-        ax.bar(x + (k - (len(names) - 1) / 2) * 0.38, [r["faculty_listed"] for r in yr], width=0.36, color=COLOR[name], label=name)
+        ax.bar(x + offs[k], [r["faculty_listed"] for r in yr], width=bw, color=COLOR[name], label=name)
     ax.set_xticks(x, YEARS)
     ax.set_ylabel("faculty named on archived pages")
     ax.grid(axis="x", visible=False)

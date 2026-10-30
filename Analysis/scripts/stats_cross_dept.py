@@ -30,7 +30,7 @@ import numpy as np
 import pandas as pd
 import statsmodels.formula.api as smf
 from scipy.stats import wilcoxon
-from common import DATA, read_csv, write_csv, style, save, plt
+from common import DATA, CACHE, read_csv, write_csv, style, save, plt, note_skip
 from faculty_layers import faculty_table, paper_table
 
 LAST_YEAR = 2023
@@ -50,6 +50,11 @@ def kind(depts):
 
 def main():
     style()
+    if not os.path.exists(os.path.join(CACHE, "oa_fwci.json")):
+        note_skip("stats_cross_dept.py", "cross-department teams vs FWCI (cross_dept_*.csv, cross_dept_fwci.png)",
+                  "impact is OpenAlex's field-weighted citation impact (FWCI) per paper, not cached for these institutes",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_fwci.json")
+        return
     F = faculty_table()
     P = paper_table()
     dept = {a: (r["institution"], r["department"]) for a, r in F.items()}

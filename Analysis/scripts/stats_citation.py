@@ -1,9 +1,10 @@
 """Citation network statistics (brief sections 6a and 7a).
-Network analysed = the 'internal' edges of citation_network.csv: citations between analysis-set papers of IIT Kharagpur
-and IIT Roorkee (our cluster). Every analysis-set paper is a node, so uncited / non-citing papers are included.
+Network analysed = the 'internal' edges of citation_network.csv: citations between analysis-set papers of the institutes
+of the run (our cluster: Kharagpur + Roorkee by default; ANALYSIS_INSTS in common.py). Every analysis-set paper is a node, so uncited / non-citing papers are included.
   in-degree   per institute: citations received from papers of the SAME institute's corpus (brief: "within your
               institution's corpus"); cluster: from either institute
-  PageRank    damping 0.85 (networkx), on the cluster graph and on each institute's own subgraph
+  PageRank    damping 0.85 (networkx), on the cluster graph and on each institute's own subgraph (a paper of two
+              institutes is a node of both subgraphs)
 Citation flow uses every cross-institute edge: external Indian edges (OpenAlex) plus internal edges between the two
 IITs (a Roorkee paper citing a Kharagpur paper is Indian in-flow for Kharagpur).
   in-flow     citation edges from works of another Indian institution to the institute's papers
@@ -19,17 +20,27 @@ import os, collections as C
 import numpy as np
 import networkx as nx
 from scipy.stats import spearmanr
-from common import (INSTS, YEARS, DATA, load_records, cites, read_csv, write_csv, style, save, COLOR, TEXT2, MUTED, plt, short_name)
-
-OA_NAME = {"IIT Kharagpur": "Indian Institute of Technology Kharagpur", "IIT Roorkee": "Indian Institute of Technology Roorkee"}
+from common import (INSTS, YEARS, DATA, load_records, cites, iter_csv, write_csv, style, save, COLOR, TEXT2, MUTED, plt,
+                    short_name, OA_NAME, SHORT_KEY, CLUSTER, bar_layout, panels)
 
 
 def node_of(oa, doi):
     return oa or (doi or "").lower()
 
 
+class EdgeFile:
+    """All rows of citation_network.csv, streamed from disk on every iteration (1.2 million rows for 14 institutes:
+    they are never held in memory)."""
+    def __init__(self, path):
+        self.path = path
+
+    def __iter__(self):
+        return iter_csv(self.path)
+
+
 def citation_graph():
-    """(G, meta, edges): the cluster citation graph of internal edges, paper metadata by node, all edge rows."""
+    """(G, meta, edges): the cluster citation graph of internal edges, paper metadata by node, and the edge rows
+    (an iterable that streams citation_network.csv)."""
     meta = {}
     for inst, name in INSTS.items():
         for r in load_records(inst):
@@ -40,7 +51,7 @@ def citation_graph():
             m["insts"].add(name)
             m["authors"] |= {a["openalex_author"] for a in r.get("authors_openalex") or [] if a.get("openalex_author")}
             m["faculty"] |= {f["roster_id"] for f in r["faculty"]}
-    edges = read_csv(os.path.join(DATA, "citation_network.csv"))
+    edges = EdgeFile(os.path.join(DATA, "citation_network.csv"))
     G = nx.DiGraph()
     G.add_nodes_from(meta)
     for e in edges:
@@ -57,7 +68,7 @@ def main():
 
     # ------------------------------------------------ network metrics
     summ, prow, mrows, drows = [], [], {}, []
-    scopes = {"Cluster (both IITs)": G}
+    scopes = {CLUSTER: G}
     for name in INSTS.values():
         scopes[name] = G.subgraph([n for n in G if name in meta[n]["insts"]]).copy()
     pr_all = {}
@@ -69,7 +80,7 @@ def main():
         yrs = [meta[n]["year"] for n in H]
         rho = spearmanr([pr[n] for n in H], yrs).statistic
         summ.append({"scope": scope, "papers": H.number_of_nodes(), "citation_edges": H.number_of_edges(),
-                     "mean_in_degree": round(H.number_of_edges() / H.number_of_nodes(), 3),
+                     "mean_in_degree": round(H.number_of_edges() / H.number_of_nodes(), 3) if H.number_of_nodes() else "",
                      "papers_cited_at_least_once": sum(1 for v in indeg.values() if v > 0),
                      "papers_citing_none_in_corpus": sum(1 for n in H if H.out_degree(n) == 0),
                      "largest_weak_component": len(wcc), "density": f"{nx.density(H):.2e}",
@@ -87,25 +98,27 @@ def main():
         m = meta[n]
         row = {"node": n, "doi": m["doi"], "year": m["year"], "institutions": ";".join(sorted(m["insts"])),
                "global_citations": m["citations"], "in_degree_cluster": G.in_degree(n),
-               "pagerank_cluster": f"{pr_all['Cluster (both IITs)'][n]:.8f}"}
+               "pagerank_cluster": f"{pr_all[CLUSTER][n]:.8f}"}
         for name in INSTS.values():
             H = scopes[name]
-            row["in_degree_" + name.split()[-1].lower()] = H.in_degree(n) if n in H else ""
+            row["in_degree_" + SHORT_KEY[name]] = H.in_degree(n) if n in H else ""
         mrows[n] = row
     write_csv("citation_network_summary.csv", summ)
     write_csv("pagerank_top10.csv", prow)
     write_csv("paper_citation_metrics.csv", list(mrows.values()))
     write_csv("indegree_distribution.csv", drows)
-    fig, ax = plt.subplots(figsize=(6.5, 4.3))
+    fig, ax = plt.subplots(figsize=(6.5, 4.3 if len(INSTS) <= 2 else 5.5))
     for name in INSTS.values():
         deg = np.array([d for _, d in scopes[name].in_degree()])
+        if not len(deg):
+            continue
         ks = np.arange(1, deg.max() + 1)
         ccdf = [(deg >= k).mean() for k in ks]
         ax.loglog(ks, ccdf, color=COLOR[name], label=name, marker="o", markersize=3, linewidth=1.5)
     ax.set_xlabel("in-degree k (citations from the same institute's papers)")
     ax.set_ylabel("P(in-degree >= k)")
     ax.set_title("In-degree distribution (CCDF, log-log)")
-    ax.legend()
+    ax.legend(ncol=1 if len(INSTS) <= 4 else 2, fontsize=9 if len(INSTS) <= 4 else 7)
     save(fig, "indegree_ccdf.png")
 
     # ------------------------------------------------ citation flow
@@ -159,7 +172,7 @@ def main():
     yrows = [{"institution": n, "year": y, "in_flow": yr_in[(n, y)], "out_flow": yr_out[(n, y)]} for n in INSTS.values() for y in YEARS]
     write_csv("citation_flow_yearly.csv", yrows)
 
-    fig, axes = plt.subplots(1, 2, figsize=(10, 3.9), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(10 if len(INSTS) <= 2 else 13, 3.9 if len(INSTS) <= 2 else 5), sharey=True)
     for ax, (key, label) in zip(axes, [("in_flow", "In-flow: Indian works citing our papers"),
                                        ("out_flow", "Out-flow: our papers citing Indian works")]):
         for n in INSTS.values():
@@ -170,11 +183,11 @@ def main():
         ax.set_xticks(YEARS[::2])
         ax.set_xlabel("year of the citing paper (2026 partial)")
     axes[0].set_ylabel("citation edges")
-    axes[0].legend(loc="upper left")
+    axes[0].legend(loc="upper left", ncol=1 if len(INSTS) <= 4 else 2, fontsize=9 if len(INSTS) <= 4 else 6)
     fig.suptitle("Citation flow with other Indian institutions, 2016-2026", x=0.01, y=1.04, ha="left", fontweight="bold", fontsize=12)
     save(fig, "citation_flow_yearly.png")
 
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.4))
+    fig, axes = panels(len(INSTS), (11, 4.4))
     for ax, n in zip(axes, INSTS.values()):
         top = [r for r in prow2 if r["institution"] == n][:10]
         ax.barh(range(len(top)), [r["citations_from_partner"] for r in top], color=COLOR[n], height=0.6)

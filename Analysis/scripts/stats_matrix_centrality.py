@@ -20,7 +20,9 @@ PageRank (Estrada & Higham 2010, SIAM Rev. 52, 696; Benzi & Klymko 2015, SIAM J.
    Communicability G = e^A. Raw G_pq is dominated by the lambda_1 term (lambda_1 - lambda_2 is large), so campuses and
    departments are compared with the communicability angle cos = G_pq / sqrt(G_pp G_qq).
    Campus ratio rho_KR = mean G_KR / sqrt(mean G_KK mean G_RR), and the share of it lost when one faculty member is
-   removed (recomputed for every faculty member).
+   removed (recomputed for every faculty member). With more than two institutes in the run the communicability angle is
+   given for every institute pair, and the ratio and the removal test are done for the pair with the most direct
+   co-author ties between them (K = the first, R = the second institute of that pair).
 3. Dynamic communicability (Grindrod, Parsons, Higham & Estrada 2011, Phys. Rev. E 83, 046120): one co-authorship
    graph per year A_t; Q = prod_t (I - a A_t)^-1 counts walks that respect time (a later step uses a later or the same
    year). Broadcast b = Q 1 (who can start chains that reach many others later), receive r = Q' 1.
@@ -30,13 +32,13 @@ Outputs (results/): citation_centrality_top10.csv, citation_centrality_test.csv,
   department_communicability.csv, cross_campus_removal.csv, dynamic_communicability_top.csv
 Figures: katz_interpolation.png, cross_campus_removal.png, centrality_prediction.png
 usage: python stats_matrix_centrality.py"""
-import os, json, collections as C
+import os, json, itertools, collections as C
 import numpy as np
 import networkx as nx
 import scipy.sparse as sp
 from scipy.sparse.linalg import svds, expm_multiply
 from scipy.stats import spearmanr, rankdata
-from common import INSTS, CACHE, DATA, RES, read_csv, write_csv, style, save, COLOR, TEXT2, MUTED, plt
+from common import INSTS, CACHE, DATA, RES, read_csv, iter_csv, write_csv, style, save, COLOR, TEXT2, MUTED, plt, N_INST, oa_have, note_skip
 from stats_citation import citation_graph
 from stats_authorship import faculty_graph
 
@@ -154,12 +156,13 @@ def citation_part():
                   "value": f"{who.most_common(1)[0][1]} ({fname.get(who.most_common(1)[0][0], who.most_common(1)[0][0])})"}]
     # citation cycles (mutual citations): they set rho and so the largest allowed Katz a
     scc = sorted((c for c in nx.strongly_connected_components(G) if len(c) > 1), key=len, reverse=True)
-    who = C.Counter(fid for p in scc[0] for fid in meta[p]["faculty"])
     summ += [{"metric": "citation cycles: strongly connected groups of >= 2 papers", "value": len(scc)},
-             {"metric": "papers inside citation cycles", "value": sum(map(len, scc))},
-             {"metric": "largest cycle group: papers, citations, faculty",
-              "value": f"{len(scc[0])}, {G.subgraph(scc[0]).number_of_edges()}, "
-                       + "; ".join(f"{fname.get(k_, k_)} {c}" for k_, c in who.most_common(2))}]
+             {"metric": "papers inside citation cycles", "value": sum(map(len, scc))}]
+    if scc:
+        who = C.Counter(fid for p in scc[0] for fid in meta[p]["faculty"])
+        summ.append({"metric": "largest cycle group: papers, citations, faculty",
+                     "value": f"{len(scc[0])}, {G.subgraph(scc[0]).number_of_edges()}, "
+                              + "; ".join(f"{fname.get(k_, k_)} {c}" for k_, c in who.most_common(2))})
     write_csv("citation_centrality_summary.csv", summ)
 
     trows = []
@@ -174,6 +177,11 @@ def citation_part():
     write_csv("citation_centrality_top10.csv", trows)
 
     # ---- out-of-sample: network at the end of TEST_YEAR -> citations received afterwards
+    if not oa_have("counts_by_year"):
+        note_skip("stats_matrix_centrality.py", "citation centrality out-of-sample test (citation_centrality_test.csv, centrality_prediction.png)",
+                  "needs the worldwide citations each paper received per year (OpenAlex counts_by_year), not cached for these institutes",
+                  "fetch_openalex_extra.py (OpenAlex credits): oa_counts_by_year.json")
+        return summ, []
     cby = json.load(open(os.path.join(CACHE, "oa_counts_by_year.json"), encoding="utf-8"))
     old = [n for n in nodes if meta[n]["year"] <= TEST_YEAR]
     H = G.subgraph(old)
@@ -306,14 +314,28 @@ def faculty_part():
 
     # ---- where the leading eigenvector sits: localisation on the densest core (lambda_1 > sqrt(k_max) means a
     # dense core, not one hub, sets lambda_1; Pastor-Satorras & Castellano 2016, Sci. Rep. 6, 18847)
-    K = inst == "IIT Kharagpur"
-    R = ~K
+    inames = list(INSTS.values())
+    lab = lambda nm: nm.replace("IIT ", "")                   # 'Kharagpur', 'Roorkee', ...
+    if N_INST == 2:
+        K = inst == inames[0]
+        R = ~K
+        nK, nR = inames
+    else:                                                     # the pair of institutes with the most direct co-author ties
+        direct = {(a_, b_): int(A[np.ix_(inst == a_, inst == b_)].sum()) for a_, b_ in itertools.combinations(inames, 2)}
+        nK, nR = max(direct, key=lambda k: (direct[k], -inames.index(k[0]), -inames.index(k[1])))
+        K, R = inst == nK, inst == nR
     core = nx.core_number(G)
     kmax = max(core.values())
     kcore = {i for i, v in enumerate(nodes) if core[v] == kmax}
-    summ += [{"metric": "share of eigenvector weight (sum v^2) on Roorkee faculty", "value": round(float(np.sum(v1[R] ** 2)), 4)},
-             {"metric": "Roorkee share of faculty", "value": round(float(R.mean()), 4)},
-             {"metric": "max k-core: k, faculty, institutions",
+    if N_INST == 2:
+        summ += [{"metric": f"share of eigenvector weight (sum v^2) on {lab(nR)} faculty", "value": round(float(np.sum(v1[R] ** 2)), 4)},
+                 {"metric": f"{lab(nR)} share of faculty", "value": round(float(R.mean()), 4)}]
+    else:
+        summ += [{"metric": f"share of eigenvector weight (sum v^2) on {nm} faculty", "value": round(float(np.sum(v1[inst == nm] ** 2)), 4)}
+                 for nm in inames]
+        summ += [{"metric": f"{nm} share of faculty", "value": round(float((inst == nm).mean()), 4)} for nm in inames]
+    summ += [
+            {"metric": "max k-core: k, faculty, institutions",
               "value": f"{kmax}, {len(kcore)}, " + "; ".join(f"{k} {c}" for k, c in C.Counter(inst[list(kcore)]).most_common())},
              {"metric": "eigenvector top 10 inside the max k-core", "value": len(kcore & set(top_v.tolist()))}]
 
@@ -329,9 +351,17 @@ def faculty_part():
         return cos[m][off[m]]
 
     crow = []
-    for a_, b_, lab in ((K, K, "Kharagpur - Kharagpur"), (R, R, "Roorkee - Roorkee"), (K, R, "Kharagpur - Roorkee")):
+    if N_INST == 2:
+        pairs = ((K, K, f"{lab(nK)} - {lab(nK)}"), (R, R, f"{lab(nR)} - {lab(nR)}"), (K, R, f"{lab(nK)} - {lab(nR)}"))
+    else:
+        masks = {nm: inst == nm for nm in inames}
+        pairs = [(masks[a_], masks[a_], f"{lab(a_)} - {lab(a_)}") for a_ in inames] + \
+                [(masks[a_], masks[b_], f"{lab(a_)} - {lab(b_)}") for a_, b_ in itertools.combinations(inames, 2)]
+    for a_, b_, label in pairs:
         c = mean_cos(a_, b_)
-        crow.append({"pair": lab, "faculty_in_giant_component": f"{int((a_ & g).sum())} x {int((b_ & g).sum())}",
+        if not c.size:
+            continue
+        crow.append({"pair": label, "faculty_in_giant_component": f"{int((a_ & g).sum())} x {int((b_ & g).sum())}",
                      "direct_coauthor_pairs": int(A[np.ix_(a_, b_)].sum() / (2 if a_ is b_ else 1)),
                      "mean_cos_angle": round(float(c.mean()), 4), "median_cos_angle": round(float(np.median(c)), 4)})
     write_csv("campus_communicability.csv", crow)
@@ -376,12 +406,13 @@ def faculty_part():
                       "rank_betweenness": rows_rank(btw, i), "rank_degree": rows_rank(deg, i),
                       "direct_cross_campus_coauthors": int(A[i, R].sum() if K[i] else A[i, K].sum())})
     write_csv("cross_campus_removal.csv", rrows)
-    summ += [{"metric": "campus communicability ratio rho_KR", "value": round(float(base), 4)},
-             {"metric": "rho_KR lost by removing the single most important faculty member", "value": round(float(lost.max()), 4)},
-             {"metric": "faculty whose removal lowers rho_KR by more than 5%", "value": int(np.sum(lost > 0.05))},
-             {"metric": "Spearman of rho_KR loss with betweenness (faculty with degree > 0)",
+    rk = "rho_KR" if N_INST == 2 else f"rho ({lab(nK)} vs {lab(nR)})"
+    summ += [{"metric": f"campus communicability ratio {rk}", "value": round(float(base), 4)},
+             {"metric": f"{rk} lost by removing the single most important faculty member", "value": round(float(lost.max()), 4)},
+             {"metric": f"faculty whose removal lowers {rk} by more than 5%", "value": int(np.sum(lost > 0.05))},
+             {"metric": f"Spearman of {rk} loss with betweenness (faculty with degree > 0)",
               "value": round(ranks_spearman(lost[deg > 0], btw[deg > 0]), 3)},
-             {"metric": "top-10 overlap: rho_KR loss vs betweenness",
+             {"metric": f"top-10 overlap: {rk} loss vs betweenness",
               "value": len(set(np.argsort(-lost)[:TOP]) & set(np.argsort(-btw)[:TOP]))}]
     write_csv("faculty_matrix_summary.csv", summ)
 
@@ -397,13 +428,13 @@ def faculty_part():
 
     fig, ax = plt.subplots(figsize=(6.5, 3.4))
     has = lost > 0
-    for name, sel in (("IIT Kharagpur", K), ("IIT Roorkee", R)):
+    for name, sel in ((nK, K), (nR, R)):
         ax.scatter(btw[has & sel], lost[has & sel] * 100, s=10, color=COLOR[name], alpha=0.7, label=name)
     ax.legend(loc="upper left")
     ax.set_xscale("symlog", linthresh=1e-4)
     ax.set_xlabel("betweenness")
     ax.set_ylabel("% of campus communicability ratio lost")
-    ax.set_title("Removing one faculty member: who links the campuses?")
+    ax.set_title("Removing one faculty member: who links the campuses?" if N_INST == 2 else f"Removing one faculty member: who links {lab(nK)} and {lab(nR)}?")
     save(fig, "cross_campus_removal.png")
     return G, info, nodes, deg
 
@@ -417,22 +448,22 @@ def dynamic_part(G, info, nodes, deg):
     pos = {v: i for i, v in enumerate(nodes)}
     n = len(nodes)
     yearly = C.defaultdict(set)
-    for e in read_csv(os.path.join(DATA, "authorship_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "authorship_network.csv")):
         a, b = e["author_a_id"], e["author_b_id"]
         if e["a_is_faculty"] == "TRUE" and e["b_is_faculty"] == "TRUE" and a in pos and b in pos and a != b and e["year"]:
             yearly[int(e["year"])].add((pos[a], pos[b]))
     years = sorted(y for y in yearly if 2016 <= y <= 2026)
-    mats = {}
-    for y in years:
+    def mat(y):                                    # one yearly matrix at a time (11 dense n x n matrices do not fit for n = 4,000+)
         M = np.zeros((n, n))
         for i, j in yearly[y]:
             M[i, j] = M[j, i] = 1
-        mats[y] = M
-    rho = max(float(np.max(np.linalg.eigvalsh(mats[y]))) for y in years)
+        return M
+
+    rho = max(float(np.max(np.linalg.eigvalsh(mat(y)))) for y in years)
     a = DYN_F / rho
     Q = np.eye(n)
     for y in years:
-        Q = Q @ np.linalg.inv(np.eye(n) - a * mats[y])
+        Q = Q @ np.linalg.inv(np.eye(n) - a * mat(y))
         Q /= np.linalg.norm(Q)
     np.fill_diagonal(Q, 0)
     bcast, recv = Q.sum(axis=1), Q.sum(axis=0)

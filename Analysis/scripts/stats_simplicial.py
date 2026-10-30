@@ -26,7 +26,7 @@ import numpy as np
 import networkx as nx
 from scipy.stats import mannwhitneyu
 from sklearn.metrics import average_precision_score, roc_auc_score
-from common import DATA, read_csv, write_csv, style, save, COLOR, plt
+from common import DATA, iter_csv, write_csv, style, save, COLOR, plt
 from stats_authorship import faculty_graph
 
 CAP = 25
@@ -49,7 +49,7 @@ def load_papers(split_names=False):
     name in the network file) as a different person on every paper: a check that merged namesakes do not make
     triangles."""
     mem, yr = C.defaultdict(set), {}
-    for e in read_csv(os.path.join(DATA, "authorship_network.csv")):
+    for e in iter_csv(os.path.join(DATA, "authorship_network.csv")):
         p = e["paper_doi"]
         if p:
             ids = (e["author_a_id"], e["author_b_id"])
