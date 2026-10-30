@@ -474,9 +474,10 @@ unchanged (§1–6).
   "IIITK, Dept. of ECE, Kottayam", left uncertain because IIITK is ambiguous. Three strings print "Indian Institute of Information
   Technology, Sri City 441108", which is IIIT Nagpur's PIN. They are left as `other` for Nagpur.
 
-### 7.3 Progress (2026-10-30, interim: pushed for review)
+### 7.3 Results (2026-10-30, all 22)
 Rosters, golden sets and precision audits are built by Sonnet sub-agents with the same briefs as §3 and §5.1. The
-pipeline is `raw/pipeline_one.sh` (first pass → `orcid_roster_ids` → `dblp_roster_ids` → `run_v2.sh final`) followed by
+pipeline is `raw/pipeline_one.sh` (first pass → `orcid_roster_ids` → `dblp_roster_ids` → `run_v2.sh roster`, `loose`,
+`arxiv`, `refresh`; the stage names of the IIT team's merged `run_v2.sh`, which dropped `final`) followed by
 `raw/verify_one.sh` (verify_epmc → verify_springer → resolve_todos → refresh + validate). `validate.py` reports 0
 violations for every institute below.
 
@@ -497,11 +498,24 @@ violations for every institute below.
 | Kalyani | 439 | 289 | 150 | 85 | 76.2 % (77/101) | 70.8 % (24) | 100 % | 87 % (34/39) | 14 % |
 | Kottayam | 716 | 566 | 150 | 129 | 59.3 % (86/145) | 69.8 % (43) | 100 % | 76 % (28/37) | 12 % |
 | Manipur | 132 | 95 | 37 | 84 | 49.0 % (24/49) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
+| Nagpur | 441 | 310 | 131 | 112 | 55.2 % (69/125) | 70.7 % (41) | 100 % | 86 % (25/29) | 23 % |
+| Ranchi | 367 | 248 | 119 | 43 | 59.8 % (49/82) | 79.2 % (24) | 100 % | 80 % (24/30) | 29 % |
+| Surat | 164 | 96 | 68 | 64 | 78.6 % (11/14) | – (0) | 100 % | 42 % (16/38)† | 15 % |
+| Bhopal | 249 | 188 | 61 | 76 | 66.1 % (39/59) | 80.0 % (35) | 100 % | 40 % (10/25)† | 0 % |
+| Bhagalpur | 388 | 290 | 98 | 41 | 65.4 % (53/81) | 67.9 % (28) | 100 % | 75 % (24/32) | 17 % |
+| Agartala | 25 | 15 | 10 | 2 | 25.0 % (1/4) | 33.3 % (3) | 100 % (15/15) | 50 % (2/4) | 0/2 |
+| Raichur | 82 | 53 | 29 | 37 | 66.7 % (26/39) | 75.0 % (4) | 100 % | 79 % (22/28) | 9 % |
 
 \* Vadodara was audited before the conflated DBLP profile of Pratik Shah (8 of its 13 likely `no`) was removed; the rebuilt
 file has 20 fewer likely records. Kota's verified 25/25 includes one operator correction (a Springer page prints IIIT Kota as
 the second affiliation; OpenAlex lists only the first). Golden sets under ~60 papers (Kurnool, Lucknow, Sonepat, Tiruchirappalli,
-Manipur) give recall with wide uncertainty.
+Manipur, Surat, Bhopal, Agartala, Raichur) give recall with wide uncertainty.
+
+† Audited before the roster fix that followed: Surat's Pradeep Singh had no joining year, so his earlier papers counted
+(joining year 2026 from ORCID; rebuilt file 164 records), and Bhopal's Director Ashutosh Kumar Singh is MANIT faculty
+(now `adjunct`; 282 → 249 records). The rebuilt likely tiers have not been re-audited. Agartala is audited whole (25
+records); it has had its own faculty only since about 2024. Raichur's likely `no` are mostly Debmalya Sain's papers from
+Granada and IISc before joining; its IIT Hyderabad mentors are `visiting`.
 
 **IIIT Hyderabad with the institute repository (2026-10-30, operator decision):** `iiith_publist.py` adds the 6,667 items of
 https://www.iiit.ac.in/publications/index.php as evidence `institute_list` (tier likely, main file; contradicted records still
@@ -510,11 +524,17 @@ rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall agai
 
 **Roster corrections after audits or on review:** Pratik Shah's DBLP id removed (Vadodara); MNIT post-holders `adjunct` (Kota);
 the IIT Roorkee Director-in-charge `adjunct` (Sonepat); 31 lab faculty `adjunct` (Kottayam); later roster briefs ask agents to file
-post-holders employed elsewhere and lab-only staff as `adjunct` directly.
+post-holders employed elsewhere and lab-only staff as `adjunct` directly. Later: 17 guest faculty `adjunct` (Bhagalpur), Pradeep
+Singh's joining year (Surat), the MANIT Director `adjunct` (Bhopal).
 
-In progress (2026-10-30): Nagpur, Ranchi, Surat; not started: Bhopal, Bhagalpur, Agartala, Raichur.
+**Process notes.** After merging the IIT team's changes (4672090, 97452dc): `run_v2.sh final` no longer exists, so the
+runners call `roster`, `loose`, `arxiv`, `refresh`; the arXiv gate in `roster_channels.py` imported `fcntl`, which Windows
+lacks, so it falls back to `msvcrt` (9ce5959); `validate.py` sampled 200 records even when fewer were eligible (Sonepat) and
+now samples `min(200, n)` (57224b4). Neither changes IIT output. One roster agent (Raichur) stopped a process by name, which
+could have killed other agents' runs; briefs now say to kill by PID only. OpenAlex works for all 22 are in `v2/openalex/`;
+when both API keys ran out for the day, the anonymous polite pool was used (the same works, slower).
 
-**Main finding: the likely tier is weaker at young, high-turnover IIITs** (50–91 %, against 71–97 % for the first eight).
+**Main finding: the likely tier is weaker at young, high-turnover IIITs** (40–91 % as audited, against 71–97 % for the first eight).
 Almost every `no` is a paper from the joining or leaving year, or from an ORCID employment window, that prints the person's
 previous or next employer. Examples are Din Bandhu (Kurnool 2022–23, then Manipal), Chandranath Adak (Lucknow, then Patna and
 JIS) and Ruhul Amin (Naya Raipur, earlier Thapar and IIT (ISM)). Crossref holds no affiliation for these papers, so
