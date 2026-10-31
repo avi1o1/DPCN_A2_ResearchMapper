@@ -19,6 +19,14 @@ from faculty import load_roster, compatible, split, tokens, dept_in
 
 MIN_PAPERS = 3
 ORG = {"iit_kharagpur": re.compile(r"kharagpur", re.I), "iit_roorkee": re.compile(r"roorkee", re.I)}
+
+
+def org_match(inst, org):
+    """Employment organisation is this institute: the two regexes above, else (v2 institutes) the registry-driven classifier."""
+    if inst in ORG:
+        return bool(ORG[inst].search(org))
+    from affil import classify
+    return classify(inst, org) == "iit"
 FACULTY_ROLE = re.compile(r"professor|faculty|lecturer|\bhead\b|\bdean\b", re.I)
 NOT_FACULTY = re.compile(r"inspire|ramanujan|fellow|visiting|adjunct|guest|emerit|student|scholar|ph\.?\s*d|post[- ]?doc|research (associate|fellow|"
                          r"assistant|scientist)|project|intern|\bjrf\b|\bsrf\b|teaching assistant|honorary", re.I)
@@ -68,7 +76,7 @@ def faculty_jobs(rec, inst):
             e = s.get("employment-summary") or {}
             org = (e.get("organization") or {}).get("name") or ""
             role = e.get("role-title") or ""
-            if not ORG[inst].search(org) or not FACULTY_ROLE.search(role) or NOT_FACULTY.search(role):
+            if not org_match(inst, org) or not FACULTY_ROLE.search(role) or NOT_FACULTY.search(role):
                 continue
             yr = lambda d: int(((d or {}).get("year") or {}).get("value")) if ((d or {}).get("year") or {}).get("value") else None
             out.append({"organization": org, "department": e.get("department-name"), "role": role,

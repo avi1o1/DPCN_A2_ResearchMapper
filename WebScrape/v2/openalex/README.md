@@ -7,5 +7,5 @@ Enrichment scripts are unchanged. 97–99 % of each institute's DOIs were found.
 
 Unzip into `Enrichment/cache/a_works_<inst>.jsonl` to use them with the Enrichment scripts; stage A then skips DOIs it has
 already queried only if `cache/a_queried_<inst>.txt` exists, so otherwise it re-queries them (about 1 credit per 100 DOIs).
-OpenAlex data is CC0. Only the online fetch was run: the offline Enrichment steps (merge, faculty, export, networks) are
+Datasets finished on 2026-10-30 from Sonepat on were fetched without a key (the polite pool, 1,000 credits a day per IP), because both keys had used up their daily credits. OpenAlex data is CC0. Only the online fetch was run: the offline Enrichment steps (merge, faculty, export, networks) are
 still written for the v1 Kharagpur/Roorkee data.

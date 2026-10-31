@@ -1,0 +1,47 @@
+roster_name	dblp_person	decision	route_or_reason	verified_doi_overlap
+Anand Pratap Singh	https://dblp.org/pid/173/4547;https://dblp.org/pid/89/7434	not accepted	no route	0
+Dhiraj Kumar Patel	https://dblp.org/pid/278/9330;https://dblp.org/pid/330/8293	not accepted	no route	0
+Lokendra Chouhan	https://dblp.org/pid/267/5105	accepted	R1 orcid	0
+Nidhi Desai	https://dblp.org/pid/242/0609	not accepted	no route	0
+Pradeep Singh	https://dblp.org/pid/25/1998-1	rejected	different ORCID 0000-0002-2806-8432	0
+Pradeep Singh	https://dblp.org/pid/25/1998-2	rejected	different ORCID 0000-0003-4494-4436	0
+Pradeep Singh	https://dblp.org/pid/25/1998-3	rejected	different ORCID 0000-0003-2975-1003	0
+Pradeep Singh	https://dblp.org/pid/25/1998-4	rejected	different ORCID 0000-0003-2864-3262	0
+Pradeep Singh	https://dblp.org/pid/25/1998	not accepted	no route	0
+Prarthana J Mehta	https://dblp.org/pid/349/8381	not accepted	no route	0
+Rajeev Shorey	https://dblp.org/pid/88/6508	accepted	R3 verified	4
+Reema Patel	https://dblp.org/pid/51/9568	not accepted	no route	0
+Rishi Kr Sharma	https://dblp.org/pid/158/4544-1;https://dblp.org/pid/158/4544-2;https://dblp.org/pid/158/4544-3;https://dblp.org/pid/158/4544-4;https://dblp.org/pid/158/4544-5;https://dblp.org/pid/158/4544	not accepted	no route	0
+Ritesh Kumar	https://dblp.org/pid/49/3538-1;https://dblp.org/pid/49/3538-2;https://dblp.org/pid/49/3538-3;https://dblp.org/pid/49/3538	not accepted	no route	0
+Sachin D. Patil	https://dblp.org/pid/201/5643	accepted	R3 verified	2
+Shikha Maurya	https://dblp.org/pid/207/0820	not accepted	no route	0
+Sudeep Sharma	https://dblp.org/pid/255/1625	accepted	R3 verified	2
+Tanmay Dubey	https://dblp.org/pid/297/7180	not accepted	no route	0
+Vijay Kumar Patel	https://dblp.org/pid/178/7898	accepted	R1 orcid	0
+R. K. Jana	https://dblp.org/pid/259/4795;https://dblp.org/pid/70/6913	not accepted	no route	0
+R. P. Gohil	https://dblp.org/pid/405/4188	not accepted	no route	0
+Aditya Karnik	https://dblp.org/pid/74/5711	not accepted	no route	0
+Ashwin Ganesan	https://dblp.org/pid/70/5594	not accepted	no route	0
+Hiren Patel	https://dblp.org/pid/23/5134	not accepted	no route	0
+Neelesh B. Mehta	https://dblp.org/pid/59/3422	not accepted	no route	0
+Pamela Kumar	https://dblp.org/pid/212/8315	not accepted	no route	0
+Rahul Patel	https://dblp.org/pid/168/2241-1;https://dblp.org/pid/168/2241	not accepted	no route	0
+Rajni Moona	https://dblp.org/pid/147/5187	not accepted	no route	0
+Ravi Kant	https://dblp.org/pid/53/6560-1;https://dblp.org/pid/53/6560-2;https://dblp.org/pid/53/6560-3;https://dblp.org/pid/53/6560-4;https://dblp.org/pid/53/6560-5;https://dblp.org/pid/53/6560-6;https://dblp.org/pid/53/6560	not accepted	no route	0
+Rohit Verma	https://dblp.org/pid/75/1850	not accepted	no route	0
+Sumit Roy	https://dblp.org/pid/57/3191-1;https://dblp.org/pid/57/3191-2;https://dblp.org/pid/57/3191-3;https://dblp.org/pid/57/3191-4;https://dblp.org/pid/57/3191	not accepted	no route	0
+Upena D. Dalal	https://dblp.org/pid/12/7687	not accepted	no route	0
+Veena Mendiratta	https://dblp.org/pid/258/7998	not accepted	no route	0
+Vireshwar Kumar	https://dblp.org/pid/41/9886	not accepted	no route	0
+Abhinav Kumar	https://dblp.org/pid/115/6458-1	rejected	different ORCID 0000-0002-6468-7054	0
+Abhinav Kumar	https://dblp.org/pid/115/6458-3	rejected	different ORCID 0000-0001-9741-4020	0
+Abhinav Kumar	https://dblp.org/pid/115/6458-4	rejected	different ORCID 0000-0002-0043-631X	0
+Abhinav Kumar	https://dblp.org/pid/115/6458-5	rejected	overlap 1 < 5% of 32 DBLP DOIs (namesake profile?)	1
+Abhinav Kumar	https://dblp.org/pid/115/6458-7	rejected	different ORCID 0000-0001-5291-040X	0
+Abhinav Kumar	https://dblp.org/pid/115/6458-5	accepted	R1 orcid	0
+Adarsh Patel	https://dblp.org/pid/130/8464	not accepted	no route	0
+Archana Balmik	https://dblp.org/pid/307/0819	not accepted	no route	0
+Gopal Agarwal	https://dblp.org/pid/68/11350	not accepted	no route	0
+J. S. Bhat	https://dblp.org/pid/20/2214	not accepted	no route	0
+Pradeep Kumar Roy	https://dblp.org/pid/222/7091	accepted	R3 verified	6
+Shriman Narayana	https://dblp.org/pid/316/3986	not accepted	no route	1

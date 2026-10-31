@@ -376,15 +376,15 @@ Main file = verified + unverified-likely (`v2/<key>.json`); unconfirmed = "possi
 | IIIT | main | verified | likely | unconfirmed | recall | DOI recall (n) | P verified | P likely | P possible |
 |---|---|---|---|---|---|---|---|---|---|
 | Delhi | 4,695 | 2,568 | 2,127 | 1,003 | 85.0 % (368/433) | 86.6 % (247) | 100 % | 97 % (34/35) | 21 % |
-| Allahabad | 3,137 | 2,107 | 1,030 | 557 | 83.8 % (222/265) | 100 % (2) | 100 % | 80 % (28/35) | 30 % |
-| Gwalior | 2,146 | 1,378 | 768 | 713 | 81.3 % (217/267) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
+| Allahabad | 3,137 | 2,107 | 1,030 | 557 | 84.1 % (222/264) | 100.0 % (2) | 100 % | 80 % (28/35) | 30 % |
+| Gwalior | 2,146 | 1,378 | 768 | 713 | 81.9 % (217/265) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
 | Bangalore | 1,642 | 1,091 | 549 | 329 | 79.7 % (208/261) | 88.3 % (137) | 100 % | 97 % (32/33) | 29 % |
 | Jabalpur | 3,064 | 1,849 | 1,215 | 398 | 74.5 % (204/274) | 88.4 % (69) | 100 % | 91 % (30/33) | 58 % |
-| Hyderabad | 5,237 | 2,895 | 2,342 | 1,004 | 71.7 % (231/322) | 57.1 % (7) | 100 % | 92 % (35/38) | 24 % |
-| Pune | 235 | 164 | 71 | 87 | 62.8 % (59/94) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
-| Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (151/297) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
+| Hyderabad | 6,352 | 2,957 | 3,395 | 835 | 94.7 % (303/320) | 100.0 % (7) | 100 % | 95 % (37/39)* | 30 % |
+| Pune | 235 | 164 | 71 | 87 | 62.6 % (57/91) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
+| Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (150/295) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
 
-Bangalore's main file also holds 2 `ambiguous` records. `validate.py`: 0 violations for all eight.
+Bangalore's main file also holds 2 `ambiguous` records. \* Hyderabad includes the institute repository (§7.3); re-audited on the current file on 2026-10-31 (§7.6). `validate.py`: 0 violations for all eight.
 
 ### 6.1 Open problems
 * **Kancheepuram recall (50.8 %).** Most misses are papers on faculty pages in venues no index covers; some golden titles carry
@@ -474,47 +474,68 @@ unchanged (§1–6).
   "IIITK, Dept. of ECE, Kottayam", left uncertain because IIITK is ambiguous. Three strings print "Indian Institute of Information
   Technology, Sri City 441108", which is IIIT Nagpur's PIN. They are left as `other` for Nagpur.
 
-### 7.3 Progress (2026-10-30, interim: pushed for review)
+### 7.3 Results (2026-10-30, all 22)
 Rosters, golden sets and precision audits are built by Sonnet sub-agents with the same briefs as §3 and §5.1. The
-pipeline is `raw/pipeline_one.sh` (first pass → `orcid_roster_ids` → `dblp_roster_ids` → `run_v2.sh final`) followed by
+pipeline is `raw/pipeline_one.sh` (first pass → `orcid_roster_ids` → `dblp_roster_ids` → `run_v2.sh roster`, `loose`,
+`arxiv`, `refresh`; the stage names of the IIT team's merged `run_v2.sh`, which dropped `final`) followed by
 `raw/verify_one.sh` (verify_epmc → verify_springer → resolve_todos → refresh + validate). `validate.py` reports 0
 violations for every institute below.
 
 | IIIT | main | verified | likely | unconfirmed | recall (golden) | DOI recall (n) | P verified | P likely | P possible |
 |---|---|---|---|---|---|---|---|---|---|
-| Bhubaneswar | 1,123 | 702 | 421 | 396 | 67.3 % (72/107) | 72.3 % (47) | 100 % | 91 % (32/35) | 13 % |
+| Bhubaneswar | 1,123 | 702 | 421 | 396 | 67.0 % (71/106) | 71.7 % (46) | 100 % | 91 % (32/35) | 13 % |
 | Naya Raipur | 1,195 | 822 | 373 | 96 | 76.2 % (96/126) | 91.7 % (36) | 100 % | 81 % (25/31) | 19 % |
-| Guwahati | 1,231 | 805 | 426 | 187 | 55.3 % (83/150) | 55.6 % (9) | 100 % | 82 % (28/34) | 21 % |
+| Guwahati | 1,231 | 805 | 426 | 187 | 56.5 % (83/147) | 55.6 % (9) | 100 % | 82 % (28/34) | 21 % |
 | Sri City | 879 | 568 | 311 | 288 | 69.7 % (99/142) | 62.9 % (35) | 100 % | 71 % (25/35) | 36 % |
-| Lucknow | 240 | 176 | 64 | 70 | 81.5 % (44/54) | 85.7 % (21) | 100 % | 61 % (19/31) | 24 % |
-| Kurnool | 562 | 410 | 152 | 203 | 61.4 % (27/44) | 72.2 % (18) | 100 % | 50 % (15/30) | 15 % |
-| Vadodara | 364 | 241 | 123 | 153 | 63.6 % (63/99) | 81.0 % (21) | 100 % | 66 % (25/38)* | 7 % |
-| Dharwad | 426 | 295 | 131 | 140 | 68.8 % (55/80) | 77.8 % (27) | 100 % | 74 % (25/34) | 36 % |
+| Lucknow | 240 | 176 | 64 | 70 | 83.0 % (44/53) | 85.7 % (21) | 100 % | 61 % (19/31) | 24 % |
+| Kurnool | 562 | 410 | 152 | 203 | 62.8 % (27/43) | 77.8 % (18) | 100 % | 50 % (15/30) | 15 % |
+| Vadodara | 364 | 241 | 123 | 153 | 63.5 % (61/96) | 80.0 % (20) | 100 % | 66 % (25/38)* | 7 % |
+| Dharwad | 426 | 295 | 131 | 140 | 71.4 % (55/77) | 77.8 % (27) | 100 % | 74 % (25/34) | 36 % |
 | Kota | 225 | 148 | 77 | 161 | 58.1 % (43/74) | 56.0 % (25) | 100 % | 48 % (15/31) | 6 % |
 | Sonepat | 188 | 153 | 35 | 14 | 88.2 % (15/17) | 92.3 % (13) | 100 % | 82 % (23/28) | 0 % |
-| Una | 246 | 183 | 63 | 100 | 57.0 % (57/100) | 63.0 % (54) | 100 % | 63 % (22/35) | 23 % |
+| Una | 246 | 183 | 63 | 100 | 60.6 % (57/94) | 66.7 % (51) | 100 % | 63 % (22/35) | 23 % |
 | Tiruchirappalli | 187 | 148 | 39 | 65 | 61.5 % (24/39) | 70.6 % (17) | 100 % | 69 % (22/32) | 24 % |
-| Kalyani | 439 | 289 | 150 | 85 | 76.2 % (77/101) | 70.8 % (24) | 100 % | 87 % (34/39) | 14 % |
-| Kottayam | 716 | 566 | 150 | 129 | 59.3 % (86/145) | 69.8 % (43) | 100 % | 76 % (28/37) | 12 % |
-| Manipur | 132 | 95 | 37 | 84 | 49.0 % (24/49) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
+| Kalyani | 439 | 289 | 150 | 85 | 77.8 % (77/99) | 73.9 % (23) | 100 % | 87 % (34/39) | 14 % |
+| Kottayam | 716 | 566 | 150 | 129 | 59.7 % (86/144) | 69.8 % (43) | 100 % | 76 % (28/37) | 12 % |
+| Manipur | 132 | 95 | 37 | 84 | 51.1 % (24/47) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
+| Nagpur | 441 | 310 | 131 | 112 | 55.6 % (69/124) | 70.7 % (41) | 100 % | 86 % (25/29) | 23 % |
+| Ranchi | 367 | 248 | 119 | 43 | 61.3 % (49/80) | 79.2 % (24) | 100 % | 80 % (24/30) | 29 % |
+| Surat | 164 | 96 | 68 | 64 | 78.6 % (11/14) | – (0) | 100 % | 50 % (17/34)† | 17 % |
+| Bhopal | 249 | 188 | 61 | 76 | 69.6 % (39/56) | 87.5 % (32) | 100 % | 64 % (16/25)† | 0 % |
+| Bhagalpur | 388 | 290 | 98 | 41 | 67.9 % (53/78) | 70.4 % (27) | 100 % | 75 % (24/32) | 17 % |
+| Agartala | 25 | 15 | 10 | 2 | 33.3 % (1/3) | 33.3 % (3) | 100 % (15/15) | 50 % (2/4) | 0/2 |
+| Raichur | 82 | 53 | 29 | 37 | 65.8 % (25/38) | 75.0 % (4) | 100 % | 79 % (22/28) | 9 % |
 
 \* Vadodara was audited before the conflated DBLP profile of Pratik Shah (8 of its 13 likely `no`) was removed; the rebuilt
 file has 20 fewer likely records. Kota's verified 25/25 includes one operator correction (a Springer page prints IIIT Kota as
 the second affiliation; OpenAlex lists only the first). Golden sets under ~60 papers (Kurnool, Lucknow, Sonepat, Tiruchirappalli,
-Manipur) give recall with wide uncertainty.
+Manipur, Surat, Bhopal, Agartala, Raichur) give recall with wide uncertainty.
+
+† Re-audited on the rebuilt files on 2026-10-31 (§7.6). The first audits predated two roster fixes: Surat's Pradeep Singh had
+no joining year, so his earlier papers counted (joining year 2026 from ORCID; rebuilt file 164 records), and Bhopal's Director
+Ashutosh Kumar Singh is MANIT faculty (now `adjunct`; 282 → 249 records). First-audit likely precision: Surat 42 % (16/38),
+Bhopal 40 % (10/25). Agartala is audited whole (25
+records); it has had its own faculty only since about 2024. Raichur's likely `no` are mostly Debmalya Sain's papers from
+Granada and IISc before joining; its IIT Hyderabad mentors are `visiting`.
 
 **IIIT Hyderabad with the institute repository (2026-10-30, operator decision):** `iiith_publist.py` adds the 6,667 items of
 https://www.iiit.ac.in/publications/index.php as evidence `institute_list` (tier likely, main file; contradicted records still
-rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall against the golden set rises to 95.3 %, but 260 of its
-322 papers came from that repository, so the independent figure stays 71.7 % (§6).
+rejected). Main file 5,237 → 6,352 (2,957 verified, 3,395 likely). Recall against the golden set is 94.7 % (303/320 after the validity audit, §7.4; 97.1 % without
+the 8 golden rows that the papers' own affiliations refute). Many golden rows also appear in the repository.
 
 **Roster corrections after audits or on review:** Pratik Shah's DBLP id removed (Vadodara); MNIT post-holders `adjunct` (Kota);
 the IIT Roorkee Director-in-charge `adjunct` (Sonepat); 31 lab faculty `adjunct` (Kottayam); later roster briefs ask agents to file
-post-holders employed elsewhere and lab-only staff as `adjunct` directly.
+post-holders employed elsewhere and lab-only staff as `adjunct` directly. Later: 17 guest faculty `adjunct` (Bhagalpur), Pradeep
+Singh's joining year (Surat), the MANIT Director `adjunct` (Bhopal).
 
-In progress (2026-10-30): Nagpur, Ranchi, Surat; not started: Bhopal, Bhagalpur, Agartala, Raichur.
+**Process notes.** After merging the IIT team's changes (4672090, 97452dc): `run_v2.sh final` no longer exists, so the
+runners call `roster`, `loose`, `arxiv`, `refresh`; the arXiv gate in `roster_channels.py` imported `fcntl`, which Windows
+lacks, so it falls back to `msvcrt` (9ce5959); `validate.py` sampled 200 records even when fewer were eligible (Sonepat) and
+now samples `min(200, n)` (57224b4). Neither changes IIT output. One roster agent (Raichur) stopped a process by name, which
+could have killed other agents' runs; briefs now say to kill by PID only. OpenAlex works for all 22 are in `v2/openalex/`;
+when both API keys ran out for the day, the anonymous polite pool was used (the same works, slower).
 
-**Main finding: the likely tier is weaker at young, high-turnover IIITs** (50–91 %, against 71–97 % for the first eight).
+**Main finding: the likely tier is weaker at young, high-turnover IIITs** (40–91 % as audited, against 71–97 % for the first eight).
 Almost every `no` is a paper from the joining or leaving year, or from an ORCID employment window, that prints the person's
 previous or next employer. Examples are Din Bandhu (Kurnool 2022–23, then Manipal), Chandranath Adak (Lucknow, then Patna and
 JIS) and Ruhul Amin (Naya Raipur, earlier Thapar and IIT (ISM)). Crossref holds no affiliation for these papers, so
@@ -531,3 +552,118 @@ tier is 100 % in every audit.
 
 **Golden sets are thin for the young IIITs**: Kurnool 44 and Lucknow 54 papers, because faculty pages list work from before
 joining and the institutes' own publication lists stop early. Their recall figures have wide uncertainty.
+
+### 7.4 Golden-set validity audit, all 30 IIITs (2026-10-30)
+The same audit as the IIT team's (PROCESS.md §15.16), requested by the IIT team so the IIIT data matches the quality bar of
+`v2-all-institutes`. Per IIIT a seeded sample (seed 20261030) of up to 30 medium-confidence golden rows, stratified by source
+(`v2/golden/golden_validity_sample_<inst>.csv`), checked by independent Sonnet agents against the affiliation printed on each
+paper (OpenAlex raw strings, Crossref, Europe PMC, arXiv, publisher pages). The agents were told not to open the pipeline
+outputs. A paper counts as right when any author prints the IIIT, so co-author-only rows are right at paper level, as in §15.16.
+Results in `v2/golden/golden_validity_<inst>.csv`.
+
+| IIIT | right | wrong | undecidable | error rate | IIIT | right | wrong | undecidable | error rate |
+|---|---|---|---|---|---|---|---|---|---|
+| Delhi | 25 | 1* | 4 | 3.8 % | Kottayam | 24 | 1 | 5 | 4.0 % |
+| Hyderabad | 23 | 2 | 5 | 8.0 % | Kurnool | 28 | 1 | 1 | 3.4 % |
+| Allahabad | 28 | 1 | 1 | 3.4 % | Lucknow | 26 | 1 | 3 | 3.7 % |
+| Bangalore | 25 | 0 | 5 | 0 % | Manipur | 17 | 2 | 11 | 10.5 % |
+| Gwalior | 28 | 2 | 0 | 6.7 % | Nagpur | 27 | 1 | 2 | 3.6 % |
+| Jabalpur | 28 | 0 | 2 | 0 % | Ranchi | 21 | 2 | 7 | 8.7 % |
+| Kancheepuram | 26 | 2 | 2 | 7.1 % | Raichur | 25 | 1 | 4 | 3.8 % |
+| Pune | 22 | 3 | 5 | 12.0 % | Una | 21 | 6 | 3 | 22.2 % |
+| Sri City | 27 | 0 | 2 | 0 % | Vadodara | 19 | 3 | 8 | 13.6 % |
+| Naya Raipur | 26 | 0 | 4 | 0 % | Tiruchirappalli | 26 | 0 | 4 | 0 % |
+| Bhubaneswar | 27 | 1 | 2 | 3.6 % | Bhagalpur | 25 | 3 | 2 | 10.7 % |
+| Guwahati | 20 | 3 | 7 | 13.0 % | Bhopal | 24 | 3 | 3 | 11.1 % |
+| Dharwad | 27 | 3 | 0 | 10.0 % | Surat | 12 | 0 | 0 | 0 % (12 rows) |
+| Kalyani | 26 | 2 | 2 | 7.1 % | Sonepat | 2 | 0 | 0 | (2 rows) |
+| Kota | 26 | 0 | 4 | 0 % | Agartala | 0 | 1 | 0 | (1 row) |
+
+Pooled: 681 right, 45 wrong, 98 undecidable; error rate 6.2 % among decidable rows (IIT golden sets: 0–22 %), and 12 % of
+rows undecidable (IIT: 27–72 %). The wrong rows are papers from before joining or from the person's other employer (most;
+e.g. Una, Dharwad, Bhopal's MANIT papers, Manipur's IIT Guwahati papers), same-name people at another institute (Pune's DIAT
+namesake), non-papers (talks, a poster, edited books: Allahabad, Gwalior, Guwahati, Vadodara) and one other IIIT (Vadodara).
+44 of the 45 were dropped from the golden sets and recall recomputed (tables in §6 and §7.3 updated). \* Delhi's one wrong row is
+kept: the COMSNETS 2017 paper by Anubha Gupta (IIIT-Delhi faculty) is deposited with "IIT-Delhi" for all four authors, an
+indexing error rather than a golden-set error. Kurnool line 27 had the DOI of another paper; corrected to
+10.1049/iet-cdt.2020.0038. Recall changes are within ±3.6 points; Una rises most (57.0 → 60.6 %).
+
+### 7.5 Enrichment, all 30 IIITs (2026-10-31)
+
+The shared Enrichment scripts were extended in a separate commit (467c13e: the 30 IIITs in `oa.py`, and `roster_supplement.py`
+made to work for institutes other than Kharagpur and Roorkee; IIT behaviour unchanged). The full pipeline then ran once for the
+30 IIITs with `ENRICH_SCRAPE_DIR=WebScrape/v2`, `ENRICH_CACHE_DIR=Enrichment/cache_v2` and `ENRICH_OUT_DIR=Enrichment/out_v2_iiit`,
+so the IIT team's `out_v2` is untouched. Online stages (05:38–07:16 IST, two OpenAlex keys, about 13k credits): stage A top-up,
+A2 title search for DOI-less records (key 1 ran out during Hyderabad; the stage resumed on key 2), B and C (Indian citing/cited
+works), reference DOIs and the ORCID roster supplement. Then merge, faculty, `test_rules`, verify (all checks passed for all 30),
+export and the networks.
+
+Merge rejects a record when OpenAlex lists affiliations for every author and none is the IIIT ("rejected: OpenAlex affiliations
+of all authors name other in…"). "Unverified" is the remaining likely-tier records still found only through a person channel.
+
+| IIIT | records | verified | rejected by OpenAlex | unverified | no OpenAlex match |
+|---|---:|---:|---:|---:|---:|
+| agartala | 25 | 17 | 3 | 5 | 2 |
+| allahabad | 3,137 | 2,817 | 139 | 181 | 82 |
+| bangalore | 1,642 | 1,461 | 53 | 128 | 53 |
+| bhagalpur | 388 | 345 | 23 | 20 | 7 |
+| bhopal | 249 | 212 | 16 | 21 | 7 |
+| bhubaneswar | 1,123 | 1,019 | 32 | 72 | 37 |
+| delhi | 4,695 | 3,914 | 242 | 539 | 227 |
+| dharwad | 426 | 342 | 22 | 62 | 28 |
+| guwahati | 1,231 | 1,087 | 36 | 108 | 51 |
+| gwalior | 2,146 | 1,903 | 112 | 131 | 40 |
+| hyderabad | 6,352 | 4,742 | 267 | 1,343 | 902 |
+| jabalpur | 3,064 | 2,789 | 85 | 190 | 88 |
+| kalyani | 439 | 400 | 15 | 24 | 13 |
+| kancheepuram | 1,856 | 1,675 | 87 | 94 | 24 |
+| kota | 225 | 173 | 27 | 25 | 7 |
+| kottayam | 716 | 650 | 24 | 42 | 13 |
+| kurnool | 562 | 475 | 40 | 47 | 15 |
+| lucknow | 240 | 210 | 11 | 19 | 15 |
+| manipur | 132 | 109 | 8 | 15 | 6 |
+| nagpur | 441 | 388 | 32 | 21 | 4 |
+| naya_raipur | 1,195 | 1,055 | 50 | 90 | 40 |
+| pune | 235 | 199 | 13 | 23 | 14 |
+| raichur | 82 | 58 | 5 | 19 | 13 |
+| ranchi | 367 | 309 | 22 | 36 | 13 |
+| sonepat | 188 | 174 | 3 | 11 | 8 |
+| sri_city | 879 | 741 | 62 | 76 | 34 |
+| surat | 164 | 126 | 26 | 12 | 10 |
+| tiruchirappalli | 187 | 170 | 10 | 7 | 4 |
+| una | 246 | 217 | 21 | 8 | 3 |
+| vadodara | 364 | 316 | 24 | 24 | 11 |
+| **all 30** | 32,996 | 28,093 | 1,510 | 3,393 | 1,771 |
+
+Rejections are 4.6 % of records overall (Surat 16 %, Kota 12 %, Hyderabad 4.2 %); they stay in the enriched JSONs with their
+status and are in neither CSV. `group3_data.csv` holds verified records only (28,879 rows in the course's
+`group3` format); `group3_data_all.csv` adds the unverified ones (36,708 rows; not committed, regenerated by
+`export_csv.py`). Other outputs:
+`citation_network.csv` 184,882 edges, `authorship_network.csv` 71,296 pairs, `indian_connections.csv` 22,637 rows.
+
+Quartiles (2026-10-31, 09:45). The Scimago SJR CSVs for 2016–2025 were downloaded from scimagojr.com/journalrank.php ("Download data", one per year) through the operator's own Chrome session, where the site loaded without a challenge, and put in `Enrichment/cache/scimago/` (git-ignored, shared with the IIT runs). An offline rerun (merge, faculty, verify, export, networks; no OpenAlex calls) filled them: of the 13,507 journal rows in `group3_data.csv`, 12,689 (93.9 %) have a quartile (Q1 6,714, Q2 4,166, Q3 1,577, Q4 232); 818 journals are not in Scimago or have no ISSN match. Conference rows carry CORE ranks (A* 265, A 382, B 744, C 259). verify passed again for all 30.
+
+Open item. `verify_networks` reports one failure: IIITDM Jabalpur W4398769804 (10.1007/s11664-024-11136-3) has
+`cited_by_indian_inst` TRUE from stage C but no incoming edge, because the citing work is outside the edge set. One record in
+32,996; left as is. Its "Kharagpur-Roorkee" lines are IIT-specific labels and do not apply here.
+
+### 7.6 Precision re-audit of Surat, Bhopal and Hyderabad on the current files (2026-10-31)
+
+The three audits flagged as predating later changes (Surat and Bhopal roster fixes, Hyderabad's repository addition) were
+redone. `precision_sample.py` and the possible-tier draw were rerun on the current files with the same seed (20261007, 25 / 40 / 40).
+Papers already judged in the first audit (same DOI, else same title) kept their verdict, since it depends only on the paper's
+printed affiliations; they are marked "(carried over from the first audit)". The rest (Surat 13, Bhopal 46, Hyderabad 82) were
+judged by independent agents under the same brief.
+
+| IIIT | carried / new | P verified | P likely | P possible | unknown (v / l / p) |
+|---|---|---|---|---|---|
+| Surat | 92 / 13 | 100 % (25/25) | 50 % (17/34) | 17 % (4/23) | 0 / 6 / 17 |
+| Bhopal | 59 / 46 | 100 % (25/25) | 64 % (16/25) | 0 % (0/31) | 0 / 15 / 9 |
+| Hyderabad | 23 / 82 | 100 % (25/25) | 95 % (37/39) | 30 % (11/37) | 0 / 1 / 3 |
+
+Surat's likely `no` are again mostly Pradeep Singh: with joining year 2026, his 2026 papers stay, and four of them still print IIT
+Roorkee (papers in press at the move; one 2026 paper prints IIIT Surat). The others are namesakes (Abhinav Kumar, MNNIT). Bhopal's
+likely `no` are namesakes at IIT BHU, IIT Patna and IIT Indore; 15 of its 40 likely rows are unknown (Taylor & Francis chapters
+without deposited affiliations, the publisher returning 403). Hyderabad's two likely `no` are tenure boundaries (NUS, University
+of Hyderabad); its possible tier is mostly people at other institutions with the same names. Files:
+`v2/golden/precision_audit_iiit_{surat,bhopal,hyderabad}.csv`.
