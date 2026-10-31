@@ -68,7 +68,7 @@ f1 = gzip.open(os.path.join(CRD, "single_retry.jsonl.gz"), "at")
 still = []
 for d in never:
     try:
-        r = get("https://api.crossref.org/works/" + urllib.parse.quote(d, safe="/()"), params={"mailto": MAILTO})
+        r = get("https://api.crossref.org/works/" + urllib.parse.quote(d, safe="/()"), params={"mailto": MAILTO}, tries=3)
     except RuntimeError:   # one persistently failing DOI must not abort the stage
         still.append(d); continue
     if r.status_code == 200:
@@ -81,15 +81,22 @@ print("R1 recovered", len(never) - len(still), flush=True)
 
 # ---------------- R2 CSL content negotiation
 f2 = gzip.open(os.path.join(CRD, "csl.jsonl.gz"), "at"); n2 = 0
+csl_fail = 0
 for d in still:
     if d.startswith("10.48550/"):
         continue
+    if csl_fail >= 8:          # doi.org is not answering for these DOIs: this fallback is best effort, stop wasting minutes on it
+        print("R2 stopped after 8 consecutive failures", flush=True)
+        break
     try:
-        r = get("https://doi.org/" + urllib.parse.quote(d, safe="/()"), headers={"Accept": "application/vnd.citationstyles.csl+json"}, timeout=60)
+        r = get("https://doi.org/" + urllib.parse.quote(d, safe="/()"), headers={"Accept": "application/vnd.citationstyles.csl+json"}, timeout=15, tries=1)
         if r.status_code != 200 or not r.text.strip().startswith("{"):
+            csl_fail += 1
             continue
         c = r.json()
+        csl_fail = 0
     except Exception:
+        csl_fail += 1
         continue
     typ = {"article-journal": "journal-article", "paper-conference": "proceedings-article", "chapter": "book-chapter",
            "book": "book", "posted-content": "posted-content", "report": "report", "thesis": "dissertation"}.get(c.get("type"), "other")
@@ -206,11 +213,11 @@ for _, r in RECS:
             ids.append(q)
 ids = sorted(set(ids))
 print("R5 S2 ids", len(ids), flush=True)
-out = open(sfn, "a"); got = 0
+out = open(sfn, "a"); got = 0; failed_batches = 0
 for i in range(0, len(ids), 100):
     batch = ids[i:i + 100]
     res = None
-    for attempt in range(12):
+    for attempt in range(4):
         try:
             r = post("https://api.semanticscholar.org/graph/v1/paper/batch", json_body={"ids": batch},
                      params={"fields": "externalIds,citationCount,referenceCount,references.externalIds"}, tries=1, timeout=120)
@@ -218,7 +225,12 @@ for i in range(0, len(ids), 100):
         except Exception:
             time.sleep(5 + 5 * attempt)
     if res is None:
+        failed_batches += 1
+        if failed_batches >= 2:       # the anonymous Semantic Scholar pool is rate-limiting: this data is optional (OpenCitations covers it later); resume next run
+            print("R5 stopped: two failed batches in a row", flush=True)
+            break
         continue
+    failed_batches = 0
     for q, p in zip(batch, res):
         row = {"q": q}
         if p:
