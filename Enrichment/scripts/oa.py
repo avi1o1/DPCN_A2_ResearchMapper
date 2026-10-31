@@ -75,7 +75,8 @@ credits = {"used": 0, "remaining": None}
 
 def get(path, params=None, tries=8):
     """GET an OpenAlex endpoint; returns parsed JSON, or None for a 404."""
-    params = dict(params or {}, api_key=api_key())
+    # OPENALEX_NO_KEY=1: use OpenAlex's free unauthenticated daily allowance (about 1,000 credits per network address, shared)
+    params = dict(params or {}) if os.environ.get("OPENALEX_NO_KEY") == "1" else dict(params or {}, api_key=api_key())
     for attempt in range(tries):
         wait = 0.12 - (time.time() - _last[0])
         if wait > 0:

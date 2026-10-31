@@ -11,6 +11,7 @@
 usage: python verify.py <inst_key> [...]"""
 import os, sys, json, collections as C
 from oa import DATA, OUT
+import ranks
 
 ALLOWED_CHANGE = {"affiliation_status", "evidence", "institute_affiliations_matched", "todo_fields", "references_meta"}
 FIELDS = ["title", "authors", "year", "type", "venue", "issn", "doi", "citations", "references"]
@@ -79,7 +80,12 @@ for inst in sys.argv[1:]:
         if q:
             if n["type"] != "journal":
                 bad("quartile_on_non_journal", rid)
-            if q["sjr_year"] != min(n["year"], 2025):
+            # the Scimago file of the publication year where one exists; otherwise the latest available year is final
+            # (ranks.quartile: before the first file -> first file, after/between files -> latest file)
+            exp = min(n["year"], 2025)
+            if exp not in ranks.SJR:
+                exp = min(ranks.SJR) if (ranks.SJR and exp < min(ranks.SJR)) else (max(ranks.SJR) if ranks.SJR else exp)
+            if q["sjr_year"] != exp:
                 bad("quartile_wrong_year", rid)
         if n.get("core") and n["type"] != "conference":
             bad("core_on_non_conference", rid)

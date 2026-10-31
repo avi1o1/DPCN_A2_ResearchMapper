@@ -105,6 +105,7 @@ f2.close()
 print("R2 csl records", n2, flush=True)
 
 R3_WORKERS = int(os.environ.get("R3_WORKERS", "6"))
+S2_BLOCK = [0.0]   # Semantic Scholar answers 429 once its anonymous pool is used up: skip it for a while instead of retrying every paper
 
 # ---------------- R3 DOI-less title resolution (on candidate keys, so build_candidates can apply them)
 for inst in INSTS:
@@ -146,10 +147,10 @@ for inst in INSTS:
             if not best and c["meta"].get("arxiv"):
                 best = "10.48550/arxiv." + re.sub(r"v\d+$", "", c["meta"]["arxiv"].lower().replace("arxiv:", ""))
             # Semantic Scholar title match (shared anonymous pool: tolerate failures)
-            if not best:
+            if not best and time.time() >= S2_BLOCK[0]:
                 try:
                     r = get("https://api.semanticscholar.org/graph/v1/paper/search/match",
-                            params={"query": c["title"], "fields": "title,year,externalIds"}, tries=4)
+                            params={"query": c["title"], "fields": "title,year,externalIds"}, tries=1)
                     if r.status_code == 200:
                         for it in r.json().get("data", []):
                             ex = it.get("externalIds") or {}
@@ -157,7 +158,7 @@ for inst in INSTS:
                                 best = norm_doi(ex.get("DOI")) or ("10.48550/arxiv." + ex["ArXiv"].lower() if ex.get("ArXiv") else "")
                                 break
                 except Exception:
-                    pass
+                    S2_BLOCK[0] = time.time() + 300      # rate-limited or down: no Semantic Scholar calls for 5 minutes
         return best
 
     from concurrent.futures import ThreadPoolExecutor

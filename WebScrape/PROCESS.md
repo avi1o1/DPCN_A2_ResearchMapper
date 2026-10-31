@@ -1177,3 +1177,17 @@ F2(a) (fill the missing joining years) are separate tasks. The branch-categorisa
   folder. IIT Bhilai (live file of 2026-10-30, reproduced exactly by the old code): verified 1,299 -> 1,299, likely 500 -> 458 (F1 13, F5 29;
   42 records move to the unconfirmed file, nothing else changes), 2 `likely-untimed`; golden recall 72.1 % -> 71.4 % (two arXiv rows). IIT Kanpur
   (inputs newer than the live file): likely 7,038 -> 7,002 (F1 32, F5 4), verified unchanged.
+
+Ropar (re-run on the v2 procedure, arXiv pass included): Golden papers: 339; found: 256; **recall = 75.5%**
+
+Ropar precision audit (65 sampled, re-run on the v2 procedure; yes needs affiliation text on the paper, tenure-only left unknown): verified 8 yes/0 no/17 unknown; likely 6 yes/0 no/34 unknown. No wrong match found; 51 of 65 rows could not be checked (blocked publisher pages, arXiv/INSPIRE pages without affiliations).
+
+Roorkee (re-run on the v2 procedure, arXiv pass and sanity rules included): Golden papers: 562; found: 406; **recall = 72.2%**
+
+Roorkee precision audit (65 sampled, v2 procedure; yes needs affiliation text on the paper, tenure-only left unknown): verified 17 yes/0 no/8 unknown; likely 3 yes/2 no/35 unknown. The nos: a Current Science paper (10.18520/cs/v114/i06/1346-1352) whose authors are at MES College Kuttippuram and CRRI New Delhi, and an astronomy arXiv paper (2510.08229) by authors with no Roorkee affiliation, probably a namesake of a Roorkee mechanical engineer.
+
+### Decisions taken without further input (2026-10-31)
+* NIRF "Other" staff: no roster change. The rule stays association-based: NIRF "Other" people whose association is Visiting (or blank with a foreign-visitor profile) are kept as `visiting` (BHU, Mandi, ISM, Bhilai, Jammu, Dharwad); "Other" people who are Regular or Adhoc/Contractual staff are non-faculty and excluded (Bhubaneswar 22, Guwahati 72, Indore 25: Guwahati's are Regular staff who joined 1999-2024, not visiting, so a blanket `visiting` label would be wrong). Re-running three institutes for 119 people with this label was not worth the cost.
+* `quartile_wrong_year` (Enrichment/scripts/verify.py): the check now expects the Scimago file of the publication year where one exists and otherwise the latest available year, which is the rule applied by ranks.py (only the 2016 and 2020 files could be obtained). It no longer flags the intended fallback.
+* OpenAlex credits: besides the keys in .env the runner also uses OpenAlex's free unauthenticated allowance (about 1,000 credits per day per network address, OPENALEX_NO_KEY=1), and picks the source with the most credits left.
+* Kharagpur's title-resolution step: Semantic Scholar's anonymous pool answers 429, which made every unmatched paper wait through four retries (about 15 s). resolve_todos.py now makes one attempt and then skips Semantic Scholar for five minutes after a failure. Crossref's own limits (3 requests per second, 3 concurrent) are already what the pipeline uses.

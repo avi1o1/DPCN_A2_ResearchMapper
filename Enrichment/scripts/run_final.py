@@ -21,20 +21,24 @@ log_lock = threading.Lock()
 
 
 def remaining(k):
+    """Credits left on a key; k=None probes the free unauthenticated allowance."""
+    url = "https://api.openalex.org/works?per-page=1&select=id" + (f"&api_key={k}" if k else "")
     try:
-        r = urllib.request.urlopen(f"https://api.openalex.org/works?per-page=1&select=id&api_key={k}", timeout=30)
+        r = urllib.request.urlopen(url, timeout=30)
         return int(r.headers.get("X-RateLimit-Remaining") or 0)
     except Exception:
         return 0
 
 
 def best_key(need):
+    """Returns the key with the most credits (a string), or "" for the unauthenticated allowance; waits when none has any."""
     while True:
-        rem, i = max((remaining(k), i) for i, k in enumerate(KEYS))
+        cands = [(remaining(k), i, k) for i, k in enumerate(KEYS)] + [(remaining(None), -1, "")]
+        rem, _, key = max(cands)
         if rem >= need:
-            return KEYS[i]
+            return key
         with log_lock:
-            print(f"{time.strftime('%H:%M')} no key has >= {need} credits (best {rem}); waiting 10 min", flush=True)
+            print(f"{time.strftime('%H:%M')} no key or free allowance has >= {need} credits (best {rem}); waiting 10 min", flush=True)
         time.sleep(600)
 
 
@@ -42,7 +46,13 @@ def run(step, inst, need=40, online=False, tries=300):
     for t in range(tries):
         e = dict(base, ENRICH_INSTS=inst)
         if online:
-            e["OPENALEX_API_KEY"] = best_key(need)
+            k = best_key(need)
+            if k:
+                e["OPENALEX_API_KEY"] = k
+                e.pop("OPENALEX_NO_KEY", None)
+            else:
+                e["OPENALEX_NO_KEY"] = "1"      # free unauthenticated allowance
+                e.pop("OPENALEX_API_KEY", None)
         print(f"== {time.strftime('%H:%M')} {inst} {' '.join(step)} try {t}", flush=True)
         if subprocess.run([sys.executable] + step, cwd=HERE, env=e).returncode == 0:
             return True
@@ -57,6 +67,8 @@ def heavy(step, inst):
 
 
 def pipeline(inst):
+    if os.path.exists(f"{R}/WebScrape/logs/pq4/{inst}.enriched"):
+        return                      # already fully enriched in an earlier run
     while not os.path.exists(READY % inst):
         time.sleep(60)
     print(f"== {time.strftime('%H:%M')} {inst} READY", flush=True)
@@ -74,7 +86,9 @@ def pipeline(inst):
 
 
 if __name__ == "__main__":
-    with ThreadPoolExecutor(5) as ex:
+    if os.environ.get("ENRICH_ORDER"):          # priority order, e.g. cheapest institutes first, when credits are scarce
+        ORDER = [x for x in os.environ["ENRICH_ORDER"].split(",") if x]
+    with ThreadPoolExecutor(int(os.environ.get("ENRICH_WORKERS", "5"))) as ex:
         list(ex.map(pipeline, ORDER))
     ALL = ",".join(ORDER)
     for s in (["export_csv.py"], ["build_networks.py"], ["verify_networks.py"]):
