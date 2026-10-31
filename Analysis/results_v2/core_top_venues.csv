@@ -1,24 +1,34 @@
 ﻿institution,rank_by_papers,conference,core_rank,papers
-IIT Bombay,1,IEEE International Geoscience and Remote Sensing Symposium,C,150
+IIT Ropar,1,IEEE Workshop on Applications of Computer Vision,A,16
+IIT Ropar,2,IEEE International Geoscience and Remote Sensing Symposium,C,9
+IIT Ropar,3,International Conference on Multimodal Interaction (was International Conference on Multimodal Interfaces),B,8
+IIT Ropar,4,IEEE International Conference on Advanced Video and Signal Based Surveillance,B,7
+IIT Ropar,5,IEEE International Joint Conference on Neural Networks,B,5
+IIT Ropar,6,IEEE Vehicular Technology Conference,B,5
+IIT Ropar,7,IEEE Conference on Computer Vision and Pattern Recognition,A*,3
+IIT Ropar,8,IEEE International Conference on Image Processing,B,3
+IIT Ropar,9,ACM Conference on Embedded Networked Sensor Systems,A*,2
+IIT Ropar,10,IEEE International Symposium on Network Computing and Applications,B,2
+IIT Bombay,1,IEEE International Geoscience and Remote Sensing Symposium,C,148
 IIT Bombay,2,IEEE International Symposium on Information Theory,B,38
 IIT Bombay,3,IEEE Workshop on Applications of Computer Vision,A,30
 IIT Bombay,4,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,20
-IIT Bombay,5,National Conference of the American Association for Artificial Intelligence,A*,15
+IIT Bombay,5,National Conference of the American Association for Artificial Intelligence,A*,18
 IIT Bombay,6,ACM International Conference on Information and Knowledge Management,A,13
 IIT Bombay,7,IEEE International Conference on Advanced Learning Technologies,B,13
 IIT Bombay,8,IEEE International Joint Conference on Neural Networks,B,12
 IIT Bombay,9,On-Line Testing and Robust System Design,C,10
-IIT Bombay,10,International Conference on Computers in Education,B,10
+IIT Bombay,10,International Conference on VLSI Design,C,9
 IIT Madras,1,IEEE International Symposium on Information Theory,B,26
 IIT Madras,2,IEEE International Conference on Image Processing,B,23
 IIT Madras,3,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,23
-IIT Madras,4,IEEE Workshop on Applications of Computer Vision,A,18
-IIT Madras,5,The Annual International Conference of the IEEE Engineering in Medicine and Biology Society,C,15
+IIT Madras,4,IEEE Workshop on Applications of Computer Vision,A,20
+IIT Madras,5,The Annual International Conference of the IEEE Engineering in Medicine and Biology Society,C,14
 IIT Madras,6,IEEE International Conference on Computer Vision,A*,11
 IIT Madras,7,IEEE Conference on Computer Vision and Pattern Recognition,A*,11
-IIT Madras,8,IEEE Vehicular Technology Conference,B,11
-IIT Madras,9,IEEE Wireless Communications and Networking Conference,B,10
-IIT Madras,10,National Conference of the American Association for Artificial Intelligence,A*,9
+IIT Madras,8,National Conference of the American Association for Artificial Intelligence,A*,11
+IIT Madras,9,IEEE Vehicular Technology Conference,B,11
+IIT Madras,10,IEEE Wireless Communications and Networking Conference,B,10
 IIT Kanpur,1,IEEE Workshop on Applications of Computer Vision,A,27
 IIT Kanpur,2,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,22
 IIT Kanpur,3,IEEE Wireless Communications and Networking Conference,B,18
@@ -54,11 +64,11 @@ IIT Patna,2,IEEE International Conference on Big Data,B,26
 IIT Patna,3,IEEE International Symposium on Information Theory,B,12
 IIT Patna,4,IEEE Congress on Evolutionary Computation,B,11
 IIT Patna,5,IEEE Global Telecommunications Conference ,B,11
-IIT Patna,6,ACM International Conference on Information and Knowledge Management,A,9
-IIT Patna,7,National Conference of the American Association for Artificial Intelligence,A*,9
-IIT Patna,8,IEEE International Joint Conference on Neural Networks,A,8
-IIT Patna,9,ACM International Conference on Research and Development in Information Retrieval,A*,8
-IIT Patna,10,IEEE Wireless Communications and Networking Conference,B,8
+IIT Patna,6,IEEE International Joint Conference on Neural Networks,A,10
+IIT Patna,7,ACM International Conference on Information and Knowledge Management,A,9
+IIT Patna,8,National Conference of the American Association for Artificial Intelligence,A*,9
+IIT Patna,9,Language Resources and Evaluation Conference,C,8
+IIT Patna,10,ACM International Conference on Research and Development in Information Retrieval,A*,8
 IIT Palakkad,1,IEEE International Symposium on Information Theory,B,11
 IIT Palakkad,2,IEEE International Joint Conference on Neural Networks,B,7
 IIT Palakkad,3,IEEE International Geoscience and Remote Sensing Symposium,C,3
@@ -70,18 +80,18 @@ IIT Palakkad,8,"IEEE Conference on Systems, Man and Cybernetics",B,2
 IIT Palakkad,9,On-Line Testing and Robust System Design,C,1
 IIT Palakkad,10,IEEE Region 10 Conference,C,1
 IIT Guwahati,1,IEEE International Geoscience and Remote Sensing Symposium,C,24
-IIT Guwahati,2,International Conference on VLSI Design,C,20
+IIT Guwahati,2,International Conference on VLSI Design,C,21
 IIT Guwahati,3,IEEE Wireless Communications and Networking Conference,B,11
 IIT Guwahati,4,IEEE International Joint Conference on Neural Networks,B,10
 IIT Guwahati,5,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,9
-IIT Guwahati,6,"IEEE Conference on Systems, Man and Cybernetics",B,8
-IIT Guwahati,7,IEEE International Symposium on Information Theory,B,8
-IIT Guwahati,8,Language Resources and Evaluation Conference,B,8
-IIT Guwahati,9,IEEE Region 10 Conference,C,7
+IIT Guwahati,6,IEEE Region 10 Conference,C,8
+IIT Guwahati,7,"IEEE Conference on Systems, Man and Cybernetics",B,8
+IIT Guwahati,8,IEEE International Symposium on Information Theory,B,8
+IIT Guwahati,9,Language Resources and Evaluation Conference,B,8
 IIT Guwahati,10,"Design, Automation and Test in Europe Conference",B,7
 IIT Hyderabad,1,IEEE Vehicular Technology Conference,B,35
 IIT Hyderabad,2,IEEE International Symposium on Information Theory,B,28
-IIT Hyderabad,3,IEEE Workshop on Applications of Computer Vision,A,24
+IIT Hyderabad,3,IEEE Workshop on Applications of Computer Vision,A,27
 IIT Hyderabad,4,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,15
 IIT Hyderabad,5,IEEE International Joint Conference on Neural Networks,B,14
 IIT Hyderabad,6,IEEE International Geoscience and Remote Sensing Symposium,C,13
@@ -139,3 +149,63 @@ IIT Mandi,7,IEEE International Joint Conference on Neural Networks,A,4
 IIT Mandi,8,"IEEE Conference on Systems, Man and Cybernetics",B,4
 IIT Mandi,9,IEEE Region 10 Conference,C,3
 IIT Mandi,10,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,3
+IIT Delhi,1,IEEE Vehicular Technology Conference,B,50
+IIT Delhi,2,IEEE Workshop on Applications of Computer Vision,A,27
+IIT Delhi,3,IEEE Global Telecommunications Conference ,B,16
+IIT Delhi,4,National Conference of the American Association for Artificial Intelligence,A*,14
+IIT Delhi,5,IEEE Conference on Computer Vision and Pattern Recognition,A*,12
+IIT Delhi,6,IEEE International Symposium on Personal and Indoor Mobile Radio Conference,B,11
+IIT Delhi,7,IEEE International Geoscience and Remote Sensing Symposium,C,10
+IIT Delhi,8,IEEE International Conference on Image Processing,B,9
+IIT Delhi,9,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,9
+IIT Delhi,10,IEEE International Symposium on Information Theory,B,8
+IIT (ISM) Dhanbad,1,IEEE International Symposium on Information Theory,B,6
+IIT (ISM) Dhanbad,2,IEEE Conference on Computer Vision and Pattern Recognition,A*,4
+IIT (ISM) Dhanbad,3,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,3
+IIT (ISM) Dhanbad,4,IEEE International Joint Conference on Neural Networks,A,2
+IIT (ISM) Dhanbad,5,IEEE International Joint Conference on Neural Networks,B,2
+IIT (ISM) Dhanbad,6,IEEE International Conference on Image Processing,B,2
+IIT (ISM) Dhanbad,7,IEEE Wireless Communications and Networking Conference,B,2
+IIT (ISM) Dhanbad,8,International Conference on Agents and Artificial Intelligence,B,2
+IIT (ISM) Dhanbad,9,International Conference on Frontiers of Handwriting Recognition,B,1
+IIT (ISM) Dhanbad,10,International Conference on Advanced Information Networking and Applications (was ICOIN),B,1
+IIT Jodhpur,1,IEEE Vehicular Technology Conference,B,19
+IIT Jodhpur,2,National Conference of the American Association for Artificial Intelligence,A*,17
+IIT Jodhpur,3,IEEE Workshop on Applications of Computer Vision,A,14
+IIT Jodhpur,4,ACM International Wireless Communications and Mobile Computing Conference,B,12
+IIT Jodhpur,5,International Conference on Pattern Recognition,B,10
+IIT Jodhpur,6,International Joint Conference on Biometrics,B,9
+IIT Jodhpur,7,IEEE International Conference on Image Processing,B,8
+IIT Jodhpur,8,IEEE International Geoscience and Remote Sensing Symposium,C,8
+IIT Jodhpur,9,IEEE Conference on Computer Vision and Pattern Recognition,A*,7
+IIT Jodhpur,10,IEEE Wireless Communications and Networking Conference,B,7
+IIT Jammu,1,IEEE Vehicular Technology Conference,B,14
+IIT Jammu,2,IEEE Wireless Communications and Networking Conference,B,7
+IIT Jammu,3,IEEE International Symposium on Personal and Indoor Mobile Radio Conference,B,6
+IIT Jammu,4,IEEE Global Telecommunications Conference ,B,5
+IIT Jammu,5,International Conference on Security of Information and Networks,C,4
+IIT Jammu,6,International Joint Conference on e-Business and Telecommunications,C,4
+IIT Jammu,7,On-Line Testing and Robust System Design,C,4
+IIT Jammu,8,IEEE International Conference on Image Processing,B,3
+IIT Jammu,9,National Conference of the American Association for Artificial Intelligence,A*,3
+IIT Jammu,10,IEEE International Conference on Big Data,B,3
+IIT Bhilai,1,Symposium on Reliable Distributed Systems,A,2
+IIT Bhilai,2,International Conference on Distributed Computing Systems,A,2
+IIT Bhilai,3,International Conference on Enterprise Information Systems,C,1
+IIT Bhilai,4,ACM International Conference on Information and Knowledge Management,A,1
+IIT Bhilai,5,International Conference on Computer Communication and Networks,B,1
+IIT Bhilai,6,International Conference on Cloud Computing and Services Science,C,1
+IIT Bhilai,7,IEEE Global Telecommunications Conference ,B,1
+IIT Bhilai,8,IEEE International Conference on Data Mining,A*,1
+IIT Bhilai,9,IEEE Network Operations and Management Symposium,B,1
+IIT Bhilai,10,IEEE Vehicular Technology Conference,B,1
+IIT Dharwad,1,IEEE Vehicular Technology Conference,B,4
+IIT Dharwad,2,IEEE Wireless Communications and Networking Conference,B,4
+IIT Dharwad,3,IEEE Global Telecommunications Conference ,B,3
+IIT Dharwad,4,IEEE International Symposium on Information Theory,B,3
+IIT Dharwad,5,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,3
+IIT Dharwad,6,IEEE International Joint Conference on Neural Networks,B,2
+IIT Dharwad,7,"IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks",B,2
+IIT Dharwad,8,IEEE International Geoscience and Remote Sensing Symposium,C,2
+IIT Dharwad,9,ACM International Conference on Supercomputing,A,2
+IIT Dharwad,10,IEEE Conference on Local Computer Networks,B,2

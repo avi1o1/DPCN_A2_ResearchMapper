@@ -1,0 +1,22 @@
+﻿institution,roster_rows,current_rows,current_with_joining_year,share_current_with_joining_year,nirf_edition,nirf_working,nirf_regular,current_over_nirf,flag,nirf_note
+IIT Ropar,273,202,147,0.7277,,,,,no NIRF count,
+IIT Bombay,1270,795,651,0.8189,2026,,749,1.061,ok,PROCESS.md 15.6: NIRF 2026 lists 749 regular faculty working
+IIT Madras,996,670,670,1.0,,,,,no NIRF count,
+IIT Kanpur,856,606,583,0.962,2026,615,593,1.022,ok,roster notes: NIRF 2026 636 rows; 615 working = 593 regular + 22 ad hoc/contractual
+IIT Goa,113,69,60,0.8696,2026,65,,1.062,ok,roster notes: NIRF 2026 lists 65 currently working incl. contractual/visiting
+IIT Tirupati,248,139,139,1.0,,,,,no NIRF count,
+IIT Patna,217,162,149,0.9198,2025,271,158,1.025,ok,roster notes: NIRF 2025 275 rows; 271 working; 158 Regular with a faculty designation (+1 ad hoc Director)
+IIT Palakkad,230,160,153,0.9563,,,,,no NIRF count,
+IIT Guwahati,655,488,475,0.9734,2026,543,471,1.036,ok,roster notes: NIRF 2026 544 rows / 543 working; 471 with professorial designation; 73 'Other' rows excluded from the roster
+IIT Hyderabad,558,358,330,0.9218,,,,,no NIRF count,
+IIT Bhubaneswar,312,226,212,0.9381,,,,,no NIRF count,
+IIT (BHU) Varanasi,592,409,371,0.9071,2026,408,396,1.033,ok,roster notes: 409 rows parsed; 408 currently working = 396 Regular + 13 Adhoc/Contractual (one row not working)
+IIT Gandhinagar,404,165,93,0.5636,2025,171,,0.965,ok,roster notes: NIRF 2025 count-only summary 'Number of faculty members entered 171'
+IIT Indore,302,229,213,0.9301,2026,229,213,1.075,ok,roster notes: NIRF 2026 table 229 rows; 213 Regular currently working
+IIT Mandi,322,216,188,0.8704,2026,,189,1.143,ok,PROCESS.md 15.7: all 189 NIRF-2026 Regular people present in the roster
+IIT Delhi,735,647,90,0.1391,2025,833,,0.777,roster short,roster notes: NIRF 2025 'faculty members entered' 833 (counts only; 2021 682
+IIT (ISM) Dhanbad,754,425,396,0.9318,2026,469,398,1.068,ok,roster notes: NIRF 2026 508 rows; 469 currently working = 398 Regular + 71 Adhoc/Contractual/Other
+IIT Jodhpur,443,324,267,0.8241,2026,267,,1.213,roster longer than NIRF,roster notes: NIRF 2026 269 rows flagged working = 267 distinct people
+IIT Jammu,229,157,141,0.8981,,,,,no NIRF count,
+IIT Bhilai,157,91,74,0.8132,2025,72,,1.264,roster longer than NIRF,roster notes (iit_bhilai_roster_notes.md): NIRF 2025 engineering table lists 72 working (2024: 67)
+IIT Dharwad,209,96,93,0.9688,2026,,105,0.914,ok,roster notes: NIRF 2026 Regular currently working 105 persons (2025: 104 of 112)

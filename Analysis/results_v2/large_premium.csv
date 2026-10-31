@@ -1,36 +1,45 @@
 ﻿institution,year,large_papers,median_citations_large,median_citations_other,ratio
-IIT Bombay,2016,63,42,12.0,3.5
-IIT Bombay,2017,77,41,12.0,3.42
-IIT Bombay,2018,73,27,11.0,2.45
+IIT Ropar,2016,1,9,20,0.45
+IIT Ropar,2018,1,22,19,1.16
+IIT Ropar,2019,2,38.5,11.0,3.5
+IIT Ropar,2020,1,820,14,58.57
+IIT Ropar,2021,8,16.5,11,1.5
+IIT Ropar,2022,11,15,8,1.88
+IIT Ropar,2023,6,18.5,6,3.08
+IIT Ropar,2024,5,12,4,3.0
+IIT Ropar,2016-2024 (median of yearly ratios),,,,2.44
+IIT Bombay,2016,63,42,12,3.5
+IIT Bombay,2017,77,41,12,3.42
+IIT Bombay,2018,73,27,11,2.45
 IIT Bombay,2019,110,33.0,10.0,3.3
 IIT Bombay,2020,110,28.0,10.0,2.8
 IIT Bombay,2021,143,28,8.0,3.5
-IIT Bombay,2022,132,23.0,6.0,3.83
-IIT Bombay,2023,180,10.0,4,2.5
-IIT Bombay,2024,158,8.0,3,2.67
+IIT Bombay,2022,133,23,6.0,3.83
+IIT Bombay,2023,180,10.0,4.0,2.5
+IIT Bombay,2024,159,8,3.0,2.67
 IIT Bombay,2016-2024 (median of yearly ratios),,,,3.3
-IIT Madras,2016,70,13.5,11,1.23
+IIT Madras,2016,70,13.5,11.0,1.23
 IIT Madras,2017,170,23.5,11.0,2.14
-IIT Madras,2018,216,23.0,11.0,2.09
+IIT Madras,2018,216,23.0,11,2.09
 IIT Madras,2019,242,23.0,11.0,2.09
-IIT Madras,2020,200,21.5,9.0,2.39
-IIT Madras,2021,239,16,8.0,2.0
-IIT Madras,2022,228,12.5,6.0,2.08
-IIT Madras,2023,242,9.5,5.0,1.9
-IIT Madras,2024,282,6.0,3,2.0
+IIT Madras,2020,200,21.5,9,2.39
+IIT Madras,2021,239,16,8,2.0
+IIT Madras,2022,230,12.5,6.0,2.08
+IIT Madras,2023,243,10,5.0,2.0
+IIT Madras,2024,284,6.0,3.0,2.0
 IIT Madras,2016-2024 (median of yearly ratios),,,,2.08
-IIT Kanpur,2016,12,63.0,14,4.5
+IIT Kanpur,2016,13,57,14,4.07
 IIT Kanpur,2017,14,24.5,12.0,2.04
-IIT Kanpur,2018,29,22,11,2.0
+IIT Kanpur,2018,30,20.0,11.0,1.82
 IIT Kanpur,2019,31,18,9.0,2.0
-IIT Kanpur,2020,47,26,11,2.36
-IIT Kanpur,2021,54,21.5,8.0,2.69
-IIT Kanpur,2022,48,13.0,7.0,1.86
-IIT Kanpur,2023,73,13,5.0,2.6
+IIT Kanpur,2020,47,26,11.0,2.36
+IIT Kanpur,2021,54,21.5,8,2.69
+IIT Kanpur,2022,49,12,6,2.0
+IIT Kanpur,2023,74,12.5,5.0,2.5
 IIT Kanpur,2024,92,10.5,3,3.5
 IIT Kanpur,2016-2024 (median of yearly ratios),,,,2.36
 IIT Goa,2019,3,9,8.0,1.12
-IIT Goa,2021,3,14,3.0,4.67
+IIT Goa,2021,3,14,3.5,4.0
 IIT Goa,2022,5,8,5.0,1.6
 IIT Goa,2023,2,10.5,4.0,2.62
 IIT Goa,2024,4,1.5,3.0,0.5
@@ -39,94 +48,143 @@ IIT Tirupati,2018,3,33,10.0,3.3
 IIT Tirupati,2019,1,298,6.0,49.67
 IIT Tirupati,2020,1,190,12.0,15.83
 IIT Tirupati,2021,3,62,5,12.4
-IIT Tirupati,2022,1,25,4,6.25
-IIT Tirupati,2023,5,9,4,2.25
+IIT Tirupati,2022,1,25,4.0,6.25
+IIT Tirupati,2023,5,9,4.0,2.25
 IIT Tirupati,2024,5,3,4,0.75
 IIT Tirupati,2016-2024 (median of yearly ratios),,,,6.25
-IIT Patna,2016,1,438,9,48.67
-IIT Patna,2017,1,159,11,14.45
-IIT Patna,2018,1,45,10.0,4.5
-IIT Patna,2019,3,50,12.0,4.17
+IIT Patna,2016,1,438,9.0,48.67
+IIT Patna,2017,1,159,11.0,14.45
+IIT Patna,2018,1,45,10,4.5
+IIT Patna,2019,3,50,11,4.55
 IIT Patna,2020,15,16,13,1.23
-IIT Patna,2021,18,28.5,10.0,2.85
-IIT Patna,2022,20,20.0,8.0,2.5
-IIT Patna,2023,22,22.5,6,3.75
-IIT Patna,2024,23,8,5.0,1.6
-IIT Patna,2016-2024 (median of yearly ratios),,,,3.75
+IIT Patna,2021,18,28.5,10,2.85
+IIT Patna,2022,20,20.0,8,2.5
+IIT Patna,2023,23,22,6.0,3.67
+IIT Patna,2024,23,8,5,1.6
+IIT Patna,2016-2024 (median of yearly ratios),,,,3.67
 IIT Palakkad,2019,1,0,5.0,0.0
 IIT Palakkad,2020,1,138,7.0,19.71
-IIT Palakkad,2021,3,18,9.0,2.0
+IIT Palakkad,2021,3,18,9,2.0
 IIT Palakkad,2022,1,70,6,11.67
 IIT Palakkad,2023,5,56,5.0,11.2
 IIT Palakkad,2024,4,7.5,3,2.5
 IIT Palakkad,2016-2024 (median of yearly ratios),,,,6.85
-IIT Guwahati,2016,37,8,14.0,0.57
-IIT Guwahati,2017,47,16,14.0,1.14
+IIT Guwahati,2016,37,8,14,0.57
+IIT Guwahati,2017,47,16,14,1.14
 IIT Guwahati,2018,46,12.0,13.0,0.92
-IIT Guwahati,2019,53,13,13.0,1.0
-IIT Guwahati,2020,51,16,12.0,1.33
+IIT Guwahati,2019,53,13,13,1.0
+IIT Guwahati,2020,48,13.0,11,1.18
 IIT Guwahati,2021,62,9.0,9.0,1.0
-IIT Guwahati,2022,49,16,8.0,2.0
-IIT Guwahati,2023,44,14.5,6,2.42
+IIT Guwahati,2022,49,16,7.0,2.29
+IIT Guwahati,2023,44,14.5,6.0,2.42
 IIT Guwahati,2024,51,8,4,2.0
 IIT Guwahati,2016-2024 (median of yearly ratios),,,,1.14
-IIT Hyderabad,2016,6,41.5,13.0,3.19
-IIT Hyderabad,2017,45,73,16.0,4.56
-IIT Hyderabad,2018,73,44,11.0,4.0
+IIT Hyderabad,2016,6,41.5,13,3.19
+IIT Hyderabad,2017,45,73,15.0,4.87
+IIT Hyderabad,2018,75,41,11.0,3.73
 IIT Hyderabad,2019,102,45.5,12.0,3.79
 IIT Hyderabad,2020,102,29.0,11,2.64
-IIT Hyderabad,2021,130,24.5,8.0,3.06
+IIT Hyderabad,2021,131,25,8.0,3.12
 IIT Hyderabad,2022,104,25.5,7.0,3.64
-IIT Hyderabad,2023,80,17.0,6,2.83
-IIT Hyderabad,2024,70,13.0,4.0,3.25
+IIT Hyderabad,2023,81,17,6,2.83
+IIT Hyderabad,2024,74,13.0,4,3.25
 IIT Hyderabad,2016-2024 (median of yearly ratios),,,,3.25
 IIT Bhubaneswar,2016,16,4.0,14,0.29
-IIT Bhubaneswar,2017,80,20.5,14.0,1.46
-IIT Bhubaneswar,2018,177,23,13,1.77
+IIT Bhubaneswar,2017,80,20.5,14,1.46
+IIT Bhubaneswar,2018,177,23,12.5,1.84
 IIT Bhubaneswar,2019,144,20.0,14.0,1.43
-IIT Bhubaneswar,2020,125,16,12,1.33
+IIT Bhubaneswar,2020,125,16,11.5,1.39
 IIT Bhubaneswar,2021,104,15.0,9,1.67
-IIT Bhubaneswar,2022,86,11.0,7.0,1.57
+IIT Bhubaneswar,2022,86,11.0,7,1.57
 IIT Bhubaneswar,2023,84,10.0,5,2.0
 IIT Bhubaneswar,2024,97,7,4,1.75
 IIT Bhubaneswar,2016-2024 (median of yearly ratios),,,,1.57
-IIT (BHU) Varanasi,2016,4,70.5,14.0,5.04
-IIT (BHU) Varanasi,2017,5,89,14,6.36
-IIT (BHU) Varanasi,2018,4,21.5,16.0,1.34
-IIT (BHU) Varanasi,2019,12,25.0,14,1.79
-IIT (BHU) Varanasi,2020,21,25,13.0,1.92
-IIT (BHU) Varanasi,2021,35,17,12.0,1.42
-IIT (BHU) Varanasi,2022,40,10.5,9,1.17
+IIT (BHU) Varanasi,2016,4,70.5,14,5.04
+IIT (BHU) Varanasi,2017,5,89,14.0,6.36
+IIT (BHU) Varanasi,2018,7,24,16,1.5
+IIT (BHU) Varanasi,2019,12,25.0,14.0,1.79
+IIT (BHU) Varanasi,2020,22,26.0,13.0,2.0
+IIT (BHU) Varanasi,2021,36,17.5,12.0,1.46
+IIT (BHU) Varanasi,2022,41,10,9,1.11
 IIT (BHU) Varanasi,2023,55,14,7,2.0
-IIT (BHU) Varanasi,2024,45,12,5,2.4
-IIT (BHU) Varanasi,2016-2024 (median of yearly ratios),,,,1.92
-IIT Gandhinagar,2016,14,366.5,13.5,27.15
-IIT Gandhinagar,2017,32,97.0,14,6.93
-IIT Gandhinagar,2018,19,79,12.0,6.58
-IIT Gandhinagar,2019,27,72,14,5.14
-IIT Gandhinagar,2020,22,88.0,12,7.33
-IIT Gandhinagar,2021,35,61,8,7.62
+IIT (BHU) Varanasi,2024,46,11.5,5,2.3
+IIT (BHU) Varanasi,2016-2024 (median of yearly ratios),,,,2.0
+IIT Gandhinagar,2016,14,366.5,13,28.19
+IIT Gandhinagar,2017,32,97.0,13,7.46
+IIT Gandhinagar,2018,19,79,12,6.58
+IIT Gandhinagar,2019,27,72,13.5,5.33
+IIT Gandhinagar,2020,22,88.0,12.0,7.33
+IIT Gandhinagar,2021,36,55.5,8,6.94
 IIT Gandhinagar,2022,27,40,7,5.71
-IIT Gandhinagar,2023,48,11.0,5.0,2.2
-IIT Gandhinagar,2024,28,6.5,4,1.62
+IIT Gandhinagar,2023,49,11,5.0,2.2
+IIT Gandhinagar,2024,29,6,4.0,1.5
 IIT Gandhinagar,2016-2024 (median of yearly ratios),,,,6.58
-IIT Indore,2016,36,41.5,17.5,2.37
-IIT Indore,2017,40,30.0,14,2.14
-IIT Indore,2018,52,21.0,15.0,1.4
-IIT Indore,2019,55,24,16,1.5
-IIT Indore,2020,56,29.0,15,1.93
-IIT Indore,2021,69,22,13,1.69
-IIT Indore,2022,66,22.0,10.0,2.2
+IIT Indore,2016,36,41.5,17,2.44
+IIT Indore,2017,40,30.0,14.0,2.14
+IIT Indore,2018,52,21.0,15,1.4
+IIT Indore,2019,55,24,16.0,1.5
+IIT Indore,2020,57,28,15.0,1.87
+IIT Indore,2021,69,22,13.0,1.69
+IIT Indore,2022,67,21,10,2.1
 IIT Indore,2023,101,10,8,1.25
-IIT Indore,2024,82,9.0,5.0,1.8
+IIT Indore,2024,82,9.0,5,1.8
 IIT Indore,2016-2024 (median of yearly ratios),,,,1.8
-IIT Mandi,2016,1,33,16.5,2.0
-IIT Mandi,2017,3,24,13.0,1.85
+IIT Mandi,2016,1,33,16,2.06
+IIT Mandi,2017,4,23.0,13.0,1.77
 IIT Mandi,2018,4,31.5,14.0,2.25
 IIT Mandi,2019,1,7,11,0.64
 IIT Mandi,2020,6,53.0,10,5.3
-IIT Mandi,2021,16,30.5,10.0,3.05
+IIT Mandi,2021,16,30.5,10,3.05
 IIT Mandi,2022,10,28.5,9.0,3.17
-IIT Mandi,2023,15,17,6.0,2.83
-IIT Mandi,2024,21,8,5,1.6
+IIT Mandi,2023,16,16.5,6.0,2.75
+IIT Mandi,2024,21,8,5.0,1.6
 IIT Mandi,2016-2024 (median of yearly ratios),,,,2.25
+IIT Delhi,2016,10,58.0,12,4.83
+IIT Delhi,2017,10,29.5,14.0,2.11
+IIT Delhi,2018,13,51,13.0,3.92
+IIT Delhi,2019,23,23,12.0,1.92
+IIT Delhi,2020,42,23.0,11,2.09
+IIT Delhi,2021,57,35,10,3.5
+IIT Delhi,2022,82,23.5,7,3.36
+IIT Delhi,2023,95,15,5.0,3.0
+IIT Delhi,2024,83,12,4.0,3.0
+IIT Delhi,2016-2024 (median of yearly ratios),,,,3.0
+IIT (ISM) Dhanbad,2016,3,36,12,3.0
+IIT (ISM) Dhanbad,2017,2,10.0,13.0,0.77
+IIT (ISM) Dhanbad,2018,3,8,10,0.8
+IIT (ISM) Dhanbad,2019,5,24,11.0,2.18
+IIT (ISM) Dhanbad,2020,6,58.5,11,5.32
+IIT (ISM) Dhanbad,2021,11,59,9.0,6.56
+IIT (ISM) Dhanbad,2022,8,26.0,9,2.89
+IIT (ISM) Dhanbad,2023,17,11,7,1.57
+IIT (ISM) Dhanbad,2024,12,9.0,4,2.25
+IIT (ISM) Dhanbad,2016-2024 (median of yearly ratios),,,,2.25
+IIT Jodhpur,2017,2,108.5,15.5,7.0
+IIT Jodhpur,2018,3,22,12,1.83
+IIT Jodhpur,2019,3,39,8.5,4.59
+IIT Jodhpur,2020,8,42.5,11,3.86
+IIT Jodhpur,2021,21,9,7,1.29
+IIT Jodhpur,2022,24,10.5,8,1.31
+IIT Jodhpur,2023,30,8.0,5.0,1.6
+IIT Jodhpur,2024,39,7,4,1.75
+IIT Jodhpur,2016-2024 (median of yearly ratios),,,,1.79
+IIT Jammu,2018,1,18,14.5,1.24
+IIT Jammu,2020,2,105.0,12.5,8.4
+IIT Jammu,2021,9,44,9,4.89
+IIT Jammu,2022,4,49.5,7,7.07
+IIT Jammu,2023,2,53.5,5,10.7
+IIT Jammu,2024,10,9.0,3,3.0
+IIT Jammu,2016-2024 (median of yearly ratios),,,,5.98
+IIT Bhilai,2019,1,108,7,15.43
+IIT Bhilai,2020,1,7,5.5,1.27
+IIT Bhilai,2021,2,23.0,8.0,2.88
+IIT Bhilai,2022,2,16.0,5,3.2
+IIT Bhilai,2023,1,2,5,0.4
+IIT Bhilai,2024,7,11,4.0,2.75
+IIT Bhilai,2016-2024 (median of yearly ratios),,,,2.81
+IIT Dharwad,2019,2,688.0,4,172.0
+IIT Dharwad,2020,2,9.0,5,1.8
+IIT Dharwad,2022,5,18,4,4.5
+IIT Dharwad,2023,1,7,3.0,2.33
+IIT Dharwad,2024,6,5.0,2,2.5
+IIT Dharwad,2016-2024 (median of yearly ratios),,,,2.5

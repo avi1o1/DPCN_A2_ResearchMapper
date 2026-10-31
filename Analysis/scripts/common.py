@@ -1,11 +1,14 @@
 """Shared loading, definitions and chart style for the Group 3 statistics.
 Which institutes, where the data is and where results go are set by environment variables. The defaults are the original
 Kharagpur / Roorkee analysis (same paths, same numbers as before):
-  ANALYSIS_INSTS       comma list of registry keys (iit_kharagpur,iit_roorkee,...) or a preset: 'v2' / 'auto' = every newer IIT
-                       in the registry that is complete in the input folder (the 14 first, later Delhi, ISM, Jodhpur,
-                       Jammu, Bhilai, Dharwad as they land); default: iit_kharagpur,iit_roorkee
-  ANALYSIS_PROFILE     'v2' sets the defaults of every variable below for the 14-institute run (Enrichment/out_v2 ->
-                       Analysis/results_v2, figures_v2, cache_v2, offline). Any variable can still be set on its own.
+  ANALYSIS_INSTS       comma list of registry keys (iit_kharagpur,iit_roorkee,...) or a preset. Presets: 'v2all' / 'auto' =
+                       every registered institute, Kharagpur and Roorkee included, that has an enriched file AND rows in
+                       group3_data.csv in the input folder (the list is read from the files present, so institutes that
+                       land later join the next run without an edit); 'v2' = the same without Kharagpur and Roorkee;
+                       default: iit_kharagpur,iit_roorkee
+  ANALYSIS_PROFILE     'v2' sets the defaults of every variable below for the multi-institute run (Enrichment/out_v2 ->
+                       Analysis/results_v2, figures_v2, cache_v2, offline) and, without ANALYSIS_INSTS, selects 'auto'.
+                       Any variable can still be set on its own.
   ANALYSIS_IN_DIR      folder with <inst>_enriched.json, group3_data.csv, citation_network.csv, authorship_network.csv,
                        indian_connections.csv   (default: Enrichment/out; read-only, never modified)
   ANALYSIS_OUT_DIR     tables (default: results)       ANALYSIS_FIG_DIR  charts (default: figures)
@@ -63,14 +66,20 @@ REGISTRY = {
 }
 PRESETS = {
     "default": ["iit_kharagpur", "iit_roorkee"],
-    # 'v2' / 'auto': every registered institute except the default pair whose enriched JSON is in the input folder AND which
-    # appears in group3_data.csv (an institute whose enrichment is half-written is left out until it is complete)
+    # Presets other than 'default' are candidate lists: the institutes actually analysed are the candidates whose enriched
+    # JSON is in the input folder AND which appear in group3_data.csv (see INST_KEYS below), in registry order.
+    # 'v2'    = every registered institute except the old pair (Kharagpur, Roorkee), the frozen first-round list
+    # 'v2all' = every registered institute, Kharagpur and Roorkee (the old IITs re-run on the v2 procedure) included
+    #           as soon as their enriched file and rows exist in the input folder
+    # 'auto'  = 'v2all'
     "v2": [k for k in REGISTRY if k not in ("iit_kharagpur", "iit_roorkee")],
+    "v2all": list(REGISTRY),
 }
-PRESETS["auto"] = PRESETS["v2"]
+PRESETS["auto"] = PRESETS["v2all"]
 _SPARE = ["#b5651d", "#5f9ea0", "#c71585", "#556b2f"]
 PROFILE = os.environ.get("ANALYSIS_PROFILE", "").strip()
-_sel = os.environ.get("ANALYSIS_INSTS", "").strip() or (PROFILE if PROFILE in PRESETS else "default")
+# ANALYSIS_PROFILE=v2 without ANALYSIS_INSTS selects 'auto' (= v2all): whichever institutes are in the input folder
+_sel = os.environ.get("ANALYSIS_INSTS", "").strip() or ("auto" if PROFILE == "v2" else PROFILE if PROFILE in PRESETS else "default")
 _v2 = PROFILE == "v2"
 
 

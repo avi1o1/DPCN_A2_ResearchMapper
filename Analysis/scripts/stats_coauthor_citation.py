@@ -83,8 +83,9 @@ def main():
     Fm = sp.csr_matrix((np.ones(len(rows)), (rows, cols)), shape=(len(keys), n))
     u, v = zip(*E)
     A = sp.csr_matrix((np.ones(len(E)), ([pk[x] for x in u], [pk[x] for x in v])), shape=(len(keys), len(keys)))
-    W = (Fm.T @ A @ Fm).toarray()
-    check_all = int(W.sum() - np.trace(W))
+    W = (Fm.T @ A @ Fm).tocsr()                              # sparse: a dense n x n float64 matrix is 0.3 GB at n = 6,200
+    check_all = int(W.sum() - W.diagonal().sum())
+    del W
     summ.append(("check: faculty citations (all) by matrix route", check_all))
     assert check_all == len(cit_all), (check_all, len(cit_all))
 
@@ -106,7 +107,7 @@ def main():
     co = sp.lil_matrix((n, n))
     for a, b in first_co:
         co[ix[a], ix[b]] = co[ix[b], ix[a]] = 1
-    D = shortest_path(co.tocsr(), unweighted=True, directed=False)
+    D = shortest_path(co.tocsr(), unweighted=True, directed=False).astype(np.float32)   # distances and inf are exact in float32
     G = nx.Graph()
     G.add_nodes_from(range(n))
     G.add_edges_from((ix[a], ix[b]) for a, b in first_co)
@@ -124,22 +125,31 @@ def main():
     sub = np.array([msub.get(a, "") for a in fac])
     # compare people by integer codes: indexing a string array with all n^2 pairs needs hundreds of bytes per pair (11 GB)
     has_sub = sub != ""
-    dept, inst, sub = (np.unique(v, return_inverse=True)[1] for v in (dept, inst, sub))
+    dept, inst, sub = (np.unique(v, return_inverse=True)[1].astype(np.int32) for v in (dept, inst, sub))
     npap = np.array([int(F[a]["papers"]) for a in fac])
     cuts = np.quantile(npap, [1 / 3, 2 / 3])
     pb = np.array([band(x, cuts) for x in npap])
     summ.append(("paper-count bands (terciles): cut points", f"{cuts[0]:.0f}, {cuts[1]:.0f}"))
     # ordered pairs
-    I, J = np.where(~np.eye(n, dtype=bool))
+    # the n (n - 1) ordered pairs in the order of np.where(~np.eye(n)), as int32 / int8 arrays (int64 index arrays, a string array
+    # of distance classes and a float64 distance matrix needed about 5 GB at n = 6,200 with 21 institutes)
+    I = np.repeat(np.arange(n, dtype=np.int32), n - 1)
+    J = np.tile(np.arange(n - 1, dtype=np.int32), n)
+    J += (J >= I)
     d = D[I, J]
-    dc = np.where(d == 1, "1", np.where(d == 2, "2", np.where(d == 3, "3", "far")))
+    dc = np.full(d.shape, 3, np.int8)                       # index into DCLASS: 0 = '1', 1 = '2', 2 = '3', 3 = 'far'
+    for k_ in (1, 2, 3):
+        dc[d == k_] = k_ - 1
+    is_co = d == 1
+    del d
     same_dept, same_inst = dept[I] == dept[J], inst[I] == inst[J]
     same_sub = (sub[I] == sub[J]) & has_sub[I]
-    stratum = (np.where(same_dept, 2, np.where(same_inst, 1, 0)) * 2 + same_sub) * 9 + pb[I] * 3 + pb[J]
-    far = dc == "far"
+    stratum = ((np.where(same_dept, 2, np.where(same_inst, 1, 0)).astype(np.int8) * 2 + same_sub) * 9
+               + pb[I].astype(np.int8) * 3 + pb[J].astype(np.int8)).astype(np.int8)
+    far = dc == 3
     scopes = {"all pairs": np.ones(len(I), bool), "same department": same_dept,
               "same institute, other department": same_inst & ~same_dept, "other institute": ~same_inst}
-    summ.append(("share of ordered faculty pairs that are co-authors", round(float((d == 1).mean()), 5)))
+    summ.append(("share of ordered faculty pairs that are co-authors", round(float(is_co.mean()), 5)))
     # unordered pairs of faculty active before and after SPLIT_YEAR
     yrs = C.defaultdict(set)
     for p in P.values():
@@ -177,7 +187,7 @@ def main():
         ref = {s: cy[far & (stratum == s)].mean() for s in np.unique(stratum[far])}
         for scope, m in scopes.items():
             for c in DCLASS:
-                mm = m & (dc == c)
+                mm = m & (dc == DCLASS.index(c))
                 if not mm.any():
                     continue
                 obs, exp = o_over_e(cy, stratum, mm, ref)

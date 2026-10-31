@@ -9,6 +9,8 @@ Environment (all optional):
   DASH_RES       folder with the result tables      (default: Analysis/results_v2)
   DASH_ROSTERS   folder with <inst>_faculty.csv     (default: WebScrape/rosters; roster size is left out when absent)
   DASH_OUT       output file                        (default: Dashboard/site/v2/data_v2.js)
+  DASH_PARTIAL   comma list of institute keys (bombay,madras,...) whose enrichment is still partial: the page shows a
+                 'partial enrichment' badge for them (default: PARTIAL_DEFAULT below; set to '' once they are complete)
 usage: python Dashboard/site/v2/build_data_v2.py"""
 import os, re, csv, json, statistics, collections as C
 
@@ -20,14 +22,35 @@ OUT = os.environ.get("DASH_OUT") or os.path.join(HERE, "data_v2.js")
 csv.field_size_limit(10 ** 8)
 YEARS = list(range(2016, 2027))
 
-# colour per institute, fixed (same as Analysis/scripts/common.py REGISTRY); other names get the spare colours
-COLORS = {"IIT Kharagpur": "#2a78d6", "IIT Roorkee": "#eb6834", "IIT Bombay": "#1baf7a", "IIT Madras": "#e34948",
-          "IIT Kanpur": "#6250d6", "IIT Goa": "#eda100", "IIT Tirupati": "#e87ba4", "IIT Patna": "#008300",
-          "IIT Palakkad": "#0b8a9c", "IIT Guwahati": "#8a5a2b", "IIT Hyderabad": "#b44fd1", "IIT Bhubaneswar": "#3b4a6b",
-          "IIT (BHU) Varanasi": "#9bbf2f", "IIT Gandhinagar": "#7a7a7a", "IIT Indore": "#d4572b", "IIT Mandi": "#4ea3c9"}
-SPARE = ["#a05195", "#665191", "#2f4b7c", "#f95d6a"]
-OA_NAME = {"IIT (BHU) Varanasi": "Indian Institute of Technology BHU"}      # others: 'Indian Institute of Technology X'
-ROSTER_FILE = {"IIT (BHU) Varanasi": "iit_bhu"}
+# institute -> (registry key, OpenAlex name, colour), the same as REGISTRY in Analysis/scripts/common.py (colour fixed per institute,
+# never by rank). An institute missing here gets a spare colour and generic names.
+REG = {"IIT Kharagpur": ("iit_kharagpur", "Indian Institute of Technology Kharagpur", "#2a78d6"),
+       "IIT Roorkee": ("iit_roorkee", "Indian Institute of Technology Roorkee", "#eb6834"),
+       "IIT Ropar": ("iit_ropar", "Indian Institute of Technology Ropar", "#8a6bbf"),
+       "IIT Bombay": ("iit_bombay", "Indian Institute of Technology Bombay", "#1baf7a"),
+       "IIT Madras": ("iit_madras", "Indian Institute of Technology Madras", "#e34948"),
+       "IIT Kanpur": ("iit_kanpur", "Indian Institute of Technology Kanpur", "#6250d6"),
+       "IIT Goa": ("iit_goa", "Indian Institute of Technology Goa", "#eda100"),
+       "IIT Tirupati": ("iit_tirupati", "Indian Institute of Technology Tirupati", "#e87ba4"),
+       "IIT Patna": ("iit_patna", "Indian Institute of Technology Patna", "#008300"),
+       "IIT Palakkad": ("iit_palakkad", "Indian Institute of Technology Palakkad", "#0b8a9c"),
+       "IIT Guwahati": ("iit_guwahati", "Indian Institute of Technology Guwahati", "#8a5a2b"),
+       "IIT Hyderabad": ("iit_hyderabad", "Indian Institute of Technology Hyderabad", "#b44fd1"),
+       "IIT Bhubaneswar": ("iit_bhubaneswar", "Indian Institute of Technology Bhubaneswar", "#3b4a6b"),
+       "IIT (BHU) Varanasi": ("iit_bhu", "Indian Institute of Technology BHU", "#9bbf2f"),
+       "IIT Gandhinagar": ("iit_gandhinagar", "Indian Institute of Technology Gandhinagar", "#7a7a7a"),
+       "IIT Indore": ("iit_indore", "Indian Institute of Technology Indore", "#d4572b"),
+       "IIT Mandi": ("iit_mandi", "Indian Institute of Technology Mandi", "#4ea3c9"),
+       "IIT Delhi": ("iit_delhi", "Indian Institute of Technology Delhi", "#a05195"),
+       "IIT (ISM) Dhanbad": ("iit_ism", "Indian Institute of Technology Dhanbad", "#665191"),
+       "IIT Jodhpur": ("iit_jodhpur", "Indian Institute of Technology Jodhpur", "#f95d6a"),
+       "IIT Jammu": ("iit_jammu", "Indian Institute of Technology Jammu", "#2f4b7c"),
+       "IIT Bhilai": ("iit_bhilai", "Indian Institute of Technology Bhilai", "#ff7c43"),
+       "IIT Dharwad": ("iit_dharwad", "Indian Institute of Technology Dharwad", "#00876c")}
+SPARE = ["#b5651d", "#5f9ea0", "#c71585", "#556b2f"]
+# interim set of 31 October 2026: these six lack the complete Indian-citation steps and the title search (OpenAlex credits ran out)
+PARTIAL_DEFAULT = "bombay,madras,kanpur,guwahati,delhi,ropar"
+PARTIAL = {"iit_" + k.strip() for k in (os.environ["DASH_PARTIAL"] if "DASH_PARTIAL" in os.environ else PARTIAL_DEFAULT).split(",") if k.strip()}
 OUT_DEPTS = {"Academy of Classical and Folk Arts", "Centre of Excellence for Indian Knowledge Systems",
              "Centre of Excellence in Public Policy, Law and Governance", "Education", "Humanities and Social Sciences"}
 
@@ -62,9 +85,13 @@ def group(rows, key="institution"):
     return d
 
 
+def key_of(name):
+    return REG[name][0] if name in REG else "iit_" + name.replace("IIT ", "").lower().split()[0]
+
+
 def roster_size(name):
     """(people listed, of them regular faculty) on the institute's pages, departments out of scope left out."""
-    key = ROSTER_FILE.get(name) or "iit_" + name.replace("IIT ", "").lower().split()[0]
+    key = key_of(name)
     fn = os.path.join(ROSTERS, key + "_faculty.csv")
     if not os.path.exists(fn):
         return None, None
@@ -77,7 +104,7 @@ def main():
     trend = group(rd("trend.csv"))
     insts = list(trend)
     spare = iter(SPARE)
-    colors = {n: COLORS.get(n) or next(spare) for n in insts}
+    colors = {n: REG[n][2] if n in REG else next(spare) for n in insts}
     quart, core = {r["institution"]: r for r in rd("quartiles.csv")}, {r["institution"]: r for r in rd("core_ranks.csv")}
     fac = group(rd("faculty.csv"))
     dept = group(rd("departments.csv"))
@@ -98,9 +125,17 @@ def main():
     sens = defaultdict_metric(rd("large_sensitivity.csv"))
     skipped = rd("skipped_panels.csv", False)
     times = rd("run_times.csv", False)
-    oa_to_name = {OA_NAME.get(n, "Indian Institute of Technology " + n.replace("IIT ", "")): n for n in insts}
+    oa_to_name = {(REG[n][1] if n in REG else "Indian Institute of Technology " + n.replace("IIT ", "")): n for n in insts}
+    mega_i = {r["institution"]: r for r in rd("mega_by_institute.csv", False)}
+    mega_ww = defaultdict_ww(rd("mega_with_without.csv", False))
+    mega_rk = C.defaultdict(dict)
+    for r in rd("mega_ranks.csv", False):
+        mega_rk[r["institution"]][r["metric"]] = r
+    cohort = {r["institution"]: r for r in rd("faculty_cohort.csv", False)}
+    compl = {r["institution"]: r for r in rd("roster_completeness.csv", False)}
 
-    D = {"generated": "October 2026", "years": YEARS, "insts": [{"name": n, "color": colors[n]} for n in insts], "per": {}}
+    D = {"generated": "31 October 2026", "years": YEARS,
+         "insts": [{"name": n, "key": key_of(n), "color": colors[n], "partial": key_of(n) in PARTIAL} for n in insts], "per": {}}
     for n in insts:
         t = sorted(trend[n], key=lambda r: int(r["year"]))
         by_year = {int(r["year"]): r for r in t}
@@ -186,6 +221,30 @@ def main():
         p["headline"] = {"papers": num(sn.get("papers"), int), "citations": num(sn.get("citations"), int),
                          "citations_per_paper": num(sn.get("citations per paper")), "median_citations": num(sn.get("median citations per paper")),
                          "papers_100": num(sn.get("papers with >= 100 citations"), int), "institute_h": num(sn.get("institute h-index"), int)}
+        # ---- sanity audit F3: > 100-author (mega-collaboration) papers, every statistic with and without them
+        mi = mega_i.get(n, {})
+        ww = mega_ww.get(n, {})
+        p["mega"] = {"papers": num(mi.get("mega_papers"), int), "share_papers": num(mi.get("mega_share_of_papers")),
+                     "share_citations": num(mi.get("mega_share_of_citations")), "unknown_flags": num(mi.get("flag_unknown"), int),
+                     "top_person": mi.get("person_with_most_mega_papers") or None,
+                     "metrics": {k: {"all": num(v["all_papers"]), "without": num(v["without_mega"]), "change_pct": num(v["change_pct"])}
+                                 for k, v in ww.items()},
+                     "ranks": {k: {"all": num(v["rank_all"], int), "without": num(v["rank_without_mega"], int),
+                                   "change": num(v["rank_change"], int)} for k, v in mega_rk.get(n, {}).items()}}
+        # ---- sanity audit F4: cohort of current faculty with joining year <= 2017, roster completeness against NIRF
+        co, rc = cohort.get(n, {}), compl.get(n, {})
+        p["cohort"] = {"size": num(co.get("cohort_size"), int), "with_papers": num(co.get("cohort_with_papers"), int),
+                       "mean_papers": num(co.get("cohort_mean_papers")), "median_papers": num(co.get("cohort_median_papers")),
+                       "median_citations": num(co.get("cohort_median_citations")), "median_h": num(co.get("cohort_median_h")),
+                       "mean_h": num(co.get("cohort_mean_h")), "current": num(co.get("all_current_in_scope"), int),
+                       "current_with_papers": num(co.get("all_current_with_papers"), int),
+                       "current_mean_papers": num(co.get("all_current_mean_papers")), "current_median_h": num(co.get("all_current_median_h")),
+                       "published_median_h": num(co.get("published_median_h_faculty_with_papers")),
+                       "rank": num(co.get("rank_mean_papers_among_cohorts_of_20plus"), int), "warning": co.get("warning") or None,
+                       "roster_rows": num(rc.get("roster_rows"), int), "roster_current": num(rc.get("current_rows"), int),
+                       "with_joining_year": num(rc.get("share_current_with_joining_year")), "nirf_edition": rc.get("nirf_edition") or None,
+                       "nirf_count": num(rc.get("nirf_regular") or rc.get("nirf_working"), int),
+                       "current_over_nirf": num(rc.get("current_over_nirf")), "roster_flag": rc.get("flag") or None}
         D["per"][n] = p
     # ---- shared papers between the institutes (from the partner tables: a partner that is one of the institutes)
     idx = {n: i for i, n in enumerate(insts)}
@@ -199,11 +258,24 @@ def main():
     D["skipped"] = [{"panel": r["panel"], "script": r["script"], "reason": r["reason"], "needs": r["needs"]} for r in skipped]
     D["run_times"] = [{"script": r["script"], "seconds": num(r["seconds"], int), "memory_mb": num(r["peak_memory_mb"], int),
                        "exit": num(r["exit_code"], int)} for r in times]
+    D["partial_note"] = ("The Indian-citation steps (which Indian institutions cite and are cited by each paper) and the OpenAlex "
+                         "title search are not complete yet because the OpenAlex credits ran out; they complete after about 05:30 on "
+                         "1 November 2026. Paper, faculty, journal and conference numbers are usable, but citation-flow, partner and "
+                         "network figures can change, a few papers found only by title search are still missing, and OpenAlex "
+                         "research-area data can be absent (IIT Ropar has none yet).")
     D["cluster_net"] = {k: {kk: num(vv) if kk != "scope" and kk != "density" else vv for kk, vv in v.items()} for k, v in cnet.items()
                         if k not in insts}
     with open(OUT, "w", encoding="utf-8") as fh:
         fh.write("window.DASH_V2 = " + json.dumps(D, ensure_ascii=False, separators=(",", ":")) + ";\n")
     print(f"{OUT}: {os.path.getsize(OUT) / 1e6:.2f} MB, {len(insts)} institutes")
+
+
+def defaultdict_ww(rows):
+    """mega_with_without.csv: institution -> {metric: row}."""
+    d = C.defaultdict(dict)
+    for r in rows:
+        d[r["institution"]][r["metric"]] = r
+    return d
 
 
 def defaultdict_metric(rows):

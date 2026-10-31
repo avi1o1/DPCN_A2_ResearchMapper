@@ -183,21 +183,28 @@ def main():
 
     # ---- fitness and complexity (whole window)
     M = ((R >= 1) & (Xall >= MIN_STRONG)).astype(float)
-    keep = M.sum(0) > 0
-    Fd, Qs, (Fh, Qh) = fitness_complexity(M[:, keep])
+    # a department with no strong subfield has no fitness (its row is all 0, 1/F would be infinite and the map turns to NaN: seen
+    # with 21 institutes, where small departments of the partial-enrichment set have none): the map runs on the others only
     div = M.sum(1)
-    frank = rankdata(-Fd, method="min")
+    dok = div > 0
+    keep = M[dok].sum(0) > 0
+    Fk, Qs, (Fh_, Qh) = fitness_complexity(M[dok][:, keep])
+    Fd, Fh = np.full(len(depts), np.nan), np.full(len(depts), np.nan)
+    Fd[dok], Fh[dok] = Fk, Fh_
+    frank = np.full(len(depts), np.nan)
+    frank[dok] = rankdata(-Fk, method="min")
     frows = [{"institution": d[0], "department": d[1], "faculty": nfac[d], "papers": int(allp[d]),
-              "strong_subfields": int(div[di[d]]), "fitness_rank": int(frank[di[d]]),
-              "log10_fitness": round(float(np.log10(Fd[di[d]])), 2)} for d in depts]
-    frows.sort(key=lambda r: r["fitness_rank"])
+              "strong_subfields": int(div[di[d]]), "fitness_rank": int(frank[di[d]]) if dok[di[d]] else "",
+              "log10_fitness": round(float(np.log10(Fd[di[d]])), 2) if dok[di[d]] else ""} for d in depts]
+    frows.sort(key=lambda r: (r["fitness_rank"] == "", r["fitness_rank"] or 0))
     write_csv("dept_fitness.csv", frows)
     qsub = np.array(subs)[keep]
-    summ += [(f"fitness-complexity: ranking stability, Spearman of fitness after {FC_ITERS // 2} and {FC_ITERS} steps",
-              round(float(spearmanr(Fd, Fh).statistic), 4)),
+    summ += [("fitness-complexity: departments with no strong subfield (no fitness, left out of the map)", int((~dok).sum())),
+             (f"fitness-complexity: ranking stability, Spearman of fitness after {FC_ITERS // 2} and {FC_ITERS} steps",
+              round(float(spearmanr(Fk, Fh_).statistic), 4)),
              ("fitness-complexity: same for subfield complexity", round(float(spearmanr(Qs, Qh).statistic), 4)),
              ("Spearman fitness vs number of strong subfields (check: fitness grows with diversity)",
-              round(float(spearmanr(Fd, div).statistic), 3)),
+              round(float(spearmanr(Fk, div[dok]).statistic), 3)),
              ("most complex subfields (few, diverse departments strong in them)", "; ".join(qsub[np.argsort(-Qs)[:5]])),
              ("least complex subfields", "; ".join(qsub[np.argsort(Qs)[:5]]))]
 

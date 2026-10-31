@@ -1,0 +1,232 @@
+﻿institution,metric,all_papers,without_mega,change,change_pct
+IIT Ropar,papers,3475,3475,0,0.0
+IIT Ropar,citations,46022,46022,0,0.0
+IIT Ropar,citations per paper,13.24,13.24,0.0,0.0
+IIT Ropar,median citations per paper,5,5,0,0.0
+IIT Ropar,papers with >= 100 citations,51,51,0,0.0
+IIT Ropar,Q1 share of ranked journal papers,0.726,0.726,0.0,0.0
+IIT Ropar,institute h-index,75,75,0,0.0
+IIT Ropar,faculty with papers,197,197,0,0.0
+IIT Ropar,median faculty h-index,4.0,4.0,0.0,0.0
+IIT Ropar,mean faculty h-index,6.26,6.26,0.0,0.0
+IIT Ropar,max faculty h-index,37,37,0,0.0
+IIT Bombay,papers,24956,24290,-666,-2.67
+IIT Bombay,citations,408196,342771,-65425,-16.03
+IIT Bombay,citations per paper,16.36,14.11,-2.25,-13.75
+IIT Bombay,median citations per paper,5.0,5.0,0.0,0.0
+IIT Bombay,papers with >= 100 citations,499,416,-83,-16.63
+IIT Bombay,Q1 share of ranked journal papers,0.7318,0.7287,-0.0031,-0.42
+IIT Bombay,institute h-index,174,158,-16,-9.2
+IIT Bombay,faculty with papers,782,782,0,0.0
+IIT Bombay,median faculty h-index,5.0,5.0,0.0,0.0
+IIT Bombay,mean faculty h-index,7.97,7.93,-0.04,-0.5
+IIT Bombay,max faculty h-index,70,70,0,0.0
+IIT Madras,papers,24267,22331,-1936,-7.98
+IIT Madras,citations,408807,318137,-90670,-22.18
+IIT Madras,citations per paper,16.85,14.25,-2.6,-15.43
+IIT Madras,median citations per paper,5,5,0,0.0
+IIT Madras,papers with >= 100 citations,486,385,-101,-20.78
+IIT Madras,Q1 share of ranked journal papers,0.7065,0.702,-0.0045,-0.64
+IIT Madras,institute h-index,189,162,-27,-14.29
+IIT Madras,faculty with papers,612,612,0,0.0
+IIT Madras,median faculty h-index,7.0,7.0,0.0,0.0
+IIT Madras,mean faculty h-index,8.78,8.66,-0.12,-1.37
+IIT Madras,max faculty h-index,47,47,0,0.0
+IIT Kanpur,papers,17617,17491,-126,-0.72
+IIT Kanpur,citations,271505,261347,-10158,-3.74
+IIT Kanpur,citations per paper,15.41,14.94,-0.47,-3.05
+IIT Kanpur,median citations per paper,5,5,0,0.0
+IIT Kanpur,papers with >= 100 citations,328,322,-6,-1.83
+IIT Kanpur,Q1 share of ranked journal papers,0.7286,0.7301,0.0015,0.21
+IIT Kanpur,institute h-index,147,147,0,0.0
+IIT Kanpur,faculty with papers,552,552,0,0.0
+IIT Kanpur,median faculty h-index,5.0,5.0,0.0,0.0
+IIT Kanpur,mean faculty h-index,7.61,7.59,-0.02,-0.26
+IIT Kanpur,max faculty h-index,44,44,0,0.0
+IIT Goa,papers,831,831,0,0.0
+IIT Goa,citations,6155,6155,0,0.0
+IIT Goa,citations per paper,7.41,7.41,0.0,0.0
+IIT Goa,median citations per paper,2,2,0,0.0
+IIT Goa,papers with >= 100 citations,4,4,0,0.0
+IIT Goa,Q1 share of ranked journal papers,0.701,0.701,0.0,0.0
+IIT Goa,institute h-index,35,35,0,0.0
+IIT Goa,faculty with papers,55,55,0,0.0
+IIT Goa,median faculty h-index,3.0,3.0,0.0,0.0
+IIT Goa,mean faculty h-index,4.04,4.04,0.0,0.0
+IIT Goa,max faculty h-index,18,18,0,0.0
+IIT Tirupati,papers,1435,1432,-3,-0.21
+IIT Tirupati,citations,13772,13197,-575,-4.18
+IIT Tirupati,citations per paper,9.6,9.22,-0.38,-3.96
+IIT Tirupati,median citations per paper,2,2.0,0.0,0.0
+IIT Tirupati,papers with >= 100 citations,20,18,-2,-10.0
+IIT Tirupati,Q1 share of ranked journal papers,0.694,0.694,0.0,0.0
+IIT Tirupati,institute h-index,50,49,-1,-2.0
+IIT Tirupati,faculty with papers,123,123,0,0.0
+IIT Tirupati,median faculty h-index,3.0,3.0,0.0,0.0
+IIT Tirupati,mean faculty h-index,3.52,3.51,-0.01,-0.28
+IIT Tirupati,max faculty h-index,19,19,0,0.0
+IIT Patna,papers,6419,6298,-121,-1.89
+IIT Patna,citations,86282,83164,-3118,-3.61
+IIT Patna,citations per paper,13.44,13.2,-0.24,-1.79
+IIT Patna,median citations per paper,5,5.0,0.0,0.0
+IIT Patna,papers with >= 100 citations,88,81,-7,-7.95
+IIT Patna,Q1 share of ranked journal papers,0.6194,0.6098,-0.0096,-1.55
+IIT Patna,institute h-index,95,92,-3,-3.16
+IIT Patna,faculty with papers,163,163,0,0.0
+IIT Patna,median faculty h-index,9.0,9.0,0.0,0.0
+IIT Patna,mean faculty h-index,9.93,9.8,-0.13,-1.31
+IIT Patna,max faculty h-index,36,36,0,0.0
+IIT Palakkad,papers,1746,1746,0,0.0
+IIT Palakkad,citations,15300,15300,0,0.0
+IIT Palakkad,citations per paper,8.76,8.76,0.0,0.0
+IIT Palakkad,median citations per paper,3.0,3.0,0.0,0.0
+IIT Palakkad,papers with >= 100 citations,11,11,0,0.0
+IIT Palakkad,Q1 share of ranked journal papers,0.6954,0.6954,0.0,0.0
+IIT Palakkad,institute h-index,51,51,0,0.0
+IIT Palakkad,faculty with papers,120,120,0,0.0
+IIT Palakkad,median faculty h-index,4.0,4.0,0.0,0.0
+IIT Palakkad,mean faculty h-index,4.09,4.09,0.0,0.0
+IIT Palakkad,max faculty h-index,23,23,0,0.0
+IIT Guwahati,papers,17945,17646,-299,-1.67
+IIT Guwahati,citations,286860,275566,-11294,-3.94
+IIT Guwahati,citations per paper,15.99,15.62,-0.37,-2.31
+IIT Guwahati,median citations per paper,6,6.0,0.0,0.0
+IIT Guwahati,papers with >= 100 citations,410,381,-29,-7.07
+IIT Guwahati,Q1 share of ranked journal papers,0.6696,0.6645,-0.0051,-0.76
+IIT Guwahati,institute h-index,162,156,-6,-3.7
+IIT Guwahati,faculty with papers,443,443,0,0.0
+IIT Guwahati,median faculty h-index,8.0,8.0,0.0,0.0
+IIT Guwahati,mean faculty h-index,10.33,10.25,-0.08,-0.77
+IIT Guwahati,max faculty h-index,49,49,0,0.0
+IIT Hyderabad,papers,9985,9494,-491,-4.92
+IIT Hyderabad,citations,207275,137942,-69333,-33.45
+IIT Hyderabad,citations per paper,20.76,14.53,-6.23,-30.01
+IIT Hyderabad,median citations per paper,5,5.0,0.0,0.0
+IIT Hyderabad,papers with >= 100 citations,249,154,-95,-38.15
+IIT Hyderabad,Q1 share of ranked journal papers,0.7422,0.7333,-0.0089,-1.2
+IIT Hyderabad,institute h-index,147,115,-32,-21.77
+IIT Hyderabad,faculty with papers,341,341,0,0.0
+IIT Hyderabad,median faculty h-index,5.0,5.0,0.0,0.0
+IIT Hyderabad,mean faculty h-index,7.54,7.31,-0.23,-3.05
+IIT Hyderabad,max faculty h-index,75,57,-18,-24.0
+IIT Bhubaneswar,papers,5320,4302,-1018,-19.14
+IIT Bhubaneswar,citations,79013,53888,-25125,-31.8
+IIT Bhubaneswar,citations per paper,14.85,12.53,-2.32,-15.62
+IIT Bhubaneswar,median citations per paper,5.0,4.0,-1.0,-20.0
+IIT Bhubaneswar,papers with >= 100 citations,94,62,-32,-34.04
+IIT Bhubaneswar,Q1 share of ranked journal papers,0.612,0.6025,-0.0095,-1.55
+IIT Bhubaneswar,institute h-index,99,84,-15,-15.15
+IIT Bhubaneswar,faculty with papers,221,221,0,0.0
+IIT Bhubaneswar,median faculty h-index,4.0,4.0,0.0,0.0
+IIT Bhubaneswar,mean faculty h-index,6.53,6.26,-0.27,-4.13
+IIT Bhubaneswar,max faculty h-index,65,29,-36,-55.38
+IIT (BHU) Varanasi,papers,11667,11665,-2,-0.02
+IIT (BHU) Varanasi,citations,198534,197620,-914,-0.46
+IIT (BHU) Varanasi,citations per paper,17.02,16.94,-0.08,-0.47
+IIT (BHU) Varanasi,median citations per paper,6,6,0,0.0
+IIT (BHU) Varanasi,papers with >= 100 citations,291,290,-1,-0.34
+IIT (BHU) Varanasi,Q1 share of ranked journal papers,0.566,0.566,0.0,0.0
+IIT (BHU) Varanasi,institute h-index,141,140,-1,-0.71
+IIT (BHU) Varanasi,faculty with papers,419,419,0,0.0
+IIT (BHU) Varanasi,median faculty h-index,7.0,7.0,0.0,0.0
+IIT (BHU) Varanasi,mean faculty h-index,8.85,8.85,0.0,0.0
+IIT (BHU) Varanasi,max faculty h-index,40,40,0,0.0
+IIT Gandhinagar,papers,5119,4918,-201,-3.93
+IIT Gandhinagar,citations,142335,66331,-76004,-53.4
+IIT Gandhinagar,citations per paper,27.81,13.49,-14.32,-51.49
+IIT Gandhinagar,median citations per paper,4,4.0,0.0,0.0
+IIT Gandhinagar,papers with >= 100 citations,174,98,-76,-43.68
+IIT Gandhinagar,Q1 share of ranked journal papers,0.77,0.7633,-0.0067,-0.87
+IIT Gandhinagar,institute h-index,124,99,-25,-20.16
+IIT Gandhinagar,faculty with papers,175,175,0,0.0
+IIT Gandhinagar,median faculty h-index,4.0,4.0,0.0,0.0
+IIT Gandhinagar,mean faculty h-index,6.37,6.3,-0.07,-1.1
+IIT Gandhinagar,max faculty h-index,58,58,0,0.0
+IIT Indore,papers,8969,8474,-495,-5.52
+IIT Indore,citations,160730,141873,-18857,-11.73
+IIT Indore,citations per paper,17.92,16.74,-1.18,-6.58
+IIT Indore,median citations per paper,7,6.0,-1.0,-14.29
+IIT Indore,papers with >= 100 citations,216,183,-33,-15.28
+IIT Indore,Q1 share of ranked journal papers,0.6954,0.6874,-0.008,-1.15
+IIT Indore,institute h-index,131,122,-9,-6.87
+IIT Indore,faculty with papers,203,203,0,0.0
+IIT Indore,median faculty h-index,7.0,7.0,0.0,0.0
+IIT Indore,mean faculty h-index,10.17,9.97,-0.2,-1.97
+IIT Indore,max faculty h-index,61,55,-6,-9.84
+IIT Mandi,papers,5053,5015,-38,-0.75
+IIT Mandi,citations,77331,71867,-5464,-7.07
+IIT Mandi,citations per paper,15.3,14.33,-0.97,-6.34
+IIT Mandi,median citations per paper,5,5,0,0.0
+IIT Mandi,papers with >= 100 citations,100,99,-1,-1.0
+IIT Mandi,Q1 share of ranked journal papers,0.696,0.6968,0.0008,0.11
+IIT Mandi,institute h-index,100,99,-1,-1.0
+IIT Mandi,faculty with papers,205,205,0,0.0
+IIT Mandi,median faculty h-index,3.0,3.0,0.0,0.0
+IIT Mandi,mean faculty h-index,5.64,5.63,-0.01,-0.18
+IIT Mandi,max faculty h-index,28,28,0,0.0
+IIT Delhi,papers,24908,24892,-16,-0.06
+IIT Delhi,citations,398092,396212,-1880,-0.47
+IIT Delhi,citations per paper,15.98,15.92,-0.06,-0.38
+IIT Delhi,median citations per paper,5.0,5.0,0.0,0.0
+IIT Delhi,papers with >= 100 citations,539,538,-1,-0.19
+IIT Delhi,Q1 share of ranked journal papers,0.6829,0.6827,-0.0002,-0.03
+IIT Delhi,institute h-index,175,175,0,0.0
+IIT Delhi,faculty with papers,543,543,0,0.0
+IIT Delhi,median faculty h-index,7.0,7.0,0.0,0.0
+IIT Delhi,mean faculty h-index,9.74,9.74,0.0,0.0
+IIT Delhi,max faculty h-index,56,56,0,0.0
+IIT (ISM) Dhanbad,papers,12312,12312,0,0.0
+IIT (ISM) Dhanbad,citations,210054,210054,0,0.0
+IIT (ISM) Dhanbad,citations per paper,17.06,17.06,0.0,0.0
+IIT (ISM) Dhanbad,median citations per paper,6,6,0,0.0
+IIT (ISM) Dhanbad,papers with >= 100 citations,273,273,0,0.0
+IIT (ISM) Dhanbad,Q1 share of ranked journal papers,0.5048,0.5048,0.0,0.0
+IIT (ISM) Dhanbad,institute h-index,138,138,0,0.0
+IIT (ISM) Dhanbad,faculty with papers,460,460,0,0.0
+IIT (ISM) Dhanbad,median faculty h-index,5.0,5.0,0.0,0.0
+IIT (ISM) Dhanbad,mean faculty h-index,8.17,8.17,0.0,0.0
+IIT (ISM) Dhanbad,max faculty h-index,62,62,0,0.0
+IIT Jodhpur,papers,5616,5585,-31,-0.55
+IIT Jodhpur,citations,66272,66211,-61,-0.09
+IIT Jodhpur,citations per paper,11.8,11.86,0.06,0.51
+IIT Jodhpur,median citations per paper,3.0,3,0.0,0.0
+IIT Jodhpur,papers with >= 100 citations,74,74,0,0.0
+IIT Jodhpur,Q1 share of ranked journal papers,0.7059,0.7065,0.0006,0.08
+IIT Jodhpur,institute h-index,90,90,0,0.0
+IIT Jodhpur,faculty with papers,264,263,-1,-0.38
+IIT Jodhpur,median faculty h-index,3.0,3.0,0.0,0.0
+IIT Jodhpur,mean faculty h-index,5.47,5.48,0.01,0.18
+IIT Jodhpur,max faculty h-index,45,45,0,0.0
+IIT Jammu,papers,2139,2139,0,0.0
+IIT Jammu,citations,23366,23366,0,0.0
+IIT Jammu,citations per paper,10.92,10.92,0.0,0.0
+IIT Jammu,median citations per paper,3,3,0,0.0
+IIT Jammu,papers with >= 100 citations,26,26,0,0.0
+IIT Jammu,Q1 share of ranked journal papers,0.7136,0.7136,0.0,0.0
+IIT Jammu,institute h-index,63,63,0,0.0
+IIT Jammu,faculty with papers,147,147,0,0.0
+IIT Jammu,median faculty h-index,3.0,3.0,0.0,0.0
+IIT Jammu,mean faculty h-index,4.24,4.24,0.0,0.0
+IIT Jammu,max faculty h-index,24,24,0,0.0
+IIT Bhilai,papers,1400,1400,0,0.0
+IIT Bhilai,citations,11715,11715,0,0.0
+IIT Bhilai,citations per paper,8.39,8.39,0.0,0.0
+IIT Bhilai,median citations per paper,2,2,0,0.0
+IIT Bhilai,papers with >= 100 citations,8,8,0,0.0
+IIT Bhilai,Q1 share of ranked journal papers,0.6554,0.6554,0.0,0.0
+IIT Bhilai,institute h-index,43,43,0,0.0
+IIT Bhilai,faculty with papers,85,85,0,0.0
+IIT Bhilai,median faculty h-index,3.0,3.0,0.0,0.0
+IIT Bhilai,mean faculty h-index,4.18,4.18,0.0,0.0
+IIT Bhilai,max faculty h-index,17,17,0,0.0
+IIT Dharwad,papers,1121,1120,-1,-0.09
+IIT Dharwad,citations,7918,7904,-14,-0.18
+IIT Dharwad,citations per paper,7.06,7.06,0.0,0.0
+IIT Dharwad,median citations per paper,1,1.0,0.0,0.0
+IIT Dharwad,papers with >= 100 citations,5,5,0,0.0
+IIT Dharwad,Q1 share of ranked journal papers,0.695,0.6944,-0.0006,-0.09
+IIT Dharwad,institute h-index,35,35,0,0.0
+IIT Dharwad,faculty with papers,101,100,-1,-0.99
+IIT Dharwad,median faculty h-index,2.0,2.0,0.0,0.0
+IIT Dharwad,mean faculty h-index,2.83,2.85,0.02,0.71
+IIT Dharwad,max faculty h-index,12,12,0,0.0

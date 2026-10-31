@@ -1,4 +1,10 @@
 ﻿institution,group,total,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026
+IIT Ropar,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Ropar,PRL,4,0,0,0,0,0,2,0,0,1,1,0
+IIT Ropar,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Ropar,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Ropar,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Ropar,JACS,3,0,0,0,0,0,0,1,1,1,0,0
 IIT Bombay,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
 IIT Bombay,PRL,113,8,10,9,12,13,12,8,11,10,11,9
 IIT Bombay,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
@@ -83,3 +89,39 @@ IIT Mandi,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
 IIT Mandi,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
 IIT Mandi,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
 IIT Mandi,JACS,7,0,0,0,1,1,0,0,0,1,2,2
+IIT Delhi,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Delhi,PRL,7,0,0,0,0,1,1,1,1,0,2,1
+IIT Delhi,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Delhi,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Delhi,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Delhi,JACS,10,0,0,0,0,0,0,0,3,2,4,1
+IIT (ISM) Dhanbad,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT (ISM) Dhanbad,PRL,3,0,0,0,0,0,0,0,0,2,1,0
+IIT (ISM) Dhanbad,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT (ISM) Dhanbad,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT (ISM) Dhanbad,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT (ISM) Dhanbad,JACS,1,0,0,0,0,0,0,0,0,0,0,1
+IIT Jodhpur,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jodhpur,PRL,15,0,0,0,0,0,0,1,1,1,3,9
+IIT Jodhpur,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jodhpur,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jodhpur,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jodhpur,JACS,5,0,0,0,0,0,0,0,0,0,2,3
+IIT Jammu,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jammu,PRL,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jammu,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jammu,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jammu,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Jammu,JACS,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhilai,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhilai,PRL,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhilai,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhilai,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhilai,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Bhilai,JACS,1,0,0,0,1,0,0,0,0,0,0,0
+IIT Dharwad,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Dharwad,PRL,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Dharwad,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Dharwad,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Dharwad,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Dharwad,JACS,1,0,0,0,0,0,0,0,0,1,0,0

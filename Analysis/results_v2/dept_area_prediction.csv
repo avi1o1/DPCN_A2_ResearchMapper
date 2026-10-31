@@ -1,13 +1,13 @@
 ﻿metric,value
-"candidate (department, subfield) pairs: not strong in 2016-20 (strong = RCA >= 1 and >= 5 papers)",17670
-entries: strong in 2021-26,716
-faculty used for the proximity (>= 5 papers in 2016-20),1919
-ROC AUC: density (relatedness to what the department does),0.787
-ROC AUC: RCA in 2016-20 (already close),0.806
-"ROC AUC, logistic with one department left out: density",0.775
-"ROC AUC, logistic with one department left out: RCA",0.751
-"ROC AUC, logistic with one department left out: density + RCA",0.861
-"ROC AUC: density with shuffled subfield labels, 500 shuffles: mean (95% range)",0.495 (0.458-0.529)
+"candidate (department, subfield) pairs: not strong in 2016-20 (strong = RCA >= 1 and >= 5 papers)",26117
+entries: strong in 2021-26,1017
+faculty used for the proximity (>= 5 papers in 2016-20),2460
+ROC AUC: density (relatedness to what the department does),0.773
+ROC AUC: RCA in 2016-20 (already close),0.792
+"ROC AUC, logistic with one department left out: density",0.755
+"ROC AUC, logistic with one department left out: RCA",0.727
+"ROC AUC, logistic with one department left out: density + RCA",0.844
+"ROC AUC: density with shuffled subfield labels, 500 shuffles: mean (95% range)",0.504 (0.472-0.533)
 share of shuffles with AUC >= observed (p),0.0
-brand-new areas (0 papers in 2016-20): candidates / entries,15522 / 224
-"ROC AUC: density, brand-new areas only",0.731
+brand-new areas (0 papers in 2016-20): candidates / entries,23273 / 357
+"ROC AUC: density, brand-new areas only",0.705

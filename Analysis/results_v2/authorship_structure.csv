@@ -1,19 +1,19 @@
 ﻿metric,value
-"NMI(Louvain communities, departments)",0.6177
-"NMI, faculty with >= 1 faculty tie",0.5578
-"ARI(Louvain communities, departments)",0.1154
-share of ties inside one department,0.4356
-department assortativity,0.4607
-institute assortativity,0.816
+"NMI(Louvain communities, departments)",0.6171
+"NMI, faculty with >= 1 faculty tie",0.5516
+"ARI(Louvain communities, departments)",0.0931
+share of ties inside one department,0.4081
+department assortativity,0.4526
+institute assortativity,0.764
 maximum k-core,8
 faculty in the maximum k-core,9
-"clustering spectrum exponent beta, C(k) ~ k^-beta",0.5186
-small-world sigma = (C/C_ER) / (L/L_ER),262.2326
-"f_50, random: share removed until the largest component halves",0.3871
-"f_50, degree (adaptive): share removed until the largest component halves",0.1249
-"f_50, betweenness (adaptive): share removed until the largest component halves",0.1373
-Molloy-Reed kappa = <k^2>/<k>,8.1321
-mean-field random-failure threshold 1 - 1/(kappa-1),0.8598
-mean-field epidemic threshold T_c = <k>/(<k^2>-<k>),0.1402
-"densification exponent a, ties ~ faculty^a",1.6633
-"median distinct co-authors per faculty (everyone, not only faculty)",24.0
+"clustering spectrum exponent beta, C(k) ~ k^-beta",0.5735
+small-world sigma = (C/C_ER) / (L/L_ER),325.6762
+"f_50, random: share removed until the largest component halves",0.3967
+"f_50, degree (adaptive): share removed until the largest component halves",0.1364
+"f_50, betweenness (adaptive): share removed until the largest component halves",0.1364
+Molloy-Reed kappa = <k^2>/<k>,8.3768
+mean-field random-failure threshold 1 - 1/(kappa-1),0.8644
+mean-field epidemic threshold T_c = <k>/(<k^2>-<k>),0.1356
+"densification exponent a, ties ~ faculty^a",1.6458
+"median distinct co-authors per faculty (everyone, not only faculty)",23.0

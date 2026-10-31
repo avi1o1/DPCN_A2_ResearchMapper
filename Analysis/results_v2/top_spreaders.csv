@@ -1,21 +1,21 @@
 ﻿faculty,institution,department,expected_outbreak_share,degree,k_core,betweenness
-Dinesh Kabra,IIT Bombay,Physics,0.166,27,7,0.00578
-M S Ramachandra Rao,IIT Madras,Physics,0.1652,38,5,0.0138
-Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.1649,28,5,0.00526
-Rakesh G. MOTE,IIT Bombay,Mechanical Engineering,0.1643,24,8,0.00619
-Arindam Chowdhury,IIT Bombay,Chemistry,0.1641,24,5,0.00512
-Aftab Alam,IIT Bombay,Physics,0.1615,24,5,0.00657
-Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.1601,25,5,0.01315
-Anindya Datta,IIT Bombay,Chemistry,0.16,23,5,0.00877
-Suddhasatta Mahapatra,IIT Bombay,Physics,0.1599,20,8,0.00279
-Tiju Thomas,IIT Madras,Metallurgical and Materials Engineering,0.1595,17,5,0.00394
-Balasubramaniam Kavaipatti,IIT Bombay,Energy Science and Engineering,0.1594,18,7,0.00089
-R Sarathi,IIT Madras,Electrical Engineering,0.1593,26,5,0.00908
-Anil Kottantharayil,IIT Bombay,Electrical Engineering,0.1593,21,7,0.00445
-Siddharth Tallur,IIT Bombay,Electrical Engineering,0.1593,19,8,0.00401
-Arnab Dutta,IIT Bombay,Chemistry,0.1579,23,5,0.01474
-Apurba Laha,IIT Bombay,Electrical Engineering,0.1575,16,5,0.00134
-Birabar Ranjit Kumar Nanda,IIT Madras,Physics,0.1574,23,5,0.00759
-B S Murty,IIT Madras,,0.1566,20,5,0.00676
-Deepak Marla,IIT Bombay,Mechanical Engineering,0.1561,15,8,0.00075
-Kiran Kondabagil,IIT Bombay,Biosciences and Bioengineering,0.1549,17,5,0.00272
+Dinesh Kabra,IIT Bombay,Physics,0.1845,29,7,0.00702
+M S Ramachandra Rao,IIT Madras,Physics,0.1835,39,5,0.0105
+Rakesh G. MOTE,IIT Bombay,Mechanical Engineering,0.1816,24,8,0.00484
+Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.1812,29,5,0.00455
+Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.1807,29,5,0.01258
+Aftab Alam,IIT Bombay,Physics,0.1797,25,5,0.00454
+R Sarathi,IIT Madras,Electrical Engineering,0.1797,27,5,0.00739
+Suddhasatta Mahapatra,IIT Bombay,Physics,0.1794,21,8,0.00284
+Arindam Chowdhury,IIT Bombay,Chemistry,0.179,25,5,0.00393
+Jayant Jain,IIT Delhi,Materials Science and Engineering,0.1777,20,5,0.00511
+Birabar Ranjit Kumar Nanda,IIT Madras,Physics,0.1766,24,5,0.00507
+Siddharth Tallur,IIT Bombay,Electrical Engineering,0.1765,19,8,0.00243
+Arnab Dutta,IIT Bombay,Chemistry,0.1765,23,5,0.00955
+Balasubramaniam Kavaipatti,IIT Bombay,Energy Science and Engineering,0.1763,18,7,0.00065
+Srinivasa Rao Bakshi,IIT Madras,Metallurgical and Materials Engineering,0.1761,17,5,0.00329
+Pravin P Ingole,IIT Delhi,Chemistry,0.1761,18,5,0.00316
+Anindya Datta,IIT Bombay,Chemistry,0.1758,23,5,0.00609
+Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,0.1754,21,5,0.00606
+Anil Kottantharayil,IIT Bombay,Electrical Engineering,0.1752,21,7,0.00299
+Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,0.1751,25,5,0.00721

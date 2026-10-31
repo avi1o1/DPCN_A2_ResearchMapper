@@ -1,69 +1,83 @@
 ﻿metric,value
-faculty (nodes),4405
-edges,7358
-lambda_1,11.53
-lambda_2,10.281
-sqrt(max degree),6.164
-eigenvector: faculty with a non-zero score (its component),3129
+faculty (nodes),6211
+edges,10725
+lambda_1,11.69
+lambda_2,10.545
+sqrt(max degree),6.245
+eigenvector: faculty with a non-zero score (its component),4462
 eigenvector: one sign on its support (check),True
-eigenvector IPR,0.0221
-IPR if spread evenly (1/n),0.00023
-eigenvector weight (sum v^2) on its top 10 faculty,0.361
+eigenvector IPR,0.0195
+IPR if spread evenly (1/n),0.00016
+eigenvector weight (sum v^2) on its top 10 faculty,0.339
 eigenvector top 10: institutions,IIT Bombay 10
-eigenvector top 10: departments,Physics 4; Electrical Engineering 3; Energy Science and Engineering 1; Mechanical Engineering 1; Metallurgical Engineering and Materials Science 1
-"Spearman degree vs betweenness (giant component, n = 3129)",0.873
-"Spearman degree vs eigenvector (giant component, n = 3129)",0.645
-"Spearman degree vs Katz (f=0.5) (giant component, n = 3129)",0.978
-"Spearman degree vs subgraph centrality (giant component, n = 3129)",0.893
-"Spearman degree vs total communicability (giant component, n = 3129)",0.711
+eigenvector top 10: departments,Physics 4; Electrical Engineering 3; Mechanical Engineering 1; Energy Science and Engineering 1; Metallurgical Engineering and Materials Science 1
+"Spearman degree vs betweenness (giant component, n = 4462)",0.884
+"Spearman degree vs eigenvector (giant component, n = 4462)",0.664
+"Spearman degree vs Katz (f=0.5) (giant component, n = 4462)",0.977
+"Spearman degree vs subgraph centrality (giant component, n = 4462)",0.89
+"Spearman degree vs total communicability (giant component, n = 4462)",0.711
 degree: top-10 overlap with degree top-10,10
-"Spearman betweenness vs eigenvector (giant component, n = 3129)",0.507
-"Spearman betweenness vs Katz (f=0.5) (giant component, n = 3129)",0.829
-"Spearman betweenness vs subgraph centrality (giant component, n = 3129)",0.701
-"Spearman betweenness vs total communicability (giant component, n = 3129)",0.551
+"Spearman betweenness vs eigenvector (giant component, n = 4462)",0.529
+"Spearman betweenness vs Katz (f=0.5) (giant component, n = 4462)",0.841
+"Spearman betweenness vs subgraph centrality (giant component, n = 4462)",0.714
+"Spearman betweenness vs total communicability (giant component, n = 4462)",0.568
 betweenness: top-10 overlap with degree top-10,4
-"Spearman eigenvector vs Katz (f=0.5) (giant component, n = 3129)",0.748
-"Spearman eigenvector vs subgraph centrality (giant component, n = 3129)",0.83
-"Spearman eigenvector vs total communicability (giant component, n = 3129)",0.965
-eigenvector: top-10 overlap with degree top-10,3
-"Spearman Katz (f=0.5) vs subgraph centrality (giant component, n = 3129)",0.962
-"Spearman Katz (f=0.5) vs total communicability (giant component, n = 3129)",0.82
-Katz (f=0.5): top-10 overlap with degree top-10,8
-"Spearman subgraph centrality vs total communicability (giant component, n = 3129)",0.905
-subgraph centrality: top-10 overlap with degree top-10,4
-total communicability: top-10 overlap with degree top-10,3
-share of eigenvector weight (sum v^2) on IIT Bombay faculty,0.9642
-share of eigenvector weight (sum v^2) on IIT Madras faculty,0.0142
-share of eigenvector weight (sum v^2) on IIT Kanpur faculty,0.0039
+"Spearman eigenvector vs Katz (f=0.5) (giant component, n = 4462)",0.771
+"Spearman eigenvector vs subgraph centrality (giant component, n = 4462)",0.855
+"Spearman eigenvector vs total communicability (giant component, n = 4462)",0.977
+eigenvector: top-10 overlap with degree top-10,2
+"Spearman Katz (f=0.5) vs subgraph centrality (giant component, n = 4462)",0.961
+"Spearman Katz (f=0.5) vs total communicability (giant component, n = 4462)",0.823
+Katz (f=0.5): top-10 overlap with degree top-10,7
+"Spearman subgraph centrality vs total communicability (giant component, n = 4462)",0.908
+subgraph centrality: top-10 overlap with degree top-10,3
+total communicability: top-10 overlap with degree top-10,2
+share of eigenvector weight (sum v^2) on IIT Ropar faculty,0.0004
+share of eigenvector weight (sum v^2) on IIT Bombay faculty,0.9215
+share of eigenvector weight (sum v^2) on IIT Madras faculty,0.0192
+share of eigenvector weight (sum v^2) on IIT Kanpur faculty,0.014
 share of eigenvector weight (sum v^2) on IIT Goa faculty,0.0001
 share of eigenvector weight (sum v^2) on IIT Tirupati faculty,0.0001
-share of eigenvector weight (sum v^2) on IIT Patna faculty,0.0005
+share of eigenvector weight (sum v^2) on IIT Patna faculty,0.0007
 share of eigenvector weight (sum v^2) on IIT Palakkad faculty,0.0006
-share of eigenvector weight (sum v^2) on IIT Guwahati faculty,0.0013
-share of eigenvector weight (sum v^2) on IIT Hyderabad faculty,0.0023
-share of eigenvector weight (sum v^2) on IIT Bhubaneswar faculty,0.0005
-share of eigenvector weight (sum v^2) on IIT (BHU) Varanasi faculty,0.0012
-share of eigenvector weight (sum v^2) on IIT Gandhinagar faculty,0.0076
-share of eigenvector weight (sum v^2) on IIT Indore faculty,0.0023
-share of eigenvector weight (sum v^2) on IIT Mandi faculty,0.0012
-IIT Bombay share of faculty,0.1771
-IIT Madras share of faculty,0.1387
-IIT Kanpur share of faculty,0.1249
-IIT Goa share of faculty,0.0125
-IIT Tirupati share of faculty,0.0277
-IIT Patna share of faculty,0.037
-IIT Palakkad share of faculty,0.0272
-IIT Guwahati share of faculty,0.1003
-IIT Hyderabad share of faculty,0.0774
-IIT Bhubaneswar share of faculty,0.0502
-IIT (BHU) Varanasi share of faculty,0.0951
-IIT Gandhinagar share of faculty,0.0397
-IIT Indore share of faculty,0.0461
-IIT Mandi share of faculty,0.0461
+share of eigenvector weight (sum v^2) on IIT Guwahati faculty,0.0023
+share of eigenvector weight (sum v^2) on IIT Hyderabad faculty,0.0027
+share of eigenvector weight (sum v^2) on IIT Bhubaneswar faculty,0.0012
+share of eigenvector weight (sum v^2) on IIT (BHU) Varanasi faculty,0.0029
+share of eigenvector weight (sum v^2) on IIT Gandhinagar faculty,0.0083
+share of eigenvector weight (sum v^2) on IIT Indore faculty,0.0032
+share of eigenvector weight (sum v^2) on IIT Mandi faculty,0.0023
+share of eigenvector weight (sum v^2) on IIT Delhi faculty,0.0171
+share of eigenvector weight (sum v^2) on IIT (ISM) Dhanbad faculty,0.0003
+share of eigenvector weight (sum v^2) on IIT Jodhpur faculty,0.001
+share of eigenvector weight (sum v^2) on IIT Jammu faculty,0.0021
+share of eigenvector weight (sum v^2) on IIT Bhilai faculty,0.0001
+share of eigenvector weight (sum v^2) on IIT Dharwad faculty,0.0
+IIT Ropar share of faculty,0.0317
+IIT Bombay share of faculty,0.1259
+IIT Madras share of faculty,0.0985
+IIT Kanpur share of faculty,0.0889
+IIT Goa share of faculty,0.0089
+IIT Tirupati share of faculty,0.0198
+IIT Patna share of faculty,0.0262
+IIT Palakkad share of faculty,0.0193
+IIT Guwahati share of faculty,0.0713
+IIT Hyderabad share of faculty,0.0549
+IIT Bhubaneswar share of faculty,0.0356
+IIT (BHU) Varanasi share of faculty,0.0675
+IIT Gandhinagar share of faculty,0.0282
+IIT Indore share of faculty,0.0327
+IIT Mandi share of faculty,0.033
+IIT Delhi share of faculty,0.0874
+IIT (ISM) Dhanbad share of faculty,0.0741
+IIT Jodhpur share of faculty,0.0425
+IIT Jammu share of faculty,0.0237
+IIT Bhilai share of faculty,0.0137
+IIT Dharwad share of faculty,0.0163
 "max k-core: k, faculty, institutions","8, 9, IIT Bombay 9"
 eigenvector top 10 inside the max k-core,4
-campus communicability ratio rho (Bombay vs Madras),0.1796
-rho (Bombay vs Madras) lost by removing the single most important faculty member,0.115
-faculty whose removal lowers rho (Bombay vs Madras) by more than 5%,12
-Spearman of rho (Bombay vs Madras) loss with betweenness (faculty with degree > 0),0.374
+campus communicability ratio rho (Bombay vs Madras),0.2028
+rho (Bombay vs Madras) lost by removing the single most important faculty member,0.1127
+faculty whose removal lowers rho (Bombay vs Madras) by more than 5%,10
+Spearman of rho (Bombay vs Madras) loss with betweenness (faculty with degree > 0),0.436
 top-10 overlap: rho (Bombay vs Madras) loss vs betweenness,0

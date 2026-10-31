@@ -1,0 +1,22 @@
+﻿institution,cohort_definition,cohort_size,cohort_with_papers,cohort_mean_papers,cohort_median_papers,cohort_median_citations,cohort_median_h,cohort_mean_h,all_current_in_scope,all_current_with_papers,all_current_mean_papers,all_current_median_h,published_median_h_faculty_with_papers,warning,rank_mean_papers_among_cohorts_of_20plus
+IIT Ropar,"current, joining_year <= 2017, in field scope",48,47,23.08,20.0,191.5,6.0,7.04,190,164,18.13,4.0,4.0,,14
+IIT Bombay,"current, joining_year <= 2017, in field scope",423,389,41.9,31.0,216.0,8.0,10.18,759,629,29.45,5.0,5.0,,10
+IIT Madras,"current, joining_year <= 2017, in field scope",449,394,38.42,25.0,192.0,8.0,9.47,610,515,30.83,6.0,7.0,,12
+IIT Kanpur,"current, joining_year <= 2017, in field scope",294,267,39.6,27.0,215.5,8.0,10.04,564,463,25.91,4.0,5.0,,11
+IIT Goa,"current, joining_year <= 2017, in field scope",3,3,15.33,16.0,139.0,7.0,6.67,69,47,10.16,1.0,3.0,cohort too small: 3 current faculty with joining year <= 2017 (< 20); 9 of 69 current people have no joining year,
+IIT Tirupati,"current, joining_year <= 2017, in field scope",31,26,15.42,11.0,29.0,3.0,4.42,128,109,9.45,2.0,3.0,,15
+IIT Patna,"current, joining_year <= 2017, in field scope",85,83,58.81,45.0,561.0,12.0,14.19,153,143,39.67,9.0,9.0,,2
+IIT Palakkad,"current, joining_year <= 2017, in field scope",25,22,12.16,8.0,33.0,4.0,3.68,152,104,9.87,1.0,4.0,,16
+IIT Guwahati,"current, joining_year <= 2017, in field scope",329,315,49.36,35.0,352.0,10.0,12.06,436,394,39.53,8.0,8.0,,4
+IIT Hyderabad,"current, joining_year <= 2017, in field scope",164,154,46.78,28.0,275.0,8.0,11.12,344,300,27.95,4.0,5.0,,5
+IIT Bhubaneswar,"current, joining_year <= 2017, in field scope",95,89,42.52,28.0,277.0,9.0,10.37,226,182,22.26,3.0,4.0,,9
+IIT (BHU) Varanasi,"current, joining_year <= 2017, in field scope",203,191,43.87,34.0,478.0,12.0,12.38,409,347,27.88,6.0,7.0,,7
+IIT Gandhinagar,"current, joining_year <= 2017, in field scope",4,4,22.75,22.0,83.0,4.5,5.75,150,135,25.71,4.0,4.0,cohort too small: 4 current faculty with joining year <= 2017 (< 20); 66 of 150 current people have no joining year,
+IIT Indore,"current, joining_year <= 2017, in field scope",94,91,71.01,37.0,613.0,14.0,15.95,214,180,38.21,5.0,7.0,,1
+IIT Mandi,"current, joining_year <= 2017, in field scope",73,64,36.93,24.0,135.0,6.0,9.15,216,163,17.62,2.0,3.0,,13
+IIT Delhi,"current, joining_year <= 2017, in field scope",57,54,55.3,46.0,473.0,12.0,13.04,570,493,34.54,6.0,7.0,,3
+IIT (ISM) Dhanbad,"current, joining_year <= 2017, in field scope",219,209,43.88,35.0,376.0,11.0,12.58,407,347,26.08,4.0,5.0,,6
+IIT Jodhpur,"current, joining_year <= 2017, in field scope",47,43,43.26,30.0,212.0,8.0,10.17,324,237,16.3,2.0,3.0,,8
+IIT Jammu,"current, joining_year <= 2017, in field scope",15,15,37.6,33.0,243.0,9.0,10.33,157,123,12.45,2.0,3.0,cohort too small: 15 current faculty with joining year <= 2017 (< 20); 16 of 157 current people have no joining year,
+IIT Bhilai,"current, joining_year <= 2017, in field scope",14,14,23.5,20.5,50.5,4.0,5.79,91,76,14.18,2.0,3.0,cohort too small: 14 current faculty with joining year <= 2017 (< 20); 17 of 91 current people have no joining year,
+IIT Dharwad,"current, joining_year <= 2017, in field scope",13,12,16.08,12.0,52.0,5.0,4.62,96,83,10.33,2.0,2.0,cohort too small: 13 current faculty with joining year <= 2017 (< 20); 3 of 96 current people have no joining year,

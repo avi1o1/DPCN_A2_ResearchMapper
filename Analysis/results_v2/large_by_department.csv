@@ -1,153 +1,228 @@
 ﻿institution,department,large_papers,department_papers,share_of_department,share_of_institute_large
-IIT Bombay,Physics,226,1584,0.1427,0.1687
-IIT Bombay,Chemistry,72,2703,0.0266,0.0537
-IIT Bombay,Biosciences and Bioengineering,68,1015,0.067,0.0507
-IIT Bombay,Electrical Engineering,57,3259,0.0175,0.0425
-IIT Bombay,Civil Engineering,46,2081,0.0221,0.0343
-IIT Bombay,Chemical Engineering,38,1294,0.0294,0.0284
-IIT Bombay,Mechanical Engineering,36,1915,0.0188,0.0269
-IIT Bombay,Energy Science and Engineering,30,1052,0.0285,0.0224
-IIT Bombay,Metallurgical Engineering and Materials Science,25,1121,0.0223,0.0187
-IIT Bombay,Environmental Science and Engineering,18,551,0.0327,0.0134
-IIT Bombay,Earth Sciences,15,747,0.0201,0.0112
-IIT Bombay,Centre of Studies in Resources Engineering,10,648,0.0154,0.0075
-IIT Bombay,Computer Science and Engineering,6,766,0.0078,0.0045
-IIT Bombay,Centre for Climate Studies,6,75,0.08,0.0045
+IIT Ropar,Biomedical Engineering,18,197,0.0914,0.3462
+IIT Ropar,Physics,11,374,0.0294,0.2115
+IIT Ropar,Mechanical Engineering,8,675,0.0119,0.1538
+IIT Ropar,Civil Engineering,4,206,0.0194,0.0769
+IIT Ropar,Electrical Engineering,3,571,0.0053,0.0577
+IIT Ropar,Chemical Engineering,3,158,0.019,0.0577
+IIT Ropar,Chemistry,2,648,0.0031,0.0385
+IIT Ropar,Metallurgical and Materials Engineering,2,71,0.0282,0.0385
+IIT Ropar,Computer Science and Engineering,1,380,0.0026,0.0192
+IIT Bombay,Physics,235,1672,0.1406,0.1741
+IIT Bombay,Chemistry,108,2773,0.0389,0.08
+IIT Bombay,Biosciences and Bioengineering,68,1015,0.067,0.0504
+IIT Bombay,Electrical Engineering,59,3395,0.0174,0.0437
+IIT Bombay,Civil Engineering,46,2080,0.0221,0.0341
+IIT Bombay,Chemical Engineering,38,1322,0.0287,0.0281
+IIT Bombay,Mechanical Engineering,35,1984,0.0176,0.0259
+IIT Bombay,Energy Science and Engineering,30,1082,0.0277,0.0222
+IIT Bombay,Metallurgical Engineering and Materials Science,25,1147,0.0218,0.0185
+IIT Bombay,Environmental Science and Engineering,18,553,0.0325,0.0133
+IIT Bombay,Earth Sciences,15,763,0.0197,0.0111
+IIT Bombay,Centre of Studies in Resources Engineering,10,662,0.0151,0.0074
+IIT Bombay,Computer Science and Engineering,7,827,0.0085,0.0052
+IIT Bombay,Centre for Climate Studies,6,79,0.0759,0.0044
 IIT Bombay,Economics,5,21,0.2381,0.0037
-IIT Bombay,Centre for Urban Science and Engineering,4,65,0.0615,0.003
-IIT Bombay,Aerospace Engineering,3,815,0.0037,0.0022
-IIT Bombay,Mathematics,2,332,0.006,0.0015
-IIT Bombay,Industrial Engineering and Operations Research,2,127,0.0157,0.0015
+IIT Bombay,Mathematics,4,363,0.011,0.003
+IIT Bombay,Centre for Urban Science and Engineering,4,67,0.0597,0.003
+IIT Bombay,Aerospace Engineering,3,829,0.0036,0.0022
+IIT Bombay,Industrial Engineering and Operations Research,2,152,0.0132,0.0015
 IIT Bombay,IDC School of Design,2,75,0.0267,0.0015
-IIT Bombay,Ashank Desai Centre for Policy Studies,2,48,0.0417,0.0015
-IIT Madras,Physics,585,2126,0.2752,0.2356
-IIT Madras,,163,770,0.2117,0.0656
-IIT Madras,Civil Engineering,71,1696,0.0419,0.0286
-IIT Madras,Biotechnology,49,1071,0.0458,0.0197
-IIT Madras,Chemistry,47,1944,0.0242,0.0189
-IIT Madras,Ocean Engineering,45,981,0.0459,0.0181
-IIT Madras,Chemical Engineering,29,1150,0.0252,0.0117
-IIT Madras,Electrical Engineering,27,1812,0.0149,0.0109
-IIT Madras,Metallurgical and Materials Engineering,24,1137,0.0211,0.0097
-IIT Madras,Computer Science and Engineering,12,793,0.0151,0.0048
-IIT Madras,Engineering Design,10,597,0.0168,0.004
-IIT Madras,Mechanical Engineering,8,1663,0.0048,0.0032
-IIT Madras,Applied Mechanics and Biomedical Engineering,7,1233,0.0057,0.0028
-IIT Madras,Aerospace Engineering,2,974,0.0021,0.0008
-IIT Kanpur,Physics,178,1581,0.1126,0.2633
-IIT Kanpur,Biological Sciences and Bioengineering,54,484,0.1116,0.0799
-IIT Kanpur,Materials Science and Engineering,26,950,0.0274,0.0385
-IIT Kanpur,Civil Engineering,25,1085,0.023,0.037
-IIT Kanpur,Electrical Engineering,19,2842,0.0067,0.0281
-IIT Kanpur,Earth Sciences,19,376,0.0505,0.0281
-IIT Kanpur,Chemical Engineering,18,983,0.0183,0.0266
-IIT Kanpur,Chemistry,18,1422,0.0127,0.0266
-IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",17,102,0.1667,0.0251
-IIT Kanpur,Computer Science and Engineering,15,533,0.0281,0.0222
-IIT Kanpur,Sustainable Energy Engineering,11,207,0.0531,0.0163
-IIT Kanpur,Mechanical Engineering,9,1822,0.0049,0.0133
-IIT Kanpur,,8,435,0.0184,0.0118
-IIT Kanpur,Gangwal School of Medical Sciences and Technology,5,12,0.4167,0.0074
-IIT Kanpur,Aerospace Engineering,2,909,0.0022,0.003
-IIT Kanpur,Management Sciences,2,90,0.0222,0.003
-IIT Kanpur,Cognitive Science,2,39,0.0513,0.003
-IIT Kanpur,Mathematics and Statistics,1,358,0.0028,0.0015
-IIT Goa,Physics,14,133,0.1053,0.5385
-IIT Goa,Mechanical Engineering,4,135,0.0296,0.1538
+IIT Bombay,Ashank Desai Centre for Policy Studies,2,49,0.0408,0.0015
+IIT Madras,Physics,587,2154,0.2725,0.235
+IIT Madras,,171,792,0.2159,0.0685
+IIT Madras,Civil Engineering,71,1719,0.0413,0.0284
+IIT Madras,Biotechnology,49,1075,0.0456,0.0196
+IIT Madras,Chemistry,48,1948,0.0246,0.0192
+IIT Madras,Ocean Engineering,47,983,0.0478,0.0188
+IIT Madras,Chemical Engineering,29,1162,0.025,0.0116
+IIT Madras,Electrical Engineering,27,1868,0.0145,0.0108
+IIT Madras,Metallurgical and Materials Engineering,24,1167,0.0206,0.0096
+IIT Madras,Computer Science and Engineering,14,833,0.0168,0.0056
+IIT Madras,Engineering Design,10,606,0.0165,0.004
+IIT Madras,Mechanical Engineering,8,1677,0.0048,0.0032
+IIT Madras,Applied Mechanics and Biomedical Engineering,7,1255,0.0056,0.0028
+IIT Madras,Aerospace Engineering,2,984,0.002,0.0008
+IIT Kanpur,Physics,184,1630,0.1129,0.2698
+IIT Kanpur,Biological Sciences and Bioengineering,52,482,0.1079,0.0762
+IIT Kanpur,Materials Science and Engineering,27,984,0.0274,0.0396
+IIT Kanpur,Civil Engineering,25,1095,0.0228,0.0367
+IIT Kanpur,Electrical Engineering,19,2871,0.0066,0.0279
+IIT Kanpur,Earth Sciences,19,385,0.0494,0.0279
+IIT Kanpur,Chemical Engineering,18,994,0.0181,0.0264
+IIT Kanpur,Chemistry,18,1437,0.0125,0.0264
+IIT Kanpur,"Space, Planetary and Astronomical Sciences and Engineering",18,109,0.1651,0.0264
+IIT Kanpur,Computer Science and Engineering,15,556,0.027,0.022
+IIT Kanpur,Sustainable Energy Engineering,11,208,0.0529,0.0161
+IIT Kanpur,Mechanical Engineering,9,1845,0.0049,0.0132
+IIT Kanpur,,8,434,0.0184,0.0117
+IIT Kanpur,Gangwal School of Medical Sciences and Technology,5,12,0.4167,0.0073
+IIT Kanpur,Aerospace Engineering,2,925,0.0022,0.0029
+IIT Kanpur,Management Sciences,2,90,0.0222,0.0029
+IIT Kanpur,Cognitive Science,2,40,0.05,0.0029
+IIT Kanpur,Mathematics and Statistics,1,368,0.0027,0.0015
+IIT Goa,Physics,14,132,0.1061,0.5385
+IIT Goa,Mechanical Engineering,4,145,0.0276,0.1538
 IIT Goa,Computer Science and Engineering,1,59,0.0169,0.0385
 IIT Goa,Chemistry,1,55,0.0182,0.0385
 IIT Tirupati,Electrical Engineering,7,248,0.0282,0.2333
-IIT Tirupati,Physics,5,107,0.0467,0.1667
-IIT Tirupati,Chemistry,4,151,0.0265,0.1333
-IIT Tirupati,Civil and Environmental Engineering,2,156,0.0128,0.0667
-IIT Tirupati,Computer Science and Engineering,2,162,0.0123,0.0667
+IIT Tirupati,Physics,5,106,0.0472,0.1667
+IIT Tirupati,Chemistry,4,154,0.026,0.1333
+IIT Tirupati,Civil and Environmental Engineering,2,157,0.0127,0.0667
+IIT Tirupati,Computer Science and Engineering,2,164,0.0122,0.0667
 IIT Tirupati,Chemical Engineering,2,106,0.0189,0.0667
-IIT Tirupati,Mechanical Engineering,1,211,0.0047,0.0333
-IIT Patna,Physics,65,806,0.0806,0.3963
-IIT Patna,Chemistry,5,494,0.0101,0.0305
-IIT Patna,Civil and Environmental Engineering,4,519,0.0077,0.0244
-IIT Patna,Metallurgical and Materials Engineering,3,252,0.0119,0.0183
-IIT Patna,Chemical and Biochemical Engineering,3,165,0.0182,0.0183
-IIT Patna,Computer Science and Engineering,1,1297,0.0008,0.0061
-IIT Patna,Mechanical Engineering,1,723,0.0014,0.0061
-IIT Patna,Mathematics,1,517,0.0019,0.0061
-IIT Palakkad,Physics,5,129,0.0388,0.2083
+IIT Tirupati,Mechanical Engineering,1,213,0.0047,0.0333
+IIT Patna,Physics,65,812,0.08,0.3916
+IIT Patna,Chemistry,5,494,0.0101,0.0301
+IIT Patna,Civil and Environmental Engineering,4,521,0.0077,0.0241
+IIT Patna,Computer Science and Engineering,3,1362,0.0022,0.0181
+IIT Patna,Metallurgical and Materials Engineering,3,262,0.0115,0.0181
+IIT Patna,Chemical and Biochemical Engineering,3,167,0.018,0.0181
+IIT Patna,Mechanical Engineering,1,742,0.0013,0.006
+IIT Patna,Mathematics,1,530,0.0019,0.006
+IIT Palakkad,Physics,5,128,0.0391,0.2083
 IIT Palakkad,Civil Engineering,3,156,0.0192,0.125
 IIT Palakkad,Biological Sciences and Engineering,3,77,0.039,0.125
 IIT Palakkad,Chemistry,2,231,0.0087,0.0833
 IIT Palakkad,Mechanical Engineering,2,281,0.0071,0.0833
 IIT Palakkad,Environmental Sciences and Sustainable Engineering Centre,2,23,0.087,0.0833
-IIT Palakkad,Computer Science and Engineering,1,95,0.0105,0.0417
-IIT Guwahati,Physics,274,1963,0.1396,0.5009
-IIT Guwahati,Biosciences and Bioengineering,37,1871,0.0198,0.0676
-IIT Guwahati,Chemistry,26,2268,0.0115,0.0475
-IIT Guwahati,Electronics and Electrical Engineering,9,1907,0.0047,0.0165
-IIT Guwahati,Mechanical Engineering,8,2182,0.0037,0.0146
-IIT Guwahati,Civil Engineering,7,1808,0.0039,0.0128
-IIT Guwahati,Chemical Engineering,6,1786,0.0034,0.011
-IIT Guwahati,,6,144,0.0417,0.011
-IIT Guwahati,School of Agro and Rural Technology,1,132,0.0076,0.0018
-IIT Hyderabad,Physics,521,1540,0.3383,0.5725
-IIT Hyderabad,Chemistry,29,1364,0.0213,0.0319
-IIT Hyderabad,Civil Engineering,26,869,0.0299,0.0286
-IIT Hyderabad,Biomedical Engineering,18,495,0.0364,0.0198
-IIT Hyderabad,BioTechnology,16,269,0.0595,0.0176
-IIT Hyderabad,Materials Science and Metallurgical Engineering,15,504,0.0298,0.0165
-IIT Hyderabad,Electrical Engineering,9,1479,0.0061,0.0099
-IIT Hyderabad,Chemical Engineering,9,843,0.0107,0.0099
-IIT Hyderabad,Computer Science & Engineering,3,754,0.004,0.0033
-IIT Hyderabad,Mathematics,2,197,0.0102,0.0022
-IIT Hyderabad,Mechanical & Aerospace Engineering,1,613,0.0016,0.0011
+IIT Palakkad,Computer Science and Engineering,1,94,0.0106,0.0417
+IIT Guwahati,Physics,273,2034,0.1342,0.5
+IIT Guwahati,Biosciences and Bioengineering,37,1874,0.0197,0.0678
+IIT Guwahati,Chemistry,26,2272,0.0114,0.0476
+IIT Guwahati,Electronics and Electrical Engineering,9,1939,0.0046,0.0165
+IIT Guwahati,Mechanical Engineering,8,2238,0.0036,0.0147
+IIT Guwahati,Civil Engineering,7,1820,0.0038,0.0128
+IIT Guwahati,Chemical Engineering,6,1797,0.0033,0.011
+IIT Guwahati,,6,148,0.0405,0.011
+IIT Guwahati,School of Agro and Rural Technology,1,133,0.0075,0.0018
+IIT Hyderabad,Physics,535,1585,0.3375,0.5803
+IIT Hyderabad,BioTechnology,52,304,0.1711,0.0564
+IIT Hyderabad,Chemistry,29,1369,0.0212,0.0315
+IIT Hyderabad,Civil Engineering,26,879,0.0296,0.0282
+IIT Hyderabad,Biomedical Engineering,18,497,0.0362,0.0195
+IIT Hyderabad,Materials Science and Metallurgical Engineering,15,516,0.0291,0.0163
+IIT Hyderabad,Electrical Engineering,9,1501,0.006,0.0098
+IIT Hyderabad,Chemical Engineering,9,847,0.0106,0.0098
+IIT Hyderabad,Computer Science & Engineering,3,826,0.0036,0.0033
+IIT Hyderabad,Mathematics,2,200,0.01,0.0022
+IIT Hyderabad,Mechanical & Aerospace Engineering,1,621,0.0016,0.0011
 IIT Hyderabad,Liberal Arts,1,45,0.0222,0.0011
-IIT Bhubaneswar,School of Basic Sciences,962,1889,0.5093,0.8698
+IIT Bhubaneswar,School of Basic Sciences,963,1903,0.506,0.8699
 IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",21,423,0.0496,0.019
-IIT Bhubaneswar,School of Infrastructure,4,642,0.0062,0.0036
-IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",3,227,0.0132,0.0027
-IIT Bhubaneswar,School of Electrical and Computer Sciences,2,1099,0.0018,0.0018
+IIT Bhubaneswar,School of Infrastructure,4,646,0.0062,0.0036
+IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",3,238,0.0126,0.0027
+IIT Bhubaneswar,School of Electrical and Computer Sciences,2,1128,0.0018,0.0018
 IIT Bhubaneswar,"School of Humanities, Social Sciences and Management",1,43,0.0233,0.0009
-IIT (BHU) Varanasi,Department of Physics,80,924,0.0866,0.2667
-IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,51,695,0.0734,0.17
-IIT (BHU) Varanasi,School of Materials Science and Technology,24,851,0.0282,0.08
-IIT (BHU) Varanasi,School of Biomedical Engineering,23,342,0.0673,0.0767
-IIT (BHU) Varanasi,Department of Chemistry,16,702,0.0228,0.0533
-IIT (BHU) Varanasi,Department of Ceramic Engineering,14,405,0.0346,0.0467
-IIT (BHU) Varanasi,School of Biochemical Engineering,14,437,0.032,0.0467
-IIT (BHU) Varanasi,Department of Metallurgical Engineering,13,502,0.0259,0.0433
-IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,12,606,0.0198,0.04
-IIT (BHU) Varanasi,Department of Mechanical Engineering,5,860,0.0058,0.0167
-IIT (BHU) Varanasi,Department of Mining Engineering,4,129,0.031,0.0133
-IIT (BHU) Varanasi,Department of Electronics Engineering,1,1064,0.0009,0.0033
-IIT (BHU) Varanasi,Department of Computer Science and Engineering,1,810,0.0012,0.0033
-IIT (BHU) Varanasi,Department of Civil Engineering,1,711,0.0014,0.0033
-IIT (BHU) Varanasi,,1,67,0.0149,0.0033
-IIT (BHU) Varanasi,Department of Humanistic Studies,1,34,0.0294,0.0033
-IIT Gandhinagar,Physics,47,389,0.1208,0.137
-IIT Gandhinagar,Materials Engineering,20,274,0.073,0.0583
-IIT Gandhinagar,Biological Sciences and Engineering,19,393,0.0483,0.0554
-IIT Gandhinagar,Civil Engineering,14,538,0.026,0.0408
-IIT Gandhinagar,Chemistry,9,471,0.0191,0.0262
-IIT Gandhinagar,Chemical Engineering,9,326,0.0276,0.0262
-IIT Gandhinagar,Electrical Engineering,8,682,0.0117,0.0233
-IIT Gandhinagar,Mechanical Engineering,3,230,0.013,0.0087
-IIT Gandhinagar,Earth Sciences,2,111,0.018,0.0058
-IIT Indore,Physics,494,1490,0.3315,0.6578
-IIT Indore,"Astronomy, Astrophysics and Space Engineering",49,353,0.1388,0.0652
-IIT Indore,Chemistry,22,1253,0.0176,0.0293
-IIT Indore,Biosciences and Biomedical Engineering,20,452,0.0442,0.0266
-IIT Indore,Metallurgical Engineering and Materials Science,19,565,0.0336,0.0253
-IIT Indore,Civil Engineering,14,462,0.0303,0.0186
-IIT Indore,Electrical Engineering,11,1454,0.0076,0.0146
-IIT Indore,Mechanical Engineering,4,589,0.0068,0.0053
-IIT Indore,Chemical Engineering,1,11,0.0909,0.0013
-IIT Mandi,School of Physical Sciences,39,407,0.0958,0.2746
-IIT Mandi,School of Biosciences & Bio Engineering,18,235,0.0766,0.1268
-IIT Mandi,School of Computing & Electrical Engineering,12,1121,0.0107,0.0845
-IIT Mandi,School of Civil & Environmental Engineering,8,417,0.0192,0.0563
-IIT Mandi,School of Chemical Sciences,6,407,0.0147,0.0423
-IIT Mandi,School of Mechanical & Materials Engineering,4,782,0.0051,0.0282
-IIT Mandi,School of Humanities & Social Sciences,3,17,0.1765,0.0211
-IIT Mandi,,2,127,0.0157,0.0141
-IIT Mandi,School of Basic Sciences (defunct),1,42,0.0238,0.007
-IIT Mandi,Centre of Artificial Intelligence and Robotics (CAIR),1,44,0.0227,0.007
-IIT Mandi,IKSMHA Center,1,8,0.125,0.007
-IIT Mandi,Center for Quantum Science and Technologies (CQST),1,9,0.1111,0.007
+IIT (BHU) Varanasi,Department of Physics,85,964,0.0882,0.2751
+IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,51,696,0.0733,0.165
+IIT (BHU) Varanasi,School of Materials Science and Technology,28,866,0.0323,0.0906
+IIT (BHU) Varanasi,School of Biomedical Engineering,23,345,0.0667,0.0744
+IIT (BHU) Varanasi,Department of Chemistry,16,703,0.0228,0.0518
+IIT (BHU) Varanasi,Department of Ceramic Engineering,14,406,0.0345,0.0453
+IIT (BHU) Varanasi,School of Biochemical Engineering,14,437,0.032,0.0453
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,13,506,0.0257,0.0421
+IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,12,606,0.0198,0.0388
+IIT (BHU) Varanasi,Department of Mechanical Engineering,5,862,0.0058,0.0162
+IIT (BHU) Varanasi,Department of Mining Engineering,4,129,0.031,0.0129
+IIT (BHU) Varanasi,Department of Electronics Engineering,1,1077,0.0009,0.0032
+IIT (BHU) Varanasi,Department of Computer Science and Engineering,1,822,0.0012,0.0032
+IIT (BHU) Varanasi,Department of Civil Engineering,1,717,0.0014,0.0032
+IIT (BHU) Varanasi,,1,69,0.0145,0.0032
+IIT (BHU) Varanasi,Department of Humanistic Studies,1,36,0.0278,0.0032
+IIT Gandhinagar,Physics,49,399,0.1228,0.1416
+IIT Gandhinagar,Materials Engineering,20,281,0.0712,0.0578
+IIT Gandhinagar,Biological Sciences and Engineering,19,394,0.0482,0.0549
+IIT Gandhinagar,Civil Engineering,14,549,0.0255,0.0405
+IIT Gandhinagar,Chemistry,10,475,0.0211,0.0289
+IIT Gandhinagar,Chemical Engineering,9,328,0.0274,0.026
+IIT Gandhinagar,Electrical Engineering,8,718,0.0111,0.0231
+IIT Gandhinagar,Mechanical Engineering,3,237,0.0127,0.0087
+IIT Gandhinagar,Earth Sciences,2,112,0.0179,0.0058
+IIT Indore,Physics,494,1527,0.3235,0.6526
+IIT Indore,"Astronomy, Astrophysics and Space Engineering",52,361,0.144,0.0687
+IIT Indore,Chemistry,22,1254,0.0175,0.0291
+IIT Indore,Biosciences and Biomedical Engineering,20,453,0.0442,0.0264
+IIT Indore,Metallurgical Engineering and Materials Science,19,571,0.0333,0.0251
+IIT Indore,Civil Engineering,14,469,0.0299,0.0185
+IIT Indore,Electrical Engineering,12,1475,0.0081,0.0159
+IIT Indore,Mechanical Engineering,4,597,0.0067,0.0053
+IIT Indore,,1,53,0.0189,0.0013
+IIT Indore,Chemical Engineering,1,12,0.0833,0.0013
+IIT Mandi,School of Physical Sciences,40,424,0.0943,0.2778
+IIT Mandi,School of Biosciences & Bio Engineering,18,236,0.0763,0.125
+IIT Mandi,School of Computing & Electrical Engineering,12,1146,0.0105,0.0833
+IIT Mandi,School of Civil & Environmental Engineering,8,417,0.0192,0.0556
+IIT Mandi,School of Chemical Sciences,6,410,0.0146,0.0417
+IIT Mandi,School of Mechanical & Materials Engineering,4,792,0.0051,0.0278
+IIT Mandi,School of Humanities & Social Sciences,3,17,0.1765,0.0208
+IIT Mandi,,2,127,0.0157,0.0139
+IIT Mandi,School of Basic Sciences (defunct),1,42,0.0238,0.0069
+IIT Mandi,Centre of Artificial Intelligence and Robotics (CAIR),1,50,0.02,0.0069
+IIT Mandi,IKSMHA Center,1,8,0.125,0.0069
+IIT Mandi,Center for Quantum Science and Technologies (CQST),1,9,0.1111,0.0069
+IIT Delhi,Physics,77,2101,0.0366,0.1273
+IIT Delhi,Civil Engineering,54,1899,0.0284,0.0893
+IIT Delhi,Chemistry,52,1800,0.0289,0.086
+IIT Delhi,Electrical Engineering,44,4508,0.0098,0.0727
+IIT Delhi,Materials Science and Engineering,30,730,0.0411,0.0496
+IIT Delhi,Biochemical Engineering and Biotechnology,30,657,0.0457,0.0496
+IIT Delhi,School of Biological Sciences,22,200,0.11,0.0364
+IIT Delhi,Computer Science and Engineering,18,696,0.0259,0.0298
+IIT Delhi,Chemical Engineering,18,1381,0.013,0.0298
+IIT Delhi,Textile and Fibre Engineering,15,957,0.0157,0.0248
+IIT Delhi,Energy Science and Engineering,14,1030,0.0136,0.0231
+IIT Delhi,Optics and Photonics Centre,10,385,0.026,0.0165
+IIT Delhi,"Centre for Sensors, Instrumentation and Cyber-physical Systems Engineering (SeNSE)",10,226,0.0442,0.0165
+IIT Delhi,Centre for Biomedical Engineering,9,432,0.0208,0.0149
+IIT Delhi,Mechanical Engineering,7,1324,0.0053,0.0116
+IIT Delhi,School of Public Policy,3,61,0.0492,0.005
+IIT Delhi,Applied Mechanics,1,671,0.0015,0.0017
+IIT (ISM) Dhanbad,Physics,17,917,0.0185,0.1635
+IIT (ISM) Dhanbad,Mechanical Engineering,11,1421,0.0077,0.1058
+IIT (ISM) Dhanbad,Chemistry and Chemical Biology,9,779,0.0116,0.0865
+IIT (ISM) Dhanbad,Computer Science and Engineering,5,941,0.0053,0.0481
+IIT (ISM) Dhanbad,Mining Engineering,4,414,0.0097,0.0385
+IIT (ISM) Dhanbad,Civil Engineering,4,527,0.0076,0.0385
+IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",3,267,0.0112,0.0288
+IIT (ISM) Dhanbad,Applied Geology,3,341,0.0088,0.0288
+IIT (ISM) Dhanbad,Electronics Engineering,2,1316,0.0015,0.0192
+IIT (ISM) Dhanbad,Environmental Science and Engineering,2,727,0.0028,0.0192
+IIT (ISM) Dhanbad,Chemical Engineering,2,272,0.0074,0.0192
+IIT (ISM) Dhanbad,,1,112,0.0089,0.0096
+IIT (ISM) Dhanbad,Petroleum Engineering,1,435,0.0023,0.0096
+IIT (ISM) Dhanbad,Applied Geophysics,1,336,0.003,0.0096
+IIT (ISM) Dhanbad,Mathematics & Computing,1,1197,0.0008,0.0096
+IIT Jodhpur,Physics,72,868,0.0829,0.3412
+IIT Jodhpur,Bioscience and Bioengineering,32,342,0.0936,0.1517
+IIT Jodhpur,Chemistry,22,455,0.0484,0.1043
+IIT Jodhpur,Civil and Infrastructure Engineering,17,188,0.0904,0.0806
+IIT Jodhpur,Electrical Engineering,14,1075,0.013,0.0664
+IIT Jodhpur,Materials Engineering,11,252,0.0437,0.0521
+IIT Jodhpur,Chemical Engineering,4,166,0.0241,0.019
+IIT Jodhpur,Mechanical Engineering,3,601,0.005,0.0142
+IIT Jodhpur,Mathematics,2,277,0.0072,0.0095
+IIT Jodhpur,School of Liberal Arts,2,31,0.0645,0.0095
+IIT Jodhpur,Environmental and Sustainability Engineering,2,31,0.0645,0.0095
+IIT Jodhpur,Computer Science and Engineering,1,637,0.0016,0.0047
+IIT Jammu,Chemistry,19,188,0.1011,0.3585
+IIT Jammu,Physics,10,150,0.0667,0.1887
+IIT Jammu,Bioscience and Bioengineering,6,97,0.0619,0.1132
+IIT Jammu,Civil Engineering,3,212,0.0142,0.0566
+IIT Jammu,Materials Engineering,2,53,0.0377,0.0377
+IIT Jammu,Computer Science & Engineering,1,263,0.0038,0.0189
+IIT Jammu,Mechanical Engineering,1,213,0.0047,0.0189
+IIT Jammu,Electrical Engineering,1,650,0.0015,0.0189
+IIT Jammu,Chemical Engineering,1,90,0.0111,0.0189
+IIT Bhilai,Physics,8,257,0.0311,0.3333
+IIT Bhilai,Chemistry,6,273,0.022,0.25
+IIT Bhilai,Computer Science and Engineering,3,172,0.0174,0.125
+IIT Bhilai,Materials Science and Metallurgical Engineering,1,32,0.0312,0.0417
+IIT Dharwad,Biosciences and Bioengineering,10,78,0.1282,0.4
+IIT Dharwad,"Electrical, Electronics and Communication Engineering",4,349,0.0115,0.16
+IIT Dharwad,Chemistry,4,41,0.0976,0.16
+IIT Dharwad,Computer Science and Engineering,2,163,0.0123,0.08
+IIT Dharwad,Civil & Infrastructure Engineering,1,103,0.0097,0.04
+IIT Dharwad,"Mechanical, Materials and Aerospace Engineering",1,127,0.0079,0.04
+IIT Dharwad,Physics,1,46,0.0217,0.04
+IIT Dharwad,Chemical Engineering,1,20,0.05,0.04

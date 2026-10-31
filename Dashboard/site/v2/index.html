@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>IIT Research Map: newer IITs (draft)</title>
+<title>IIT Research Map: all IITs (draft)</title>
 <style>
 :root {
   --bg: #ffffff; --band: #f5f5f7; --card: #ffffff; --fg: #1d1d1f; --fg2: #6e6e73; --line: #d2d2d7; --hair: #e8e8ed;
@@ -58,6 +58,10 @@ td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space:
 .tag { font-size: 11px; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; color: var(--fg2); white-space: nowrap; }
 td.title { max-width: 520px; }
 .hide { display: none !important; }
+.badge { font-size: 11px; font-weight: 600; border: 1px solid var(--warn-line); background: var(--warn-bg); color: var(--warn-fg); border-radius: 999px; padding: 1px 8px; white-space: nowrap; margin-left: 6px; vertical-align: middle; }
+table.nw td { white-space: nowrap; }
+.pos { color: #1a7f37; } .neg { color: #c4281c; }
+.dim { opacity: .55; }
 footer { padding: 28px 0 60px; color: var(--fg2); font-size: 13px; }
 @media (max-width: 640px) { h1 { font-size: 23px; } nav.jump { margin-left: 0; } .chart { height: 280px; } select { min-width: 150px; } }
 </style>
@@ -65,9 +69,10 @@ footer { padding: 28px 0 60px; color: var(--fg2); font-size: 13px; }
 <body>
 <header class="top">
   <div class="wrap">
-    <h1 id="h1">IIT Research Map: the newer IITs</h1>
+    <h1 id="h1">IIT Research Map</h1>
     <p class="sub" id="subtitle"></p>
-    <div class="draft"><b>Draft.</b> Built from the enrichment output of 30 October 2026 (including the OpenAlex title-search results). Journal quartiles come from the Scimago tables for 2016 and 2020, with the nearest of those years used for the other years; the categorisation fixes (branch fix-categorisation) are not applied to this data. Panels that cannot be computed yet are listed at the bottom. Numbers will change when the files are refreshed.</div>
+    <div class="draft"><b>Draft, interim data of 31 October 2026.</b> Journal quartiles come from the Scimago tables for 2016 and 2020, with the nearest of those years used for the other years; the categorisation fixes (branch fix-categorisation) are not applied to this data. Panels that cannot be computed yet are listed at the bottom. Numbers will change when the files are refreshed.</div>
+    <div class="draft" id="partialNote"></div>
   </div>
 </header>
 
@@ -98,15 +103,22 @@ const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const fmt = (x, d = 0) => x == null || x === "" ? "n/a" : Number(x).toLocaleString("en", {maximumFractionDigits: d, minimumFractionDigits: d});
 const pct = (x, d = 1) => x == null ? "n/a" : (100 * x).toFixed(d) + "%";
-document.getElementById("h1").textContent = `IIT Research Map: ${NAMES.length} newer IITs`;
-document.getElementById("subtitle").textContent = `Papers, faculty, journals, conferences, collaborators and citation networks for ${NAMES.map(n => n.replace("IIT ", "")).join(", ")}, 2016 to October 2026.`;
-const short = n => n.replace("IIT (BHU) Varanasi", "BHU").replace("IIT ", "");
+document.getElementById("h1").textContent = `IIT Research Map: ${NAMES.length} IITs`;
+const short = n => n.replace("IIT (BHU) Varanasi", "BHU").replace("IIT (ISM) Dhanbad", "ISM").replace("IIT ", "");
+const PART = new Set(D.insts.filter(i => i.partial).map(i => i.name));
+const badge = n => PART.has(n) ? `<span class="badge" title="${esc(D.partial_note)}">partial enrichment</span>` : "";
+const label = n => PART.has(n) ? `${n} (partial enrichment)` : n;
+const chartName = n => PART.has(n) ? short(n) + "*" : short(n);
+document.getElementById("subtitle").textContent = `Papers, faculty, journals, conferences, collaborators and citation networks for ${NAMES.map(short).join(", ")}, 2016 to October 2026.`;
+const pn = document.getElementById("partialNote");
+if (PART.size) pn.innerHTML = `<b>Partial enrichment</b> for ${[...PART].map(esc).join(", ")} (marked with the badge, and with * in charts): ${esc(D.partial_note)}`;
+else pn.remove();
 let charts = [];
 
 // ------------------------------------------------------------------ state
 const selA = document.getElementById("selA"), selB = document.getElementById("selB");
-selA.innerHTML = `<option value="${ALL}">All ${NAMES.length} (overview)</option>` + NAMES.map(n => `<option>${esc(n)}</option>`).join("");
-selB.innerHTML = `<option value="">none</option>` + NAMES.map(n => `<option>${esc(n)}</option>`).join("");
+selA.innerHTML = `<option value="${ALL}">All ${NAMES.length} (overview)</option>` + NAMES.map(n => `<option value="${esc(n)}">${esc(label(n))}</option>`).join("");
+selB.innerHTML = `<option value="">none</option>` + NAMES.map(n => `<option value="${esc(n)}">${esc(label(n))}</option>`).join("");
 const q = new URLSearchParams(location.hash.slice(1));
 selA.value = NAMES.includes(q.get("a")) || q.get("a") === ALL ? q.get("a") : ALL;
 selB.value = NAMES.includes(q.get("b")) ? q.get("b") : "";
@@ -140,7 +152,8 @@ function chart(id, option) {
   charts.push(c);
 }
 const card = (title, body, note) => `<div class="card">${title ? `<h3 style="margin-top:0">${title}</h3>` : ""}${body}${note ? `<p class="note">${note}</p>` : ""}</div>`;
-const sw = (n, i) => `<span class="sw"><span class="dot" style="background:${i === 0 ? "var(--a)" : "var(--b)"}"></span>${esc(n)}</span>`;
+const sw = (n, i) => `<span class="sw"><span class="dot" style="background:${i === 0 ? "var(--a)" : "var(--b)"}"></span>${esc(n)}</span>${badge(n)}`;
+const colHead = n => ({h: n + (PART.has(n) ? " (partial)" : ""), n: 1});
 function table(cols, rows, cls = "") {
   return `<div class="scroll"><table class="${cls}"><thead><tr>${cols.map(c => `<th class="${c.n ? "n" : ""}">${esc(c.h)}</th>`).join("")}</tr></thead><tbody>` +
     rows.map(r => `<tr>${cols.map((c, i) => `<td class="${c.n ? "n" : ""} ${c.cls || ""}">${c.raw ? r[i] : esc(r[i])}</td>`).join("")}</tr>`).join("") + `</tbody></table></div>`;
@@ -159,10 +172,10 @@ function secOverview(st) {
   });
   const tbl = table([{h: "Institute", raw: 1}, {h: "Papers", n: 1}, {h: "Faculty with papers", n: 1}, {h: "Roster listed", n: 1}, {h: "Citations", n: 1},
     {h: "Citations / paper", n: 1}, {h: "Median faculty h", n: 1}, {h: "Institute h", n: 1}, {h: "Conf. papers with CORE rank", n: 1}, {h: ">10-author papers", n: 1}, {h: "Self-citation share", n: 1}, {h: "Indian in/out citation ratio", n: 1}],
-    rows.map(r => [`<span class="sw"><span class="dot" style="background:${COLOR[r.n]}"></span><a href="#a=${encodeURIComponent(r.n)}" onclick="selA.value='${esc(r.n)}';selB.value='';render();">${esc(r.n)}</a></span>`,
+    rows.map(r => [`<span class="sw"><span class="dot" style="background:${COLOR[r.n]}"></span><a href="#a=${encodeURIComponent(r.n)}" onclick="selA.value='${esc(r.n)}';selB.value='';render();">${esc(r.n)}</a></span>${badge(r.n)}`,
       fmt(r.pap), fmt(r.fac), fmt(r.roster), fmt(r.cit), fmt(r.cpp, 1), fmt(r.h, 0), fmt(r.ih), pct(r.core), pct(r.big), pct(r.self, 0), fmt(r.ratio, 2)]).map(r => r), "");
   return `<section id="overview"><div class="wrap"><h2>All ${NAMES.length} institutes</h2>
-  <p class="sub">Pick an institute above to see its own panels, or two to compare them. "Faculty with papers" = faculty on the institute's pages with at least one paper in the analysis set; "roster listed" = everyone on those pages (all statuses, departments in scope).</p>
+  <p class="sub">Pick an institute above to see its own panels, or two to compare them. A <span class="badge" style="margin-left:0">partial enrichment</span> badge (or * in a chart) means the institute's enrichment is still incomplete: its citation-flow, partner and network figures are interim. "Faculty with papers" = faculty on the institute's pages with at least one paper in the analysis set; "roster listed" = everyone on those pages (all statuses, departments in scope).</p>
   <div class="grid"><div class="card">${tbl}</div></div>
   <div class="grid two" style="margin-top:16px">
     ${card("Papers per year", '<div id="ovYear" class="chart tall"></div>', "2026 is partial (collected October 2026).")}
@@ -173,25 +186,25 @@ function secOverview(st) {
 }
 function drawOverview() {
   const fgc = css("--fg2");
-  chart("ovYear", {color: NAMES.map(n => COLOR[n]), legend: {data: NAMES.map(short)},
+  chart("ovYear", {color: NAMES.map(n => COLOR[n]), legend: {data: NAMES.map(chartName)},
     xAxis: {type: "category", data: YEARS}, yAxis: {type: "value", name: "papers"},
-    series: NAMES.map(n => ({name: short(n), type: "line", showSymbol: false, data: D.per[n].papers.total, lineStyle: {width: 1.6}}))});
+    series: NAMES.map(n => ({name: chartName(n), type: "line", showSymbol: false, data: D.per[n].papers.total, lineStyle: {width: 1.6}}))});
   const ord = NAMES.slice().sort((a, b) => D.per[b].faculty.with_papers - D.per[a].faculty.with_papers);
   chart("ovBars", {legend: {data: ["Papers (2016-26)", "Faculty with papers"]}, color: [css("--a"), css("--b")],
-    xAxis: {type: "category", data: ord.map(short), axisLabel: {rotate: 40, color: fgc}},
+    xAxis: {type: "category", data: ord.map(chartName), axisLabel: {rotate: 40, color: fgc}},
     yAxis: [{type: "value", name: "papers"}, {type: "value", name: "faculty", splitLine: {show: false}}],
     series: [{name: "Papers (2016-26)", type: "bar", data: ord.map(n => D.per[n].papers.total.reduce((a, b) => a + b, 0))},
       {name: "Faculty with papers", type: "bar", yAxisIndex: 1, data: ord.map(n => D.per[n].faculty.with_papers)}]});
   const o2 = NAMES.slice().sort((a, b) => (D.per[b].faculty.h.median || 0) - (D.per[a].faculty.h.median || 0));
-  chart("ovH", {xAxis: {type: "value", name: "median h"}, yAxis: {type: "category", data: o2.map(short).reverse(), axisLabel: {color: fgc}},
+  chart("ovH", {xAxis: {type: "value", name: "median h"}, yAxis: {type: "category", data: o2.map(chartName).reverse(), axisLabel: {color: fgc}},
     grid: {left: 10}, tooltip: {trigger: "item"},
     series: [{type: "bar", data: o2.map(n => ({value: D.per[n].faculty.h.median, itemStyle: {color: COLOR[n]}})).reverse(), label: {show: true, position: "right", color: fgc}}]});
   const data = [];
   D.shared_matrix.forEach((row, i) => row.forEach((v, j) => { if (i !== j) data.push([j, i, v]); }));
   const mx = Math.max(1, ...data.map(d => d[2]));
   chart("ovMat", {tooltip: {trigger: "item", formatter: p => `${NAMES[p.value[1]]} and ${NAMES[p.value[0]]}: ${fmt(p.value[2])} papers`},
-    grid: {left: 10, top: 10, bottom: 70, right: 10}, xAxis: {type: "category", data: NAMES.map(short), axisLabel: {rotate: 50, color: fgc}, splitLine: {show: false}},
-    yAxis: {type: "category", data: NAMES.map(short), inverse: true, axisLabel: {color: fgc}, splitLine: {show: false}},
+    grid: {left: 10, top: 10, bottom: 70, right: 10}, xAxis: {type: "category", data: NAMES.map(chartName), axisLabel: {rotate: 50, color: fgc}, splitLine: {show: false}},
+    yAxis: {type: "category", data: NAMES.map(chartName), inverse: true, axisLabel: {color: fgc}, splitLine: {show: false}},
     visualMap: {min: 0, max: mx, show: false, inRange: {color: [css("--card"), css("--a")]}},
     series: [{type: "heatmap", data, itemStyle: {borderColor: css("--card"), borderWidth: 1}}]});
 }
@@ -213,7 +226,7 @@ function secKpis(st) {
     ["Conference papers", p => fmt(conf(p))],
     ["Papers with more than 10 authors", p => `${fmt(p.large.more_than_10)} (${pct(p.large.share)})`]];
   return `<section id="kpi"><div class="wrap"><h2>${st.list.map((n, i) => sw(n, i)).join(" &nbsp;vs&nbsp; ")}</h2>
-  <div class="card" style="margin-top:12px">${table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))), rows.map(r => [r[0]].concat(P.map(r[1]))), "kpis")}</div></div></section>`;
+  <div class="card" style="margin-top:12px">${table([{h: ""}].concat(st.list.map(colHead)), rows.map(r => [r[0]].concat(P.map(r[1]))), "kpis")}</div></div></section>`;
 }
 
 function secPapers(st) {
@@ -242,7 +255,7 @@ function drawPapers(st) {
 
 function secFaculty(st) {
   const hrow = (lab, f) => [lab].concat(st.list.map(n => f(D.per[n].faculty)));
-  const sum = table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))), [
+  const sum = table([{h: ""}].concat(st.list.map(colHead)), [
     hrow("Faculty with papers", f => fmt(f.with_papers)), hrow("Roster listed", f => fmt(f.roster_listed)),
     hrow("h-index mean (SD)", f => `${fmt(f.h.mean, 1)} (${fmt(f.h.sd, 1)})`), hrow("h-index median", f => fmt(f.h.median, 0)),
     hrow("h-index quartiles Q1 / Q3", f => `${fmt(f.h.q1, 0)} / ${fmt(f.h.q3, 0)}`), hrow("h-index 90th percentile", f => fmt(f.h.p90, 0)),
@@ -273,7 +286,7 @@ function secJournals(st) {
   const banner = none ? `<div class="banner">No journal paper has a Scimago quartile in this run, so every journal paper is counted as "no quartile".</div>` : "";
   return `<section id="journals"><div class="wrap"><h2>Journals and quartiles</h2><p class="sub">Journal quartile share: Q1 to Q4 of the journal papers that have a Scimago SJR quartile (publication year).</p>${banner}
   <div class="grid two">${card("Quartile mix of journal papers (Scimago SJR; 2016 and 2020 tables, nearest year for the others)", '<div id="qt" class="chart"></div>')}
-  ${card("Journal papers", table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))),
+  ${card("Journal papers", table([{h: ""}].concat(st.list.map(colHead)),
     [["Journal papers"].concat(st.list.map(n => fmt(D.per[n].quartiles.journal_papers))), ["with a quartile"].concat(st.list.map(n => { const q = D.per[n].quartiles; return fmt(q.Q1 + q.Q2 + q.Q3 + q.Q4); })),
      ["Q1 share of ranked"].concat(st.list.map(n => { const q = D.per[n].quartiles, r = q.Q1 + q.Q2 + q.Q3 + q.Q4; return r ? pct(q.Q1 / r) : "n/a"; }))], "kpis"))}</div></div></div></section>`;
 }
@@ -337,7 +350,7 @@ function drawCollab(st) {
 
 function secNet(st) {
   const R = (lab, f) => [lab].concat(st.list.map(n => f(D.per[n].network)));
-  const tbl = table([{h: ""}].concat(st.list.map(n => ({h: n, n: 1}))), [
+  const tbl = table([{h: ""}].concat(st.list.map(colHead)), [
     R("Papers (nodes)", x => fmt(x.citation.papers)), R("Citations between our papers (edges)", x => fmt(x.citation.edges)),
     R("Mean in-degree", x => fmt(x.citation.mean_in_degree, 2)), R("Papers cited at least once", x => `${fmt(x.citation.cited_once)} (${pct(x.citation.cited_once / x.citation.papers, 0)})`),
     R("Largest connected group", x => fmt(x.citation.largest_component)), R("Self-citation share of edges", x => pct(x.citation.self_share)),
@@ -370,6 +383,79 @@ function secAreas(st) {
   return `<section id="areas"><div class="wrap"><h2>Research areas</h2><p class="sub">Share of papers by OpenAlex field of the primary topic.</p>${body}</div></section>`;
 }
 
+// ------------------------------------------------------------------ sanity audit F3: mega-collaboration papers (> 100 authors)
+const hl = (n, st, html) => st.list.includes(n) ? `<b>${html}</b>` : html;
+const sgn = (v, d = 1, unit = "") => v == null ? "n/a" : `<span class="${v > 0 ? "pos" : v < 0 ? "neg" : ""}">${v > 0 ? "+" : ""}${v.toFixed(d)}${unit}</span>`;
+function secMega(st) {
+  const rows = NAMES.slice().sort((a, b) => (D.per[b].mega.metrics["citations per paper"]?.all || 0) - (D.per[a].mega.metrics["citations per paper"]?.all || 0)).map(n => {
+    const m = D.per[n].mega, c = m.metrics["citations per paper"] || {}, rk = m.ranks["citations per paper"] || {};
+    return [hl(n, st, esc(n)) + badge(n), fmt(m.papers), pct(m.share_papers, 1), pct(m.share_citations, 1), fmt(c.all, 1), fmt(c.without, 1), sgn(c.change_pct, 1, "%"), fmt(rk.all), fmt(rk.without), rk.change == null ? "n/a" : sgn(rk.change, 0), esc(m.top_person || "")];
+  });
+  const tbl = table([{h: "Institute", raw: 1}, {h: "Papers with > 100 authors", n: 1}, {h: "Share of papers", n: 1}, {h: "Share of all citations", n: 1}, {h: "Citations / paper, all papers", n: 1},
+    {h: "Citations / paper, without them", n: 1}, {h: "Change", n: 1, raw: 1}, {h: "Rank, all papers", n: 1}, {h: "Rank, without them", n: 1}, {h: "Rank change", n: 1, raw: 1}, {h: "Person with most of them", raw: 1}], rows.map(r => r), "nw");
+  const metricRows = [["papers", "Papers", 0], ["citations", "Citations", 0], ["citations per paper", "Citations per paper", 1], ["median citations per paper", "Median citations per paper", 0],
+    ["papers with >= 100 citations", "Papers with 100+ citations", 0], ["Q1 share of ranked journal papers", "Q1 share of ranked journal papers", -1], ["institute h-index", "Institute h-index", 0],
+    ["faculty with papers", "Faculty with papers", 0], ["median faculty h-index", "Median faculty h-index", 1], ["mean faculty h-index", "Mean faculty h-index", 2], ["max faculty h-index", "Max faculty h-index", 0]];
+  const val = (x, d) => d === -1 ? pct(x, 1) : fmt(x, Math.max(d, 0));
+  const per = perInst(st, (n, p, i) => card(`${sw(n, i)}: every statistic with and without papers of more than 100 authors`,
+    table([{h: "Statistic"}, {h: "All papers", n: 1}, {h: "Without them", n: 1}, {h: "Change", n: 1, raw: 1}],
+      metricRows.map(([k, lab, d]) => { const m = p.mega.metrics[k] || {}; return [lab, val(m.all, d), val(m.without, d), sgn(m.change_pct, 1, "%")]; })),
+    `${fmt(p.mega.papers)} papers (${pct(p.mega.share_papers, 1)}) carry ${pct(p.mega.share_citations, 1)} of the citations.${p.mega.unknown_flags ? ` ${fmt(p.mega.unknown_flags)} records have no author list and count as 'not mega'.` : ""}`));
+  return `<section id="mega"><div class="wrap"><h2>Papers with more than 100 authors</h2>
+  <p class="sub">A handful of mega-collaboration papers (CMS, ATLAS, LIGO, ALICE and similar) can move an institute's citations per paper a long way: the same statistics are given here with and without them (sanity audit F3). Rank 1 = highest. Institutes should not be ranked on citations per paper including these papers. Where the author list has 100 entries OpenAlex has cut it off, so 100 or more counts as mega.</p>
+  <div class="grid two">${card("Citations per paper, all papers and without papers of more than 100 authors", '<div id="mgA" class="chart tall"></div>', "Institutes in order of the value with all papers.")}
+  ${card("Median faculty h-index, all papers and without them", '<div id="mgB" class="chart tall"></div>')}</div>
+  <div class="grid" style="margin-top:16px">${card("All institutes", tbl, "The selected institutes are in bold. Change = without them against all papers. Rank change = rank with all papers minus rank without them: positive means the institute ranks higher once they are left out.")}</div>
+  ${st.all ? "" : `<div style="margin-top:16px">${per}</div>`}</div></section>`;
+}
+function drawMega(st) {
+  const fgc = css("--fg2"), ord = NAMES.slice().sort((a, b) => (D.per[b].mega.metrics["citations per paper"]?.all || 0) - (D.per[a].mega.metrics["citations per paper"]?.all || 0));
+  const two = (id, key, name, d) => chart(id, {color: [css("--fg2"), css("--a")], legend: {data: ["All papers", "Without papers of more than 100 authors"]},
+    grid: {left: 30, top: 56, bottom: 60}, xAxis: {type: "category", data: ord.map(chartName), axisLabel: {rotate: 45, color: fgc, interval: 0}}, yAxis: {type: "value"},
+    tooltip: {valueFormatter: v => v == null ? "n/a" : v.toFixed(d)},
+    series: [{name: "All papers", type: "bar", data: ord.map(n => (D.per[n].mega.metrics[key] || {}).all)},
+      {name: "Without papers of more than 100 authors", type: "bar", data: ord.map(n => { const v = (D.per[n].mega.metrics[key] || {}).without; return st.list.includes(n) ? {value: v, itemStyle: {color: css("--b")}} : v; })}]});
+  two("mgA", "citations per paper", "citations per paper", 1);
+  two("mgB", "median faculty h-index", "median h", 1);
+}
+
+// ------------------------------------------------------------------ sanity audit F4: faculty cohort (current, joined by 2017) and roster completeness
+function secCohort(st) {
+  const flagTxt = c => [c.warning && c.size != null && c.size < 20 ? "cohort too small" : "", c.roster_flag && c.roster_flag !== "ok" && c.roster_flag !== "no NIRF count" ? c.roster_flag : ""].filter(Boolean).join("; ");
+  const ord = NAMES.slice().sort((a, b) => (D.per[b].cohort.mean_papers || 0) - (D.per[a].cohort.mean_papers || 0));
+  const rows = ord.map(n => { const c = D.per[n].cohort;
+    return [hl(n, st, esc(n)) + badge(n), fmt(c.size), fmt(c.with_papers), fmt(c.mean_papers, 1), fmt(c.median_papers, 1), fmt(c.median_citations, 0), fmt(c.median_h, 1), fmt(c.mean_h, 1), c.rank == null ? "n/a" : c.rank,
+      fmt(c.current), fmt(c.current_mean_papers, 1), fmt(c.current_median_h, 1), c.nirf_count == null ? "n/a" : `${fmt(c.roster_current)} / ${fmt(c.nirf_count)} (${fmt(c.current_over_nirf, 2)})`,
+      c.with_joining_year == null ? "n/a" : pct(c.with_joining_year, 0), esc(flagTxt(c))]; });
+  const tbl = table([{h: "Institute", raw: 1}, {h: "Cohort size", n: 1}, {h: "with papers", n: 1}, {h: "Papers per member (mean)", n: 1}, {h: "median", n: 1}, {h: "Citations per member (median)", n: 1}, {h: "h (median)", n: 1}, {h: "h (mean)", n: 1},
+    {h: "Rank on papers", n: 1}, {h: "All current faculty", n: 1}, {h: "Papers per person (mean)", n: 1}, {h: "h (median)", n: 1}, {h: "Roster current / NIRF (ratio)", n: 1}, {h: "Current rows with joining year", n: 1}, {h: "Flag", raw: 1}], rows, "nw");
+  const per = perInst(st, (n, p, i) => { const c = p.cohort; return card(`${sw(n, i)}: cohort and all current faculty`,
+    table([{h: "Per person (members without a paper count as 0)"}, {h: "Joined by 2017", n: 1}, {h: "All current", n: 1}], [
+      ["Faculty", fmt(c.size), fmt(c.current)], ["with at least one paper", fmt(c.with_papers), fmt(c.current_with_papers)],
+      ["Mean papers", fmt(c.mean_papers, 1), fmt(c.current_mean_papers, 1)], ["Median papers", fmt(c.median_papers, 1), "n/a"],
+      ["Median citations", fmt(c.median_citations, 0), "n/a"], ["Median h-index", fmt(c.median_h, 1), fmt(c.current_median_h, 1)], ["Mean h-index", fmt(c.mean_h, 1), "n/a"],
+      ["Median h of faculty with papers (headline statistic)", "n/a", fmt(c.published_median_h, 1)]]),
+    [c.warning, c.nirf_count == null ? "No NIRF faculty count for a completeness check." : `Roster current ${fmt(c.roster_current)} against ${fmt(c.nirf_count)} in NIRF ${esc(c.nirf_edition || "")} (${fmt(c.current_over_nirf, 2)}).`,
+      c.with_joining_year == null ? "" : `${pct(c.with_joining_year, 0)} of current rows have a joining year.`].filter(Boolean).map(esc).join(" ")); });
+  return `<section id="cohort"><div class="wrap"><h2>Faculty cohort: joined by 2017</h2>
+  <p class="sub">Per-faculty numbers mix people who had all eleven window years with people who joined last year. The cohort is the current faculty (departments in scope) who joined in 2017 or earlier, so each has at least nine of the eleven years 2016 to 2026 at the institute. People without a joining year on the roster are not in the cohort, so it is only as large as the roster's joining-year coverage; a cohort of fewer than 20 is flagged and not ranked (sanity audit F4). Roster completeness compares the current roster rows with the NIRF faculty count.</p>
+  <div class="grid two">${card("Papers per cohort member (mean)", '<div id="chA" class="chart tall"></div>', "Faded bars: cohort smaller than 20 people, not ranked. Selected institutes in the second colour.")}
+  ${card("Median h-index: cohort against faculty with papers", '<div id="chB" class="chart tall"></div>', "Cohort: members without a paper count as h = 0.")}</div>
+  <div class="grid" style="margin-top:16px">${card("All institutes", tbl, "The selected institutes are in bold. Rank on papers per cohort member is among cohorts of 20 or more. Roster flags: 'roster short' (current rows below 90 % of the NIRF count), 'roster longer than NIRF' (above 115 %).")}</div>
+  ${st.all ? "" : `<div style="margin-top:16px">${per}</div>`}</div></section>`;
+}
+function drawCohort(st) {
+  const fgc = css("--fg2"), ord = NAMES.slice().sort((a, b) => (D.per[b].cohort.mean_papers || 0) - (D.per[a].cohort.mean_papers || 0));
+  const small = n => (D.per[n].cohort.size || 0) < 20;
+  chart("chA", {legend: undefined, grid: {left: 30, top: 56, bottom: 60}, tooltip: {trigger: "axis", axisPointer: {type: "shadow"}},
+    xAxis: {type: "category", data: ord.map(chartName), axisLabel: {rotate: 45, color: fgc, interval: 0}}, yAxis: {type: "value"},
+    series: [{type: "bar", data: ord.map(n => ({value: D.per[n].cohort.mean_papers, itemStyle: {color: st.list.includes(n) ? css("--b") : css("--a"), opacity: small(n) ? 0.3 : 1}}))}]});
+  chart("chB", {color: [css("--fg2"), css("--a")], legend: {data: ["Faculty with papers (headline)", "Cohort joined by 2017"]}, grid: {left: 30, top: 56, bottom: 60}, tooltip: {valueFormatter: v => v == null ? "n/a" : v.toFixed(1)},
+    xAxis: {type: "category", data: ord.map(chartName), axisLabel: {rotate: 45, color: fgc, interval: 0}}, yAxis: {type: "value"},
+    series: [{name: "Faculty with papers (headline)", type: "bar", data: ord.map(n => D.per[n].cohort.published_median_h)},
+      {name: "Cohort joined by 2017", type: "bar", data: ord.map(n => ({value: D.per[n].cohort.median_h, itemStyle: {opacity: small(n) ? 0.3 : 1}}))}]});
+}
+
 function secSkipped() {
   const rows = D.skipped.map(s => [s.panel, s.reason, s.needs]);
   const t = D.run_times, tot = t.reduce((a, r) => a + (r.seconds || 0), 0), mem = Math.max(0, ...t.map(r => r.memory_mb || 0)), bad = t.filter(r => r.exit);
@@ -389,17 +475,18 @@ function render() {
   selB.disabled = st.all;
   let html = "", jump = [];
   if (st.all) {
-    html += secOverview(st); jump.push(["overview", "Overview"]);
+    html += secOverview(st) + secMega(st) + secCohort(st); jump.push(["overview", "Overview"], ["mega", "100+ authors"], ["cohort", "Cohort"]);
   } else {
-    html += secKpis(st) + secPapers(st) + secFaculty(st) + secJournals(st) + secCore(st) + secTop(st) + secCollab(st) + secNet(st) + secAreas(st);
-    jump = [["kpi", "Summary"], ["papers", "Papers"], ["faculty", "Faculty"], ["journals", "Journals"], ["core", "CORE"], ["top", "Top papers"], ["collab", "Partners"], ["net", "Citations"], ["areas", "Areas"]];
+    html += (st.list.some(n => PART.has(n)) ? `<div class="wrap" style="padding-top:12px"><div class="banner"><b>Partial enrichment:</b> ${st.list.filter(n => PART.has(n)).map(esc).join(", ")}. ${esc(D.partial_note)}</div></div>` : "") + secKpis(st) + secPapers(st) + secFaculty(st) + secJournals(st) + secCore(st) + secTop(st) + secCollab(st) + secNet(st) + secAreas(st) + secMega(st) + secCohort(st);
+    jump = [["kpi", "Summary"], ["papers", "Papers"], ["faculty", "Faculty"], ["journals", "Journals"], ["core", "CORE"], ["top", "Top papers"], ["collab", "Partners"], ["net", "Citations"], ["areas", "Areas"], ["mega", "100+ authors"], ["cohort", "Cohort"]];
   }
   html += secSkipped(); jump.push(["skipped", "Not computed"]);
   document.getElementById("main").innerHTML = html;
   document.getElementById("jump").innerHTML = jump.map(j => `<a href="#${j[0]}" onclick="document.getElementById('${j[0]}').scrollIntoView();return false;">${j[1]}</a>`).join("");
-  document.getElementById("foot").innerHTML = `Draft built ${esc(D.generated)} from Analysis/results_v2 (enrichment output of 30 October 2026). Citation counts: Crossref, OpenAlex where Crossref had none. Source tables: Analysis/README.md.`;
+  document.getElementById("foot").innerHTML = `Draft built ${esc(D.generated)} from Analysis/results_v2 (interim enrichment output of 31 October 2026). Citation counts: Crossref, OpenAlex where Crossref had none. Source tables: Analysis/README.md.`;
   if (st.all) drawOverview();
   else { drawPapers(st); drawFaculty(st); drawJournals(st); drawCore(st); drawCollab(st); drawNet(st); }
+  drawMega(st); drawCohort(st);
 }
 render();
 </script>

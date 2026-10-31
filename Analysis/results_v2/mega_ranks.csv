@@ -1,0 +1,64 @@
+﻿metric,institution,value_all,rank_all,value_without_mega,rank_without_mega,rank_change
+citations per paper,IIT Ropar,13.24,14,13.24,12,2
+citations per paper,IIT Bombay,16.36,7,14.11,10,-3
+citations per paper,IIT Madras,16.85,6,14.25,9,-3
+citations per paper,IIT Kanpur,15.41,10,14.94,6,4
+citations per paper,IIT Goa,7.41,20,7.41,20,0
+citations per paper,IIT Tirupati,9.6,17,9.22,17,0
+citations per paper,IIT Patna,13.44,13,13.2,13,0
+citations per paper,IIT Palakkad,8.76,18,8.76,18,0
+citations per paper,IIT Guwahati,15.99,8,15.62,5,3
+citations per paper,IIT Hyderabad,20.76,2,14.53,7,-5
+citations per paper,IIT Bhubaneswar,14.85,12,12.53,14,-2
+citations per paper,IIT (BHU) Varanasi,17.02,5,16.94,2,3
+citations per paper,IIT Gandhinagar,27.81,1,13.49,11,-10
+citations per paper,IIT Indore,17.92,3,16.74,3,0
+citations per paper,IIT Mandi,15.3,11,14.33,8,3
+citations per paper,IIT Delhi,15.98,9,15.92,4,5
+citations per paper,IIT (ISM) Dhanbad,17.06,4,17.06,1,3
+citations per paper,IIT Jodhpur,11.8,15,11.86,15,0
+citations per paper,IIT Jammu,10.92,16,10.92,16,0
+citations per paper,IIT Bhilai,8.39,19,8.39,19,0
+citations per paper,IIT Dharwad,7.06,21,7.06,21,0
+median faculty h-index,IIT Ropar,4.0,11,4.0,11,0
+median faculty h-index,IIT Bombay,5.0,7,5.0,7,0
+median faculty h-index,IIT Madras,7.0,3,7.0,3,0
+median faculty h-index,IIT Kanpur,5.0,7,5.0,7,0
+median faculty h-index,IIT Goa,3.0,15,3.0,15,0
+median faculty h-index,IIT Tirupati,3.0,15,3.0,15,0
+median faculty h-index,IIT Patna,9.0,1,9.0,1,0
+median faculty h-index,IIT Palakkad,4.0,11,4.0,11,0
+median faculty h-index,IIT Guwahati,8.0,2,8.0,2,0
+median faculty h-index,IIT Hyderabad,5.0,7,5.0,7,0
+median faculty h-index,IIT Bhubaneswar,4.0,11,4.0,11,0
+median faculty h-index,IIT (BHU) Varanasi,7.0,3,7.0,3,0
+median faculty h-index,IIT Gandhinagar,4.0,11,4.0,11,0
+median faculty h-index,IIT Indore,7.0,3,7.0,3,0
+median faculty h-index,IIT Mandi,3.0,15,3.0,15,0
+median faculty h-index,IIT Delhi,7.0,3,7.0,3,0
+median faculty h-index,IIT (ISM) Dhanbad,5.0,7,5.0,7,0
+median faculty h-index,IIT Jodhpur,3.0,15,3.0,15,0
+median faculty h-index,IIT Jammu,3.0,15,3.0,15,0
+median faculty h-index,IIT Bhilai,3.0,15,3.0,15,0
+median faculty h-index,IIT Dharwad,2.0,21,2.0,21,0
+papers,IIT Ropar,3475,15,3475,15,0
+papers,IIT Bombay,24956,1,24290,2,-1
+papers,IIT Madras,24267,3,22331,3,0
+papers,IIT Kanpur,17617,5,17491,5,0
+papers,IIT Goa,831,21,831,21,0
+papers,IIT Tirupati,1435,18,1432,18,0
+papers,IIT Patna,6419,10,6298,10,0
+papers,IIT Palakkad,1746,17,1746,17,0
+papers,IIT Guwahati,17945,4,17646,4,0
+papers,IIT Hyderabad,9985,8,9494,8,0
+papers,IIT Bhubaneswar,5320,12,4302,14,-2
+papers,IIT (BHU) Varanasi,11667,7,11665,7,0
+papers,IIT Gandhinagar,5119,13,4918,13,0
+papers,IIT Indore,8969,9,8474,9,0
+papers,IIT Mandi,5053,14,5015,12,2
+papers,IIT Delhi,24908,2,24892,1,1
+papers,IIT (ISM) Dhanbad,12312,6,12312,6,0
+papers,IIT Jodhpur,5616,11,5585,11,0
+papers,IIT Jammu,2139,16,2139,16,0
+papers,IIT Bhilai,1400,19,1400,19,0
+papers,IIT Dharwad,1121,20,1120,20,0

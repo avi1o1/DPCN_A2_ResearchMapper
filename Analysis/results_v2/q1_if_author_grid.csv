@@ -1,25 +1,29 @@
 ﻿institution,row,papers,fewer than 10,exactly 10,more than 10,authors unknown,share_fewer_than_10,share_more_than_10
-IIT Bombay,Q1,12061,10921,183,957,0,0.9055,0.0793
+IIT Ropar,Q1,1733,1673,16,44,0,0.9654,0.0254
+IIT Ropar,Q1 and IF > 5,0,0,0,0,0,,
+IIT Ropar,Q1 and IF > 10,0,0,0,0,0,,
+IIT Ropar,IF > 10 (any quartile),0,0,0,0,0,,
+IIT Bombay,Q1,12181,11036,184,961,0,0.906,0.0789
 IIT Bombay,Q1 and IF > 5,0,0,0,0,0,,
 IIT Bombay,Q1 and IF > 10,0,0,0,0,0,,
 IIT Bombay,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Madras,Q1,12030,10201,153,1676,0,0.848,0.1393
+IIT Madras,Q1,12112,10280,153,1679,0,0.8487,0.1386
 IIT Madras,Q1 and IF > 5,0,0,0,0,0,,
 IIT Madras,Q1 and IF > 10,0,0,0,0,0,,
 IIT Madras,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Kanpur,Q1,8445,7914,88,443,0,0.9371,0.0525
+IIT Kanpur,Q1,8513,7980,89,444,0,0.9374,0.0522
 IIT Kanpur,Q1 and IF > 5,0,0,0,0,0,,
 IIT Kanpur,Q1 and IF > 10,0,0,0,0,0,,
 IIT Kanpur,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Goa,Q1,338,312,9,17,0,0.9231,0.0503
+IIT Goa,Q1,340,314,9,17,0,0.9235,0.05
 IIT Goa,Q1 and IF > 5,0,0,0,0,0,,
 IIT Goa,Q1 and IF > 10,0,0,0,0,0,,
 IIT Goa,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Tirupati,Q1,577,554,5,18,0,0.9601,0.0312
+IIT Tirupati,Q1,583,559,6,18,0,0.9588,0.0309
 IIT Tirupati,Q1 and IF > 5,0,0,0,0,0,,
 IIT Tirupati,Q1 and IF > 10,0,0,0,0,0,,
 IIT Tirupati,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Patna,Q1,2564,2397,29,138,0,0.9349,0.0538
+IIT Patna,Q1,2593,2426,29,138,0,0.9356,0.0532
 IIT Patna,Q1 and IF > 5,0,0,0,0,0,,
 IIT Patna,Q1 and IF > 10,0,0,0,0,0,,
 IIT Patna,IF > 10 (any quartile),0,0,0,0,0,,
@@ -27,31 +31,55 @@ IIT Palakkad,Q1,669,649,6,14,0,0.9701,0.0209
 IIT Palakkad,Q1 and IF > 5,0,0,0,0,0,,
 IIT Palakkad,Q1 and IF > 10,0,0,0,0,0,,
 IIT Palakkad,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Guwahati,Q1,8315,7857,74,384,0,0.9449,0.0462
+IIT Guwahati,Q1,8367,7911,74,382,0,0.9455,0.0457
 IIT Guwahati,Q1 and IF > 5,0,0,0,0,0,,
 IIT Guwahati,Q1 and IF > 10,0,0,0,0,0,,
 IIT Guwahati,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Hyderabad,Q1,4915,4128,55,732,0,0.8399,0.1489
+IIT Hyderabad,Q1,4951,4157,56,738,0,0.8396,0.1491
 IIT Hyderabad,Q1 and IF > 5,0,0,0,0,0,,
 IIT Hyderabad,Q1 and IF > 10,0,0,0,0,0,,
 IIT Hyderabad,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Bhubaneswar,Q1,2285,1592,18,675,0,0.6967,0.2954
+IIT Bhubaneswar,Q1,2301,1608,18,675,0,0.6988,0.2934
 IIT Bhubaneswar,Q1 and IF > 5,0,0,0,0,0,,
 IIT Bhubaneswar,Q1 and IF > 10,0,0,0,0,0,,
 IIT Bhubaneswar,IF > 10 (any quartile),0,0,0,0,0,,
-IIT (BHU) Varanasi,Q1,4751,4451,99,201,0,0.9369,0.0423
+IIT (BHU) Varanasi,Q1,4782,4478,99,205,0,0.9364,0.0429
 IIT (BHU) Varanasi,Q1 and IF > 5,0,0,0,0,0,,
 IIT (BHU) Varanasi,Q1 and IF > 10,0,0,0,0,0,,
 IIT (BHU) Varanasi,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Gandhinagar,Q1,2609,2288,47,274,0,0.877,0.105
+IIT Gandhinagar,Q1,2625,2303,48,274,0,0.8773,0.1044
 IIT Gandhinagar,Q1 and IF > 5,0,0,0,0,0,,
 IIT Gandhinagar,Q1 and IF > 10,0,0,0,0,0,,
 IIT Gandhinagar,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Indore,Q1,4460,3856,71,533,0,0.8646,0.1195
+IIT Indore,Q1,4484,3878,71,535,0,0.8649,0.1193
 IIT Indore,Q1 and IF > 5,0,0,0,0,0,,
 IIT Indore,Q1 and IF > 10,0,0,0,0,0,,
 IIT Indore,IF > 10 (any quartile),0,0,0,0,0,,
-IIT Mandi,Q1,2237,2093,50,94,0,0.9356,0.042
+IIT Mandi,Q1,2248,2104,50,94,0,0.9359,0.0418
 IIT Mandi,Q1 and IF > 5,0,0,0,0,0,,
 IIT Mandi,Q1 and IF > 10,0,0,0,0,0,,
 IIT Mandi,IF > 10 (any quartile),0,0,0,0,0,,
+IIT Delhi,Q1,11326,10760,170,396,0,0.95,0.035
+IIT Delhi,Q1 and IF > 5,0,0,0,0,0,,
+IIT Delhi,Q1 and IF > 10,0,0,0,0,0,,
+IIT Delhi,IF > 10 (any quartile),0,0,0,0,0,,
+IIT (ISM) Dhanbad,Q1,4440,4343,23,74,0,0.9782,0.0167
+IIT (ISM) Dhanbad,Q1 and IF > 5,0,0,0,0,0,,
+IIT (ISM) Dhanbad,Q1 and IF > 10,0,0,0,0,0,,
+IIT (ISM) Dhanbad,IF > 10 (any quartile),0,0,0,0,0,,
+IIT Jodhpur,Q1,2410,2237,43,130,0,0.9282,0.0539
+IIT Jodhpur,Q1 and IF > 5,0,0,0,0,0,,
+IIT Jodhpur,Q1 and IF > 10,0,0,0,0,0,,
+IIT Jodhpur,IF > 10 (any quartile),0,0,0,0,0,,
+IIT Jammu,Q1,877,808,30,39,0,0.9213,0.0445
+IIT Jammu,Q1 and IF > 5,0,0,0,0,0,,
+IIT Jammu,Q1 and IF > 10,0,0,0,0,0,,
+IIT Jammu,IF > 10 (any quartile),0,0,0,0,0,,
+IIT Bhilai,Q1,506,486,10,10,0,0.9605,0.0198
+IIT Bhilai,Q1 and IF > 5,0,0,0,0,0,,
+IIT Bhilai,Q1 and IF > 10,0,0,0,0,0,,
+IIT Bhilai,IF > 10 (any quartile),0,0,0,0,0,,
+IIT Dharwad,Q1,401,385,1,15,0,0.9601,0.0374
+IIT Dharwad,Q1 and IF > 5,0,0,0,0,0,,
+IIT Dharwad,Q1 and IF > 10,0,0,0,0,0,,
+IIT Dharwad,IF > 10 (any quartile),0,0,0,0,0,,
