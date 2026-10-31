@@ -640,8 +640,8 @@ status and are in neither CSV. `group3_data.csv` holds verified records only (28
 `export_csv.py`). Other outputs:
 `citation_network.csv` 184,882 edges, `authorship_network.csv` 71,296 pairs, `indian_connections.csv` 22,637 rows.
 
-Open items. (1) Journal quartiles are empty: the Scimago CSVs (2016 and 2020) are not in the repository and scimagojr.com answers
-with a Cloudflare challenge, which we do not bypass; with the files in `Enrichment/cache/scimago/` an offline rerun (merge to
-networks) fills them. (2) `verify_networks` reports one failure: IIITDM Jabalpur W4398769804 (10.1007/s11664-024-11136-3) has
+Quartiles (2026-10-31, 09:45). The Scimago SJR CSVs for 2016–2025 were downloaded from scimagojr.com/journalrank.php ("Download data", one per year) through the operator's own Chrome session, where the site loaded without a challenge, and put in `Enrichment/cache/scimago/` (git-ignored, shared with the IIT runs). An offline rerun (merge, faculty, verify, export, networks; no OpenAlex calls) filled them: of the 13,507 journal rows in `group3_data.csv`, 12,689 (93.9 %) have a quartile (Q1 6,714, Q2 4,166, Q3 1,577, Q4 232); 818 journals are not in Scimago or have no ISSN match. Conference rows carry CORE ranks (A* 265, A 382, B 744, C 259). verify passed again for all 30.
+
+Open item. `verify_networks` reports one failure: IIITDM Jabalpur W4398769804 (10.1007/s11664-024-11136-3) has
 `cited_by_indian_inst` TRUE from stage C but no incoming edge, because the citing work is outside the edge set. One record in
 32,996; left as is. Its "Kharagpur-Roorkee" lines are IIT-specific labels and do not apply here.
