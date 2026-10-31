@@ -1191,3 +1191,8 @@ Roorkee precision audit (65 sampled, v2 procedure; yes needs affiliation text on
 * `quartile_wrong_year` (Enrichment/scripts/verify.py): the check now expects the Scimago file of the publication year where one exists and otherwise the latest available year, which is the rule applied by ranks.py (only the 2016 and 2020 files could be obtained). It no longer flags the intended fallback.
 * OpenAlex credits: besides the keys in .env the runner also uses OpenAlex's free unauthenticated allowance (about 1,000 credits per day per network address, OPENALEX_NO_KEY=1), and picks the source with the most credits left.
 * Kharagpur's title-resolution step: Semantic Scholar's anonymous pool answers 429, which made every unmatched paper wait through four retries (about 15 s). resolve_todos.py now makes one attempt and then skips Semantic Scholar for five minutes after a failure. Crossref's own limits (3 requests per second, 3 concurrent) are already what the pipeline uses.
+
+* Scimago quartiles (2026-10-31): only 2016, 2020 and 2025 could be obtained; the other seven years are skipped. `ranks.quartile` uses the file of the
+  publication year when the journal is in it, otherwise the journal's latest available year (earlier files only for journals missing from the latest).
+  `verify.py` checks exactly that rule.
+* Run paused on purpose at 15:35 on 2026-10-31 (operator shut the system down); state and resume steps in `WebScrape/RESUME.md`.

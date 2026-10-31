@@ -9,7 +9,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 R = os.path.dirname(os.path.dirname(HERE))
 base = dict(os.environ, ENRICH_SCRAPE_DIR=R + "/WebScrape/v2", ENRICH_OUT_DIR=R + "/Enrichment/out_v2",
             ENRICH_CACHE_DIR=R + "/Enrichment/cache_v2", PYTHONIOENCODING="utf-8")
-SEM = threading.Semaphore(2)
+SEM = threading.Semaphore(int(os.environ.get("INTERIM_WORKERS", "2")))
 
 
 def run(step, insts):
@@ -28,8 +28,10 @@ def one(inst):
 
 
 insts = sys.argv[1:]
-with ThreadPoolExecutor(3) as ex:
+with ThreadPoolExecutor(int(os.environ.get("INTERIM_WORKERS", "2"))) as ex:
     list(ex.map(one, insts))
+if os.environ.get("INTERIM_SKIP_EXPORT") == "1":
+    print("INTERIM-DONE (export skipped)", flush=True); sys.exit(0)
 have = sorted(os.path.basename(f)[:-len("_enriched.json")] for f in glob.glob(R + "/Enrichment/out_v2/iit_*_enriched.json"))
 for s in (["export_csv.py"], ["build_networks.py"], ["verify_networks.py"]):
     run(s, have)

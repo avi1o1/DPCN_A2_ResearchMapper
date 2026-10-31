@@ -44,14 +44,15 @@ for fn in glob.glob(os.path.join(CACHE, "scimago", "*.csv")):
 def quartile(issns, year):
     if not SJR or not isinstance(issns, list) or not isinstance(year, int):
         return None
-    y = year if year in SJR else max(SJR)          # 2026 (partial year) -> latest file
-    if year < min(SJR):
-        y = min(SJR)
-    for s in issns:
-        k = issn_key(s)
-        if k and k in SJR[y]:
-            q, title, areas = SJR[y][k]
-            return {"quartile": q, "sjr_year": y, "sjr_title": title, "sjr_areas": areas}
+    # the Scimago file of the publication year where one exists; otherwise the journal's latest available year is final
+    # (and the earlier files only for journals that no longer appear in the latest ones)
+    order = ([year] if year in SJR else []) + sorted(SJR, reverse=True)
+    for y in order:
+        for s in issns:
+            k = issn_key(s)
+            if k and k in SJR[y]:
+                q, title, areas = SJR[y][k]
+                return {"quartile": q, "sjr_year": y, "sjr_title": title, "sjr_areas": areas}
     return None
 
 

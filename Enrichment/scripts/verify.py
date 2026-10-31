@@ -80,12 +80,11 @@ for inst in sys.argv[1:]:
         if q:
             if n["type"] != "journal":
                 bad("quartile_on_non_journal", rid)
-            # the Scimago file of the publication year where one exists; otherwise the latest available year is final
-            # (ranks.quartile: before the first file -> first file, after/between files -> latest file)
-            exp = min(n["year"], 2025)
-            if exp not in ranks.SJR:
-                exp = min(ranks.SJR) if (ranks.SJR and exp < min(ranks.SJR)) else (max(ranks.SJR) if ranks.SJR else exp)
-            if q["sjr_year"] != exp:
+            # the file of the publication year if the journal is in it; otherwise the journal's latest available year (any loaded file)
+            yy = min(n["year"], 2025)
+            iss = n.get("issn") if isinstance(n.get("issn"), list) else []
+            in_year = yy in ranks.SJR and any(ranks.issn_key(x) in ranks.SJR[yy] for x in iss if ranks.issn_key(x))
+            if q["sjr_year"] not in ranks.SJR or (in_year and q["sjr_year"] != yy):
                 bad("quartile_wrong_year", rid)
         if n.get("core") and n["type"] != "conference":
             bad("core_on_non_conference", rid)

@@ -3,7 +3,7 @@
 
 usage: python3 opencitations.py <inst_key>   (processes records of WebScrape/<inst>.json with references == TODO and a DOI)
 """
-import os, sys, json, gzip, glob, re, threading, queue
+import os, sys, json, gzip, glob, re, threading, queue, time
 from common import get, RAW, OUT, read_jsonl_gz, norm_doi
 
 inst = sys.argv[1]
@@ -24,8 +24,13 @@ lock = threading.Lock(); f = open(FN, "a")
 DOI_RX = re.compile(r"doi:(\S+)")
 
 
+DEADLINE = time.time() + float(os.environ.get("OC_MAX_SECONDS", "600"))   # optional fallback: a run stops after this long, the next run resumes (done DOIs are skipped)
+
+
 def w():
     while True:
+        if time.time() > DEADLINE:
+            return
         try:
             d = q.get_nowait()
         except queue.Empty:
