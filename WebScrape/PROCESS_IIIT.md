@@ -380,11 +380,11 @@ Main file = verified + unverified-likely (`v2/<key>.json`); unconfirmed = "possi
 | Gwalior | 2,146 | 1,378 | 768 | 713 | 81.9 % (217/265) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
 | Bangalore | 1,642 | 1,091 | 549 | 329 | 79.7 % (208/261) | 88.3 % (137) | 100 % | 97 % (32/33) | 29 % |
 | Jabalpur | 3,064 | 1,849 | 1,215 | 398 | 74.5 % (204/274) | 88.4 % (69) | 100 % | 91 % (30/33) | 58 % |
-| Hyderabad | 6,352 | 2,957 | 3,395 | 835 | 94.7 % (303/320) | 100.0 % (7) | 100 % | 92 % (35/38)* | 24 % |
+| Hyderabad | 6,352 | 2,957 | 3,395 | 835 | 94.7 % (303/320) | 100.0 % (7) | 100 % | 95 % (37/39)* | 30 % |
 | Pune | 235 | 164 | 71 | 87 | 62.6 % (57/91) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
 | Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (150/295) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
 
-Bangalore's main file also holds 2 `ambiguous` records. \* Hyderabad includes the institute repository (§7.3); its precision audit predates it. `validate.py`: 0 violations for all eight.
+Bangalore's main file also holds 2 `ambiguous` records. \* Hyderabad includes the institute repository (§7.3); re-audited on the current file on 2026-10-31 (§7.6). `validate.py`: 0 violations for all eight.
 
 ### 6.1 Open problems
 * **Kancheepuram recall (50.8 %).** Most misses are papers on faculty pages in venues no index covers; some golden titles carry
@@ -500,8 +500,8 @@ violations for every institute below.
 | Manipur | 132 | 95 | 37 | 84 | 51.1 % (24/47) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
 | Nagpur | 441 | 310 | 131 | 112 | 55.6 % (69/124) | 70.7 % (41) | 100 % | 86 % (25/29) | 23 % |
 | Ranchi | 367 | 248 | 119 | 43 | 61.3 % (49/80) | 79.2 % (24) | 100 % | 80 % (24/30) | 29 % |
-| Surat | 164 | 96 | 68 | 64 | 78.6 % (11/14) | – (0) | 100 % | 42 % (16/38)† | 15 % |
-| Bhopal | 249 | 188 | 61 | 76 | 69.6 % (39/56) | 87.5 % (32) | 100 % | 40 % (10/25)† | 0 % |
+| Surat | 164 | 96 | 68 | 64 | 78.6 % (11/14) | – (0) | 100 % | 50 % (17/34)† | 17 % |
+| Bhopal | 249 | 188 | 61 | 76 | 69.6 % (39/56) | 87.5 % (32) | 100 % | 64 % (16/25)† | 0 % |
 | Bhagalpur | 388 | 290 | 98 | 41 | 67.9 % (53/78) | 70.4 % (27) | 100 % | 75 % (24/32) | 17 % |
 | Agartala | 25 | 15 | 10 | 2 | 33.3 % (1/3) | 33.3 % (3) | 100 % (15/15) | 50 % (2/4) | 0/2 |
 | Raichur | 82 | 53 | 29 | 37 | 65.8 % (25/38) | 75.0 % (4) | 100 % | 79 % (22/28) | 9 % |
@@ -511,9 +511,10 @@ file has 20 fewer likely records. Kota's verified 25/25 includes one operator co
 the second affiliation; OpenAlex lists only the first). Golden sets under ~60 papers (Kurnool, Lucknow, Sonepat, Tiruchirappalli,
 Manipur, Surat, Bhopal, Agartala, Raichur) give recall with wide uncertainty.
 
-† Audited before the roster fix that followed: Surat's Pradeep Singh had no joining year, so his earlier papers counted
-(joining year 2026 from ORCID; rebuilt file 164 records), and Bhopal's Director Ashutosh Kumar Singh is MANIT faculty
-(now `adjunct`; 282 → 249 records). The rebuilt likely tiers have not been re-audited. Agartala is audited whole (25
+† Re-audited on the rebuilt files on 2026-10-31 (§7.6). The first audits predated two roster fixes: Surat's Pradeep Singh had
+no joining year, so his earlier papers counted (joining year 2026 from ORCID; rebuilt file 164 records), and Bhopal's Director
+Ashutosh Kumar Singh is MANIT faculty (now `adjunct`; 282 → 249 records). First-audit likely precision: Surat 42 % (16/38),
+Bhopal 40 % (10/25). Agartala is audited whole (25
 records); it has had its own faculty only since about 2024. Raichur's likely `no` are mostly Debmalya Sain's papers from
 Granada and IISc before joining; its IIT Hyderabad mentors are `visiting`.
 
@@ -645,3 +646,24 @@ Quartiles (2026-10-31, 09:45). The Scimago SJR CSVs for 2016–2025 were downloa
 Open item. `verify_networks` reports one failure: IIITDM Jabalpur W4398769804 (10.1007/s11664-024-11136-3) has
 `cited_by_indian_inst` TRUE from stage C but no incoming edge, because the citing work is outside the edge set. One record in
 32,996; left as is. Its "Kharagpur-Roorkee" lines are IIT-specific labels and do not apply here.
+
+### 7.6 Precision re-audit of Surat, Bhopal and Hyderabad on the current files (2026-10-31)
+
+The three audits flagged as predating later changes (Surat and Bhopal roster fixes, Hyderabad's repository addition) were
+redone. `precision_sample.py` and the possible-tier draw were rerun on the current files with the same seed (20261007, 25 / 40 / 40).
+Papers already judged in the first audit (same DOI, else same title) kept their verdict, since it depends only on the paper's
+printed affiliations; they are marked "(carried over from the first audit)". The rest (Surat 13, Bhopal 46, Hyderabad 82) were
+judged by independent agents under the same brief.
+
+| IIIT | carried / new | P verified | P likely | P possible | unknown (v / l / p) |
+|---|---|---|---|---|---|
+| Surat | 92 / 13 | 100 % (25/25) | 50 % (17/34) | 17 % (4/23) | 0 / 6 / 17 |
+| Bhopal | 59 / 46 | 100 % (25/25) | 64 % (16/25) | 0 % (0/31) | 0 / 15 / 9 |
+| Hyderabad | 23 / 82 | 100 % (25/25) | 95 % (37/39) | 30 % (11/37) | 0 / 1 / 3 |
+
+Surat's likely `no` are again mostly Pradeep Singh: with joining year 2026, his 2026 papers stay, and four of them still print IIT
+Roorkee (papers in press at the move; one 2026 paper prints IIIT Surat). The others are namesakes (Abhinav Kumar, MNNIT). Bhopal's
+likely `no` are namesakes at IIT BHU, IIT Patna and IIT Indore; 15 of its 40 likely rows are unknown (Taylor & Francis chapters
+without deposited affiliations, the publisher returning 403). Hyderabad's two likely `no` are tenure boundaries (NUS, University
+of Hyderabad); its possible tier is mostly people at other institutions with the same names. Files:
+`v2/golden/precision_audit_iiit_{surat,bhopal,hyderabad}.csv`.
