@@ -1,15 +1,15 @@
 ﻿cap,class,triples,closed_later,share_of_new_trios,closure_probability,ci95_low,ci95_high
-25,0 edges,53760220737582,17838,0.2608,3.32e-10,3.27e-10,3.37e-10
-25,1 edge,18705587620,34547,0.5051,1.85e-06,1.83e-06,1.87e-06
-25,2 edges (open wedge),3766274,15577,0.2278,0.00414,0.00407,0.0042
-25,"3 edges, no joint paper (open triangle)",15000,433,0.0063,0.0289,0.0263,0.0317
-25,"open triangle, weakest edge 1 joint paper",14002,391,,0.0279,0.0253,0.0308
-25,"open triangle, weakest edge 2 joint papers",846,36,,0.0426,0.0309,0.0583
-25,"open triangle, weakest edge 3+ joint papers",152,6,,0.0395,0.0182,0.0834
-10,0 edges,43621033039722,11110,0.2347,2.55e-10,2.5e-10,2.59e-10
-10,1 edge,14357519463,24047,0.508,1.67e-06,1.65e-06,1.7e-06
-10,2 edges (open wedge),3063396,11925,0.2519,0.00389,0.00382,0.00396
-10,"3 edges, no joint paper (open triangle)",12334,257,0.0054,0.0208,0.0185,0.0235
-10,"open triangle, weakest edge 1 joint paper",11489,231,,0.0201,0.0177,0.0228
-10,"open triangle, weakest edge 2 joint papers",703,22,,0.0313,0.0208,0.0469
-10,"open triangle, weakest edge 3+ joint papers",142,4,,0.0282,0.011,0.0702
+25,0 edges,98885655126034,27998,0.279,2.83e-10,2.8e-10,2.86e-10
+25,1 edge,28932484633,50418,0.5023,1.74e-06,1.73e-06,1.76e-06
+25,2 edges (open wedge),5106244,21330,0.2125,0.00418,0.00412,0.00423
+25,"3 edges, no joint paper (open triangle)",20354,623,0.0062,0.0306,0.0283,0.0331
+25,"open triangle, weakest edge 1 joint paper",19084,566,,0.0297,0.0273,0.0322
+25,"open triangle, weakest edge 2 joint papers",1075,51,,0.0474,0.0363,0.0618
+25,"open triangle, weakest edge 3+ joint papers",195,6,,0.0308,0.0142,0.0655
+10,0 edges,80302198627926,17253,0.2543,2.15e-10,2.12e-10,2.18e-10
+10,1 edge,22067747263,34311,0.5058,1.55e-06,1.54e-06,1.57e-06
+10,2 edges (open wedge),4020130,15908,0.2345,0.00396,0.0039,0.00402
+10,"3 edges, no joint paper (open triangle)",16088,364,0.0054,0.0226,0.0204,0.025
+10,"open triangle, weakest edge 1 joint paper",15004,327,,0.0218,0.0196,0.0243
+10,"open triangle, weakest edge 2 joint papers",897,31,,0.0346,0.0245,0.0486
+10,"open triangle, weakest edge 3+ joint papers",187,6,,0.0321,0.0148,0.0682

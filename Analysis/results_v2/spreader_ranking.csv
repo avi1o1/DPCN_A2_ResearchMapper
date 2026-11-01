@@ -1,5 +1,5 @@
 ﻿centrality,spearman_rho_with_outbreak,top5pct_overlap_with_best_spreaders
-k-core,0.943,0.645
-degree,0.919,0.752
-strength (joint papers),0.867,0.477
-betweenness,0.781,0.558
+k-core,0.947,0.536
+degree,0.926,0.77
+strength (joint papers),0.867,0.491
+betweenness,0.788,0.562

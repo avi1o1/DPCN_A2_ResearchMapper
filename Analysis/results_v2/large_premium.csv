@@ -1,42 +1,63 @@
 ﻿institution,year,large_papers,median_citations_large,median_citations_other,ratio
-IIT Ropar,2016,1,9,20,0.45
-IIT Ropar,2018,1,22,19,1.16
-IIT Ropar,2019,2,38.5,11.0,3.5
-IIT Ropar,2020,1,820,14,58.57
-IIT Ropar,2021,8,16.5,11,1.5
-IIT Ropar,2022,11,15,8,1.88
-IIT Ropar,2023,6,18.5,6,3.08
-IIT Ropar,2024,5,12,4,3.0
-IIT Ropar,2016-2024 (median of yearly ratios),,,,2.44
-IIT Bombay,2016,63,42,12,3.5
+IIT Kharagpur,2016,19,32,15.0,2.13
+IIT Kharagpur,2017,17,37,14,2.64
+IIT Kharagpur,2018,17,33,13.0,2.54
+IIT Kharagpur,2019,35,43,13,3.31
+IIT Kharagpur,2020,34,38.5,13.0,2.96
+IIT Kharagpur,2021,65,40,10,4.0
+IIT Kharagpur,2022,61,18,7,2.57
+IIT Kharagpur,2023,60,10.5,6.0,1.75
+IIT Kharagpur,2024,65,10,4.0,2.5
+IIT Kharagpur,2016-2024 (median of yearly ratios),,,,2.57
+IIT Roorkee,2016,12,14.5,14.0,1.04
+IIT Roorkee,2017,22,18.0,14.0,1.29
+IIT Roorkee,2018,19,14,13,1.08
+IIT Roorkee,2019,16,17.0,12.0,1.42
+IIT Roorkee,2020,25,15,12.0,1.25
+IIT Roorkee,2021,52,26.0,10,2.6
+IIT Roorkee,2022,59,19,8.0,2.38
+IIT Roorkee,2023,53,12,5.0,2.4
+IIT Roorkee,2024,62,5.5,4,1.38
+IIT Roorkee,2016-2024 (median of yearly ratios),,,,1.38
+IIT Ropar,2016,3,15,18,0.83
+IIT Ropar,2017,5,17,16.0,1.06
+IIT Ropar,2018,6,14.0,16.5,0.85
+IIT Ropar,2019,9,10,13.0,0.77
+IIT Ropar,2020,12,17.0,13,1.31
+IIT Ropar,2021,15,15,9.0,1.67
+IIT Ropar,2022,13,14,8.0,1.75
+IIT Ropar,2023,20,11.0,6,1.83
+IIT Ropar,2024,12,6.5,4.0,1.62
+IIT Ropar,2016-2024 (median of yearly ratios),,,,1.31
+IIT Bombay,2016,63,42,12.0,3.5
 IIT Bombay,2017,77,41,12,3.42
-IIT Bombay,2018,73,27,11,2.45
+IIT Bombay,2018,73,27,11.0,2.45
 IIT Bombay,2019,110,33.0,10.0,3.3
 IIT Bombay,2020,110,28.0,10.0,2.8
-IIT Bombay,2021,143,28,8.0,3.5
+IIT Bombay,2021,143,28,8,3.5
 IIT Bombay,2022,133,23,6.0,3.83
 IIT Bombay,2023,180,10.0,4.0,2.5
 IIT Bombay,2024,159,8,3.0,2.67
 IIT Bombay,2016-2024 (median of yearly ratios),,,,3.3
-IIT Madras,2016,70,13.5,11.0,1.23
+IIT Madras,2016,70,13.5,11,1.23
 IIT Madras,2017,170,23.5,11.0,2.14
-IIT Madras,2018,216,23.0,11,2.09
+IIT Madras,2018,217,23,11.0,2.09
 IIT Madras,2019,242,23.0,11.0,2.09
 IIT Madras,2020,200,21.5,9,2.39
-IIT Madras,2021,239,16,8,2.0
-IIT Madras,2022,230,12.5,6.0,2.08
-IIT Madras,2023,243,10,5.0,2.0
-IIT Madras,2024,284,6.0,3.0,2.0
+IIT Madras,2021,239,16,8.0,2.0
+IIT Madras,2022,230,12.5,6,2.08
+IIT Madras,2023,243,10,5,2.0
+IIT Madras,2024,284,6.0,3,2.0
 IIT Madras,2016-2024 (median of yearly ratios),,,,2.08
 IIT Kanpur,2016,13,57,14,4.07
 IIT Kanpur,2017,14,24.5,12.0,2.04
-IIT Kanpur,2018,30,20.0,11.0,1.82
-IIT Kanpur,2019,31,18,9.0,2.0
+IIT Kanpur,2018,30,20.0,11,1.82
+IIT Kanpur,2019,31,18,9,2.0
 IIT Kanpur,2020,47,26,11.0,2.36
-IIT Kanpur,2021,54,21.5,8,2.69
+IIT Kanpur,2021,54,21.5,8.0,2.69
 IIT Kanpur,2022,49,12,6,2.0
 IIT Kanpur,2023,74,12.5,5.0,2.5
-IIT Kanpur,2024,92,10.5,3,3.5
+IIT Kanpur,2024,92,10.5,3.0,3.5
 IIT Kanpur,2016-2024 (median of yearly ratios),,,,2.36
 IIT Goa,2019,3,9,8.0,1.12
 IIT Goa,2021,3,14,3.5,4.0
@@ -73,9 +94,9 @@ IIT Guwahati,2016,37,8,14,0.57
 IIT Guwahati,2017,47,16,14,1.14
 IIT Guwahati,2018,46,12.0,13.0,0.92
 IIT Guwahati,2019,53,13,13,1.0
-IIT Guwahati,2020,48,13.0,11,1.18
+IIT Guwahati,2020,51,16,11.0,1.45
 IIT Guwahati,2021,62,9.0,9.0,1.0
-IIT Guwahati,2022,49,16,7.0,2.29
+IIT Guwahati,2022,49,16,7,2.29
 IIT Guwahati,2023,44,14.5,6.0,2.42
 IIT Guwahati,2024,51,8,4,2.0
 IIT Guwahati,2016-2024 (median of yearly ratios),,,,1.14
@@ -140,13 +161,13 @@ IIT Mandi,2023,16,16.5,6.0,2.75
 IIT Mandi,2024,21,8,5.0,1.6
 IIT Mandi,2016-2024 (median of yearly ratios),,,,2.25
 IIT Delhi,2016,10,58.0,12,4.83
-IIT Delhi,2017,10,29.5,14.0,2.11
-IIT Delhi,2018,13,51,13.0,3.92
+IIT Delhi,2017,10,29.5,14,2.11
+IIT Delhi,2018,13,51,13,3.92
 IIT Delhi,2019,23,23,12.0,1.92
-IIT Delhi,2020,42,23.0,11,2.09
-IIT Delhi,2021,57,35,10,3.5
+IIT Delhi,2020,42,23.0,11.0,2.09
+IIT Delhi,2021,57,35,10.0,3.5
 IIT Delhi,2022,82,23.5,7,3.36
-IIT Delhi,2023,95,15,5.0,3.0
+IIT Delhi,2023,95,15,5,3.0
 IIT Delhi,2024,83,12,4.0,3.0
 IIT Delhi,2016-2024 (median of yearly ratios),,,,3.0
 IIT (ISM) Dhanbad,2016,3,36,12,3.0

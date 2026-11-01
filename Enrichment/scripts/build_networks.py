@@ -77,7 +77,8 @@ def load_submission():
                 p["refs_oa"] |= set(r.get("references_openalex") or [])
                 if isinstance(r["citations"], int):
                     p["citations"] = max(p["citations"] or 0, r["citations"])
-                p["records"].append(r)
+                # only these fields are used later (authorship network, institutions): do not keep whole records in memory
+                p["records"].append({k: r.get(k) for k in ("authors", "authors_openalex", "record_id", "faculty", "coauthor_institutions")})
     return papers
 
 
@@ -153,6 +154,8 @@ def main():
                     for our in q["insts"]:
                         flow_in[(our, i)] += 1
                     partner_name[i] = n
+    for p in papers.values():                          # reference lists are only needed to build the edges
+        p["refs_doi"] = p["refs_oa"] = None
     cols = ["source_doi", "target_doi", "source_inst", "target_inst", "year", "source_openalex", "target_openalex",
             "edge_type", "cross_inst"]
     with open(os.path.join(OUT, "citation_network.csv"), "w", newline="", encoding="utf-8-sig") as fh:

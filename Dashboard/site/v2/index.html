@@ -175,7 +175,7 @@ function secOverview(st) {
     rows.map(r => [`<span class="sw"><span class="dot" style="background:${COLOR[r.n]}"></span><a href="#a=${encodeURIComponent(r.n)}" onclick="selA.value='${esc(r.n)}';selB.value='';render();">${esc(r.n)}</a></span>${badge(r.n)}`,
       fmt(r.pap), fmt(r.fac), fmt(r.roster), fmt(r.cit), fmt(r.cpp, 1), fmt(r.h, 0), fmt(r.ih), pct(r.core), pct(r.big), pct(r.self, 0), fmt(r.ratio, 2)]).map(r => r), "");
   return `<section id="overview"><div class="wrap"><h2>All ${NAMES.length} institutes</h2>
-  <p class="sub">Pick an institute above to see its own panels, or two to compare them. A <span class="badge" style="margin-left:0">partial enrichment</span> badge (or * in a chart) means the institute's enrichment is still incomplete: its citation-flow, partner and network figures are interim. "Faculty with papers" = faculty on the institute's pages with at least one paper in the analysis set; "roster listed" = everyone on those pages (all statuses, departments in scope).</p>
+  <p class="sub">Pick an institute above to see its own panels, or two to compare them. ${PART.size ? `A <span class="badge" style="margin-left:0">partial enrichment</span> badge (or * in a chart) means the institute's enrichment is still incomplete: its citation-flow, partner and network figures are interim. ` : ""}"Faculty with papers" = faculty on the institute's pages with at least one paper in the analysis set; "roster listed" = everyone on those pages (all statuses, departments in scope).</p>
   <div class="grid"><div class="card">${tbl}</div></div>
   <div class="grid two" style="margin-top:16px">
     ${card("Papers per year", '<div id="ovYear" class="chart tall"></div>', "2026 is partial (collected October 2026).")}

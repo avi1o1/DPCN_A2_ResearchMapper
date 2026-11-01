@@ -1,6 +1,18 @@
 ﻿institution,group,total,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026
+IIT Kharagpur,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kharagpur,PRL,10,1,1,1,0,1,1,1,2,2,0,0
+IIT Kharagpur,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kharagpur,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kharagpur,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Kharagpur,JACS,7,0,1,0,0,0,0,0,0,3,3,0
+IIT Roorkee,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
+IIT Roorkee,PRL,6,2,1,0,1,0,0,0,0,0,2,0
+IIT Roorkee,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Roorkee,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Roorkee,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0
+IIT Roorkee,JACS,14,0,0,0,1,0,0,3,2,3,2,3
 IIT Ropar,APS (all Physical Review journals),0,0,0,0,0,0,0,0,0,0,0,0
-IIT Ropar,PRL,4,0,0,0,0,0,2,0,0,1,1,0
+IIT Ropar,PRL,5,0,0,0,0,1,2,0,0,1,1,0
 IIT Ropar,SPIE journals,0,0,0,0,0,0,0,0,0,0,0,0
 IIT Ropar,SPIE proceedings,0,0,0,0,0,0,0,0,0,0,0,0
 IIT Ropar,Nature journals,0,0,0,0,0,0,0,0,0,0,0,0

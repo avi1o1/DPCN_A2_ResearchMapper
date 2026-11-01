@@ -1,4 +1,6 @@
 ﻿institution,roster_rows,current_rows,current_with_joining_year,share_current_with_joining_year,nirf_edition,nirf_working,nirf_regular,current_over_nirf,flag,nirf_note
+IIT Kharagpur,1144,834,339,0.4065,,,,,no NIRF count,
+IIT Roorkee,848,572,436,0.7622,,,,,no NIRF count,
 IIT Ropar,273,202,147,0.7277,,,,,no NIRF count,
 IIT Bombay,1270,795,651,0.8189,2026,,749,1.061,ok,PROCESS.md 15.6: NIRF 2026 lists 749 regular faculty working
 IIT Madras,996,670,670,1.0,,,,,no NIRF count,

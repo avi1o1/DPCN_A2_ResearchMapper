@@ -1,14 +1,34 @@
 ﻿institution,rank_by_papers,conference,core_rank,papers
-IIT Ropar,1,IEEE Workshop on Applications of Computer Vision,A,16
-IIT Ropar,2,IEEE International Geoscience and Remote Sensing Symposium,C,9
-IIT Ropar,3,International Conference on Multimodal Interaction (was International Conference on Multimodal Interfaces),B,8
-IIT Ropar,4,IEEE International Conference on Advanced Video and Signal Based Surveillance,B,7
-IIT Ropar,5,IEEE International Joint Conference on Neural Networks,B,5
-IIT Ropar,6,IEEE Vehicular Technology Conference,B,5
-IIT Ropar,7,IEEE Conference on Computer Vision and Pattern Recognition,A*,3
-IIT Ropar,8,IEEE International Conference on Image Processing,B,3
-IIT Ropar,9,ACM Conference on Embedded Networked Sensor Systems,A*,2
-IIT Ropar,10,IEEE International Symposium on Network Computing and Applications,B,2
+IIT Kharagpur,1,IEEE International Geoscience and Remote Sensing Symposium,C,55
+IIT Kharagpur,2,IEEE Global Telecommunications Conference ,B,36
+IIT Kharagpur,3,IEEE Vehicular Technology Conference,B,29
+IIT Kharagpur,4,IEEE International Conference on Image Processing,B,26
+IIT Kharagpur,5,International Conference on VLSI Design,C,18
+IIT Kharagpur,6,ACM International Conference on Information and Knowledge Management,A,17
+IIT Kharagpur,7,IEEE International Symposium on Information Theory,B,17
+IIT Kharagpur,8,The Annual International Conference of the IEEE Engineering in Medicine and Biology Society,C,16
+IIT Kharagpur,9,National Conference of the American Association for Artificial Intelligence,A*,16
+IIT Kharagpur,10,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,16
+IIT Roorkee,1,IEEE International Geoscience and Remote Sensing Symposium,C,83
+IIT Roorkee,2,IEEE Workshop on Applications of Computer Vision,A,16
+IIT Roorkee,3,IEEE Wireless Communications and Networking Conference,B,16
+IIT Roorkee,4,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,12
+IIT Roorkee,5,International Conference on Evaluation of Novel Approaches to Software Engineering,B,12
+IIT Roorkee,6,IEEE International Joint Conference on Neural Networks,B,11
+IIT Roorkee,7,International Conference on Pattern Recognition,B,10
+IIT Roorkee,8,IEEE Global Telecommunications Conference ,B,9
+IIT Roorkee,9,IEEE Vehicular Technology Conference,B,8
+IIT Roorkee,10,IEEE International Conference on Big Data,B,8
+IIT Ropar,1,IEEE Workshop on Applications of Computer Vision,A,21
+IIT Ropar,2,IEEE International Geoscience and Remote Sensing Symposium,C,11
+IIT Ropar,3,IEEE International Conference on Advanced Video and Signal Based Surveillance,B,11
+IIT Ropar,4,IEEE International Joint Conference on Neural Networks,B,8
+IIT Ropar,5,IEEE Vehicular Technology Conference,B,6
+IIT Ropar,6,IEEE Conference on Computer Vision and Pattern Recognition,A*,6
+IIT Ropar,7,IEEE International Conference on Image Processing,B,5
+IIT Ropar,8,IEEE International Conference on Mobile Ad-hoc and Sensor Systems,B,4
+IIT Ropar,9,International Conference on Multimodal Interaction (was International Conference on Multimodal Interfaces),B,3
+IIT Ropar,10,IEEE International Symposium on Network Computing and Applications,B,3
 IIT Bombay,1,IEEE International Geoscience and Remote Sensing Symposium,C,148
 IIT Bombay,2,IEEE International Symposium on Information Theory,B,38
 IIT Bombay,3,IEEE Workshop on Applications of Computer Vision,A,30
@@ -18,7 +38,7 @@ IIT Bombay,6,ACM International Conference on Information and Knowledge Managemen
 IIT Bombay,7,IEEE International Conference on Advanced Learning Technologies,B,13
 IIT Bombay,8,IEEE International Joint Conference on Neural Networks,B,12
 IIT Bombay,9,On-Line Testing and Robust System Design,C,10
-IIT Bombay,10,International Conference on VLSI Design,C,9
+IIT Bombay,10,International Conference on Computers in Education,B,10
 IIT Madras,1,IEEE International Symposium on Information Theory,B,26
 IIT Madras,2,IEEE International Conference on Image Processing,B,23
 IIT Madras,3,"IEEE International Conference on Acoustics, Speech and Signal Processing",B,23

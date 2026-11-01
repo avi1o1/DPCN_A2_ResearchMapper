@@ -1,15 +1,15 @@
 ﻿definition,test,exposed,pairs,pairs_with_outcome,rate,expected_same_strata,obs_over_expected
-pure,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,yes,5809,219,0.0377,40.2,5.45
-pure,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,no,5991847,3483,0.00058,3483.0,1.0
-pure,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,yes,3153,780,0.24738,149.5,5.22
-pure,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,no,5991847,24821,0.00414,24821.0,1.0
-pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,citation first,2284,721,0.3157,,
-pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,same year,2284,440,0.1926,,
-pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,joint paper first,2284,1123,0.4917,,
-strict,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,yes,4925,145,0.02944,30.0,4.84
-strict,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,no,5992731,3557,0.00059,3557.0,1.0
-strict,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,yes,3367,623,0.18503,126.6,4.92
-strict,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,no,5992731,22127,0.00369,22127.0,1.0
-strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,citation first,1510,458,0.3033,,
-strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,same year,1510,273,0.1808,,
-strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,joint paper first,1510,779,0.5159,,
+pure,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,yes,9722,324,0.03333,56.4,5.74
+pure,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,no,9570792,4769,0.0005,4769.0,1.0
+pure,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,yes,4306,1114,0.25871,208.7,5.34
+pure,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,no,9570792,41933,0.00438,41933.0,1.0
+pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,citation first,3260,1014,0.311,,
+pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,same year,3260,636,0.1951,,
+pure,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,joint paper first,3260,1610,0.4939,,
+strict,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,yes,8342,211,0.02529,42.0,5.03
+strict,(a) not co-authors by 2020: exposed = one cited the other by 2020; outcome = first joint paper 2021-2026,no,9572172,4882,0.00051,4882.0,1.0
+strict,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,yes,4618,896,0.19402,178.2,5.03
+strict,(b) no citation by 2020: exposed = co-authors by 2020; outcome = first citation 2021-2026,no,9572172,37855,0.00395,37855.0,1.0
+strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,citation first,2150,644,0.2995,,
+strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,same year,2150,364,0.1693,,
+strict,(c) pairs with no contact up to 2018 that later both co-author and cite: which came first,joint paper first,2150,1142,0.5312,,

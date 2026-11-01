@@ -1,42 +1,42 @@
 ﻿measure,rank,faculty,institution,department,score_rel,degree_all_years,rank_degree,first_faculty_coauthorship_year
-broadcast,1,B. K. Panigrahi,IIT Delhi,Electrical Engineering,1.0,26,8,2016
-broadcast,2,Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.9764,29,2,2016
-broadcast,3,Anil Kottantharayil,IIT Bombay,Electrical Engineering,0.9422,21,35,2016
-broadcast,4,Amit Agrawal,IIT Bombay,Mechanical Engineering,0.92,23,20,2016
-broadcast,5,M S Ramachandra Rao,IIT Madras,Physics,0.8843,39,1,2016
-broadcast,6,Suhas S Joshi,IIT Bombay,Mechanical Engineering,0.8191,18,75,2016
-broadcast,7,Ramesh Singh,IIT Bombay,Mechanical Engineering,0.8095,20,46,2016
-broadcast,8,Apurba Laha,IIT Bombay,Electrical Engineering,0.7935,17,91,2017
-broadcast,9,Swaroop Ganguly,IIT Bombay,Electrical Engineering,0.784,13,209,2016
-broadcast,10,Juzer M. Vasi,IIT Bombay,Electrical Engineering,0.7741,13,209,2016
-broadcast,11,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.7557,29,2,2016
-broadcast,12,Brij Mohan Arora,IIT Bombay,Electrical Engineering,0.7511,13,209,2016
-broadcast,13,Bhim Singh,IIT Delhi,Electrical Engineering,0.7392,22,28,2016
-broadcast,14,M. Ali Haider,IIT Delhi,Chemical Engineering,0.708,20,46,2016
-broadcast,15,Ashish Garg,IIT Kanpur,Sustainable Energy Engineering,0.6969,23,20,2016
-broadcast,16,Kamal K. Pant,IIT Delhi,Chemical Engineering,0.6963,24,14,2016
-broadcast,17,Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,0.6924,21,35,2017
-broadcast,18,Dipankar Bandyopadhyay,IIT Guwahati,Chemical Engineering,0.681,20,46,2016
-broadcast,19,Suddhasatwa Basu,IIT Delhi,Chemical Engineering,0.668,18,75,2016
-broadcast,20,Ashu Verma,IIT Delhi,Energy Science and Engineering,0.6623,10,408,2016
-receive,1,Anil Kottantharayil,IIT Bombay,Electrical Engineering,1.0,21,35,2016
-receive,2,Dinesh Kabra,IIT Bombay,Physics,0.9608,29,2,2016
-receive,3,Sudhanshu Mallick,IIT Bombay,Metallurgical Engineering and Materials Science,0.9162,13,209,2016
-receive,4,B. K. Panigrahi,IIT Delhi,Electrical Engineering,0.9122,26,8,2016
-receive,5,M S Ramachandra Rao,IIT Madras,Physics,0.8107,39,1,2016
-receive,6,Balasubramaniam Kavaipatti,IIT Bombay,Energy Science and Engineering,0.7842,18,75,2016
-receive,7,Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.7698,29,2,2016
-receive,8,Amit Agrawal,IIT Bombay,Mechanical Engineering,0.7453,23,20,2016
-receive,9,Bhim Singh,IIT Delhi,Electrical Engineering,0.7162,22,28,2016
-receive,10,Narendra S Shiradkar,IIT Bombay,Electrical Engineering,0.7114,11,334,2018
-receive,11,S. Wazed Ali,IIT Delhi,Textile and Fibre Engineering,0.7093,16,113,2016
-receive,12,Apurba Laha,IIT Bombay,Electrical Engineering,0.7012,17,91,2017
-receive,13,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.6815,29,2,2016
-receive,14,Brejesh Lall,IIT Delhi,Electrical Engineering,0.6744,23,20,2016
-receive,15,Jayant Jain,IIT Delhi,Materials Science and Engineering,0.67,20,46,2019
-receive,16,Sushil Mishra,IIT Bombay,Mechanical Engineering,0.6553,21,35,2016
-receive,17,Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,0.6517,21,35,2017
-receive,18,Atul Sharma,IIT Bombay,Mechanical Engineering,0.6372,14,171,2016
-receive,19,Sudhanshu Shekhar Singh,IIT Kanpur,Mathematics and Statistics,0.6303,22,28,2017
-receive,20,Apurba Das,IIT Delhi,Textile and Fibre Engineering,0.6197,14,171,2016
-"(a = 0.0587, max yearly rho 8.513; faculty with degree > 0: 4764; Spearman broadcast vs degree 0.882, broadcast vs receive 0.918)",,,,,,,,
+broadcast,1,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,1.0,52,2,2019
+broadcast,2,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,0.997,64,1,2016
+broadcast,3,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.7519,34,7,2016
+broadcast,4,Samit Kumar Ray,IIT Kharagpur,Physics,0.6659,36,5,2016
+broadcast,5,Narayan Chandra Das,IIT Kharagpur,Rubber Technology,0.6343,31,13,2016
+broadcast,6,Susanta Banerjee,IIT Kharagpur,Materials Science Centre,0.6174,26,26,2016
+broadcast,7,Partha Roy,IIT Roorkee,Biosciences and Bioengineering,0.6086,43,3,2016
+broadcast,8,Amit Kumar Das,IIT Kharagpur,Bioscience and Biotechnology,0.5955,25,32,2016
+broadcast,9,Rabibrata Mukherjee,IIT Kharagpur,Chemical Engineering,0.575,21,66,2016
+broadcast,10,B. K. Panigrahi,IIT Delhi,Electrical Engineering,0.5379,30,14,2016
+broadcast,11,Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,0.4872,30,14,2016
+broadcast,12,Sudhanshu Sharma,IIT Gandhinagar,Chemistry,0.4813,26,26,2016
+broadcast,13,Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.4681,29,16,2016
+broadcast,14,Tapas Kumar Maiti,IIT Kharagpur,Bioscience and Biotechnology,0.452,19,100,2016
+broadcast,15,Surjya Kanta Pal,IIT Kharagpur,Mechanical Engineering,0.4445,20,82,2016
+broadcast,16,Anil Kottantharayil,IIT Bombay,Electrical Engineering,0.4369,21,66,2016
+broadcast,17,Kamal K. Pant,IIT Delhi,Chemical Engineering,0.4346,34,7,2016
+broadcast,18,Amit Agrawal,IIT Bombay,Mechanical Engineering,0.4332,24,41,2016
+broadcast,19,Ashish Garg,IIT Kanpur,Sustainable Energy Engineering,0.4237,29,16,2016
+broadcast,20,M S Ramachandra Rao,IIT Madras,Physics,0.4161,40,4,2016
+receive,1,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,1.0,52,2,2019
+receive,2,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,0.5899,64,1,2016
+receive,3,Samit Kumar Ray,IIT Kharagpur,Physics,0.4597,36,5,2016
+receive,4,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.4505,34,7,2016
+receive,5,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,0.4242,35,6,2016
+receive,6,Brajesh Kumar Dubey,IIT Kharagpur,Civil Engineering,0.3911,24,41,2017
+receive,7,Suman Sarkar,IIT Jammu,Materials Engineering,0.3475,15,212,2023
+receive,8,Narayan Chandra Das,IIT Kharagpur,Rubber Technology,0.3407,31,13,2016
+receive,9,Manas Paliwal,IIT Kharagpur,Metallurgical and Materials Engineering,0.3217,23,52,2020
+receive,10,Indranil Manna,IIT Kharagpur,Metallurgical and Materials Engineering,0.3205,21,66,2016
+receive,11,Partha Roy,IIT Roorkee,Biosciences and Bioengineering,0.316,43,3,2016
+receive,12,Kumar Mahesh,IIT Jodhpur,Electrical Engineering,0.3085,16,173,2016
+receive,13,Tarun Kumar Kundu,IIT Kharagpur,Metallurgical and Materials Engineering,0.3046,15,212,2020
+receive,14,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,0.2917,27,22,2016
+receive,15,Dinesh Kabra,IIT Bombay,Physics,0.2797,32,11,2016
+receive,16,B. K. Panigrahi,IIT Delhi,Electrical Engineering,0.2794,30,14,2016
+receive,17,Susanta Banerjee,IIT Kharagpur,Materials Science Centre,0.2785,26,26,2016
+receive,18,Kamal K. Pant,IIT Delhi,Chemical Engineering,0.2688,34,7,2016
+receive,19,Anil Kottantharayil,IIT Bombay,Electrical Engineering,0.2675,21,66,2016
+receive,20,Partha Pratim Chakrabarti,IIT Kharagpur,Computer Science and Engineering,0.2637,24,41,2016
+"(a = 0.0587, max yearly rho 8.525; faculty with degree > 0: 6034; Spearman broadcast vs degree 0.876, broadcast vs receive 0.898)",,,,,,,,

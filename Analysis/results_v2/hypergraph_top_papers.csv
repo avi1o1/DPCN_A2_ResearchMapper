@@ -4,28 +4,28 @@ linear,2,https://doi.org/10.1109/tie.2024.3451111,2025,7,B. K. Panigrahi; Bhim S
 linear,3,https://doi.org/10.1109/tia.2025.3585862,2026,7,B. K. Panigrahi; Bhim Singh
 linear,4,https://doi.org/10.1109/icpc2t60072.2024.10474928,2024,7,B. K. Panigrahi; Bhim Singh
 linear,5,https://doi.org/10.1109/tia.2024.3471971,2025,6,B. K. Panigrahi; Bhim Singh
-linear,6,https://doi.org/10.1109/tec.2017.2669518,2017,4,B. K. Panigrahi; Bhim Singh
-linear,7,https://doi.org/10.1109/poweri.2016.8077380,2016,4,B. K. Panigrahi; Bhim Singh
-linear,8,https://doi.org/10.1109/tii.2017.2700327,2017,4,B. K. Panigrahi; Bhim Singh
-linear,9,https://doi.org/10.1049/iet-rpg.2017.0019,2017,4,B. K. Panigrahi; Bhim Singh
-linear,10,https://doi.org/10.1109/tia.2017.2725954,2017,4,B. K. Panigrahi; Bhim Singh
+linear,6,https://doi.org/10.1109/tii.2017.2765083,2018,4,B. K. Panigrahi; Bhim Singh
+linear,7,https://doi.org/10.1109/tste.2017.2764266,2018,4,B. K. Panigrahi; Bhim Singh
+linear,8,https://doi.org/10.1109/tste.2017.2669525,2017,4,B. K. Panigrahi; Bhim Singh
+linear,9,https://doi.org/10.1109/tii.2017.2777882,2018,4,B. K. Panigrahi; Bhim Singh
+linear,10,https://doi.org/10.1109/poweri.2016.8077380,2016,4,B. K. Panigrahi; Bhim Singh
 log-exp,1,https://doi.org/10.1109/upcon.2018.8596952,2018,2,Bhim Singh
-log-exp,2,https://doi.org/10.1109/poweri.2016.8077320,2016,2,Bhim Singh
-log-exp,3,https://doi.org/10.1109/tpwrd.2019.2930151,2020,2,Bhim Singh
+log-exp,2,https://doi.org/10.1109/npec.2017.8310451,2017,2,Bhim Singh
+log-exp,3,https://doi.org/10.1109/itec-india.2017.8333841,2017,2,Bhim Singh
 log-exp,4,https://doi.org/10.1109/pedes.2018.8707750,2018,2,Bhim Singh
-log-exp,5,https://doi.org/10.1109/itec-india.2017.8333841,2017,2,Bhim Singh
-log-exp,6,https://doi.org/10.1049/iet-pel.2018.5084,2018,2,Bhim Singh
+log-exp,5,https://doi.org/10.1109/iicpe.2016.8079444,2016,2,Bhim Singh
+log-exp,6,https://doi.org/10.1109/iemdc.2019.8785280,2019,2,Bhim Singh
 log-exp,7,https://doi.org/10.1109/ojies.2020.2965802,2020,2,Bhim Singh
-log-exp,8,https://doi.org/10.1109/npec.2017.8310451,2017,2,Bhim Singh
-log-exp,9,https://doi.org/10.1049/pel2.12059,2021,2,Bhim Singh
-log-exp,10,https://doi.org/10.1109/tec.2020.2997240,2020,2,Bhim Singh
-max,1,https://doi.org/10.1049/iet-gtd.2016.1497,2017,4,B. K. Panigrahi; Bhim Singh
-max,2,https://doi.org/10.1109/tste.2017.2669525,2017,4,B. K. Panigrahi; Bhim Singh
-max,3,https://doi.org/10.1049/iet-rpg.2016.0733,2017,4,B. K. Panigrahi; Bhim Singh
-max,4,https://doi.org/10.1109/iicpe.2016.8079430,2016,4,B. K. Panigrahi; Bhim Singh
-max,5,https://doi.org/10.1049/iet-smt.2016.0351,2017,4,B. K. Panigrahi; Bhim Singh
-max,6,https://doi.org/10.1109/poweri.2016.8077418,2016,4,B. K. Panigrahi; Bhim Singh
-max,7,https://doi.org/10.1109/poweri.2016.8077380,2016,4,B. K. Panigrahi; Bhim Singh
-max,8,https://doi.org/10.1109/tia.2018.2853744,2018,4,B. K. Panigrahi; Bhim Singh
+log-exp,8,https://doi.org/10.1109/icpeices.2018.8897303,2018,2,Bhim Singh
+log-exp,9,https://doi.org/10.1109/ias.2017.8101742,2017,2,Bhim Singh
+log-exp,10,https://doi.org/10.1109/icpc2t53885.2022.9777028,2022,2,Bhim Singh
+max,1,https://doi.org/10.1109/poweri.2016.8077418,2016,4,B. K. Panigrahi; Bhim Singh
+max,2,https://doi.org/10.1109/poweri.2016.8077380,2016,4,B. K. Panigrahi; Bhim Singh
+max,3,https://doi.org/10.1109/iicpe.2016.8079430,2016,4,B. K. Panigrahi; Bhim Singh
+max,4,https://doi.org/10.1109/tste.2017.2669525,2017,4,B. K. Panigrahi; Bhim Singh
+max,5,https://doi.org/10.1109/tste.2017.2764266,2018,4,B. K. Panigrahi; Bhim Singh
+max,6,https://doi.org/10.1109/tec.2017.2669518,2017,4,B. K. Panigrahi; Bhim Singh
+max,7,https://doi.org/10.1049/iet-smt.2016.0351,2017,4,B. K. Panigrahi; Bhim Singh
+max,8,https://doi.org/10.1109/pedes.2016.7914466,2016,4,B. K. Panigrahi; Bhim Singh
 max,9,https://doi.org/10.1109/tia.2017.2725954,2017,4,B. K. Panigrahi; Bhim Singh
-max,10,https://doi.org/10.1109/pedes.2016.7914466,2016,4,B. K. Panigrahi; Bhim Singh
+max,10,https://doi.org/10.1049/iet-rpg.2017.0019,2017,4,B. K. Panigrahi; Bhim Singh

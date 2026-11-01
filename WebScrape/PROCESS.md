@@ -1196,3 +1196,7 @@ Roorkee precision audit (65 sampled, v2 procedure; yes needs affiliation text on
   publication year when the journal is in it, otherwise the journal's latest available year (earlier files only for journals missing from the latest).
   `verify.py` checks exactly that rule.
 * Run paused on purpose at 15:35 on 2026-10-31 (operator shut the system down); state and resume steps in `WebScrape/RESUME.md`.
+
+Kharagpur (re-run on the v2 procedure, arXiv pass and sanity rules included): Golden papers: 637; found: 417; **recall = 65.5%**
+
+Kharagpur precision audit (65 sampled, v2 procedure; yes needs affiliation text on the paper, tenure-only left unknown): verified 10 yes/0 no/15 unknown; likely 3 yes/4 no/33 unknown. The four nos are wrong-person matches: an AAAI 2024 paper listing the author at IIT Delhi; two INSPIRE-HEP papers whose authors are at PRL Ahmedabad and S.N. Bose Centre; a 2023 paper listing the author at ICAR Umiam. Two unknown verified rows look suspicious (a Jana paper at NBRC Manesar with Kharagpur as a second affiliation; a probable namesake of Rajendra Singh).

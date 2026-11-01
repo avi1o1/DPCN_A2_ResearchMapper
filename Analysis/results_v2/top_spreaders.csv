@@ -1,21 +1,21 @@
 ﻿faculty,institution,department,expected_outbreak_share,degree,k_core,betweenness
-Dinesh Kabra,IIT Bombay,Physics,0.1845,29,7,0.00702
-M S Ramachandra Rao,IIT Madras,Physics,0.1835,39,5,0.0105
-Rakesh G. MOTE,IIT Bombay,Mechanical Engineering,0.1816,24,8,0.00484
-Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.1812,29,5,0.00455
-Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.1807,29,5,0.01258
-Aftab Alam,IIT Bombay,Physics,0.1797,25,5,0.00454
-R Sarathi,IIT Madras,Electrical Engineering,0.1797,27,5,0.00739
-Suddhasatta Mahapatra,IIT Bombay,Physics,0.1794,21,8,0.00284
-Arindam Chowdhury,IIT Bombay,Chemistry,0.179,25,5,0.00393
-Jayant Jain,IIT Delhi,Materials Science and Engineering,0.1777,20,5,0.00511
-Birabar Ranjit Kumar Nanda,IIT Madras,Physics,0.1766,24,5,0.00507
-Siddharth Tallur,IIT Bombay,Electrical Engineering,0.1765,19,8,0.00243
-Arnab Dutta,IIT Bombay,Chemistry,0.1765,23,5,0.00955
-Balasubramaniam Kavaipatti,IIT Bombay,Energy Science and Engineering,0.1763,18,7,0.00065
-Srinivasa Rao Bakshi,IIT Madras,Metallurgical and Materials Engineering,0.1761,17,5,0.00329
-Pravin P Ingole,IIT Delhi,Chemistry,0.1761,18,5,0.00316
-Anindya Datta,IIT Bombay,Chemistry,0.1758,23,5,0.00609
-Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,0.1754,21,5,0.00606
-Anil Kottantharayil,IIT Bombay,Electrical Engineering,0.1752,21,7,0.00299
-Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,0.1751,25,5,0.00721
+Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,0.2246,52,6,0.01787
+Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,0.2239,64,6,0.02676
+Samit Kumar Ray,IIT Kharagpur,Physics,0.2239,36,6,0.00688
+Dinesh Kabra,IIT Bombay,Physics,0.2239,32,7,0.00756
+Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,0.2235,35,6,0.00827
+Narayan Chandra Das,IIT Kharagpur,Rubber Technology,0.2231,31,6,0.00391
+Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.2229,34,5,0.00958
+Ashish Garg,IIT Kanpur,Sustainable Energy Engineering,0.2224,29,5,0.00629
+Partha Roy,IIT Roorkee,Biosciences and Bioengineering,0.2222,43,5,0.01269
+Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,0.2221,30,5,0.00789
+Susanta Banerjee,IIT Kharagpur,Materials Science Centre,0.2219,26,6,0.00474
+Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,0.2219,29,6,0.00347
+M S Ramachandra Rao,IIT Madras,Physics,0.2216,40,5,0.00731
+Dipak Kumar Goswami,IIT Kharagpur,Physics,0.2215,27,6,0.00442
+Ramkrishna Sen,IIT Kharagpur,Bioscience and Biotechnology,0.2212,33,6,0.0092
+Kamal K. Pant,IIT Delhi,Chemical Engineering,0.2204,34,5,0.0098
+Manas Paliwal,IIT Kharagpur,Metallurgical and Materials Engineering,0.2201,23,5,0.00254
+Rabibrata Mukherjee,IIT Kharagpur,Chemical Engineering,0.22,21,6,0.00374
+Santanu Chattopadhyay,IIT Kharagpur,Rubber Technology,0.2199,28,6,0.00334
+Indranil Manna,IIT Kharagpur,Metallurgical and Materials Engineering,0.2199,21,6,0.00448

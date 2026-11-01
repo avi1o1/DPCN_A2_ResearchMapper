@@ -1,14 +1,34 @@
 ﻿scope,rank,title,journal,year,citations,doi,institutions
-IIT Ropar,1,REFUGE Challenge: A unified framework for evaluating automated methods for glaucoma assessment from fundus photographs,Medical Image Analysis,2020,820,https://doi.org/10.1016/j.media.2019.101570,IIT Ropar
+IIT Kharagpur,1,Soil carbon 4 per mille,Geoderma,2017,2048,https://doi.org/10.1016/j.geoderma.2017.01.002,IIT Kharagpur
+IIT Kharagpur,2,SymPy: symbolic computing in Python,PeerJ Computer Science,2017,1510,https://doi.org/10.7717/peerj-cs.103,IIT (BHU) Varanasi;IIT Bombay;IIT Kharagpur
+IIT Kharagpur,3,Recent advances on the removal of dyes from wastewater using various adsorbents: a critical review,Materials Advances,2021,1266,https://doi.org/10.1039/d1ma00354b,IIT Kharagpur
+IIT Kharagpur,4,"iFogSim: A toolkit for modeling and simulation of resource management techniques in the Internet of Things, Edge and Fog computing environments",Software: Practice and Experience,2017,1255,https://doi.org/10.1002/spe.2509,IIT Kharagpur
+IIT Kharagpur,5,Global water resources and the role of groundwater in a resilient water future,Nature Reviews Earth & Environment,2023,1165,https://doi.org/10.1038/s43017-022-00378-6,IIT Kharagpur
+IIT Kharagpur,6,Selective Molecular Separation by Interfacially Crystallized Covalent Organic Framework Thin Films,Journal of the American Chemical Society,2017,1074,https://doi.org/10.1021/jacs.7b06640,IIT Kharagpur
+IIT Kharagpur,7,"Cosmology intertwined: A review of the particle physics, astrophysics, and cosmology associated with the cosmological tensions and anomalies",Journal of High Energy Astrophysics,2022,1067,https://doi.org/10.1016/j.jheap.2022.04.002,IIT Kharagpur
+IIT Kharagpur,8,CHAOS Challenge - combined (CT-MR) healthy abdominal organ segmentation,Medical Image Analysis,2021,796,https://doi.org/10.1016/j.media.2020.101950,IIT Kharagpur
+IIT Kharagpur,9,Selective Molecular Sieving in Self‐Standing Porous Covalent‐Organic‐Framework Membranes,Advanced Materials,2016,716,https://doi.org/10.1002/adma.201603945,IIT Kharagpur
+IIT Kharagpur,10,Challenges and strategies for effective plastic waste management during and post COVID-19 pandemic,Science of The Total Environment,2021,622,https://doi.org/10.1016/j.scitotenv.2020.141514,IIT Kharagpur
+IIT Roorkee,1,The second data release from the European Pulsar Timing Array,Astronomy & Astrophysics,2023,1075,https://doi.org/10.1051/0004-6361/202346844,IIT Hyderabad;IIT Roorkee
+IIT Roorkee,2,A Comprehensive Review on NSGA-II for Multi-Objective Combinatorial Optimization Problems,IEEE Access,2021,990,https://doi.org/10.1109/access.2021.3070634,IIT Roorkee
+IIT Roorkee,3,"Microwave–material interaction phenomena: Heating mechanisms, challenges and opportunities in material processing",Composites Part A: Applied Science and Manufacturing,2016,887,https://doi.org/10.1016/j.compositesa.2015.10.035,IIT Roorkee
+IIT Roorkee,4,Science Requirements and Detector Concepts for the Electron-Ion Collider,Nuclear Physics A,2022,879,https://doi.org/10.1016/j.nuclphysa.2022.122447,IIT (BHU) Varanasi;IIT Roorkee
+IIT Roorkee,5,Differential Evolution: A review of more than two decades of research,Engineering Applications of Artificial Intelligence,2020,798,https://doi.org/10.1016/j.engappai.2020.103479,IIT Roorkee
+IIT Roorkee,6,Superhydrophobic Surfaces: Insights from Theory and Experiment,The Journal of Physical Chemistry B,2020,789,https://doi.org/10.1021/acs.jpcb.9b08567,IIT Roorkee
+IIT Roorkee,7,Reinforcement learning algorithms: A brief survey,Expert Systems with Applications,2023,680,https://doi.org/10.1016/j.eswa.2023.120495,IIT Roorkee
+IIT Roorkee,8,"An exhaustive review of the metaheuristic algorithms for search and optimization: taxonomy, applications, and open challenges",Artificial Intelligence Review,2023,679,https://doi.org/10.1007/s10462-023-10470-y,IIT Roorkee
+IIT Roorkee,9,Conducting PANI stimulated ZnO system for visible light photocatalytic degradation of coloured dyes,Journal of Molecular Liquids,2016,668,https://doi.org/10.1016/j.molliq.2016.06.074,IIT Roorkee
+IIT Roorkee,10,Graphene reinforced metal and ceramic matrix composites: a review,International Materials Reviews,2016,626,https://doi.org/10.1080/09506608.2016.1219481,IIT Roorkee
+IIT Ropar,1,Multifaceted role of mTOR (mammalian target of rapamycin) signaling pathway in human health and disease,Signal Transduction and Targeted Therapy,2023,958,https://doi.org/10.1038/s41392-023-01608-z,IIT Ropar
 IIT Ropar,2,A Strategic Review on Gallium Oxide Based Deep‐Ultraviolet Photodetectors: Recent Progress and Future Prospects,Advanced Optical Materials,2021,490,https://doi.org/10.1002/adom.202002160,IIT Ropar
-IIT Ropar,3,"A review on alloy design, biological response, and strengthening of β-titanium alloys as biomaterials",Materials Science and Engineering: C,2021,373,https://doi.org/10.1016/j.msec.2020.111661,IIT Ropar
-IIT Ropar,4,"Furfural – a versatile, biomass-derived platform chemical for the production of renewable chemicals",Green Chemistry,2022,365,https://doi.org/10.1039/d1gc03278j,IIT Ropar
-IIT Ropar,5,Ultrahigh Performance of Self-Powered β-Ga 2 O 3 Thin Film Solar-Blind Photodetector Grown on Cost-Effective Si Substrate Using High-Temperature Seed Layer,ACS Photonics,2018,361,https://doi.org/10.1021/acsphotonics.8b00174,IIT Jodhpur;IIT Ropar
-IIT Ropar,6,Photoactivated Mixed In-Plane and Edge-Enriched p-Type MoS 2 Flake-Based NO 2 Sensor Working at Room Temperature,ACS Sensors,2018,223,https://doi.org/10.1021/acssensors.8b00146,IIT Jodhpur;IIT Ropar
-IIT Ropar,7,Exceptionally high cavitation erosion and corrosion resistance of a high entropy alloy,Ultrasonics Sonochemistry,2018,213,https://doi.org/10.1016/j.ultsonch.2017.09.044,IIT Ropar
-IIT Ropar,8,Lower-limb exoskeletons,International Journal of Advanced Robotic Systems,2017,211,https://doi.org/10.1177/1729881417743554,IIT Ropar
-IIT Ropar,9,Strategic review of interface carrier recombination in earth abundant Cu–Zn–Sn–S–Se solar cells: current challenges and future prospects,Journal of Materials Chemistry A,2017,207,https://doi.org/10.1039/c6ta10543b,IIT Ropar
-IIT Ropar,10,"An Efficient, Visible Light Driven, Selective Oxidation of Aromatic Alcohols and Amines with O 2 Using BiVO 4 /g-C 3 N 4 Nanocomposite: A Systematic and Comprehensive Study toward the Development of a Photocatalytic Process",ACS Sustainable Chemistry & Engineering,2017,206,https://doi.org/10.1021/acssuschemeng.6b02902,IIT Ropar
+IIT Ropar,3,"Evolution, challenges and path forward for low temperature combustion engines",Progress in Energy and Combustion Science,2017,456,https://doi.org/10.1016/j.pecs.2017.02.001,IIT Kanpur;IIT Ropar
+IIT Ropar,4,"A review on alloy design, biological response, and strengthening of β-titanium alloys as biomaterials",Materials Science and Engineering: C,2021,373,https://doi.org/10.1016/j.msec.2020.111661,IIT Ropar
+IIT Ropar,5,"Furfural – a versatile, biomass-derived platform chemical for the production of renewable chemicals",Green Chemistry,2022,365,https://doi.org/10.1039/d1gc03278j,IIT Ropar
+IIT Ropar,6,Ultrahigh Performance of Self-Powered β-Ga 2 O 3 Thin Film Solar-Blind Photodetector Grown on Cost-Effective Si Substrate Using High-Temperature Seed Layer,ACS Photonics,2018,361,https://doi.org/10.1021/acsphotonics.8b00174,IIT Jodhpur;IIT Ropar
+IIT Ropar,7,Dry machining: A step towards sustainable machining – Challenges and future directions,Journal of Cleaner Production,2017,316,https://doi.org/10.1016/j.jclepro.2017.07.235,IIT Ropar
+IIT Ropar,8,"Surface modified C, O co-doped polymeric g-C3N4 as an efficient photocatalyst for visible light assisted CO2 reduction and H2O2 production",Applied Catalysis B: Environmental,2019,264,https://doi.org/10.1016/j.apcatb.2019.118054,IIT Ropar
+IIT Ropar,9,Recent advances in nanomaterial-based electrochemical detection of antibiotics: Challenges and future perspectives,Biosensors and Bioelectronics,2020,247,https://doi.org/10.1016/j.bios.2020.112046,IIT Ropar
+IIT Ropar,10,Disease Detection in Apple Leaves Using Deep Convolutional Neural Network,Agriculture,2021,237,https://doi.org/10.3390/agriculture11070617,IIT Ropar
 IIT Bombay,1,GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral,Physical Review Letters,2017,8481,https://doi.org/10.1103/physrevlett.119.161101,IIT Bombay;IIT Gandhinagar;IIT Hyderabad;IIT Madras
 IIT Bombay,2,Multi-messenger Observations of a Binary Neutron Star Merger *,The Astrophysical Journal Letters,2017,3771,https://doi.org/10.3847/2041-8213/aa91c9,IIT Bombay;IIT Gandhinagar;IIT Hyderabad;IIT Madras
 IIT Bombay,3,Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A,The Astrophysical Journal Letters,2017,3067,https://doi.org/10.3847/2041-8213/aa920c,IIT Bombay;IIT Gandhinagar;IIT Hyderabad;IIT Madras
@@ -45,7 +65,7 @@ IIT Goa,3,Toward the determination of heavy-quark transport coefficients in quar
 IIT Goa,4,OTFS-SCMA: A Code-Domain NOMA Approach for Orthogonal Time Frequency Space Modulation,IEEE Transactions on Communications,2021,113,https://doi.org/10.1109/tcomm.2021.3075237,IIT (BHU) Varanasi;IIT Goa
 IIT Goa,5,Non-invasive super-resolution imaging through dynamic scattering media,Nature Communications,2021,97,https://doi.org/10.1038/s41467-021-23421-4,IIT Goa
 IIT Goa,6,Evolution-guided Bayesian optimization for constrained multi-objective optimization in self-driving labs,npj Computational Materials,2024,81,https://doi.org/10.1038/s41524-024-01274-x,IIT Goa
-IIT Goa,7,Multifunctionality Exploration of Ca2FeRuO6: An Efficient Trifunctional Electrocatalyst toward OER/ORR/HER and Photocatalyst for Water Splitting,ACS Applied Energy Materials,2021,79,https://doi.org/10.1021/acsaem.0c02579,IIT Goa
+IIT Goa,7,Multifunctionality Exploration of Ca2FeRuO6: An Efficient Trifunctional Electrocatalyst toward OER/ORR/HER and Photocatalyst for Water Splitting,ACS Applied Energy Materials,2021,79,https://doi.org/10.1021/acsaem.0c02579,IIT Goa;IIT Ropar
 IIT Goa,8,Coulomb blockade in an atomically thin quantum dot coupled to a tunable Fermi reservoir,Nature Nanotechnology,2019,78,https://doi.org/10.1038/s41565-019-0402-5,IIT Goa
 IIT Goa,9,Exploring nitrogen reduction reaction mechanisms in electrocatalytic ammonia synthesis: A comprehensive review,Journal of Energy Chemistry,2024,78,https://doi.org/10.1016/j.jechem.2024.01.024,IIT Goa
 IIT Goa,10,Catalytic enantiocontrol over a non-classical carbocation,Nature Chemistry,2020,77,https://doi.org/10.1038/s41557-020-00558-1,IIT Goa
@@ -110,9 +130,9 @@ IIT Bhubaneswar,8,A Combined Wavelet and Data-Mining Based Intelligent Protectio
 IIT Bhubaneswar,9,Measurement of the τ Lepton Polarization and R ( D * ) in the Decay B ¯ → D * τ − ν ¯ τ,Physical Review Letters,2017,340,https://doi.org/10.1103/physrevlett.118.211801,IIT Bhubaneswar;IIT Guwahati;IIT Madras
 IIT Bhubaneswar,10,Identification of heavy-flavour jets with the CMS detector in pp collisions at 13 TeV,Journal of Instrumentation,2018,337,https://doi.org/10.1088/1748-0221/13/05/p05011,IIT Bhubaneswar;IIT Madras
 IIT (BHU) Varanasi,1,Controlled drug delivery vehicles for cancer treatment and their performance,Signal Transduction and Targeted Therapy,2018,1827,https://doi.org/10.1038/s41392-017-0004-3,IIT (BHU) Varanasi
-IIT (BHU) Varanasi,2,SymPy: symbolic computing in Python,PeerJ Computer Science,2017,1510,https://doi.org/10.7717/peerj-cs.103,IIT (BHU) Varanasi;IIT Bombay
+IIT (BHU) Varanasi,2,SymPy: symbolic computing in Python,PeerJ Computer Science,2017,1510,https://doi.org/10.7717/peerj-cs.103,IIT (BHU) Varanasi;IIT Bombay;IIT Kharagpur
 IIT (BHU) Varanasi,3,Lithium ion battery degradation: what you need to know,Physical Chemistry Chemical Physics,2021,1210,https://doi.org/10.1039/d1cp00359c,IIT (BHU) Varanasi
-IIT (BHU) Varanasi,4,Science Requirements and Detector Concepts for the Electron-Ion Collider,Nuclear Physics A,2022,879,https://doi.org/10.1016/j.nuclphysa.2022.122447,IIT (BHU) Varanasi
+IIT (BHU) Varanasi,4,Science Requirements and Detector Concepts for the Electron-Ion Collider,Nuclear Physics A,2022,879,https://doi.org/10.1016/j.nuclphysa.2022.122447,IIT (BHU) Varanasi;IIT Roorkee
 IIT (BHU) Varanasi,5,Recent advancements in bioremediation of dye: Current status and challenges,Bioresource Technology,2018,565,https://doi.org/10.1016/j.biortech.2018.01.029,IIT (BHU) Varanasi
 IIT (BHU) Varanasi,6,An overview on dry reforming of methane: strategies to reduce carbonaceous deactivation of catalysts,RSC Advances,2016,558,https://doi.org/10.1039/c6ra20450c,IIT (BHU) Varanasi
 IIT (BHU) Varanasi,7,Targeted therapy in chronic diseases using nanomaterial-based drug delivery vehicles,Signal Transduction and Targeted Therapy,2019,556,https://doi.org/10.1038/s41392-019-0068-3,IIT (BHU) Varanasi
@@ -193,7 +213,7 @@ IIT Bhilai,1,"Two-Dimensional Metal-Organic Framework Materials: Synthesis, Stru
 IIT Bhilai,2,Homogeneous Catalysis by Cobalt and Manganese Pincer Complexes,ACS Catalysis,2018,550,https://doi.org/10.1021/acscatal.8b02869,IIT Bhilai
 IIT Bhilai,3,Boosting Photocatalytic Activity Using Reduced Graphene Oxide (RGO)/Semiconductor Nanocomposites: Issues and Future Scope,ACS Omega,2021,276,https://doi.org/10.1021/acsomega.0c06045,IIT Bhilai
 IIT Bhilai,4,Light‐Controlled Micromotors and Soft Microrobots,Advanced Optical Materials,2019,160,https://doi.org/10.1002/adom.201900370,IIT Bhilai
-IIT Bhilai,5,Modeling of defects in friction stir welding using coupled Eulerian and Lagrangian method,Journal of Manufacturing Processes,2018,121,https://doi.org/10.1016/j.jmapro.2018.05.022,IIT Bhilai
+IIT Bhilai,5,Modeling of defects in friction stir welding using coupled Eulerian and Lagrangian method,Journal of Manufacturing Processes,2018,121,https://doi.org/10.1016/j.jmapro.2018.05.022,IIT Bhilai;IIT Kharagpur
 IIT Bhilai,6,DNA-enabled rational design of fluorescence-Raman bimodal nanoprobes for cancer imaging and therapy,Nature Communications,2019,108,https://doi.org/10.1038/s41467-019-09173-2,IIT Bhilai
 IIT Bhilai,7,fybrrLink: Efficient QoS-Aware Routing in SDN Enabled Future Satellite Networks,IEEE Transactions on Network and Service Management,2022,102,https://doi.org/10.1109/tnsm.2021.3129876,IIT Bhilai
 IIT Bhilai,8,DNA Nanostructures and DNA‐Functionalized Nanoparticles for Cancer Theranostics,Advanced Science,2020,101,https://doi.org/10.1002/advs.202001669,IIT Bhilai
@@ -203,7 +223,7 @@ IIT Dharwad,1,The Landscape of Circular RNA in Cancer,Cell,2019,1352,https://doi
 IIT Dharwad,2,Recent progress in surface plasmon resonance based sensors: A comprehensive review,Heliyon,2021,355,https://doi.org/10.1016/j.heliyon.2021.e06321,IIT Dharwad
 IIT Dharwad,3,Functional π-Conjugated Two-Dimensional Covalent Organic Frameworks,ACS Applied Materials & Interfaces,2019,211,https://doi.org/10.1021/acsami.8b19087,IIT Dharwad
 IIT Dharwad,4,"A critical review of unrealistic results in SCAPS-1D simulations: Causes, practical solutions and roadmap ahead",Solar Energy Materials and Solar Cells,2025,137,https://doi.org/10.1016/j.solmat.2024.113230,IIT Dharwad
-IIT Dharwad,5,A Survey of Deep Learning Techniques for Underwater Image Classification,IEEE Transactions on Neural Networks and Learning Systems,2023,103,https://doi.org/10.1109/tnnls.2022.3143887,IIT Dharwad;IIT Madras
+IIT Dharwad,5,A Survey of Deep Learning Techniques for Underwater Image Classification,IEEE Transactions on Neural Networks and Learning Systems,2023,103,https://doi.org/10.1109/tnnls.2022.3143887,IIT Dharwad;IIT Madras;IIT Roorkee
 IIT Dharwad,6,"Green-Based Approach to Synthesize Silver Nanoparticles Using the Fungal Endophyte Penicillium oxalicum and Their Antimicrobial, Antioxidant, and In Vitro Anticancer Potential",ACS Omega,2022,84,https://doi.org/10.1021/acsomega.2c05605,IIT Dharwad
 IIT Dharwad,7,A Survey on Semantic Communications for Intelligent Wireless Networks,Wireless Personal Communications,2022,80,https://doi.org/10.1007/s11277-022-10111-7,IIT Dharwad
 IIT Dharwad,8,"Analysis of ESAFORM 2021 cup drawing benchmark of an Al alloy, critical factors for accuracy and efficiency of FE simulations",International Journal of Material Forming,2022,60,https://doi.org/10.1007/s12289-022-01672-w,IIT Dharwad

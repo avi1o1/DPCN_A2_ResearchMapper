@@ -1,19 +1,49 @@
 ﻿institution,faculty,department,large_papers,h_index,h_without_large,drop
-IIT Ropar,Durba Pal,Biomedical Engineering,8,16,12,4
-IIT Ropar,Navin Kumar,Mechanical Engineering,6,23,21,2
-IIT Ropar,Srivatsava Naidu,Biomedical Engineering,2,9,7,2
-IIT Ropar,Lakhan Bainsla,Physics,2,5,3,2
-IIT Ropar,Pushpendra P. Singh,Physics,3,4,3,1
-IIT Ropar,Vishwajeet Mehandia,Chemical Engineering,2,8,7,1
-IIT Ropar,Ashish K. Sahani,Biomedical Engineering,2,10,9,1
+IIT Kharagpur,Tapas Kumar Maiti,Bioscience and Biotechnology,22,36,30,6
+IIT Kharagpur,Abhijit Mukherjee,Geology and Geophysics,25,45,40,5
+IIT Kharagpur,Prem Prakash Srivastav,Agricultural and Food Engineering,11,33,29,4
+IIT Kharagpur,Debraj Choudhury,Physics,9,9,5,4
+IIT Kharagpur,Ajay Kumar Singh,Physics,7,4,0,4
+IIT Kharagpur,Arindam Mondal,Bioscience and Biotechnology,6,9,5,4
+IIT Kharagpur,Chandra Sekhar Tiwary,Metallurgical and Materials Engineering,65,40,37,3
+IIT Kharagpur,Mukunda Dev Behera,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",14,26,23,3
+IIT Kharagpur,Vidya Kochat,Materials Science Centre,6,7,4,3
+IIT Kharagpur,Basudev Lahiri,Electronics and Electrical Communication Engg.,11,13,11,2
+IIT Kharagpur,Amit Kumar Das,Bioscience and Biotechnology,8,25,23,2
+IIT Kharagpur,Prithwiraj Dey,Agricultural and Food Engineering,8,9,7,2
+IIT Kharagpur,Bhabani Sankar Das,Agricultural and Food Engineering,7,26,24,2
+IIT Kharagpur,Indranath Chakraborty,Nano Science and Technology,7,8,6,2
+IIT Kharagpur,Anil Kumar Gupta,Geology and Geophysics,6,24,22,2
+IIT Roorkee,P. C. Srivastava,Physics,39,17,13,4
+IIT Roorkee,Moumita Maiti,Physics,17,15,11,4
+IIT Roorkee,Soumitra Satapathi,Physics,15,42,38,4
+IIT Roorkee,Ajay Yashavant Deo,Physics,13,5,1,4
+IIT Roorkee,Bhaskar Jyoti Deka,Hydrology,7,16,12,4
+IIT Roorkee,Bhal Chandra Joshi,Physics,6,3,0,3
+IIT Roorkee,Ram Yadav,Biosciences and Bioengineering,5,15,12,3
+IIT Roorkee,Tapas Kumar Mandal,Chemistry,4,18,15,3
+IIT Roorkee,P. Arumugam,Physics,19,11,9,2
+IIT Roorkee,Pradip K. Maji,Polymer and Process Engineering,11,40,38,2
+IIT Roorkee,Biplab Sarkar,Electronics and Communication Engineering,9,13,11,2
+IIT Roorkee,Bhola Ram Gurjar,Civil Engineering,8,19,17,2
+IIT Roorkee,Harsh Chauhan,Biosciences and Bioengineering,7,12,10,2
+IIT Roorkee,Sumanta Sarkhel,Physics,7,11,9,2
+IIT Roorkee,Ankit Agarwal,Hydrology,7,27,25,2
+IIT Ropar,Pushpendra P. Singh,Physics,36,16,6,10
+IIT Ropar,Deepika Choudhury,Physics,5,2,0,2
+IIT Ropar,Lakhan Bainsla,Physics,3,5,3,2
+IIT Ropar,Deepti R. Bathula,Computer Science and Engineering,2,8,6,2
+IIT Ropar,Pratik K. Ray,Metallurgical and Materials Engineering,2,11,9,2
+IIT Ropar,Rajeev Ahuja,Physics,6,30,29,1
+IIT Ropar,R. G. Pillay,Physics,5,4,3,1
+IIT Ropar,P. K. Raina,Physics,3,6,5,1
+IIT Ropar,Srinivasarao Konda,Physics,3,2,1,1
+IIT Ropar,Himanshu Tyagi,Mechanical Engineering,2,15,14,1
+IIT Ropar,Chander Shekhar Sharma,Mechanical Engineering,2,10,9,1
+IIT Ropar,Pardeep Duhan,Electrical Engineering,2,3,2,1
 IIT Ropar,Raghav Sharma,Electrical Engineering,2,3,2,1
-IIT Ropar,Srinivasarao Konda,Physics,2,2,1,1
-IIT Ropar,Deepti R. Bathula,Computer Science and Engineering,1,7,6,1
-IIT Ropar,Pratik K. Ray,Metallurgical and Materials Engineering,1,6,5,1
-IIT Ropar,Pardeep Duhan,Electrical Engineering,1,3,2,1
-IIT Ropar,Nitish Bibhanshu,Metallurgical and Materials Engineering,1,1,0,1
-IIT Ropar,Javed N. Agrewala,Biomedical Engineering,5,15,15,0
-IIT Ropar,Reet Kamal Tiwari,Civil Engineering,4,17,17,0
+IIT Ropar,Narinder Singh,Chemistry,1,34,33,1
+IIT Ropar,Hans-Juergen Wollersheim,Physics,1,1,0,1
 IIT Bombay,Varun Bhalerao,Physics,70,25,10,15
 IIT Bombay,Archana Pai,Physics,28,21,9,12
 IIT Bombay,Sadhana Dash,Physics,65,14,8,6
@@ -29,7 +59,7 @@ IIT Bombay,Chandra Venkataraman,Chemical Engineering,17,21,19,2
 IIT Bombay,Devendra N Singh,Civil Engineering,14,28,26,2
 IIT Bombay,Dipanshu Bansal,Mechanical Engineering,12,11,9,2
 IIT Bombay,Arnab Dutta,Chemistry,12,25,23,2
-IIT Madras,Prafulla Kumar Behera,Physics,316,30,2,28
+IIT Madras,Prafulla Kumar Behera,Physics,317,30,2,28
 IIT Madras,James Frederick Libby,Physics,318,30,5,25
 IIT Madras,Prabat Ranjan Pujahari,,127,11,0,11
 IIT Madras,Samir Choudhuri,,24,12,4,8
@@ -119,7 +149,7 @@ IIT Palakkad,Sarmistha Singh,Civil Engineering,1,6,6,0
 IIT Palakkad,Yugender Goud Kotagiri,Chemistry,1,12,12,0
 IIT Palakkad,Ajeesh M. Omanakuttan,Physics,1,0,0,0
 IIT Palakkad,M. C. Valsakumar,Physics,0,7,7,0
-IIT Guwahati,Bipul Bhuyan,Physics,238,39,0,39
+IIT Guwahati,Bipul Bhuyan,Physics,241,39,0,39
 IIT Guwahati,A. B. Kunnumakkara,Biosciences and Bioengineering,17,49,42,7
 IIT Guwahati,Sachin Kumar,Biosciences and Bioengineering,7,23,21,2
 IIT Guwahati,Ratnadwip Singha,Physics,7,3,1,2
@@ -232,13 +262,13 @@ IIT Delhi,Ishaan Gupta,Biochemical Engineering and Biotechnology,14,11,9,2
 IIT Delhi,Gazala (Ms) Habib,Civil Engineering,11,23,21,2
 IIT Delhi,Shaikh Z. Ahammad,Biochemical Engineering and Biotechnology,8,31,29,2
 IIT Delhi,Santanu Manna,Electrical Engineering,7,7,5,2
-IIT Delhi,Tapan K. Gandhi,Electrical Engineering,6,21,19,2
 IIT Delhi,Kamal K. Pant,Chemical Engineering,6,51,49,2
 IIT Delhi,Ankur Goswami,Materials Science and Engineering,5,14,12,2
 IIT Delhi,Vipin Kumar,Energy Science and Engineering,5,20,18,2
 IIT Delhi,Divya Nayar,Materials Science and Engineering,3,9,7,2
 IIT Delhi,Joby Joseph,Optics and Photonics Centre,3,20,18,2
 IIT Delhi,Joseph V. Puthussery,Civil Engineering,3,3,1,2
+IIT Delhi,Mustafijur Rahman,Electrical Engineering,3,3,1,2
 IIT (ISM) Dhanbad,Somnath Chattopadhyaya,Mechanical Engineering,11,36,33,3
 IIT (ISM) Dhanbad,Soumya Bagchi,Physics,10,4,1,3
 IIT (ISM) Dhanbad,Ejaz Ahmad,Chemical Engineering,2,22,20,2

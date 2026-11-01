@@ -1,85 +1,85 @@
 ﻿metric,value
-authors (nodes),157451
-papers with >= 2 authors (hyperedges),145376
-"authors keyed by name (no OpenAlex id), share of nodes",0.125
-papers whose author set in the network file is smaller than n_authors,84
-faculty among the nodes,6131
-papers with more than 10 authors (n_authors),2578
-"author pairs (counted per paper) that come from papers with more than 10 authors, share of all",0.2685
+authors (nodes),187361
+papers with >= 2 authors (hyperedges),181675
+"authors keyed by name (no OpenAlex id), share of nodes",0.1064
+papers whose author set in the network file is smaller than n_authors,109
+faculty among the nodes,7508
+papers with more than 10 authors (n_authors),3201
+"author pairs (counted per paper) that come from papers with more than 10 authors, share of all",0.266
 "linear: iterations to converge (tol 1e-09, max 5000)",121
 "log-exp: iterations to converge (tol 1e-09, max 5000)",330
 "max: iterations to converge (tol 1e-09, max 5000)",79
-linear: Spearman of power method vs exact singular vector (all nodes),0.9994
+linear: Spearman of power method vs exact singular vector (all nodes),0.9995
 linear: exact singular vector has one sign on its support (check),True
 linear: ratio of the two largest singular values of B,1.3816
-"linear without >10-author papers: ratio of the two largest singular values (near 1 = two labs almost tie, the leader can switch with small changes)",1.6289
+"linear without >10-author papers: ratio of the two largest singular values (near 1 = two labs almost tie, the leader can switch with small changes)",1.6284
 linear without >10-author papers: one sign on its support (check),True
-linear: authors with a non-zero score,32765
-linear: faculty with a non-zero score,2199
-linear: IPR of node scores (1/n = 6.4e-06),0.8726
+linear: authors with a non-zero score,43126
+linear: faculty with a non-zero score,3025
+linear: IPR of node scores (1/n = 5.3e-06),0.8725
 linear: share of score weight (x^2) on its top 10 authors,0.983
-log-exp: authors with a non-zero score,420
-log-exp: faculty with a non-zero score,37
-log-exp: IPR of node scores (1/n = 6.4e-06),0.2536
+log-exp: authors with a non-zero score,457
+log-exp: faculty with a non-zero score,45
+log-exp: IPR of node scores (1/n = 5.3e-06),0.2536
 log-exp: share of score weight (x^2) on its top 10 authors,0.727
-max: authors with a non-zero score,31639
-max: faculty with a non-zero score,2150
-max: IPR of node scores (1/n = 6.4e-06),0.8876
+max: authors with a non-zero score,41447
+max: faculty with a non-zero score,2972
+max: IPR of node scores (1/n = 5.3e-06),0.8875
 max: share of score weight (x^2) on its top 10 authors,0.983
-linear without >10-author papers: authors with a non-zero score,28040
-linear without >10-author papers: faculty with a non-zero score,2064
-linear without >10-author papers: IPR of node scores (1/n = 6.4e-06),0.8726
+linear without >10-author papers: authors with a non-zero score,36603
+linear without >10-author papers: faculty with a non-zero score,2861
+linear without >10-author papers: IPR of node scores (1/n = 5.3e-06),0.8725
 linear without >10-author papers: share of score weight (x^2) on its top 10 authors,0.983
-faculty Spearman: linear vs log-exp (faculty non-zero in both),0.359 (n = 35)
-faculty Spearman: linear vs max (faculty non-zero in both),0.997 (n = 2145)
-faculty Spearman: linear vs linear without >10-author papers (faculty non-zero in both),0.983 (n = 2064)
-faculty Spearman: linear vs distinct co-authors (pairwise) (faculty non-zero in both),0.106 (n = 2199)
-faculty Spearman: linear vs distinct co-authors without >10-author papers (faculty non-zero in both),0.123 (n = 2194)
-faculty Spearman: linear vs papers (faculty non-zero in both),0.188 (n = 2199)
-faculty Spearman: log-exp vs max (faculty non-zero in both),0.368 (n = 35)
-faculty Spearman: log-exp vs linear without >10-author papers (faculty non-zero in both),0.359 (n = 35)
-faculty Spearman: log-exp vs distinct co-authors (pairwise) (faculty non-zero in both),0.128 (n = 37)
-faculty Spearman: log-exp vs distinct co-authors without >10-author papers (faculty non-zero in both),0.109 (n = 37)
-faculty Spearman: log-exp vs papers (faculty non-zero in both),0.159 (n = 37)
-faculty Spearman: max vs linear without >10-author papers (faculty non-zero in both),0.981 (n = 2041)
-faculty Spearman: max vs distinct co-authors (pairwise) (faculty non-zero in both),0.109 (n = 2150)
-faculty Spearman: max vs distinct co-authors without >10-author papers (faculty non-zero in both),0.125 (n = 2146)
-faculty Spearman: max vs papers (faculty non-zero in both),0.186 (n = 2150)
-faculty Spearman: linear without >10-author papers vs distinct co-authors (pairwise) (faculty non-zero in both),0.086 (n = 2064)
-faculty Spearman: linear without >10-author papers vs distinct co-authors without >10-author papers (faculty non-zero in both),0.106 (n = 2064)
-faculty Spearman: linear without >10-author papers vs papers (faculty non-zero in both),0.170 (n = 2064)
-faculty Spearman: distinct co-authors (pairwise) vs distinct co-authors without >10-author papers (faculty non-zero in both),0.979 (n = 6094)
-faculty Spearman: distinct co-authors (pairwise) vs papers (faculty non-zero in both),0.892 (n = 6131)
-faculty Spearman: distinct co-authors without >10-author papers vs papers (faculty non-zero in both),0.920 (n = 6094)
+faculty Spearman: linear vs log-exp (faculty non-zero in both),0.314 (n = 41)
+faculty Spearman: linear vs max (faculty non-zero in both),0.996 (n = 2960)
+faculty Spearman: linear vs linear without >10-author papers (faculty non-zero in both),0.982 (n = 2861)
+faculty Spearman: linear vs distinct co-authors (pairwise) (faculty non-zero in both),0.131 (n = 3025)
+faculty Spearman: linear vs distinct co-authors without >10-author papers (faculty non-zero in both),0.149 (n = 3015)
+faculty Spearman: linear vs papers (faculty non-zero in both),0.208 (n = 3025)
+faculty Spearman: log-exp vs max (faculty non-zero in both),0.321 (n = 41)
+faculty Spearman: log-exp vs linear without >10-author papers (faculty non-zero in both),0.332 (n = 40)
+faculty Spearman: log-exp vs distinct co-authors (pairwise) (faculty non-zero in both),0.178 (n = 45)
+faculty Spearman: log-exp vs distinct co-authors without >10-author papers (faculty non-zero in both),0.153 (n = 45)
+faculty Spearman: log-exp vs papers (faculty non-zero in both),0.168 (n = 45)
+faculty Spearman: max vs linear without >10-author papers (faculty non-zero in both),0.980 (n = 2831)
+faculty Spearman: max vs distinct co-authors (pairwise) (faculty non-zero in both),0.131 (n = 2972)
+faculty Spearman: max vs distinct co-authors without >10-author papers (faculty non-zero in both),0.148 (n = 2964)
+faculty Spearman: max vs papers (faculty non-zero in both),0.207 (n = 2972)
+faculty Spearman: linear without >10-author papers vs distinct co-authors (pairwise) (faculty non-zero in both),0.109 (n = 2861)
+faculty Spearman: linear without >10-author papers vs distinct co-authors without >10-author papers (faculty non-zero in both),0.129 (n = 2861)
+faculty Spearman: linear without >10-author papers vs papers (faculty non-zero in both),0.189 (n = 2861)
+faculty Spearman: distinct co-authors (pairwise) vs distinct co-authors without >10-author papers (faculty non-zero in both),0.978 (n = 7466)
+faculty Spearman: distinct co-authors (pairwise) vs papers (faculty non-zero in both),0.890 (n = 7508)
+faculty Spearman: distinct co-authors without >10-author papers vs papers (faculty non-zero in both),0.918 (n = 7466)
 all faculty: median share of their papers with > 10 authors,0.0
 "linear: top 20 faculty, median share of their papers with > 10 authors",0.0
-"linear: top 20 faculty, institutions",IIT Delhi 18; IIT Bhilai 1; IIT Kanpur 1
+"linear: top 20 faculty, institutions",IIT Delhi 17; IIT Bhilai 1; IIT Kharagpur 1; IIT Kanpur 1
 linear: top 20 overlap with linear top 20,20
 "log-exp: top 20 faculty, median share of their papers with > 10 authors",0.0
-"log-exp: top 20 faculty, institutions",IIT Delhi 8; IIT Kanpur 2; IIT Bhilai 2; IIT Madras 2; IIT Bombay 2; IIT Gandhinagar 1; IIT Mandi 1; IIT Hyderabad 1; IIT (ISM) Dhanbad 1
-log-exp: top 20 overlap with linear top 20,7
+"log-exp: top 20 faculty, institutions",IIT Delhi 7; IIT Kanpur 2; IIT Bhilai 2; IIT Roorkee 2; IIT Madras 2; IIT Gandhinagar 1; IIT Mandi 1; IIT Hyderabad 1; IIT Bombay 1; IIT (ISM) Dhanbad 1
+log-exp: top 20 overlap with linear top 20,5
 "max: top 20 faculty, median share of their papers with > 10 authors",0.0
-"max: top 20 faculty, institutions",IIT Delhi 18; IIT Bhilai 1; IIT Kanpur 1
-max: top 20 overlap with linear top 20,20
+"max: top 20 faculty, institutions",IIT Delhi 17; IIT Bhilai 1; IIT Kharagpur 1; IIT Kanpur 1
+max: top 20 overlap with linear top 20,19
 "linear without >10-author papers: top 20 faculty, median share of their papers with > 10 authors",0.0
-"linear without >10-author papers: top 20 faculty, institutions",IIT Delhi 18; IIT Bhilai 1; IIT Kanpur 1
+"linear without >10-author papers: top 20 faculty, institutions",IIT Delhi 17; IIT Bhilai 1; IIT Kharagpur 1; IIT Kanpur 1
 linear without >10-author papers: top 20 overlap with linear top 20,20
-"distinct co-authors (pairwise): top 20 faculty, median share of their papers with > 10 authors",0.057
-"distinct co-authors (pairwise): top 20 faculty, institutions",IIT Bombay 6; IIT Madras 3; IIT Delhi 3; IIT Indore 2; IIT Kanpur 2; IIT Hyderabad 1; IIT Gandhinagar 1; IIT Jodhpur 1; IIT Patna 1
+"distinct co-authors (pairwise): top 20 faculty, median share of their papers with > 10 authors",0.08
+"distinct co-authors (pairwise): top 20 faculty, institutions",IIT Bombay 4; IIT Kharagpur 3; IIT Madras 3; IIT Roorkee 3; IIT Kanpur 2; IIT Indore 1; IIT Hyderabad 1; IIT Gandhinagar 1; IIT Jodhpur 1; IIT Patna 1
 distinct co-authors (pairwise): top 20 overlap with linear top 20,0
-"distinct co-authors without >10-author papers: top 20 faculty, median share of their papers with > 10 authors",0.038
-"distinct co-authors without >10-author papers: top 20 faculty, institutions",IIT Delhi 5; IIT Madras 3; IIT Bombay 3; IIT Jodhpur 2; IIT Indore 2; IIT Patna 1; IIT Kanpur 1; IIT Gandhinagar 1; IIT (BHU) Varanasi 1; IIT (ISM) Dhanbad 1
-distinct co-authors without >10-author papers: top 20 overlap with distinct co-authors (pairwise) top 20,13
-linear: papers with a non-zero score,98840
+"distinct co-authors without >10-author papers: top 20 faculty, median share of their papers with > 10 authors",0.042
+"distinct co-authors without >10-author papers: top 20 faculty, institutions",IIT Kharagpur 3; IIT Madras 3; IIT Bombay 3; IIT Roorkee 2; IIT Delhi 2; IIT Jodhpur 2; IIT Patna 1; IIT Kanpur 1; IIT Gandhinagar 1; IIT (BHU) Varanasi 1; IIT Indore 1
+distinct co-authors without >10-author papers: top 20 overlap with distinct co-authors (pairwise) top 20,14
+linear: papers with a non-zero score,132093
 "linear: top 100 non-zero papers, median number of authors",4.0
-log-exp: papers with a non-zero score,1055
+log-exp: papers with a non-zero score,1065
 "log-exp: top 100 non-zero papers, median number of authors",2.0
-max: papers with a non-zero score,97992
+max: papers with a non-zero score,131205
 "max: top 100 non-zero papers, median number of authors",4.0
-check (name-keyed authors split per paper): authors (nodes),172069
+check (name-keyed authors split per paper): authors (nodes),199872
 check (names split): linear: share of score weight on its top 10 authors,0.983
 check (names split): linear: faculty top 20 overlap with the main run,20
 check (names split): log-exp: share of score weight on its top 10 authors,0.727
-check (names split): log-exp: faculty top 20 overlap with the main run,18
+check (names split): log-exp: faculty top 20 overlap with the main run,17
 check (names split): max: share of score weight on its top 10 authors,0.983
 check (names split): max: faculty top 20 overlap with the main run,20
