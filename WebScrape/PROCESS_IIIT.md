@@ -375,14 +375,14 @@ Main file = verified + unverified-likely (`v2/<key>.json`); unconfirmed = "possi
 
 | IIIT | main | verified | likely | unconfirmed | recall | DOI recall (n) | P verified | P likely | P possible |
 |---|---|---|---|---|---|---|---|---|---|
-| Delhi | 4,695 | 2,568 | 2,127 | 1,003 | 85.0 % (368/433) | 86.6 % (247) | 100 % | 97 % (34/35) | 21 % |
-| Allahabad | 3,137 | 2,107 | 1,030 | 557 | 84.1 % (222/264) | 100.0 % (2) | 100 % | 80 % (28/35) | 30 % |
-| Gwalior | 2,146 | 1,378 | 768 | 713 | 81.9 % (217/265) | 87.7 % (65) | 100 % | 85 % (28/33) | 21 % |
-| Bangalore | 1,642 | 1,091 | 549 | 329 | 79.7 % (208/261) | 88.3 % (137) | 100 % | 97 % (32/33) | 29 % |
-| Jabalpur | 3,064 | 1,849 | 1,215 | 398 | 74.5 % (204/274) | 88.4 % (69) | 100 % | 91 % (30/33) | 58 % |
-| Hyderabad | 6,352 | 2,957 | 3,395 | 835 | 94.7 % (303/320) | 100.0 % (7) | 100 % | 95 % (37/39)* | 30 % |
-| Pune | 235 | 164 | 71 | 87 | 62.6 % (57/91) | 70.0 % (10) | 100 % | 71 % (24/34) | 23 % |
-| Kancheepuram | 1,856 | 1,265 | 591 | 378 | 50.8 % (150/295) | 66.0 % (47) | 100 % | 76 % (29/38) | 45 % |
+| Delhi | 4,687 | 2,568 | 2,119 | 1,010 | 84.8 % (367/433) | 86.6 % (247) | 100 % | 97 % (34/35) | 21 % |
+| Allahabad | 3,106 | 2,107 | 999 | 539 | 84.1 % (222/264) | 100.0 % (2) | 100 % | 82 % (28/34) | 30 % |
+| Gwalior | 2,126 | 1,378 | 748 | 686 | 81.9 % (217/265) | 87.7 % (65) | 100 % | 90 % (28/31) | 21 % |
+| Bangalore | 1,640 | 1,091 | 547 | 329 | 79.7 % (208/261) | 88.3 % (137) | 100 % | 97 % (32/33) | 29 % |
+| Jabalpur | 3,059 | 1,850 | 1,209 | 392 | 74.5 % (204/274) | 88.4 % (69) | 100 % | 94 % (30/32) | 58 % |
+| Hyderabad | 6,343 | 2,957 | 3,386 | 844 | 94.7 % (303/320) | 100.0 % (7) | 100 % | 95 % (37/39)* | 30 % |
+| Pune | 234 | 164 | 70 | 86 | 62.6 % (57/91) | 70.0 % (10) | 100 % | 73 % (24/33) | 23 % |
+| Kancheepuram | 1,851 | 1,265 | 586 | 368 | 50.8 % (150/295) | 66.0 % (47) | 100 % | 76 % (28/37) | 45 % |
 
 Bangalore's main file also holds 2 `ambiguous` records. \* Hyderabad includes the institute repository (§7.3); re-audited on the current file on 2026-10-31 (§7.6). `validate.py`: 0 violations for all eight.
 
@@ -483,26 +483,26 @@ violations for every institute below.
 
 | IIIT | main | verified | likely | unconfirmed | recall (golden) | DOI recall (n) | P verified | P likely | P possible |
 |---|---|---|---|---|---|---|---|---|---|
-| Bhubaneswar | 1,123 | 702 | 421 | 396 | 67.0 % (71/106) | 71.7 % (46) | 100 % | 91 % (32/35) | 13 % |
+| Bhubaneswar | 1,119 | 702 | 417 | 400 | 67.0 % (71/106) | 71.7 % (46) | 100 % | 91 % (32/35) | 13 % |
 | Naya Raipur | 1,195 | 822 | 373 | 96 | 76.2 % (96/126) | 91.7 % (36) | 100 % | 81 % (25/31) | 19 % |
-| Guwahati | 1,231 | 805 | 426 | 187 | 56.5 % (83/147) | 55.6 % (9) | 100 % | 82 % (28/34) | 21 % |
-| Sri City | 879 | 568 | 311 | 288 | 69.7 % (99/142) | 62.9 % (35) | 100 % | 71 % (25/35) | 36 % |
-| Lucknow | 240 | 176 | 64 | 70 | 83.0 % (44/53) | 85.7 % (21) | 100 % | 61 % (19/31) | 24 % |
-| Kurnool | 562 | 410 | 152 | 203 | 62.8 % (27/43) | 77.8 % (18) | 100 % | 50 % (15/30) | 15 % |
-| Vadodara | 364 | 241 | 123 | 153 | 63.5 % (61/96) | 80.0 % (20) | 100 % | 66 % (25/38)* | 7 % |
-| Dharwad | 426 | 295 | 131 | 140 | 71.4 % (55/77) | 77.8 % (27) | 100 % | 74 % (25/34) | 36 % |
+| Guwahati | 1,229 | 805 | 424 | 189 | 55.8 % (82/147) | 55.6 % (9) | 100 % | 82 % (28/34) | 21 % |
+| Sri City | 874 | 568 | 306 | 293 | 69.7 % (99/142) | 62.9 % (35) | 100 % | 71 % (25/35) | 36 % |
+| Lucknow | 235 | 176 | 59 | 75 | 83.0 % (44/53) | 85.7 % (21) | 100 % | 66 % (19/29) | 24 % |
+| Kurnool | 561 | 410 | 151 | 204 | 62.8 % (27/43) | 77.8 % (18) | 100 % | 50 % (15/30) | 15 % |
+| Vadodara | 364 | 241 | 123 | 153 | 63.5 % (61/96) | 80.0 % (20) | 100 % | 75 % (24/32)* | 7 % |
+| Dharwad | 422 | 295 | 127 | 144 | 71.4 % (55/77) | 77.8 % (27) | 100 % | 76 % (25/33) | 36 % |
 | Kota | 225 | 148 | 77 | 161 | 58.1 % (43/74) | 56.0 % (25) | 100 % | 48 % (15/31) | 6 % |
 | Sonepat | 188 | 153 | 35 | 14 | 88.2 % (15/17) | 92.3 % (13) | 100 % | 82 % (23/28) | 0 % |
-| Una | 246 | 183 | 63 | 100 | 60.6 % (57/94) | 66.7 % (51) | 100 % | 63 % (22/35) | 23 % |
+| Una | 243 | 183 | 60 | 103 | 60.6 % (57/94) | 66.7 % (51) | 100 % | 63 % (22/35) | 23 % |
 | Tiruchirappalli | 187 | 148 | 39 | 65 | 61.5 % (24/39) | 70.6 % (17) | 100 % | 69 % (22/32) | 24 % |
 | Kalyani | 439 | 289 | 150 | 85 | 77.8 % (77/99) | 73.9 % (23) | 100 % | 87 % (34/39) | 14 % |
-| Kottayam | 716 | 566 | 150 | 129 | 59.7 % (86/144) | 69.8 % (43) | 100 % | 76 % (28/37) | 12 % |
-| Manipur | 132 | 95 | 37 | 84 | 51.1 % (24/47) | 87.5 % (8) | 100 % | 64 % (18/28) | 17 % |
-| Nagpur | 441 | 310 | 131 | 112 | 55.6 % (69/124) | 70.7 % (41) | 100 % | 86 % (25/29) | 23 % |
-| Ranchi | 367 | 248 | 119 | 43 | 61.3 % (49/80) | 79.2 % (24) | 100 % | 80 % (24/30) | 29 % |
-| Surat | 164 | 96 | 68 | 64 | 78.6 % (11/14) | – (0) | 100 % | 50 % (17/34)† | 17 % |
-| Bhopal | 249 | 188 | 61 | 76 | 69.6 % (39/56) | 87.5 % (32) | 100 % | 64 % (16/25)† | 0 % |
-| Bhagalpur | 388 | 290 | 98 | 41 | 67.9 % (53/78) | 70.4 % (27) | 100 % | 75 % (24/32) | 17 % |
+| Kottayam | 709 | 566 | 143 | 136 | 59.0 % (85/144) | 69.8 % (43) | 100 % | 78 % (28/36) | 12 % |
+| Manipur | 130 | 95 | 35 | 86 | 51.1 % (24/47) | 87.5 % (8) | 100 % | 69 % (18/26) | 17 % |
+| Nagpur | 440 | 310 | 129 | 113 | 55.6 % (69/124) | 70.7 % (41) | 100 % | 86 % (25/29) | 23 % |
+| Ranchi | 363 | 248 | 115 | 47 | 61.3 % (49/80) | 79.2 % (24) | 100 % | 83 % (24/29) | 29 % |
+| Surat | 159 | 96 | 63 | 69 | 78.6 % (11/14) | – (0) | 100 % | 53 % (16/30)† | 17 % |
+| Bhopal | 244 | 188 | 56 | 81 | 69.6 % (39/56) | 87.5 % (32) | 100 % | 67 % (16/24)† | 0 % |
+| Bhagalpur | 387 | 290 | 97 | 42 | 67.9 % (53/78) | 70.4 % (27) | 100 % | 75 % (24/32) | 17 % |
 | Agartala | 25 | 15 | 10 | 2 | 33.3 % (1/3) | 33.3 % (3) | 100 % (15/15) | 50 % (2/4) | 0/2 |
 | Raichur | 82 | 53 | 29 | 37 | 65.8 % (25/38) | 75.0 % (4) | 100 % | 79 % (22/28) | 9 % |
 
@@ -603,39 +603,40 @@ of all authors name other in…"). "Unverified" is the remaining likely-tier rec
 
 | IIIT | records | verified | rejected by OpenAlex | unverified | no OpenAlex match |
 |---|---:|---:|---:|---:|---:|
-| agartala | 25 | 17 | 3 | 5 | 2 |
-| allahabad | 3,137 | 2,817 | 139 | 181 | 82 |
-| bangalore | 1,642 | 1,461 | 53 | 128 | 53 |
-| bhagalpur | 388 | 345 | 23 | 20 | 7 |
-| bhopal | 249 | 212 | 16 | 21 | 7 |
-| bhubaneswar | 1,123 | 1,019 | 32 | 72 | 37 |
-| delhi | 4,695 | 3,914 | 242 | 539 | 227 |
-| dharwad | 426 | 342 | 22 | 62 | 28 |
-| guwahati | 1,231 | 1,087 | 36 | 108 | 51 |
-| gwalior | 2,146 | 1,903 | 112 | 131 | 40 |
-| hyderabad | 6,352 | 4,742 | 267 | 1,343 | 902 |
-| jabalpur | 3,064 | 2,789 | 85 | 190 | 88 |
-| kalyani | 439 | 400 | 15 | 24 | 13 |
-| kancheepuram | 1,856 | 1,675 | 87 | 94 | 24 |
-| kota | 225 | 173 | 27 | 25 | 7 |
-| kottayam | 716 | 650 | 24 | 42 | 13 |
-| kurnool | 562 | 475 | 40 | 47 | 15 |
-| lucknow | 240 | 210 | 11 | 19 | 15 |
-| manipur | 132 | 109 | 8 | 15 | 6 |
-| nagpur | 441 | 388 | 32 | 21 | 4 |
+| jabalpur | 3,059 | 2,787 | 82 | 190 | 89 |
+| gwalior | 2,126 | 1,900 | 95 | 131 | 47 |
+| kancheepuram | 1,851 | 1,674 | 83 | 94 | 24 |
+| allahabad | 3,106 | 2,803 | 115 | 188 | 97 |
+| bangalore | 1,640 | 1,459 | 51 | 130 | 56 |
+| pune | 234 | 199 | 12 | 23 | 14 |
+| delhi | 4,687 | 3,909 | 241 | 537 | 257 |
+| hyderabad | 6,343 | 4,703 | 264 | 1,376 | 999 |
+| kurnool | 561 | 475 | 40 | 46 | 15 |
+| bhubaneswar | 1,119 | 1,015 | 32 | 72 | 39 |
 | naya_raipur | 1,195 | 1,055 | 50 | 90 | 40 |
-| pune | 235 | 199 | 13 | 23 | 14 |
-| raichur | 82 | 58 | 5 | 19 | 13 |
-| ranchi | 367 | 309 | 22 | 36 | 13 |
-| sonepat | 188 | 174 | 3 | 11 | 8 |
-| sri_city | 879 | 741 | 62 | 76 | 34 |
-| surat | 164 | 126 | 26 | 12 | 10 |
-| tiruchirappalli | 187 | 170 | 10 | 7 | 4 |
-| una | 246 | 217 | 21 | 8 | 3 |
+| sri_city | 874 | 738 | 61 | 75 | 35 |
+| guwahati | 1,229 | 1,085 | 36 | 108 | 51 |
 | vadodara | 364 | 316 | 24 | 24 | 11 |
-| **all 30** | 32,996 | 28,093 | 1,510 | 3,393 | 1,771 |
+| kota | 225 | 173 | 27 | 25 | 7 |
+| tiruchirappalli | 187 | 170 | 10 | 7 | 4 |
+| una | 243 | 215 | 20 | 8 | 3 |
+| sonepat | 188 | 174 | 3 | 11 | 8 |
+| kalyani | 439 | 400 | 15 | 24 | 13 |
+| lucknow | 235 | 210 | 7 | 18 | 14 |
+| dharwad | 422 | 342 | 18 | 62 | 29 |
+| kottayam | 709 | 649 | 21 | 39 | 13 |
+| manipur | 130 | 109 | 7 | 14 | 5 |
+| nagpur | 440 | 388 | 31 | 21 | 4 |
+| ranchi | 363 | 309 | 20 | 34 | 12 |
+| surat | 159 | 124 | 23 | 12 | 10 |
+| bhopal | 244 | 212 | 12 | 20 | 7 |
+| bhagalpur | 387 | 344 | 23 | 20 | 7 |
+| agartala | 25 | 17 | 3 | 5 | 2 |
+| raichur | 82 | 58 | 5 | 19 | 13 |
+| **all 30** | 32,866 | 28,012 | 1,431 | 3,423 | 1,925 |
 
-Rejections are 4.6 % of records overall (Surat 16 %, Kota 12 %, Hyderabad 4.2 %); they stay in the enriched JSONs with their
+The table shows the files after the sanity-rule rerun of 2026-11-01 (§7.7); the figures in this paragraph and the next are
+from the first run. Rejections are 4.6 % of records overall (Surat 16 %, Kota 12 %, Hyderabad 4.2 %); they stay in the enriched JSONs with their
 status and are in neither CSV. `group3_data.csv` holds verified records only (28,879 rows in the course's
 `group3` format); `group3_data_all.csv` adds the unverified ones (36,708 rows; not committed, regenerated by
 `export_csv.py`). Other outputs:
@@ -667,3 +668,64 @@ likely `no` are namesakes at IIT BHU, IIT Patna and IIT Indore; 15 of its 40 lik
 without deposited affiliations, the publisher returning 403). Hyderabad's two likely `no` are tenure boundaries (NUS, University
 of Hyderabad); its possible tier is mostly people at other institutions with the same names. Files:
 `v2/golden/precision_audit_iiit_{surat,bhopal,hyderabad}.csv`.
+
+### 7.7 Sanity-rule rerun, all 30 IIITs (2026-11-01)
+
+The IIT team's sanity rules (PROCESS.md §15.17: start-year rule F1, namesake guard F5, `affiliation_substatus`, `mega_collab`) and
+the arXiv co-author cap F7 (§15.18) were applied to the IIITs with `WebScrape/scripts/iiit_sanity_rerun.sh` (handoff
+`IIIT_SANITY_RERUN.md`), with `RM_SANITY_RULES=all` so the demotions apply to the IIITs too and IIIT founding dates from
+`institutes.py`. It reran `run_v2.sh refresh` on the stored caches (no new discovery, no OpenAlex credits; 16:52–18:55 IST), then the offline
+Enrichment into `Enrichment/out_v2_iiit` with the ten Scimago years. `validate.py`: 0 violations for all 30; Enrichment verify passed
+for all 30; `verify_networks` has only the known Jabalpur item (§7.5).
+
+| IIIT | main before → after | verified | likely before → after | F1 start year | F5 namesake | F7 arXiv cap | untimed likely | mega |
+|---|---|---|---|---:|---:|---:|---:|---:|
+| agartala | 25 → 25 | 15 → 15 | 10 → 10 | 0 | 0 | 0 | 0 | 0 |
+| allahabad | 3,137 → 3,106 | 2,107 → 2,107 | 1,030 → 999 | 1 | 7 | 0 | 2 | 2 |
+| bangalore | 1,642 → 1,640 | 1,091 → 1,091 | 551 → 549 | 0 | 1 | 0 | 0 | 0 |
+| bhagalpur | 388 → 387 | 290 → 290 | 98 → 97 | 1 | 0 | 0 | 0 | 0 |
+| bhopal | 249 → 244 | 188 → 188 | 61 → 56 | 5 | 0 | 0 | 2 | 0 |
+| bhubaneswar | 1,123 → 1,119 | 702 → 702 | 421 → 417 | 3 | 1 | 0 | 7 | 0 |
+| delhi | 4,695 → 4,687 | 2,568 → 2,568 | 2,127 → 2,119 | 0 | 7 | 0 | 26 | 4 |
+| dharwad | 426 → 422 | 295 → 295 | 131 → 127 | 4 | 0 | 0 | 11 | 0 |
+| guwahati | 1,231 → 1,229 | 805 → 805 | 426 → 424 | 0 | 2 | 0 | 0 | 0 |
+| gwalior | 2,146 → 2,126 | 1,378 → 1,378 | 768 → 748 | 5 | 2 | 0 | 27 | 0 |
+| hyderabad | 6,352 → 6,343 | 2,957 → 2,957 | 3,395 → 3,386 | 4 | 5 | 0 | 52 | 11 |
+| jabalpur | 3,064 → 3,059 | 1,849 → 1,850 | 1,215 → 1,209 | 2 | 2 | 0 | 0 | 0 |
+| kalyani | 439 → 439 | 289 → 289 | 150 → 150 | 0 | 0 | 0 | 0 | 0 |
+| kancheepuram | 1,856 → 1,851 | 1,265 → 1,265 | 591 → 586 | 4 | 1 | 0 | 5 | 0 |
+| kota | 225 → 225 | 148 → 148 | 77 → 77 | 0 | 0 | 0 | 14 | 0 |
+| kottayam | 716 → 709 | 566 → 566 | 150 → 143 | 7 | 0 | 0 | 4 | 0 |
+| kurnool | 562 → 561 | 410 → 410 | 152 → 151 | 0 | 1 | 0 | 0 | 0 |
+| lucknow | 240 → 235 | 176 → 176 | 64 → 59 | 4 | 1 | 0 | 15 | 0 |
+| manipur | 132 → 130 | 95 → 95 | 37 → 35 | 1 | 1 | 0 | 12 | 0 |
+| nagpur | 441 → 440 | 310 → 310 | 131 → 130 | 1 | 0 | 0 | 0 | 0 |
+| naya_raipur | 1,195 → 1,195 | 822 → 822 | 373 → 373 | 0 | 0 | 0 | 48 | 0 |
+| pune | 235 → 234 | 164 → 164 | 71 → 70 | 0 | 0 | 0 | 4 | 1 |
+| raichur | 82 → 82 | 53 → 53 | 29 → 29 | 0 | 0 | 0 | 0 | 0 |
+| ranchi | 367 → 363 | 248 → 248 | 119 → 115 | 2 | 2 | 0 | 0 | 0 |
+| sonepat | 188 → 188 | 153 → 153 | 35 → 35 | 0 | 0 | 0 | 29 | 0 |
+| sri_city | 879 → 874 | 568 → 568 | 311 → 306 | 0 | 5 | 0 | 34 | 0 |
+| surat | 164 → 159 | 96 → 96 | 68 → 63 | 5 | 0 | 0 | 0 | 0 |
+| tiruchirappalli | 187 → 187 | 148 → 148 | 39 → 39 | 0 | 0 | 0 | 20 | 0 |
+| una | 246 → 243 | 183 → 183 | 63 → 60 | 3 | 0 | 0 | 0 | 0 |
+| vadodara | 364 → 364 | 241 → 241 | 123 → 123 | 0 | 0 | 0 | 9 | 1 |
+| **all 30** | 32,996 → 32,866 | 20,180 → 20,181 | 12,816 → 12,685 | 52 | 38 | 0 | 321 | 19 |
+
+Demoted records (F1, F5) move to `candidates_unconfirmed_<inst>.json` and are listed in `v2/logs/startyear_demoted_*`,
+`namesake_demoted_*`; F7 demoted none. Another 40 likely records (Allahabad 23, Gwalior 13, Delhi, Bangalore, Jabalpur, Pune 1 each) are now
+rejected by the existing Crossref contradiction check of `finalize.py` (`v2/logs/rejected_*`: Crossref prints another institution for
+the person), a rule that did not change; the rebuilt candidate lists trigger it. Verified records are unchanged (Jabalpur +1).
+"Untimed likely" is the F2b sub-tier (no linked roster person has a joining year); "mega" are papers with more than 100 authors.
+Recall falls by one paper each for Delhi (84.8 %), Guwahati (55.8 %) and Kottayam (59.0 %).
+
+Precision. Audit verdicts were carried over by DOI (§7.6); rows whose record left the likely tier are dropped from the figure. The
+rerun removed 19 audited likely records: 16 judged `no`, 2 `yes`, 1 unknown (Surat 3 `no` of 4, Lucknow 2, Manipur 2, Gwalior 2,
+one each elsewhere). Vadodara's 6 audited rows (5 `no`) left earlier with the Pratik Shah removal and are now dropped too. Likely-tier
+precision in §6 and §7.3 is recomputed on the current files; it rises or stays the same everywhere except Kancheepuram (76 %, 28/37,
+one `yes` left); Surat rises to 53 % (16/30), Vadodara to 75 % (24/32). P possible is unchanged (the sampled rows still exist).
+
+Enrichment after the rerun: 32,866 records, 1,431 rejected on the OpenAlex contradiction check (4.4 %); `group3_data.csv` 28,796
+rows, `group3_data_all.csv` 36,636; `citation_network.csv` 184,535 edges, `authorship_network.csv` 71,126 pairs,
+`indian_connections.csv` 22,593 rows. Quartiles use the IIT team's new fallback (paper-year file, else the journal's latest Scimago
+year): 12,993 of 13,495 journal rows (96.3 %) have one.
