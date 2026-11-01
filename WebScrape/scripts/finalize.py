@@ -493,8 +493,23 @@ for r in main:
         continue
     j = SR.judge_start(inst, ROSTER, r["found_via_person"], r["year"])
     ns = None if j["violates"] else SR.judge_namesake(r["found_via_person"], r["evidence"], r["_whys"], GENERIC)
-    if APPLY_DEMOTION and (j["violates"] or ns):
-        rule = "F1_start_year" if j["violates"] else "F5_namesake_guard"
+    # F7 arXiv co-author cap: the roster arXiv channel is not allowed to credit a paper with more authors than the registry's
+    # `arxiv_coauthor_max_authors` through a chance co-author name match.  roster_channels.py enforces it when it runs; this is the
+    # same rule on the stored records (author_count), for datasets built before the cap existed.  Only records whose sole strong
+    # evidence is the arXiv person channel are touched.
+    cap = REG[inst].get("arxiv_coauthor_max_authors")
+    cap_hit = bool(APPLY_DEMOTION and cap and (r.get("author_count") or 0) > cap and "roster_arxiv" in r["evidence"]
+                   and not ((STRONG_PERSON - {"roster_arxiv"}) & set(r["evidence"])))
+    if APPLY_DEMOTION and (j["violates"] or ns or cap_hit):
+        rule = "F1_start_year" if j["violates"] else ("F5_namesake_guard" if ns else "F7_arxiv_cap")
+        if not j["violates"] and not ns:
+            why_txt = f"arXiv co-author cap: {r['author_count']} authors > {cap}, credited only through the roster arXiv channel"
+            r["unconfirmed_reason"] = why_txt
+            r["demoted_by"] = rule
+            unconfirmed.append(r)
+            audit.append((r, rule, {"author_count": r["author_count"], "cap": cap}))
+            stats["demoted_" + rule] += 1
+            continue
         if j["violates"]:
             why_txt = ("start-year rule: every linked roster person has a start year after the paper's year - " +
                        "; ".join(f"{p['roster_name']} ({p['status']}, {p['start_basis']} {p['start']}, lag {p['lag']}, bound {p['bound']})" for p in j["persons"]))
@@ -515,7 +530,7 @@ for lst, pref in ((unconfirmed, "U"),):
     lst.sort(key=lambda r: (r["year"], r["title"] if isinstance(r["title"], str) else ""))
     for i, r in enumerate(lst):
         r["record_id"] = f"{inst}-{pref}{i + 1:06d}"
-for _rule, _fn in (("F1_start_year", "startyear_demoted"), ("F5_namesake_guard", "namesake_demoted")):
+for _rule, _fn in (("F1_start_year", "startyear_demoted"), ("F5_namesake_guard", "namesake_demoted"), ("F7_arxiv_cap", "arxivcap_demoted")):
     write_jsonl_gz(os.path.join(OUT, "logs", f"{_fn}_{inst}.jsonl.gz"),
                    [{"record_id": r["record_id"], "rule": rule, "year": r["year"], "title": r["title"], "doi": r["doi"],
                      "evidence": r["evidence"], "found_via_person": r["found_via_person"], "reason": r["unconfirmed_reason"], "detail": det}
@@ -541,6 +556,7 @@ summary = {
     "n_likely_timed": sum(1 for r in final if r.get("affiliation_substatus") == "likely-timed"),
     "n_likely_nonroster": sum(1 for r in final if r.get("affiliation_substatus") == "likely-nonroster"),
     "n_demoted_start_year": stats["demoted_F1_start_year"], "n_demoted_namesake": stats["demoted_F5_namesake_guard"],
+    "n_demoted_arxiv_cap": stats["demoted_F7_arxiv_cap"],
     "n_mega_collab": sum(1 for r in final if r.get("mega_collab")),
     "n_unconfirmed_candidates_in_separate_file": len(unconfirmed),
     "by_year": dict(sorted(collections.Counter(r["year"] for r in final).items())),

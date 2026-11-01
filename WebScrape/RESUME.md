@@ -14,5 +14,9 @@ Papers from years without a file use the journal's latest available year.
   `ENRICH_INSTS=<all 23 keys comma separated> python3 Enrichment/scripts/export_csv.py && python3 build_networks.py && python3 verify_networks.py`
   (about 12 GB of memory for the network build; nothing else should run). Do not export while a runner rewrites an institute's file (it lacks the faculty
   links until its last step).
+* After a finalize-only change (no new discovery): `sh` loop of `finalize.py <inst>` + `eval_recall.py <inst>` + `export_todo.py <inst>` per institute with `RM_OUT=v2`
+  (about 1-3 min each; the full `run_v2.sh refresh` re-does DOI resolution and OpenCitations and takes ~18 min per large institute), then `validate.py`, then
+  `Enrichment/scripts/rebuild_v2_iits.sh` (offline merge/faculty/verify, export, networks), then `Analysis/scripts/run_all.sh` (~1 h on a quiet machine) and `build_data_v2.py`.
+  IIIT rerun: `WebScrape/handoff/IIIT_SANITY_RERUN.md` (needs the IIIT caches). Details: PROCESS.md 15.18.
 * Analysis and page: see `Analysis/README_v2.md`; python environment `~/.venvs/iit-analysis` (outside `/tmp`, which is wiped by a reboot).
 * Open items: Scimago 2017-2019 and 2021-2024; the enrichment is otherwise complete.

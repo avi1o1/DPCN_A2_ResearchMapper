@@ -497,8 +497,25 @@ DATES = {
     "iit_ism": (1926, 2016, ("Indian School of Mines", "ISM Dhanbad")),
     "iit_bhilai": (2016, 2016, ()), "iit_dharwad": (2016, 2016, ()), "iit_jammu": (2016, 2016, ()), "iit_goa": (2016, 2016, ()),
 }
+# IIITs (2026-11-01): established years from Wikipedia's "Indian Institutes of Information Technology" table (25 institutes) and the
+# infoboxes of IIIT Hyderabad (1998), IIIT-Delhi (2008), IIIT Bangalore (18 Sep 1998), IIIT Bhubaneswar (2006) and IIIT Naya Raipur
+# (2015), fetched through WebScrape/agents/polite_get.py.  The second field repeats the first (no "became" date for these).
+DATES.update({
+    "iiit_gwalior": (1997, 1997, ()), "iiit_allahabad": (1999, 1999, ()), "iiit_jabalpur": (2005, 2005, ()),
+    "iiit_kancheepuram": (2007, 2007, ()), "iiit_kurnool": (2015, 2015, ()), "iiit_sri_city": (2013, 2013, ()),
+    "iiit_guwahati": (2013, 2013, ()), "iiit_vadodara": (2013, 2013, ()), "iiit_kota": (2013, 2013, ()),
+    "iiit_tiruchirappalli": (2013, 2013, ()), "iiit_dharwad": (2015, 2015, ()), "iiit_una": (2015, 2015, ()),
+    "iiit_sonepat": (2014, 2014, ()), "iiit_kalyani": (2015, 2015, ()), "iiit_lucknow": (2015, 2015, ()),
+    "iiit_kottayam": (2015, 2015, ()), "iiit_manipur": (2015, 2015, ()), "iiit_nagpur": (2016, 2016, ()),
+    "iiit_pune": (2016, 2016, ()), "iiit_ranchi": (2016, 2016, ()), "iiit_surat": (2017, 2017, ()),
+    "iiit_bhopal": (2017, 2017, ()), "iiit_bhagalpur": (2017, 2017, ()), "iiit_agartala": (2018, 2018, ()),
+    "iiit_raichur": (2019, 2019, ()), "iiit_hyderabad": (1998, 1998, ()), "iiit_delhi": (2008, 2008, ()),
+    "iiit_bangalore": (1998, 1998, ()), "iiit_bhubaneswar": (2006, 2006, ()), "iiit_naya_raipur": (2015, 2015, ()),
+})
 for _k, (_f, _b, _fn) in DATES.items():
     REG[_k]["founded"], REG[_k]["became_iit"], REG[_k]["former_names"] = _f, _b, tuple(_fn)
+for _k in REG:                     # F7 (finalize.py, roster_channels.py): the arXiv co-author route is not used above this many authors
+    REG[_k].setdefault("arxiv_coauthor_max_authors", 50)
 for _k in REG:                     # other institution types (IIITs ...): dates not registered here; rules that need them skip
     REG[_k].setdefault("founded", None)
     REG[_k].setdefault("became_iit", None)

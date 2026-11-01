@@ -13,7 +13,7 @@ import os, sys, json, collections as C
 from oa import DATA, OUT
 import ranks
 
-ALLOWED_CHANGE = {"affiliation_status", "evidence", "institute_affiliations_matched", "todo_fields", "references_meta"}
+ALLOWED_CHANGE = {"author_count", "mega_collab", "mega_basis", "affiliation_status", "evidence", "institute_affiliations_matched", "todo_fields", "references_meta"}
 FIELDS = ["title", "authors", "year", "type", "venue", "issn", "doi", "citations", "references"]
 
 

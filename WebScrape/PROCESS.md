@@ -1200,3 +1200,52 @@ Roorkee precision audit (65 sampled, v2 procedure; yes needs affiliation text on
 Kharagpur (re-run on the v2 procedure, arXiv pass and sanity rules included): Golden papers: 637; found: 417; **recall = 65.5%**
 
 Kharagpur precision audit (65 sampled, v2 procedure; yes needs affiliation text on the paper, tenure-only left unknown): verified 10 yes/0 no/15 unknown; likely 3 yes/4 no/33 unknown. The four nos are wrong-person matches: an AAAI 2024 paper listing the author at IIT Delhi; two INSPIRE-HEP papers whose authors are at PRL Ahmedabad and S.N. Bose Centre; a 2023 paper listing the author at ICAR Umiam. Two unknown verified rows look suspicious (a Jana paper at NBRC Manesar with Kharagpur as a second affiliation; a probable namesake of Rajendra Singh).
+
+### 15.18 Harmonising the IIT and IIIT procedures (2026-11-01)
+A comparison of this notebook with `PROCESS_IIIT.md` found four differences; this section records how each was resolved.
+
+**Golden-set validity audit, the remaining IITs.** §15.16 covered 17 IIT golden sets (Bombay only weakly). The IIIT team audited all 30 of
+theirs with a seeded sample and independent agents. The same was done for the IITs without a validity audit or with a weak one: Bombay,
+Kharagpur, Roorkee, Ropar, Goa, Palakkad, Tirupati (all 23 IITs are now covered). Sampler `scripts/golden_validity_sample.py` (seed
+20261101 + crc32(institute), up to 30 medium-confidence rows stratified by evidence source; Ropar has only 8 medium rows, all taken); agents
+under `agents/validity_brief.md` (polite_get only; no Scopus / OpenAlex / Google Scholar / IRINS / Crossref / ORCID API; pipeline outputs
+not opened); results in `v2/golden/golden_validity_<inst>.csv`.
+
+| IIT | right | wrong | undecidable | rows dropped from the golden set |
+|---|---|---|---|---|
+| Bombay | 2 | 1 | 27 | 1 (a book, not a paper): 582 → 581 |
+| Kharagpur | 9 | 5 | 16 | 5 (authors at A*STAR, IIT Kanpur, IIT Gandhinagar, JUIT; a B.Tech project report): 637 → 632 |
+| Roorkee | 9 | 2 | 19 | 2 (all authors at IIT Hyderabad; an NREL report): 562 → 560 |
+| Ropar | 2 | 1 | 5 | 1 (an ESMO conference abstract): 339 → 338 |
+| Goa | 8 | 0 | 22 | 0 |
+| Palakkad | 7 | 2 | 21 | 2 (a conference talk and a conference abstract): 305 → 303 |
+| Tirupati | 10 | 1 | 19 | 1 (author at the Weizmann Institute, pre-joining): 311 → 310 |
+
+Same pattern as before: the wrong rows are non-papers, authors at another institute / not yet joined, and nothing else; 53-90 % of the
+sampled rows are undecidable (Bombay worst: publisher pages blocked, Semantic Scholar and Europe PMC had no affiliations), so the error
+rates are lower bounds. 12 rows dropped in total (copies of the originals were not kept in the repository; `git diff` of `golden/` shows
+them). Recall recomputed for the six institutes (see `V2_PROGRESS.md`); changes are at most +0.5 points.
+
+**arXiv co-author cap (F7).** The IIIT team found LIGO/Virgo/KAGRA papers (about 1,770 authors) credited to a roster person through one
+chance co-author name in the arXiv person channel and capped that route at 50 authors (`arxiv_coauthor_max_authors`). The IIT runs had no
+cap. The registry now sets 50 for every institute (`institutes.py`), `roster_channels.py` already honours it, and `finalize.py` applies the
+same rule to stored records (record `author_count` above the cap, only strong evidence `roster_arxiv`; such records move to the
+unconfirmed file, log `v2/logs/arxivcap_demoted_<inst>.jsonl.gz`). Effect on the IITs: 124 records of 298,297 (Hyderabad 38, Guwahati 34,
+Roorkee 24, Bhilai 11, Ropar 5, Kanpur 4, Bombay 3, Madras 2, BHU / Mandi / Palakkad 1 each), all in the likely tier; verified records
+untouched. `finalize.py`, recall, TODO sheets and `validate.py` (0 violations) were rerun for all 23 IITs without a new discovery pass, and
+the enrichment, networks and analysis were rebuilt offline from the caches (`Enrichment/scripts/rebuild_v2_iits.sh`).
+
+**Founding dates for the 30 IIITs** (`institutes.py`, DATES): from Wikipedia's table of IIITs (25) and the infoboxes of Hyderabad (1998),
+Delhi (2008), Bangalore (1998), Bhubaneswar (2006) and Naya Raipur (2015), fetched through `polite_get.py`. They make the start-year rule
+F1 usable for the IIITs (lag 0 for institutes founded 2015 or later). Dry run on the committed IIIT datasets: F1 would demote 56 of 12,813
+likely-tier records (32,996 records in all), mostly Kottayam 7, Gwalior / Allahabad / Surat / Bhopal 5 each. The IIIT datasets themselves are
+rebuilt by the IIIT team, because the raw and OpenAlex caches are on their machine: `handoff/IIIT_SANITY_RERUN.md`,
+`scripts/iiit_sanity_rerun.sh`.
+
+**Quartiles.** Not changed: the IITs keep the 2016 / 2020 / 2025 files with the journal's-latest-year fallback; the IIITs keep their ten-year
+files (decision of 2026-11-01). The two rules agree wherever a journal appears in the paper-year file.
+
+**Verify strictness.** `Enrichment/scripts/verify.py` flagged `author_count`, `mega_collab` and `mega_basis` as "changed" for records where
+`finalize.py` had no author list and the enrichment fills the count from the scraped / OpenAlex list (by design, `oa_extract.mega_flag`).
+The three fields are now in `ALLOWED_CHANGE`. The network checks give the same small inconsistencies as before (8 duplicate edges, 2
+Kharagpur-Roorkee shared-paper counts, 23 / 9 Indian-citation flags without edges, 1 reverse flag).
