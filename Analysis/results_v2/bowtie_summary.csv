@@ -1,18 +1,18 @@
 ﻿definition,metric,value
-pure,faculty,7599
+pure,faculty,7598
 pure,faculty with at least one citation link (either direction),6488
-pure,citing pairs between institutes (of 23),65442
+pure,citing pairs between institutes (of 23),65463
 pure,CORE members citing or cited by another institute's faculty within the CORE,4725
-pure,citing pairs a -> b,80834
+pure,citing pairs a -> b,80854
 pure,CORE (faculty),4748
 pure,IN (faculty),1150
-pure,OUT (faculty),453
+pure,OUT (faculty),455
 pure,TUBES (faculty),1
-pure,TENDRILS (faculty),75
-pure,OTHER (faculty),61
-pure,ISOLATED (faculty),1111
+pure,TENDRILS (faculty),80
+pure,OTHER (faculty),54
+pure,ISOLATED (faculty),1110
 pure,CORE share of linked faculty,0.7318
-pure,CORE size in 10 degree-preserving rewirings: mean (min-max),4854 (4846-4863)
+pure,CORE size in 10 degree-preserving rewirings: mean (min-max),4858 (4849-4867)
 pure,"check: networkx and scipy give the same CORE, IN and OUT",True
 pure,IIT Kharagpur: CORE,540
 pure,IIT Kharagpur: IN,89
@@ -23,10 +23,10 @@ pure,IIT Kharagpur: OTHER,2
 pure,IIT Kharagpur: ISOLATED,72
 pure,IIT Roorkee: CORE,431
 pure,IIT Roorkee: IN,74
-pure,IIT Roorkee: OUT,45
+pure,IIT Roorkee: OUT,46
 pure,IIT Roorkee: TUBES,0
-pure,IIT Roorkee: TENDRILS,3
-pure,IIT Roorkee: OTHER,5
+pure,IIT Roorkee: TENDRILS,5
+pure,IIT Roorkee: OTHER,2
 pure,IIT Roorkee: ISOLATED,65
 pure,IIT Ropar: CORE,129
 pure,IIT Ropar: IN,42
@@ -41,13 +41,13 @@ pure,IIT Bombay: OUT,69
 pure,IIT Bombay: TUBES,0
 pure,IIT Bombay: TENDRILS,10
 pure,IIT Bombay: OTHER,6
-pure,IIT Bombay: ISOLATED,148
+pure,IIT Bombay: ISOLATED,147
 pure,IIT Madras: CORE,414
 pure,IIT Madras: IN,54
 pure,IIT Madras: OUT,53
 pure,IIT Madras: TUBES,0
-pure,IIT Madras: TENDRILS,6
-pure,IIT Madras: OTHER,11
+pure,IIT Madras: TENDRILS,7
+pure,IIT Madras: OTHER,10
 pure,IIT Madras: ISOLATED,74
 pure,IIT Kanpur: CORE,318
 pure,IIT Kanpur: IN,66
@@ -123,8 +123,8 @@ pure,IIT Indore: CORE,142
 pure,IIT Indore: IN,33
 pure,IIT Indore: OUT,4
 pure,IIT Indore: TUBES,1
-pure,IIT Indore: TENDRILS,1
-pure,IIT Indore: OTHER,2
+pure,IIT Indore: TENDRILS,2
+pure,IIT Indore: OTHER,1
 pure,IIT Indore: ISOLATED,20
 pure,IIT Mandi: CORE,117
 pure,IIT Mandi: IN,45
@@ -135,17 +135,17 @@ pure,IIT Mandi: OTHER,0
 pure,IIT Mandi: ISOLATED,35
 pure,IIT Delhi: CORE,368
 pure,IIT Delhi: IN,61
-pure,IIT Delhi: OUT,33
+pure,IIT Delhi: OUT,34
 pure,IIT Delhi: TUBES,0
 pure,IIT Delhi: TENDRILS,5
-pure,IIT Delhi: OTHER,4
+pure,IIT Delhi: OTHER,3
 pure,IIT Delhi: ISOLATED,72
 pure,IIT (ISM) Dhanbad: CORE,283
 pure,IIT (ISM) Dhanbad: IN,84
 pure,IIT (ISM) Dhanbad: OUT,29
 pure,IIT (ISM) Dhanbad: TUBES,0
-pure,IIT (ISM) Dhanbad: TENDRILS,1
-pure,IIT (ISM) Dhanbad: OTHER,4
+pure,IIT (ISM) Dhanbad: TENDRILS,2
+pure,IIT (ISM) Dhanbad: OTHER,3
 pure,IIT (ISM) Dhanbad: ISOLATED,59
 pure,IIT Jodhpur: CORE,128
 pure,IIT Jodhpur: IN,70
@@ -175,20 +175,20 @@ pure,IIT Dharwad: TUBES,0
 pure,IIT Dharwad: TENDRILS,0
 pure,IIT Dharwad: OTHER,1
 pure,IIT Dharwad: ISOLATED,22
-strict,faculty,7599
+strict,faculty,7598
 strict,faculty with at least one citation link (either direction),6198
-strict,citing pairs between institutes (of 23),59633
-strict,CORE members citing or cited by another institute's faculty within the CORE,4394
-strict,citing pairs a -> b,69699
-strict,CORE (faculty),4405
+strict,citing pairs between institutes (of 23),59655
+strict,CORE members citing or cited by another institute's faculty within the CORE,4395
+strict,citing pairs a -> b,69722
+strict,CORE (faculty),4406
 strict,IN (faculty),1190
 strict,OUT (faculty),472
-strict,TUBES (faculty),3
-strict,TENDRILS (faculty),70
-strict,OTHER (faculty),58
-strict,ISOLATED (faculty),1401
-strict,CORE share of linked faculty,0.7107
-strict,CORE size in 10 degree-preserving rewirings: mean (min-max),4483 (4466-4495)
+strict,TUBES (faculty),0
+strict,TENDRILS (faculty),75
+strict,OTHER (faculty),55
+strict,ISOLATED (faculty),1400
+strict,CORE share of linked faculty,0.7109
+strict,CORE size in 10 degree-preserving rewirings: mean (min-max),4487 (4481-4496)
 strict,"check: networkx and scipy give the same CORE, IN and OUT",True
 strict,IIT Kharagpur: CORE,506
 strict,IIT Kharagpur: IN,89
@@ -199,16 +199,16 @@ strict,IIT Kharagpur: OTHER,2
 strict,IIT Kharagpur: ISOLATED,103
 strict,IIT Roorkee: CORE,412
 strict,IIT Roorkee: IN,76
-strict,IIT Roorkee: OUT,43
+strict,IIT Roorkee: OUT,44
 strict,IIT Roorkee: TUBES,0
-strict,IIT Roorkee: TENDRILS,2
-strict,IIT Roorkee: OTHER,5
+strict,IIT Roorkee: TENDRILS,4
+strict,IIT Roorkee: OTHER,2
 strict,IIT Roorkee: ISOLATED,85
 strict,IIT Ropar: CORE,120
 strict,IIT Ropar: IN,42
 strict,IIT Ropar: OUT,9
-strict,IIT Ropar: TUBES,1
-strict,IIT Ropar: TENDRILS,3
+strict,IIT Ropar: TUBES,0
+strict,IIT Ropar: TENDRILS,4
 strict,IIT Ropar: OTHER,3
 strict,IIT Ropar: ISOLATED,22
 strict,IIT Bombay: CORE,414
@@ -217,7 +217,7 @@ strict,IIT Bombay: OUT,79
 strict,IIT Bombay: TUBES,0
 strict,IIT Bombay: TENDRILS,9
 strict,IIT Bombay: OTHER,5
-strict,IIT Bombay: ISOLATED,181
+strict,IIT Bombay: ISOLATED,180
 strict,IIT Madras: CORE,387
 strict,IIT Madras: IN,63
 strict,IIT Madras: OUT,53
@@ -270,8 +270,8 @@ strict,IIT Guwahati: ISOLATED,61
 strict,IIT Hyderabad: CORE,182
 strict,IIT Hyderabad: IN,46
 strict,IIT Hyderabad: OUT,20
-strict,IIT Hyderabad: TUBES,1
-strict,IIT Hyderabad: TENDRILS,5
+strict,IIT Hyderabad: TUBES,0
+strict,IIT Hyderabad: TENDRILS,6
 strict,IIT Hyderabad: OTHER,2
 strict,IIT Hyderabad: ISOLATED,85
 strict,IIT Bhubaneswar: CORE,116
@@ -291,8 +291,8 @@ strict,IIT (BHU) Varanasi: ISOLATED,55
 strict,IIT Gandhinagar: CORE,85
 strict,IIT Gandhinagar: IN,30
 strict,IIT Gandhinagar: OUT,10
-strict,IIT Gandhinagar: TUBES,1
-strict,IIT Gandhinagar: TENDRILS,1
+strict,IIT Gandhinagar: TUBES,0
+strict,IIT Gandhinagar: TENDRILS,2
 strict,IIT Gandhinagar: OTHER,0
 strict,IIT Gandhinagar: ISOLATED,48
 strict,IIT Indore: CORE,132
@@ -344,15 +344,15 @@ strict,IIT Bhilai: TUBES,0
 strict,IIT Bhilai: TENDRILS,1
 strict,IIT Bhilai: OTHER,1
 strict,IIT Bhilai: ISOLATED,18
-strict,IIT Dharwad: CORE,30
+strict,IIT Dharwad: CORE,31
 strict,IIT Dharwad: IN,38
-strict,IIT Dharwad: OUT,3
+strict,IIT Dharwad: OUT,2
 strict,IIT Dharwad: TUBES,0
 strict,IIT Dharwad: TENDRILS,0
 strict,IIT Dharwad: OTHER,1
 strict,IIT Dharwad: ISOLATED,29
 pure,CORE: median papers,31.0
-pure,CORE: median citations,323.0
+pure,CORE: median citations,322.5
 pure,CORE: median h_index,10.0
 pure,IN: median papers,5.0
 pure,IN: median citations,12.0
@@ -364,15 +364,15 @@ pure,TUBES: median papers,2.0
 pure,TUBES: median citations,3.0
 pure,TUBES: median h_index,1.0
 pure,TENDRILS: median papers,6.0
-pure,TENDRILS: median citations,20.0
+pure,TENDRILS: median citations,21.0
 pure,TENDRILS: median h_index,3.0
-pure,OTHER: median papers,6.0
-pure,OTHER: median citations,11.0
+pure,OTHER: median papers,4.0
+pure,OTHER: median citations,9.0
 pure,OTHER: median h_index,2.0
 pure,ISOLATED: median papers,2.0
 pure,ISOLATED: median citations,3.0
 pure,ISOLATED: median h_index,1.0
 pure,departments in the hierarchy (>= 5 faculty),313
 pure,check: Spearman SpringRank vs net balance,0.979
-pure,citations between departments (weighted edges),161768
-pure,citations within a department,19883
+pure,citations between departments (weighted edges),161825
+pure,citations within a department,19877

@@ -1,33 +1,33 @@
 ﻿definition,scope,coauthor_distance,ordered_pairs,pairs_citing,citing_rate,citations_per_pair,expected_citing_pairs,obs_over_expected
-pure,all pairs,1,29880,6018,0.20141,1.0089,351.6,17.12
-pure,all pairs,2,185744,13497,0.07266,0.1909,963.2,14.01
-pure,all pairs,3,934274,12696,0.01359,0.0278,2952.0,4.3
-pure,all pairs,far,56587304,48623,0.00086,0.0016,48623.0,1.0
-pure,same department,1,11518,2269,0.197,0.7344,261.9,8.66
-pure,same department,2,24176,2559,0.10585,0.2783,426.8,6.0
-pure,same department,3,32758,877,0.02677,0.0593,459.6,1.91
-pure,same department,far,175576,1125,0.00641,0.0157,1125.0,1.0
-pure,"same institute, other department",1,10840,1397,0.12887,0.395,28.0,49.83
-pure,"same institute, other department",2,77916,3912,0.05021,0.1027,143.7,27.21
-pure,"same institute, other department",3,274302,1557,0.00568,0.0102,394.2,3.95
-pure,"same institute, other department",far,3009996,1696,0.00056,0.0009,1696.0,1.0
-pure,other institute,1,7522,2352,0.31268,2.3137,61.6,38.16
-pure,other institute,2,83652,7026,0.08399,0.2476,392.7,17.89
-pure,other institute,3,627214,10262,0.01636,0.0338,2098.3,4.89
-pure,other institute,far,53401732,45802,0.00086,0.0016,45802.0,1.0
-strict,all pairs,1,29880,3969,0.13283,0.5012,326.1,12.17
-strict,all pairs,2,185744,7632,0.04109,0.1016,898.5,8.49
-strict,all pairs,3,934274,11877,0.01271,0.0248,2793.8,4.25
-strict,all pairs,far,56587304,46221,0.00082,0.0015,46221.0,1.0
-strict,same department,1,11518,1613,0.14004,0.4394,241.3,6.68
-strict,same department,2,24176,1513,0.06258,0.1497,390.2,3.88
-strict,same department,3,32758,801,0.02445,0.0519,415.9,1.93
-strict,same department,far,175576,976,0.00556,0.0133,976.0,1.0
-strict,"same institute, other department",1,10840,794,0.07325,0.169,25.2,31.49
-strict,"same institute, other department",2,77916,1548,0.01987,0.0354,128.7,12.03
-strict,"same institute, other department",3,274302,1335,0.00487,0.0083,351.3,3.8
-strict,"same institute, other department",far,3009996,1486,0.00049,0.0008,1486.0,1.0
-strict,other institute,1,7522,1562,0.20766,1.0747,59.6,26.21
-strict,other institute,2,83652,4571,0.05464,0.1493,379.6,12.04
-strict,other institute,3,627214,9741,0.01553,0.0306,2026.7,4.81
-strict,other institute,far,53401732,43759,0.00082,0.0015,43759.0,1.0
+pure,all pairs,1,29888,6016,0.20128,1.0089,351.9,17.1
+pure,all pairs,2,185804,13503,0.07267,0.1908,964.4,14.0
+pure,all pairs,3,934076,12704,0.0136,0.0278,2954.4,4.3
+pure,all pairs,far,56572238,48631,0.00086,0.0016,48631.0,1.0
+pure,same department,1,11514,2268,0.19698,0.7344,262.2,8.65
+pure,same department,2,24176,2558,0.10581,0.2783,427.5,5.98
+pure,same department,3,32756,877,0.02677,0.0592,460.1,1.91
+pure,same department,far,175544,1126,0.00641,0.0157,1126.0,1.0
+pure,"same institute, other department",1,10846,1397,0.1288,0.3949,28.0,49.82
+pure,"same institute, other department",2,77896,3912,0.05022,0.1027,143.7,27.23
+pure,"same institute, other department",3,273874,1557,0.00569,0.0102,393.4,3.96
+pure,"same institute, other department",far,3008912,1696,0.00056,0.0009,1696.0,1.0
+pure,other institute,1,7528,2351,0.3123,2.3135,61.7,38.12
+pure,other institute,2,83732,7033,0.08399,0.2475,393.3,17.88
+pure,other institute,3,627446,10270,0.01637,0.0338,2100.9,4.89
+pure,other institute,far,53387782,45809,0.00086,0.0016,45809.0,1.0
+strict,all pairs,1,29888,3971,0.13286,0.5015,326.4,12.17
+strict,all pairs,2,185804,7637,0.0411,0.1016,899.6,8.49
+strict,all pairs,3,934076,11886,0.01272,0.0248,2796.2,4.25
+strict,all pairs,far,56572238,46228,0.00082,0.0015,46228.0,1.0
+strict,same department,1,11514,1613,0.14009,0.4395,241.5,6.68
+strict,same department,2,24176,1512,0.06254,0.1496,390.9,3.87
+strict,same department,3,32756,801,0.02445,0.0518,416.4,1.92
+strict,same department,far,175544,977,0.00557,0.0133,977.0,1.0
+strict,"same institute, other department",1,10846,795,0.0733,0.169,25.2,31.52
+strict,"same institute, other department",2,77896,1548,0.01987,0.0354,128.6,12.04
+strict,"same institute, other department",3,273874,1335,0.00487,0.0083,350.6,3.81
+strict,"same institute, other department",far,3008912,1486,0.00049,0.0008,1486.0,1.0
+strict,other institute,1,7528,1563,0.20762,1.0755,59.6,26.21
+strict,other institute,2,83732,4577,0.05466,0.1492,380.1,12.04
+strict,other institute,3,627446,9750,0.01554,0.0306,2029.2,4.8
+strict,other institute,far,53387782,43765,0.00082,0.0015,43765.0,1.0

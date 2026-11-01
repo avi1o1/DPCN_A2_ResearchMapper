@@ -1,231 +1,231 @@
 ﻿roster_id,faculty,institution,department,faculty_coauthors,joint_papers_with_faculty,degree_centrality,betweenness,community
-iit_kharagpur:621,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,64,246,0.00842,0.02676,2
-iit_kharagpur:630,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,52,301,0.00684,0.01787,7
-iit_kharagpur:290,Pabitra Mitra,IIT Kharagpur,Computer Science and Engineering,32,125,0.00421,0.00964,2
-iit_kharagpur:442,Abhijit Mukherjee,IIT Kharagpur,Geology and Geophysics,25,89,0.00329,0.00964,7
-iit_kharagpur:102,Ramkrishna Sen,IIT Kharagpur,Bioscience and Biotechnology,33,79,0.00434,0.0092,2
-iit_kharagpur:293,Partha Pratim Chakrabarti,IIT Kharagpur,Computer Science and Engineering,24,65,0.00316,0.00903,2
-iit_kharagpur:311,Sudip Misra,IIT Kharagpur,Computer Science and Engineering,18,75,0.00237,0.00842,2
-iit_kharagpur:527,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,35,91,0.00461,0.00827,2
-iit_kharagpur:248,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,27,129,0.00355,0.00716,7
-iit_kharagpur:723,Samit Kumar Ray,IIT Kharagpur,Physics,36,126,0.00474,0.00688,2
-iit_roorkee:43,Partha Roy,IIT Roorkee,Biosciences and Bioengineering,43,180,0.00566,0.01269,9
-iit_roorkee:775,Soumitra Satapathi,IIT Roorkee,Physics,28,73,0.00369,0.00793,4
-iit_roorkee:801,Pradip K. Maji,IIT Roorkee,Polymer and Process Engineering,26,69,0.00342,0.0058,9
-iit_roorkee:192,Chandra Shekhar Prasad Ojha,IIT Roorkee,Civil Engineering,24,95,0.00316,0.00557,19
-iit_roorkee:378,N. P. Padhy,IIT Roorkee,Electrical Engineering,20,118,0.00263,0.0048,33
-iit_roorkee:120,V. C. Srivastava,IIT Roorkee,Chemical Engineering,24,72,0.00316,0.00449,9
-iit_roorkee:435,Sanjeev Manhas,IIT Roorkee,Electronics and Communication Engineering,13,32,0.00171,0.00354,36
-iit_roorkee:57,Saugata Hazra,IIT Roorkee,Biosciences and Bioengineering,14,32,0.00184,0.0033,9
-iit_roorkee:189,Bhola Ram Gurjar,IIT Roorkee,Civil Engineering,11,36,0.00145,0.00329,19
-iit_roorkee:40,Krishna Mohan Poluri,IIT Roorkee,Biosciences and Bioengineering,16,43,0.00211,0.00325,9
-iit_ropar:247,Mukesh Kumar,IIT Ropar,Physics,18,41,0.00237,0.0034,24
-iit_ropar:200,Harpreet Singh,IIT Ropar,Mechanical Engineering,19,80,0.0025,0.00324,1
-iit_ropar:129,Brajesh Rawat,IIT Ropar,Electrical Engineering,8,16,0.00105,0.00286,36
-iit_ropar:76,Naveen James,IIT Ropar,Civil Engineering,10,24,0.00132,0.00204,8
-iit_ropar:249,Rajeev Ahuja,IIT Ropar,Physics,15,37,0.00197,0.00199,15
-iit_ropar:199,Ekta Singla,IIT Ropar,Mechanical Engineering,12,38,0.00158,0.00186,1
-iit_ropar:82,Reet Kamal Tiwari,IIT Ropar,Civil Engineering,10,22,0.00132,0.00173,8
-iit_ropar:79,Raheena M.,IIT Ropar,Civil Engineering,5,9,0.00066,0.00146,1
-iit_ropar:132,Devarshi Mrinal Das,IIT Ropar,Electrical Engineering,8,46,0.00105,0.00145,36
-iit_ropar:208,Prabhat K. Agnihotri,IIT Ropar,Mechanical Engineering,11,54,0.00145,0.00144,1
-iit_bombay:474,Subimal Ghosh,IIT Bombay,Civil Engineering,22,60,0.0029,0.00764,20
-iit_bombay:1187,Dinesh Kabra,IIT Bombay,Physics,32,79,0.00421,0.00756,3
-iit_bombay:306,Arnab Dutta,IIT Bombay,Chemistry,23,63,0.00303,0.00592,5
-iit_bombay:624,Vikram Vishal,IIT Bombay,Earth Sciences,16,76,0.00211,0.00553,5
-iit_bombay:1049,Amit Agrawal,IIT Bombay,Mechanical Engineering,24,131,0.00316,0.00539,3
-iit_bombay:304,Anindya Datta,IIT Bombay,Chemistry,25,48,0.00329,0.0053,3
-iit_bombay:458,RAAJ Ramsankaran,IIT Bombay,Civil Engineering,21,38,0.00276,0.00502,20
-iit_bombay:699,Maryam Shojaei Baghini,IIT Bombay,Electrical Engineering,20,129,0.00263,0.00456,3
-iit_bombay:1118,Sushil Mishra,IIT Bombay,Mechanical Engineering,22,93,0.0029,0.00431,3
-iit_bombay:1111,Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,21,79,0.00276,0.00426,3
-iit_madras:647,M S Ramachandra Rao,IIT Madras,Physics,40,156,0.00526,0.00731,1
-iit_madras:281,Ligy Philip,IIT Madras,Civil Engineering,17,36,0.00224,0.00696,1
-iit_madras:199,R Vinu,IIT Madras,Chemical Engineering,19,56,0.0025,0.00633,1
-iit_madras:388,R Sarathi,IIT Madras,Electrical Engineering,27,116,0.00355,0.0061,1
-iit_madras:240,Pradeep Thalappil,IIT Madras,Chemistry,26,86,0.00342,0.00557,1
-iit_madras:294,S M Shiva Nagendra,IIT Madras,Civil Engineering,19,79,0.0025,0.0053,16
-iit_madras:636,Birabar Ranjit Kumar Nanda,IIT Madras,Physics,25,74,0.00329,0.00506,1
-iit_madras:532,Ashis Kumar Sen,IIT Madras,Mechanical Engineering,14,26,0.00184,0.00489,1
-iit_madras:591,Murugaiyan Amirthalingam,IIT Madras,Metallurgical and Materials Engineering,22,48,0.0029,0.00433,1
-iit_madras:340,Ravindran B,IIT Madras,Computer Science and Engineering,16,40,0.00211,0.00415,1
-iit_kanpur:323,L. Behera,IIT Kanpur,Electrical Engineering,28,114,0.00369,0.01132,18
-iit_kanpur:427,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,34,178,0.00447,0.00958,7
-iit_kanpur:95,Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,30,127,0.00395,0.00789,12
-iit_kanpur:193,Tarun Gupta,IIT Kanpur,Civil Engineering,25,91,0.00329,0.00726,16
-iit_kanpur:604,Ashish Garg,IIT Kanpur,Sustainable Energy Engineering,29,144,0.00382,0.00629,12
-iit_kanpur:91,Ashutosh Sharma,IIT Kanpur,Chemical Engineering,15,28,0.00197,0.00456,12
-iit_kanpur:482,Sudhanshu Shekhar Singh,IIT Kanpur,Mathematics and Statistics,22,102,0.0029,0.00399,12
-iit_kanpur:352,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,19,196,0.0025,0.00385,37
-iit_kanpur:425,Kantesh Balani,IIT Kanpur,Materials Science and Engineering,24,71,0.00316,0.0038,12
-iit_kanpur:534,Amit Agarwal,IIT Kanpur,Physics,18,133,0.00237,0.00376,37
-iit_goa:14,Bidhan Pramanick,IIT Goa,Electrical Engineering,6,15,0.00079,0.00146,3
-iit_goa:2,Bidyadhar Subudhi,IIT Goa,Electrical Engineering,6,15,0.00079,0.00078,27
-iit_goa:64,Thaseem Thajudeen,IIT Goa,Mechanical Engineering,9,30,0.00118,0.00064,8
-iit_goa:35,Raja Mitra,IIT Goa,Chemistry,7,9,0.00092,0.00061,8
-iit_goa:57,Sreenath Balakrishnan,IIT Goa,Mechanical Engineering,5,9,0.00066,0.00041,3
-iit_goa:60,Sudipta Kanungo,IIT Goa,Physics,9,9,0.00118,0.00038,9
-iit_goa:20,Harpreet Singh,IIT Goa,Mechanical Engineering,4,10,0.00053,0.00027,4
-iit_goa:81,Abhishek Gupta,IIT Goa,Mechanical Engineering,4,5,0.00053,0.00025,8
-iit_goa:38,Rishikesh Narayan,IIT Goa,Chemistry,4,8,0.00053,0.0002,3
-iit_goa:61,Sujit Kumar Sahoo,IIT Goa,Electrical Engineering,3,3,0.00039,0.0002,6
-iit_tirupati:45,Shihabudheen M. Maliyekkal,IIT Tirupati,Civil and Environmental Engineering,10,18,0.00132,0.00208,30
-iit_tirupati:32,B. Janaki Ramaiah,IIT Tirupati,Civil and Environmental Engineering,12,17,0.00158,0.00183,28
-iit_tirupati:6,Narendra Singh,IIT Tirupati,Chemical Engineering,6,10,0.00079,0.00096,29
-iit_tirupati:126,Aravinda S,IIT Tirupati,Physics,6,17,0.00079,0.00096,30
-iit_tirupati:109,Degala Venkata Kiran,IIT Tirupati,Mechanical Engineering,7,26,0.00092,0.0008,30
-iit_tirupati:135,Reetesh Kumar Gangwar,IIT Tirupati,Physics,5,12,0.00066,0.00076,30
-iit_tirupati:63,N N Murty,IIT Tirupati,Electrical Engineering,4,7,0.00053,0.00066,11
-iit_tirupati:7,Nilesh Choudhary,IIT Tirupati,Chemical Engineering,6,9,0.00079,0.00062,29
-iit_tirupati:29,A. Murali Krishna,IIT Tirupati,Civil and Environmental Engineering,5,10,0.00066,0.00056,28
-iit_tirupati:143,M. V. Kartikeyan,IIT Tirupati,Electrical Engineering,5,5,0.00066,0.00047,9
-iit_patna:133,Anup Kumar Keshri,IIT Patna,Metallurgical and Materials Engineering,15,25,0.00197,0.0064,29
-iit_patna:39,T N Singh,IIT Patna,Civil and Environmental Engineering,13,48,0.00171,0.00561,21
-iit_patna:44,Asif Ekbal,IIT Patna,Computer Science and Engineering,13,55,0.00171,0.00356,21
-iit_patna:42,Arijit Mondal,IIT Patna,Computer Science and Engineering,12,55,0.00158,0.00253,21
-iit_patna:57,Sriparna Saha,IIT Patna,Computer Science and Engineering,11,93,0.00145,0.00186,21
-iit_patna:65,Jawar Singh,IIT Patna,Electrical Engineering,8,21,0.00105,0.00172,6
-iit_patna:50,Rajiv Misra,IIT Patna,Computer Science and Engineering,8,23,0.00105,0.00168,21
-iit_patna:46,Jimson Mathew,IIT Patna,Computer Science and Engineering,12,86,0.00158,0.00163,21
-iit_patna:35,Ramakrishna Bag,IIT Patna,Civil and Environmental Engineering,11,11,0.00145,0.00149,28
-iit_patna:17,Prolay Das,IIT Patna,Chemistry,9,22,0.00118,0.0013,14
-iit_palakkad:187,Santhakumar Mohan,IIT Palakkad,Mechanical Engineering,7,16,0.00092,0.00139,18
-iit_palakkad:40,Praveena Gangadharan,IIT Palakkad,Civil Engineering,6,10,0.00079,0.00107,16
-iit_palakkad:189,Sovan Lal Das,IIT Palakkad,Mechanical Engineering,8,11,0.00105,0.00106,25
-iit_palakkad:30,Athira P,IIT Palakkad,Civil Engineering,8,8,0.00105,0.00094,1
-iit_palakkad:207,Jayakumar Balakrishnan,IIT Palakkad,Physics,8,12,0.00105,0.00089,30
-iit_palakkad:101,M. Sabarimalai Manikandan,IIT Palakkad,Electrical Engineering,5,19,0.00066,0.00079,11
-iit_palakkad:8,Dinesh Jagadeesan,IIT Palakkad,Chemistry,5,9,0.00066,0.00073,4
-iit_palakkad:216,Uma Divakaran,IIT Palakkad,Physics,4,5,0.00053,0.00059,30
-iit_palakkad:206,Bibhu Ranjan Sarangi,IIT Palakkad,Physics,5,9,0.00066,0.00057,25
-iit_palakkad:12,Shanmugaraju Sankarasekaran,IIT Palakkad,Chemistry,5,6,0.00066,0.00042,25
-iit_guwahati:123,Parameswar Krishnan Iyer,IIT Guwahati,Chemistry,23,68,0.00303,0.00495,10
-iit_guwahati:91,Vimal Katiyar,IIT Guwahati,Chemical Engineering,20,99,0.00263,0.00474,8
-iit_guwahati:40,Sachin Kumar,IIT Guwahati,Biosciences and Bioengineering,21,60,0.00276,0.00403,8
-iit_guwahati:214,Sukumar Nandi,IIT Guwahati,Computer Science and Engineering,15,88,0.00197,0.00386,10
-iit_guwahati:66,Kaustubha Mohanty,IIT Guwahati,Chemical Engineering,15,44,0.00197,0.00339,8
-iit_guwahati:64,Dipankar Bandyopadhyay,IIT Guwahati,Chemical Engineering,21,99,0.00276,0.00325,10
-iit_guwahati:485,Pankaj Kalita,IIT Guwahati,School of Energy Science and Engineering,19,67,0.0025,0.00324,8
-iit_guwahati:25,Lalit Mohan Pandey,IIT Guwahati,Biosciences and Bioengineering,19,75,0.0025,0.00316,8
-iit_guwahati:251,Harshal B. Nemade,IIT Guwahati,Electronics and Electrical Engineering,17,68,0.00224,0.00311,10
-iit_guwahati:405,Uday S. Dixit,IIT Guwahati,Mechanical Engineering,17,61,0.00224,0.00309,8
-iit_hyderabad:25,Aravind Kumar Rengan,IIT Hyderabad,Biomedical Engineering,27,83,0.00355,0.00463,14
-iit_hyderabad:46,Kirti Chandra Sahu,IIT Hyderabad,Chemical Engineering,24,95,0.00316,0.00443,10
-iit_hyderabad:201,Shiv Govind Singh,IIT Hyderabad,Electrical Engineering,15,109,0.00197,0.00379,14
-iit_hyderabad:41,Chandra Shekhar Sharma,IIT Hyderabad,Chemical Engineering,16,67,0.00211,0.00335,14
-iit_hyderabad:96,Asif Qureshi,IIT Hyderabad,Civil Engineering,11,28,0.00145,0.00306,16
-iit_hyderabad:132,Bheemarjuna Reddy Tamma,IIT Hyderabad,Computer Science & Engineering,13,99,0.00171,0.00298,17
-iit_hyderabad:205,Sumohana S Channappayya,IIT Hyderabad,Electrical Engineering,14,46,0.00184,0.00255,17
-iit_hyderabad:47,Kishalay Mitra,IIT Hyderabad,Chemical Engineering,15,52,0.00197,0.00253,14
-iit_hyderabad:100,Digvijay S. Pawar,IIT Hyderabad,Civil Engineering,10,29,0.00132,0.0025,17
-iit_hyderabad:172,Abhinav Kumar,IIT Hyderabad,Electrical Engineering,15,60,0.00197,0.0021,17
-iit_bhubaneswar:213,Kisor Kumar Sahu,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",18,37,0.00237,0.00438,32
-iit_bhubaneswar:224,Srikant Gollapudi,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",15,23,0.00197,0.00243,32
-iit_bhubaneswar:32,Rajan Jha,IIT Bhubaneswar,School of Basic Sciences,14,41,0.00184,0.00237,34
-iit_bhubaneswar:209,Amritendu Roy,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",12,32,0.00158,0.00183,32
-iit_bhubaneswar:97,Manoranjan Satpathy,IIT Bhubaneswar,School of Electrical and Computer Sciences,8,24,0.00105,0.00168,32
-iit_bhubaneswar:18,Hemant Kumar,IIT Bhubaneswar,School of Basic Sciences,10,26,0.00132,0.00131,34
-iit_bhubaneswar:26,Niharika Mohapatra,IIT Bhubaneswar,School of Basic Sciences,9,14,0.00118,0.00118,34
-iit_bhubaneswar:89,Debi Prosad Dogra,IIT Bhubaneswar,School of Electrical and Computer Sciences,8,79,0.00105,0.00112,19
-iit_bhubaneswar:59,Debadatta Swain,IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",11,30,0.00145,0.00105,34
-iit_bhubaneswar:86,Chandrashekhar Narayan Bhende,IIT Bhubaneswar,School of Electrical and Computer Sciences,8,21,0.00105,0.00104,11
-iit_bhu:406,Pralay Maiti,IIT (BHU) Varanasi,School of Materials Science and Technology,33,85,0.00434,0.01511,6
-iit_bhu:401,Bhola Nath Pal,IIT (BHU) Varanasi,School of Materials Science and Technology,23,75,0.00303,0.00459,6
-iit_bhu:183,Somak Bhattacharyya,IIT (BHU) Varanasi,Department of Electronics Engineering,15,76,0.00197,0.00448,6
-iit_bhu:23,Santanu Das,IIT (BHU) Varanasi,Department of Ceramic Engineering,21,66,0.00276,0.00365,6
-iit_bhu:407,Rajiv Prakash,IIT (BHU) Varanasi,School of Materials Science and Technology,20,73,0.00263,0.00345,6
-iit_bhu:21,Pradip Kumar Roy,IIT (BHU) Varanasi,Department of Ceramic Engineering,16,28,0.00211,0.00326,6
-iit_bhu:155,Sandip Ghosh,IIT (BHU) Varanasi,Department of Electrical Engineering,14,104,0.00184,0.00302,27
-iit_bhu:294,Nilay Krishna Mukhopadhyay,IIT (BHU) Varanasi,Department of Metallurgical Engineering,20,78,0.00263,0.00299,6
-iit_bhu:131,Sanjay Kumar Singh,IIT (BHU) Varanasi,Department of Computer Science and Engineering,19,59,0.0025,0.00277,6
-iit_bhu:179,Satyabrata Jit,IIT (BHU) Varanasi,Department of Electronics Engineering,15,82,0.00197,0.00263,6
-iit_gandhinagar:1,Dhiraj D Bhatia,IIT Gandhinagar,Biological Sciences and Engineering,25,88,0.00329,0.00444,7
-iit_gandhinagar:35,Sudhanshu Sharma,IIT Gandhinagar,Chemistry,26,62,0.00342,0.00357,7
-iit_gandhinagar:85,Nihar Ranjan Mohapatra,IIT Gandhinagar,Electrical Engineering,15,39,0.00197,0.00277,3
-iit_gandhinagar:166,Babji Srinivasan,IIT Gandhinagar,Chemical Engineering,9,13,0.00118,0.00259,3
-iit_gandhinagar:48,Udit Bhatia,IIT Gandhinagar,Civil Engineering,14,35,0.00184,0.0025,13
-iit_gandhinagar:81,Jhuma Saha,IIT Gandhinagar,Electrical Engineering,6,20,0.00079,0.00138,7
-iit_gandhinagar:57,Anirban Dasgupta,IIT Gandhinagar,Computer Science and Engineering,7,9,0.00092,0.00122,17
-iit_gandhinagar:113,Amit Arora,IIT Gandhinagar,Materials Engineering,12,23,0.00158,0.0012,7
-iit_gandhinagar:64,Neeldhara Misra,IIT Gandhinagar,Computer Science and Engineering,11,15,0.00145,0.00112,17
-iit_gandhinagar:187,Ravi Hegde,IIT Gandhinagar,Electrical Engineering,8,23,0.00105,0.0011,7
-iit_indore:222,Rajesh Kumar,IIT Indore,Physics,26,123,0.00342,0.00615,25
-iit_indore:56,Biswarup Pathak,IIT Indore,Chemistry,23,56,0.00303,0.0057,1
-iit_indore:116,Ram Bilas Pachori,IIT Indore,Electrical Engineering,15,58,0.00197,0.00491,6
-iit_indore:128,Vimal Bhatia,IIT Indore,Electrical Engineering,20,73,0.00263,0.00484,6
-iit_indore:65,Shaikh M Mobin,IIT Indore,Chemistry,21,90,0.00276,0.00392,25
-iit_indore:225,Somaditya Sen,IIT Indore,Physics,8,30,0.00105,0.00276,25
-iit_indore:120,Shaibal Mukherjee,IIT Indore,Electrical Engineering,10,46,0.00132,0.00234,25
-iit_indore:206,Sumanta Samal,IIT Indore,Metallurgical Engineering and Materials Science,13,65,0.00171,0.00221,32
-iit_indore:30,Hem Chandra Jha,IIT Indore,Biosciences and Biomedical Engineering,16,44,0.00211,0.00202,25
-iit_indore:19,Abhirup Datta,IIT Indore,"Astronomy, Astrophysics and Space Engineering",9,69,0.00118,0.00198,25
-iit_mandi:258,Viswanath Balakrishnan,IIT Mandi,School of Mechanical & Materials Engineering,28,56,0.00369,0.00917,12
-iit_mandi:135,Satinder Sharma,IIT Mandi,School of Computing & Electrical Engineering,24,113,0.00316,0.00545,23
-iit_mandi:36,Aditi Halder,IIT Mandi,School of Chemical Sciences,16,34,0.00211,0.00299,7
-iit_mandi:224,Atul Dhar,IIT Mandi,School of Mechanical & Materials Engineering,14,63,0.00184,0.00213,23
-iit_mandi:81,Aditya Nigam,IIT Mandi,School of Computing & Electrical Engineering,13,27,0.00171,0.00191,17
-iit_mandi:259,Ajay Soni,IIT Mandi,School of Physical Sciences,13,20,0.00171,0.00189,23
-iit_mandi:115,Narendra Kumar Dhar,IIT Mandi,School of Computing & Electrical Engineering,10,27,0.00132,0.00165,18
-iit_mandi:30,Shyam Kumar Masakapalli,IIT Mandi,School of Biosciences & Bio Engineering,9,16,0.00118,0.00146,1
-iit_mandi:253,Sunny Zafar,IIT Mandi,School of Mechanical & Materials Engineering,16,70,0.00211,0.00139,23
-iit_mandi:65,Mousumi Mukherjee,IIT Mandi,School of Civil & Environmental Engineering,9,18,0.00118,0.00128,8
-iit_delhi:122,Kamal K. Pant,IIT Delhi,Chemical Engineering,34,143,0.00447,0.0098,4
-iit_delhi:322,B. K. Panigrahi,IIT Delhi,Electrical Engineering,30,297,0.00395,0.00727,11
-iit_delhi:363,Sukumar Mishra,IIT Delhi,Electrical Engineering,24,158,0.00316,0.00661,11
-iit_delhi:211,N. M. Anoop Krishnan,IIT Delhi,Civil Engineering,18,63,0.00237,0.00661,12
-iit_delhi:120,Hariprasad Kodamana,IIT Delhi,Chemical Engineering,17,70,0.00224,0.00562,4
-iit_delhi:324,Brejesh Lall,IIT Delhi,Electrical Engineering,23,132,0.00303,0.00541,11
-iit_delhi:191,Arvind Kumar Nema,IIT Delhi,Civil Engineering,15,34,0.00197,0.00539,5
-iit_delhi:576,Pulak Mohan Pandey,IIT Delhi,Mechanical Engineering,18,60,0.00237,0.00446,8
-iit_delhi:307,Bhim Singh,IIT Delhi,Electrical Engineering,25,281,0.00329,0.00429,11
-iit_delhi:503,Nitya Nand Gosvami,IIT Delhi,Materials Science and Engineering,19,85,0.0025,0.00407,12
-iit_ism:374,Ajay Mandal,IIT (ISM) Dhanbad,Petroleum Engineering,14,56,0.00184,0.00328,5
-iit_ism:61,Niladri Patra,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,13,24,0.00171,0.00327,8
-iit_ism:91,Sarat Kumar Das,IIT (ISM) Dhanbad,Civil Engineering,17,34,0.00224,0.00256,5
-iit_ism:697,Srinivas Pasupuleti,IIT (ISM) Dhanbad,Civil Engineering,21,82,0.00276,0.00245,5
-iit_ism:304,Alok Kumar Das,IIT (ISM) Dhanbad,Mechanical Engineering,11,109,0.00145,0.00243,29
-iit_ism:65,Sagar Pal,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,10,20,0.00132,0.00242,5
-iit_ism:26,Sanjit Kumar Pal,IIT (ISM) Dhanbad,Applied Geophysics,14,30,0.00184,0.00217,5
-iit_ism:153,Vedantham Lakshmi Srinivas,IIT (ISM) Dhanbad,Electrical Engineering,11,33,0.00145,0.00198,27
-iit_ism:357,Dheeraj Kumar,IIT (ISM) Dhanbad,Mining Engineering,12,23,0.00158,0.00197,5
-iit_ism:176,Samrat Mukhopadhyay,IIT (ISM) Dhanbad,Electronics Engineering,8,20,0.00105,0.00189,38
-iit_jodhpur:138,Kumar Mahesh,IIT Jodhpur,Electrical Engineering,16,90,0.00211,0.00624,24
-iit_jodhpur:235,Ambesh Dixit,IIT Jodhpur,Physics,21,63,0.00276,0.00486,12
-iit_jodhpur:211,Ankur Gupta,IIT Jodhpur,Mechanical Engineering,17,43,0.00224,0.00355,24
-iit_jodhpur:100,Debasis Das,IIT Jodhpur,Computer Science and Engineering,10,19,0.00132,0.0033,12
-iit_jodhpur:31,Sudipta Bhattacharyya,IIT Jodhpur,Bioscience and Bioengineering,15,22,0.00197,0.0029,24
-iit_jodhpur:23,Mitali Mukerji,IIT Jodhpur,Bioscience and Bioengineering,8,13,0.00105,0.00208,24
-iit_jodhpur:216,Chandan Pandey,IIT Jodhpur,Mechanical Engineering,12,50,0.00158,0.00197,24
-iit_jodhpur:149,Sandeep Kumar Yadav,IIT Jodhpur,Electrical Engineering,10,28,0.00132,0.00173,12
-iit_jodhpur:28,Raviraj Vankayala,IIT Jodhpur,Bioscience and Bioengineering,17,29,0.00224,0.00148,24
-iit_jodhpur:122,Ajay Agarwal,IIT Jodhpur,Electrical Engineering,13,23,0.00171,0.00146,4
-iit_jammu:59,Suman Banerjee,IIT Jammu,Computer Science & Engineering,8,22,0.00105,0.00283,21
-iit_jammu:66,Ankit Dubey,IIT Jammu,Electrical Engineering,12,48,0.00158,0.0024,21
-iit_jammu:113,Suman Sarkar,IIT Jammu,Materials Engineering,15,46,0.00197,0.00192,7
-iit_jammu:84,Sudhakar Modem,IIT Jammu,Electrical Engineering,9,20,0.00118,0.00156,21
-iit_jammu:149,Ashok Bera,IIT Jammu,Physics,8,9,0.00105,0.00127,30
-iit_jammu:32,Divyesh Varade,IIT Jammu,Civil Engineering,10,13,0.00132,0.00121,20
-iit_jammu:67,Ankur Bansal,IIT Jammu,Electrical Engineering,8,36,0.00105,0.00113,21
-iit_jammu:24,Jayaramulu Kolleboyina,IIT Jammu,Chemistry,8,28,0.00105,0.00093,4
-iit_jammu:70,Badri Narayan Subudhi,IIT Jammu,Electrical Engineering,7,67,0.00092,0.0006,21
-iit_jammu:19,Ravi Kumar Arun,IIT Jammu,Chemical Engineering,5,10,0.00066,0.00059,10
-iit_bhilai:24,Santosh Biswas,IIT Bhilai,Computer Science and Engineering,9,22,0.00118,0.00201,10
-iit_bhilai:58,Rajiv Prakash,IIT Bhilai,Materials Science and Metallurgical Engineering,8,12,0.00105,0.0016,25
-iit_bhilai:12,Sanjib Banerjee,IIT Bhilai,Chemistry,6,9,0.00079,0.00097,24
-iit_bhilai:30,Avishek Adhikary,IIT Bhilai,Electrical Engineering,8,19,0.00105,0.00095,2
-iit_bhilai:25,Sk Subidh Ali,IIT Bhilai,Computer Science and Engineering,5,7,0.00066,0.00095,10
-iit_bhilai:16,Amit Kumar Dhar,IIT Bhilai,Computer Science and Engineering,4,15,0.00053,0.00094,10
-iit_bhilai:76,Pravesh Chandra Shukla,IIT Bhilai,Mechanical Engineering,7,21,0.00092,0.00086,3
-iit_bhilai:90,Sudhanwa Patra,IIT Bhilai,Physics,4,15,0.00053,0.00082,35
-iit_bhilai:26,Soumajit Pramanik,IIT Bhilai,Computer Science and Engineering,5,10,0.00066,0.00071,2
-iit_bhilai:35,Shailendra Kumar,IIT Bhilai,Electrical Engineering,6,58,0.00079,0.00067,11
-iit_dharwad:52,S R Mahadeva Prasanna,IIT Dharwad,"Electrical, Electronics and Communication Engineering",11,23,0.00145,0.00259,10
-iit_dharwad:26,Achyut Mani Tripathi,IIT Dharwad,Computer Science and Engineering,6,9,0.00079,0.00074,6
-iit_dharwad:3,Sudhanshu Kumar Shukla,IIT Dharwad,Biosciences and Bioengineering,5,16,0.00066,0.00065,10
-iit_dharwad:48,Pratyasa Bhui,IIT Dharwad,"Electrical, Electronics and Communication Engineering",6,15,0.00079,0.00055,33
-iit_dharwad:43,B N Bharath,IIT Dharwad,"Electrical, Electronics and Communication Engineering",4,9,0.00053,0.00046,6
-iit_dharwad:31,Koteswararao Kondepu,IIT Dharwad,Computer Science and Engineering,7,18,0.00092,0.00044,17
-iit_dharwad:25,Venkappayya R. Desai,IIT Dharwad,Civil & Infrastructure Engineering,4,9,0.00053,0.00043,5
-iit_dharwad:4,Surya Pratap Singh,IIT Dharwad,Biosciences and Bioengineering,4,11,0.00053,0.00042,4
-iit_dharwad:33,Rajshekar K,IIT Dharwad,Computer Science and Engineering,5,10,0.00066,0.00034,11
-iit_dharwad:30,Konjengbam Anand,IIT Dharwad,Computer Science and Engineering,3,3,0.00039,0.00034,4
+iit_kharagpur:621,Suman Chakraborty,IIT Kharagpur,Mechanical Engineering,65,246,0.00856,0.02627,5
+iit_kharagpur:630,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,52,304,0.00684,0.01773,10
+iit_kharagpur:442,Abhijit Mukherjee,IIT Kharagpur,Geology and Geophysics,25,91,0.00329,0.00971,10
+iit_kharagpur:290,Pabitra Mitra,IIT Kharagpur,Computer Science and Engineering,32,125,0.00421,0.00949,11
+iit_kharagpur:102,Ramkrishna Sen,IIT Kharagpur,Bioscience and Biotechnology,33,79,0.00434,0.00915,5
+iit_kharagpur:293,Partha Pratim Chakrabarti,IIT Kharagpur,Computer Science and Engineering,24,65,0.00316,0.0086,5
+iit_kharagpur:311,Sudip Misra,IIT Kharagpur,Computer Science and Engineering,18,75,0.00237,0.00845,11
+iit_kharagpur:527,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,35,91,0.00461,0.00837,5
+iit_kharagpur:248,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,27,129,0.00355,0.00716,10
+iit_kharagpur:723,Samit Kumar Ray,IIT Kharagpur,Physics,36,126,0.00474,0.00701,5
+iit_roorkee:43,Partha Roy,IIT Roorkee,Biosciences and Bioengineering,43,180,0.00566,0.0131,3
+iit_roorkee:775,Soumitra Satapathi,IIT Roorkee,Physics,28,73,0.00369,0.00856,6
+iit_roorkee:801,Pradip K. Maji,IIT Roorkee,Polymer and Process Engineering,26,69,0.00342,0.00579,3
+iit_roorkee:192,Chandra Shekhar Prasad Ojha,IIT Roorkee,Civil Engineering,24,95,0.00316,0.0056,3
+iit_roorkee:378,N. P. Padhy,IIT Roorkee,Electrical Engineering,20,118,0.00263,0.0049,29
+iit_roorkee:120,V. C. Srivastava,IIT Roorkee,Chemical Engineering,23,72,0.00303,0.00378,3
+iit_roorkee:435,Sanjeev Manhas,IIT Roorkee,Electronics and Communication Engineering,13,32,0.00171,0.00361,32
+iit_roorkee:57,Saugata Hazra,IIT Roorkee,Biosciences and Bioengineering,14,32,0.00184,0.0034,3
+iit_roorkee:262,Partha Pratim Roy,IIT Roorkee,Computer Science and Engineering,12,86,0.00158,0.00335,3
+iit_roorkee:189,Bhola Ram Gurjar,IIT Roorkee,Civil Engineering,11,36,0.00145,0.00331,3
+iit_ropar:247,Mukesh Kumar,IIT Ropar,Physics,18,41,0.00237,0.00345,16
+iit_ropar:200,Harpreet Singh,IIT Ropar,Mechanical Engineering,19,80,0.0025,0.00343,24
+iit_ropar:129,Brajesh Rawat,IIT Ropar,Electrical Engineering,8,16,0.00105,0.00295,32
+iit_ropar:76,Naveen James,IIT Ropar,Civil Engineering,10,24,0.00132,0.00226,24
+iit_ropar:249,Rajeev Ahuja,IIT Ropar,Physics,15,37,0.00197,0.00198,7
+iit_ropar:199,Ekta Singla,IIT Ropar,Mechanical Engineering,12,38,0.00158,0.00186,24
+iit_ropar:82,Reet Kamal Tiwari,IIT Ropar,Civil Engineering,10,22,0.00132,0.0018,24
+iit_ropar:208,Prabhat K. Agnihotri,IIT Ropar,Mechanical Engineering,12,54,0.00158,0.00158,24
+iit_ropar:132,Devarshi Mrinal Das,IIT Ropar,Electrical Engineering,8,46,0.00105,0.00146,32
+iit_ropar:79,Raheena M.,IIT Ropar,Civil Engineering,5,9,0.00066,0.00143,1
+iit_bombay:474,Subimal Ghosh,IIT Bombay,Civil Engineering,22,60,0.0029,0.00772,22
+iit_bombay:1187,Dinesh Kabra,IIT Bombay,Physics,32,79,0.00421,0.00763,7
+iit_bombay:306,Arnab Dutta,IIT Bombay,Chemistry,23,63,0.00303,0.00602,4
+iit_bombay:624,Vikram Vishal,IIT Bombay,Earth Sciences,16,76,0.00211,0.0056,4
+iit_bombay:1049,Amit Agrawal,IIT Bombay,Mechanical Engineering,24,131,0.00316,0.00547,19
+iit_bombay:304,Anindya Datta,IIT Bombay,Chemistry,25,48,0.00329,0.00533,7
+iit_bombay:458,RAAJ Ramsankaran,IIT Bombay,Civil Engineering,21,38,0.00276,0.00503,22
+iit_bombay:699,Maryam Shojaei Baghini,IIT Bombay,Electrical Engineering,20,129,0.00263,0.00457,7
+iit_bombay:1118,Sushil Mishra,IIT Bombay,Mechanical Engineering,22,93,0.0029,0.00432,19
+iit_bombay:1111,Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,21,79,0.00276,0.00426,19
+iit_madras:647,M S Ramachandra Rao,IIT Madras,Physics,40,156,0.00527,0.00738,1
+iit_madras:281,Ligy Philip,IIT Madras,Civil Engineering,17,36,0.00224,0.00708,1
+iit_madras:199,R Vinu,IIT Madras,Chemical Engineering,19,56,0.0025,0.00617,1
+iit_madras:388,R Sarathi,IIT Madras,Electrical Engineering,27,116,0.00355,0.00602,1
+iit_madras:240,Pradeep Thalappil,IIT Madras,Chemistry,26,87,0.00342,0.00551,1
+iit_madras:294,S M Shiva Nagendra,IIT Madras,Civil Engineering,19,79,0.0025,0.00533,1
+iit_madras:636,Birabar Ranjit Kumar Nanda,IIT Madras,Physics,25,74,0.00329,0.0051,1
+iit_madras:532,Ashis Kumar Sen,IIT Madras,Mechanical Engineering,14,26,0.00184,0.00493,1
+iit_madras:591,Murugaiyan Amirthalingam,IIT Madras,Metallurgical and Materials Engineering,22,48,0.0029,0.0043,1
+iit_madras:340,Ravindran B,IIT Madras,Computer Science and Engineering,16,40,0.00211,0.00414,1
+iit_kanpur:323,L. Behera,IIT Kanpur,Electrical Engineering,28,114,0.00369,0.01138,17
+iit_kanpur:427,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,34,178,0.00448,0.00959,10
+iit_kanpur:95,Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,30,127,0.00395,0.00797,13
+iit_kanpur:193,Tarun Gupta,IIT Kanpur,Civil Engineering,25,91,0.00329,0.0073,13
+iit_kanpur:604,Ashish Garg,IIT Kanpur,Sustainable Energy Engineering,29,144,0.00382,0.00629,13
+iit_kanpur:91,Ashutosh Sharma,IIT Kanpur,Chemical Engineering,15,28,0.00197,0.00462,13
+iit_kanpur:482,Sudhanshu Shekhar Singh,IIT Kanpur,Mathematics and Statistics,22,102,0.0029,0.00399,6
+iit_kanpur:425,Kantesh Balani,IIT Kanpur,Materials Science and Engineering,24,71,0.00316,0.00388,10
+iit_kanpur:352,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,19,196,0.0025,0.00386,34
+iit_kanpur:534,Amit Agarwal,IIT Kanpur,Physics,18,133,0.00237,0.00378,34
+iit_goa:14,Bidhan Pramanick,IIT Goa,Electrical Engineering,6,15,0.00079,0.00145,7
+iit_goa:2,Bidyadhar Subudhi,IIT Goa,Electrical Engineering,6,15,0.00079,0.00079,26
+iit_goa:64,Thaseem Thajudeen,IIT Goa,Mechanical Engineering,9,30,0.00118,0.00064,7
+iit_goa:35,Raja Mitra,IIT Goa,Chemistry,7,9,0.00092,0.00061,9
+iit_goa:57,Sreenath Balakrishnan,IIT Goa,Mechanical Engineering,5,9,0.00066,0.00041,7
+iit_goa:60,Sudipta Kanungo,IIT Goa,Physics,9,9,0.00118,0.00038,3
+iit_goa:20,Harpreet Singh,IIT Goa,Mechanical Engineering,4,10,0.00053,0.00027,6
+iit_goa:81,Abhishek Gupta,IIT Goa,Mechanical Engineering,4,5,0.00053,0.00025,7
+iit_goa:38,Rishikesh Narayan,IIT Goa,Chemistry,4,8,0.00053,0.0002,7
+iit_goa:61,Sujit Kumar Sahoo,IIT Goa,Electrical Engineering,3,3,0.00039,0.0002,8
+iit_tirupati:45,Shihabudheen M. Maliyekkal,IIT Tirupati,Civil and Environmental Engineering,10,18,0.00132,0.0021,20
+iit_tirupati:32,B. Janaki Ramaiah,IIT Tirupati,Civil and Environmental Engineering,12,17,0.00158,0.00183,20
+iit_tirupati:6,Narendra Singh,IIT Tirupati,Chemical Engineering,6,10,0.00079,0.00098,4
+iit_tirupati:126,Aravinda S,IIT Tirupati,Physics,6,17,0.00079,0.00095,9
+iit_tirupati:109,Degala Venkata Kiran,IIT Tirupati,Mechanical Engineering,7,26,0.00092,0.0008,20
+iit_tirupati:135,Reetesh Kumar Gangwar,IIT Tirupati,Physics,5,12,0.00066,0.00076,20
+iit_tirupati:63,N N Murty,IIT Tirupati,Electrical Engineering,4,7,0.00053,0.00066,8
+iit_tirupati:7,Nilesh Choudhary,IIT Tirupati,Chemical Engineering,6,9,0.00079,0.00063,4
+iit_tirupati:29,A. Murali Krishna,IIT Tirupati,Civil and Environmental Engineering,5,10,0.00066,0.00056,20
+iit_tirupati:143,M. V. Kartikeyan,IIT Tirupati,Electrical Engineering,5,5,0.00066,0.00047,3
+iit_patna:133,Anup Kumar Keshri,IIT Patna,Metallurgical and Materials Engineering,15,25,0.00197,0.00648,15
+iit_patna:39,T N Singh,IIT Patna,Civil and Environmental Engineering,13,48,0.00171,0.00561,27
+iit_patna:44,Asif Ekbal,IIT Patna,Computer Science and Engineering,13,55,0.00171,0.00352,27
+iit_patna:42,Arijit Mondal,IIT Patna,Computer Science and Engineering,12,55,0.00158,0.00242,27
+iit_patna:57,Sriparna Saha,IIT Patna,Computer Science and Engineering,11,93,0.00145,0.00186,27
+iit_patna:65,Jawar Singh,IIT Patna,Electrical Engineering,8,21,0.00105,0.00172,9
+iit_patna:50,Rajiv Misra,IIT Patna,Computer Science and Engineering,8,23,0.00105,0.00168,27
+iit_patna:46,Jimson Mathew,IIT Patna,Computer Science and Engineering,12,86,0.00158,0.00163,27
+iit_patna:35,Ramakrishna Bag,IIT Patna,Civil and Environmental Engineering,11,11,0.00145,0.0015,20
+iit_patna:17,Prolay Das,IIT Patna,Chemistry,9,22,0.00118,0.00131,15
+iit_palakkad:187,Santhakumar Mohan,IIT Palakkad,Mechanical Engineering,7,16,0.00092,0.00139,17
+iit_palakkad:40,Praveena Gangadharan,IIT Palakkad,Civil Engineering,6,10,0.00079,0.00109,1
+iit_palakkad:189,Sovan Lal Das,IIT Palakkad,Mechanical Engineering,8,11,0.00105,0.00108,23
+iit_palakkad:30,Athira P,IIT Palakkad,Civil Engineering,8,8,0.00105,0.00095,1
+iit_palakkad:207,Jayakumar Balakrishnan,IIT Palakkad,Physics,8,12,0.00105,0.00089,37
+iit_palakkad:101,M. Sabarimalai Manikandan,IIT Palakkad,Electrical Engineering,5,19,0.00066,0.00078,8
+iit_palakkad:8,Dinesh Jagadeesan,IIT Palakkad,Chemistry,5,9,0.00066,0.00074,6
+iit_palakkad:216,Uma Divakaran,IIT Palakkad,Physics,4,5,0.00053,0.00059,9
+iit_palakkad:206,Bibhu Ranjan Sarangi,IIT Palakkad,Physics,5,9,0.00066,0.00057,23
+iit_palakkad:12,Shanmugaraju Sankarasekaran,IIT Palakkad,Chemistry,5,6,0.00066,0.00043,23
+iit_guwahati:123,Parameswar Krishnan Iyer,IIT Guwahati,Chemistry,23,68,0.00303,0.00517,2
+iit_guwahati:91,Vimal Katiyar,IIT Guwahati,Chemical Engineering,20,99,0.00263,0.00497,2
+iit_guwahati:40,Sachin Kumar,IIT Guwahati,Biosciences and Bioengineering,21,60,0.00276,0.00415,2
+iit_guwahati:214,Sukumar Nandi,IIT Guwahati,Computer Science and Engineering,15,88,0.00197,0.00372,21
+iit_guwahati:25,Lalit Mohan Pandey,IIT Guwahati,Biosciences and Bioengineering,19,75,0.0025,0.00338,2
+iit_guwahati:64,Dipankar Bandyopadhyay,IIT Guwahati,Chemical Engineering,21,99,0.00276,0.0033,2
+iit_guwahati:66,Kaustubha Mohanty,IIT Guwahati,Chemical Engineering,15,44,0.00197,0.00328,2
+iit_guwahati:485,Pankaj Kalita,IIT Guwahati,School of Energy Science and Engineering,19,67,0.0025,0.00322,2
+iit_guwahati:251,Harshal B. Nemade,IIT Guwahati,Electronics and Electrical Engineering,17,68,0.00224,0.0032,2
+iit_guwahati:405,Uday S. Dixit,IIT Guwahati,Mechanical Engineering,17,61,0.00224,0.00314,2
+iit_hyderabad:25,Aravind Kumar Rengan,IIT Hyderabad,Biomedical Engineering,27,83,0.00355,0.00472,15
+iit_hyderabad:46,Kirti Chandra Sahu,IIT Hyderabad,Chemical Engineering,24,95,0.00316,0.00448,2
+iit_hyderabad:201,Shiv Govind Singh,IIT Hyderabad,Electrical Engineering,15,109,0.00197,0.00383,15
+iit_hyderabad:41,Chandra Shekhar Sharma,IIT Hyderabad,Chemical Engineering,16,67,0.00211,0.00344,15
+iit_hyderabad:96,Asif Qureshi,IIT Hyderabad,Civil Engineering,11,28,0.00145,0.00312,13
+iit_hyderabad:132,Bheemarjuna Reddy Tamma,IIT Hyderabad,Computer Science & Engineering,13,99,0.00171,0.00299,14
+iit_hyderabad:205,Sumohana S Channappayya,IIT Hyderabad,Electrical Engineering,14,46,0.00184,0.00256,14
+iit_hyderabad:47,Kishalay Mitra,IIT Hyderabad,Chemical Engineering,15,52,0.00197,0.00251,15
+iit_hyderabad:100,Digvijay S. Pawar,IIT Hyderabad,Civil Engineering,10,29,0.00132,0.00246,14
+iit_hyderabad:172,Abhinav Kumar,IIT Hyderabad,Electrical Engineering,15,60,0.00197,0.00209,14
+iit_bhubaneswar:213,Kisor Kumar Sahu,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",17,37,0.00224,0.00363,30
+iit_bhubaneswar:224,Srikant Gollapudi,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",15,23,0.00197,0.00239,30
+iit_bhubaneswar:32,Rajan Jha,IIT Bhubaneswar,School of Basic Sciences,14,41,0.00184,0.00239,31
+iit_bhubaneswar:209,Amritendu Roy,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",12,32,0.00158,0.00188,30
+iit_bhubaneswar:18,Hemant Kumar,IIT Bhubaneswar,School of Basic Sciences,10,26,0.00132,0.00132,31
+iit_bhubaneswar:97,Manoranjan Satpathy,IIT Bhubaneswar,School of Electrical and Computer Sciences,8,24,0.00105,0.00123,30
+iit_bhubaneswar:26,Niharika Mohapatra,IIT Bhubaneswar,School of Basic Sciences,9,14,0.00118,0.00118,31
+iit_bhubaneswar:206,Venugopal Arumuru,IIT Bhubaneswar,School of Mechanical Sciences,7,25,0.00092,0.00113,31
+iit_bhubaneswar:122,Subhransu Ranjan Samantaray,IIT Bhubaneswar,School of Electrical and Computer Sciences,10,29,0.00132,0.00106,8
+iit_bhubaneswar:89,Debi Prosad Dogra,IIT Bhubaneswar,School of Electrical and Computer Sciences,8,80,0.00105,0.00105,3
+iit_bhu:406,Pralay Maiti,IIT (BHU) Varanasi,School of Materials Science and Technology,33,85,0.00434,0.01548,9
+iit_bhu:183,Somak Bhattacharyya,IIT (BHU) Varanasi,Department of Electronics Engineering,15,76,0.00197,0.00441,9
+iit_bhu:401,Bhola Nath Pal,IIT (BHU) Varanasi,School of Materials Science and Technology,22,75,0.0029,0.00398,9
+iit_bhu:23,Santanu Das,IIT (BHU) Varanasi,Department of Ceramic Engineering,21,66,0.00276,0.00355,9
+iit_bhu:407,Rajiv Prakash,IIT (BHU) Varanasi,School of Materials Science and Technology,21,75,0.00276,0.00354,9
+iit_bhu:131,Sanjay Kumar Singh,IIT (BHU) Varanasi,Department of Computer Science and Engineering,20,59,0.00263,0.00338,9
+iit_bhu:21,Pradip Kumar Roy,IIT (BHU) Varanasi,Department of Ceramic Engineering,16,28,0.00211,0.00318,9
+iit_bhu:294,Nilay Krishna Mukhopadhyay,IIT (BHU) Varanasi,Department of Metallurgical Engineering,20,78,0.00263,0.00299,9
+iit_bhu:155,Sandip Ghosh,IIT (BHU) Varanasi,Department of Electrical Engineering,14,103,0.00184,0.00299,26
+iit_bhu:179,Satyabrata Jit,IIT (BHU) Varanasi,Department of Electronics Engineering,15,82,0.00197,0.00263,9
+iit_gandhinagar:1,Dhiraj D Bhatia,IIT Gandhinagar,Biological Sciences and Engineering,25,88,0.00329,0.00452,10
+iit_gandhinagar:35,Sudhanshu Sharma,IIT Gandhinagar,Chemistry,26,62,0.00342,0.00364,10
+iit_gandhinagar:85,Nihar Ranjan Mohapatra,IIT Gandhinagar,Electrical Engineering,15,39,0.00197,0.00279,7
+iit_gandhinagar:166,Babji Srinivasan,IIT Gandhinagar,Chemical Engineering,8,11,0.00105,0.00256,7
+iit_gandhinagar:48,Udit Bhatia,IIT Gandhinagar,Civil Engineering,14,35,0.00184,0.00248,22
+iit_gandhinagar:81,Jhuma Saha,IIT Gandhinagar,Electrical Engineering,6,20,0.00079,0.00137,10
+iit_gandhinagar:57,Anirban Dasgupta,IIT Gandhinagar,Computer Science and Engineering,7,9,0.00092,0.00122,14
+iit_gandhinagar:113,Amit Arora,IIT Gandhinagar,Materials Engineering,12,23,0.00158,0.00121,10
+iit_gandhinagar:187,Ravi Hegde,IIT Gandhinagar,Electrical Engineering,8,23,0.00105,0.00119,10
+iit_gandhinagar:33,Saumyakanti Khatua,IIT Gandhinagar,Chemistry,20,39,0.00263,0.00112,10
+iit_indore:222,Rajesh Kumar,IIT Indore,Physics,26,123,0.00342,0.00652,23
+iit_indore:56,Biswarup Pathak,IIT Indore,Chemistry,24,58,0.00316,0.00579,1
+iit_indore:116,Ram Bilas Pachori,IIT Indore,Electrical Engineering,15,58,0.00197,0.00493,8
+iit_indore:128,Vimal Bhatia,IIT Indore,Electrical Engineering,20,73,0.00263,0.0048,8
+iit_indore:65,Shaikh M Mobin,IIT Indore,Chemistry,21,90,0.00276,0.00399,23
+iit_indore:225,Somaditya Sen,IIT Indore,Physics,8,30,0.00105,0.00276,23
+iit_indore:120,Shaibal Mukherjee,IIT Indore,Electrical Engineering,10,46,0.00132,0.00234,23
+iit_indore:206,Sumanta Samal,IIT Indore,Metallurgical Engineering and Materials Science,13,65,0.00171,0.00221,30
+iit_indore:30,Hem Chandra Jha,IIT Indore,Biosciences and Biomedical Engineering,16,44,0.00211,0.00207,23
+iit_indore:19,Abhirup Datta,IIT Indore,"Astronomy, Astrophysics and Space Engineering",9,69,0.00118,0.00198,23
+iit_mandi:258,Viswanath Balakrishnan,IIT Mandi,School of Mechanical & Materials Engineering,28,56,0.00369,0.00931,6
+iit_mandi:135,Satinder Sharma,IIT Mandi,School of Computing & Electrical Engineering,24,113,0.00316,0.0055,17
+iit_mandi:36,Aditi Halder,IIT Mandi,School of Chemical Sciences,16,34,0.00211,0.00303,10
+iit_mandi:224,Atul Dhar,IIT Mandi,School of Mechanical & Materials Engineering,14,63,0.00184,0.00216,28
+iit_mandi:81,Aditya Nigam,IIT Mandi,School of Computing & Electrical Engineering,13,27,0.00171,0.00191,14
+iit_mandi:259,Ajay Soni,IIT Mandi,School of Physical Sciences,13,20,0.00171,0.00191,17
+iit_mandi:115,Narendra Kumar Dhar,IIT Mandi,School of Computing & Electrical Engineering,10,27,0.00132,0.00166,17
+iit_mandi:30,Shyam Kumar Masakapalli,IIT Mandi,School of Biosciences & Bio Engineering,9,16,0.00118,0.00145,1
+iit_mandi:253,Sunny Zafar,IIT Mandi,School of Mechanical & Materials Engineering,16,70,0.00211,0.00138,28
+iit_mandi:65,Mousumi Mukherjee,IIT Mandi,School of Civil & Environmental Engineering,9,18,0.00118,0.00127,2
+iit_delhi:122,Kamal K. Pant,IIT Delhi,Chemical Engineering,27,116,0.00355,0.0076,6
+iit_delhi:322,B. K. Panigrahi,IIT Delhi,Electrical Engineering,30,297,0.00395,0.00715,8
+iit_delhi:363,Sukumar Mishra,IIT Delhi,Electrical Engineering,24,158,0.00316,0.00662,8
+iit_delhi:211,N. M. Anoop Krishnan,IIT Delhi,Civil Engineering,18,63,0.00237,0.00656,6
+iit_delhi:120,Hariprasad Kodamana,IIT Delhi,Chemical Engineering,17,70,0.00224,0.00555,6
+iit_delhi:324,Brejesh Lall,IIT Delhi,Electrical Engineering,23,132,0.00303,0.00543,8
+iit_delhi:191,Arvind Kumar Nema,IIT Delhi,Civil Engineering,15,34,0.00197,0.00542,4
+iit_delhi:576,Pulak Mohan Pandey,IIT Delhi,Mechanical Engineering,18,60,0.00237,0.00454,2
+iit_delhi:307,Bhim Singh,IIT Delhi,Electrical Engineering,25,281,0.00329,0.00433,8
+iit_delhi:383,Dibakar Rakshit,IIT Delhi,Energy Science and Engineering,13,49,0.00171,0.00415,8
+iit_ism:374,Ajay Mandal,IIT (ISM) Dhanbad,Petroleum Engineering,14,56,0.00184,0.00365,4
+iit_ism:61,Niladri Patra,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,13,24,0.00171,0.00347,2
+iit_ism:91,Sarat Kumar Das,IIT (ISM) Dhanbad,Civil Engineering,17,34,0.00224,0.00258,4
+iit_ism:304,Alok Kumar Das,IIT (ISM) Dhanbad,Mechanical Engineering,11,109,0.00145,0.00251,4
+iit_ism:65,Sagar Pal,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,10,20,0.00132,0.00248,4
+iit_ism:697,Srinivas Pasupuleti,IIT (ISM) Dhanbad,Civil Engineering,21,82,0.00276,0.0024,4
+iit_ism:26,Sanjit Kumar Pal,IIT (ISM) Dhanbad,Applied Geophysics,14,30,0.00184,0.00219,4
+iit_ism:357,Dheeraj Kumar,IIT (ISM) Dhanbad,Mining Engineering,12,23,0.00158,0.00198,4
+iit_ism:153,Vedantham Lakshmi Srinivas,IIT (ISM) Dhanbad,Electrical Engineering,11,33,0.00145,0.00198,26
+iit_ism:406,R. Thangavel,IIT (ISM) Dhanbad,Physics,9,19,0.00118,0.00196,4
+iit_jodhpur:138,Kumar Mahesh,IIT Jodhpur,Electrical Engineering,16,90,0.00211,0.00629,16
+iit_jodhpur:235,Ambesh Dixit,IIT Jodhpur,Physics,21,63,0.00276,0.00486,16
+iit_jodhpur:211,Ankur Gupta,IIT Jodhpur,Mechanical Engineering,17,43,0.00224,0.00355,16
+iit_jodhpur:100,Debasis Das,IIT Jodhpur,Computer Science and Engineering,10,19,0.00132,0.00332,16
+iit_jodhpur:31,Sudipta Bhattacharyya,IIT Jodhpur,Bioscience and Bioengineering,15,22,0.00197,0.00287,5
+iit_jodhpur:23,Mitali Mukerji,IIT Jodhpur,Bioscience and Bioengineering,8,13,0.00105,0.00208,5
+iit_jodhpur:216,Chandan Pandey,IIT Jodhpur,Mechanical Engineering,12,52,0.00158,0.00198,16
+iit_jodhpur:149,Sandeep Kumar Yadav,IIT Jodhpur,Electrical Engineering,10,28,0.00132,0.00172,16
+iit_jodhpur:28,Raviraj Vankayala,IIT Jodhpur,Bioscience and Bioengineering,17,29,0.00224,0.00149,16
+iit_jodhpur:122,Ajay Agarwal,IIT Jodhpur,Electrical Engineering,13,23,0.00171,0.00148,16
+iit_jammu:59,Suman Banerjee,IIT Jammu,Computer Science & Engineering,8,22,0.00105,0.00268,14
+iit_jammu:66,Ankit Dubey,IIT Jammu,Electrical Engineering,12,48,0.00158,0.00252,14
+iit_jammu:113,Suman Sarkar,IIT Jammu,Materials Engineering,15,46,0.00197,0.00192,10
+iit_jammu:84,Sudhakar Modem,IIT Jammu,Electrical Engineering,9,20,0.00118,0.00153,14
+iit_jammu:149,Ashok Bera,IIT Jammu,Physics,8,9,0.00105,0.00128,37
+iit_jammu:32,Divyesh Varade,IIT Jammu,Civil Engineering,10,13,0.00132,0.00123,3
+iit_jammu:67,Ankur Bansal,IIT Jammu,Electrical Engineering,8,36,0.00105,0.00115,14
+iit_jammu:24,Jayaramulu Kolleboyina,IIT Jammu,Chemistry,8,28,0.00105,0.00093,6
+iit_jammu:70,Badri Narayan Subudhi,IIT Jammu,Electrical Engineering,7,67,0.00092,0.00062,14
+iit_jammu:19,Ravi Kumar Arun,IIT Jammu,Chemical Engineering,5,10,0.00066,0.00058,2
+iit_bhilai:24,Santosh Biswas,IIT Bhilai,Computer Science and Engineering,9,21,0.00118,0.00182,21
+iit_bhilai:58,Rajiv Prakash,IIT Bhilai,Materials Science and Metallurgical Engineering,6,10,0.00079,0.00115,23
+iit_bhilai:12,Sanjib Banerjee,IIT Bhilai,Chemistry,6,9,0.00079,0.00101,36
+iit_bhilai:25,Sk Subidh Ali,IIT Bhilai,Computer Science and Engineering,5,7,0.00066,0.00101,21
+iit_bhilai:76,Pravesh Chandra Shukla,IIT Bhilai,Mechanical Engineering,7,21,0.00092,0.00092,19
+iit_bhilai:16,Amit Kumar Dhar,IIT Bhilai,Computer Science and Engineering,4,15,0.00053,0.00092,21
+iit_bhilai:30,Avishek Adhikary,IIT Bhilai,Electrical Engineering,8,19,0.00105,0.00091,11
+iit_bhilai:90,Sudhanwa Patra,IIT Bhilai,Physics,4,15,0.00053,0.00082,33
+iit_bhilai:7,Katchala Nanaji,IIT Bhilai,Chemistry,5,6,0.00066,0.00072,23
+iit_bhilai:35,Shailendra Kumar,IIT Bhilai,Electrical Engineering,6,58,0.00079,0.00071,8
+iit_dharwad:52,S R Mahadeva Prasanna,IIT Dharwad,"Electrical, Electronics and Communication Engineering",10,20,0.00132,0.00222,21
+iit_dharwad:26,Achyut Mani Tripathi,IIT Dharwad,Computer Science and Engineering,6,9,0.00079,0.00074,9
+iit_dharwad:3,Sudhanshu Kumar Shukla,IIT Dharwad,Biosciences and Bioengineering,5,16,0.00066,0.00064,21
+iit_dharwad:21,Aniket Vasantrao Kataware,IIT Dharwad,Civil & Infrastructure Engineering,3,4,0.00039,0.00059,13
+iit_dharwad:48,Pratyasa Bhui,IIT Dharwad,"Electrical, Electronics and Communication Engineering",6,15,0.00079,0.00055,29
+iit_dharwad:43,B N Bharath,IIT Dharwad,"Electrical, Electronics and Communication Engineering",4,9,0.00053,0.00047,8
+iit_dharwad:31,Koteswararao Kondepu,IIT Dharwad,Computer Science and Engineering,7,18,0.00092,0.00044,14
+iit_dharwad:4,Surya Pratap Singh,IIT Dharwad,Biosciences and Bioengineering,4,11,0.00053,0.00041,6
+iit_dharwad:25,Venkappayya R. Desai,IIT Dharwad,Civil & Infrastructure Engineering,3,7,0.00039,0.0004,13
+iit_dharwad:33,Rajshekar K,IIT Dharwad,Computer Science and Engineering,5,10,0.00066,0.00034,8

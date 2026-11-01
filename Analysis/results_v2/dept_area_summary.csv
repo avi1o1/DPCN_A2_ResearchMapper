@@ -1,7 +1,7 @@
 ﻿metric,value
 "departments (>= 5 faculty, >= 100 papers)",260
 OpenAlex subfields in our papers,129
-papers without a subfield (left out),884
+papers without a subfield (left out),906
 check: departments whose paper count differs from departments.csv,0
 "fitness-complexity: departments with no strong subfield (no fitness, left out of the map)",0
 "fitness-complexity: ranking stability, Spearman of fitness after 50 and 100 steps",0.9999

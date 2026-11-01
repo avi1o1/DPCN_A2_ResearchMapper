@@ -1,21 +1,21 @@
 ﻿rank,faculty,institution,department,campus_ratio_lost,degree,rank_betweenness,rank_degree,direct_cross_campus_coauthors
-1,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,0.2189,52,2,2,1
-2,Narayan Chandra Das,IIT Kharagpur,Rubber Technology,0.1271,31,87,13,1
-3,Pradip K. Maji,IIT Roorkee,Polymer and Process Engineering,0.1223,26,34,26,6
-4,Samit Kumar Ray,IIT Kharagpur,Physics,0.1111,36,24,5,0
-5,Santanu Chattopadhyay,IIT Kharagpur,Rubber Technology,0.1039,28,125,18,2
-6,Vivek Kumar Malik,IIT Roorkee,Physics,0.0944,19,189,100,4
-7,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,0.0919,35,14,6,1
-8,Susanta Banerjee,IIT Kharagpur,Materials Science Centre,0.0801,26,56,26,1
-9,Dipak Kumar Goswami,IIT Kharagpur,Physics,0.0642,27,70,22,0
-10,Prasanta Kumar Datta,IIT Kharagpur,Physics,0.0458,22,59,59,2
-11,Titash Mondal,IIT Kharagpur,Rubber Technology,0.0455,17,167,142,1
-12,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,0.0447,27,22,22,1
-13,Pralay Maiti,IIT (BHU) Varanasi,School of Materials Science and Technology,0.0417,33,3,9,3
-14,Paritosh Mohanty,IIT Roorkee,Chemistry,0.0401,15,269,212,1
-15,Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,0.0396,30,16,14,3
-16,Rahul Mitra,IIT Kharagpur,Metallurgical and Materials Engineering,0.038,18,108,121,1
-17,Manas Paliwal,IIT Kharagpur,Metallurgical and Materials Engineering,0.0354,23,211,52,1
-18,Amit Kumar Das,IIT Kharagpur,Bioscience and Biotechnology,0.0353,25,168,32,0
-19,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.0343,34,9,7,5
-20,Ramkrishna Sen,IIT Kharagpur,Bioscience and Biotechnology,0.0339,33,10,9,0
+1,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,0.2218,52,2,2,1
+2,Narayan Chandra Das,IIT Kharagpur,Rubber Technology,0.1282,31,85,12,1
+3,Pradip K. Maji,IIT Roorkee,Polymer and Process Engineering,0.1211,26,34,26,6
+4,Samit Kumar Ray,IIT Kharagpur,Physics,0.1103,36,24,5,0
+5,Santanu Chattopadhyay,IIT Kharagpur,Rubber Technology,0.1044,28,130,17,2
+6,Vivek Kumar Malik,IIT Roorkee,Physics,0.0947,19,190,102,4
+7,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,0.0929,35,14,6,1
+8,Susanta Banerjee,IIT Kharagpur,Materials Science Centre,0.0808,26,56,26,1
+9,Dipak Kumar Goswami,IIT Kharagpur,Physics,0.0673,27,61,21,0
+10,Prasanta Kumar Datta,IIT Kharagpur,Physics,0.0461,22,59,58,2
+11,Titash Mondal,IIT Kharagpur,Rubber Technology,0.0453,17,169,140,1
+12,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,0.0448,27,21,21,1
+13,Pralay Maiti,IIT (BHU) Varanasi,School of Materials Science and Technology,0.0413,33,3,8,3
+14,Paritosh Mohanty,IIT Roorkee,Chemistry,0.0402,15,248,212,1
+15,Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,0.0388,30,15,13,3
+16,Rahul Mitra,IIT Kharagpur,Metallurgical and Materials Engineering,0.0381,18,110,121,1
+17,Amit Kumar Das,IIT Kharagpur,Bioscience and Biotechnology,0.0362,25,171,32,0
+18,Manas Paliwal,IIT Kharagpur,Metallurgical and Materials Engineering,0.0356,23,215,51,1
+19,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,0.034,34,7,7,5
+20,Ramkrishna Sen,IIT Kharagpur,Bioscience and Biotechnology,0.0333,33,10,8,0

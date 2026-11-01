@@ -59,10 +59,10 @@ IIT Bombay,Chandra Venkataraman,Chemical Engineering,17,21,19,2
 IIT Bombay,Devendra N Singh,Civil Engineering,14,28,26,2
 IIT Bombay,Dipanshu Bansal,Mechanical Engineering,12,11,9,2
 IIT Bombay,Arnab Dutta,Chemistry,12,25,23,2
-IIT Madras,Prafulla Kumar Behera,Physics,317,30,2,28
+IIT Madras,Prafulla Kumar Behera,Physics,316,30,2,28
 IIT Madras,James Frederick Libby,Physics,318,30,5,25
 IIT Madras,Prabat Ranjan Pujahari,,127,11,0,11
-IIT Madras,Samir Choudhuri,,24,12,4,8
+IIT Madras,Samir Choudhuri,,23,11,4,7
 IIT Madras,Sachin S Gunthe,Civil Engineering,35,25,19,6
 IIT Madras,Parul Verma,Chemical Engineering,21,6,1,5
 IIT Madras,Ganapathy Krishnamurthi,Engineering Design,7,17,12,5
@@ -78,7 +78,7 @@ IIT Kanpur,Arun Kumar Shukla,Biological Sciences and Bioengineering,29,30,19,11
 IIT Kanpur,Amit Agarwal,Physics,28,44,38,6
 IIT Kanpur,Navaneeth Poonthottathil,Physics,17,7,2,5
 IIT Kanpur,Koushik Pal,Physics,7,11,7,4
-IIT Kanpur,Swagata Mukherjee,Physics,87,5,2,3
+IIT Kanpur,Swagata Mukherjee,Physics,86,5,2,3
 IIT Kanpur,Chanchal Sow,Physics,5,7,4,3
 IIT Kanpur,Pranamesh Chakraborty,Civil Engineering,5,8,5,3
 IIT Kanpur,Amitabha Bandyopadhyay,Biological Sciences and Bioengineering,3,7,4,3
@@ -179,7 +179,7 @@ IIT Hyderabad,Arup Mahata,Chemistry,5,12,10,2
 IIT Hyderabad,Gaurav Sharma,BioTechnology,3,7,5,2
 IIT Hyderabad,Aravind Kumar Rengan,Biomedical Engineering,14,29,28,1
 IIT Hyderabad,Sai Santosh Kumar Raavi,Physics,7,25,24,1
-IIT Bhubaneswar,Seema Bahinipati,School of Basic Sciences,948,65,4,61
+IIT Bhubaneswar,Seema Bahinipati,School of Basic Sciences,945,65,4,61
 IIT Bhubaneswar,Raj K. Singh,"School of Earth, Ocean and Climate Sciences",5,15,13,2
 IIT Bhubaneswar,Parlapalli Venkata Satyam,School of Basic Sciences,2,3,1,2
 IIT Bhubaneswar,Saroj Kumar Nayak,School of Basic Sciences,17,17,16,1
@@ -224,14 +224,14 @@ IIT Gandhinagar,Amit Arora,Materials Engineering,2,19,18,1
 IIT Gandhinagar,Abhijit Mishra,Materials Engineering,2,11,10,1
 IIT Gandhinagar,Udit Bhatia,Civil Engineering,2,14,13,1
 IIT Gandhinagar,Ravi Sastri Ayyagari,Mechanical Engineering,2,3,2,1
-IIT Indore,Raghunath Sahoo,Physics,446,61,20,41
+IIT Indore,Raghunath Sahoo,Physics,445,61,20,41
 IIT Indore,Ankhi Roy,Physics,14,9,4,5
 IIT Indore,Mohd Farooq Azam,Civil Engineering,9,18,14,4
 IIT Indore,Sudip Chakraborty,Physics,4,22,19,3
 IIT Indore,Abhirup Datta,"Astronomy, Astrophysics and Space Engineering",33,16,14,2
 IIT Indore,Manoneeta Chakraborty,"Astronomy, Astrophysics and Space Engineering",7,8,6,2
 IIT Indore,Mirza Saqib Baig,Biosciences and Biomedical Engineering,6,18,16,2
-IIT Indore,Biswarup Pathak,Chemistry,13,42,41,1
+IIT Indore,Biswarup Pathak,Chemistry,14,42,41,1
 IIT Indore,Suman Majumdar,"Astronomy, Astrophysics and Space Engineering",13,15,14,1
 IIT Indore,Rupesh Shivaji Devan,Metallurgical Engineering and Materials Science,9,27,26,1
 IIT Indore,Parasharam M Shirage,Metallurgical Engineering and Materials Science,6,41,40,1
@@ -284,7 +284,7 @@ IIT (ISM) Dhanbad,Rajendra Kumar Dubey,Applied Geology,1,6,5,1
 IIT (ISM) Dhanbad,Bodhisatwa Hazra,Applied Geology,1,8,7,1
 IIT (ISM) Dhanbad,Naresh Sharma,Electronics Engineering,1,1,0,1
 IIT (ISM) Dhanbad,Anjan Chowdhury,Computer Science and Engineering,1,1,0,1
-IIT Jodhpur,Deepika Bhattu,Civil and Infrastructure Engineering,12,13,3,10
+IIT Jodhpur,Deepika Bhattu,Civil and Infrastructure Engineering,11,12,3,9
 IIT Jodhpur,Reetanjali Moharana,Physics,26,6,2,4
 IIT Jodhpur,Amit Sharma,Civil and Infrastructure Engineering,4,7,3,4
 IIT Jodhpur,Mitali Mukerji,Bioscience and Bioengineering,5,6,3,3

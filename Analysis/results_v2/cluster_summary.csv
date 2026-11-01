@@ -1,26 +1,26 @@
 ﻿institution,cluster,cross_cluster,partners,shared_papers,citations_from_partner,citations_to_partner
-IIT Kharagpur,Not a course cluster,True,2747,8882,124487,106793
-IIT Kharagpur,Old & large IITs,False,7,1429,13976,21193
+IIT Kharagpur,Not a course cluster,True,2758,8882,124482,106805
+IIT Kharagpur,Old & large IITs,False,7,1429,13978,21195
 IIT Kharagpur,NITs,True,28,1094,12213,7908
-IIT Kharagpur,Newer IITs,True,13,861,7335,4656
+IIT Kharagpur,Newer IITs,True,13,861,7334,4656
 IIT Kharagpur,IISc / TIFR / IISERs,True,10,622,3443,9806
 IIT Kharagpur,Central Universities,True,6,540,6182,9383
 IIT Kharagpur,CSIR labs,True,22,457,3861,9882
 IIT Kharagpur,Premier science institutes,True,11,439,1097,3124
 IIT Kharagpur,IIITs,True,37,232,2515,1704
 IIT Kharagpur,DAE institutes,True,4,181,968,2688
-IIT Roorkee,Not a course cluster,True,2583,7292,107135,98080
-IIT Roorkee,Old & large IITs,False,7,1180,9461,23366
-IIT Roorkee,NITs,True,28,1033,13203,9893
-IIT Roorkee,Newer IITs,True,13,733,6192,5550
+IIT Roorkee,Not a course cluster,True,2600,7292,107153,98098
+IIT Roorkee,Old & large IITs,False,7,1180,9460,23370
+IIT Roorkee,NITs,True,28,1033,13215,9893
+IIT Roorkee,Newer IITs,True,13,733,6209,5537
 IIT Roorkee,CSIR labs,True,22,619,3232,8220
 IIT Roorkee,Central Universities,True,6,462,4824,7812
-IIT Roorkee,IISc / TIFR / IISERs,True,10,403,1970,6122
+IIT Roorkee,IISc / TIFR / IISERs,True,10,403,1976,6122
 IIT Roorkee,IIITs,True,39,302,1988,1861
-IIT Roorkee,Premier science institutes,True,11,157,426,1848
+IIT Roorkee,Premier science institutes,True,11,157,431,1848
 IIT Roorkee,DAE institutes,True,4,145,597,2121
-IIT Ropar,Not a course cluster,False,1683,2021,18960,21387
-IIT Ropar,Old & large IITs,True,8,529,2769,6541
+IIT Ropar,Not a course cluster,False,1710,2021,18964,21431
+IIT Ropar,Old & large IITs,True,8,529,2769,6537
 IIT Ropar,Newer IITs,True,13,297,1287,1446
 IIT Ropar,NITs,True,28,202,1742,1753
 IIT Ropar,IISc / TIFR / IISERs,True,10,132,529,1984
@@ -29,42 +29,42 @@ IIT Ropar,IIITs,True,36,119,428,476
 IIT Ropar,Central Universities,True,6,102,724,1415
 IIT Ropar,Premier science institutes,True,11,58,189,818
 IIT Ropar,DAE institutes,True,4,49,219,659
-IIT Bombay,Not a course cluster,True,2615,10213,79843,93223
-IIT Bombay,Old & large IITs,False,7,1638,15471,20173
-IIT Bombay,IISc / TIFR / IISERs,True,10,1220,6738,13527
-IIT Bombay,Newer IITs,True,13,1076,8446,6220
+IIT Bombay,Not a course cluster,True,2611,10212,79842,93228
+IIT Bombay,Old & large IITs,False,7,1636,15471,20174
+IIT Bombay,IISc / TIFR / IISERs,True,10,1220,6735,13529
+IIT Bombay,Newer IITs,True,13,1076,8447,6214
 IIT Bombay,NITs,True,28,662,7569,4947
 IIT Bombay,DAE institutes,True,4,510,1285,3948
 IIT Bombay,Premier science institutes,True,11,457,1630,3071
 IIT Bombay,CSIR labs,True,22,418,2976,7670
-IIT Bombay,Central Universities,True,6,373,4396,6676
-IIT Bombay,IIITs,True,38,157,1057,871
-IIT Madras,Not a course cluster,True,2482,6878,72334,64386
-IIT Madras,Old & large IITs,False,7,1327,12181,17362
-IIT Madras,IISc / TIFR / IISERs,True,10,1203,5423,13447
-IIT Madras,Newer IITs,True,13,839,6836,4268
-IIT Madras,NITs,True,28,709,7372,4902
-IIT Madras,CSIR labs,True,22,412,2576,6956
-IIT Madras,Premier science institutes,True,11,401,1656,2943
+IIT Bombay,Central Universities,True,6,373,4395,6676
+IIT Bombay,IIITs,True,38,156,1056,871
+IIT Madras,Not a course cluster,True,2497,6869,72346,64402
+IIT Madras,Old & large IITs,False,7,1325,12181,17363
+IIT Madras,IISc / TIFR / IISERs,True,10,1200,5422,13443
+IIT Madras,Newer IITs,True,13,838,6841,4267
+IIT Madras,NITs,True,28,709,7368,4902
+IIT Madras,CSIR labs,True,22,412,2577,6956
+IIT Madras,Premier science institutes,True,11,401,1657,2944
 IIT Madras,DAE institutes,True,4,252,898,2738
-IIT Madras,IIITs,True,34,225,1217,703
-IIT Madras,Central Universities,True,6,212,3152,4492
-IIT Kanpur,Not a course cluster,True,2322,4831,61067,51132
-IIT Kanpur,Old & large IITs,False,7,1416,10888,16429
-IIT Kanpur,IISc / TIFR / IISERs,True,10,958,3973,10103
-IIT Kanpur,Newer IITs,True,13,825,5183,5361
-IIT Kanpur,NITs,True,28,592,5892,3660
-IIT Kanpur,CSIR labs,True,22,363,2980,6028
-IIT Kanpur,Central Universities,True,6,292,3320,5068
-IIT Kanpur,IIITs,True,35,214,1171,671
-IIT Kanpur,Premier science institutes,True,11,198,792,2523
-IIT Kanpur,DAE institutes,True,4,122,518,1426
-IIT Goa,Not a course cluster,True,561,258,1083,2273
-IIT Goa,Old & large IITs,True,8,128,362,945
+IIT Madras,IIITs,True,34,225,1225,703
+IIT Madras,Central Universities,True,6,212,3151,4492
+IIT Kanpur,Not a course cluster,True,2335,4829,61055,51161
+IIT Kanpur,Old & large IITs,False,7,1415,10886,16429
+IIT Kanpur,IISc / TIFR / IISERs,True,10,958,3980,10102
+IIT Kanpur,Newer IITs,True,13,825,5182,5360
+IIT Kanpur,NITs,True,28,591,5890,3659
+IIT Kanpur,CSIR labs,True,22,363,2980,6025
+IIT Kanpur,Central Universities,True,6,292,3326,5067
+IIT Kanpur,IIITs,True,35,214,1170,671
+IIT Kanpur,Premier science institutes,True,11,198,792,2522
+IIT Kanpur,DAE institutes,True,4,122,518,1425
+IIT Goa,Not a course cluster,True,536,258,1083,2251
+IIT Goa,Old & large IITs,True,8,128,365,946
 IIT Goa,Newer IITs,False,11,75,230,455
 IIT Goa,NITs,True,26,55,170,309
 IIT Goa,IISc / TIFR / IISERs,True,10,47,93,672
-IIT Goa,Premier science institutes,True,11,31,39,299
+IIT Goa,Premier science institutes,True,11,31,39,300
 IIT Goa,IIITs,True,16,15,42,61
 IIT Goa,DAE institutes,True,3,10,20,112
 IIT Goa,Central Universities,True,6,8,32,103
@@ -79,17 +79,17 @@ IIT Tirupati,Central Universities,True,6,26,126,303
 IIT Tirupati,CSIR labs,True,21,23,110,515
 IIT Tirupati,Premier science institutes,True,10,13,45,111
 IIT Tirupati,DAE institutes,True,3,6,55,141
-IIT Patna,Not a course cluster,True,1722,2134,25668,24135
-IIT Patna,Old & large IITs,True,8,552,3175,8843
-IIT Patna,NITs,True,28,463,3982,2772
-IIT Patna,IISc / TIFR / IISERs,True,10,344,603,2760
-IIT Patna,Newer IITs,False,12,299,1661,1844
-IIT Patna,IIITs,True,35,178,833,772
-IIT Patna,Central Universities,True,6,87,1067,2222
-IIT Patna,DAE institutes,True,4,48,176,875
-IIT Patna,CSIR labs,True,22,42,448,1776
-IIT Patna,Premier science institutes,True,11,21,141,1152
-IIT Palakkad,Not a course cluster,True,1057,410,3190,5052
+IIT Patna,Not a course cluster,True,1729,2130,25666,24134
+IIT Patna,Old & large IITs,True,8,551,3175,8837
+IIT Patna,NITs,True,28,462,3982,2770
+IIT Patna,IISc / TIFR / IISERs,True,10,344,603,2758
+IIT Patna,Newer IITs,False,12,299,1661,1843
+IIT Patna,IIITs,True,35,178,833,771
+IIT Patna,Central Universities,True,6,87,1067,2220
+IIT Patna,DAE institutes,True,4,48,176,859
+IIT Patna,CSIR labs,True,22,42,448,1769
+IIT Patna,Premier science institutes,True,11,21,141,1151
+IIT Palakkad,Not a course cluster,True,1056,410,3190,5051
 IIT Palakkad,Old & large IITs,True,8,282,512,2236
 IIT Palakkad,NITs,True,28,107,458,728
 IIT Palakkad,Newer IITs,False,12,103,289,697
@@ -99,68 +99,68 @@ IIT Palakkad,CSIR labs,True,21,29,67,504
 IIT Palakkad,IIITs,True,27,12,62,111
 IIT Palakkad,DAE institutes,True,3,10,23,80
 IIT Palakkad,Central Universities,True,6,6,99,285
-IIT Guwahati,Not a course cluster,True,2589,5295,78109,74670
-IIT Guwahati,Old & large IITs,False,7,1157,9204,20755
-IIT Guwahati,NITs,True,28,912,8464,6796
-IIT Guwahati,Newer IITs,True,13,870,5452,4186
-IIT Guwahati,IISc / TIFR / IISERs,True,10,611,2686,8179
-IIT Guwahati,Central Universities,True,6,293,3428,5545
+IIT Guwahati,Not a course cluster,True,2584,5295,78095,74663
+IIT Guwahati,Old & large IITs,False,7,1157,9204,20753
+IIT Guwahati,NITs,True,28,912,8461,6796
+IIT Guwahati,Newer IITs,True,13,870,5457,4184
+IIT Guwahati,IISc / TIFR / IISERs,True,10,611,2696,8179
+IIT Guwahati,Central Universities,True,6,293,3441,5545
 IIT Guwahati,IIITs,True,36,196,1104,932
-IIT Guwahati,CSIR labs,True,22,189,2352,7411
+IIT Guwahati,CSIR labs,True,22,189,2352,7409
 IIT Guwahati,Premier science institutes,True,11,142,835,2758
 IIT Guwahati,DAE institutes,True,4,93,482,1554
-IIT Hyderabad,Not a course cluster,True,2108,3214,35107,30647
-IIT Hyderabad,Old & large IITs,False,7,939,6227,10535
-IIT Hyderabad,IISc / TIFR / IISERs,True,10,649,2788,5882
-IIT Hyderabad,NITs,True,28,410,2928,2431
-IIT Hyderabad,Newer IITs,True,13,383,3376,3001
-IIT Hyderabad,Central Universities,True,6,361,1543,2392
-IIT Hyderabad,CSIR labs,True,22,178,1105,3880
-IIT Hyderabad,Premier science institutes,True,11,176,940,1408
+IIT Hyderabad,Not a course cluster,True,2085,3214,35094,30590
+IIT Hyderabad,Old & large IITs,False,7,939,6228,10538
+IIT Hyderabad,IISc / TIFR / IISERs,True,10,649,2798,5883
+IIT Hyderabad,NITs,True,28,410,2925,2431
+IIT Hyderabad,Newer IITs,True,13,383,3376,3000
+IIT Hyderabad,Central Universities,True,6,361,1555,2392
+IIT Hyderabad,CSIR labs,True,22,178,1105,3882
+IIT Hyderabad,Premier science institutes,True,11,175,940,1408
 IIT Hyderabad,IIITs,True,34,111,572,419
 IIT Hyderabad,DAE institutes,True,4,96,302,1054
-IIT Bhubaneswar,Not a course cluster,True,1705,1743,19876,22110
-IIT Bhubaneswar,Old & large IITs,True,8,974,4582,8346
-IIT Bhubaneswar,IISc / TIFR / IISERs,True,10,480,1337,3965
-IIT Bhubaneswar,NITs,True,28,318,2698,2127
-IIT Bhubaneswar,Newer IITs,False,12,152,1942,1246
-IIT Bhubaneswar,CSIR labs,True,22,112,599,1880
-IIT Bhubaneswar,IIITs,True,34,79,386,387
-IIT Bhubaneswar,Central Universities,True,6,74,1095,1673
-IIT Bhubaneswar,DAE institutes,True,3,50,232,498
-IIT Bhubaneswar,Premier science institutes,True,11,36,367,691
+IIT Bhubaneswar,Not a course cluster,True,1674,1741,19889,22073
+IIT Bhubaneswar,Old & large IITs,True,8,968,4587,8362
+IIT Bhubaneswar,IISc / TIFR / IISERs,True,10,477,1339,3964
+IIT Bhubaneswar,NITs,True,28,317,2700,2133
+IIT Bhubaneswar,Newer IITs,False,12,151,1951,1249
+IIT Bhubaneswar,CSIR labs,True,22,112,599,1882
+IIT Bhubaneswar,IIITs,True,34,79,394,387
+IIT Bhubaneswar,Central Universities,True,6,73,1094,1673
+IIT Bhubaneswar,DAE institutes,True,3,50,232,508
+IIT Bhubaneswar,Premier science institutes,True,11,36,368,692
 IIT (BHU) Varanasi,Central Universities,True,6,5098,6512,11761
-IIT (BHU) Varanasi,Not a course cluster,True,2502,4608,76485,68700
-IIT (BHU) Varanasi,Old & large IITs,True,8,812,5829,15873
-IIT (BHU) Varanasi,NITs,True,28,688,6893,6557
+IIT (BHU) Varanasi,Not a course cluster,True,2483,4607,76502,68682
+IIT (BHU) Varanasi,Old & large IITs,True,8,812,5828,15881
+IIT (BHU) Varanasi,NITs,True,28,688,6906,6558
 IIT (BHU) Varanasi,Newer IITs,False,12,334,1935,2067
 IIT (BHU) Varanasi,IIITs,True,37,274,1429,1330
 IIT (BHU) Varanasi,CSIR labs,True,22,259,1988,6150
-IIT (BHU) Varanasi,IISc / TIFR / IISERs,True,10,212,1065,4248
+IIT (BHU) Varanasi,IISc / TIFR / IISERs,True,10,212,1071,4247
 IIT (BHU) Varanasi,DAE institutes,True,4,162,537,1630
-IIT (BHU) Varanasi,Premier science institutes,True,11,52,295,1032
-IIT Gandhinagar,Not a course cluster,True,1793,2269,22651,25285
-IIT Gandhinagar,Old & large IITs,True,8,521,6032,6060
+IIT (BHU) Varanasi,Premier science institutes,True,11,52,300,1032
+IIT Gandhinagar,Not a course cluster,True,1755,2269,22651,25246
+IIT Gandhinagar,Old & large IITs,True,8,521,6032,6062
 IIT Gandhinagar,IISc / TIFR / IISERs,True,10,376,3138,4726
-IIT Gandhinagar,Premier science institutes,True,11,177,1268,1755
-IIT Gandhinagar,Newer IITs,False,12,142,1748,1243
+IIT Gandhinagar,Premier science institutes,True,11,177,1268,1756
+IIT Gandhinagar,Newer IITs,False,12,142,1748,1244
 IIT Gandhinagar,NITs,True,28,116,1668,1058
 IIT Gandhinagar,DAE institutes,True,4,97,276,999
 IIT Gandhinagar,Central Universities,True,6,83,1348,1856
 IIT Gandhinagar,IIITs,True,29,39,392,266
 IIT Gandhinagar,CSIR labs,True,22,34,417,1490
-IIT Indore,Not a course cluster,True,2080,4707,39596,54058
-IIT Indore,Old & large IITs,True,8,1012,5759,12880
-IIT Indore,IISc / TIFR / IISERs,True,10,461,2164,5456
-IIT Indore,Newer IITs,False,12,412,2861,3377
-IIT Indore,NITs,True,28,362,4378,3181
+IIT Indore,Not a course cluster,True,2075,4698,39585,54082
+IIT Indore,Old & large IITs,True,8,1013,5754,12885
+IIT Indore,IISc / TIFR / IISERs,True,10,461,2163,5457
+IIT Indore,Newer IITs,False,12,412,2858,3378
+IIT Indore,NITs,True,28,362,4377,3181
 IIT Indore,DAE institutes,True,4,275,416,1738
-IIT Indore,Premier science institutes,True,11,262,600,1302
+IIT Indore,Premier science institutes,True,11,261,600,1302
 IIT Indore,IIITs,True,37,221,1473,1086
-IIT Indore,Central Universities,True,6,154,1895,3015
-IIT Indore,CSIR labs,True,22,119,1205,3476
-IIT Mandi,Not a course cluster,True,1736,1594,20020,19437
-IIT Mandi,Old & large IITs,True,8,508,2583,7424
+IIT Indore,Central Universities,True,6,154,1896,3015
+IIT Indore,CSIR labs,True,22,119,1205,3478
+IIT Mandi,Not a course cluster,True,1736,1594,20020,19438
+IIT Mandi,Old & large IITs,True,8,507,2583,7425
 IIT Mandi,Newer IITs,False,12,280,1330,1962
 IIT Mandi,NITs,True,28,184,1834,1720
 IIT Mandi,IISc / TIFR / IISERs,True,10,151,728,2185
@@ -168,63 +168,63 @@ IIT Mandi,Central Universities,True,6,96,955,1455
 IIT Mandi,CSIR labs,True,22,77,689,1979
 IIT Mandi,IIITs,True,31,59,275,428
 IIT Mandi,DAE institutes,True,3,37,276,509
-IIT Mandi,Premier science institutes,True,11,31,139,456
-IIT Delhi,Not a course cluster,True,2785,8564,114015,90440
+IIT Mandi,Premier science institutes,True,11,31,140,456
+IIT Delhi,Not a course cluster,True,2776,8564,114015,90432
 IIT Delhi,Old & large IITs,False,7,1442,11303,20311
 IIT Delhi,NITs,True,28,911,12158,8256
 IIT Delhi,Central Universities,True,6,879,6068,8716
-IIT Delhi,Newer IITs,True,13,792,6405,4815
+IIT Delhi,Newer IITs,True,13,792,6409,4815
 IIT Delhi,CSIR labs,True,22,787,4046,9665
 IIT Delhi,IISc / TIFR / IISERs,True,10,497,2364,7168
 IIT Delhi,IIITs,True,35,391,2491,1531
 IIT Delhi,DAE institutes,True,4,140,741,1672
 IIT Delhi,Premier science institutes,True,11,116,465,1377
-IIT (ISM) Dhanbad,Not a course cluster,False,2270,4998,81025,62014
-IIT (ISM) Dhanbad,Old & large IITs,True,8,869,6704,17086
-IIT (ISM) Dhanbad,NITs,True,28,606,9432,7791
-IIT (ISM) Dhanbad,CSIR labs,True,22,499,2134,6781
-IIT (ISM) Dhanbad,Central Universities,True,6,384,3570,6785
+IIT (ISM) Dhanbad,Not a course cluster,False,2255,4997,81015,61999
+IIT (ISM) Dhanbad,Old & large IITs,True,8,868,6712,17092
+IIT (ISM) Dhanbad,NITs,True,28,606,9435,7792
+IIT (ISM) Dhanbad,CSIR labs,True,22,499,2134,6782
+IIT (ISM) Dhanbad,Central Universities,True,6,383,3568,6784
 IIT (ISM) Dhanbad,Newer IITs,True,13,300,2731,3457
-IIT (ISM) Dhanbad,IIITs,True,38,153,2266,1424
-IIT (ISM) Dhanbad,IISc / TIFR / IISERs,True,10,145,980,2805
-IIT (ISM) Dhanbad,Premier science institutes,True,11,84,218,1095
+IIT (ISM) Dhanbad,IIITs,True,38,153,2266,1423
+IIT (ISM) Dhanbad,IISc / TIFR / IISERs,True,10,145,980,2813
+IIT (ISM) Dhanbad,Premier science institutes,True,11,84,218,1097
 IIT (ISM) Dhanbad,DAE institutes,True,4,57,356,972
-IIT Jodhpur,Not a course cluster,True,1825,2045,16976,20476
-IIT Jodhpur,Old & large IITs,True,8,757,2585,8140
-IIT Jodhpur,Newer IITs,False,12,317,1173,2096
-IIT Jodhpur,IISc / TIFR / IISERs,True,10,234,664,2169
-IIT Jodhpur,NITs,True,28,214,1657,1855
+IIT Jodhpur,Not a course cluster,True,1808,2040,17008,20469
+IIT Jodhpur,Old & large IITs,True,8,757,2586,8159
+IIT Jodhpur,Newer IITs,False,12,317,1176,2112
+IIT Jodhpur,IISc / TIFR / IISERs,True,10,234,665,2168
+IIT Jodhpur,NITs,True,28,214,1662,1855
 IIT Jodhpur,IIITs,True,34,207,522,1275
-IIT Jodhpur,CSIR labs,True,22,170,644,1969
-IIT Jodhpur,Premier science institutes,True,11,102,166,1058
-IIT Jodhpur,Central Universities,True,6,82,723,1559
-IIT Jodhpur,DAE institutes,True,4,29,197,851
-IIT Jammu,Not a course cluster,True,1272,832,7190,9272
+IIT Jodhpur,CSIR labs,True,22,170,647,1968
+IIT Jodhpur,Premier science institutes,True,11,102,166,1053
+IIT Jodhpur,Central Universities,True,6,82,722,1560
+IIT Jodhpur,DAE institutes,True,4,29,197,856
+IIT Jammu,Not a course cluster,True,1248,832,7190,9243
 IIT Jammu,Old & large IITs,True,8,302,1030,3330
 IIT Jammu,NITs,True,28,225,682,1164
-IIT Jammu,Newer IITs,False,11,137,413,809
+IIT Jammu,Newer IITs,False,11,137,413,810
 IIT Jammu,CSIR labs,True,22,66,266,971
 IIT Jammu,IISc / TIFR / IISERs,True,10,57,128,628
-IIT Jammu,IIITs,True,31,39,147,208
+IIT Jammu,IIITs,True,30,39,147,206
 IIT Jammu,Central Universities,True,6,15,190,556
 IIT Jammu,DAE institutes,True,4,13,43,260
 IIT Jammu,Premier science institutes,True,10,11,24,169
-IIT Bhilai,Not a course cluster,True,1001,426,2812,5313
-IIT Bhilai,Old & large IITs,True,8,236,621,2319
+IIT Bhilai,Not a course cluster,True,961,426,2815,5270
+IIT Bhilai,Old & large IITs,True,8,236,621,2327
 IIT Bhilai,NITs,True,27,131,348,678
-IIT Bhilai,Newer IITs,False,12,119,427,882
+IIT Bhilai,Newer IITs,False,12,119,428,883
 IIT Bhilai,IISc / TIFR / IISERs,True,10,70,226,859
-IIT Bhilai,Premier science institutes,True,11,49,53,373
-IIT Bhilai,Central Universities,True,6,36,159,420
+IIT Bhilai,Premier science institutes,True,11,49,53,381
+IIT Bhilai,Central Universities,True,6,36,159,421
 IIT Bhilai,IIITs,True,23,17,64,117
-IIT Bhilai,CSIR labs,True,19,12,63,271
+IIT Bhilai,CSIR labs,True,18,12,63,268
 IIT Bhilai,DAE institutes,True,4,3,17,82
-IIT Dharwad,Not a course cluster,True,902,355,1646,3222
-IIT Dharwad,Old & large IITs,True,8,155,215,1449
-IIT Dharwad,Newer IITs,False,11,80,108,456
+IIT Dharwad,Not a course cluster,True,865,355,1646,3167
+IIT Dharwad,Old & large IITs,True,8,155,216,1462
+IIT Dharwad,Newer IITs,False,11,80,110,456
 IIT Dharwad,NITs,True,28,72,138,460
 IIT Dharwad,IISc / TIFR / IISERs,True,10,40,49,381
-IIT Dharwad,IIITs,True,24,32,46,77
+IIT Dharwad,IIITs,True,22,32,46,75
 IIT Dharwad,Premier science institutes,True,9,20,7,142
 IIT Dharwad,CSIR labs,True,22,10,30,222
 IIT Dharwad,Central Universities,True,6,5,67,147

@@ -1,66 +1,66 @@
 ﻿metric,value
-faculty (nodes),7599
-edges,14473
-lambda_1,13.56
-lambda_2,11.723
-sqrt(max degree),8.0
-eigenvector: faculty with a non-zero score (its component),5712
+faculty (nodes),7598
+edges,14468
+lambda_1,13.577
+lambda_2,11.72
+sqrt(max degree),8.062
+eigenvector: faculty with a non-zero score (its component),5715
 eigenvector: one sign on its support (check),True
 eigenvector IPR,0.0254
 IPR if spread evenly (1/n),0.00013
-eigenvector weight (sum v^2) on its top 10 faculty,0.382
+eigenvector weight (sum v^2) on its top 10 faculty,0.383
 eigenvector top 10: institutions,IIT Kharagpur 10
 eigenvector top 10: departments,Physics 2; Rubber Technology 2; Materials Science Centre 2; Bioscience and Biotechnology 2; Metallurgical and Materials Engineering 1; Mechanical Engineering 1
-"Spearman degree vs betweenness (giant component, n = 5712)",0.885
-"Spearman degree vs eigenvector (giant component, n = 5712)",0.663
-"Spearman degree vs Katz (f=0.5) (giant component, n = 5712)",0.978
-"Spearman degree vs subgraph centrality (giant component, n = 5712)",0.861
-"Spearman degree vs total communicability (giant component, n = 5712)",0.688
+"Spearman degree vs betweenness (giant component, n = 5715)",0.885
+"Spearman degree vs eigenvector (giant component, n = 5715)",0.662
+"Spearman degree vs Katz (f=0.5) (giant component, n = 5715)",0.977
+"Spearman degree vs subgraph centrality (giant component, n = 5715)",0.86
+"Spearman degree vs total communicability (giant component, n = 5715)",0.686
 degree: top-10 overlap with degree top-10,10
-"Spearman betweenness vs eigenvector (giant component, n = 5712)",0.523
-"Spearman betweenness vs Katz (f=0.5) (giant component, n = 5712)",0.843
-"Spearman betweenness vs subgraph centrality (giant component, n = 5712)",0.688
-"Spearman betweenness vs total communicability (giant component, n = 5712)",0.543
+"Spearman betweenness vs eigenvector (giant component, n = 5715)",0.522
+"Spearman betweenness vs Katz (f=0.5) (giant component, n = 5715)",0.843
+"Spearman betweenness vs subgraph centrality (giant component, n = 5715)",0.687
+"Spearman betweenness vs total communicability (giant component, n = 5715)",0.543
 betweenness: top-10 overlap with degree top-10,7
-"Spearman eigenvector vs Katz (f=0.5) (giant component, n = 5712)",0.771
-"Spearman eigenvector vs subgraph centrality (giant component, n = 5712)",0.889
-"Spearman eigenvector vs total communicability (giant component, n = 5712)",0.995
+"Spearman eigenvector vs Katz (f=0.5) (giant component, n = 5715)",0.77
+"Spearman eigenvector vs subgraph centrality (giant component, n = 5715)",0.889
+"Spearman eigenvector vs total communicability (giant component, n = 5715)",0.995
 eigenvector: top-10 overlap with degree top-10,5
-"Spearman Katz (f=0.5) vs subgraph centrality (giant component, n = 5712)",0.942
-"Spearman Katz (f=0.5) vs total communicability (giant component, n = 5712)",0.797
+"Spearman Katz (f=0.5) vs subgraph centrality (giant component, n = 5715)",0.942
+"Spearman Katz (f=0.5) vs total communicability (giant component, n = 5715)",0.797
 Katz (f=0.5): top-10 overlap with degree top-10,8
-"Spearman subgraph centrality vs total communicability (giant component, n = 5712)",0.914
+"Spearman subgraph centrality vs total communicability (giant component, n = 5715)",0.914
 subgraph centrality: top-10 overlap with degree top-10,5
 total communicability: top-10 overlap with degree top-10,5
-share of eigenvector weight (sum v^2) on IIT Kharagpur faculty,0.8109
-share of eigenvector weight (sum v^2) on IIT Roorkee faculty,0.0151
-share of eigenvector weight (sum v^2) on IIT Ropar faculty,0.0033
-share of eigenvector weight (sum v^2) on IIT Bombay faculty,0.019
-share of eigenvector weight (sum v^2) on IIT Madras faculty,0.011
-share of eigenvector weight (sum v^2) on IIT Kanpur faculty,0.0373
+share of eigenvector weight (sum v^2) on IIT Kharagpur faculty,0.8153
+share of eigenvector weight (sum v^2) on IIT Roorkee faculty,0.0147
+share of eigenvector weight (sum v^2) on IIT Ropar faculty,0.0034
+share of eigenvector weight (sum v^2) on IIT Bombay faculty,0.0182
+share of eigenvector weight (sum v^2) on IIT Madras faculty,0.0109
+share of eigenvector weight (sum v^2) on IIT Kanpur faculty,0.0368
 share of eigenvector weight (sum v^2) on IIT Goa faculty,0.0008
 share of eigenvector weight (sum v^2) on IIT Tirupati faculty,0.0002
 share of eigenvector weight (sum v^2) on IIT Patna faculty,0.0008
 share of eigenvector weight (sum v^2) on IIT Palakkad faculty,0.0001
-share of eigenvector weight (sum v^2) on IIT Guwahati faculty,0.0063
-share of eigenvector weight (sum v^2) on IIT Hyderabad faculty,0.0022
+share of eigenvector weight (sum v^2) on IIT Guwahati faculty,0.0064
+share of eigenvector weight (sum v^2) on IIT Hyderabad faculty,0.0021
 share of eigenvector weight (sum v^2) on IIT Bhubaneswar faculty,0.0026
-share of eigenvector weight (sum v^2) on IIT (BHU) Varanasi faculty,0.0149
-share of eigenvector weight (sum v^2) on IIT Gandhinagar faculty,0.0293
+share of eigenvector weight (sum v^2) on IIT (BHU) Varanasi faculty,0.0147
+share of eigenvector weight (sum v^2) on IIT Gandhinagar faculty,0.0287
 share of eigenvector weight (sum v^2) on IIT Indore faculty,0.0017
-share of eigenvector weight (sum v^2) on IIT Mandi faculty,0.0053
-share of eigenvector weight (sum v^2) on IIT Delhi faculty,0.0168
+share of eigenvector weight (sum v^2) on IIT Mandi faculty,0.0052
+share of eigenvector weight (sum v^2) on IIT Delhi faculty,0.0152
 share of eigenvector weight (sum v^2) on IIT (ISM) Dhanbad faculty,0.002
 share of eigenvector weight (sum v^2) on IIT Jodhpur faculty,0.0034
-share of eigenvector weight (sum v^2) on IIT Jammu faculty,0.0165
+share of eigenvector weight (sum v^2) on IIT Jammu faculty,0.0166
 share of eigenvector weight (sum v^2) on IIT Bhilai faculty,0.0005
 share of eigenvector weight (sum v^2) on IIT Dharwad faculty,0.0
-IIT Kharagpur share of faculty,0.1001
+IIT Kharagpur share of faculty,0.1002
 IIT Roorkee share of faculty,0.082
 IIT Ropar share of faculty,0.0263
-IIT Bombay share of faculty,0.103
+IIT Bombay share of faculty,0.1029
 IIT Madras share of faculty,0.0805
-IIT Kanpur share of faculty,0.0726
+IIT Kanpur share of faculty,0.0727
 IIT Goa share of faculty,0.0072
 IIT Tirupati share of faculty,0.0162
 IIT Patna share of faculty,0.0215
@@ -78,10 +78,10 @@ IIT Jodhpur share of faculty,0.0347
 IIT Jammu share of faculty,0.0193
 IIT Bhilai share of faculty,0.0112
 IIT Dharwad share of faculty,0.0133
-"max k-core: k, faculty, institutions","8, 18, IIT Bombay 10; IIT Mandi 2; IIT Bhilai 2; IIT Gandhinagar 1; IIT Indore 1; IIT Goa 1; IIT Roorkee 1"
+"max k-core: k, faculty, institutions","8, 18, IIT Bombay 10; IIT Mandi 2; IIT Bhilai 2; IIT Indore 1; IIT Goa 1; IIT Roorkee 1; IIT Gandhinagar 1"
 eigenvector top 10 inside the max k-core,0
-campus communicability ratio rho (Kharagpur vs Roorkee),0.5215
-rho (Kharagpur vs Roorkee) lost by removing the single most important faculty member,0.2189
+campus communicability ratio rho (Kharagpur vs Roorkee),0.5271
+rho (Kharagpur vs Roorkee) lost by removing the single most important faculty member,0.2218
 faculty whose removal lowers rho (Kharagpur vs Roorkee) by more than 5%,9
-Spearman of rho (Kharagpur vs Roorkee) loss with betweenness (faculty with degree > 0),0.382
+Spearman of rho (Kharagpur vs Roorkee) loss with betweenness (faculty with degree > 0),0.383
 top-10 overlap: rho (Kharagpur vs Roorkee) loss vs betweenness,1

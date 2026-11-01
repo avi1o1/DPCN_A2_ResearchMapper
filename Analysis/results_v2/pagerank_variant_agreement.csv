@@ -1,4 +1,4 @@
 ﻿variant,papers_ranked,age_bias_cv_top1pct,spearman_vs_global_citations,top100_median_global_citations,top100_share_from_2016_2017,top100_overlap_with_all
-PageRank (all citations),226170,1.46,0.693,204.0,0.75,100
-PageRank (no self-citations),226170,1.026,0.54,312.0,0.61,40
-age-rescaled PageRank (no self-citations),202653,0.135,0.26,220.5,0.19,26
+PageRank (all citations),226094,1.46,0.693,204.0,0.75,100
+PageRank (no self-citations),226094,1.026,0.54,312.0,0.6,40
+age-rescaled PageRank (no self-citations),202571,0.135,0.265,217.5,0.18,26

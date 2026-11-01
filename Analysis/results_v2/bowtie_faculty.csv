@@ -3,7 +3,7 @@ iit_gandhinagar:49,Vimal Mishra,IIT Gandhinagar,Civil Engineering,CORE,75,199,20
 iit_indore:65,Shaikh M Mobin,IIT Indore,Chemistry,CORE,133,184,264,9114,55,CORE
 iit_delhi:122,Kamal K. Pant,IIT Delhi,Chemical Engineering,CORE,141,177,245,9425,51,CORE
 iit_hyderabad:207,Sushmee Badhulika,IIT Hyderabad,Electrical Engineering,CORE,104,175,276,9035,51,CORE
-iit_bombay:474,Subimal Ghosh,IIT Bombay,Civil Engineering,CORE,79,167,207,5680,38,CORE
+iit_bombay:474,Subimal Ghosh,IIT Bombay,Civil Engineering,CORE,79,167,205,5680,38,CORE
 iit_kanpur:95,Gupta Raju Kumar,IIT Kanpur,Chemical Engineering,CORE,93,164,134,8230,41,CORE
 iit_kharagpur:630,Chandra Sekhar Tiwary,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,186,162,329,6521,40,CORE
 iit_kharagpur:723,Samit Kumar Ray,IIT Kharagpur,Physics,CORE,103,162,213,4668,38,CORE
@@ -14,20 +14,20 @@ iit_kharagpur:527,Debabrata Pradhan,IIT Kharagpur,Materials Science Centre,CORE,
 iit_delhi:307,Bhim Singh,IIT Delhi,Electrical Engineering,CORE,137,152,1259,15268,56,CORE
 iit_guwahati:123,Parameswar Krishnan Iyer,IIT Guwahati,Chemistry,CORE,73,152,237,5566,42,CORE
 iit_bhu:406,Pralay Maiti,IIT (BHU) Varanasi,School of Materials Science and Technology,CORE,65,149,192,7058,40,CORE
-iit_indore:56,Biswarup Pathak,IIT Indore,Chemistry,CORE,70,146,307,7146,42,CORE
+iit_indore:56,Biswarup Pathak,IIT Indore,Chemistry,CORE,71,145,308,7146,42,CORE
 iit_delhi:363,Sukumar Mishra,IIT Delhi,Electrical Engineering,CORE,45,130,315,5537,38,CORE
 iit_kanpur:427,Krishanu Biswas,IIT Kanpur,Materials Science and Engineering,CORE,96,130,177,4426,35,CORE
 iit_kharagpur:442,Abhijit Mukherjee,IIT Kharagpur,Geology and Geophysics,CORE,54,130,191,8206,45,CORE
 iit_kharagpur:232,Ashok Kumar Gupta,IIT Kharagpur,Civil Engineering,CORE,111,128,126,7219,43,CORE
-iit_guwahati:138,Ajay Kalamdhad,IIT Guwahati,Civil Engineering,CORE,87,127,268,6661,46,CORE
+iit_guwahati:138,Ajay Kalamdhad,IIT Guwahati,Civil Engineering,CORE,88,127,269,6661,46,CORE
 iit_guwahati:66,Kaustubha Mohanty,IIT Guwahati,Chemical Engineering,CORE,92,127,179,6288,42,CORE
 iit_roorkee:801,Pradip K. Maji,IIT Roorkee,Polymer and Process Engineering,CORE,152,126,211,5287,40,CORE
 iit_guwahati:445,Pravat Kumar Giri,IIT Guwahati,Physics,CORE,76,125,154,4920,41,CORE
+iit_kanpur:508,Kamal Krishna Kar,IIT Kanpur,Mechanical Engineering,CORE,72,124,195,9123,44,CORE
 iit_kharagpur:248,Makarand Madhao Ghangrekar,IIT Kharagpur,Civil Engineering,CORE,131,122,301,8866,53,CORE
 iit_kharagpur:778,Narayan Chandra Das,IIT Kharagpur,Rubber Technology,CORE,100,122,204,9559,63,CORE
 iit_bombay:321,Debabrata Maiti,IIT Bombay,Chemistry,CORE,45,121,294,14147,70,CORE
 iit_delhi:135,Suddhasatwa Basu,IIT Delhi,Chemical Engineering,CORE,77,121,178,4414,37,CORE
-iit_kanpur:508,Kamal Krishna Kar,IIT Kanpur,Mechanical Engineering,CORE,72,121,188,8947,44,CORE
 iit_delhi:658,Neeraj Khare,IIT Delhi,Physics,CORE,52,120,148,4856,39,CORE
 iit_jodhpur:235,Ambesh Dixit,IIT Jodhpur,Physics,CORE,118,119,261,4468,34,CORE
 iit_madras:647,M S Ramachandra Rao,IIT Madras,Physics,CORE,88,119,183,3020,29,CORE
@@ -37,7 +37,7 @@ iit_bhu:407,Rajiv Prakash,IIT (BHU) Varanasi,School of Materials Science and Tec
 iit_hyderabad:46,Kirti Chandra Sahu,IIT Hyderabad,Chemical Engineering,CORE,54,114,113,2411,29,CORE
 iit_roorkee:775,Soumitra Satapathi,IIT Roorkee,Physics,CORE,74,112,164,5037,42,CORE
 iit_bombay:1187,Dinesh Kabra,IIT Bombay,Physics,CORE,37,109,124,3628,31,CORE
-iit_bombay:623,Trilok Nath Singh,IIT Bombay,Earth Sciences,CORE,34,109,139,4697,40,CORE
+iit_bombay:623,Trilok Nath Singh,IIT Bombay,Earth Sciences,CORE,34,109,138,4697,40,CORE
 iit_indore:200,Parasharam M Shirage,IIT Indore,Metallurgical Engineering and Materials Science,CORE,66,106,151,4762,41,CORE
 iit_kharagpur:133,Jayanarayanan Kuttippurath,IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",CORE,78,106,162,2902,27,CORE
 iit_kharagpur:526,Bhanu Bhusan Khatua,IIT Kharagpur,Materials Science Centre,CORE,56,105,84,3898,31,CORE
@@ -74,7 +74,7 @@ iit_kanpur:534,Amit Agarwal,IIT Kanpur,Physics,CORE,49,87,196,5503,44,CORE
 iit_madras:281,Ligy Philip,IIT Madras,Civil Engineering,CORE,49,87,102,2547,31,CORE
 iit_madras:991,S Ramaprabhu,IIT Madras,Physics,CORE,35,87,138,3785,36,CORE
 iit_bhu:544,Hasan Syed Hadi,IIT (BHU) Varanasi,Department of Chemistry,CORE,14,86,43,3202,33,CORE
-iit_kanpur:240,Avinash Kumar Agarwal,IIT Kanpur,Mechanical Engineering,CORE,51,85,273,5514,39,CORE
+iit_kanpur:240,Avinash Kumar Agarwal,IIT Kanpur,Mechanical Engineering,CORE,51,85,274,5515,39,CORE
 iit_kharagpur:903,Suneel Kumar Srivastava,IIT Kharagpur,Chemistry,CORE,36,85,49,3291,27,CORE
 iit_bhu:179,Satyabrata Jit,IIT (BHU) Varanasi,Department of Electronics Engineering,CORE,56,84,222,3922,36,CORE
 iit_bombay:1171,Aftab Alam,IIT Bombay,Physics,CORE,72,83,132,2217,26,CORE
@@ -83,7 +83,7 @@ iit_hyderabad:201,Shiv Govind Singh,IIT Hyderabad,Electrical Engineering,CORE,66
 iit_ism:304,Alok Kumar Das,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,85,83,196,3946,37,CORE
 iit_kharagpur:33,Chandranath Chatterjee,IIT Kharagpur,Agricultural and Food Engineering,CORE,55,83,93,1945,25,CORE
 iit_roorkee:112,Prasenjit Mondal,IIT Roorkee,Chemical Engineering,CORE,61,83,97,2876,31,CORE
-iit_roorkee:797,Gaurav Manik,IIT Roorkee,Polymer and Process Engineering,CORE,61,83,118,3722,36,CORE
+iit_roorkee:797,Gaurav Manik,IIT Roorkee,Polymer and Process Engineering,CORE,62,83,118,3722,36,CORE
 iit_bombay:1144,Indradev Samajdar,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,25,82,106,1949,23,CORE
 iit_bhu:36,Monoj Kumar Mondal,IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,CORE,38,81,83,3305,34,CORE
 iit_guwahati:91,Vimal Katiyar,IIT Guwahati,Chemical Engineering,CORE,61,81,214,5782,43,CORE
@@ -97,7 +97,7 @@ iit_roorkee:378,N. P. Padhy,IIT Roorkee,Electrical Engineering,CORE,61,80,235,26
 iit_mandi:57,Dericks Praise Shukla,IIT Mandi,School of Civil & Environmental Engineering,CORE,45,79,88,1521,21,CORE
 iit_madras:296,Sachin S Gunthe,IIT Madras,Civil Engineering,CORE,33,78,84,2102,25,CORE
 iit_bombay:1062,Atul Sharma,IIT Bombay,Mechanical Engineering,CORE,38,77,103,1765,22,CORE
-iit_kanpur:324,Mohammad Jaleel Akhtar,IIT Kanpur,Electrical Engineering,CORE,43,77,327,5022,37,CORE
+iit_kanpur:324,Mohammad Jaleel Akhtar,IIT Kanpur,Electrical Engineering,CORE,43,77,321,5003,37,CORE
 iit_madras:112,A Arockiarajan,IIT Madras,Applied Mechanics and Biomedical Engineering,CORE,105,77,191,3308,30,CORE
 iit_patna:152,Manoranjan Kar,IIT Patna,Physics,CORE,73,77,191,3962,33,CORE
 iit_bombay:1201,Mohammed Aslam,IIT Bombay,Physics,CORE,50,76,72,1873,26,CORE
@@ -114,7 +114,7 @@ iit_delhi:647,Saswata Bhattacharya,IIT Delhi,Physics,CORE,56,75,115,2526,28,CORE
 iit_kanpur:522,Shantanu Bhattacharya,IIT Kanpur,Mechanical Engineering,CORE,37,75,164,2949,28,CORE
 iit_madras:586,Kottada Ravi Sankar,IIT Madras,Metallurgical and Materials Engineering,CORE,31,75,66,2642,23,CORE
 iit_roorkee:641,Kaushik Pal,IIT Roorkee,Mechanical and Industrial Engineering,CORE,59,75,99,2281,29,CORE
-iit_kanpur:352,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,CORE,37,74,427,5405,37,CORE
+iit_kanpur:352,Yogesh Singh Chauhan,IIT Kanpur,Electrical Engineering,CORE,37,74,425,5402,37,CORE
 iit_kanpur:430,Nilesh Prakash Gurao,IIT Kanpur,Materials Science and Engineering,CORE,52,74,121,1931,26,CORE
 iit_kanpur:818,Srivastava Suresh Chandra,IIT Kanpur,Electrical Engineering,CORE,13,74,55,1443,17,CORE
 iit_madras:40,Pallab Sinha Mahapatra,IIT Madras,,CORE,67,74,88,1448,21,CORE
@@ -137,7 +137,7 @@ iit_roorkee:754,Davinder Kaur,IIT Roorkee,Physics,CORE,62,71,134,2617,28,CORE
 iit_indore:219,Pankaj R Sagdeo,IIT Indore,Physics,CORE,32,70,122,3283,32,CORE
 iit_kharagpur:257,Rajib Maity,IIT Kharagpur,Civil Engineering,CORE,56,70,122,1977,24,CORE
 iit_madras:636,Birabar Ranjit Kumar Nanda,IIT Madras,Physics,CORE,52,70,115,1463,21,CORE
-iit_mandi:22,Amit Jaiswal,IIT Mandi,School of Biosciences & Bio Engineering,CORE,34,70,61,2471,24,CORE
+iit_mandi:22,Amit Jaiswal,IIT Mandi,School of Biosciences & Bio Engineering,CORE,34,70,60,2462,24,CORE
 iit_roorkee:764,Monojit Bag,IIT Roorkee,Physics,CORE,38,70,85,1707,23,CORE
 iit_ropar:200,Harpreet Singh,IIT Ropar,Mechanical Engineering,CORE,50,70,135,2888,27,CORE
 iit_delhi:415,S. C. Kaushik,IIT Delhi,Energy Science and Engineering,CORE,24,69,83,4519,38,CORE
@@ -205,12 +205,12 @@ iit_indore:60,Rajneesh Misra,IIT Indore,Chemistry,CORE,42,62,172,4994,40,CORE
 iit_indore:80,Neelima Satyam Devarakonda,IIT Indore,Civil Engineering,CORE,59,62,141,3328,36,CORE
 iit_kharagpur:648,Shiv Brat Singh,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,32,62,99,1889,23,CORE
 iit_madras:880,Mukesh Doble,IIT Madras,Biotechnology,CORE,7,62,88,2800,31,CORE
+iit_roorkee:651,Pradeep Kumar,IIT Roorkee,Mechanical and Industrial Engineering,CORE,43,62,69,1455,22,CORE
 iit_roorkee:826,Deepak Khare,IIT Roorkee,Water Resources Development and Management,CORE,43,62,97,2221,28,CORE
 iit_bombay:780,Suryanarayana Doolla,IIT Bombay,Energy Science and Engineering,CORE,38,61,142,2625,28,CORE
 iit_delhi:123,M. Ali Haider,IIT Delhi,Chemical Engineering,CORE,50,61,109,2507,30,CORE
 iit_delhi:648,Sujeet Chaudhary,IIT Delhi,Physics,CORE,29,61,127,1912,26,CORE
 iit_ism:26,Sanjit Kumar Pal,IIT (ISM) Dhanbad,Applied Geophysics,CORE,41,61,103,1825,27,CORE
-iit_roorkee:651,Pradeep Kumar,IIT Roorkee,Mechanical and Industrial Engineering,CORE,43,61,69,1455,22,CORE
 iit_bombay:772,Sagar Mitra,IIT Bombay,Energy Science and Engineering,CORE,19,60,121,3464,37,CORE
 iit_guwahati:99,Arun Chattopadhyay,IIT Guwahati,Chemistry,CORE,34,60,102,2061,26,CORE
 iit_kharagpur:797,Bhabagrahi Sahoo,IIT Kharagpur,School of Water Resources,CORE,60,60,82,1619,23,CORE
@@ -219,7 +219,7 @@ iit_patna:117,Karali Patra,IIT Patna,Mechanical Engineering,CORE,58,60,98,2152,2
 iit_ropar:61,Rajendra Srivastava,IIT Ropar,Chemistry,CORE,35,60,150,4513,38,CORE
 iit_guwahati:178,Sreedeep S.,IIT Guwahati,Civil Engineering,CORE,49,59,134,2564,28,CORE
 iit_hyderabad:250,Pinaki Prasad Bhattacharjee,IIT Hyderabad,Materials Science and Metallurgical Engineering,CORE,36,59,96,4462,35,CORE
-iit_indore:174,Neelesh Kumar Jain,IIT Indore,Mechanical Engineering,CORE,45,59,114,2203,29,CORE
+iit_indore:174,Neelesh Kumar Jain,IIT Indore,Mechanical Engineering,CORE,45,59,113,2203,29,CORE
 iit_ism:37,Ejaz Ahmad,IIT (ISM) Dhanbad,Chemical Engineering,CORE,45,59,50,2107,22,CORE
 iit_kanpur:443,Tanmoy Maiti,IIT Kanpur,Materials Science and Engineering,CORE,39,59,83,1698,23,CORE
 iit_kharagpur:360,Ashok Kumar Pradhan,IIT Kharagpur,Electrical Engineering,CORE,25,59,140,2578,27,CORE
@@ -227,7 +227,7 @@ iit_kharagpur:605,Partha Saha,IIT Kharagpur,Mechanical Engineering,CORE,31,59,10
 iit_kharagpur:624,Sushanta Kumar Panda,IIT Kharagpur,Mechanical Engineering,CORE,68,59,90,1628,25,CORE
 iit_kharagpur:633,Debalay Chakrabarti,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,28,59,117,2065,25,CORE
 iit_madras:640,Dillip Kumar Satapathy,IIT Madras,Physics,CORE,27,59,91,1367,23,CORE
-iit_bhubaneswar:39,Seema Bahinipati,IIT Bhubaneswar,School of Basic Sciences,CORE,18,58,965,21517,65,CORE
+iit_bhubaneswar:39,Seema Bahinipati,IIT Bhubaneswar,School of Basic Sciences,CORE,18,58,963,21515,65,CORE
 iit_bombay:699,Maryam Shojaei Baghini,IIT Bombay,Electrical Engineering,CORE,35,58,185,1976,24,CORE
 iit_delhi:190,Arun Kumar,IIT Delhi,Civil Engineering,CORE,52,58,168,2505,28,CORE
 iit_delhi:576,Pulak Mohan Pandey,IIT Delhi,Mechanical Engineering,CORE,67,58,159,3034,31,CORE
@@ -307,7 +307,7 @@ iit_guwahati:122,Mohd. Qureshi,IIT Guwahati,Chemistry,CORE,33,51,75,1572,25,CORE
 iit_indore:67,Tridib Kumar Sarma,IIT Indore,Chemistry,CORE,42,51,62,1505,23,CORE
 iit_kanpur:323,L. Behera,IIT Kanpur,Electrical Engineering,CORE,36,51,192,2597,26,CORE
 iit_kanpur:810,Anand Sandeep,IIT Kanpur,Electrical Engineering,CORE,8,51,75,1494,22,CORE
-iit_kharagpur:686,Prasad Kumar Bhaskaran,IIT Kharagpur,Ocean Engg and Naval Architecture,CORE,21,51,77,1638,24,CORE
+iit_kharagpur:686,Prasad Kumar Bhaskaran,IIT Kharagpur,Ocean Engg and Naval Architecture,CORE,22,51,77,1638,24,CORE
 iit_kharagpur:717,Prasanta Kumar Datta,IIT Kharagpur,Physics,CORE,43,51,105,901,18,CORE
 iit_kharagpur:892,Sudarsan Neogi,IIT Kharagpur,Chemical Engineering,CORE,11,51,42,2535,22,CORE
 iit_madras:235,Md Mahiuddin Baidya,IIT Madras,Chemistry,CORE,30,51,99,2145,26,CORE
@@ -315,7 +315,6 @@ iit_roorkee:147,Paritosh Mohanty,IIT Roorkee,Chemistry,CORE,62,51,75,1864,27,COR
 iit_roorkee:722,Kirtiraj Kundlik Gaikwad,IIT Roorkee,Paper Technology,CORE,48,51,122,4903,35,CORE
 iit_bhu:71,Yogesh Chandra Sharma,IIT (BHU) Varanasi,Department of Chemistry,CORE,44,50,78,3324,35,CORE
 iit_delhi:379,Ashu Verma,IIT Delhi,Energy Science and Engineering,CORE,38,50,155,2046,21,CORE
-iit_delhi:419,Viresh Dutta,IIT Delhi,Energy Science and Engineering,CORE,22,50,85,1984,26,CORE
 iit_guwahati:132,Tharmalingam Punniyamurthy,IIT Guwahati,Chemistry,CORE,28,50,125,2451,29,CORE
 iit_guwahati:148,Arup K. Sarma,IIT Guwahati,Civil Engineering,CORE,37,50,73,720,15,CORE
 iit_indore:300,Sudip Chakraborty,IIT Indore,Physics,CORE,7,50,31,1926,22,CORE
@@ -328,10 +327,12 @@ iit_mandi:135,Satinder Sharma,IIT Mandi,School of Computing & Electrical Enginee
 iit_roorkee:160,Tapas Kumar Mandal,IIT Roorkee,Chemistry,CORE,30,50,63,893,18,CORE
 iit_roorkee:255,Vinay Kumar Tyagi,IIT Roorkee,Civil Engineering,CORE,29,50,52,2617,24,CORE
 iit_bhu:537,Kumar Devendra,IIT (BHU) Varanasi,Department of Ceramic Engineering,CORE,16,49,43,1957,21,CORE
+iit_bhubaneswar:32,Rajan Jha,IIT Bhubaneswar,School of Basic Sciences,CORE,23,49,134,2695,26,CORE
 iit_bombay:1111,Shyamprasad Karagadde,IIT Bombay,Mechanical Engineering,CORE,45,49,83,901,18,CORE
-iit_bombay:660,Baylon G. Fernandes,IIT Bombay,Electrical Engineering,CORE,15,49,166,1861,23,CORE
+iit_bombay:660,Baylon G. Fernandes,IIT Bombay,Electrical Engineering,CORE,15,49,165,1860,23,CORE
 iit_bombay:792,Munish Chandel,IIT Bombay,Environmental Science and Engineering,CORE,37,49,31,911,16,CORE
 iit_delhi:341,Nilanjan Senroy,IIT Delhi,Electrical Engineering,CORE,9,49,100,1510,22,CORE
+iit_delhi:419,Viresh Dutta,IIT Delhi,Energy Science and Engineering,CORE,22,49,85,1984,26,CORE
 iit_gandhinagar:113,Amit Arora,IIT Gandhinagar,Materials Engineering,CORE,25,49,54,865,19,CORE
 iit_guwahati:42,Selvaraju Narayanasamy,IIT Guwahati,Biosciences and Bioengineering,CORE,35,49,68,2947,31,CORE
 iit_jammu:208,Vinod Kushvaha,IIT Jammu,Civil Engineering,CORE,35,49,39,2196,23,CORE
@@ -347,8 +348,9 @@ iit_delhi:628,Jitendra Pratap Singh,IIT Delhi,Physics,CORE,39,48,91,1945,24,CORE
 iit_delhi:715,B. S. Butola,IIT Delhi,Textile and Fibre Engineering,CORE,32,48,104,2999,32,CORE
 iit_guwahati:101,Bhisma Kumar Patel,IIT Guwahati,Chemistry,CORE,55,48,125,2242,28,CORE
 iit_guwahati:646,Mamilla Ravi Sankar,IIT Guwahati,Mechanical Engineering,CORE,14,48,43,1566,22,CORE
-iit_indore:225,Somaditya Sen,IIT Indore,Physics,CORE,56,48,147,1846,25,CORE
+iit_indore:225,Somaditya Sen,IIT Indore,Physics,CORE,56,48,146,1846,25,CORE
 iit_ism:307,Amitava Mandal,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,62,48,93,1931,24,CORE
+iit_jodhpur:216,Chandan Pandey,IIT Jodhpur,Mechanical Engineering,CORE,43,48,89,2992,29,CORE
 iit_kanpur:116,Anand Singh,IIT Kanpur,Chemistry,CORE,42,48,66,1440,19,CORE
 iit_kanpur:330,Nishchal K. Verma,IIT Kanpur,Electrical Engineering,CORE,9,48,120,2378,25,CORE
 iit_kharagpur:205,Narayan Dhuleep Pradeep Singh,IIT Kharagpur,Chemistry,CORE,18,48,82,2787,29,CORE
@@ -358,7 +360,6 @@ iit_madras:560,Sarit Kumar Das,IIT Madras,Mechanical Engineering,CORE,24,48,82,1
 iit_roorkee:240,Kamal Jain,IIT Roorkee,Civil Engineering,CORE,53,48,121,1674,24,CORE
 iit_bhu:401,Bhola Nath Pal,IIT (BHU) Varanasi,School of Materials Science and Technology,CORE,65,47,130,1490,23,CORE
 iit_bhubaneswar:165,Puspendu Bhunia,IIT Bhubaneswar,School of Infrastructure,CORE,33,47,96,3047,27,CORE
-iit_bhubaneswar:32,Rajan Jha,IIT Bhubaneswar,School of Basic Sciences,CORE,21,47,134,2678,26,CORE
 iit_bhubaneswar:36,Saroj Kumar Nayak,IIT Bhubaneswar,School of Basic Sciences,CORE,44,47,67,1318,17,CORE
 iit_bombay:1143,Dipti Gupta,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,24,47,71,1869,25,CORE
 iit_bombay:1161,Smrutiranjan Parida,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,20,47,53,1431,22,CORE
@@ -369,12 +370,11 @@ iit_guwahati:88,Tapas K Mandal,IIT Guwahati,Chemical Engineering,CORE,54,47,53,8
 iit_indore:129,Vipul Singh,IIT Indore,Electrical Engineering,CORE,31,47,106,1264,20,CORE
 iit_ism:65,Sagar Pal,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,CORE,48,47,87,2271,29,CORE
 iit_ism:91,Sarat Kumar Das,IIT (ISM) Dhanbad,Civil Engineering,CORE,48,47,84,1048,18,CORE
-iit_jodhpur:216,Chandan Pandey,IIT Jodhpur,Mechanical Engineering,CORE,42,47,87,2652,28,CORE
 iit_kanpur:145,Sandeep Verma,IIT Kanpur,Chemistry,CORE,27,47,67,1720,16,CORE
 iit_kharagpur:200,Kumar Biradha,IIT Kharagpur,Chemistry,CORE,43,47,94,2048,27,CORE
 iit_kharagpur:649,Siddhartha Das,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,42,47,101,1559,24,CORE
 iit_madras:282,Manu Santhanam,IIT Madras,Civil Engineering,CORE,17,47,88,4530,28,CORE
-iit_mandi:230,Himanshu Pathak,IIT Mandi,School of Mechanical & Materials Engineering,CORE,51,47,106,1625,20,CORE
+iit_mandi:230,Himanshu Pathak,IIT Mandi,School of Mechanical & Materials Engineering,CORE,51,47,107,1628,20,CORE
 iit_mandi:50,Venkata Krishnan,IIT Mandi,School of Chemical Sciences,CORE,61,47,60,1647,24,CORE
 iit_patna:119,Manabendra Pathak,IIT Patna,Mechanical Engineering,CORE,37,47,72,1718,24,CORE
 iit_roorkee:212,Rahul Dev Garg,IIT Roorkee,Civil Engineering,CORE,92,47,166,1586,22,CORE
@@ -387,10 +387,11 @@ iit_indore:79,Mohd Farooq Azam,IIT Indore,Civil Engineering,CORE,42,46,53,2225,1
 iit_jodhpur:133,Deepak kumar M Fulwani,IIT Jodhpur,Electrical Engineering,CORE,15,46,66,1262,16,CORE
 iit_kanpur:130,Jitendra K. Bera,IIT Kanpur,Chemistry,CORE,23,46,48,1272,21,CORE
 iit_kanpur:322,Kumar Vaibhav Srivastava,IIT Kanpur,Electrical Engineering,CORE,17,46,217,3813,31,CORE
-iit_kanpur:517,Pradipta Kumar Panigrahi,IIT Kanpur,Mechanical Engineering,CORE,37,46,96,1409,16,CORE
+iit_kanpur:517,Pradipta Kumar Panigrahi,IIT Kanpur,Mechanical Engineering,CORE,37,46,96,1403,16,CORE
 iit_kharagpur:655,Tapas Laha,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,39,46,76,1942,25,CORE
 iit_roorkee:314,Sarada Prasad Pradhan,IIT Roorkee,Earth Sciences,CORE,34,46,50,1104,18,CORE
 iit_roorkee:382,Premalata Jena,IIT Roorkee,Electrical Engineering,CORE,44,46,111,1193,19,CORE
+iit_roorkee:692,G. P. Chaudhari,IIT Roorkee,Metallurgical and Materials Engineering,CORE,10,46,41,1330,18,CORE
 iit_bhu:541,Rai Birendra Nath,IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,CORE,20,45,37,2431,24,CORE
 iit_bombay:1139,Aswani Yella,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,33,45,52,1141,17,CORE
 iit_bombay:369,Raghavan B. Sunoj,IIT Bombay,Chemistry,CORE,5,45,76,2992,32,CORE
@@ -402,7 +403,7 @@ iit_delhi:547,Amit Gupta,IIT Delhi,Mechanical Engineering,CORE,15,45,50,786,16,C
 iit_guwahati:378,Manas Das,IIT Guwahati,Mechanical Engineering,CORE,33,45,106,1358,21,CORE
 iit_guwahati:405,Uday S. Dixit,IIT Guwahati,Mechanical Engineering,CORE,45,45,139,1653,23,CORE
 iit_ism:200,Sunil Kumar Gupta,IIT (ISM) Dhanbad,Environmental Science and Engineering,CORE,56,45,59,1549,22,CORE
-iit_ism:8,Kripamoy Sarkar,IIT (ISM) Dhanbad,Applied Geology,CORE,28,45,53,993,19,CORE
+iit_ism:8,Kripamoy Sarkar,IIT (ISM) Dhanbad,Applied Geology,CORE,29,45,53,993,19,CORE
 iit_kharagpur:966,Prabodh Bajpai,IIT Kharagpur,Electrical Engineering,CORE,20,45,60,891,14,CORE
 iit_madras:589,M Kamaraj,IIT Madras,Metallurgical and Materials Engineering,CORE,46,45,70,1352,22,CORE
 iit_madras:970,G D Janaki Ram,IIT Madras,Metallurgical and Materials Engineering,CORE,3,45,29,1157,16,CORE
@@ -410,7 +411,6 @@ iit_madras:973,T S Sampath Kumar,IIT Madras,Metallurgical and Materials Engineer
 iit_roorkee:619,Akshay Dvivedi,IIT Roorkee,Mechanical and Industrial Engineering,CORE,43,45,110,2323,26,CORE
 iit_roorkee:627,Apurbba Kumar Sharma,IIT Roorkee,Mechanical and Industrial Engineering,CORE,25,45,80,2682,23,CORE
 iit_roorkee:632,B. K. Mishra,IIT Roorkee,Mechanical and Industrial Engineering,CORE,14,45,56,1809,26,CORE
-iit_roorkee:692,G. P. Chaudhari,IIT Roorkee,Metallurgical and Materials Engineering,CORE,9,45,41,1330,18,CORE
 iit_roorkee:759,K. L. Yadav,IIT Roorkee,Physics,CORE,53,45,72,1267,23,CORE
 iit_bombay:615,Santanu Banerjee,IIT Bombay,Earth Sciences,CORE,27,44,122,1950,26,CORE
 iit_bombay:744,Udayan Ganguly,IIT Bombay,Electrical Engineering,CORE,26,44,157,1400,17,CORE
@@ -440,7 +440,7 @@ iit_jodhpur:153,Tiwari Shree Prakash,IIT Jodhpur,Electrical Engineering,CORE,37,
 iit_kanpur:496,Arvind Kumar,IIT Kanpur,Mechanical Engineering,CORE,15,43,49,1392,21,CORE
 iit_kharagpur:736,Tapan Kumar Nath,IIT Kharagpur,Physics,CORE,39,43,72,1022,19,CORE
 iit_kharagpur:779,Nikhil Kumar Singha,IIT Kharagpur,Rubber Technology,CORE,29,43,113,2720,31,CORE
-iit_madras:655,Prafulla Kumar Behera,IIT Madras,Physics,CORE,17,43,341,5112,30,CORE
+iit_madras:655,Prafulla Kumar Behera,IIT Madras,Physics,CORE,17,43,340,5110,30,CORE
 iit_roorkee:110,Patit Paban Kundu,IIT Roorkee,Chemical Engineering,CORE,59,43,91,2759,31,CORE
 iit_roorkee:366,Bhaveshkumar R. Bhalja,IIT Roorkee,Electrical Engineering,CORE,39,43,149,1675,22,CORE
 iit_roorkee:638,Inderdeep Singh,IIT Roorkee,Mechanical and Industrial Engineering,CORE,61,43,132,2254,24,CORE
@@ -452,7 +452,7 @@ iit_guwahati:110,Dipankar Srimani,IIT Guwahati,Chemistry,CORE,23,42,43,1485,21,C
 iit_hyderabad:47,Kishalay Mitra,IIT Hyderabad,Chemical Engineering,CORE,28,42,143,1695,25,CORE
 iit_indore:66,Suman Mukhopadhyay,IIT Indore,Chemistry,CORE,53,42,69,1199,20,CORE
 iit_ism:192,P.Saravanan,IIT (ISM) Dhanbad,Environmental Science and Engineering,CORE,45,42,93,2237,31,CORE
-iit_jodhpur:61,Rakesh Kumar Sharma,IIT Jodhpur,Chemistry,CORE,60,42,116,2065,27,CORE
+iit_jodhpur:61,Rakesh Kumar Sharma,IIT Jodhpur,Chemistry,CORE,60,42,115,2061,27,CORE
 iit_kanpur:156,Anubha Goel,IIT Kanpur,Civil Engineering,CORE,13,42,18,454,11,CORE
 iit_kanpur:302,Abheejeet Mohapatra,IIT Kanpur,Electrical Engineering,CORE,37,42,106,1779,17,CORE
 iit_kharagpur:204,Modhu Sudan Maji,IIT Kharagpur,Chemistry,CORE,24,42,58,1453,25,CORE
@@ -473,10 +473,11 @@ iit_hyderabad:241,Atul Suresh Deshpande,IIT Hyderabad,Materials Science and Meta
 iit_indore:62,Sanjay Kumar Singh,IIT Indore,Chemistry,CORE,28,41,77,2286,25,CORE
 iit_ism:318,Kalyan Kumar Singh,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,29,41,96,1650,22,CORE
 iit_kanpur:11,S. N. Singh,IIT Kanpur,Electrical Engineering,CORE,40,41,92,1646,20,CORE
+iit_kharagpur:289,Niloy Ganguly,IIT Kharagpur,Computer Science and Engineering,CORE,18,41,138,1855,22,CORE
 iit_kharagpur:294,Pawan Goyal,IIT Kharagpur,Computer Science and Engineering,CORE,22,41,114,1533,17,CORE
 iit_kharagpur:706,Dipak Kumar Goswami,IIT Kharagpur,Physics,CORE,50,41,88,1326,22,CORE
 iit_kharagpur:870,Debabrata Das,IIT Kharagpur,Bioscience and Biotechnology,CORE,9,41,52,2128,30,CORE
-iit_madras:184,Abhijit P Deshpande,IIT Madras,Chemical Engineering,CORE,23,41,67,1082,18,CORE
+iit_madras:184,Abhijit P Deshpande,IIT Madras,Chemical Engineering,CORE,24,41,67,1082,18,CORE
 iit_madras:538,Hariharan K,IIT Madras,Mechanical Engineering,CORE,38,41,76,1364,21,CORE
 iit_roorkee:503,Sanjeev Kumar Prajapati,IIT Roorkee,Hydro and Renewable Energy,CORE,49,41,71,1494,21,CORE
 iit_roorkee:795,Abhijit Maiti,IIT Roorkee,Polymer and Process Engineering,CORE,50,41,51,2082,24,CORE
@@ -485,7 +486,6 @@ iit_guwahati:426,Bipul Bhuyan,IIT Guwahati,Physics,CORE,13,40,250,7401,39,CORE
 iit_guwahati:81,Ramgopal V. S. Uppaluri,IIT Guwahati,Chemical Engineering,CORE,29,40,69,1467,23,CORE
 iit_ism:197,Sheeja Jagadevan,IIT (ISM) Dhanbad,Environmental Science and Engineering,CORE,40,40,45,1827,19,CORE
 iit_ism:54,Biswajit Chowdhury,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,CORE,21,40,59,1847,21,CORE
-iit_kharagpur:289,Niloy Ganguly,IIT Kharagpur,Computer Science and Engineering,CORE,18,40,138,1855,22,CORE
 iit_kharagpur:398,Basudev Lahiri,IIT Kharagpur,Electronics and Electrical Communication Engg.,CORE,29,40,51,743,13,CORE
 iit_madras:593,Pradeep konda Gokuldoss,IIT Madras,Metallurgical and Materials Engineering,CORE,20,40,31,1161,11,CORE
 iit_mandi:116,Narsa Reddy Tummuru,IIT Mandi,School of Computing & Electrical Engineering,CORE,17,40,42,874,16,CORE
@@ -523,7 +523,7 @@ iit_gandhinagar:200,Chandra Sekhar Tiwary,IIT Gandhinagar,Materials Engineering,
 iit_gandhinagar:78,Vikrant Jain,IIT Gandhinagar,Earth Sciences,CORE,33,38,53,528,13,CORE
 iit_guwahati:214,Sukumar Nandi,IIT Guwahati,Computer Science and Engineering,CORE,20,38,190,2071,24,CORE
 iit_guwahati:27,Lingaraj Sahoo,IIT Guwahati,Biosciences and Bioengineering,CORE,27,38,107,2274,29,CORE
-iit_indore:179,Shailesh Kundalwal,IIT Indore,Mechanical Engineering,CORE,44,38,102,1906,27,CORE
+iit_indore:179,Shailesh Kundalwal,IIT Indore,Mechanical Engineering,CORE,45,38,102,1906,27,CORE
 iit_indore:26,Amit Kumar,IIT Indore,Biosciences and Biomedical Engineering,CORE,22,38,99,2486,29,CORE
 iit_kanpur:841,Gautam Biswas,IIT Kanpur,Mechanical Engineering,CORE,31,38,32,373,11,CORE
 iit_kharagpur:201,Madhab Chandra Das,IIT Kharagpur,Chemistry,CORE,24,38,80,4571,40,CORE
@@ -538,7 +538,6 @@ iit_guwahati:40,Sachin Kumar,IIT Guwahati,Biosciences and Bioengineering,CORE,40
 iit_guwahati:92,A.S. Achalkumar,IIT Guwahati,Chemistry,CORE,29,37,84,1636,24,CORE
 iit_indore:114,Prabhat Kumar Upadhyay,IIT Indore,Electrical Engineering,CORE,30,37,113,2087,25,CORE
 iit_ism:709,Raghvendra Kumar Chaudhary,IIT (ISM) Dhanbad,Electronics Engineering,CORE,15,37,173,2711,30,CORE
-iit_kanpur:842,Khandekar Sameer,IIT Kanpur,Mechanical Engineering,CORE,12,37,70,1525,21,CORE
 iit_kharagpur:130,Achanta Naga Venkata Satyanarayana,IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",CORE,7,37,21,378,8,CORE
 iit_kharagpur:30,Bhabani Sankar Das,IIT Kharagpur,Agricultural and Food Engineering,CORE,25,37,69,3684,26,CORE
 iit_kharagpur:365,Chandan Chakraborty,IIT Kharagpur,Electrical Engineering,CORE,46,37,131,1499,22,CORE
@@ -565,6 +564,7 @@ iit_ism:189,Brijesh Kumar Mishra,IIT (ISM) Dhanbad,Environmental Science and Eng
 iit_ism:209,Barun Kumar Nandi,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",CORE,21,36,46,895,19,CORE
 iit_ism:428,A S Venkatesh,IIT (ISM) Dhanbad,Applied Geology,CORE,19,36,35,577,13,CORE
 iit_kanpur:424,Kallol Mondal,IIT Kanpur,Materials Science and Engineering,CORE,24,36,78,1325,22,CORE
+iit_kanpur:842,Khandekar Sameer,IIT Kanpur,Mechanical Engineering,CORE,12,36,70,1525,21,CORE
 iit_kharagpur:529,Pallab Banerji,IIT Kharagpur,Materials Science Centre,CORE,51,36,70,840,18,CORE
 iit_kharagpur:592,Dilip Kumar Pratihar,IIT Kharagpur,Mechanical Engineering,CORE,34,36,131,1778,20,CORE
 iit_kharagpur:656,Tarun Kumar Kundu,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,54,36,58,880,18,CORE
@@ -593,6 +593,7 @@ iit_delhi:557,Harish Hirani,IIT Delhi,Mechanical Engineering,CORE,31,35,47,1592,
 iit_guwahati:261,Palathinkal Paily Roy,IIT Guwahati,Electronics and Electrical Engineering,CORE,48,35,92,1014,18,CORE
 iit_guwahati:264,Praveen Kumar,IIT Guwahati,Electronics and Electrical Engineering,CORE,20,35,103,1620,24,CORE
 iit_guwahati:399,Shrikrishna N. Joshi,IIT Guwahati,Mechanical Engineering,CORE,43,35,69,801,14,CORE
+iit_guwahati:57,Amit Kumar,IIT Guwahati,Chemical Engineering,CORE,36,35,60,1391,20,CORE
 iit_ism:378,Chandan Guria,IIT (ISM) Dhanbad,Petroleum Engineering,CORE,14,35,42,1950,22,CORE
 iit_ism:88,Rajib Sarkar,IIT (ISM) Dhanbad,Civil Engineering,CORE,41,35,69,530,13,CORE
 iit_jodhpur:402,Gupta Ritu,IIT Jodhpur,Chemistry,CORE,29,35,40,1206,22,CORE
@@ -610,18 +611,17 @@ iit_bhu:15,Ashutosh Kumar Dubey,IIT (BHU) Varanasi,Department of Ceramic Enginee
 iit_bhu:286,Joysurya Basu,IIT (BHU) Varanasi,Department of Metallurgical Engineering,CORE,22,34,52,893,12,CORE
 iit_bhu:346,Avanish Singh Parmar,IIT (BHU) Varanasi,Department of Physics,CORE,53,34,74,1335,22,CORE
 iit_bhu:59,Indrajit Sinha,IIT (BHU) Varanasi,Department of Chemistry,CORE,48,34,87,1802,25,CORE
-iit_bhubaneswar:89,Debi Prosad Dogra,IIT Bhubaneswar,School of Electrical and Computer Sciences,CORE,21,34,99,2755,29,CORE
+iit_bhubaneswar:89,Debi Prosad Dogra,IIT Bhubaneswar,School of Electrical and Computer Sciences,CORE,21,34,100,2760,29,CORE
 iit_bombay:1160,Shobha Shukla,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,83,34,163,1804,24,CORE
 iit_bombay:304,Anindya Datta,IIT Bombay,Chemistry,CORE,79,34,91,993,19,CORE
 iit_bombay:397,Suresh Valiyaveettil,IIT Bombay,Chemistry,CORE,12,34,77,1378,20,CORE
 iit_delhi:316,Anandarup Das,IIT Delhi,Electrical Engineering,CORE,24,34,77,636,16,CORE
 iit_guwahati:396,Santosha K. Dwivedy,IIT Guwahati,Mechanical Engineering,CORE,51,34,129,2264,20,CORE
-iit_guwahati:57,Amit Kumar,IIT Guwahati,Chemical Engineering,CORE,36,34,60,1391,20,CORE
 iit_hyderabad:203,Siva Rama Krishna Vanjari,IIT Hyderabad,Electrical Engineering,CORE,30,34,99,1796,25,CORE
 iit_indore:270,Debasis Nayak,IIT Indore,Biosciences and Biomedical Engineering,CORE,14,34,40,1224,20,CORE
 iit_ism:341,Subrata Kumar Ghosh,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,36,34,88,2169,27,CORE
 iit_kanpur:437,Shashank Shekhar,IIT Kanpur,Materials Science and Engineering,CORE,27,34,42,623,16,CORE
-iit_kanpur:609,Krishnamurthy Muralidhar,IIT Kanpur,Mechanical Engineering,CORE,14,34,59,587,13,CORE
+iit_kanpur:609,Krishnamurthy Muralidhar,IIT Kanpur,Mechanical Engineering,CORE,13,34,58,581,13,CORE
 iit_kharagpur:129,Abhishek Kumar Rai,IIT Kharagpur,"Centre for Ocean, River, Atmosphere and Land Sciences (CORAL)",CORE,54,34,42,526,13,CORE
 iit_kharagpur:266,Sujit Kumar Dash,IIT Kharagpur,Civil Engineering,CORE,12,34,26,798,11,CORE
 iit_madras:191,Niket S Kaisare,IIT Madras,Chemical Engineering,CORE,28,34,48,745,17,CORE
@@ -629,7 +629,7 @@ iit_madras:382,Nandita Dasgupta,IIT Madras,Electrical Engineering,CORE,4,34,55,9
 iit_madras:591,Murugaiyan Amirthalingam,IIT Madras,Metallurgical and Materials Engineering,CORE,45,34,77,964,17,CORE
 iit_madras:989,Pramoda Kumar Nayak,IIT Madras,Physics,CORE,13,34,25,1144,13,CORE
 iit_patna:17,Prolay Das,IIT Patna,Chemistry,CORE,35,34,57,1205,21,CORE
-iit_patna:44,Asif Ekbal,IIT Patna,Computer Science and Engineering,CORE,27,34,284,3099,28,CORE
+iit_patna:44,Asif Ekbal,IIT Patna,Computer Science and Engineering,CORE,27,34,282,3094,28,CORE
 iit_roorkee:208,Praveen Kumar,IIT Roorkee,Civil Engineering,CORE,18,34,48,1254,18,CORE
 iit_roorkee:381,Pramod Agarwal,IIT Roorkee,Electrical Engineering,CORE,23,34,87,656,12,CORE
 iit_bhu:151,Rajeev Kumar Singh,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,36,33,129,1063,17,CORE
@@ -643,7 +643,7 @@ iit_guwahati:133,Uttam Manna,IIT Guwahati,Chemistry,CORE,31,33,115,2347,24,CORE
 iit_hyderabad:120,Subramaniam Kolluru V.L.,IIT Hyderabad,Civil Engineering,CORE,23,33,128,2667,32,CORE
 iit_ism:33,Aditya Kumar,IIT (ISM) Dhanbad,Chemical Engineering,CORE,19,33,63,1960,22,CORE
 iit_kanpur:340,Rohit Budhiraja,IIT Kanpur,Electrical Engineering,CORE,14,33,128,1149,17,CORE
-iit_kanpur:785,Vinay Purushotaman Namboodiri,IIT Kanpur,,CORE,7,33,83,1620,19,CORE
+iit_kanpur:785,Vinay Purushotaman Namboodiri,IIT Kanpur,,CORE,7,33,81,1525,19,CORE
 iit_kharagpur:1042,Ashish Kumar Nath,IIT Kharagpur,Mechanical Engineering,CORE,11,33,40,1522,21,CORE
 iit_kharagpur:274,Animesh Mukherjee,IIT Kharagpur,Computer Science and Engineering,CORE,14,33,131,1763,17,CORE
 iit_kharagpur:635,Gour Gopal Roy,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,31,33,68,1056,16,CORE
@@ -664,6 +664,7 @@ iit_bhubaneswar:291,Rabindra Kumar Panda,IIT Bhubaneswar,School of Infrastructur
 iit_bombay:223,Ronita Bardhan,IIT Bombay,Centre for Urban Science and Engineering,CORE,11,32,44,1111,22,CORE
 iit_bombay:368,Pratim K Chattaraj,IIT Bombay,Chemistry,CORE,8,32,43,1283,22,CORE
 iit_bombay:603,Kanchan Pande,IIT Bombay,Earth Sciences,CORE,10,32,29,940,15,CORE
+iit_bombay:617,Soumyajit Mukherjee,IIT Bombay,Earth Sciences,CORE,53,32,70,916,17,CORE
 iit_delhi:137,Vikram Singh,IIT Delhi,Chemical Engineering,CORE,20,32,28,521,14,CORE
 iit_delhi:2,Anupam Dewan,IIT Delhi,Applied Mechanics,CORE,24,32,99,1083,17,CORE
 iit_delhi:329,Indra Narayan Kar,IIT Delhi,Electrical Engineering,CORE,16,32,114,1380,20,CORE
@@ -677,7 +678,7 @@ iit_guwahati:95,Akshai Kumar A. S,IIT Guwahati,Chemistry,CORE,45,32,60,1433,21,C
 iit_hyderabad:258,Suhash Ranjan Dey,IIT Hyderabad,Materials Science and Metallurgical Engineering,CORE,18,32,46,767,17,CORE
 iit_ism:175,Ravi Kumar Gangwar,IIT (ISM) Dhanbad,Electronics Engineering,CORE,21,32,189,2268,28,CORE
 iit_ism:682,A K Varma,IIT (ISM) Dhanbad,Applied Geology,CORE,18,32,49,787,16,CORE
-iit_kanpur:106,Raj Ganesh Santharam Pala,IIT Kanpur,Chemical Engineering,CORE,19,32,93,961,20,CORE
+iit_kanpur:106,Raj Ganesh Santharam Pala,IIT Kanpur,Chemical Engineering,CORE,19,32,92,953,20,CORE
 iit_kanpur:263,Indra Sekhar Sen,IIT Kanpur,Earth Sciences,CORE,35,32,38,1009,18,CORE
 iit_kanpur:343,Soumya Ranjan Sahoo,IIT Kanpur,Electrical Engineering,CORE,28,32,131,978,16,CORE
 iit_kharagpur:20,Srinibas Karmakar,IIT Kharagpur,Aerospace Engineering,CORE,11,32,52,1099,19,CORE
@@ -692,14 +693,14 @@ iit_roorkee:196,Indrajit Ghosh,IIT Roorkee,Civil Engineering,CORE,29,32,87,1027,
 iit_roorkee:833,S. K. Mishra,IIT Roorkee,Water Resources Development and Management,CORE,36,32,57,1041,21,CORE
 iit_ropar:82,Reet Kamal Tiwari,IIT Ropar,Civil Engineering,CORE,64,32,96,1076,19,CORE
 iit_bhu:22,Preetam Singh,IIT (BHU) Varanasi,Department of Ceramic Engineering,CORE,40,31,60,1125,18,CORE
+iit_bhu:288,Kausik Chattopadhyay,IIT (BHU) Varanasi,Department of Metallurgical Engineering,CORE,31,31,42,738,16,CORE
 iit_bhu:331,M. S. Muthu,IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,CORE,32,31,103,2947,32,CORE
 iit_bhu:409,Sanjay Singh,IIT (BHU) Varanasi,School of Materials Science and Technology,CORE,27,31,50,598,16,CORE
 iit_bhubaneswar:166,Rajesh Roshan Dash,IIT Bhubaneswar,School of Infrastructure,CORE,14,31,63,2018,24,CORE
-iit_bhubaneswar:187,Manas Mohan Mahapatra,IIT Bhubaneswar,School of Mechanical Sciences,CORE,27,31,44,1575,20,CORE
+iit_bhubaneswar:187,Manas Mohan Mahapatra,IIT Bhubaneswar,School of Mechanical Sciences,CORE,29,31,47,1601,20,CORE
 iit_bombay:1223,Subhabrata Dhar,IIT Bombay,Physics,CORE,27,31,78,578,13,CORE
 iit_bombay:131,Samir K Maji,IIT Bombay,Biosciences and Bioengineering,CORE,10,31,39,1129,18,CORE
 iit_bombay:274,Rajdip Bandyopadhyaya,IIT Bombay,Chemical Engineering,CORE,15,31,50,813,16,CORE
-iit_bombay:617,Soumyajit Mukherjee,IIT Bombay,Earth Sciences,CORE,53,31,69,906,17,CORE
 iit_bombay:801,Swatantra Pratap Singh,IIT Bombay,Environmental Science and Engineering,CORE,53,31,93,1534,22,CORE
 iit_delhi:210,Manabendra Saharia,IIT Delhi,Civil Engineering,CORE,40,31,71,620,13,CORE
 iit_delhi:554,Bahni Ray,IIT Delhi,Mechanical Engineering,CORE,26,31,39,283,10,CORE
@@ -707,7 +708,7 @@ iit_delhi:593,Sunil Jha,IIT Delhi,Mechanical Engineering,CORE,43,31,53,811,16,CO
 iit_delhi:604,Joby Joseph,IIT Delhi,Optics and Photonics Centre,CORE,16,31,81,1629,20,CORE
 iit_gandhinagar:85,Nihar Ranjan Mohapatra,IIT Gandhinagar,Electrical Engineering,CORE,17,31,94,641,12,CORE
 iit_hyderabad:297,Karri Badarinath,IIT Hyderabad,Mechanical & Aerospace Engineering,CORE,7,31,8,427,8,CORE
-iit_indore:221,Raghunath Sahoo,IIT Indore,Physics,CORE,29,31,652,14741,61,CORE
+iit_indore:221,Raghunath Sahoo,IIT Indore,Physics,CORE,29,31,646,14716,61,CORE
 iit_ism:373,Vasanta Govind Kumar Villuri,IIT (ISM) Dhanbad,Mining Engineering,CORE,32,31,29,735,13,CORE
 iit_ism:96,Sowmiya Chawla,IIT (ISM) Dhanbad,Civil Engineering,CORE,8,31,32,495,13,CORE
 iit_kharagpur:1061,Indranil Manna,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,43,31,63,910,17,CORE
@@ -763,7 +764,6 @@ iit_bhu:150,R. K. Saket,IIT (BHU) Varanasi,Department of Electrical Engineering,
 iit_bhu:163,Amit Kumar Singh,IIT (BHU) Varanasi,Department of Electronics Engineering,CORE,30,29,86,1220,16,CORE
 iit_bhu:21,Pradip Kumar Roy,IIT (BHU) Varanasi,Department of Ceramic Engineering,CORE,36,29,51,1586,20,CORE
 iit_bhu:245,Jahar Sarkar,IIT (BHU) Varanasi,Department of Mechanical Engineering,CORE,36,29,135,3666,35,CORE
-iit_bhu:288,Kausik Chattopadhyay,IIT (BHU) Varanasi,Department of Metallurgical Engineering,CORE,31,29,41,722,15,CORE
 iit_bhu:361,Rajendra Prasad,IIT (BHU) Varanasi,Department of Physics,CORE,17,29,76,1329,21,CORE
 iit_bhu:385,Vishal Mishra,IIT (BHU) Varanasi,School of Biochemical Engineering,CORE,93,29,81,1484,19,CORE
 iit_bhu:45,Ravi P. Jaiswal,IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,CORE,27,29,31,500,13,CORE
@@ -779,8 +779,8 @@ iit_guwahati:401,Sukhomay Pal,IIT Guwahati,Mechanical Engineering,CORE,36,29,66,
 iit_hyderabad:243,Chandrasekhar Murapaka,IIT Hyderabad,Materials Science and Metallurgical Engineering,CORE,17,29,59,418,12,CORE
 iit_hyderabad:352,Shantanu Desai,IIT Hyderabad,Physics,CORE,14,29,447,21634,75,CORE
 iit_indore:107,Abhinav Kranti,IIT Indore,Electrical Engineering,CORE,10,29,79,1148,18,CORE
-iit_ism:100,Amgoth Tarachand,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,20,29,81,3991,32,CORE
-iit_ism:141,Pradip Kumar Sadhu,IIT (ISM) Dhanbad,Electrical Engineering,CORE,58,29,179,1959,21,CORE
+iit_ism:100,Amgoth Tarachand,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,20,29,80,3985,32,CORE
+iit_ism:141,Pradip Kumar Sadhu,IIT (ISM) Dhanbad,Electrical Engineering,CORE,58,29,178,1944,21,CORE
 iit_ism:177,Sanjeev Kumar Raghuwanshi,IIT (ISM) Dhanbad,Electronics Engineering,CORE,26,29,185,2436,26,CORE
 iit_kanpur:444,Vivek Verma,IIT Kanpur,Materials Science and Engineering,CORE,19,29,41,1459,21,CORE
 iit_kanpur:580,Zakir Hossain,IIT Kanpur,Physics,CORE,17,29,37,451,12,CORE
@@ -829,7 +829,7 @@ iit_ism:178,Santanu Dwari,IIT (ISM) Dhanbad,Electronics Engineering,CORE,11,28,1
 iit_ism:201,Suresh Pandian Elumalai,IIT (ISM) Dhanbad,Environmental Science and Engineering,CORE,29,28,40,714,13,CORE
 iit_ism:59,Mahendra Yadav,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,CORE,31,28,70,2874,32,CORE
 iit_ism:93,Sekhar Chandra Dutta,IIT (ISM) Dhanbad,Civil Engineering,CORE,19,28,41,1168,14,CORE
-iit_kanpur:811,Biswas Animesh,IIT Kanpur,Electrical Engineering,CORE,5,28,89,836,17,CORE
+iit_kanpur:811,Biswas Animesh,IIT Kanpur,Electrical Engineering,CORE,5,28,86,834,17,CORE
 iit_kharagpur:1067,Sudipto Ghosh,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,8,28,48,1137,21,CORE
 iit_kharagpur:175,Parag Arvind Deshpande,IIT Kharagpur,Chemical Engineering,CORE,11,28,62,693,14,CORE
 iit_kharagpur:212,Rajakumar Ananthakrishnan,IIT Kharagpur,Chemistry,CORE,12,28,21,507,14,CORE
@@ -847,7 +847,7 @@ iit_roorkee:365,Barjeev Tyagi,IIT Roorkee,Electrical Engineering,CORE,21,28,75,6
 iit_roorkee:779,Vivek Kumar Malik,IIT Roorkee,Physics,CORE,43,28,53,484,12,CORE
 iit_ropar:208,Prabhat K. Agnihotri,IIT Ropar,Mechanical Engineering,CORE,17,28,71,969,18,CORE
 iit_bhu:105,Shishir Gaur,IIT (BHU) Varanasi,Department of Civil Engineering,CORE,44,27,68,726,17,CORE
-iit_bhu:155,Sandip Ghosh,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,32,27,117,1179,19,CORE
+iit_bhu:155,Sandip Ghosh,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,32,27,116,1178,19,CORE
 iit_bhubaneswar:219,Rama Krushna Sabat,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,17,27,24,331,11,CORE
 iit_bombay:483,Vedagiri Perumal,IIT Bombay,Civil Engineering,CORE,15,27,46,764,15,CORE
 iit_bombay:700,Mukul C. Chandorkar,IIT Bombay,Electrical Engineering,CORE,16,27,40,590,11,CORE
@@ -867,7 +867,7 @@ iit_guwahati:418,Alika Khare,IIT Guwahati,Physics,CORE,7,27,60,674,15,CORE
 iit_hyderabad:43,Devarai Santhosh Kumar,IIT Hyderabad,Chemical Engineering,CORE,9,27,23,2224,17,CORE
 iit_indore:68,Tushar Kanti Mukherjee,IIT Indore,Chemistry,CORE,14,27,33,692,16,CORE
 iit_ism:108,Haider Banka,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,15,27,83,1710,22,CORE
-iit_ism:138,Kartick Chandra Jana,IIT (ISM) Dhanbad,Electrical Engineering,CORE,22,27,96,1525,22,CORE
+iit_ism:138,Kartick Chandra Jana,IIT (ISM) Dhanbad,Electrical Engineering,CORE,22,27,96,1535,22,CORE
 iit_ism:691,Rima Chatterjee,IIT (ISM) Dhanbad,Applied Geophysics,CORE,3,27,37,633,14,CORE
 iit_kanpur:309,Amit Verma,IIT Kanpur,Electrical Engineering,CORE,29,27,65,837,14,CORE
 iit_kanpur:440,Shobit Omar,IIT Kanpur,Materials Science and Engineering,CORE,20,27,49,1107,18,CORE
@@ -897,6 +897,7 @@ iit_bhu:550,Srivastava Vandana,IIT (BHU) Varanasi,Department of Chemistry,CORE,1
 iit_bhu:97,Prabhat Kumar Singh Dikshit,IIT (BHU) Varanasi,Department of Civil Engineering,CORE,18,26,22,409,12,CORE
 iit_bhubaneswar:158,Manaswini Behera,IIT Bhubaneswar,School of Infrastructure,CORE,46,26,74,953,17,CORE
 iit_bhubaneswar:168,Remya Neelancherry,IIT Bhubaneswar,School of Infrastructure,CORE,52,26,75,1202,19,CORE
+iit_bombay:1052,Amitava De,IIT Bombay,Mechanical Engineering,CORE,13,26,44,487,15,CORE
 iit_bombay:1135,Aparna Singh,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,24,26,49,628,13,CORE
 iit_bombay:120,Rinti Banerjee,IIT Bombay,Biosciences and Bioengineering,CORE,13,26,54,1794,25,CORE
 iit_bombay:231,Karthikeyan Lanka,IIT Bombay,Centre of Studies in Resources Engineering,CORE,30,26,53,1704,12,CORE
@@ -918,7 +919,7 @@ iit_hyderabad:82,Saurabh Kumar Singh,IIT Hyderabad,Chemistry,CORE,30,26,76,857,1
 iit_indore:30,Hem Chandra Jha,IIT Indore,Biosciences and Biomedical Engineering,CORE,44,26,88,1023,17,CORE
 iit_ism:102,Annavarapu Chandra Sekhara Rao,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,20,26,41,3408,20,CORE
 iit_ism:57,Hari Pada Nayek,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,CORE,19,26,50,790,18,CORE
-iit_jodhpur:228,Rahul Chhibber,IIT Jodhpur,Mechanical Engineering,CORE,24,26,109,1574,22,CORE
+iit_jodhpur:228,Rahul Chhibber,IIT Jodhpur,Mechanical Engineering,CORE,25,26,108,1574,22,CORE
 iit_jodhpur:254,Subhashish Banerjee,IIT Jodhpur,Physics,CORE,17,26,132,1751,23,CORE
 iit_kanpur:220,Piyush Rai,IIT Kanpur,Computer Science and Engineering,CORE,14,26,33,853,13,CORE
 iit_kharagpur:1004,Subhasish Tripathy,IIT Kharagpur,Geology and Geophysics,CORE,26,26,21,689,8,CORE
@@ -943,19 +944,19 @@ iit_roorkee:215,Rajib Chowdhury,IIT Roorkee,Civil Engineering,CORE,19,26,63,861,
 iit_roorkee:396,Girish K. Singh,IIT Roorkee,Electrical Engineering,CORE,21,26,59,1016,16,CORE
 iit_roorkee:499,Pratham Arora,IIT Roorkee,Hydro and Renewable Energy,CORE,36,26,45,650,16,CORE
 iit_ropar:115,Abhinav Dhall,IIT Ropar,Computer Science and Engineering,CORE,5,26,48,937,13,CORE
-iit_bhu:158,Shyam Kamal,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,28,25,151,1687,19,CORE
+iit_bhilai:78,Rahul Jain,IIT Bhilai,Mechanical Engineering,CORE,30,25,23,499,10,CORE
+iit_bhu:158,Shyam Kamal,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,28,25,150,1686,19,CORE
 iit_bhubaneswar:213,Kisor Kumar Sahu,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,51,25,53,670,15,CORE
 iit_bhubaneswar:221,Sivaiah Bathula,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,15,25,36,775,15,CORE
 iit_bhubaneswar:86,Chandrashekhar Narayan Bhende,IIT Bhubaneswar,School of Electrical and Computer Sciences,CORE,27,25,48,606,13,CORE
-iit_bombay:1052,Amitava De,IIT Bombay,Mechanical Engineering,CORE,13,25,44,487,15,CORE
 iit_bombay:1099,S. V. Prabhu,IIT Bombay,Mechanical Engineering,CORE,10,25,42,693,14,CORE
 iit_bombay:316,Chebrolu Pulla Rao,IIT Bombay,Chemistry,CORE,10,25,33,795,18,CORE
 iit_bombay:353,M. Ravikanth,IIT Bombay,Chemistry,CORE,33,25,216,2447,25,CORE
-iit_bombay:388,Santosh J. Gharpure,IIT Bombay,Chemistry,CORE,29,25,84,1038,18,CORE
+iit_bombay:388,Santosh J. Gharpure,IIT Bombay,Chemistry,CORE,29,25,83,1038,18,CORE
 iit_bombay:706,Pradeep R. Nair,IIT Bombay,Electrical Engineering,CORE,17,25,50,559,13,CORE
 iit_bombay:775,Santanu Bandyopadhyay,IIT Bombay,Energy Science and Engineering,CORE,10,25,92,1333,21,CORE
 iit_bombay:776,Shaibal K Sarkar,IIT Bombay,Energy Science and Engineering,CORE,11,25,43,1087,18,CORE
-iit_bombay:779,Suneet Singh,IIT Bombay,Energy Science and Engineering,CORE,25,25,116,1089,18,CORE
+iit_bombay:779,Suneet Singh,IIT Bombay,Energy Science and Engineering,CORE,25,25,115,1089,18,CORE
 iit_delhi:121,Jayati Sarkar,IIT Delhi,Chemical Engineering,CORE,33,25,33,509,10,CORE
 iit_delhi:159,Ravi P Singh,IIT Delhi,Chemistry,CORE,15,25,59,666,15,CORE
 iit_delhi:716,Bhanu Nandan,IIT Delhi,Textile and Fibre Engineering,CORE,48,25,105,1364,21,CORE
@@ -969,7 +970,7 @@ iit_ism:347,Vivek Bajpai,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,40,25,56,
 iit_ism:90,Sanket Nayak,IIT (ISM) Dhanbad,Civil Engineering,CORE,23,25,48,1692,20,CORE
 iit_jammu:67,Ankur Bansal,IIT Jammu,Electrical Engineering,CORE,21,25,50,907,15,CORE
 iit_jodhpur:22,Meenu Chhabra,IIT Jodhpur,Bioscience and Bioengineering,CORE,39,25,40,879,16,CORE
-iit_jodhpur:80,Deepika Bhattu,IIT Jodhpur,Civil and Infrastructure Engineering,CORE,14,25,17,602,13,CORE
+iit_jodhpur:80,Deepika Bhattu,IIT Jodhpur,Civil and Infrastructure Engineering,CORE,14,25,16,579,12,CORE
 iit_kanpur:105,Rahul Mangal,IIT Kanpur,Chemical Engineering,CORE,19,25,24,355,11,CORE
 iit_kharagpur:290,Pabitra Mitra,IIT Kharagpur,Computer Science and Engineering,CORE,35,25,152,1509,20,CORE
 iit_kharagpur:362,Aurobinda Routray,IIT Kharagpur,Electrical Engineering,CORE,21,25,166,1534,21,CORE
@@ -993,7 +994,6 @@ iit_roorkee:631,B. K. Gandhi,IIT Roorkee,Mechanical and Industrial Engineering,C
 iit_roorkee:643,M. M. Joglekar,IIT Roorkee,Mechanical and Industrial Engineering,CORE,16,25,37,1171,20,CORE
 iit_roorkee:697,Nikhil Dhawan,IIT Roorkee,Metallurgical and Materials Engineering,CORE,17,25,71,1366,22,CORE
 iit_ropar:54,Debaprasad Mandal,IIT Ropar,Chemistry,CORE,16,25,43,1120,22,CORE
-iit_bhilai:78,Rahul Jain,IIT Bhilai,Mechanical Engineering,CORE,30,24,23,499,10,CORE
 iit_bhu:134,Tanima Dutta,IIT (BHU) Varanasi,Department of Computer Science and Engineering,CORE,12,24,92,1393,21,CORE
 iit_bhu:143,Devender Singh,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,14,24,51,757,15,CORE
 iit_bhu:178,Sanjeev Sharma,IIT (BHU) Varanasi,Department of Electronics Engineering,CORE,28,24,84,746,14,CORE
@@ -1030,7 +1030,7 @@ iit_ism:684,Sarada Prasad Mohanty,IIT (ISM) Dhanbad,Applied Geology,CORE,10,24,1
 iit_ism:737,Durga Charan Panigrahi,IIT (ISM) Dhanbad,Mining Engineering,CORE,7,24,21,428,12,CORE
 iit_kanpur:151,Abhas Singh,IIT Kanpur,Civil Engineering,CORE,7,24,27,436,10,CORE
 iit_kanpur:441,Somnath Bhowmick,IIT Kanpur,Materials Science and Engineering,CORE,38,24,83,1145,18,CORE
-iit_kanpur:64,Ashok Kumar,IIT Kanpur,Biological Sciences and Bioengineering,CORE,21,24,77,1970,26,CORE
+iit_kanpur:64,Ashok Kumar,IIT Kanpur,Biological Sciences and Bioengineering,CORE,21,24,76,1970,26,CORE
 iit_kharagpur:113,Sandeep Kumar Reddy,IIT Kharagpur,Centre for Computational and Data Sciences,CORE,18,24,23,239,9,CORE
 iit_kharagpur:196,Dibakar Dhara,IIT Kharagpur,Chemistry,CORE,16,24,39,843,15,CORE
 iit_kharagpur:429,Amit Ghosh,IIT Kharagpur,Energy Science and Engineering,CORE,36,24,56,1384,21,CORE
@@ -1067,7 +1067,7 @@ iit_bhilai:9,Raghavender Medishetty,IIT Bhilai,Chemistry,CORE,25,23,36,1323,10,C
 iit_bhu:119,Hari Prabhat Gupta,IIT (BHU) Varanasi,Department of Computer Science and Engineering,CORE,11,23,119,1599,22,CORE
 iit_bhu:164,Amritanshu Pandey,IIT (BHU) Varanasi,Department of Electronics Engineering,CORE,34,23,41,391,11,CORE
 iit_bhu:28,Bhawna Verma,IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,CORE,31,23,53,981,18,CORE
-iit_bhu:546,Mandal Kamdeo,IIT (BHU) Varanasi,Department of Chemistry,CORE,22,23,48,447,9,CORE
+iit_bhu:546,Mandal Kamdeo,IIT (BHU) Varanasi,Department of Chemistry,CORE,22,23,48,446,9,CORE
 iit_bhu:83,Brind Kumar,IIT (BHU) Varanasi,Department of Civil Engineering,CORE,16,23,35,975,15,CORE
 iit_bhubaneswar:178,Umesh Chandra Sahoo,IIT Bhubaneswar,School of Infrastructure,CORE,17,23,61,1376,21,CORE
 iit_bhubaneswar:190,Mihir Kumar Das,IIT Bhubaneswar,School of Mechanical Sciences,CORE,21,23,50,423,11,CORE
@@ -1078,9 +1078,9 @@ iit_bombay:21,Hrishikesh Gadgil,IIT Bombay,Aerospace Engineering,CORE,22,23,33,2
 iit_bombay:267,Mani Bhushan,IIT Bombay,Chemical Engineering,CORE,7,23,53,362,9,CORE
 iit_bombay:421,Avijit Maji,IIT Bombay,Civil Engineering,CORE,13,23,45,803,18,CORE
 iit_bombay:451,Nagendra Rao Velaga,IIT Bombay,Civil Engineering,CORE,21,23,46,911,19,CORE
-iit_bombay:471,Siddhartha Ghosh,IIT Bombay,Civil Engineering,CORE,3,23,50,610,14,CORE
+iit_bombay:471,Siddhartha Ghosh,IIT Bombay,Civil Engineering,CORE,3,23,49,608,14,CORE
 iit_bombay:481,V. Jothiprakash,IIT Bombay,Civil Engineering,CORE,10,23,60,729,13,CORE
-iit_bombay:530,Preethi Jyothi,IIT Bombay,Computer Science and Engineering,CORE,11,23,76,336,10,CORE
+iit_bombay:530,Preethi Jyothi,IIT Bombay,Computer Science and Engineering,CORE,11,23,75,318,9,CORE
 iit_bombay:758,Chetan Singh Solanki,IIT Bombay,Energy Science and Engineering,CORE,1,23,38,411,11,CORE
 iit_delhi:132,Shantanu Roy,IIT Delhi,Chemical Engineering,CORE,14,23,46,568,13,CORE
 iit_delhi:136,Sudip K. Pattanayek,IIT Delhi,Chemical Engineering,CORE,37,23,49,763,16,CORE
@@ -1094,7 +1094,7 @@ iit_guwahati:429,D Pamu,IIT Guwahati,Physics,CORE,31,23,59,894,17,CORE
 iit_hyderabad:96,Asif Qureshi,IIT Hyderabad,Civil Engineering,CORE,23,23,46,847,15,CORE
 iit_indore:119,Saptarshi Ghosh,IIT Indore,Electrical Engineering,CORE,23,23,96,767,14,CORE
 iit_indore:188,Abhijit Ghosh,IIT Indore,Metallurgical Engineering and Materials Science,CORE,31,23,27,301,10,CORE
-iit_ism:139,Nitai Pal,IIT (ISM) Dhanbad,Electrical Engineering,CORE,26,23,72,1299,18,CORE
+iit_ism:139,Nitai Pal,IIT (ISM) Dhanbad,Electrical Engineering,CORE,26,23,70,1274,18,CORE
 iit_ism:285,Mritunjay Kumar Singh,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,17,23,43,365,12,CORE
 iit_ism:356,Devi Prasad Mishra,IIT (ISM) Dhanbad,Mining Engineering,CORE,21,23,45,741,16,CORE
 iit_jammu:32,Divyesh Varade,IIT Jammu,Civil Engineering,CORE,56,23,32,351,9,CORE
@@ -1193,8 +1193,8 @@ iit_bombay:1213,Raghunath Chelakkot,IIT Bombay,Physics,CORE,13,21,26,367,11,CORE
 iit_bombay:273,Pramod P Wangikar,IIT Bombay,Chemical Engineering,CORE,6,21,68,1638,23,CORE
 iit_bombay:278,Rochish Madhukar Thaokar,IIT Bombay,Chemical Engineering,CORE,15,21,73,769,16,CORE
 iit_bombay:338,Irishi N. N. Namboothiri,IIT Bombay,Chemistry,CORE,24,21,95,1458,22,CORE
-iit_bombay:438,Jayadipta Ghosh,IIT Bombay,Civil Engineering,CORE,5,21,34,552,15,CORE
-iit_bombay:682,Jayanta Mukherjee,IIT Bombay,Electrical Engineering,CORE,19,21,97,645,12,CORE
+iit_bombay:438,Jayadipta Ghosh,IIT Bombay,Civil Engineering,CORE,5,21,33,550,15,CORE
+iit_bombay:682,Jayanta Mukherjee,IIT Bombay,Electrical Engineering,CORE,19,21,96,640,12,CORE
 iit_delhi:143,Biswarup Chakraborty,IIT Delhi,Chemistry,CORE,63,21,72,1014,20,CORE
 iit_delhi:165,Sayantan Paria,IIT Delhi,Chemistry,CORE,12,21,27,330,11,CORE
 iit_delhi:571,Prabal Talukdar,IIT Delhi,Mechanical Engineering,CORE,7,21,46,728,15,CORE
@@ -1213,7 +1213,7 @@ iit_hyderabad:302,N. Venkata Reddy,IIT Hyderabad,Mechanical & Aerospace Engineer
 iit_hyderabad:311,Ramji M,IIT Hyderabad,Mechanical & Aerospace Engineering,CORE,11,21,41,591,12,CORE
 iit_hyderabad:334,Jyoti Ranjan Mohanty,IIT Hyderabad,Physics,CORE,19,21,51,574,16,CORE
 iit_hyderabad:335,Kanchana V,IIT Hyderabad,Physics,CORE,36,21,79,588,14,CORE
-iit_hyderabad:341,Narendra Sahu,IIT Hyderabad,Physics,CORE,21,21,86,1170,21,CORE
+iit_hyderabad:341,Narendra Sahu,IIT Hyderabad,Physics,CORE,21,21,86,1171,21,CORE
 iit_hyderabad:351,Saurabh Sandilya,IIT Hyderabad,Physics,CORE,8,21,106,1433,19,CORE
 iit_hyderabad:549,Sparsh Mittal,IIT Hyderabad,Computer Science & Engineering,CORE,2,21,25,1301,14,CORE
 iit_indore:130,Vivek Kanhangad,IIT Indore,Electrical Engineering,CORE,4,21,21,611,10,CORE
@@ -1246,6 +1246,7 @@ iit_palakkad:178,Kesavan D,IIT Palakkad,Mechanical Engineering,CORE,8,21,20,429,
 iit_patna:109,Anirban Bhattacharya,IIT Patna,Mechanical Engineering,CORE,20,21,31,517,12,CORE
 iit_roorkee:125,Indra M. Mishra,IIT Roorkee,Chemical Engineering,CORE,2,21,14,843,12,CORE
 iit_roorkee:358,Anubrata Dey,IIT Roorkee,Electrical Engineering,CORE,10,21,54,408,11,CORE
+iit_roorkee:650,Pradeep Kr. Jha,IIT Roorkee,Mechanical and Industrial Engineering,CORE,33,21,61,847,15,CORE
 iit_roorkee:95,Amit Kumar Dhiman,IIT Roorkee,Chemical Engineering,CORE,20,21,36,369,10,CORE
 iit_roorkee:98,Ashwini Kumar Sharma,IIT Roorkee,Chemical Engineering,CORE,13,21,64,1106,18,CORE
 iit_ropar:197,Devranjan Samanta,IIT Ropar,Mechanical Engineering,CORE,33,21,53,508,13,CORE
@@ -1282,7 +1283,7 @@ iit_guwahati:529,Meyya Meyyappan,IIT Guwahati,,CORE,29,20,32,546,11,CORE
 iit_hyderabad:172,Abhinav Kumar,IIT Hyderabad,Electrical Engineering,CORE,13,20,113,1642,21,CORE
 iit_hyderabad:249,Murty B. S.,IIT Hyderabad,Materials Science and Metallurgical Engineering,CORE,32,20,22,261,9,CORE
 iit_hyderabad:347,Saket Asthana,IIT Hyderabad,Physics,CORE,31,20,89,1210,19,CORE
-iit_indore:126,Trapti Jain,IIT Indore,Electrical Engineering,CORE,10,20,37,615,9,CORE
+iit_indore:126,Trapti Jain,IIT Indore,Electrical Engineering,CORE,10,20,36,615,9,CORE
 iit_indore:274,Pradeep Mathur,IIT Indore,Chemistry,CORE,6,20,20,615,10,CORE
 iit_ism:703,Prasanta K. Jana,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,5,20,47,1703,19,CORE
 iit_ism:732,Nirmal Kumar Singh,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,27,20,34,390,11,CORE
@@ -1292,11 +1293,11 @@ iit_jammu:113,Suman Sarkar,IIT Jammu,Materials Engineering,CORE,39,20,33,301,10,
 iit_jammu:87,Ankit Kathuria,IIT Jammu,Humanities & Social Sciences,CORE,18,20,24,643,11,CORE
 iit_jodhpur:253,Shahab Ahmad,IIT Jodhpur,Physics,CORE,25,20,29,695,13,CORE
 iit_jodhpur:48,Ananya Debnath,IIT Jodhpur,Chemistry,CORE,12,20,32,424,13,CORE
-iit_jodhpur:53,Manikandan Paranjothy,IIT Jodhpur,Chemistry,CORE,33,20,44,451,11,CORE
+iit_jodhpur:53,Manikandan Paranjothy,IIT Jodhpur,Chemistry,CORE,33,20,45,451,11,CORE
 iit_jodhpur:75,Amit Sharma,IIT Jodhpur,Civil and Infrastructure Engineering,CORE,18,20,9,292,7,CORE
 iit_kanpur:124,Dattatraya Hanumant Dethe,IIT Kanpur,Chemistry,CORE,8,20,56,734,18,CORE
 iit_kanpur:495,Arun K. Saha,IIT Kanpur,Mechanical Engineering,CORE,17,20,48,332,11,CORE
-iit_kanpur:500,Bishakh Bhattacharya,IIT Kanpur,Mechanical Engineering,CORE,22,20,120,1152,20,CORE
+iit_kanpur:500,Bishakh Bhattacharya,IIT Kanpur,Mechanical Engineering,CORE,22,20,119,1149,20,CORE
 iit_kanpur:794,Tapan K. Sengupta,IIT Kanpur,Aerospace Engineering,CORE,3,20,44,698,19,CORE
 iit_kharagpur:1055,Sukanta Kumar Dash,IIT Kharagpur,Mechanical Engineering,CORE,17,20,80,1507,23,CORE
 iit_kharagpur:1064,Nirupam Chakraborti,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,2,20,24,510,12,CORE
@@ -1318,7 +1319,6 @@ iit_roorkee:422,Bulusu Anand,IIT Roorkee,Electronics and Communication Engineeri
 iit_roorkee:49,R. Prasad,IIT Roorkee,Biosciences and Bioengineering,CORE,36,20,56,794,15,CORE
 iit_roorkee:524,Himanshu Joshi,IIT Roorkee,Hydrology,CORE,42,20,36,579,13,CORE
 iit_roorkee:57,Saugata Hazra,IIT Roorkee,Biosciences and Bioengineering,CORE,35,20,77,742,15,CORE
-iit_roorkee:650,Pradeep Kr. Jha,IIT Roorkee,Mechanical and Industrial Engineering,CORE,32,20,61,847,15,CORE
 iit_ropar:34,Chandi Sasmal,IIT Ropar,Chemical Engineering,CORE,24,20,37,431,14,CORE
 iit_bhilai:12,Sanjib Banerjee,IIT Bhilai,Chemistry,CORE,32,19,77,1015,17,CORE
 iit_bhilai:75,Nagesh Devidas Patil,IIT Bhilai,Mechanical Engineering,CORE,24,19,21,228,8,CORE
@@ -1388,7 +1388,7 @@ iit_bhu:336,Sanjay Singh,IIT (BHU) Varanasi,Department of Pharmaceutical Enginee
 iit_bhu:368,Shradha Mishra,IIT (BHU) Varanasi,Department of Physics,CORE,24,18,57,490,12,CORE
 iit_bhu:535,Dwivedi Akansha,IIT (BHU) Varanasi,Department of Ceramic Engineering,CORE,10,18,10,336,6,CORE
 iit_bhu:539,Pyare Ram,IIT (BHU) Varanasi,Department of Ceramic Engineering,CORE,8,18,37,699,16,CORE
-iit_bhu:55,Asha Gupta,IIT (BHU) Varanasi,Department of Chemistry,CORE,25,18,28,458,13,CORE
+iit_bhu:55,Asha Gupta,IIT (BHU) Varanasi,Department of Chemistry,CORE,25,18,28,457,13,CORE
 iit_bhu:62,Manisha Malviya,IIT (BHU) Varanasi,Department of Chemistry,CORE,21,18,36,833,13,CORE
 iit_bhubaneswar:109,Pravas Ranjan Sahu,IIT Bhubaneswar,School of Electrical and Computer Sciences,CORE,9,18,44,471,12,CORE
 iit_bombay:119,Ranjith Padinhateeri,IIT Bombay,Biosciences and Bioengineering,CORE,6,18,51,652,14,CORE
@@ -1420,11 +1420,11 @@ iit_ism:696,Sarat Kumar Panda,IIT (ISM) Dhanbad,Civil Engineering,CORE,9,18,29,1
 iit_jammu:149,Ashok Bera,IIT Jammu,Physics,CORE,44,18,48,600,15,CORE
 iit_jodhpur:137,Khandelwal Arpit,IIT Jodhpur,Electrical Engineering,CORE,10,18,46,232,9,CORE
 iit_kanpur:150,Vishal Govind Rao,IIT Kanpur,Chemistry,CORE,21,18,42,851,16,CORE
-iit_kanpur:211,Arnab Bhattacharya (অর্ণব ভট্টাচার্য),IIT Kanpur,Computer Science and Engineering,CORE,11,18,47,434,11,CORE
+iit_kanpur:211,Arnab Bhattacharya (অর্ণব ভট্টাচার্য),IIT Kanpur,Computer Science and Engineering,CORE,11,18,46,431,11,CORE
 iit_kanpur:268,Santanu Misra,IIT Kanpur,Earth Sciences,CORE,17,18,45,638,12,CORE
 iit_kanpur:304,Abhishek K Gupta,IIT Kanpur,Electrical Engineering,CORE,11,18,71,573,11,CORE
 iit_kanpur:320,Ketan Rajawat,IIT Kanpur,Electrical Engineering,CORE,10,18,91,830,16,CORE
-iit_kanpur:66,Bushra Ateeq,IIT Kanpur,Biological Sciences and Bioengineering,CORE,4,18,35,508,13,CORE
+iit_kanpur:66,Bushra Ateeq,IIT Kanpur,Biological Sciences and Bioengineering,CORE,4,18,34,508,13,CORE
 iit_kanpur:848,Amit Dutta,IIT Kanpur,Physics,CORE,3,18,38,1360,19,CORE
 iit_kharagpur:209,Partha Pratim Jana,IIT Kharagpur,Chemistry,CORE,16,18,76,398,10,CORE
 iit_kharagpur:240,Dhrubajyoti Sen,IIT Kharagpur,Civil Engineering,CORE,12,18,29,318,10,CORE
@@ -1514,7 +1514,7 @@ iit_hyderabad:312,Ranabir Dey,IIT Hyderabad,Mechanical & Aerospace Engineering,C
 iit_hyderabad:42,Debaprasad Shee,IIT Hyderabad,Chemical Engineering,CORE,43,17,74,1258,23,CORE
 iit_indore:53,Amrendra Kumar Singh,IIT Indore,Chemistry,CORE,39,17,35,462,11,CORE
 iit_ism:161,Himanshu Bhusan Mishra,IIT (ISM) Dhanbad,Electronics Engineering,CORE,15,17,24,435,8,CORE
-iit_ism:291,Sanjeev Anand Sahu,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,9,17,91,1465,25,CORE
+iit_ism:291,Sanjeev Anand Sahu,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,9,17,88,1451,25,CORE
 iit_ism:389,Vikas Mahto,IIT (ISM) Dhanbad,Petroleum Engineering,CORE,18,17,54,1371,23,CORE
 iit_ism:422,Umakanta Tripathy,IIT (ISM) Dhanbad,Physics,CORE,38,17,45,594,14,CORE
 iit_ism:749,A K Pathak,IIT (ISM) Dhanbad,Petroleum Engineering,CORE,4,17,19,542,13,CORE
@@ -1527,6 +1527,7 @@ iit_kanpur:593,Debasis Kundu,IIT Kanpur,Statistics and Data Science,CORE,9,17,14
 iit_kharagpur:165,Jayanta Chakraborty,IIT Kharagpur,Chemical Engineering,CORE,14,17,18,251,9,CORE
 iit_kharagpur:182,Sourav Mondal,IIT Kharagpur,Chemical Engineering,CORE,14,17,32,293,8,CORE
 iit_kharagpur:237,Damodar Maity,IIT Kharagpur,Civil Engineering,CORE,14,17,51,792,19,CORE
+iit_kharagpur:298,Sandip Chakraborty,IIT Kharagpur,Computer Science and Engineering,CORE,30,17,200,1351,17,CORE
 iit_kharagpur:36,Dillip Kumar Swain,IIT Kharagpur,Agricultural and Food Engineering,CORE,16,17,55,754,16,CORE
 iit_kharagpur:447,Chandrani Singh,IIT Kharagpur,Geology and Geophysics,CORE,16,17,54,329,12,CORE
 iit_kharagpur:585,Arun Kumar Samantaray,IIT Kharagpur,Mechanical Engineering,CORE,17,17,68,1300,22,CORE
@@ -1560,7 +1561,7 @@ iit_bombay:1112,Soham Mujumdar,IIT Bombay,Mechanical Engineering,CORE,19,16,36,2
 iit_bombay:1173,Amitabha Nandi,IIT Bombay,Physics,CORE,14,16,25,303,9,CORE
 iit_bombay:1217,Sai Vinjanampathy,IIT Bombay,Physics,CORE,5,16,41,1280,16,CORE
 iit_bombay:1231,Varun Bhalerao,IIT Bombay,Physics,CORE,9,16,115,3699,25,CORE
-iit_bombay:417,Arnab Jana,IIT Bombay,Civil Engineering,CORE,17,16,52,431,12,CORE
+iit_bombay:417,Arnab Jana,IIT Bombay,Civil Engineering,CORE,20,16,53,433,12,CORE
 iit_bombay:445,Mandar Inamdar,IIT Bombay,Civil Engineering,CORE,5,16,35,436,13,CORE
 iit_bombay:515,Krithi Ramamritham,IIT Bombay,Computer Science and Engineering,CORE,5,16,45,473,9,CORE
 iit_bombay:673,Dipankar Saha,IIT Bombay,Electrical Engineering,CORE,18,16,117,778,14,CORE
@@ -1601,7 +1602,6 @@ iit_kanpur:526,Sumit Basu,IIT Kanpur,Mechanical Engineering,CORE,3,16,45,386,13,
 iit_kanpur:789,Mangal Kothari,IIT Kanpur,Aerospace Engineering,CORE,9,16,104,1172,20,CORE
 iit_kharagpur:203,Mintu Halder,IIT Kharagpur,Chemistry,CORE,13,16,23,294,12,CORE
 iit_kharagpur:246,M Amaranatha Reddy,IIT Kharagpur,Civil Engineering,CORE,5,16,15,149,7,CORE
-iit_kharagpur:298,Sandip Chakraborty,IIT Kharagpur,Computer Science and Engineering,CORE,30,16,200,1351,17,CORE
 iit_kharagpur:419,Shailendra Kumar Varshney,IIT Kharagpur,Electronics and Electrical Communication Engg.,CORE,28,16,117,535,11,CORE
 iit_kharagpur:618,Somnath Roy,IIT Kharagpur,Mechanical Engineering,CORE,13,16,22,563,8,CORE
 iit_kharagpur:650,Siddhartha Roy,IIT Kharagpur,Metallurgical and Materials Engineering,CORE,38,16,48,869,15,CORE
@@ -1638,7 +1638,7 @@ iit_tirupati:29,A. Murali Krishna,IIT Tirupati,Civil and Environmental Engineeri
 iit_bhilai:13,Satyajit Gupta,IIT Bhilai,Chemistry,CORE,18,15,29,499,9,CORE
 iit_bhilai:35,Shailendra Kumar,IIT Bhilai,Electrical Engineering,CORE,56,15,106,329,10,CORE
 iit_bhilai:85,Dhruv Pratap Singh,IIT Bhilai,Physics,CORE,14,15,26,480,11,CORE
-iit_bhu:128,Ravi Shankar Singh,IIT (BHU) Varanasi,Department of Computer Science and Engineering,CORE,16,15,72,1134,18,CORE
+iit_bhu:128,Ravi Shankar Singh,IIT (BHU) Varanasi,Department of Computer Science and Engineering,CORE,16,15,71,1134,18,CORE
 iit_bhu:296,Rampada Manna,IIT (BHU) Varanasi,Department of Metallurgical Engineering,CORE,30,15,29,320,10,CORE
 iit_bhu:328,Dinesh Kumar,IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,CORE,30,15,47,1373,16,CORE
 iit_bhu:35,Manoj Kumar,IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,CORE,33,15,36,344,11,CORE
@@ -1651,7 +1651,7 @@ iit_bhubaneswar:192,Pattabhi Ramaiah Budarapu,IIT Bhubaneswar,School of Mechanic
 iit_bhubaneswar:224,Srikant Gollapudi,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,24,15,26,247,8,CORE
 iit_bhubaneswar:57,Avijit Gangopadhyay,IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",CORE,9,15,17,256,10,CORE
 iit_bombay:1159,Rajiv O. Dusane,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,6,15,48,855,18,OUT
-iit_bombay:1195,Kantimay Das Gupta,IIT Bombay,Physics,CORE,5,15,27,144,8,CORE
+iit_bombay:1195,Kantimay Das Gupta,IIT Bombay,Physics,CORE,5,15,26,144,8,CORE
 iit_bombay:1211,Punit Parmananda,IIT Bombay,Physics,CORE,15,15,69,624,14,CORE
 iit_bombay:154,Raghu Murtugudde,IIT Bombay,Centre for Climate Studies,CORE,23,15,36,277,9,CORE
 iit_bombay:240,Abhijit Chatterjee,IIT Bombay,Chemical Engineering,CORE,10,15,65,901,16,CORE
@@ -1689,10 +1689,10 @@ iit_hyderabad:512,Vinayak Eswaran,IIT Hyderabad,Mechanical & Aerospace Engineeri
 iit_hyderabad:541,Sharada D. S.,IIT Hyderabad,Chemistry,CORE,9,15,31,619,14,CORE
 iit_hyderabad:79,Prabusankar G.,IIT Hyderabad,Chemistry,CORE,30,15,87,730,15,CORE
 iit_indore:170,Dan Sathiaraj,IIT Indore,Mechanical Engineering,CORE,36,15,30,319,11,CORE
-iit_indore:171,Devendra L Deshmukh,IIT Indore,Mechanical Engineering,CORE,17,15,35,616,11,CORE
+iit_indore:171,Devendra L Deshmukh,IIT Indore,Mechanical Engineering,CORE,17,15,34,614,11,CORE
 iit_indore:73,Ashootosh Sakharam Mandpe,IIT Indore,Civil Engineering,CORE,36,15,39,269,7,CORE
 iit_indore:77,Lalit Borana,IIT Indore,Civil Engineering,CORE,13,15,33,758,14,CORE
-iit_ism:135,Gauri Shankar,IIT (ISM) Dhanbad,Electrical Engineering,CORE,27,15,76,950,17,CORE
+iit_ism:135,Gauri Shankar,IIT (ISM) Dhanbad,Electrical Engineering,CORE,27,15,75,946,17,CORE
 iit_ism:17,Shushanta Sarangi,IIT (ISM) Dhanbad,Applied Geology,CORE,7,15,12,109,7,CORE
 iit_ism:182,Sushrut Das,IIT (ISM) Dhanbad,Electronics Engineering,CORE,11,15,86,681,14,CORE
 iit_ism:22,Mohit Agrawal,IIT (ISM) Dhanbad,Applied Geophysics,CORE,21,15,23,213,9,CORE
@@ -1707,6 +1707,7 @@ iit_kanpur:224,Purushottam Kar,IIT Kanpur,Computer Science and Engineering,CORE,
 iit_kanpur:420,Anish Upadhyaya,IIT Kanpur,Materials Science and Engineering,CORE,13,15,32,288,10,CORE
 iit_kanpur:52,Sanjay Kumar,IIT Kanpur,Aerospace Engineering,CORE,31,15,57,298,11,CORE
 iit_kharagpur:218,Sanjoy Bandyopadhyay,IIT Kharagpur,Chemistry,CORE,10,15,38,368,11,CORE
+iit_kharagpur:299,Saptarshi Ghosh,IIT Kharagpur,Computer Science and Engineering,CORE,13,15,47,519,12,CORE
 iit_kharagpur:34,Damodhara Rao Mailapalli,IIT Kharagpur,Agricultural and Food Engineering,CORE,23,15,47,525,14,CORE
 iit_kharagpur:49,Peeyush Soni,IIT Kharagpur,Agricultural and Food Engineering,CORE,4,15,58,698,15,CORE
 iit_kharagpur:515,Jhareswar Maiti,IIT Kharagpur,Industrial and Systems Engineering,CORE,8,15,64,1192,17,CORE
@@ -1733,7 +1734,7 @@ iit_madras:88,Manikandan S Mathur,IIT Madras,Aerospace Engineering,CORE,8,15,34,
 iit_mandi:255,Swati Sharma,IIT Mandi,School of Mechanical & Materials Engineering,CORE,10,15,19,515,10,CORE
 iit_mandi:264,C. S. Yadav,IIT Mandi,School of Physical Sciences,CORE,22,15,44,324,10,CORE
 iit_patna:114,Chiranjit Sarkar,IIT Patna,Mechanical Engineering,CORE,22,15,51,688,17,CORE
-iit_patna:132,Anirban Chowdhury,IIT Patna,Metallurgical and Materials Engineering,CORE,12,15,60,715,13,CORE
+iit_patna:132,Anirban Chowdhury,IIT Patna,Metallurgical and Materials Engineering,CORE,12,15,59,711,13,CORE
 iit_patna:137,Dinesh Kumar Kotnees,IIT Patna,Metallurgical and Materials Engineering,CORE,8,15,10,99,5,CORE
 iit_patna:210,Sudhan Majhi,IIT Patna,Electrical Engineering,CORE,5,15,67,1229,23,CORE
 iit_patna:27,Arvind Kumar Jha,IIT Patna,Civil and Environmental Engineering,CORE,43,15,44,347,10,CORE
@@ -1777,7 +1778,7 @@ iit_delhi:348,S. Janardhanan,IIT Delhi,Electrical Engineering,CORE,6,14,53,458,1
 iit_delhi:592,Sujeet Kumar Sinha,IIT Delhi,Mechanical Engineering,CORE,14,14,41,710,15,CORE
 iit_delhi:667,Ratnamala ChatterJee,IIT Delhi,Physics,CORE,17,14,29,250,10,CORE
 iit_gandhinagar:119,Raghavan Ranganathan,IIT Gandhinagar,Materials Engineering,CORE,43,14,39,422,10,CORE
-iit_gandhinagar:164,Vinod Chandra,IIT Gandhinagar,Physics,CORE,12,14,56,940,19,CORE
+iit_gandhinagar:164,Vinod Chandra,IIT Gandhinagar,Physics,CORE,12,14,55,939,19,CORE
 iit_gandhinagar:201,Manas Paliwal,IIT Gandhinagar,Materials Engineering,CORE,1,14,6,137,5,CORE
 iit_gandhinagar:25,Biswajit Mondal,IIT Gandhinagar,Chemistry,CORE,31,14,35,480,12,CORE
 iit_gandhinagar:292,Svetlana Brzev,IIT Gandhinagar,Civil Engineering,CORE,1,14,3,63,3,CORE
@@ -1803,10 +1804,10 @@ iit_ism:120,Sachin Tripathi,IIT (ISM) Dhanbad,Computer Science and Engineering,C
 iit_ism:19,Upama Dutta,IIT (ISM) Dhanbad,Applied Geology,CORE,1,14,10,118,5,CORE
 iit_ism:367,Radhakanta Koner,IIT (ISM) Dhanbad,Mining Engineering,CORE,29,14,45,216,8,CORE
 iit_ism:372,V M S R Murthy,IIT (ISM) Dhanbad,Mining Engineering,CORE,8,14,51,555,12,CORE
-iit_ism:401,Kaushal Kumar,IIT (ISM) Dhanbad,Physics,CORE,22,14,59,1139,20,CORE
+iit_ism:401,Kaushal Kumar,IIT (ISM) Dhanbad,Physics,CORE,21,14,58,1139,20,CORE
 iit_ism:409,Ram Bilash Choudhary,IIT (ISM) Dhanbad,Physics,CORE,32,14,34,608,14,CORE
 iit_ism:63,Rashmi Madhuri,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,CORE,13,14,88,1595,24,CORE
-iit_ism:81,Kironmala Chanda,IIT (ISM) Dhanbad,Civil Engineering,CORE,23,14,22,419,8,CORE
+iit_ism:81,Kironmala Chanda,IIT (ISM) Dhanbad,Civil Engineering,CORE,23,14,24,433,9,CORE
 iit_jammu:15,Ankit Tyagi,IIT Jammu,Chemical Engineering,CORE,17,14,20,247,6,CORE
 iit_jammu:75,Kushmanda Saurav,IIT Jammu,Electrical Engineering,CORE,20,14,66,458,10,CORE
 iit_kanpur:108,Siddhartha Panda,IIT Kanpur,Chemical Engineering,CORE,32,14,50,570,14,CORE
@@ -1817,7 +1818,6 @@ iit_kanpur:438,Shikhar Krishn Jha,IIT Kanpur,Materials Science and Engineering,C
 iit_kharagpur:1050,Sankar Kumar Som,IIT Kharagpur,Mechanical Engineering,CORE,3,14,6,136,4,CORE
 iit_kharagpur:11,Mohammed Rabius Sunny,IIT Kharagpur,Aerospace Engineering,CORE,18,14,30,350,10,CORE
 iit_kharagpur:281,Debasis Samanta,IIT Kharagpur,Computer Science and Engineering,CORE,24,14,98,694,16,CORE
-iit_kharagpur:299,Saptarshi Ghosh,IIT Kharagpur,Computer Science and Engineering,CORE,13,14,47,519,12,CORE
 iit_kharagpur:353,Amit Patra,IIT Kharagpur,Electrical Engineering,CORE,2,14,43,534,9,OUT
 iit_kharagpur:397,Arijit De,IIT Kharagpur,Electronics and Electrical Communication Engg.,CORE,15,14,54,586,13,CORE
 iit_kharagpur:454,Mruganka Kumar Panigrahi,IIT Kharagpur,Geology and Geophysics,CORE,15,14,26,295,10,CORE
@@ -1853,6 +1853,7 @@ iit_roorkee:7,Avlokita Agrawal,IIT Roorkee,Architecture and Planning,CORE,1,14,1
 iit_roorkee:711,Vivek Pancholi,IIT Roorkee,Metallurgical and Materials Engineering,CORE,9,14,17,382,11,CORE
 iit_roorkee:720,Chhaya Sharma,IIT Roorkee,Paper Technology,CORE,23,14,46,541,14,CORE
 iit_roorkee:778,Vipul Rastogi,IIT Roorkee,Physics,CORE,12,14,78,817,14,CORE
+iit_roorkee:832,Mohit Prakash Mohanty,IIT Roorkee,Water Resources Development and Management,CORE,47,14,41,450,12,CORE
 iit_ropar:32,Arghya Banerjee,IIT Ropar,Chemical Engineering,CORE,16,14,23,426,10,CORE
 iit_bhu:110,Suresh Kumar,IIT (BHU) Varanasi,Department of Civil Engineering,CORE,14,13,20,255,9,CORE
 iit_bhu:122,Lakshmanan Kailasam,IIT (BHU) Varanasi,Department of Computer Science and Engineering,CORE,6,13,14,383,8,CORE
@@ -1890,6 +1891,7 @@ iit_gandhinagar:65,Nipun Batra,IIT Gandhinagar,Computer Science and Engineering,
 iit_guwahati:106,Chivukula V Sastri,IIT Guwahati,Chemistry,CORE,17,13,46,1398,19,CORE
 iit_guwahati:108,Debasis Manna,IIT Guwahati,Chemistry,CORE,27,13,66,1037,20,CORE
 iit_guwahati:142,Anjan Dutta,IIT Guwahati,Civil Engineering,CORE,1,13,21,295,10,CORE
+iit_guwahati:165,Pranab K. Ghosh,IIT Guwahati,Civil Engineering,CORE,23,13,30,298,10,CORE
 iit_guwahati:194,Hemangee K. Kapoor,IIT Guwahati,Computer Science and Engineering,CORE,7,13,85,312,9,CORE
 iit_guwahati:242,Arun Tej Mallajosyula,IIT Guwahati,Electronics and Electrical Engineering,CORE,14,13,26,239,7,CORE
 iit_guwahati:332,Durga Charan Dalal,IIT Guwahati,Mathematics,CORE,2,13,23,228,9,CORE
@@ -1919,7 +1921,7 @@ iit_ism:413,Shailendra Kumar Sharma,IIT (ISM) Dhanbad,Physics,CORE,15,13,28,474,
 iit_ism:423,Vineet Kumar Rai,IIT (ISM) Dhanbad,Physics,CORE,16,13,60,1439,24,CORE
 iit_ism:5,Bodhisatwa Hazra,IIT (ISM) Dhanbad,Applied Geology,CORE,12,13,26,345,8,CORE
 iit_ism:50,Suresh Kumar Yatirajula,IIT (ISM) Dhanbad,Chemical Engineering,CORE,37,13,28,166,7,CORE
-iit_ism:614,Amares Chattopadhyay,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,6,13,90,1052,18,CORE
+iit_ism:614,Amares Chattopadhyay,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,6,13,89,1050,18,CORE
 iit_ism:62,Parthasarathi Das,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,CORE,30,13,47,843,17,CORE
 iit_ism:688,G Srinivasa Rao,IIT (ISM) Dhanbad,Applied Geophysics,CORE,13,13,15,103,7,CORE
 iit_ism:718,R Venugopal,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",CORE,8,13,18,316,9,CORE
@@ -1963,7 +1965,7 @@ iit_palakkad:11,Rositha Kuniyil,IIT Palakkad,Chemistry,CORE,19,13,29,232,9,CORE
 iit_palakkad:30,Athira P,IIT Palakkad,Civil Engineering,CORE,21,13,19,173,8,CORE
 iit_patna:21,Snehasis Daschakraborty,IIT Patna,Chemistry,CORE,20,13,54,811,19,CORE
 iit_patna:46,Jimson Mathew,IIT Patna,Computer Science and Engineering,CORE,31,13,163,1476,18,CORE
-iit_patna:68,Pramod Kumar Tiwari,IIT Patna,Electrical Engineering,CORE,29,13,84,734,15,CORE
+iit_patna:68,Pramod Kumar Tiwari,IIT Patna,Electrical Engineering,CORE,29,13,83,732,15,CORE
 iit_roorkee:233,Ajay Gairola,IIT Roorkee,Civil Engineering,CORE,1,13,10,547,9,CORE
 iit_roorkee:293,Abhayanand Singh Maurya,IIT Roorkee,Earth Sciences,CORE,26,13,39,223,10,CORE
 iit_roorkee:384,Ramanuja Panigrahi,IIT Roorkee,Electrical Engineering,CORE,17,13,21,203,9,CORE
@@ -1972,7 +1974,6 @@ iit_roorkee:520,D. S. Arya,IIT Roorkee,Hydrology,CORE,40,13,31,201,7,CORE
 iit_roorkee:688,B. V. Manoj Kumar,IIT Roorkee,Metallurgical and Materials Engineering,CORE,15,13,44,615,16,CORE
 iit_roorkee:749,Anil Kumar Gourishetty,IIT Roorkee,Physics,CORE,12,13,30,288,9,CORE
 iit_roorkee:767,P. Arumugam,IIT Roorkee,Physics,CORE,8,13,63,577,11,CORE
-iit_roorkee:832,Mohit Prakash Mohanty,IIT Roorkee,Water Resources Development and Management,CORE,47,13,41,450,12,CORE
 iit_ropar:209,Prabir Sarkar,IIT Ropar,Mechanical Engineering,CORE,5,13,24,587,9,CORE
 iit_tirupati:20,P. Gandeepan,IIT Tirupati,Chemistry,CORE,26,13,30,415,9,CORE
 iit_bhilai:88,Sabyasachi Ghosh,IIT Bhilai,Physics,CORE,22,12,72,627,16,CORE
@@ -1983,7 +1984,7 @@ iit_bhu:171,Manoj Kumar Meshram,IIT (BHU) Varanasi,Department of Electronics Eng
 iit_bhu:19,Mohammad Imteyaz Ahmad,IIT (BHU) Varanasi,Department of Ceramic Engineering,CORE,12,12,13,126,7,CORE
 iit_bhu:229,Sunil Kumar,IIT (BHU) Varanasi,Department of Mathematical Sciences,CORE,17,12,54,629,13,CORE
 iit_bhu:280,B. Nageswara Sarma,IIT (BHU) Varanasi,Department of Metallurgical Engineering,CORE,8,12,8,125,4,CORE
-iit_bhu:333,Rajnish,IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,CORE,5,12,43,805,12,CORE
+iit_bhu:333,Rajnish,IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,CORE,5,12,42,800,12,CORE
 iit_bhu:335,Sairam Krishnamurthy,IIT (BHU) Varanasi,Department of Pharmaceutical Engineering and Technology,CORE,12,12,33,670,15,CORE
 iit_bhu:373,Swapnil Patil,IIT (BHU) Varanasi,Department of Physics,CORE,11,12,18,185,6,CORE
 iit_bhu:395,Sanjay Kumar Rai,IIT (BHU) Varanasi,School of Biomedical Engineering,CORE,10,12,13,278,7,CORE
@@ -2019,7 +2020,6 @@ iit_gandhinagar:93,Shanmuganathan Raman,IIT Gandhinagar,Electrical Engineering,C
 iit_guwahati:104,Chandan K. Jana,IIT Guwahati,Chemistry,CORE,5,12,31,419,15,CORE
 iit_guwahati:118,Krishna Pada Bhabak,IIT Guwahati,Chemistry,CORE,15,12,36,397,14,CORE
 iit_guwahati:129,Subhendu Sekhar Bag,IIT Guwahati,Chemistry,CORE,13,12,62,520,14,CORE
-iit_guwahati:165,Pranab K. Ghosh,IIT Guwahati,Civil Engineering,CORE,23,12,30,298,10,CORE
 iit_guwahati:35,Rajaram Swaminathan,IIT Guwahati,Biosciences and Bioengineering,CORE,8,12,35,401,8,CORE
 iit_guwahati:420,Ananthakrishnan Srinivasan,IIT Guwahati,Physics,CORE,23,12,49,363,9,CORE
 iit_guwahati:59,Anugrah Singh,IIT Guwahati,Chemical Engineering,CORE,21,12,43,407,11,CORE
@@ -2036,7 +2036,7 @@ iit_indore:97,Nagendra Kumar,IIT Indore,Computer Science and Engineering,CORE,27
 iit_ism:107,Dharavath Ramesh,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,16,12,131,1966,24,CORE
 iit_ism:15,Rajendra Kumar Dubey,IIT (ISM) Dhanbad,Applied Geology,CORE,8,12,13,135,6,CORE
 iit_ism:153,Vedantham Lakshmi Srinivas,IIT (ISM) Dhanbad,Electrical Engineering,CORE,25,12,36,323,10,CORE
-iit_ism:292,Santimoy Kundu,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,11,12,99,906,17,CORE
+iit_ism:292,Santimoy Kundu,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,11,12,98,896,17,CORE
 iit_ism:3,Anup Krishna Prasad,IIT (ISM) Dhanbad,Applied Geology,CORE,22,12,13,193,7,CORE
 iit_ism:365,R M Bhattacharjee,IIT (ISM) Dhanbad,Mining Engineering,CORE,14,12,20,193,9,CORE
 iit_ism:397,Binata Panda,IIT (ISM) Dhanbad,Physics,CORE,11,12,20,160,10,CORE
@@ -2077,7 +2077,7 @@ iit_madras:554,R Gnanamoorthy,IIT Madras,Mechanical Engineering,CORE,5,12,45,199
 iit_madras:577,Vishal V R Nandigana,IIT Madras,Mechanical Engineering,CORE,3,12,16,525,6,CORE
 iit_madras:585,K C Hari Kumar,IIT Madras,Metallurgical and Materials Engineering,CORE,4,12,16,263,10,CORE
 iit_madras:598,Sabita Sarkar,IIT Madras,Metallurgical and Materials Engineering,CORE,4,12,9,123,5,CORE
-iit_madras:607,Abdus Samad,IIT Madras,Ocean Engineering,CORE,18,12,107,1199,19,CORE
+iit_madras:607,Abdus Samad,IIT Madras,Ocean Engineering,CORE,18,12,108,1200,19,CORE
 iit_madras:625,Srinivasan Chandrasekaran,IIT Madras,Ocean Engineering,CORE,2,12,65,548,14,CORE
 iit_madras:878,Anju Chadha,IIT Madras,Biotechnology,CORE,1,12,22,389,11,CORE
 iit_mandi:245,Rik Rani Koner,IIT Mandi,School of Mechanical & Materials Engineering,CORE,22,12,14,167,5,CORE
@@ -2135,7 +2135,7 @@ iit_delhi:368,Tanmoy Chakraborty,IIT Delhi,Electrical Engineering,CORE,12,11,70,
 iit_delhi:58,Preeti Srivastava,IIT Delhi,Biochemical Engineering and Biotechnology,CORE,13,11,49,973,15,CORE
 iit_delhi:588,Subir Kumar Saha,IIT Delhi,Mechanical Engineering,CORE,11,11,104,450,12,CORE
 iit_delhi:724,R. S. Rengasamy,IIT Delhi,Textile and Fibre Engineering,CORE,7,11,20,248,9,CORE
-iit_gandhinagar:152,Anand Sankar Sengupta,IIT Gandhinagar,Physics,CORE,6,11,52,2063,20,CORE
+iit_gandhinagar:152,Anand Sankar Sengupta,IIT Gandhinagar,Physics,CORE,6,11,51,2063,20,CORE
 iit_gandhinagar:32,Sairam Swaroop Mallajosyula,IIT Gandhinagar,Chemistry,CORE,8,11,29,351,11,CORE
 iit_gandhinagar:63,Mayank Singh,IIT Gandhinagar,Computer Science and Engineering,CORE,8,11,33,148,7,CORE
 iit_guwahati:158,K. Darunkumar Singh,IIT Guwahati,Civil Engineering,CORE,3,11,30,436,15,CORE
@@ -2151,7 +2151,7 @@ iit_indore:105,Surya Prakash,IIT Indore,Computer Science and Engineering,CORE,4,
 iit_indore:178,Satyanarayan Patel,IIT Indore,Mechanical Engineering,CORE,25,11,52,401,12,CORE
 iit_indore:29,Ganti S Murthy,IIT Indore,Biosciences and Biomedical Engineering,CORE,4,11,12,543,7,CORE
 iit_indore:61,Sampak Samanta,IIT Indore,Chemistry,CORE,16,11,51,774,17,CORE
-iit_indore:87,Anirban Sengupta,IIT Indore,Computer Science and Engineering,CORE,20,11,206,1279,20,CORE
+iit_indore:87,Anirban Sengupta,IIT Indore,Computer Science and Engineering,CORE,20,11,205,1273,20,CORE
 iit_ism:119,Rajendra Pamula,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,11,11,58,1228,19,CORE
 iit_ism:222,Shatrughan Soren,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",CORE,15,11,39,523,14,CORE
 iit_ism:380,Dr. Neetish Kumar Maurya,IIT (ISM) Dhanbad,Petroleum Engineering,CORE,16,11,15,766,12,CORE
@@ -2257,7 +2257,7 @@ iit_bhubaneswar:290,Mayank Mishra,IIT Bhubaneswar,School of Infrastructure,CORE,
 iit_bombay:1066,Bhallamudi Ravi,IIT Bombay,Mechanical Engineering,CORE,7,10,33,439,7,CORE
 iit_bombay:1138,Ashutosh S. Gandhi,IIT Bombay,Metallurgical Engineering and Materials Science,CORE,1,10,4,372,3,CORE
 iit_bombay:1200,Mithun Kumar Mitra,IIT Bombay,Physics,CORE,10,10,31,233,8,CORE
-iit_bombay:182,Leena Vachhani,IIT Bombay,Centre for Systems and Control Engineering,CORE,9,10,59,267,11,CORE
+iit_bombay:182,Leena Vachhani,IIT Bombay,Centre for Systems and Control Engineering,CORE,9,10,58,267,11,CORE
 iit_bombay:187,Ravi N. Banavar,IIT Bombay,Centre for Systems and Control Engineering,CORE,2,10,52,232,7,CORE
 iit_bombay:232,Krishna Mohan Buddhiraju,IIT Bombay,Centre of Studies in Resources Engineering,CORE,5,10,62,607,13,CORE
 iit_bombay:350,Leela Srinivas Panchakarla,IIT Bombay,Chemistry,CORE,2,10,13,157,8,CORE
@@ -2265,7 +2265,7 @@ iit_bombay:396,Sudipta Maiti,IIT Bombay,Chemistry,CORE,9,10,4,262,4,CORE
 iit_bombay:521,Mythili Vutukuru,IIT Bombay,Computer Science and Engineering,CORE,1,10,21,128,6,CORE
 iit_bombay:554,Sunita Sarawagi,IIT Bombay,Computer Science and Engineering,CORE,4,10,30,238,8,CORE
 iit_bombay:609,Prabhakar Naraga,IIT Bombay,Earth Sciences,CORE,11,10,22,192,9,CORE
-iit_bombay:645,Anil Kulkarni,IIT Bombay,Electrical Engineering,CORE,6,10,32,152,7,CORE
+iit_bombay:645,Anil Kulkarni,IIT Bombay,Electrical Engineering,CORE,6,10,31,151,7,CORE
 iit_bombay:669,Debasattam Pal,IIT Bombay,Electrical Engineering,CORE,11,10,59,162,8,CORE
 iit_bombay:680,Himanshu J. Bahirat,IIT Bombay,Electrical Engineering,CORE,13,10,40,224,9,CORE
 iit_bombay:702,Nikhil Karamchandani,IIT Bombay,Electrical Engineering,CORE,6,10,61,743,11,CORE
@@ -2296,8 +2296,8 @@ iit_hyderabad:45,Giridhar Madras,IIT Hyderabad,Chemical Engineering,CORE,17,10,2
 iit_hyderabad:60,Suhanya Duraiswamy,IIT Hyderabad,Chemical Engineering,CORE,18,10,19,200,5,CORE
 iit_indore:113,Mukesh Kumar,IIT Indore,Electrical Engineering,CORE,12,10,66,555,15,CORE
 iit_indore:167,Anand Parey,IIT Indore,Mechanical Engineering,CORE,5,10,36,687,14,CORE
-iit_indore:182,Manish Kumar Goyal,IIT Indore,Mehta Family School of Sustainability,CORE,27,10,10,90,3,CORE
-iit_indore:19,Abhirup Datta,IIT Indore,"Astronomy, Astrophysics and Space Engineering",CORE,14,10,192,1000,16,CORE
+iit_indore:182,Manish Kumar Goyal,IIT Indore,Mehta Family School of Sustainability,CORE,27,10,11,91,3,CORE
+iit_indore:19,Abhirup Datta,IIT Indore,"Astronomy, Astrophysics and Space Engineering",CORE,14,10,191,1000,16,CORE
 iit_indore:21,Bhargav Pradeep Vaidya,IIT Indore,"Astronomy, Astrophysics and Space Engineering",CORE,10,10,66,788,16,CORE
 iit_indore:210,Ankhi Roy,IIT Indore,Physics,CORE,7,10,37,504,9,CORE
 iit_indore:277,Munir Ahmed Nayak,IIT Indore,Civil Engineering,CORE,10,10,9,150,4,CORE
@@ -2310,7 +2310,7 @@ iit_ism:326,Prashanta Kr Mahato,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,9,
 iit_ism:329,Randip Kumar Das,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,19,10,49,831,17,CORE
 iit_ism:337,Shibayan Sarkar,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,6,10,21,384,9,CORE
 iit_ism:609,Nikkam Suresh,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",CORE,4,10,31,431,11,CORE
-iit_ism:615,Shishir Gupta,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,8,10,114,1282,20,CORE
+iit_ism:615,Shishir Gupta,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,8,10,112,1280,20,CORE
 iit_jodhpur:11,Arun Kumar R,IIT Jodhpur,Aerospace Engineering,CORE,18,10,37,214,10,CORE
 iit_jodhpur:32,Surajit Ghosh,IIT Jodhpur,Bioscience and Bioengineering,CORE,9,10,46,541,13,CORE
 iit_kanpur:115,Amalendu Chandra,IIT Kanpur,Chemistry,CORE,14,10,72,673,15,CORE
@@ -2367,12 +2367,12 @@ iit_roorkee:243,Mahendra Singh,IIT Roorkee,Civil Engineering,CORE,14,10,26,191,7
 iit_roorkee:25,V. Devadas,IIT Roorkee,Architecture and Planning,CORE,10,10,9,121,5,CORE
 iit_roorkee:33,Bijan Choudhury,IIT Roorkee,Biosciences and Bioengineering,CORE,7,10,13,140,8,CORE
 iit_roorkee:352,H. R. Wason,IIT Roorkee,Earthquake Engineering,CORE,1,10,5,139,4,CORE
-iit_roorkee:418,Biplab Sarkar,IIT Roorkee,Electronics and Communication Engineering,CORE,14,10,45,1020,13,CORE
 iit_roorkee:421,Brijesh Kumar,IIT Roorkee,Electronics and Communication Engineering,CORE,9,10,24,216,8,CORE
 iit_roorkee:501,Rhythm Singh,IIT Roorkee,Hydro and Renewable Energy,CORE,22,10,39,568,14,CORE
 iit_roorkee:508,Deepak Ronanki,IIT Roorkee,Hydro and Renewable Energy,CORE,5,10,17,214,7,CORE
 iit_roorkee:625,Ankit Bansal,IIT Roorkee,Mechanical and Industrial Engineering,CORE,15,10,33,550,12,CORE
 iit_roorkee:682,Abhishek Tewari,IIT Roorkee,Metallurgical and Materials Engineering,CORE,24,10,26,210,9,CORE
+iit_roorkee:687,B. S. Sundar Daniel,IIT Roorkee,Metallurgical and Materials Engineering,CORE,11,10,16,238,6,CORE
 iit_roorkee:74,Vinod Kumar,IIT Roorkee,Biosciences and Bioengineering,CORE,19,10,25,565,14,CORE
 iit_roorkee:839,Nayan Sharma,IIT Roorkee,Water Resources Development and Management,CORE,3,10,24,174,6,CORE
 iit_ropar:102,Neeraj Goel,IIT Ropar,Computer Science and Engineering,CORE,12,10,45,442,8,CORE
@@ -2403,6 +2403,7 @@ iit_bhubaneswar:164,Partha Pratim Dey,IIT Bhubaneswar,School of Infrastructure,C
 iit_bhubaneswar:170,Saket Dubey,IIT Bhubaneswar,School of Infrastructure,CORE,14,9,9,136,4,CORE
 iit_bhubaneswar:191,Mihir Kumar Pandit,IIT Bhubaneswar,School of Mechanical Sciences,CORE,11,9,28,471,11,CORE
 iit_bhubaneswar:208,Yogesh G. Bhumkar,IIT Bhubaneswar,School of Mechanical Sciences,CORE,10,9,20,202,8,CORE
+iit_bhubaneswar:210,Animesh Mandal,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,11,9,24,227,9,CORE
 iit_bhubaneswar:264,Ganapati Panda,IIT Bhubaneswar,School of Electrical and Computer Sciences,CORE,1,9,15,148,8,CORE
 iit_bombay:1085,Neeraj Kumbhakarna,IIT Bombay,Mechanical Engineering,CORE,23,9,61,473,13,CORE
 iit_bombay:1090,Prashant P. Date,IIT Bombay,Mechanical Engineering,CORE,12,9,27,197,6,CORE
@@ -2470,7 +2471,7 @@ iit_kanpur:140,Ramanathan Gurunath,IIT Kanpur,Chemistry,CORE,8,9,34,282,10,CORE
 iit_kanpur:146,Sankar P. Rath,IIT Kanpur,Chemistry,CORE,7,9,86,1343,24,CORE
 iit_kanpur:172,Misra Sudhir,IIT Kanpur,Civil Engineering,CORE,6,9,23,252,9,CORE
 iit_kanpur:434,Rajdip Mukherjee,IIT Kanpur,Materials Science and Engineering,CORE,21,9,35,281,10,CORE
-iit_kanpur:501,Chandraprakash Chindam,IIT Kanpur,Mechanical Engineering,CORE,14,9,26,158,8,CORE
+iit_kanpur:501,Chandraprakash Chindam,IIT Kanpur,Mechanical Engineering,CORE,14,9,24,158,8,CORE
 iit_kanpur:510,Manjesh Kumar Singh,IIT Kanpur,Mechanical Engineering,CORE,27,9,31,348,9,CORE
 iit_kanpur:525,Subrata Sarkar,IIT Kanpur,Mechanical Engineering,CORE,6,9,32,209,8,CORE
 iit_kanpur:563,Sagar Chakraborty,IIT Kanpur,Physics,CORE,8,9,31,309,11,CORE
@@ -2527,9 +2528,9 @@ iit_roorkee:157,Ravindra Pandey,IIT Roorkee,Chemistry,CORE,21,9,25,199,7,CORE
 iit_roorkee:317,Sunil Bajpai,IIT Roorkee,Earth Sciences,CORE,11,9,33,235,11,CORE
 iit_roorkee:394,E. Fernandez,IIT Roorkee,Electrical Engineering,CORE,20,9,51,318,10,CORE
 iit_roorkee:405,S. P. Singh,IIT Roorkee,Electrical Engineering,CORE,6,9,22,343,6,CORE
+iit_roorkee:418,Biplab Sarkar,IIT Roorkee,Electronics and Communication Engineering,CORE,14,9,45,1020,13,CORE
 iit_roorkee:47,Pravindra Kumar,IIT Roorkee,Biosciences and Bioengineering,CORE,20,9,51,583,12,CORE
 iit_roorkee:676,Satish C. Sharma,IIT Roorkee,Mechanical and Industrial Engineering,CORE,8,9,57,531,14,CORE
-iit_roorkee:687,B. S. Sundar Daniel,IIT Roorkee,Metallurgical and Materials Engineering,CORE,11,9,16,238,6,CORE
 iit_ropar:122,Somitra Sanadhya,IIT Ropar,Computer Science and Engineering,CORE,1,9,15,243,8,CORE
 iit_ropar:130,Brijesh Kumbhani,IIT Ropar,Electrical Engineering,CORE,18,9,43,332,8,CORE
 iit_ropar:142,Saifullah Payami,IIT Ropar,Electrical Engineering,CORE,9,9,39,250,8,CORE
@@ -2555,7 +2556,6 @@ iit_bhu:52,Vijay Laxmi Yadav,IIT (BHU) Varanasi,Department of Chemical Engineeri
 iit_bhu:547,Pandey Prem Chandra,IIT (BHU) Varanasi,Department of Chemistry,CORE,12,8,38,631,15,CORE
 iit_bhu:73,Agnivesh P,IIT (BHU) Varanasi,Department of Civil Engineering,CORE,30,8,45,527,13,CORE
 iit_bhubaneswar:180,Anirban Bhattacharya,IIT Bhubaneswar,School of Mechanical Sciences,CORE,24,8,40,597,11,CORE
-iit_bhubaneswar:210,Animesh Mandal,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,8,8,23,221,9,CORE
 iit_bhubaneswar:256,Subhasish Tripathy,IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",CORE,1,8,2,67,2,CORE
 iit_bhubaneswar:3,Akhilesh Kumar Singh,IIT Bhubaneswar,School of Basic Sciences,CORE,40,8,37,770,14,CORE
 iit_bombay:1230,Urjit A Yajnik,IIT Bombay,Physics,CORE,16,8,38,206,7,CORE
@@ -2611,7 +2611,7 @@ iit_ism:354,Bhanwar Singh Choudhary,IIT (ISM) Dhanbad,Mining Engineering,CORE,15
 iit_ism:358,Gnananandh Budi,IIT (ISM) Dhanbad,Mining Engineering,CORE,14,8,11,88,7,CORE
 iit_ism:363,Partha Sarathi Paul,IIT (ISM) Dhanbad,Mining Engineering,CORE,6,8,15,284,10,CORE
 iit_ism:61,Niladri Patra,IIT (ISM) Dhanbad,Chemistry and Chemical Biology,CORE,21,8,46,228,8,CORE
-iit_ism:713,Vishnu Priye,IIT (ISM) Dhanbad,Electronics Engineering,CORE,3,8,48,354,12,CORE
+iit_ism:713,Vishnu Priye,IIT (ISM) Dhanbad,Electronics Engineering,CORE,3,8,47,353,12,CORE
 iit_jammu:1,Dharitri Rath,IIT Jammu,Bioscience and Bioengineering,CORE,11,8,20,105,4,CORE
 iit_jammu:2,Gaurav Ashok Bhaduri,IIT Jammu,Bioscience and Bioengineering,CORE,33,8,20,181,8,CORE
 iit_jammu:63,Ajay Singh,IIT Jammu,Electrical Engineering,CORE,7,8,26,138,8,CORE
@@ -2654,7 +2654,7 @@ iit_madras:124,Ilaksh Adlakha,IIT Madras,Applied Mechanics and Biomedical Engine
 iit_madras:344,Shweta Agrawal,IIT Madras,Computer Science and Engineering,CORE,2,8,40,825,18,CORE
 iit_madras:383,Nitin Chandrachoodan,IIT Madras,Electrical Engineering,CORE,5,8,39,175,6,CORE
 iit_madras:404,Asokan Thondiyath,IIT Madras,Engineering Design,CORE,5,8,92,460,12,CORE
-iit_madras:406,G Saravana Kumar,IIT Madras,Engineering Design,CORE,4,8,35,256,10,CORE
+iit_madras:406,G Saravana Kumar,IIT Madras,Engineering Design,CORE,5,8,35,256,10,CORE
 iit_madras:411,Palaniappan Ramu,IIT Madras,Engineering Design,CORE,11,8,37,569,12,CORE
 iit_madras:45,Prasanta Kumar Muduli,IIT Madras,,CORE,10,8,9,97,5,CORE
 iit_madras:526,Amitava Ghosh,IIT Madras,Mechanical Engineering,CORE,1,8,15,187,7,CORE
@@ -2667,7 +2667,7 @@ iit_mandi:236,Parmod Kumar,IIT Mandi,School of Mechanical & Materials Engineerin
 iit_mandi:244,Ranbir Singh,IIT Mandi,School of Mechanical & Materials Engineering,CORE,22,8,36,628,15,CORE
 iit_mandi:37,Amit Balkrishna Pawar,IIT Mandi,School of Chemical Sciences,CORE,14,8,20,180,8,CORE
 iit_mandi:73,Sayantan Sarkar,IIT Mandi,School of Civil & Environmental Engineering,CORE,26,8,22,184,9,CORE
-iit_mandi:76,Subhamoy Sen,IIT Mandi,School of Civil & Environmental Engineering,CORE,12,8,56,541,14,CORE
+iit_mandi:76,Subhamoy Sen,IIT Mandi,School of Civil & Environmental Engineering,CORE,12,8,56,543,14,CORE
 iit_patna:106,Abhishek Raj,IIT Patna,Mechanical Engineering,CORE,16,8,21,103,5,CORE
 iit_patna:23,T Rajagopala Rao,IIT Patna,Chemistry,CORE,7,8,30,341,9,CORE
 iit_patna:30,Koushik Roy,IIT Patna,Civil and Environmental Engineering,CORE,9,8,31,333,10,CORE
@@ -2773,6 +2773,7 @@ iit_indore:69,Umesh Achyutrao Kshirsagar,IIT Indore,Chemistry,CORE,20,7,32,271,1
 iit_ism:179,Shalu Rani,IIT (ISM) Dhanbad,Electronics Engineering,CORE,12,7,12,106,5,CORE
 iit_ism:195,Saifi Izhar,IIT (ISM) Dhanbad,Environmental Science and Engineering,CORE,28,7,8,62,3,CORE
 iit_ism:27,Saumen Maiti,IIT (ISM) Dhanbad,Applied Geophysics,CORE,11,7,29,221,9,CORE
+iit_ism:288,Ramanababu Kaligatla,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,5,7,16,262,9,CORE
 iit_ism:334,Sarthak Sambit Singh,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,21,7,22,165,9,CORE
 iit_ism:46,Siddhartha Sengupta,IIT (ISM) Dhanbad,Chemical Engineering,CORE,12,7,12,119,5,CORE
 iit_ism:608,N R Mandre,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",CORE,5,7,16,297,8,CORE
@@ -2794,7 +2795,7 @@ iit_kanpur:493,Anupam Saxena,IIT Kanpur,Mechanical Engineering,CORE,1,7,23,204,8
 iit_kanpur:512,Nachiketa Tiwari,IIT Kanpur,Mechanical Engineering,CORE,4,7,32,352,7,CORE
 iit_kanpur:535,Anand Kumar Jha,IIT Kanpur,Physics,CORE,1,7,24,326,11,CORE
 iit_kanpur:538,Arijit Kundu,IIT Kanpur,Physics,CORE,6,7,31,178,8,CORE
-iit_kanpur:551,Joydeep Chakrabortty,IIT Kanpur,Physics,CORE,10,7,43,678,18,CORE
+iit_kanpur:551,Joydeep Chakrabortty,IIT Kanpur,Physics,CORE,10,7,42,678,18,CORE
 iit_kanpur:558,Nilay Kundu,IIT Kanpur,Physics,CORE,4,7,13,107,7,CORE
 iit_kanpur:575,Swagata Mukherjee,IIT Kanpur,Physics,CORE,13,7,99,124,5,CORE
 iit_kanpur:578,Tarun Kanti Ghosh,IIT Kanpur,Physics,CORE,8,7,26,654,12,CORE
@@ -2831,7 +2832,7 @@ iit_madras:335,Nandivada Venkata Krishna,IIT Madras,Computer Science and Enginee
 iit_madras:358,B Kalyan Kumar,IIT Madras,Electrical Engineering,CORE,13,7,24,149,7,CORE
 iit_madras:389,Ravinder David Koilpillai,IIT Madras,Electrical Engineering,CORE,5,7,69,333,10,CORE
 iit_madras:524,Abhijit Sarkar,IIT Madras,Mechanical Engineering,CORE,1,7,14,97,6,CORE
-iit_madras:55,Samir Choudhuri,IIT Madras,,CORE,5,7,38,471,12,CORE
+iit_madras:55,Samir Choudhuri,IIT Madras,,CORE,5,7,37,435,11,CORE
 iit_madras:613,K G Vijay,IIT Madras,Ocean Engineering,CORE,20,7,48,339,11,CORE
 iit_madras:667,Vaibhav Madhok,IIT Madras,Physics,CORE,6,7,22,192,7,CORE
 iit_mandi:238,Prateek Saxena,IIT Mandi,School of Mechanical & Materials Engineering,CORE,19,7,27,425,9,CORE
@@ -2877,7 +2878,7 @@ iit_bhu:340,Siva Hemalatha,IIT (BHU) Varanasi,Department of Pharmaceutical Engin
 iit_bhu:383,Sumit Kumar Singh,IIT (BHU) Varanasi,School of Biochemical Engineering,CORE,26,6,19,253,10,CORE
 iit_bhu:392,Neeraj Sharma,IIT (BHU) Varanasi,School of Biomedical Engineering,CORE,14,6,39,636,10,CORE
 iit_bhu:398,Sudip Mukherjee,IIT (BHU) Varanasi,School of Biomedical Engineering,CORE,19,6,46,288,8,CORE
-iit_bhu:42,Rajesh Kumar Upadhyay,IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,CORE,8,6,24,240,7,CORE
+iit_bhu:42,Rajesh Kumar Upadhyay,IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,CORE,8,6,23,238,7,CORE
 iit_bhu:94,Pabitra Ranjan Maiti,IIT (BHU) Varanasi,Department of Civil Engineering,CORE,15,6,27,171,8,CORE
 iit_bhubaneswar:10,Ashis Biswas,IIT Bhubaneswar,School of Basic Sciences,CORE,5,6,27,765,13,CORE
 iit_bhubaneswar:184,Gaurav Bartarya,IIT Bhubaneswar,School of Mechanical Sciences,CORE,4,6,12,70,5,CORE
@@ -2949,7 +2950,7 @@ iit_guwahati:77,Prakash Kotecha,IIT Guwahati,Chemical Engineering,CORE,11,6,37,2
 iit_hyderabad:101,Mahendrakumar Madhavan,IIT Hyderabad,Civil Engineering,CORE,2,6,90,1168,22,CORE
 iit_hyderabad:11,Anindya Roy,IIT Hyderabad,BioTechnology,CORE,9,6,38,347,12,CORE
 iit_hyderabad:136,Kotaro Kataoka,IIT Hyderabad,Computer Science & Engineering,CORE,6,6,34,192,7,CORE
-iit_hyderabad:191,Oves Badami,IIT Hyderabad,Electrical Engineering,CORE,14,6,22,80,5,CORE
+iit_hyderabad:191,Oves Badami,IIT Hyderabad,Electrical Engineering,CORE,12,6,23,84,5,CORE
 iit_hyderabad:193,Pradeep Kumar Yemula,IIT Hyderabad,Electrical Engineering,CORE,21,6,62,392,10,CORE
 iit_hyderabad:28,Harikrishnan Narayanan Unni,IIT Hyderabad,Biomedical Engineering,CORE,5,6,12,81,5,CORE
 iit_hyderabad:290,Chandrika Prakash Vyasarayani,IIT Hyderabad,Mechanical & Aerospace Engineering,CORE,3,6,40,231,9,CORE
@@ -2968,7 +2969,6 @@ iit_ism:162,Jaisingh Thangaraj,IIT (ISM) Dhanbad,Electronics Engineering,CORE,14
 iit_ism:176,Samrat Mukhopadhyay,IIT (ISM) Dhanbad,Electronics Engineering,CORE,8,6,21,88,5,CORE
 iit_ism:223,Shravan Kumar,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",CORE,10,6,23,222,9,CORE
 iit_ism:25,Prosanta Kumar Khan,IIT (ISM) Dhanbad,Applied Geophysics,CORE,3,6,20,178,9,CORE
-iit_ism:288,Ramanababu Kaligatla,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,5,6,15,236,9,CORE
 iit_ism:315,K Priya Ajit,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,6,6,19,79,5,CORE
 iit_ism:331,Sachin Kumar Singh,IIT (ISM) Dhanbad,Mechanical Engineering,CORE,11,6,27,398,11,CORE
 iit_ism:35,Arunkumar Samanta,IIT (ISM) Dhanbad,Chemical Engineering,CORE,3,6,14,156,8,CORE
@@ -3035,7 +3035,7 @@ iit_madras:536,Dhiman Chatterjee,IIT Madras,Mechanical Engineering,CORE,10,6,27,
 iit_madras:562,Sathyan Subbiah,IIT Madras,Mechanical Engineering,CORE,8,6,20,97,5,CORE
 iit_madras:622,Rajiv Sharma,IIT Madras,Ocean Engineering,CORE,5,6,26,159,8,CORE
 iit_madras:624,S Nallayarasu,IIT Madras,Ocean Engineering,CORE,2,6,48,386,10,CORE
-iit_madras:90,Nagabhushana Rao Vadlamani,IIT Madras,Aerospace Engineering,CORE,4,6,53,339,9,CORE
+iit_madras:90,Nagabhushana Rao Vadlamani,IIT Madras,Aerospace Engineering,CORE,4,6,52,339,9,CORE
 iit_madras:918,Sayan Ranu,IIT Madras,Computer Science and Engineering,CORE,1,6,5,71,4,OUT
 iit_mandi:103,Himanshu Misra,IIT Mandi,School of Computing & Electrical Engineering,CORE,4,6,20,55,4,CORE
 iit_mandi:125,Rahul Shrestha,IIT Mandi,School of Computing & Electrical Engineering,CORE,6,6,36,331,11,CORE
@@ -3123,7 +3123,7 @@ iit_bombay:1219,Sayantika Bhowal,IIT Bombay,Physics,CORE,12,5,17,116,6,CORE
 iit_bombay:1228,Tapanendu Kundu,IIT Bombay,Physics,CORE,18,5,22,179,6,CORE
 iit_bombay:1232,Vikram Rentala,IIT Bombay,Physics,CORE,5,5,12,117,7,CORE
 iit_bombay:130,S.R. Shinde,IIT Bombay,Biosciences and Bioengineering,CORE,1,5,5,85,1,OUT
-iit_bombay:179,Arpita Sinha,IIT Bombay,Centre for Systems and Control Engineering,CORE,9,5,32,161,7,CORE
+iit_bombay:179,Arpita Sinha,IIT Bombay,Centre for Systems and Control Engineering,CORE,9,5,31,161,7,CORE
 iit_bombay:188,Sukumar Srikant,IIT Bombay,Centre for Systems and Control Engineering,CORE,6,5,44,204,8,CORE
 iit_bombay:246,Ateeque Malani,IIT Bombay,Chemical Engineering,CORE,1,5,23,514,13,CORE
 iit_bombay:272,Partha Sarathi Goswami,IIT Bombay,Chemical Engineering,CORE,11,5,23,146,7,CORE
@@ -3212,7 +3212,7 @@ iit_jodhpur:103,Gaurav Harit,IIT Jodhpur,Computer Science and Engineering,CORE,9
 iit_jodhpur:159,Kirti Sankhala,IIT Jodhpur,Environmental and Sustainability Engineering,CORE,4,5,7,31,3,CORE
 iit_jodhpur:202,Subhash Bhagat,IIT Jodhpur,Mathematics,CORE,7,5,9,15,2,CORE
 iit_jodhpur:246,Ram Prakash,IIT Jodhpur,Physics,CORE,14,5,18,230,9,CORE
-iit_jodhpur:26,Pankaj Yadav,IIT Jodhpur,Bioscience and Bioengineering,CORE,2,5,34,414,10,CORE
+iit_jodhpur:26,Pankaj Yadav,IIT Jodhpur,Bioscience and Bioengineering,CORE,2,5,33,414,10,CORE
 iit_jodhpur:404,Subhasish Dey,IIT Jodhpur,Civil and Infrastructure Engineering,CORE,5,5,42,269,10,CORE
 iit_kanpur:131,Maddali L. N. Rao,IIT Kanpur,Chemistry,CORE,7,5,27,251,9,CORE
 iit_kanpur:147,Thiruvancheril Gopakumar,IIT Kanpur,Chemistry,CORE,10,5,40,374,12,CORE
@@ -3224,7 +3224,7 @@ iit_kanpur:196,Venkatesan Kanagaraj,IIT Kanpur,Civil Engineering,CORE,9,5,3,31,2
 iit_kanpur:2,K. Srihari,IIT Kanpur,Chemistry,CORE,2,5,16,214,7,CORE
 iit_kanpur:21,Srinivas D,IIT Kanpur,,CORE,3,5,60,774,16,CORE
 iit_kanpur:239,Urbi Chatterjee,IIT Kanpur,Computer Science and Engineering,CORE,14,5,37,138,8,CORE
-iit_kanpur:301,A Ranganath Harish,IIT Kanpur,Electrical Engineering,CORE,4,5,69,281,9,CORE
+iit_kanpur:301,A Ranganath Harish,IIT Kanpur,Electrical Engineering,CORE,4,5,68,280,9,CORE
 iit_kanpur:312,Avinash Lahgere,IIT Kanpur,Electrical Engineering,CORE,20,5,27,94,7,CORE
 iit_kanpur:347,Tushar Sandhan,IIT Kanpur,Electrical Engineering,CORE,24,5,47,114,6,CORE
 iit_kanpur:390,R. M. Hegde,IIT Kanpur,Kotak School of Sustainability,CORE,7,5,42,158,7,CORE
@@ -3280,7 +3280,7 @@ iit_madras:408,Kavitha Arunachalam,IIT Madras,Engineering Design,CORE,14,5,108,6
 iit_madras:527,Anil Kumar Meena,IIT Madras,Mechanical Engineering,CORE,7,5,21,126,7,CORE
 iit_madras:596,Rohit Batra,IIT Madras,Metallurgical and Materials Engineering,CORE,22,5,20,345,8,CORE
 iit_madras:621,Rajesh R Nair,IIT Madras,Ocean Engineering,CORE,2,5,15,63,5,CORE
-iit_madras:631,V Sriram,IIT Madras,Ocean Engineering,CORE,14,5,68,500,13,CORE
+iit_madras:631,V Sriram,IIT Madras,Ocean Engineering,CORE,14,5,67,497,13,CORE
 iit_madras:659,R Nirmala,IIT Madras,Physics,CORE,4,5,30,194,8,CORE
 iit_madras:696,Kaushal Jha,IIT Madras,,CORE,3,5,6,43,1,CORE
 iit_madras:909,Aritra Hazra,IIT Madras,Computer Science and Engineering,CORE,2,5,3,42,3,CORE
@@ -3335,7 +3335,7 @@ iit_tirupati:126,Aravinda S,IIT Tirupati,Physics,CORE,9,5,19,79,5,CORE
 iit_tirupati:135,Reetesh Kumar Gangwar,IIT Tirupati,Physics,CORE,17,5,20,104,7,CORE
 iit_tirupati:63,N N Murty,IIT Tirupati,Electrical Engineering,CORE,14,5,16,132,7,IN
 iit_bhilai:16,Amit Kumar Dhar,IIT Bhilai,Computer Science and Engineering,CORE,5,4,14,57,4,CORE
-iit_bhilai:19,Barun Gorain,IIT Bhilai,Computer Science and Engineering,CORE,7,4,31,85,6,CORE
+iit_bhilai:19,Barun Gorain,IIT Bhilai,Computer Science and Engineering,CORE,7,4,33,90,6,CORE
 iit_bhilai:79,Soumya Gangopadhyay,IIT Bhilai,Mechanical Engineering,CORE,24,4,27,241,9,CORE
 iit_bhu:113,Amrita Chaturvedi,IIT (BHU) Varanasi,Department of Computer Science and Engineering,CORE,7,4,20,236,8,CORE
 iit_bhu:142,Chinmaya K A,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,16,4,35,167,8,CORE
@@ -3446,7 +3446,7 @@ iit_indore:34,Mirza Saqib Baig,IIT Indore,Biosciences and Biomedical Engineering
 iit_indore:63,Satya Bulusu,IIT Indore,Chemistry,CORE,2,4,15,276,8,CORE
 iit_indore:64,Selvakumar Sermadurai,IIT Indore,Chemistry,CORE,11,4,17,248,7,CORE
 iit_indore:75,Guru Prakash,IIT Indore,Civil Engineering,CORE,7,4,19,213,10,CORE
-iit_ism:124,Sushanta Mukhopadhyay,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,3,4,52,548,12,CORE
+iit_ism:124,Sushanta Mukhopadhyay,IIT (ISM) Dhanbad,Computer Science and Engineering,CORE,3,4,51,548,12,CORE
 iit_ism:181,Subindu Kumar,IIT (ISM) Dhanbad,Electronics Engineering,CORE,8,4,33,162,7,CORE
 iit_ism:202,Tinesh Pathania,IIT (ISM) Dhanbad,Environmental Science and Engineering,CORE,7,4,4,17,2,CORE
 iit_ism:272,Anurag Jayswal,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,3,4,56,293,10,CORE
@@ -3472,7 +3472,7 @@ iit_jodhpur:152,Suraj Srivastava,IIT Jodhpur,Electrical Engineering,CORE,11,4,52
 iit_jodhpur:168,Devendra Singh Negi,IIT Jodhpur,Materials Engineering,CORE,36,4,30,238,8,CORE
 iit_jodhpur:172,Nitin Kumar Sharma,IIT Jodhpur,Materials Engineering,CORE,13,4,10,24,2,CORE
 iit_jodhpur:242,Lata Panwar,IIT Jodhpur,Physics,CORE,14,4,26,4,1,CORE
-iit_jodhpur:264,Dipanjan Roy,IIT Jodhpur,School of Artificial Intelligence and Data Science,CORE,1,4,35,200,6,CORE
+iit_jodhpur:264,Dipanjan Roy,IIT Jodhpur,School of Artificial Intelligence and Data Science,CORE,1,4,34,200,6,CORE
 iit_jodhpur:27,Priyanka Singh,IIT Jodhpur,Bioscience and Bioengineering,CORE,4,4,17,212,6,CORE
 iit_jodhpur:46,Vikky Anand,IIT Jodhpur,Chemical Engineering,CORE,31,4,38,235,10,CORE
 iit_jodhpur:50,Dibyendu Kumar Sasmal,IIT Jodhpur,Chemistry,CORE,17,4,18,99,6,CORE
@@ -3485,7 +3485,7 @@ iit_kanpur:439,Shikhar Misra,IIT Kanpur,Materials Science and Engineering,CORE,9
 iit_kanpur:488,Aditya Saurabh,IIT Kanpur,Mechanical Engineering,CORE,11,4,24,52,4,CORE
 iit_kanpur:505,Ishan Sharma,IIT Kanpur,Mechanical Engineering,CORE,3,4,61,206,8,IN
 iit_kanpur:54,Sathesh Mariappan,IIT Kanpur,Aerospace Engineering,CORE,5,4,14,91,5,CORE
-iit_kanpur:607,Dipak Mazumdar,IIT Kanpur,Materials Science and Engineering,CORE,2,4,23,210,8,CORE
+iit_kanpur:607,Dipak Mazumdar,IIT Kanpur,Materials Science and Engineering,CORE,2,4,24,210,8,CORE
 iit_kanpur:610,Avinash Singh,IIT Kanpur,Physics,CORE,4,4,16,105,7,CORE
 iit_kanpur:75,Pradip Sinha,IIT Kanpur,Biological Sciences and Bioengineering,CORE,1,4,17,134,7,CORE
 iit_kanpur:76,Ramasubbu Sankararamakrishnan,IIT Kanpur,Biological Sciences and Bioengineering,CORE,3,4,28,298,9,CORE
@@ -3567,7 +3567,7 @@ iit_roorkee:65,Ritu Barthwal,IIT Roorkee,Biosciences and Bioengineering,CORE,1,4
 iit_roorkee:654,S H Upadhyay,IIT Roorkee,Mechanical and Industrial Engineering,CORE,7,4,20,314,8,CORE
 iit_roorkee:673,P. K. Sahoo,IIT Roorkee,Mechanical and Industrial Engineering,CORE,3,4,5,53,2,CORE
 iit_roorkee:684,Anjan Sil,IIT Roorkee,Metallurgical and Materials Engineering,CORE,6,4,18,226,9,CORE
-iit_roorkee:702,Sai Ramudu Meka,IIT Roorkee,Metallurgical and Materials Engineering,CORE,9,4,28,241,11,CORE
+iit_roorkee:702,Sai Ramudu Meka,IIT Roorkee,Metallurgical and Materials Engineering,CORE,10,4,28,241,11,CORE
 iit_roorkee:752,Arup Samanta,IIT Roorkee,Physics,CORE,26,4,36,90,6,CORE
 iit_roorkee:755,Dibakar Roychowdhury,IIT Roorkee,Physics,CORE,7,4,61,357,10,CORE
 iit_roorkee:766,Narayan Mohanta,IIT Roorkee,Physics,CORE,5,4,15,66,5,CORE
@@ -3606,9 +3606,9 @@ iit_bhu:31,Durga Prasad,IIT (BHU) Varanasi,Department of Chemical Engineering an
 iit_bhu:356,Pavan Kumar Aluri,IIT (BHU) Varanasi,Department of Physics,CORE,1,3,15,298,5,CORE
 iit_bhu:408,Ravi Panwar,IIT (BHU) Varanasi,School of Materials Science and Technology,CORE,21,3,25,113,7,CORE
 iit_bhu:561,Rabindra Mohanty,IIT (BHU) Varanasi,Department of Electrical Engineering,CORE,9,3,3,50,3,CORE
-iit_bhu:570,Som Tanmoy,IIT (BHU) Varanasi,Department of Mathematical Sciences,CORE,10,3,45,405,11,CORE
+iit_bhu:570,Som Tanmoy,IIT (BHU) Varanasi,Department of Mathematical Sciences,CORE,11,3,46,419,12,CORE
 iit_bhu:64,Prabhat Tripathi,IIT (BHU) Varanasi,Department of Chemistry,CORE,4,3,7,33,3,CORE
-iit_bhu:8,Harsimran Kaur,IIT (BHU) Varanasi,"Department of Architecture, Planning and Design",CORE,7,3,10,139,5,CORE
+iit_bhu:8,Harsimran Kaur,IIT (BHU) Varanasi,"Department of Architecture, Planning and Design",CORE,8,3,11,163,6,CORE
 iit_bhu:81,Bala Ramudu Paramkusam,IIT (BHU) Varanasi,Department of Civil Engineering,CORE,5,3,13,104,6,CORE
 iit_bhubaneswar:134,Naresh Chandra Sahu,IIT Bhubaneswar,"School of Humanities, Social Sciences and Management",CORE,4,3,5,225,4,CORE
 iit_bhubaneswar:214,Kodanda Ram Mangipudi,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,3,3,7,40,3,OUT
@@ -3664,7 +3664,7 @@ iit_delhi:728,Sohel Rana,IIT Delhi,Textile and Fibre Engineering,CORE,10,3,14,61
 iit_dharwad:17,Rajeswara Rao M,IIT Dharwad,Chemistry,CORE,8,3,7,52,5,CORE
 iit_dharwad:43,B N Bharath,IIT Dharwad,"Electrical, Electronics and Communication Engineering",CORE,7,3,14,85,5,CORE
 iit_dharwad:57,Satish Naik,IIT Dharwad,"Electrical, Electronics and Communication Engineering",CORE,13,3,38,281,9,CORE
-iit_dharwad:88,Sushanta Kumar Sethi,IIT Dharwad,"Mechanical, Materials and Aerospace Engineering",CORE,2,3,2,39,1,OUT
+iit_dharwad:88,Sushanta Kumar Sethi,IIT Dharwad,"Mechanical, Materials and Aerospace Engineering",CORE,2,3,3,46,2,CORE
 iit_gandhinagar:0,Ashutosh Srivastava,IIT Gandhinagar,Biological Sciences and Engineering,CORE,4,3,21,118,8,CORE
 iit_gandhinagar:120,Sriharitha Rowthu,IIT Gandhinagar,Materials Engineering,CORE,12,3,16,72,5,CORE
 iit_gandhinagar:14,Hari Sai Ganesh,IIT Gandhinagar,Chemical Engineering,CORE,7,3,11,44,4,CORE
@@ -3723,7 +3723,7 @@ iit_ism:137,Kalyan Chatterjee,IIT (ISM) Dhanbad,Electrical Engineering,CORE,2,3,
 iit_ism:151,Sukumar Mishra,IIT (ISM) Dhanbad,Electrical Engineering,CORE,8,3,20,42,4,CORE
 iit_ism:158,Devendra Chack,IIT (ISM) Dhanbad,Electronics Engineering,CORE,5,3,26,150,8,CORE
 iit_ism:165,Kaushik Mazumdar,IIT (ISM) Dhanbad,Electronics Engineering,CORE,22,3,27,266,7,CORE
-iit_ism:167,Mrinal Sen,IIT (ISM) Dhanbad,Electronics Engineering,CORE,3,3,61,633,16,CORE
+iit_ism:167,Mrinal Sen,IIT (ISM) Dhanbad,Electronics Engineering,CORE,3,3,60,633,16,CORE
 iit_ism:18,Udita Bansal,IIT (ISM) Dhanbad,Applied Geology,CORE,2,3,1,10,1,CORE
 iit_ism:210,Gaurav Jha,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",CORE,2,3,4,34,1,CORE
 iit_ism:273,Ashok Das,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,6,3,7,36,4,CORE
@@ -3749,7 +3749,7 @@ iit_jammu:68,Anup Shukla,IIT Jammu,Electrical Engineering,CORE,25,3,41,175,8,COR
 iit_jammu:74,Karan Nathwani,IIT Jammu,Electrical Engineering,CORE,4,3,47,124,7,CORE
 iit_jodhpur:101,Deepak Mishra,IIT Jodhpur,Computer Science and Engineering,CORE,5,3,31,66,5,CORE
 iit_jodhpur:102,Dip Sankar Banerjee,IIT Jodhpur,Computer Science and Engineering,CORE,6,3,57,140,7,IN
-iit_jodhpur:115,Suman Kundu,IIT Jodhpur,Computer Science and Engineering,CORE,18,3,37,139,6,CORE
+iit_jodhpur:115,Suman Kundu,IIT Jodhpur,Computer Science and Engineering,CORE,18,3,36,132,6,CORE
 iit_jodhpur:127,Arani Ali Khan,IIT Jodhpur,Electrical Engineering,CORE,4,3,12,33,4,CORE
 iit_jodhpur:144,Niladri Sekhar Tripathy,IIT Jodhpur,Electrical Engineering,CORE,1,3,17,19,2,CORE
 iit_jodhpur:174,Ravi K R,IIT Jodhpur,Materials Engineering,CORE,11,3,20,171,5,CORE
@@ -3763,7 +3763,7 @@ iit_jodhpur:25,Neha Jain,IIT Jodhpur,Bioscience and Bioengineering,CORE,9,3,17,1
 iit_jodhpur:401,Nirmalya Bachhar,IIT Jodhpur,Chemical Engineering,CORE,5,3,7,47,3,IN
 iit_jodhpur:406,Chiranjoy Chattopadhyay,IIT Jodhpur,Computer Science and Engineering,CORE,2,3,34,299,10,IN
 iit_jodhpur:412,Somitra Kumar Sanadhya,IIT Jodhpur,Computer Science and Engineering,CORE,1,3,11,108,4,OUT
-iit_jodhpur:427,Ghosh Somnath,IIT Jodhpur,Physics,CORE,1,3,53,416,12,CORE
+iit_jodhpur:427,Ghosh Somnath,IIT Jodhpur,Physics,CORE,1,3,52,416,12,CORE
 iit_jodhpur:57,Nirmal Kumar Rana,IIT Jodhpur,Chemistry,CORE,10,3,24,183,8,CORE
 iit_jodhpur:93,Trishikhi Raychoudhury,IIT Jodhpur,Civil and Infrastructure Engineering,CORE,7,3,9,36,4,CORE
 iit_kanpur:104,Raghavendra Ragipani,IIT Kanpur,Chemical Engineering,CORE,3,3,4,53,1,CORE
@@ -3774,7 +3774,7 @@ iit_kanpur:34,D. Chaitanya Kumar Rao,IIT Kanpur,Aerospace Engineering,CORE,7,3,8
 iit_kanpur:394,Anoop Singh,IIT Kanpur,Management Sciences,CORE,3,3,5,99,3,CORE
 iit_kanpur:431,Niraj Mohan Chawake,IIT Kanpur,Materials Science and Engineering,CORE,7,3,7,31,2,CORE
 iit_kanpur:453,B V Rathish Kumar,IIT Kanpur,Mathematics and Statistics,CORE,21,3,40,189,7,CORE
-iit_kanpur:454,Bahuguna Dhirendra,IIT Kanpur,Mathematics and Statistics,CORE,1,3,12,90,5,CORE
+iit_kanpur:454,Bahuguna Dhirendra,IIT Kanpur,Mathematics and Statistics,CORE,1,3,11,88,5,CORE
 iit_kanpur:486,Virkeshwar Kumar,IIT Kanpur,Mathematics and Statistics,CORE,33,3,22,96,5,CORE
 iit_kanpur:511,Mohit Law,IIT Kanpur,Mechanical Engineering,CORE,11,3,33,265,11,CORE
 iit_kanpur:521,Shakti Singh Gupta,IIT Kanpur,Mechanical Engineering,CORE,7,3,35,217,8,CORE
@@ -3828,7 +3828,7 @@ iit_madras:174,S Mahalingam,IIT Madras,Biotechnology,CORE,3,3,17,413,9,CORE
 iit_madras:21,Ipsita Saha,IIT Madras,,CORE,3,3,9,53,4,CORE
 iit_madras:229,Hema Chandra Kotamarthi,IIT Madras,Chemistry,CORE,8,3,11,45,4,IN
 iit_madras:254,Alagappan P,IIT Madras,Civil Engineering,CORE,11,3,28,111,6,CORE
-iit_madras:288,Piyush Chaunsali,IIT Madras,Civil Engineering,CORE,21,3,35,348,11,CORE
+iit_madras:288,Piyush Chaunsali,IIT Madras,Civil Engineering,CORE,21,3,34,337,10,CORE
 iit_madras:345,Sukhendu Das,IIT Madras,Computer Science and Engineering,CORE,1,3,56,226,9,CORE
 iit_madras:362,Bijoy Krishna Das,IIT Madras,Electrical Engineering,CORE,1,3,34,197,7,CORE
 iit_madras:369,Devendra Jalihal,IIT Madras,Electrical Engineering,CORE,2,3,20,162,5,CORE
@@ -3881,7 +3881,7 @@ iit_patna:3,Jose V Parambil,IIT Patna,Chemical and Biochemical Engineering,CORE,
 iit_patna:37,Sudhir Varma,IIT Patna,Civil and Environmental Engineering,CORE,2,3,3,71,2,CORE
 iit_patna:45,Chandranath Adak,IIT Patna,Computer Science and Engineering,CORE,19,3,38,426,7,CORE
 iit_patna:7,Sandip Khan,IIT Patna,Chemical and Biochemical Engineering,CORE,11,3,18,255,6,CORE
-iit_patna:70,Rajib Kumar Jha,IIT Patna,Electrical Engineering,CORE,3,3,23,282,9,CORE
+iit_patna:70,Rajib Kumar Jha,IIT Patna,Electrical Engineering,CORE,3,3,21,278,9,CORE
 iit_patna:81,Yatendra Kumar Singh,IIT Patna,Electrical Engineering,CORE,5,3,21,98,6,CORE
 iit_roorkee:0,Jaydev Dabas,IIT Roorkee,Applied Mathematics and Scientific Computing (Saharanpur),CORE,4,3,27,144,6,CORE
 iit_roorkee:115,Shabina Khanam,IIT Roorkee,Chemical Engineering,CORE,8,3,11,225,6,CORE
@@ -4062,7 +4062,7 @@ iit_guwahati:286,Suresh Sundaram,IIT Guwahati,Electronics and Electrical Enginee
 iit_guwahati:326,Ashok Singh Sairam,IIT Guwahati,Mathematics,CORE,11,2,33,154,6,CORE
 iit_guwahati:327,Ayon Ganguly,IIT Guwahati,Mathematics,CORE,1,2,12,109,6,CORE
 iit_guwahati:329,Bhupen Deka,IIT Guwahati,Mathematics,CORE,2,2,41,217,8,CORE
-iit_guwahati:365,Arup Nandy,IIT Guwahati,Mechanical Engineering,CORE,4,2,38,252,10,CORE
+iit_guwahati:365,Arup Nandy,IIT Guwahati,Mechanical Engineering,CORE,4,2,39,252,10,CORE
 iit_guwahati:37,Rakhi Chaturvedi,IIT Guwahati,Biosciences and Bioengineering,CORE,6,2,18,330,9,CORE
 iit_guwahati:39,S Senthilkumar,IIT Guwahati,Biosciences and Bioengineering,CORE,10,2,6,76,4,CORE
 iit_guwahati:400,Shyamanta M. Hazarika,IIT Guwahati,Mechanical Engineering,CORE,9,2,52,354,10,CORE
@@ -4231,7 +4231,7 @@ iit_madras:480,Anuj Jakhar,IIT Madras,Mathematics,CORE,5,2,27,33,3,CORE
 iit_madras:509,Shruti Dubey,IIT Madras,Mathematics,CORE,3,2,20,110,7,CORE
 iit_madras:522,Y V S S Sanyasiraju,IIT Madras,Mathematics,CORE,4,2,13,27,4,CORE
 iit_madras:530,Arunn Narasimhan,IIT Madras,Mechanical Engineering,CORE,5,2,9,39,4,IN
-iit_madras:546,Manoj Pandey,IIT Madras,Mechanical Engineering,CORE,2,2,27,104,6,CORE
+iit_madras:546,Manoj Pandey,IIT Madras,Mechanical Engineering,CORE,2,2,26,102,6,CORE
 iit_madras:628,Suresh Rajendran,IIT Madras,Ocean Engineering,CORE,9,2,42,172,7,CORE
 iit_madras:634,Ashwin Joy,IIT Madras,Physics,CORE,1,2,10,34,4,CORE
 iit_madras:641,G Aravind,IIT Madras,Physics,CORE,2,2,15,69,5,OUT
@@ -4244,7 +4244,7 @@ iit_madras:884,R Krishna Kumar,IIT Madras,Chemical Engineering,CORE,2,2,2,63,2,O
 iit_madras:89,Murthy N Haradanahalli,IIT Madras,Aerospace Engineering,CORE,2,2,1,4,1,IN
 iit_madras:952,M Thamban Nair,IIT Madras,Mathematics,CORE,3,2,13,64,5,CORE
 iit_madras:969,V Sampath,IIT Madras,Mechanical Engineering,CORE,2,2,37,411,12,CORE
-iit_madras:978,S Surendran,IIT Madras,Ocean Engineering,CORE,3,2,16,188,7,CORE
+iit_madras:978,S Surendran,IIT Madras,Ocean Engineering,CORE,3,2,15,188,7,CORE
 iit_mandi:111,Manas Thakur,IIT Mandi,School of Computing & Electrical Engineering,CORE,3,2,6,31,3,IN
 iit_mandi:123,Pratim Kundu,IIT Mandi,School of Computing & Electrical Engineering,CORE,17,2,22,107,4,CORE
 iit_mandi:132,Robin Khosla,IIT Mandi,School of Computing & Electrical Engineering,CORE,33,2,15,74,4,IN
@@ -4288,7 +4288,6 @@ iit_roorkee:331,Daya Shanker,IIT Roorkee,Earthquake Engineering,CORE,12,2,18,41,
 iit_roorkee:336,P. C. Ashwin Kumar,IIT Roorkee,Earthquake Engineering,CORE,5,2,11,27,3,CORE
 iit_roorkee:375,M. Felix Orlando,IIT Roorkee,Electrical Engineering,CORE,11,2,36,138,7,CORE
 iit_roorkee:380,Parikshit Pareek,IIT Roorkee,Electrical Engineering,CORE,1,2,8,21,2,CORE
-iit_roorkee:442,Tanmoy Pramanik,IIT Roorkee,Electronics and Communication Engineering,CORE,13,2,24,91,6,IN
 iit_roorkee:493,Chandra Shekhar Pant,IIT Roorkee,Hydro and Renewable Energy,CORE,17,2,12,22,3,CORE
 iit_roorkee:54,Sachin Suresh Tiwari,IIT Roorkee,Biosciences and Bioengineering,CORE,6,2,7,10,2,CORE
 iit_roorkee:580,Arbaz Khan,IIT Roorkee,Mathematics,CORE,3,2,25,76,6,CORE
@@ -4364,7 +4363,7 @@ iit_bhubaneswar:161,Mohit Somani,IIT Bhubaneswar,School of Infrastructure,CORE,5
 iit_bhubaneswar:171,Santhoshkumar G,IIT Bhubaneswar,School of Infrastructure,CORE,14,1,11,11,2,CORE
 iit_bhubaneswar:201,Srinivasa Ramanujam Kannan,IIT Bhubaneswar,School of Mechanical Sciences,CORE,3,1,20,74,6,CORE
 iit_bhubaneswar:220,Santanu Mandal,IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",CORE,15,1,9,62,6,IN
-iit_bhubaneswar:23,Mahendra Kumar Gupta,IIT Bhubaneswar,School of Basic Sciences,CORE,2,1,12,42,4,CORE
+iit_bhubaneswar:23,Mahendra Kumar Gupta,IIT Bhubaneswar,School of Basic Sciences,CORE,2,1,11,42,4,CORE
 iit_bhubaneswar:239,Sujit Roy,IIT Bhubaneswar,School of Basic Sciences,CORE,9,1,13,106,7,CORE
 iit_bhubaneswar:24,Malay Kumar Bandyopadhyay,IIT Bhubaneswar,School of Basic Sciences,CORE,11,1,27,170,8,CORE
 iit_bhubaneswar:272,Sandeep Kumar Samal,IIT Bhubaneswar,School of Electrical and Computer Sciences,CORE,6,1,10,3,1,IN
@@ -4519,7 +4518,7 @@ iit_ism:224,Shubhi Gupta,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Eng
 iit_ism:24,Partha Pratim Mandal,IIT (ISM) Dhanbad,Applied Geophysics,CORE,2,1,10,27,3,ISOLATED
 iit_ism:270,Akhilesh Prasad,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,3,1,79,593,15,CORE
 iit_ism:274,Atul Kumar Verma,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,1,1,3,1,1,CORE
-iit_ism:278,Garib Nath Singh,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,3,1,98,428,10,CORE
+iit_ism:278,Garib Nath Singh,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,3,1,97,426,10,CORE
 iit_ism:287,Pramod Kumar Kewat,IIT (ISM) Dhanbad,Mathematics & Computing,CORE,4,1,24,35,3,CORE
 iit_ism:353,Ashok Kumar,IIT (ISM) Dhanbad,Mining Engineering,CORE,14,1,12,76,4,CORE
 iit_ism:371,Swapnil Mishra,IIT (ISM) Dhanbad,Mining Engineering,CORE,14,1,16,95,5,IN
@@ -4550,12 +4549,12 @@ iit_jodhpur:129,Bharat Singh Rajpurohit,IIT Jodhpur,Electrical Engineering,CORE,
 iit_jodhpur:193,Md Abu Talhamainuddin Ansary,IIT Jodhpur,Mathematics,CORE,3,1,9,28,2,CORE
 iit_jodhpur:195,Nil Kamal Hazra,IIT Jodhpur,Mathematics,CORE,3,1,31,190,8,IN
 iit_jodhpur:2,Bhupendra Reniwal,IIT Jodhpur,,CORE,1,1,5,23,2,CORE
-iit_jodhpur:219,Gourhari Ghosh,IIT Jodhpur,Mechanical Engineering,CORE,31,1,5,42,3,CORE
+iit_jodhpur:219,Gourhari Ghosh,IIT Jodhpur,Mechanical Engineering,CORE,31,1,6,42,3,CORE
 iit_jodhpur:223,Mrityunjay Doddamani,IIT Jodhpur,Mechanical Engineering,CORE,19,1,12,24,3,CORE
 iit_jodhpur:258,Yogeshwar Nath Mishra,IIT Jodhpur,Physics,CORE,11,1,4,4,1,IN
 iit_jodhpur:30,Sucharita Dey,IIT Jodhpur,Bioscience and Bioengineering,CORE,6,1,17,197,4,CORE
 iit_jodhpur:311,Devi Prasad Dash,IIT Jodhpur,School of Management and Entrepreneurship,CORE,3,1,7,151,4,CORE
-iit_jodhpur:34,Angan Sengupta,IIT Jodhpur,Chemical Engineering,CORE,6,1,13,43,4,CORE
+iit_jodhpur:34,Angan Sengupta,IIT Jodhpur,Chemical Engineering,CORE,7,1,14,43,4,CORE
 iit_jodhpur:36,Krunal Gangawane,IIT Jodhpur,Chemical Engineering,CORE,18,1,16,108,7,CORE
 iit_jodhpur:368,Pradip Kumar Tewari,IIT Jodhpur,Chemical Engineering,CORE,26,1,27,125,5,CORE
 iit_jodhpur:435,Amit Singh,IIT Jodhpur,School of Management and Entrepreneurship,CORE,1,1,1,3,1,OUT
@@ -4635,7 +4634,7 @@ iit_madras:342,S Varunkumar,IIT Madras,Computer Science and Engineering,CORE,5,1
 iit_madras:371,Janakiraman Viraraghavan,IIT Madras,Electrical Engineering,CORE,4,1,14,19,3,CORE
 iit_madras:477,A R Ganesan,IIT Madras,Mathematics,CORE,6,1,13,57,5,CORE
 iit_madras:489,Chidella Srinivasa Rao,IIT Madras,Mathematics,CORE,1,1,10,19,2,OUT
-iit_madras:504,S Sundar,IIT Madras,Mathematics,CORE,2,1,16,43,3,CORE
+iit_madras:504,S Sundar,IIT Madras,Mathematics,CORE,2,1,15,43,3,CORE
 iit_madras:518,Upadhye Neelesh Shankar,IIT Madras,Mathematics,CORE,7,1,23,112,7,CORE
 iit_madras:535,Charchit Kumar,IIT Madras,Mechanical Engineering,CORE,3,1,5,48,3,CORE
 iit_madras:543,Krithika Narayanaswamy,IIT Madras,Mechanical Engineering,CORE,2,1,12,137,6,CORE
@@ -4701,6 +4700,7 @@ iit_roorkee:392,Ambalika Sharma,IIT Roorkee,Electrical Engineering,CORE,1,1,5,51
 iit_roorkee:416,Ashish Kumar Chowdhary,IIT Roorkee,Electronics and Communication Engineering,CORE,2,1,4,17,2,OUT
 iit_roorkee:420,Bodhibrata Mukhopadhyay,IIT Roorkee,Electronics and Communication Engineering,CORE,3,1,12,41,4,CORE
 iit_roorkee:424,Debashis Ghosh,IIT Roorkee,Electronics and Communication Engineering,CORE,8,1,63,299,8,CORE
+iit_roorkee:442,Tanmoy Pramanik,IIT Roorkee,Electronics and Communication Engineering,CORE,13,1,24,91,6,IN
 iit_roorkee:444,Utpal Dey,IIT Roorkee,Electronics and Communication Engineering,CORE,2,1,18,41,3,IN
 iit_roorkee:445,Vinod Pankajakshan,IIT Roorkee,Electronics and Communication Engineering,CORE,3,1,25,118,7,CORE
 iit_roorkee:495,Himanshu Jain,IIT Roorkee,Hydro and Renewable Energy,CORE,10,1,20,82,5,CORE
@@ -4762,7 +4762,7 @@ iit_bombay:125,Roop Mallik,IIT Bombay,Biosciences and Bioengineering,IN,1,2,11,7
 iit_guwahati:325,Arup Chattopadhyay,IIT Guwahati,Mathematics,IN,3,2,24,188,5,IN
 iit_guwahati:595,Manish Kumar Goyal,IIT Guwahati,,IN,1,2,25,212,9,IN
 iit_hyderabad:148,Rogers Mathew,IIT Hyderabad,Computer Science & Engineering,IN,1,2,27,60,5,TENDRILS
-iit_hyderabad:156,Subrahmanyam Kalyanasundaram,IIT Hyderabad,Computer Science & Engineering,IN,3,2,27,101,7,TUBES
+iit_hyderabad:156,Subrahmanyam Kalyanasundaram,IIT Hyderabad,Computer Science & Engineering,IN,2,2,27,101,7,TENDRILS
 iit_indore:161,Sk Safique Ahmad,IIT Indore,Mathematics,IN,2,2,21,46,5,IN
 iit_indore:278,Saikat Sarkar,IIT Indore,Civil Engineering,IN,3,2,12,69,5,IN
 iit_ism:419,Sudipto Singha Roy,IIT (ISM) Dhanbad,Physics,IN,3,2,6,20,2,IN
@@ -4795,7 +4795,7 @@ iit_delhi:531,Neeraj Joshi,IIT Delhi,Mathematics,IN,4,1,9,9,2,IN
 iit_delhi:575,Prithviraj Mukhopadhyay,IIT Delhi,Mechanical Engineering,IN,5,1,6,38,2,IN
 iit_delhi:644,Sankalpa Ghosh,IIT Delhi,Physics,IN,3,1,18,66,4,IN
 iit_delhi:708,Upasna Sharma,IIT Delhi,School of Public Policy,IN,7,1,8,58,3,IN
-iit_gandhinagar:64,Neeldhara Misra,IIT Gandhinagar,Computer Science and Engineering,IN,4,1,32,48,5,TUBES
+iit_gandhinagar:64,Neeldhara Misra,IIT Gandhinagar,Computer Science and Engineering,IN,4,1,32,48,5,TENDRILS
 iit_gandhinagar:77,V.N. Prabhakar,IIT Gandhinagar,Earth Sciences,IN,3,1,3,3,1,IN
 iit_goa:25,Krishna Kumar,IIT Goa,Electrical Engineering,IN,2,1,3,2,1,IN
 iit_goa:52,Shakthi Prasad D,IIT Goa,Electrical Engineering,IN,1,1,12,26,3,IN
@@ -4855,7 +4855,7 @@ iit_roorkee:620,Alankrita Singh,IIT Roorkee,Mechanical and Industrial Engineerin
 iit_roorkee:814,Tripti Mahara,IIT Roorkee,Polymer and Process Engineering,IN,2,1,3,97,3,IN
 iit_roorkee:96,Anshu Anand,IIT Roorkee,Chemical Engineering,IN,7,1,16,214,9,IN
 iit_ropar:104,Puneet Goyal,IIT Ropar,Computer Science and Engineering,IN,7,1,40,277,10,IN
-iit_ropar:172,Arti Pandey,IIT Ropar,Mathematics,IN,4,1,7,6,2,TUBES
+iit_ropar:172,Arti Pandey,IIT Ropar,Mathematics,IN,4,1,7,6,2,TENDRILS
 iit_ropar:177,G Sankara Raju Kosuru,IIT Ropar,Mathematics,IN,3,1,12,42,3,IN
 iit_ropar:244,Gagan Kumar,IIT Ropar,Physics,IN,4,1,12,28,3,IN
 iit_ropar:250,Rajesh Kumar Gupta,IIT Ropar,Physics,IN,2,1,10,35,3,TENDRILS
@@ -5021,7 +5021,7 @@ iit_bombay:286,Sayantan Dutta,IIT Bombay,Chemical Engineering,IN,12,0,6,11,1,IN
 iit_bombay:288,Sonali Das,IIT Bombay,Chemical Engineering,IN,2,0,7,125,5,IN
 iit_bombay:289,Sudarshan Vijay,IIT Bombay,Chemical Engineering,IN,4,0,6,0,0,IN
 iit_bombay:29,Nagendra Kumar,IIT Bombay,Aerospace Engineering,IN,6,0,10,23,3,IN
-iit_bombay:291,Supreet Saini,IIT Bombay,Chemical Engineering,IN,1,0,38,262,9,IN
+iit_bombay:291,Supreet Saini,IIT Bombay,Chemical Engineering,IN,1,0,39,262,9,IN
 iit_bombay:323,Deepti Kalsi,IIT Bombay,Chemistry,IN,9,0,6,8,1,IN
 iit_bombay:34,R. K. Pant,IIT Bombay,Aerospace Engineering,IN,2,0,5,2,1,ISOLATED
 iit_bombay:36,Rohit Gupta,IIT Bombay,Aerospace Engineering,IN,1,0,6,1,1,ISOLATED
@@ -5039,7 +5039,7 @@ iit_bombay:507,Devashish Gosain,IIT Bombay,Computer Science and Engineering,IN,1
 iit_bombay:51,Anupam Guha,IIT Bombay,Ashank Desai Centre for Policy Studies,IN,1,0,1,2,1,ISOLATED
 iit_bombay:517,Manas Thakur,IIT Bombay,Computer Science and Engineering,IN,2,0,8,20,3,ISOLATED
 iit_bombay:528,Paritosh Pandya,IIT Bombay,Computer Science and Engineering,IN,1,0,14,19,2,IN
-iit_bombay:541,Sayandeep Saha,IIT Bombay,Computer Science and Engineering,IN,3,0,9,3,1,IN
+iit_bombay:541,Sayandeep Saha,IIT Bombay,Computer Science and Engineering,IN,3,0,8,3,1,IN
 iit_bombay:594,Bivin Geo George,IIT Bombay,Earth Sciences,IN,11,0,10,33,3,IN
 iit_bombay:601,Jahnavi Punekar,IIT Bombay,Earth Sciences,IN,6,0,9,26,4,IN
 iit_bombay:611,Ramakrishnan Desikan,IIT Bombay,Earth Sciences,IN,1,0,3,14,2,IN
@@ -5335,7 +5335,7 @@ iit_ism:217,Pradeep Sahu,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Eng
 iit_ism:221,Shalini Gautam,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",IN,3,0,2,4,1,IN
 iit_ism:226,Vishnu Teja  Mantripragada,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",IN,7,0,7,16,2,IN
 iit_ism:227,Vivek Kumar Sahu,IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",IN,5,0,2,5,1,ISOLATED
-iit_ism:23,Niptika Jana,IIT (ISM) Dhanbad,Applied Geophysics,IN,5,0,10,8,1,IN
+iit_ism:23,Niptika Jana,IIT (ISM) Dhanbad,Applied Geophysics,IN,5,0,11,8,1,IN
 iit_ism:249,Esha Saha,IIT (ISM) Dhanbad,Management Studies and Industrial Engineering,IN,7,0,1,0,0,IN
 iit_ism:254,Mohd. Irfan,IIT (ISM) Dhanbad,Management Studies and Industrial Engineering,IN,1,0,3,74,3,IN
 iit_ism:259,Rashmi Singh,IIT (ISM) Dhanbad,Management Studies and Industrial Engineering,IN,1,0,4,10,1,IN
@@ -5495,8 +5495,8 @@ iit_kanpur:162,Chirag Kothari,IIT Kanpur,Civil Engineering,IN,4,0,6,3,1,IN
 iit_kanpur:163,Chunendra K Sahu,IIT Kanpur,Civil Engineering,IN,1,0,8,31,3,IN
 iit_kanpur:166,Gourabananda Pahar,IIT Kanpur,Civil Engineering,IN,6,0,21,68,5,IN
 iit_kanpur:171,Manoj Kumar Tiwari,IIT Kanpur,Civil Engineering,IN,3,0,1,3,1,ISOLATED
-iit_kanpur:186,Saumyen Guha,IIT Kanpur,Civil Engineering,IN,3,0,12,10,2,IN
-iit_kanpur:20,Soumyabrata Roy,IIT Kanpur,,IN,4,0,1,0,0,ISOLATED
+iit_kanpur:186,Saumyen Guha,IIT Kanpur,Civil Engineering,IN,3,0,13,10,2,IN
+iit_kanpur:20,Soumyabrata Roy,IIT Kanpur,,IN,3,0,1,0,0,ISOLATED
 iit_kanpur:202,Pragathi P. Balasubramani,IIT Kanpur,Cognitive Science,IN,3,0,7,38,3,IN
 iit_kanpur:207,Amitangshu Pal,IIT Kanpur,Computer Science and Engineering,IN,3,0,26,203,7,IN
 iit_kanpur:221,Preeti Malakar,IIT Kanpur,Computer Science and Engineering,IN,3,0,18,119,3,IN
@@ -5899,8 +5899,8 @@ iit_tirupati:96,Ishapathik Das,IIT Tirupati,Mathematics and Statistics,IN,5,0,11
 iit_tirupati:99,Panchatcharam Mariappan,IIT Tirupati,Mathematics and Statistics,IN,1,0,7,43,2,IN
 iit_kanpur:846,Vijay K. Jain,IIT Kanpur,Mechanical Engineering,OUT,1,36,19,641,16,OUT
 iit_bombay:605,Malay Mukul,IIT Bombay,Earth Sciences,OUT,1,25,14,462,11,OUT
+iit_roorkee:672,M. M. Mahapatra,IIT Roorkee,Mechanical and Industrial Engineering,OUT,0,23,7,539,6,OUT
 iit_kharagpur:909,Krishna Prapoorna Biligiri,IIT Kharagpur,Civil Engineering,OUT,0,22,26,883,17,OUT
-iit_roorkee:672,M. M. Mahapatra,IIT Roorkee,Mechanical and Industrial Engineering,OUT,0,22,7,539,6,OUT
 iit_roorkee:174,R. N. Goyal,IIT Roorkee,Chemistry,OUT,0,21,27,1147,15,OUT
 iit_delhi:235,B. Bhattacharjee,IIT Delhi,Civil Engineering,OUT,0,20,29,1021,11,OUT
 iit_bombay:1183,Bhanu P Singh,IIT Bombay,Physics,OUT,0,19,13,215,7,OUT
@@ -5930,7 +5930,6 @@ iit_bombay:27,Mira Mitra,IIT Bombay,Aerospace Engineering,OUT,0,8,5,161,3,OUT
 iit_bombay:525,Nutan Limaye,IIT Bombay,Computer Science and Engineering,OUT,1,8,15,41,4,OUT
 iit_delhi:332,Krishan Kant,IIT Delhi,Electrical Engineering,OUT,0,8,3,134,2,OUT
 iit_gandhinagar:79,Arup Lal Chakraborty,IIT Gandhinagar,Electrical Engineering,OUT,0,8,42,264,9,OUT
-iit_hyderabad:545,Fahad Panolan,IIT Hyderabad,Computer Science & Engineering,OUT,0,8,44,127,6,OUT
 iit_kharagpur:233,Baidurya Bhattacharya,IIT Kharagpur,Civil Engineering,OUT,0,8,24,224,8,OUT
 iit_roorkee:132,Vijay Kumar Agarwal,IIT Roorkee,Chemical Engineering,OUT,0,8,8,183,6,OUT
 iit_roorkee:69,Saurav Datta,IIT Roorkee,Biosciences and Bioengineering,OUT,0,8,5,148,4,OUT
@@ -5942,6 +5941,7 @@ iit_bombay:33,Prasanna M Mujumdar,IIT Bombay,Aerospace Engineering,OUT,0,7,4,155
 iit_delhi:112,Akshi Singla,IIT Delhi,Chemical Engineering,OUT,0,7,1,73,1,OUT
 iit_delhi:177,Arunachalam Ramanan,IIT Delhi,Chemistry,OUT,0,7,27,313,12,OUT
 iit_hyderabad:542,Basudev Biswal,IIT Hyderabad,Civil Engineering,OUT,0,7,3,73,3,OUT
+iit_hyderabad:545,Fahad Panolan,IIT Hyderabad,Computer Science & Engineering,OUT,0,7,43,124,6,OUT
 iit_ism:351,Arka Jyoti Das,IIT (ISM) Dhanbad,Mining Engineering,OUT,0,7,5,155,3,OUT
 iit_kanpur:494,Anurag Gupta,IIT Kanpur,Mechanical Engineering,OUT,0,7,21,163,8,OUT
 iit_kanpur:745,Guha Anirban,IIT Kanpur,,OUT,0,7,13,139,7,OUT
@@ -5978,6 +5978,7 @@ iit_hyderabad:556,Prashant Saxena,IIT Hyderabad,Mechanical & Aerospace Engineeri
 iit_indore:297,Vilas G. Pol,IIT Indore,Metallurgical Engineering and Materials Science,OUT,0,5,1,56,1,OUT
 iit_ism:679,Vinayak Ranjan,IIT (ISM) Dhanbad,,OUT,0,5,18,235,7,OUT
 iit_ism:690,Priya Ranjan Mohanty,IIT (ISM) Dhanbad,Applied Geophysics,OUT,0,5,7,67,2,OUT
+iit_kanpur:14,Salman Ahmad Khan,IIT Kanpur,,OUT,0,5,4,18,3,OUT
 iit_kanpur:223,Priyanka Bagade,IIT Kanpur,Computer Science and Engineering,OUT,0,5,15,182,5,OUT
 iit_kanpur:290,Sohini Sahu,IIT Kanpur,Economic Sciences,OUT,0,5,4,91,4,OUT
 iit_kanpur:383,Nitin Saxena,IIT Kanpur,Intelligent Systems,OUT,5,5,34,87,5,OUT
@@ -6003,10 +6004,9 @@ iit_bombay:733,Shrikrishna A. Khaparde,IIT Bombay,Electrical Engineering,OUT,0,4
 iit_delhi:672,Archana Chugh,IIT Delhi,School of Biological Sciences,OUT,1,4,23,369,12,OUT
 iit_gandhinagar:313,Rishi Narain Singh,IIT Gandhinagar,Earth Sciences,OUT,1,4,5,20,2,OUT
 iit_guwahati:626,Nagarjuna Nallam,IIT Guwahati,Electronics and Electrical Engineering,OUT,0,4,11,71,5,OUT
-iit_indore:294,M. Santhakumar,IIT Indore,Mechanical Engineering,OUT,0,4,31,491,12,OUT
+iit_indore:294,M. Santhakumar,IIT Indore,Mechanical Engineering,OUT,0,4,30,489,12,OUT
 iit_ism:321,Md Sikandar Azam,IIT (ISM) Dhanbad,Mechanical Engineering,OUT,0,4,5,83,4,OUT
 iit_jodhpur:116,Sumit Kalra,IIT Jodhpur,Computer Science and Engineering,OUT,1,4,18,127,6,TENDRILS
-iit_kanpur:14,Salman Ahmad Khan,IIT Kanpur,,OUT,0,4,4,18,3,OUT
 iit_kanpur:217,Manindra Agrawal,IIT Kanpur,Computer Science and Engineering,OUT,3,4,11,46,3,OUT
 iit_kanpur:513,Nalinaksh S. Vyas,IIT Kanpur,Mechanical Engineering,OUT,0,4,7,132,6,OUT
 iit_kharagpur:1073,Karanam Uma Maheshwar Rao,IIT Kharagpur,Mining Engineering,OUT,0,4,2,17,2,OUT
@@ -6087,7 +6087,7 @@ iit_ropar:93,Balwinder Sodhi,IIT Ropar,Computer Science and Engineering,OUT,0,3,
 iit_bhubaneswar:29,Palas Roy,IIT Bhubaneswar,School of Basic Sciences,OUT,0,2,6,84,5,OUT
 iit_bhubaneswar:50,Tarakanta Nayak,IIT Bhubaneswar,School of Basic Sciences,OUT,0,2,11,29,3,OUT
 iit_bombay:163,Battula Kalyana Chakravarthy,IIT Bombay,Centre for Educational Technology,OUT,0,2,2,9,2,ISOLATED
-iit_bombay:174,Sahana Murthy,IIT Bombay,Centre for Educational Technology,OUT,1,2,17,170,7,OUT
+iit_bombay:174,Sahana Murthy,IIT Bombay,Centre for Educational Technology,OUT,1,2,15,170,7,OUT
 iit_bombay:19,Harshad Khadilkar,IIT Bombay,Aerospace Engineering,OUT,0,2,7,85,3,OUT
 iit_bombay:260,Kannan M Moudgalya,IIT Bombay,Chemical Engineering,OUT,0,2,20,104,5,OUT
 iit_bombay:365,Pradeep Mathur,IIT Bombay,Chemistry,OUT,0,2,3,12,2,OUT
@@ -6104,6 +6104,7 @@ iit_bombay:964,Debanjana Mitra,IIT Bombay,Mathematics,OUT,0,2,4,7,2,OUT
 iit_delhi:115,Anupam Shukla,IIT Delhi,Chemical Engineering,OUT,0,2,4,156,3,OUT
 iit_delhi:233,A. K. Nagpal,IIT Delhi,Civil Engineering,OUT,0,2,3,13,2,ISOLATED
 iit_delhi:273,Ragesh Jaiswal,IIT Delhi,Computer Science and Engineering,OUT,0,2,20,68,4,OUT
+iit_delhi:538,S. Sivananthan,IIT Delhi,Mathematics,OUT,0,2,9,35,3,OTHER
 iit_delhi:634,Nitin Yadav,IIT Delhi,Physics,OUT,1,2,18,49,4,OUT
 iit_delhi:661,Ajit Kumar,IIT Delhi,Physics,OUT,0,2,2,4,1,ISOLATED
 iit_dharwad:181,P Seshu,IIT Dharwad,"Mechanical, Materials and Aerospace Engineering",OUT,1,2,16,156,7,OUT
@@ -6181,6 +6182,7 @@ iit_roorkee:10,Gaurav Raheja,IIT Roorkee,Architecture and Planning,OUT,0,2,7,67,
 iit_roorkee:219,Sanjay Chikermane,IIT Roorkee,Civil Engineering,OUT,0,2,4,53,4,OUT
 iit_roorkee:247,Pradipta Banerji,IIT Roorkee,Civil Engineering,OUT,0,2,2,41,2,OUT
 iit_roorkee:42,Naveen Kumar,IIT Roorkee,Biosciences and Bioengineering,OUT,0,2,3,21,2,OUT
+iit_roorkee:608,P. N. Agrawal,IIT Roorkee,Mathematics,OUT,1,2,29,128,7,OUT
 iit_roorkee:637,Ganpule Shailesh Govind,IIT Roorkee,Mechanical and Industrial Engineering,OUT,0,2,7,20,2,OUT
 iit_roorkee:70,Soma Rohatgi,IIT Roorkee,Biosciences and Bioengineering,OUT,0,2,3,69,3,ISOLATED
 iit_roorkee:713,Devendra Singh,IIT Roorkee,Metallurgical and Materials Engineering,OUT,0,2,2,6,1,ISOLATED
@@ -6203,7 +6205,7 @@ iit_bombay:1197,M Senthil Kumar,IIT Bombay,Physics,OUT,0,1,4,5,2,ISOLATED
 iit_bombay:1246,Gajendra Kumar Adil,IIT Bombay,Shailesh J. Mehta School of Management,OUT,0,1,12,88,6,OUT
 iit_bombay:1248,Karuna Jain,IIT Bombay,Shailesh J. Mehta School of Management,OUT,2,1,6,307,2,OUT
 iit_bombay:148,Angshuman Modak,IIT Bombay,Centre for Climate Studies,OUT,0,1,6,85,5,OUT
-iit_bombay:164,Chandan Dasgupta,IIT Bombay,Centre for Educational Technology,OUT,0,1,25,55,4,TENDRILS
+iit_bombay:164,Chandan Dasgupta,IIT Bombay,Centre for Educational Technology,OUT,0,1,18,55,4,TENDRILS
 iit_bombay:22,Jadav C Mandal,IIT Bombay,Aerospace Engineering,OUT,0,1,4,32,2,OUT
 iit_bombay:247,Bharatkumar Suthar,IIT Bombay,Chemical Engineering,OUT,0,1,7,25,3,OUT
 iit_bombay:292,Swati Bhattacharya,IIT Bombay,Chemical Engineering,OUT,0,1,17,83,5,OUT
@@ -6377,17 +6379,20 @@ iit_hyderabad:130,Aravind N.R.,IIT Hyderabad,Computer Science & Engineering,TEND
 iit_hyderabad:182,K Siva Kumar,IIT Hyderabad,Electrical Engineering,TENDRILS,0,1,7,52,3,TENDRILS
 iit_hyderabad:200,Shishir Kumar,IIT Hyderabad,Electrical Engineering,TENDRILS,0,1,8,20,3,TENDRILS
 iit_hyderabad:315,Safvan Palathingal,IIT Hyderabad,Mechanical & Aerospace Engineering,TENDRILS,0,1,9,27,3,ISOLATED
+iit_indore:158,Niraj Kumar Shukla,IIT Indore,Mathematics,TENDRILS,0,1,16,69,6,ISOLATED
 iit_ism:416,Soumya Bagchi,IIT (ISM) Dhanbad,Physics,TENDRILS,0,1,12,58,4,TENDRILS
 iit_kanpur:204,Abhranil Chatterjee,IIT Kanpur,Computer Science and Engineering,TENDRILS,1,1,3,1,1,ISOLATED
 iit_kanpur:469,Nilakantan Nandini,IIT Kanpur,Mathematics and Statistics,TENDRILS,0,1,3,2,1,TENDRILS
 iit_kanpur:758,Pakrashi Debayan,IIT Kanpur,,TENDRILS,0,1,2,79,2,TENDRILS
 iit_madras:326,Kartik Nagar,IIT Madras,Computer Science and Engineering,TENDRILS,0,1,8,26,3,TENDRILS
 iit_madras:385,Puduru Viswanadha Reddy,IIT Madras,Electrical Engineering,TENDRILS,0,1,6,64,3,ISOLATED
+iit_madras:499,R Radha,IIT Madras,Mathematics,TENDRILS,1,1,10,23,3,OTHER
 iit_madras:919,Shankar Balachandran,IIT Madras,Computer Science and Engineering,TENDRILS,0,1,3,5,1,ISOLATED
 iit_mandi:217,Samir Shukla,IIT Mandi,School of Mathematical & Statistical Sciences,TENDRILS,0,1,6,8,2,TENDRILS
 iit_palakkad:115,Lakshmi Narasimhan Theagarajan,IIT Palakkad,Electrical Engineering,TENDRILS,0,1,7,58,4,ISOLATED
 iit_palakkad:65,Krithika Ramaswamy,IIT Palakkad,Computer Science and Engineering,TENDRILS,0,1,18,22,3,ISOLATED
 iit_roorkee:575,A. Swaminathan,IIT Roorkee,Mathematics,TENDRILS,0,1,24,166,5,OTHER
+iit_roorkee:605,M. L. Mittal,IIT Roorkee,Mathematics,TENDRILS,0,1,2,8,2,TENDRILS
 iit_tirupati:102,Srijanani Anurag Prasad,IIT Tirupati,Mathematics and Statistics,TENDRILS,0,1,5,12,2,TENDRILS
 iit_tirupati:49,G. Ramakrishna,IIT Tirupati,Computer Science and Engineering,TENDRILS,0,1,7,9,1,TENDRILS
 iit_bhilai:33,Nitin Khanna,IIT Bhilai,Electrical Engineering,TENDRILS,1,0,4,4,1,ISOLATED
@@ -6411,6 +6416,7 @@ iit_guwahati:435,Girish Sampath Setlur,IIT Guwahati,Physics,TENDRILS,1,0,9,42,4,
 iit_guwahati:576,Vishv Mohan Malhotra,IIT Guwahati,Computer Science and Engineering,TENDRILS,1,0,2,4,1,TENDRILS
 iit_hyderabad:183,Kapil Jainwal,IIT Hyderabad,Electrical Engineering,TENDRILS,1,0,5,11,2,ISOLATED
 iit_hyderabad:273,Prasun Roychowdhury,IIT Hyderabad,Mathematics,TENDRILS,1,0,1,0,0,OTHER
+iit_ism:266,A Antony Selvan,IIT (ISM) Dhanbad,Mathematics & Computing,TENDRILS,2,0,12,36,4,OTHER
 iit_jammu:125,Sartaj Ul Hasan,IIT Jammu,Mathematics,TENDRILS,1,0,14,118,4,OTHER
 iit_jammu:4,Mithu Baidya,IIT Jammu,Bioscience and Bioengineering,TENDRILS,1,0,7,24,3,TENDRILS
 iit_jodhpur:308,Bhargab Chattopadhyay,IIT Jodhpur,School of Management and Entrepreneurship,TENDRILS,1,0,10,15,3,TENDRILS
@@ -6424,9 +6430,9 @@ iit_madras:334,N S Narayanaswamy,IIT Madras,Computer Science and Engineering,TEN
 iit_palakkad:64,Krishnamoorthy Dinesh,IIT Palakkad,Computer Science and Engineering,TENDRILS,1,0,3,0,0,TENDRILS
 iit_roorkee:257,Chetan Gupta,IIT Roorkee,Computer Science and Engineering,TENDRILS,1,0,7,9,2,TENDRILS
 iit_roorkee:346,Varun Kumar Singla,IIT Roorkee,Earthquake Engineering,TENDRILS,1,0,1,1,1,ISOLATED
+iit_roorkee:603,Uaday Singh,IIT Roorkee,Mathematics,TENDRILS,2,0,17,59,4,TENDRILS
 iit_ropar:171,A. Sairam Kaliraj,IIT Ropar,Mathematics,TENDRILS,1,0,6,10,2,OTHER
 iit_ropar:182,M. Prabhakar,IIT Ropar,Mathematics,TENDRILS,1,0,10,30,3,TENDRILS
-iit_delhi:538,S. Sivananthan,IIT Delhi,Mathematics,OTHER,0,2,9,35,3,OTHER
 iit_kanpur:467,Muthukumar Thirumalai,IIT Kanpur,Mathematics and Statistics,OTHER,0,2,6,13,2,OTHER
 iit_bombay:1025,Shrikrishna G. Dani,IIT Bombay,Mathematics,OTHER,0,1,1,8,1,OTHER
 iit_bombay:1032,Sudhir R. Ghorpade,IIT Bombay,Mathematics,OTHER,0,1,8,42,4,ISOLATED
@@ -6442,7 +6448,6 @@ iit_guwahati:191,Deepanjan Kesh,IIT Guwahati,Computer Science and Engineering,OT
 iit_guwahati:346,Pratyoosh Kumar,IIT Guwahati,Mathematics,OTHER,0,1,3,6,1,OTHER
 iit_guwahati:354,Shyamashree Upadhyay,IIT Guwahati,Mathematics,OTHER,0,1,1,7,1,OTHER
 iit_guwahati:53,Abhishek Shrivastava,IIT Guwahati,Centre for Linguistic Science and Technology,OTHER,0,1,16,38,4,ISOLATED
-iit_indore:158,Niraj Kumar Shukla,IIT Indore,Mathematics,OTHER,0,1,16,69,6,ISOLATED
 iit_indore:301,Titas Chanda,IIT Indore,Physics,OTHER,0,1,7,234,5,ISOLATED
 iit_ism:279,Hemant Kumar Mishra,IIT (ISM) Dhanbad,Mathematics & Computing,OTHER,1,1,3,1,1,OTHER
 iit_ism:753,Peayush Kumar Choubey,IIT (ISM) Dhanbad,Physics,OTHER,0,1,2,42,2,ISOLATED
@@ -6453,13 +6458,10 @@ iit_kanpur:473,Pattanayak Santosha Kumar,IIT Kanpur,Mathematics and Statistics,O
 iit_kharagpur:1035,Parmeshwary Dayal Srivastava,IIT Kharagpur,Mathematics,OTHER,0,1,9,34,2,ISOLATED
 iit_madras:483,Arijit Dey,IIT Madras,Mathematics,OTHER,0,1,11,34,4,ISOLATED
 iit_madras:493,K Sumesh,IIT Madras,Mathematics,OTHER,0,1,6,18,2,ISOLATED
-iit_madras:499,R Radha,IIT Madras,Mathematics,OTHER,1,1,10,23,3,OTHER
 iit_madras:500,R Rama,IIT Madras,Mathematics,OTHER,0,1,3,4,1,OTHER
 iit_madras:520,V Uma,IIT Madras,Mathematics,OTHER,0,1,8,13,2,OTHER
 iit_madras:743,Balaji B,IIT Madras,,OTHER,0,1,1,4,1,OTHER
 iit_madras:953,P Veeramani,IIT Madras,Mathematics,OTHER,0,1,2,6,2,OTHER
-iit_roorkee:605,M. L. Mittal,IIT Roorkee,Mathematics,OTHER,0,1,2,8,2,OTHER
-iit_roorkee:608,P. N. Agrawal,IIT Roorkee,Mathematics,OTHER,1,1,29,128,7,OTHER
 iit_ropar:191,Bidhan Chandra Sardar,IIT Ropar,Mathematics,OTHER,1,1,8,14,2,ISOLATED
 iit_bhilai:62,Arnab Patra,IIT Bhilai,Mathematics,OTHER,1,0,9,3,1,ISOLATED
 iit_bhu:226,Satyendra Kumar Mishra,IIT (BHU) Varanasi,Department of Mathematical Sciences,OTHER,1,0,3,1,1,OTHER
@@ -6469,7 +6471,6 @@ iit_bombay:914,Wricha Mishra,IIT Bombay,IDC School of Design,OTHER,1,0,1,1,1,ISO
 iit_dharwad:2,Subhash Mehto,IIT Dharwad,Biosciences and Bioengineering,OTHER,1,0,3,25,2,OTHER
 iit_gandhinagar:149,Vineet Vashista,IIT Gandhinagar,Mechanical Engineering,OTHER,1,0,52,206,8,ISOLATED
 iit_hyderabad:138,Manaswi Paraashar,IIT Hyderabad,Computer Science & Engineering,OTHER,1,0,1,0,0,OTHER
-iit_ism:266,A Antony Selvan,IIT (ISM) Dhanbad,Mathematics & Computing,OTHER,2,0,12,36,4,OTHER
 iit_ism:281,Jyoti Dasgupta,IIT (ISM) Dhanbad,Mathematics & Computing,OTHER,1,0,2,1,1,ISOLATED
 iit_jammu:122,Prasant Singh,IIT Jammu,Mathematics,OTHER,1,0,4,5,2,ISOLATED
 iit_jammu:223,Samir Kar,IIT Jammu,Mathematics,OTHER,1,0,1,0,0,OTHER
@@ -6483,7 +6484,6 @@ iit_madras:494,Kalpana Mahalingam,IIT Madras,Mathematics,OTHER,1,0,27,79,5,OTHER
 iit_madras:511,Soumen Sarkar,IIT Madras,Mathematics,OTHER,2,0,27,86,5,OTHER
 iit_madras:67,Titas Chanda,IIT Madras,,OTHER,1,0,6,41,3,ISOLATED
 iit_roorkee:581,Arunava Mandal,IIT Roorkee,Mathematics,OTHER,1,0,2,0,0,OTHER
-iit_roorkee:603,Uaday Singh,IIT Roorkee,Mathematics,OTHER,2,0,17,59,4,OTHER
 iit_roorkee:769,Peayush Kumar Choubey,IIT Roorkee,Physics,OTHER,1,0,2,3,1,ISOLATED
 iit_ropar:184,Manmohan Vashisth,IIT Ropar,Mathematics,OTHER,1,0,8,7,2,OTHER
 iit_ropar:187,Puneet Pasricha,IIT Ropar,Mathematics,OTHER,1,0,1,6,1,OTHER
@@ -6704,7 +6704,6 @@ iit_bombay:866,Arun Mascarenhas,IIT Bombay,IDC School of Design,ISOLATED,0,0,2,2
 iit_bombay:867,Avinash Shende,IIT Bombay,IDC School of Design,ISOLATED,0,0,7,1,1,ISOLATED
 iit_bombay:874,G V Sreekumar,IIT Bombay,IDC School of Design,ISOLATED,0,0,1,2,1,ISOLATED
 iit_bombay:885,Lalitha Sarma,IIT Bombay,IDC School of Design,ISOLATED,0,0,2,0,0,ISOLATED
-iit_bombay:891,Nina Sabnani,IIT Bombay,IDC School of Design,ISOLATED,0,0,1,2,1,ISOLATED
 iit_bombay:892,Nishant Sharma,IIT Bombay,IDC School of Design,ISOLATED,0,0,2,1,1,ISOLATED
 iit_bombay:894,Prasad Bokil,IIT Bombay,IDC School of Design,ISOLATED,0,0,3,1,1,ISOLATED
 iit_bombay:895,Purba Joshi,IIT Bombay,IDC School of Design,ISOLATED,0,0,4,0,0,ISOLATED

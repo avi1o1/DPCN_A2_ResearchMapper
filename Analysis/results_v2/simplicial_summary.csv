@@ -1,20 +1,20 @@
 ﻿metric,value
-"all authors, papers <= 25 authors, all years: triangles in the pairwise graph",2249791
-"all authors, papers <= 25 authors, all years: share of triangles closed by one paper",0.9626
-"all authors, papers <= 10 authors, all years: triangles in the pairwise graph",1218734
+"all authors, papers <= 25 authors, all years: triangles in the pairwise graph",2248367
+"all authors, papers <= 25 authors, all years: share of triangles closed by one paper",0.9627
+"all authors, papers <= 10 authors, all years: triangles in the pairwise graph",1218551
 "all authors, papers <= 10 authors, all years: share of triangles closed by one paper",0.9505
-papers with >= 3 faculty (only these can close a faculty triangle in one paper),3702
-faculty network (all papers): triangles,5710
-faculty network: share of triangles closed by one paper with all three faculty,0.6389
-cap 25: train papers (<= 2021) / test papers (> 2021),77735 / 103636
-cap 25: open triangles at end of 2021,20354
-cap 25: open triangles that became a joint paper after 2021,623
-cap 10: train papers (<= 2021) / test papers (> 2021),76834 / 101644
-cap 10: open triangles at end of 2021,16088
-cap 10: open triangles that became a joint paper after 2021,364
+papers with >= 3 faculty (only these can close a faculty triangle in one paper),3707
+faculty network (all papers): triangles,5723
+faculty network: share of triangles closed by one paper with all three faculty,0.6383
+cap 25: train papers (<= 2021) / test papers (> 2021),77738 / 103638
+cap 25: open triangles at end of 2021,20290
+cap 25: open triangles that became a joint paper after 2021,619
+cap 10: train papers (<= 2021) / test papers (> 2021),76836 / 101646
+cap 10: open triangles at end of 2021,16039
+cap 10: open triangles that became a joint paper after 2021,361
 "check (names split): papers <= 25 authors, all years: share of triangles closed by one paper",0.9658
-"check (names split): cap 25: closure probability, 0 edges",2.23e-10 (24934 of 111661188844206)
-"check (names split): cap 25: closure probability, 1 edge",1.52e-06 (46682 of 30736457817)
-"check (names split): cap 25: closure probability, 2 edges (open wedge)",0.00379 (20313 of 5358510)
-"check (names split): cap 25: closure probability, 3 edges, no joint paper (open triangle)",0.0318 (600 of 18888)
-"check (names split): cap 25: harmonic mean score, ROC AUC (p)",0.570 (1.83e-09)
+"check (names split): cap 25: closure probability, 0 edges",2.23e-10 (24946 of 111699481025363)
+"check (names split): cap 25: closure probability, 1 edge",1.52e-06 (46698 of 30738646724)
+"check (names split): cap 25: closure probability, 2 edges (open wedge)",0.00378 (20302 of 5364635)
+"check (names split): cap 25: closure probability, 3 edges, no joint paper (open triangle)",0.0317 (596 of 18829)
+"check (names split): cap 25: harmonic mean score, ROC AUC (p)",0.567 (7.38e-09)

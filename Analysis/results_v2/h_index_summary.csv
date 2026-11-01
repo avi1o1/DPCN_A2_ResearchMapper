@@ -5,12 +5,12 @@ IIT Roorkee,All departments,h-index,623,8.73,7.67,0,3.0,7.0,12.0,19.0,42
 IIT Roorkee,All departments,i10-index,623,11.65,17.05,0,1.0,5.0,15.0,30.0,124
 IIT Ropar,All departments,h-index,200,7.68,7.28,0,3.0,6.0,10.0,16.0,41
 IIT Ropar,All departments,i10-index,200,9.98,17.59,0,1.0,4.0,10.0,23.099999999999994,115
-IIT Bombay,All departments,h-index,783,7.96,7.95,0,2.0,5.0,12.0,19.800000000000068,70
-IIT Bombay,All departments,i10-index,783,10.98,18.28,0,0.0,4.0,13.0,33.0,189
+IIT Bombay,All departments,h-index,782,7.97,7.95,0,2.0,5.0,12.0,19.899999999999977,70
+IIT Bombay,All departments,i10-index,782,10.99,18.29,0,0.0,4.0,13.0,33.0,189
 IIT Madras,All departments,h-index,612,8.78,7.73,0,3.0,7.0,12.0,19.0,47
 IIT Madras,All departments,i10-index,612,12.44,19.96,0,1.0,5.0,16.0,31.899999999999977,186
 IIT Kanpur,All departments,h-index,552,7.61,7.94,0,2.0,5.0,11.0,18.0,44
-IIT Kanpur,All departments,i10-index,552,10.27,18.83,0,0.0,3.0,11.0,29.900000000000034,136
+IIT Kanpur,All departments,i10-index,552,10.27,18.89,0,0.0,3.0,11.0,29.900000000000034,136
 IIT Goa,All departments,h-index,55,4.04,3.79,0,1.0,3.0,6.0,8.600000000000001,18
 IIT Goa,All departments,i10-index,55,2.95,5.61,0,0.0,1.0,4.0,7.400000000000006,32
 IIT Tirupati,All departments,h-index,123,3.52,3.18,0,1.5,3.0,5.0,7.0,19
@@ -24,26 +24,26 @@ IIT Guwahati,All departments,i10-index,443,15.78,22.46,0,1.0,7.0,20.5,41.0,145
 IIT Hyderabad,All departments,h-index,341,7.54,8.58,0,2.0,5.0,11.0,17.0,75
 IIT Hyderabad,All departments,i10-index,341,10.79,24.62,0,0.0,3.0,11.0,29.0,307
 IIT Bhubaneswar,All departments,h-index,221,6.53,7.26,0,1.0,4.0,10.0,15.0,65
-IIT Bhubaneswar,All departments,i10-index,221,9.17,35.67,0,0.0,2.0,11.0,20.0,514
-IIT (BHU) Varanasi,All departments,h-index,419,8.85,8.16,0,2.0,7.0,14.0,20.0,40
+IIT Bhubaneswar,All departments,i10-index,221,9.18,35.68,0,0.0,2.0,11.0,20.0,514
+IIT (BHU) Varanasi,All departments,h-index,419,8.86,8.17,0,2.0,7.0,14.0,20.0,40
 IIT (BHU) Varanasi,All departments,i10-index,419,12.1,16.97,0,1.0,5.0,18.0,34.0,121
 IIT Gandhinagar,All departments,h-index,175,6.37,7.19,0,1.0,4.0,9.5,15.599999999999994,58
 IIT Gandhinagar,All departments,i10-index,175,7.5,14.21,0,0.0,2.0,9.5,20.799999999999983,117
 IIT Indore,All departments,h-index,203,10.17,10.83,0,2.0,7.0,15.0,24.0,61
-IIT Indore,All departments,i10-index,203,18.33,36.88,0,1.0,6.0,20.5,47.0,326
+IIT Indore,All departments,i10-index,203,18.33,36.84,0,1.0,6.0,20.5,47.0,325
 IIT Mandi,All departments,h-index,205,5.64,6.47,0,1.0,3.0,7.0,16.0,28
 IIT Mandi,All departments,i10-index,205,6.5,12.25,0,0.0,1.0,6.0,22.0,66
 IIT Delhi,All departments,h-index,543,9.75,8.81,0,3.0,7.0,15.0,21.80000000000001,56
 IIT Delhi,All departments,i10-index,543,15.32,27.27,0,1.0,6.0,20.0,41.0,394
 IIT (ISM) Dhanbad,All departments,h-index,460,8.17,8.57,0,1.0,5.0,12.0,20.0,62
-IIT (ISM) Dhanbad,All departments,i10-index,460,11.46,18.25,0,0.0,3.5,14.0,36.10000000000002,141
-IIT Jodhpur,All departments,h-index,264,5.47,6.3,0,1.0,3.0,7.0,13.0,45
-IIT Jodhpur,All departments,i10-index,264,6.2,14.07,0,0.0,1.0,6.0,14.700000000000017,127
+IIT (ISM) Dhanbad,All departments,i10-index,460,11.46,18.24,0,0.0,3.5,14.0,36.10000000000002,141
+IIT Jodhpur,All departments,h-index,264,5.47,6.31,0,1.0,3.0,7.0,12.700000000000017,45
+IIT Jodhpur,All departments,i10-index,264,6.2,14.09,0,0.0,1.0,6.0,14.700000000000017,127
 IIT Jammu,All departments,h-index,147,4.24,4.52,0,1.0,3.0,6.0,10.0,24
 IIT Jammu,All departments,i10-index,147,3.59,6.22,0,0.0,1.0,4.0,10.400000000000006,36
 IIT Bhilai,All departments,h-index,85,4.18,3.87,0,1.0,3.0,6.0,10.0,17
 IIT Bhilai,All departments,i10-index,85,3.18,5.69,0,0.0,1.0,3.0,10.0,33
-IIT Dharwad,All departments,h-index,101,2.83,2.81,0,1.0,2.0,4.0,7.0,12
+IIT Dharwad,All departments,h-index,101,2.84,2.81,0,1.0,2.0,4.0,7.0,12
 IIT Dharwad,All departments,i10-index,101,1.66,2.94,0,0.0,0.0,2.0,6.0,14
 IIT (BHU) Varanasi,Department of Mechanical Engineering,h-index,43,8.07,7.58,0,2.0,6.0,13.0,16.800000000000004,35
 IIT (BHU) Varanasi,Department of Mechanical Engineering,i10-index,43,10.28,14.42,0,1.0,3.0,16.0,26.200000000000017,77
@@ -51,12 +51,12 @@ IIT (BHU) Varanasi,Department of Civil Engineering,h-index,39,7.72,6.33,0,2.5,7.
 IIT (BHU) Varanasi,Department of Civil Engineering,i10-index,39,8.64,10.7,0,1.0,5.0,12.5,20.400000000000006,46
 IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,h-index,28,10.61,10.8,0,3.0,6.5,15.0,27.000000000000007,36
 IIT (BHU) Varanasi,Department of Chemical Engineering and Technology,i10-index,28,14.89,22.29,0,1.0,5.5,16.25,41.70000000000002,90
-IIT (BHU) Varanasi,Department of Mathematical Sciences,h-index,28,6.14,5.95,0,1.0,3.5,11.25,14.3,21
-IIT (BHU) Varanasi,Department of Mathematical Sciences,i10-index,28,7.96,11.9,0,0.0,2.5,15.25,22.500000000000004,47
+IIT (BHU) Varanasi,Department of Mathematical Sciences,h-index,28,6.18,5.99,0,1.0,3.5,12.0,14.3,21
+IIT (BHU) Varanasi,Department of Mathematical Sciences,i10-index,28,8.0,11.92,0,0.0,2.5,16.0,22.500000000000004,47
 IIT (BHU) Varanasi,Department of Electronics Engineering,h-index,27,7.93,8.35,0,1.0,5.0,11.0,15.400000000000002,36
 IIT (BHU) Varanasi,Department of Electronics Engineering,i10-index,27,11.19,19.2,0,0.0,3.0,13.5,24.800000000000015,93
-IIT (BHU) Varanasi,Department of Metallurgical Engineering,h-index,26,9.62,7.47,1,4.5,7.5,13.75,18.5,33
-IIT (BHU) Varanasi,Department of Metallurgical Engineering,i10-index,26,11.88,13.78,0,2.25,6.5,17.75,26.0,59
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,h-index,26,9.65,7.5,1,4.5,7.5,13.75,18.5,33
+IIT (BHU) Varanasi,Department of Metallurgical Engineering,i10-index,26,11.92,13.81,0,2.25,6.5,17.75,26.0,59
 IIT (BHU) Varanasi,Department of Physics,h-index,26,10.69,6.66,0,5.25,10.5,16.5,20.0,22
 IIT (BHU) Varanasi,Department of Physics,i10-index,26,15.12,13.76,0,4.0,12.0,25.25,37.5,41
 IIT (BHU) Varanasi,Department of Electrical Engineering,h-index,25,9.44,6.6,0,3.0,8.0,15.0,18.200000000000003,22
@@ -81,14 +81,14 @@ IIT (BHU) Varanasi,School of Materials Science and Technology,h-index,12,16.67,1
 IIT (BHU) Varanasi,School of Materials Science and Technology,i10-index,12,36.25,40.59,0,9.5,20.5,46.75,104.50000000000001,121
 IIT (BHU) Varanasi,Department of Humanistic Studies,h-index,9,1.33,1.0,0,1.0,1.0,2.0,2.2,3
 IIT (BHU) Varanasi,Department of Humanistic Studies,i10-index,9,0.33,0.71,0,0.0,0.0,0.0,1.2000000000000002,2
-IIT (BHU) Varanasi,"Department of Architecture, Planning and Design",h-index,7,2.0,1.63,0,1.0,2.0,2.5,3.8000000000000007,5
-IIT (BHU) Varanasi,"Department of Architecture, Planning and Design",i10-index,7,0.71,0.95,0,0.0,0.0,1.5,2.0,2
+IIT (BHU) Varanasi,"Department of Architecture, Planning and Design",h-index,7,2.14,1.95,0,1.0,2.0,2.5,4.200000000000001,6
+IIT (BHU) Varanasi,"Department of Architecture, Planning and Design",i10-index,7,0.86,1.21,0,0.0,0.0,1.5,2.4000000000000004,3
 IIT (ISM) Dhanbad,Mechanical Engineering,h-index,46,10.35,9.73,0,4.0,7.5,12.5,23.0,41
 IIT (ISM) Dhanbad,Mechanical Engineering,i10-index,46,16.57,26.52,0,2.0,6.5,15.25,45.5,109
 IIT (ISM) Dhanbad,,h-index,36,1.58,1.79,0,1.0,1.0,1.25,4.0,7
 IIT (ISM) Dhanbad,,i10-index,36,0.83,1.61,0,0.0,0.0,1.0,2.0,7
 IIT (ISM) Dhanbad,Mathematics & Computing,h-index,35,8.37,7.62,0,1.5,7.0,12.5,19.200000000000003,25
-IIT (ISM) Dhanbad,Mathematics & Computing,i10-index,35,14.03,22.23,0,0.0,5.0,14.0,45.2,103
+IIT (ISM) Dhanbad,Mathematics & Computing,i10-index,35,14.03,22.18,0,0.0,5.0,14.0,44.800000000000004,103
 IIT (ISM) Dhanbad,Physics,h-index,34,8.59,7.69,0,2.0,6.5,13.5,22.099999999999998,25
 IIT (ISM) Dhanbad,Physics,i10-index,34,11.82,14.79,0,1.0,3.0,15.5,36.7,49
 IIT (ISM) Dhanbad,Computer Science and Engineering,h-index,33,8.94,9.78,0,1.0,2.0,19.0,21.6,32
@@ -96,13 +96,13 @@ IIT (ISM) Dhanbad,Computer Science and Engineering,i10-index,33,14.33,18.5,0,0.0
 IIT (ISM) Dhanbad,Electronics Engineering,h-index,33,8.67,8.66,0,1.0,7.0,12.0,24.600000000000005,30
 IIT (ISM) Dhanbad,Electronics Engineering,i10-index,33,13.48,20.72,0,0.0,5.0,14.0,48.80000000000001,79
 IIT (ISM) Dhanbad,Electrical Engineering,h-index,28,9.89,9.0,0,2.0,6.5,17.0,21.3,32
-IIT (ISM) Dhanbad,Electrical Engineering,i10-index,28,14.86,18.92,0,0.0,5.0,23.75,43.900000000000006,72
+IIT (ISM) Dhanbad,Electrical Engineering,i10-index,28,14.79,18.87,0,0.0,5.0,23.5,44.3,72
 IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",h-index,26,4.96,5.28,0,1.0,2.5,9.0,11.5,19
 IIT (ISM) Dhanbad,"Fuel, Minerals and Metallurgical Engineering",i10-index,26,5.04,7.35,0,0.0,1.0,8.75,13.0,31
 IIT (ISM) Dhanbad,Mining Engineering,h-index,26,6.81,5.13,0,3.0,6.0,10.75,13.0,17
 IIT (ISM) Dhanbad,Mining Engineering,i10-index,26,7.15,7.88,0,1.0,4.0,11.75,15.0,31
-IIT (ISM) Dhanbad,Civil Engineering,h-index,24,8.58,6.67,0,2.0,8.5,13.25,18.0,20
-IIT (ISM) Dhanbad,Civil Engineering,i10-index,24,10.25,10.41,0,0.0,7.5,17.5,23.4,32
+IIT (ISM) Dhanbad,Civil Engineering,h-index,24,8.62,6.67,0,2.0,9.0,13.25,18.0,20
+IIT (ISM) Dhanbad,Civil Engineering,i10-index,24,10.29,10.4,0,0.0,8.0,17.5,23.4,32
 IIT (ISM) Dhanbad,Applied Geology,h-index,24,6.75,4.96,0,3.0,6.0,10.0,12.399999999999999,19
 IIT (ISM) Dhanbad,Applied Geology,i10-index,24,7.08,7.85,0,1.0,5.0,11.0,16.499999999999996,28
 IIT (ISM) Dhanbad,Environmental Science and Engineering,h-index,23,13.3,10.97,0,2.5,13.0,20.0,27.6,38
@@ -142,7 +142,7 @@ IIT Bhilai,Biosciences and Biomedical Engineering,i10-index,2,0.5,0.71,0,0.25,0.
 IIT Bhilai,Electrical Engineering and Computer Science (defunct),h-index,1,2.0,,2,2.0,2.0,2.0,2.0,2
 IIT Bhilai,Electrical Engineering and Computer Science (defunct),i10-index,1,0.0,,0,0.0,0.0,0.0,0.0,0
 IIT Bhubaneswar,School of Basic Sciences,h-index,58,6.72,9.54,0,2.0,4.0,8.0,14.0,65
-IIT Bhubaneswar,School of Basic Sciences,i10-index,58,14.6,67.5,0,0.0,1.0,6.0,19.0,514
+IIT Bhubaneswar,School of Basic Sciences,i10-index,58,14.62,67.51,0,0.0,1.0,6.0,19.0,514
 IIT Bhubaneswar,School of Electrical and Computer Sciences,h-index,56,5.46,5.71,0,1.0,3.5,7.25,12.0,29
 IIT Bhubaneswar,School of Electrical and Computer Sciences,i10-index,56,5.38,9.73,0,0.0,1.0,6.5,14.5,49
 IIT Bhubaneswar,School of Infrastructure,h-index,33,8.3,7.29,0,2.0,8.0,12.0,18.6,27
@@ -150,7 +150,7 @@ IIT Bhubaneswar,School of Infrastructure,i10-index,33,10.55,12.6,0,1.0,7.0,15.0,
 IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",h-index,24,7.04,7.39,0,1.0,3.0,15.0,17.0,24
 IIT Bhubaneswar,"School of Earth, Ocean and Climate Sciences",i10-index,24,9.25,12.8,0,0.0,2.0,17.5,27.0,44
 IIT Bhubaneswar,School of Mechanical Sciences,h-index,22,7.86,6.17,0,2.0,7.0,11.0,16.700000000000006,20
-IIT Bhubaneswar,School of Mechanical Sciences,i10-index,22,8.64,9.25,0,0.25,5.5,14.25,22.700000000000006,30
+IIT Bhubaneswar,School of Mechanical Sciences,i10-index,22,8.68,9.32,0,0.25,5.5,14.25,22.700000000000006,30
 IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",h-index,20,5.4,4.85,0,1.75,3.0,9.25,11.400000000000006,15
 IIT Bhubaneswar,"School of Minerals, Metallurgical and Materials Engineering",i10-index,20,5.15,6.94,0,0.0,2.0,8.0,12.600000000000009,24
 IIT Bhubaneswar,"School of Humanities, Social Sciences and Management",h-index,6,3.67,3.33,1,1.0,2.5,5.5,7.5,9
@@ -163,8 +163,8 @@ IIT Bombay,Mechanical Engineering,h-index,72,9.08,7.45,0,2.0,7.5,14.25,19.9,29
 IIT Bombay,Mechanical Engineering,i10-index,72,12.96,15.88,0,1.0,7.0,21.0,37.49999999999999,76
 IIT Bombay,Civil Engineering,h-index,61,9.8,8.73,0,3.0,7.0,14.0,24.0,38
 IIT Bombay,Civil Engineering,i10-index,61,14.36,20.85,0,1.0,5.0,17.0,43.0,101
-IIT Bombay,Computer Science and Engineering,h-index,58,3.79,2.83,0,1.25,3.0,5.75,8.0,10
-IIT Bombay,Computer Science and Engineering,i10-index,58,2.28,3.16,0,0.0,1.0,3.75,7.300000000000004,13
+IIT Bombay,Computer Science and Engineering,h-index,58,3.78,2.79,0,1.25,3.0,5.75,8.0,10
+IIT Bombay,Computer Science and Engineering,i10-index,58,2.26,3.12,0,0.0,1.0,3.75,7.300000000000004,13
 IIT Bombay,Mathematics,h-index,57,2.14,1.88,0,1.0,2.0,3.0,4.0,9
 IIT Bombay,Mathematics,i10-index,57,0.7,1.85,0,0.0,0.0,0.0,2.0,9
 IIT Bombay,Chemistry,h-index,53,13.81,12.11,1,4.0,14.0,20.0,24.800000000000004,70
@@ -180,11 +180,11 @@ IIT Bombay,Aerospace Engineering,i10-index,37,6.76,12.95,0,0.0,3.0,7.0,13.399999
 IIT Bombay,Metallurgical Engineering and Materials Science,h-index,37,11.16,8.58,0,3.0,10.0,17.0,24.4,27
 IIT Bombay,Metallurgical Engineering and Materials Science,i10-index,37,17.49,19.4,0,2.0,10.0,22.0,48.0,72
 IIT Bombay,Earth Sciences,h-index,29,9.17,9.67,0,2.0,6.0,12.0,18.799999999999994,40
-IIT Bombay,Earth Sciences,i10-index,29,12.72,21.81,0,0.0,4.0,12.0,37.19999999999998,93
+IIT Bombay,Earth Sciences,i10-index,29,12.76,21.84,0,0.0,4.0,12.0,37.999999999999986,93
 IIT Bombay,Energy Science and Engineering,h-index,26,13.15,8.79,0,5.25,12.0,18.0,23.0,37
 IIT Bombay,Energy Science and Engineering,i10-index,26,20.23,18.76,0,4.0,15.5,28.0,43.0,77
-IIT Bombay,IDC School of Design,h-index,20,1.4,1.57,0,0.75,1.0,2.0,2.1000000000000014,7
-IIT Bombay,IDC School of Design,i10-index,20,0.55,1.23,0,0.0,0.0,0.25,2.0,5
+IIT Bombay,IDC School of Design,h-index,19,1.42,1.61,0,0.5,1.0,2.0,2.1999999999999993,7
+IIT Bombay,IDC School of Design,i10-index,19,0.58,1.26,0,0.0,0.0,0.5,2.0,5
 IIT Bombay,Environmental Science and Engineering,h-index,16,11.19,7.98,1,4.75,9.5,16.75,22.5,24
 IIT Bombay,Environmental Science and Engineering,i10-index,16,16.0,15.53,0,4.0,9.0,29.5,35.5,49
 IIT Bombay,Centre of Studies in Resources Engineering,h-index,15,9.07,9.48,1,1.5,5.0,15.0,20.799999999999997,31
@@ -257,7 +257,7 @@ IIT Delhi,Yardi School of Artificial Intelligence,h-index,2,3.0,4.24,0,1.5,3.0,4
 IIT Delhi,Yardi School of Artificial Intelligence,i10-index,2,3.0,4.24,0,1.5,3.0,4.5,5.4,6
 IIT Dharwad,"Electrical, Electronics and Communication Engineering",h-index,22,4.05,3.44,1,1.0,3.0,6.0,8.900000000000002,12
 IIT Dharwad,"Electrical, Electronics and Communication Engineering",i10-index,22,2.73,3.71,0,0.0,1.0,3.0,8.0,12
-IIT Dharwad,"Mechanical, Materials and Aerospace Engineering",h-index,20,2.65,2.41,0,1.0,2.0,3.5,6.100000000000001,8
+IIT Dharwad,"Mechanical, Materials and Aerospace Engineering",h-index,20,2.7,2.39,0,1.0,2.0,3.5,6.100000000000001,8
 IIT Dharwad,"Mechanical, Materials and Aerospace Engineering",i10-index,20,1.75,2.36,0,0.0,1.0,2.25,6.0,7
 IIT Dharwad,Computer Science and Engineering,h-index,18,2.11,2.37,0,1.0,1.5,2.0,3.0,11
 IIT Dharwad,Computer Science and Engineering,i10-index,18,1.11,3.27,0,0.0,0.0,1.0,1.3000000000000007,14
@@ -390,7 +390,7 @@ IIT Hyderabad,,i10-index,1,2.0,,2,2.0,2.0,2.0,2.0,2
 IIT Hyderabad,Heritage Science & Technology,h-index,1,1.0,,1,1.0,1.0,1.0,1.0,1
 IIT Hyderabad,Heritage Science & Technology,i10-index,1,0.0,,0,0.0,0.0,0.0,0.0,0
 IIT Indore,Physics,h-index,24,12.79,15.14,0,2.0,6.5,22.0,29.899999999999995,61
-IIT Indore,Physics,i10-index,24,32.67,70.42,0,1.0,4.5,30.5,71.39999999999998,326
+IIT Indore,Physics,i10-index,24,32.62,70.23,0,1.0,4.5,30.5,71.39999999999998,325
 IIT Indore,Electrical Engineering,h-index,23,12.74,11.94,1,4.0,9.0,17.0,29.000000000000004,48
 IIT Indore,Electrical Engineering,i10-index,23,25.74,38.95,0,2.0,9.0,27.5,76.00000000000003,142
 IIT Indore,Computer Science and Engineering,h-index,23,6.65,6.17,0,2.0,5.0,9.5,15.8,20
@@ -443,14 +443,14 @@ IIT Jodhpur,Computer Science and Engineering,h-index,26,5.23,5.41,0,1.25,3.5,6.0
 IIT Jodhpur,Computer Science and Engineering,i10-index,26,5.31,9.85,0,0.0,2.0,4.0,20.5,32
 IIT Jodhpur,Physics,h-index,25,8.2,8.45,0,2.0,6.0,10.0,21.000000000000007,34
 IIT Jodhpur,Physics,i10-index,25,12.44,24.59,0,0.0,3.0,12.0,34.40000000000002,111
-IIT Jodhpur,Mechanical Engineering,h-index,21,8.67,8.77,0,2.0,6.0,13.0,22.0,28
-IIT Jodhpur,Mechanical Engineering,i10-index,21,12.71,18.32,0,0.0,4.0,20.0,46.0,61
+IIT Jodhpur,Mechanical Engineering,h-index,21,8.71,8.88,0,2.0,6.0,13.0,22.0,29
+IIT Jodhpur,Mechanical Engineering,i10-index,21,12.76,18.46,0,0.0,4.0,20.0,46.0,62
 IIT Jodhpur,Mathematics,h-index,21,3.05,2.97,0,1.0,2.0,4.0,8.0,11
 IIT Jodhpur,Mathematics,i10-index,21,1.86,3.18,0,0.0,1.0,2.0,4.0,13
 IIT Jodhpur,Chemistry,h-index,19,8.74,7.99,0,1.5,8.0,12.0,22.0,27
 IIT Jodhpur,Chemistry,i10-index,19,10.74,15.08,0,0.0,6.0,13.0,29.599999999999998,59
-IIT Jodhpur,Civil and Infrastructure Engineering,h-index,19,3.79,3.97,0,1.0,3.0,4.5,10.399999999999999,13
-IIT Jodhpur,Civil and Infrastructure Engineering,i10-index,19,2.74,5.04,0,0.0,0.0,2.5,11.399999999999999,16
+IIT Jodhpur,Civil and Infrastructure Engineering,h-index,19,3.74,3.84,0,1.0,3.0,4.5,10.399999999999999,12
+IIT Jodhpur,Civil and Infrastructure Engineering,i10-index,19,2.68,4.93,0,0.0,0.0,2.5,11.2,16
 IIT Jodhpur,Bioscience and Bioengineering,h-index,18,6.89,4.32,0,4.0,6.5,9.75,12.3,16
 IIT Jodhpur,Bioscience and Bioengineering,i10-index,18,6.83,6.34,0,2.25,5.0,9.75,15.500000000000004,22
 IIT Jodhpur,Materials Engineering,h-index,15,6.73,4.73,0,3.5,7.0,9.0,13.399999999999999,16
@@ -476,11 +476,11 @@ IIT Jodhpur,Energy and Automotive Engineering,i10-index,1,7.0,,7,7.0,7.0,7.0,7.0
 IIT Jodhpur,Rishabh Centre for Research and Innovation in Clean Energy,h-index,1,0.0,,0,0.0,0.0,0.0,0.0,0
 IIT Jodhpur,Rishabh Centre for Research and Innovation in Clean Energy,i10-index,1,0.0,,0,0.0,0.0,0.0,0.0,0
 IIT Kanpur,Electrical Engineering,h-index,62,9.35,9.33,0,2.0,6.0,14.0,24.699999999999996,37
-IIT Kanpur,Electrical Engineering,i10-index,62,16.39,27.56,0,0.0,4.0,21.5,52.199999999999974,136
+IIT Kanpur,Electrical Engineering,i10-index,62,16.37,27.51,0,0.0,4.0,21.5,52.199999999999974,136
 IIT Kanpur,Physics,h-index,55,8.82,7.05,0,5.0,7.0,11.0,17.0,44
 IIT Kanpur,Physics,i10-index,55,10.65,17.14,0,2.0,5.0,12.5,25.800000000000004,114
 IIT Kanpur,Mechanical Engineering,h-index,47,10.32,9.17,1,4.0,8.0,13.0,20.4,44
-IIT Kanpur,Mechanical Engineering,i10-index,47,15.23,26.13,0,1.0,6.0,16.5,35.599999999999994,124
+IIT Kanpur,Mechanical Engineering,i10-index,47,15.36,26.69,0,1.0,6.0,16.5,35.599999999999994,130
 IIT Kanpur,Civil Engineering,h-index,44,7.57,6.12,1,3.0,6.0,11.0,13.700000000000003,35
 IIT Kanpur,Civil Engineering,i10-index,44,8.77,15.07,0,1.0,5.0,11.25,14.700000000000003,95
 IIT Kanpur,Mathematics and Statistics,h-index,44,2.55,3.85,0,1.0,2.0,3.0,4.700000000000003,25
@@ -494,7 +494,7 @@ IIT Kanpur,Materials Science and Engineering,i10-index,32,17.22,23.45,0,2.5,8.5,
 IIT Kanpur,Aerospace Engineering,h-index,32,8.34,6.67,0,3.75,7.5,11.0,18.700000000000006,29
 IIT Kanpur,Aerospace Engineering,i10-index,32,10.03,12.91,0,2.0,5.5,11.0,29.50000000000001,54
 IIT Kanpur,,h-index,30,4.37,4.88,0,1.0,2.0,6.5,11.300000000000004,19
-IIT Kanpur,,i10-index,30,4.23,7.64,0,0.0,1.0,3.0,12.500000000000007,32
+IIT Kanpur,,i10-index,30,4.2,7.52,0,0.0,1.0,3.0,12.500000000000007,31
 IIT Kanpur,Chemical Engineering,h-index,27,11.56,11.74,0,3.5,7.0,17.0,31.60000000000001,41
 IIT Kanpur,Chemical Engineering,i10-index,27,18.85,27.62,0,1.0,5.0,27.0,68.00000000000006,87
 IIT Kanpur,Biological Sciences and Bioengineering,h-index,23,8.17,7.94,0,2.0,7.0,10.5,17.200000000000003,30
@@ -591,14 +591,14 @@ IIT Kharagpur,Environmental Science and Engineering,h-index,1,3.0,,3,3.0,3.0,3.0
 IIT Kharagpur,Environmental Science and Engineering,i10-index,1,2.0,,2,2.0,2.0,2.0,2.0,2
 IIT Kharagpur,Steel Technology Centre,h-index,1,2.0,,2,2.0,2.0,2.0,2.0,2
 IIT Kharagpur,Steel Technology Centre,i10-index,1,2.0,,2,2.0,2.0,2.0,2.0,2
-IIT Madras,Civil Engineering,h-index,58,9.67,7.97,0,3.0,8.5,14.0,18.300000000000004,32
-IIT Madras,Civil Engineering,i10-index,58,12.91,15.53,0,2.0,8.0,19.0,29.900000000000055,69
+IIT Madras,Civil Engineering,h-index,58,9.66,7.97,0,3.0,8.5,14.0,18.300000000000004,32
+IIT Madras,Civil Engineering,i10-index,58,12.9,15.53,0,2.0,8.0,19.0,29.900000000000055,69
 IIT Madras,Mechanical Engineering,h-index,58,9.28,6.74,1,4.0,7.0,14.0,20.300000000000004,28
 IIT Madras,Mechanical Engineering,i10-index,58,12.78,16.05,0,2.0,6.0,16.75,33.30000000000005,73
 IIT Madras,Electrical Engineering,h-index,57,7.47,5.47,0,3.0,7.0,10.0,15.0,24
 IIT Madras,Electrical Engineering,i10-index,57,8.74,13.48,0,1.0,5.0,10.0,19.0,79
-IIT Madras,,h-index,53,4.34,6.61,0,1.0,2.0,5.0,10.400000000000013,32
-IIT Madras,,i10-index,53,5.38,13.74,0,0.0,1.0,3.0,13.200000000000038,68
+IIT Madras,,h-index,53,4.32,6.59,0,1.0,2.0,5.0,10.400000000000013,32
+IIT Madras,,i10-index,53,5.36,13.72,0,0.0,1.0,3.0,12.400000000000034,68
 IIT Madras,Physics,h-index,49,11.9,8.42,1,6.0,9.0,18.0,23.0,36
 IIT Madras,Physics,i10-index,49,20.41,26.22,0,5.0,9.0,22.0,52.40000000000002,104
 IIT Madras,Mathematics,h-index,42,4.21,4.04,0,2.0,3.0,5.75,7.0,16

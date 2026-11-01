@@ -1,46 +1,46 @@
 ﻿scope,in_degree,papers
-Cluster (all 23 IITs),0,102105
-Cluster (all 23 IITs),1,37464
-Cluster (all 23 IITs),2,22596
-Cluster (all 23 IITs),3,15028
-Cluster (all 23 IITs),4,10716
-Cluster (all 23 IITs),5,7937
-Cluster (all 23 IITs),6,6081
-Cluster (all 23 IITs),7,4537
-Cluster (all 23 IITs),8,3631
-Cluster (all 23 IITs),9,2938
-Cluster (all 23 IITs),10,2186
-Cluster (all 23 IITs),11,1871
-Cluster (all 23 IITs),12,1494
-Cluster (all 23 IITs),13,1194
-Cluster (all 23 IITs),14,976
-Cluster (all 23 IITs),15,814
-Cluster (all 23 IITs),16,661
-Cluster (all 23 IITs),17,525
-Cluster (all 23 IITs),18,516
-Cluster (all 23 IITs),19,384
-Cluster (all 23 IITs),20,347
-Cluster (all 23 IITs),21,284
+Cluster (all 23 IITs),0,102045
+Cluster (all 23 IITs),1,37458
+Cluster (all 23 IITs),2,22591
+Cluster (all 23 IITs),3,15020
+Cluster (all 23 IITs),4,10721
+Cluster (all 23 IITs),5,7932
+Cluster (all 23 IITs),6,6083
+Cluster (all 23 IITs),7,4528
+Cluster (all 23 IITs),8,3634
+Cluster (all 23 IITs),9,2942
+Cluster (all 23 IITs),10,2182
+Cluster (all 23 IITs),11,1877
+Cluster (all 23 IITs),12,1488
+Cluster (all 23 IITs),13,1196
+Cluster (all 23 IITs),14,974
+Cluster (all 23 IITs),15,819
+Cluster (all 23 IITs),16,663
+Cluster (all 23 IITs),17,524
+Cluster (all 23 IITs),18,515
+Cluster (all 23 IITs),19,381
+Cluster (all 23 IITs),20,350
+Cluster (all 23 IITs),21,286
 Cluster (all 23 IITs),22,269
-Cluster (all 23 IITs),23,205
-Cluster (all 23 IITs),24,154
-Cluster (all 23 IITs),25,148
-Cluster (all 23 IITs),26,133
-Cluster (all 23 IITs),27,116
+Cluster (all 23 IITs),23,201
+Cluster (all 23 IITs),24,155
+Cluster (all 23 IITs),25,149
+Cluster (all 23 IITs),26,136
+Cluster (all 23 IITs),27,114
 Cluster (all 23 IITs),28,93
 Cluster (all 23 IITs),29,74
-Cluster (all 23 IITs),30,74
-Cluster (all 23 IITs),31,65
-Cluster (all 23 IITs),32,49
-Cluster (all 23 IITs),33,46
-Cluster (all 23 IITs),34,46
+Cluster (all 23 IITs),30,75
+Cluster (all 23 IITs),31,64
+Cluster (all 23 IITs),32,50
+Cluster (all 23 IITs),33,47
+Cluster (all 23 IITs),34,45
 Cluster (all 23 IITs),35,34
 Cluster (all 23 IITs),36,33
 Cluster (all 23 IITs),37,31
 Cluster (all 23 IITs),38,31
 Cluster (all 23 IITs),39,18
-Cluster (all 23 IITs),40,23
-Cluster (all 23 IITs),41,16
+Cluster (all 23 IITs),40,22
+Cluster (all 23 IITs),41,17
 Cluster (all 23 IITs),42,24
 Cluster (all 23 IITs),43,18
 Cluster (all 23 IITs),44,9
@@ -57,16 +57,16 @@ Cluster (all 23 IITs),54,6
 Cluster (all 23 IITs),55,4
 Cluster (all 23 IITs),56,5
 Cluster (all 23 IITs),57,3
-Cluster (all 23 IITs),58,3
+Cluster (all 23 IITs),58,2
 Cluster (all 23 IITs),59,3
-Cluster (all 23 IITs),60,3
+Cluster (all 23 IITs),60,4
 Cluster (all 23 IITs),61,2
 Cluster (all 23 IITs),62,3
 Cluster (all 23 IITs),63,3
-Cluster (all 23 IITs),64,3
+Cluster (all 23 IITs),64,2
 Cluster (all 23 IITs),65,4
 Cluster (all 23 IITs),66,3
-Cluster (all 23 IITs),67,2
+Cluster (all 23 IITs),67,3
 Cluster (all 23 IITs),68,1
 Cluster (all 23 IITs),69,2
 Cluster (all 23 IITs),70,2
@@ -82,7 +82,7 @@ Cluster (all 23 IITs),80,1
 Cluster (all 23 IITs),81,3
 Cluster (all 23 IITs),83,1
 Cluster (all 23 IITs),84,1
-Cluster (all 23 IITs),88,1
+Cluster (all 23 IITs),87,1
 Cluster (all 23 IITs),89,2
 Cluster (all 23 IITs),91,1
 Cluster (all 23 IITs),92,1
@@ -159,8 +159,8 @@ IIT Kharagpur,43,1
 IIT Kharagpur,48,1
 IIT Kharagpur,50,1
 IIT Kharagpur,56,1
-IIT Roorkee,0,10314
-IIT Roorkee,1,3405
+IIT Roorkee,0,10313
+IIT Roorkee,1,3406
 IIT Roorkee,2,1957
 IIT Roorkee,3,1253
 IIT Roorkee,4,799
@@ -226,20 +226,20 @@ IIT Ropar,23,3
 IIT Ropar,24,1
 IIT Ropar,29,1
 IIT Ropar,36,1
-IIT Bombay,0,13072
-IIT Bombay,1,4091
-IIT Bombay,2,2318
-IIT Bombay,3,1414
+IIT Bombay,0,13057
+IIT Bombay,1,4089
+IIT Bombay,2,2320
+IIT Bombay,3,1412
 IIT Bombay,4,1027
-IIT Bombay,5,716
-IIT Bombay,6,494
+IIT Bombay,5,714
+IIT Bombay,6,496
 IIT Bombay,7,368
 IIT Bombay,8,296
 IIT Bombay,9,242
 IIT Bombay,10,159
 IIT Bombay,11,123
 IIT Bombay,12,98
-IIT Bombay,13,91
+IIT Bombay,13,92
 IIT Bombay,14,67
 IIT Bombay,15,64
 IIT Bombay,16,53
@@ -282,98 +282,98 @@ IIT Bombay,75,1
 IIT Bombay,78,1
 IIT Bombay,92,1
 IIT Bombay,131,1
-IIT Madras,0,12783
-IIT Madras,1,4261
+IIT Madras,0,12760
+IIT Madras,1,4263
 IIT Madras,2,2259
-IIT Madras,3,1444
-IIT Madras,4,970
-IIT Madras,5,659
-IIT Madras,6,451
-IIT Madras,7,319
-IIT Madras,8,255
-IIT Madras,9,183
-IIT Madras,10,144
+IIT Madras,3,1438
+IIT Madras,4,986
+IIT Madras,5,656
+IIT Madras,6,456
+IIT Madras,7,316
+IIT Madras,8,252
+IIT Madras,9,186
+IIT Madras,10,145
 IIT Madras,11,93
 IIT Madras,12,92
-IIT Madras,13,56
-IIT Madras,14,55
+IIT Madras,13,54
+IIT Madras,14,56
 IIT Madras,15,50
-IIT Madras,16,26
+IIT Madras,16,28
 IIT Madras,17,34
-IIT Madras,18,29
-IIT Madras,19,11
-IIT Madras,20,11
-IIT Madras,21,12
+IIT Madras,18,28
+IIT Madras,19,12
+IIT Madras,20,10
+IIT Madras,21,13
 IIT Madras,22,5
-IIT Madras,23,8
-IIT Madras,24,8
+IIT Madras,23,7
+IIT Madras,24,9
 IIT Madras,25,8
 IIT Madras,26,2
 IIT Madras,27,1
-IIT Madras,28,3
-IIT Madras,29,1
+IIT Madras,28,2
+IIT Madras,29,2
 IIT Madras,30,5
-IIT Madras,31,4
-IIT Madras,32,2
-IIT Madras,33,1
-IIT Madras,34,1
-IIT Madras,35,4
+IIT Madras,31,3
+IIT Madras,32,3
+IIT Madras,34,2
+IIT Madras,35,3
 IIT Madras,36,3
-IIT Madras,38,3
+IIT Madras,38,4
 IIT Madras,39,2
 IIT Madras,40,2
-IIT Madras,42,1
-IIT Madras,43,2
+IIT Madras,43,3
 IIT Madras,47,1
 IIT Madras,48,1
 IIT Madras,54,2
 IIT Madras,55,1
-IIT Madras,58,1
-IIT Madras,59,2
+IIT Madras,59,1
 IIT Madras,60,2
-IIT Madras,67,2
+IIT Madras,61,1
+IIT Madras,62,1
+IIT Madras,67,1
+IIT Madras,69,1
 IIT Madras,78,1
-IIT Madras,87,1
 IIT Madras,88,1
-IIT Madras,96,1
+IIT Madras,90,1
+IIT Madras,97,1
 IIT Madras,101,1
-IIT Madras,117,1
-IIT Madras,124,1
-IIT Madras,148,1
-IIT Madras,190,1
-IIT Madras,191,1
-IIT Madras,193,1
-IIT Madras,228,1
+IIT Madras,121,1
+IIT Madras,128,1
+IIT Madras,151,1
+IIT Madras,195,1
+IIT Madras,197,1
+IIT Madras,198,1
+IIT Madras,232,1
 IIT Madras,260,1
-IIT Madras,313,1
-IIT Madras,360,1
-IIT Madras,573,1
-IIT Kanpur,0,9216
-IIT Kanpur,1,2927
-IIT Kanpur,2,1626
+IIT Madras,317,1
+IIT Madras,366,1
+IIT Madras,582,1
+IIT Kanpur,0,9202
+IIT Kanpur,1,2925
+IIT Kanpur,2,1624
 IIT Kanpur,3,1030
-IIT Kanpur,4,692
-IIT Kanpur,5,479
-IIT Kanpur,6,378
-IIT Kanpur,7,293
-IIT Kanpur,8,236
-IIT Kanpur,9,145
-IIT Kanpur,10,119
-IIT Kanpur,11,98
-IIT Kanpur,12,85
-IIT Kanpur,13,51
+IIT Kanpur,4,694
+IIT Kanpur,5,478
+IIT Kanpur,6,380
+IIT Kanpur,7,290
+IIT Kanpur,8,238
+IIT Kanpur,9,144
+IIT Kanpur,10,120
+IIT Kanpur,11,96
+IIT Kanpur,12,84
+IIT Kanpur,13,53
 IIT Kanpur,14,44
-IIT Kanpur,15,33
+IIT Kanpur,15,35
 IIT Kanpur,16,30
-IIT Kanpur,17,13
+IIT Kanpur,17,12
 IIT Kanpur,18,21
-IIT Kanpur,19,21
+IIT Kanpur,19,20
 IIT Kanpur,20,22
-IIT Kanpur,21,11
-IIT Kanpur,22,12
+IIT Kanpur,21,12
+IIT Kanpur,22,11
 IIT Kanpur,23,5
-IIT Kanpur,24,7
-IIT Kanpur,25,4
+IIT Kanpur,24,9
+IIT Kanpur,25,5
 IIT Kanpur,26,6
 IIT Kanpur,27,6
 IIT Kanpur,28,2
@@ -387,10 +387,9 @@ IIT Kanpur,35,3
 IIT Kanpur,37,2
 IIT Kanpur,39,2
 IIT Kanpur,40,1
-IIT Kanpur,44,1
 IIT Kanpur,45,1
-IIT Kanpur,52,1
-IIT Kanpur,55,1
+IIT Kanpur,46,1
+IIT Kanpur,55,2
 IIT Goa,0,531
 IIT Goa,1,124
 IIT Goa,2,84
@@ -422,14 +421,14 @@ IIT Tirupati,11,1
 IIT Tirupati,13,1
 IIT Tirupati,14,1
 IIT Tirupati,16,1
-IIT Patna,0,3102
+IIT Patna,0,3097
 IIT Patna,1,1040
-IIT Patna,2,603
-IIT Patna,3,412
-IIT Patna,4,307
-IIT Patna,5,210
+IIT Patna,2,604
+IIT Patna,3,413
+IIT Patna,4,304
+IIT Patna,5,211
 IIT Patna,6,154
-IIT Patna,7,116
+IIT Patna,7,115
 IIT Patna,8,98
 IIT Patna,9,74
 IIT Patna,10,70
@@ -478,25 +477,25 @@ IIT Palakkad,26,4
 IIT Palakkad,28,2
 IIT Palakkad,29,1
 IIT Palakkad,36,1
-IIT Guwahati,0,8610
-IIT Guwahati,1,2935
-IIT Guwahati,2,1783
+IIT Guwahati,0,8611
+IIT Guwahati,1,2936
+IIT Guwahati,2,1781
 IIT Guwahati,3,1209
-IIT Guwahati,4,763
-IIT Guwahati,5,606
-IIT Guwahati,6,412
-IIT Guwahati,7,332
-IIT Guwahati,8,251
-IIT Guwahati,9,209
+IIT Guwahati,4,764
+IIT Guwahati,5,603
+IIT Guwahati,6,413
+IIT Guwahati,7,331
+IIT Guwahati,8,254
+IIT Guwahati,9,208
 IIT Guwahati,10,151
-IIT Guwahati,11,125
+IIT Guwahati,11,126
 IIT Guwahati,12,98
-IIT Guwahati,13,87
-IIT Guwahati,14,69
-IIT Guwahati,15,55
-IIT Guwahati,16,41
-IIT Guwahati,17,42
-IIT Guwahati,18,37
+IIT Guwahati,13,86
+IIT Guwahati,14,70
+IIT Guwahati,15,54
+IIT Guwahati,16,43
+IIT Guwahati,17,41
+IIT Guwahati,18,36
 IIT Guwahati,19,19
 IIT Guwahati,20,24
 IIT Guwahati,21,18
@@ -517,25 +516,25 @@ IIT Guwahati,38,1
 IIT Guwahati,40,1
 IIT Guwahati,41,2
 IIT Guwahati,44,1
-IIT Hyderabad,0,5129
-IIT Hyderabad,1,1673
-IIT Hyderabad,2,906
-IIT Hyderabad,3,569
+IIT Hyderabad,0,5131
+IIT Hyderabad,1,1671
+IIT Hyderabad,2,904
+IIT Hyderabad,3,571
 IIT Hyderabad,4,382
-IIT Hyderabad,5,286
-IIT Hyderabad,6,235
-IIT Hyderabad,7,153
+IIT Hyderabad,5,285
+IIT Hyderabad,6,236
+IIT Hyderabad,7,152
 IIT Hyderabad,8,137
 IIT Hyderabad,9,96
 IIT Hyderabad,10,61
-IIT Hyderabad,11,67
-IIT Hyderabad,12,60
-IIT Hyderabad,13,34
-IIT Hyderabad,14,34
-IIT Hyderabad,15,27
-IIT Hyderabad,16,15
+IIT Hyderabad,11,68
+IIT Hyderabad,12,59
+IIT Hyderabad,13,35
+IIT Hyderabad,14,35
+IIT Hyderabad,15,25
+IIT Hyderabad,16,16
 IIT Hyderabad,17,14
-IIT Hyderabad,18,16
+IIT Hyderabad,18,15
 IIT Hyderabad,19,17
 IIT Hyderabad,20,7
 IIT Hyderabad,21,10
@@ -563,58 +562,58 @@ IIT Hyderabad,75,1
 IIT Hyderabad,77,1
 IIT Hyderabad,89,2
 IIT Hyderabad,94,1
-IIT Bhubaneswar,0,2672
-IIT Bhubaneswar,1,874
-IIT Bhubaneswar,2,531
-IIT Bhubaneswar,3,320
-IIT Bhubaneswar,4,223
+IIT Bhubaneswar,0,2685
+IIT Bhubaneswar,1,876
+IIT Bhubaneswar,2,530
+IIT Bhubaneswar,3,316
+IIT Bhubaneswar,4,219
 IIT Bhubaneswar,5,169
-IIT Bhubaneswar,6,107
-IIT Bhubaneswar,7,82
-IIT Bhubaneswar,8,70
+IIT Bhubaneswar,6,103
+IIT Bhubaneswar,7,85
+IIT Bhubaneswar,8,65
 IIT Bhubaneswar,9,64
-IIT Bhubaneswar,10,48
+IIT Bhubaneswar,10,49
 IIT Bhubaneswar,11,21
 IIT Bhubaneswar,12,23
-IIT Bhubaneswar,13,20
+IIT Bhubaneswar,13,21
 IIT Bhubaneswar,14,20
 IIT Bhubaneswar,15,11
-IIT Bhubaneswar,16,10
+IIT Bhubaneswar,16,9
 IIT Bhubaneswar,17,8
 IIT Bhubaneswar,18,8
-IIT Bhubaneswar,19,3
+IIT Bhubaneswar,19,2
 IIT Bhubaneswar,20,4
-IIT Bhubaneswar,22,2
-IIT Bhubaneswar,23,3
+IIT Bhubaneswar,22,3
+IIT Bhubaneswar,23,2
 IIT Bhubaneswar,25,2
+IIT Bhubaneswar,26,1
 IIT Bhubaneswar,27,1
-IIT Bhubaneswar,28,1
 IIT Bhubaneswar,30,1
 IIT Bhubaneswar,31,1
-IIT Bhubaneswar,35,1
-IIT Bhubaneswar,36,2
+IIT Bhubaneswar,34,2
+IIT Bhubaneswar,36,1
 IIT Bhubaneswar,37,2
-IIT Bhubaneswar,61,1
-IIT Bhubaneswar,68,1
-IIT Bhubaneswar,84,1
+IIT Bhubaneswar,58,1
+IIT Bhubaneswar,67,1
+IIT Bhubaneswar,82,1
 IIT Bhubaneswar,92,1
-IIT Bhubaneswar,117,1
-IIT Bhubaneswar,130,1
-IIT Bhubaneswar,153,1
+IIT Bhubaneswar,113,1
+IIT Bhubaneswar,126,1
+IIT Bhubaneswar,150,1
+IIT Bhubaneswar,180,1
 IIT Bhubaneswar,184,1
-IIT Bhubaneswar,189,1
-IIT Bhubaneswar,191,1
-IIT Bhubaneswar,196,1
-IIT Bhubaneswar,227,1
-IIT Bhubaneswar,306,1
-IIT Bhubaneswar,357,1
-IIT Bhubaneswar,562,1
-IIT (BHU) Varanasi,0,5915
+IIT Bhubaneswar,187,1
+IIT Bhubaneswar,190,1
+IIT Bhubaneswar,223,1
+IIT Bhubaneswar,301,1
+IIT Bhubaneswar,352,1
+IIT Bhubaneswar,552,1
+IIT (BHU) Varanasi,0,5914
 IIT (BHU) Varanasi,1,1905
-IIT (BHU) Varanasi,2,1119
-IIT (BHU) Varanasi,3,743
-IIT (BHU) Varanasi,4,488
-IIT (BHU) Varanasi,5,396
+IIT (BHU) Varanasi,2,1121
+IIT (BHU) Varanasi,3,741
+IIT (BHU) Varanasi,4,490
+IIT (BHU) Varanasi,5,394
 IIT (BHU) Varanasi,6,247
 IIT (BHU) Varanasi,7,181
 IIT (BHU) Varanasi,8,143
@@ -623,8 +622,8 @@ IIT (BHU) Varanasi,10,91
 IIT (BHU) Varanasi,11,74
 IIT (BHU) Varanasi,12,49
 IIT (BHU) Varanasi,13,37
-IIT (BHU) Varanasi,14,36
-IIT (BHU) Varanasi,15,25
+IIT (BHU) Varanasi,14,37
+IIT (BHU) Varanasi,15,24
 IIT (BHU) Varanasi,16,18
 IIT (BHU) Varanasi,17,21
 IIT (BHU) Varanasi,18,15
@@ -645,7 +644,7 @@ IIT (BHU) Varanasi,33,1
 IIT (BHU) Varanasi,34,2
 IIT (BHU) Varanasi,35,1
 IIT (BHU) Varanasi,41,1
-IIT Gandhinagar,0,2861
+IIT Gandhinagar,0,2859
 IIT Gandhinagar,1,804
 IIT Gandhinagar,2,441
 IIT Gandhinagar,3,255
@@ -698,12 +697,12 @@ IIT Gandhinagar,71,1
 IIT Gandhinagar,74,1
 IIT Gandhinagar,103,1
 IIT Gandhinagar,140,1
-IIT Indore,0,4025
+IIT Indore,0,4015
 IIT Indore,1,1297
-IIT Indore,2,782
+IIT Indore,2,781
 IIT Indore,3,545
-IIT Indore,4,412
-IIT Indore,5,336
+IIT Indore,4,410
+IIT Indore,5,337
 IIT Indore,6,271
 IIT Indore,7,197
 IIT Indore,8,185
@@ -717,9 +716,9 @@ IIT Indore,15,47
 IIT Indore,16,46
 IIT Indore,17,35
 IIT Indore,18,33
-IIT Indore,19,25
+IIT Indore,19,24
 IIT Indore,20,30
-IIT Indore,21,21
+IIT Indore,21,22
 IIT Indore,22,16
 IIT Indore,23,19
 IIT Indore,24,15
@@ -745,10 +744,10 @@ IIT Indore,56,1
 IIT Indore,61,1
 IIT Indore,106,1
 IIT Mandi,0,2689
-IIT Mandi,1,808
+IIT Mandi,1,807
 IIT Mandi,2,468
 IIT Mandi,3,286
-IIT Mandi,4,202
+IIT Mandi,4,201
 IIT Mandi,5,134
 IIT Mandi,6,102
 IIT Mandi,7,80
@@ -818,23 +817,23 @@ IIT Delhi,41,1
 IIT Delhi,42,1
 IIT Delhi,53,1
 IIT Delhi,91,1
-IIT (ISM) Dhanbad,0,6238
-IIT (ISM) Dhanbad,1,2105
-IIT (ISM) Dhanbad,2,1201
+IIT (ISM) Dhanbad,0,6228
+IIT (ISM) Dhanbad,1,2104
+IIT (ISM) Dhanbad,2,1199
 IIT (ISM) Dhanbad,3,810
-IIT (ISM) Dhanbad,4,513
+IIT (ISM) Dhanbad,4,512
 IIT (ISM) Dhanbad,5,366
-IIT (ISM) Dhanbad,6,274
+IIT (ISM) Dhanbad,6,273
 IIT (ISM) Dhanbad,7,203
-IIT (ISM) Dhanbad,8,151
-IIT (ISM) Dhanbad,9,104
+IIT (ISM) Dhanbad,8,152
+IIT (ISM) Dhanbad,9,103
 IIT (ISM) Dhanbad,10,83
 IIT (ISM) Dhanbad,11,53
 IIT (ISM) Dhanbad,12,46
 IIT (ISM) Dhanbad,13,50
 IIT (ISM) Dhanbad,14,22
-IIT (ISM) Dhanbad,15,17
-IIT (ISM) Dhanbad,16,17
+IIT (ISM) Dhanbad,15,18
+IIT (ISM) Dhanbad,16,16
 IIT (ISM) Dhanbad,17,17
 IIT (ISM) Dhanbad,18,8
 IIT (ISM) Dhanbad,19,11
@@ -847,16 +846,15 @@ IIT (ISM) Dhanbad,25,2
 IIT (ISM) Dhanbad,26,2
 IIT (ISM) Dhanbad,27,1
 IIT (ISM) Dhanbad,28,1
-IIT (ISM) Dhanbad,29,1
-IIT (ISM) Dhanbad,30,1
+IIT (ISM) Dhanbad,29,2
 IIT Jodhpur,0,3338
-IIT Jodhpur,1,842
-IIT Jodhpur,2,418
-IIT Jodhpur,3,261
-IIT Jodhpur,4,192
+IIT Jodhpur,1,839
+IIT Jodhpur,2,419
+IIT Jodhpur,3,260
+IIT Jodhpur,4,193
 IIT Jodhpur,5,109
-IIT Jodhpur,6,82
-IIT Jodhpur,7,82
+IIT Jodhpur,6,81
+IIT Jodhpur,7,83
 IIT Jodhpur,8,57
 IIT Jodhpur,9,40
 IIT Jodhpur,10,43
@@ -871,13 +869,13 @@ IIT Jodhpur,18,1
 IIT Jodhpur,19,3
 IIT Jodhpur,20,9
 IIT Jodhpur,21,2
-IIT Jodhpur,22,2
-IIT Jodhpur,23,7
+IIT Jodhpur,22,3
+IIT Jodhpur,23,6
 IIT Jodhpur,24,2
 IIT Jodhpur,25,3
 IIT Jodhpur,26,5
-IIT Jodhpur,27,1
-IIT Jodhpur,28,2
+IIT Jodhpur,27,2
+IIT Jodhpur,28,1
 IIT Jodhpur,31,2
 IIT Jodhpur,33,1
 IIT Jodhpur,37,1
@@ -904,7 +902,7 @@ IIT Jammu,17,1
 IIT Jammu,18,1
 IIT Jammu,20,1
 IIT Jammu,21,1
-IIT Bhilai,0,838
+IIT Bhilai,0,840
 IIT Bhilai,1,224
 IIT Bhilai,2,114
 IIT Bhilai,3,61
@@ -920,7 +918,7 @@ IIT Bhilai,12,5
 IIT Bhilai,17,1
 IIT Bhilai,20,1
 IIT Bhilai,22,3
-IIT Dharwad,0,743
+IIT Dharwad,0,744
 IIT Dharwad,1,162
 IIT Dharwad,2,75
 IIT Dharwad,3,51

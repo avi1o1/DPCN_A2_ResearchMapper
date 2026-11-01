@@ -99,54 +99,54 @@ IIT Ropar,department,Electrical Engineering,4,0.0133
 IIT Ropar,department,Physics,4,0.0133
 IIT Ropar,department,Biomedical Engineering,3,0.01
 IIT Ropar,total,Environmental Science,301,0.0539
-IIT Bombay,subfield,Environmental Engineering,454,0.2349
-IIT Bombay,subfield,Global and Planetary Change,452,0.2338
-IIT Bombay,subfield,Water Science and Technology,393,0.2033
-IIT Bombay,subfield,Pollution,144,0.0745
-IIT Bombay,subfield,Waste Management and Disposal,143,0.074
-IIT Bombay,subfield,Ecology,132,0.0683
-IIT Bombay,subfield,"Health, Toxicology and Mutagenesis",91,0.0471
-IIT Bombay,subfield,Environmental Chemistry,60,0.031
-IIT Bombay,subfield,"Management, Monitoring, Policy and Law",54,0.0279
+IIT Bombay,subfield,Global and Planetary Change,452,0.2342
+IIT Bombay,subfield,Environmental Engineering,452,0.2342
+IIT Bombay,subfield,Water Science and Technology,392,0.2031
+IIT Bombay,subfield,Pollution,144,0.0746
+IIT Bombay,subfield,Waste Management and Disposal,143,0.0741
+IIT Bombay,subfield,Ecology,132,0.0684
+IIT Bombay,subfield,"Health, Toxicology and Mutagenesis",91,0.0472
+IIT Bombay,subfield,Environmental Chemistry,60,0.0311
+IIT Bombay,subfield,"Management, Monitoring, Policy and Law",54,0.028
 IIT Bombay,subfield,Ecological Modeling,8,0.0041
 IIT Bombay,subfield,Nature and Landscape Conservation,2,0.001
-IIT Bombay,topic,Climate variability and models,157,0.0812
-IIT Bombay,topic,Hydrology and Watershed Management Studies,133,0.0688
-IIT Bombay,topic,Flood Risk Assessment and Management,91,0.0471
-IIT Bombay,topic,Soil Moisture and Remote Sensing,82,0.0424
+IIT Bombay,topic,Climate variability and models,157,0.0813
+IIT Bombay,topic,Hydrology and Watershed Management Studies,133,0.0689
+IIT Bombay,topic,Flood Risk Assessment and Management,91,0.0472
+IIT Bombay,topic,Soil Moisture and Remote Sensing,82,0.0425
 IIT Bombay,topic,Membrane Separation Technologies,79,0.0409
-IIT Bombay,topic,Remote Sensing in Agriculture,66,0.0341
-IIT Bombay,topic,Advanced oxidation water treatment,65,0.0336
-IIT Bombay,topic,CO2 Sequestration and Geologic Interactions,58,0.03
+IIT Bombay,topic,Remote Sensing in Agriculture,66,0.0342
+IIT Bombay,topic,Advanced oxidation water treatment,65,0.0337
+IIT Bombay,topic,CO2 Sequestration and Geologic Interactions,58,0.0301
 IIT Bombay,topic,Hydrology and Drought Analysis,57,0.0295
-IIT Bombay,topic,Groundwater flow and contamination studies,53,0.0274
-IIT Bombay,department,Civil Engineering,590,0.3052
-IIT Bombay,department,(no faculty identified),442,0.2287
-IIT Bombay,department,Environmental Science and Engineering,331,0.1712
-IIT Bombay,department,Centre of Studies in Resources Engineering,118,0.061
-IIT Bombay,department,Chemical Engineering,115,0.0595
+IIT Bombay,topic,Groundwater flow and contamination studies,53,0.0275
+IIT Bombay,department,Civil Engineering,588,0.3047
+IIT Bombay,department,(no faculty identified),442,0.229
+IIT Bombay,department,Environmental Science and Engineering,331,0.1715
+IIT Bombay,department,Centre of Studies in Resources Engineering,118,0.0611
+IIT Bombay,department,Chemical Engineering,115,0.0596
 IIT Bombay,department,Earth Sciences,85,0.044
 IIT Bombay,department,Biosciences and Bioengineering,61,0.0316
-IIT Bombay,department,Energy Science and Engineering,54,0.0279
+IIT Bombay,department,Energy Science and Engineering,54,0.028
 IIT Bombay,department,Centre for Climate Studies,44,0.0228
 IIT Bombay,department,Metallurgical Engineering and Materials Science,33,0.0171
 IIT Bombay,department,Centre for Urban Science and Engineering,28,0.0145
 IIT Bombay,department,Ashank Desai Centre for Policy Studies,27,0.014
-IIT Bombay,total,Environmental Science,1933,0.0774
-IIT Madras,subfield,Water Science and Technology,252,0.2069
-IIT Madras,subfield,Environmental Engineering,218,0.179
-IIT Madras,subfield,Environmental Chemistry,182,0.1494
-IIT Madras,subfield,Global and Planetary Change,176,0.1445
-IIT Madras,subfield,Pollution,130,0.1067
-IIT Madras,subfield,Waste Management and Disposal,82,0.0673
+IIT Bombay,total,Environmental Science,1930,0.0773
+IIT Madras,subfield,Water Science and Technology,252,0.2071
+IIT Madras,subfield,Environmental Engineering,218,0.1791
+IIT Madras,subfield,Environmental Chemistry,182,0.1495
+IIT Madras,subfield,Global and Planetary Change,175,0.1438
+IIT Madras,subfield,Pollution,130,0.1068
+IIT Madras,subfield,Waste Management and Disposal,82,0.0674
 IIT Madras,subfield,"Health, Toxicology and Mutagenesis",76,0.0624
 IIT Madras,subfield,Ecology,53,0.0435
 IIT Madras,subfield,Ecological Modeling,32,0.0263
 IIT Madras,subfield,"Management, Monitoring, Policy and Law",10,0.0082
-IIT Madras,subfield,Nature and Landscape Conservation,7,0.0057
-IIT Madras,topic,Methane Hydrates and Related Phenomena,142,0.1166
+IIT Madras,subfield,Nature and Landscape Conservation,7,0.0058
+IIT Madras,topic,Methane Hydrates and Related Phenomena,142,0.1167
 IIT Madras,topic,Adsorption and biosorption for pollutant removal,85,0.0698
-IIT Madras,topic,Advanced oxidation water treatment,81,0.0665
+IIT Madras,topic,Advanced oxidation water treatment,81,0.0666
 IIT Madras,topic,Groundwater flow and contamination studies,53,0.0435
 IIT Madras,topic,Atmospheric aerosols and clouds,53,0.0435
 IIT Madras,topic,CO2 Sequestration and Geologic Interactions,42,0.0345
@@ -154,9 +154,9 @@ IIT Madras,topic,Climate variability and models,37,0.0304
 IIT Madras,topic,Pharmaceutical and Antibiotic Environmental Impacts,33,0.0271
 IIT Madras,topic,Erosion and Abrasive Machining,32,0.0263
 IIT Madras,topic,Air Quality and Health Impacts,29,0.0238
-IIT Madras,department,Civil Engineering,471,0.3867
-IIT Madras,department,(no faculty identified),366,0.3005
-IIT Madras,department,Chemical Engineering,179,0.147
+IIT Madras,department,Civil Engineering,471,0.387
+IIT Madras,department,(no faculty identified),365,0.2999
+IIT Madras,department,Chemical Engineering,179,0.1471
 IIT Madras,department,Ocean Engineering,62,0.0509
 IIT Madras,department,Chemistry,55,0.0452
 IIT Madras,department,Applied Mechanics and Biomedical Engineering,36,0.0296
@@ -166,7 +166,7 @@ IIT Madras,department,Mechanical Engineering,24,0.0197
 IIT Madras,department,Metallurgical and Materials Engineering,17,0.014
 IIT Madras,department,Electrical Engineering,15,0.0123
 IIT Madras,department,,9,0.0074
-IIT Madras,total,Environmental Science,1218,0.0501
+IIT Madras,total,Environmental Science,1217,0.0501
 IIT Kanpur,subfield,Environmental Engineering,158,0.228
 IIT Kanpur,subfield,Water Science and Technology,152,0.2193
 IIT Kanpur,subfield,Global and Planetary Change,105,0.1515
@@ -493,7 +493,7 @@ IIT Indore,department,Computer Science and Engineering,4,0.011
 IIT Indore,department,Physics,2,0.0055
 IIT Indore,department,Mathematics,1,0.0027
 IIT Indore,department,,1,0.0027
-IIT Indore,total,Environmental Science,365,0.0407
+IIT Indore,total,Environmental Science,365,0.0408
 IIT Mandi,subfield,"Management, Monitoring, Policy and Law",82,0.2908
 IIT Mandi,subfield,Water Science and Technology,53,0.1879
 IIT Mandi,subfield,Environmental Engineering,46,0.1631
@@ -560,40 +560,40 @@ IIT Delhi,department,Materials Science and Engineering,24,0.0146
 IIT Delhi,department,Mechanical Engineering,23,0.014
 IIT Delhi,department,Applied Mechanics,18,0.0109
 IIT Delhi,total,Environmental Science,1644,0.0659
-IIT (ISM) Dhanbad,subfield,Water Science and Technology,302,0.2758
-IIT (ISM) Dhanbad,subfield,Environmental Engineering,203,0.1854
-IIT (ISM) Dhanbad,subfield,Pollution,141,0.1288
-IIT (ISM) Dhanbad,subfield,Environmental Chemistry,86,0.0785
+IIT (ISM) Dhanbad,subfield,Water Science and Technology,302,0.2761
+IIT (ISM) Dhanbad,subfield,Environmental Engineering,203,0.1856
+IIT (ISM) Dhanbad,subfield,Pollution,141,0.1289
+IIT (ISM) Dhanbad,subfield,Environmental Chemistry,86,0.0786
 IIT (ISM) Dhanbad,subfield,"Health, Toxicology and Mutagenesis",74,0.0676
 IIT (ISM) Dhanbad,subfield,Ecological Modeling,67,0.0612
 IIT (ISM) Dhanbad,subfield,Global and Planetary Change,65,0.0594
-IIT (ISM) Dhanbad,subfield,Waste Management and Disposal,62,0.0566
+IIT (ISM) Dhanbad,subfield,Waste Management and Disposal,62,0.0567
 IIT (ISM) Dhanbad,subfield,"Management, Monitoring, Policy and Law",52,0.0475
 IIT (ISM) Dhanbad,subfield,Ecology,34,0.0311
-IIT (ISM) Dhanbad,subfield,Nature and Landscape Conservation,9,0.0082
-IIT (ISM) Dhanbad,topic,Heavy metals in environment,97,0.0886
+IIT (ISM) Dhanbad,subfield,Nature and Landscape Conservation,8,0.0073
+IIT (ISM) Dhanbad,topic,Heavy metals in environment,97,0.0887
 IIT (ISM) Dhanbad,topic,Water Quality and Pollution Assessment,73,0.0667
 IIT (ISM) Dhanbad,topic,Adsorption and biosorption for pollutant removal,67,0.0612
 IIT (ISM) Dhanbad,topic,Erosion and Abrasive Machining,66,0.0603
 IIT (ISM) Dhanbad,topic,Methane Hydrates and Related Phenomena,50,0.0457
 IIT (ISM) Dhanbad,topic,Groundwater flow and contamination studies,44,0.0402
-IIT (ISM) Dhanbad,topic,Landslides and related hazards,40,0.0365
+IIT (ISM) Dhanbad,topic,Landslides and related hazards,40,0.0366
 IIT (ISM) Dhanbad,topic,Minerals Flotation and Separation Techniques,38,0.0347
 IIT (ISM) Dhanbad,topic,Coagulation and Flocculation Studies,37,0.0338
 IIT (ISM) Dhanbad,topic,Groundwater and Watershed Analysis,34,0.0311
-IIT (ISM) Dhanbad,department,Environmental Science and Engineering,456,0.4164
-IIT (ISM) Dhanbad,department,(no faculty identified),177,0.1616
-IIT (ISM) Dhanbad,department,Civil Engineering,101,0.0922
-IIT (ISM) Dhanbad,department,Petroleum Engineering,68,0.0621
-IIT (ISM) Dhanbad,department,Applied Geology,61,0.0557
+IIT (ISM) Dhanbad,department,Environmental Science and Engineering,456,0.4168
+IIT (ISM) Dhanbad,department,(no faculty identified),176,0.1609
+IIT (ISM) Dhanbad,department,Civil Engineering,101,0.0923
+IIT (ISM) Dhanbad,department,Petroleum Engineering,68,0.0622
+IIT (ISM) Dhanbad,department,Applied Geology,61,0.0558
 IIT (ISM) Dhanbad,department,Mechanical Engineering,57,0.0521
 IIT (ISM) Dhanbad,department,"Fuel, Minerals and Metallurgical Engineering",51,0.0466
 IIT (ISM) Dhanbad,department,Mathematics & Computing,35,0.032
 IIT (ISM) Dhanbad,department,Chemical Engineering,34,0.0311
-IIT (ISM) Dhanbad,department,Chemistry and Chemical Biology,33,0.0301
-IIT (ISM) Dhanbad,department,Mining Engineering,32,0.0292
-IIT (ISM) Dhanbad,department,Applied Geophysics,25,0.0228
-IIT (ISM) Dhanbad,total,Environmental Science,1095,0.0889
+IIT (ISM) Dhanbad,department,Chemistry and Chemical Biology,33,0.0302
+IIT (ISM) Dhanbad,department,Mining Engineering,32,0.0293
+IIT (ISM) Dhanbad,department,Applied Geophysics,25,0.0229
+IIT (ISM) Dhanbad,total,Environmental Science,1094,0.089
 IIT Jodhpur,subfield,Water Science and Technology,52,0.2694
 IIT Jodhpur,subfield,Environmental Engineering,40,0.2073
 IIT Jodhpur,subfield,Ecology,33,0.171

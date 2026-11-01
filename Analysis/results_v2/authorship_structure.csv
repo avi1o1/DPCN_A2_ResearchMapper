@@ -1,19 +1,19 @@
 ﻿metric,value
-"NMI(Louvain communities, departments)",0.5916
-"NMI, faculty with >= 1 faculty tie",0.5231
-"ARI(Louvain communities, departments)",0.0762
-share of ties inside one department,0.3914
-department assortativity,0.4466
-institute assortativity,0.7392
+"NMI(Louvain communities, departments)",0.5931
+"NMI, faculty with >= 1 faculty tie",0.525
+"ARI(Louvain communities, departments)",0.0805
+share of ties inside one department,0.3922
+department assortativity,0.4472
+institute assortativity,0.7416
 maximum k-core,8
 faculty in the maximum k-core,18
-"clustering spectrum exponent beta, C(k) ~ k^-beta",0.5618
-small-world sigma = (C/C_ER) / (L/L_ER),421.6131
-"f_50, random: share removed until the largest component halves",0.3958
+"clustering spectrum exponent beta, C(k) ~ k^-beta",0.5611
+small-world sigma = (C/C_ER) / (L/L_ER),421.8158
+"f_50, random: share removed until the largest component halves",0.4083
 "f_50, degree (adaptive): share removed until the largest component halves",0.1361
-"f_50, betweenness (adaptive): share removed until the largest component halves",0.1361
-Molloy-Reed kappa = <k^2>/<k>,9.2565
-mean-field random-failure threshold 1 - 1/(kappa-1),0.8789
-mean-field epidemic threshold T_c = <k>/(<k^2>-<k>),0.1211
-"densification exponent a, ties ~ faculty^a",1.7209
+"f_50, betweenness (adaptive): share removed until the largest component halves",0.1485
+Molloy-Reed kappa = <k^2>/<k>,9.2521
+mean-field random-failure threshold 1 - 1/(kappa-1),0.8788
+mean-field epidemic threshold T_c = <k>/(<k^2>-<k>),0.1212
+"densification exponent a, ties ~ faculty^a",1.7196
 "median distinct co-authors per faculty (everyone, not only faculty)",24.0

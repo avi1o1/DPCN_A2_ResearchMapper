@@ -1,16 +1,16 @@
 ﻿field,papers,citations_given,share_to_same_field,expected_share_if_random,most_cited_other_field
-Engineering,90843,205767,0.852,0.403,Materials Science
-Computer Science,26206,32234,0.837,0.116,Engineering
-Materials Science,25609,76324,0.718,0.114,Engineering
-Physics and Astronomy,18585,61611,0.917,0.083,Engineering
-Environmental Science,16325,48835,0.762,0.072,Engineering
-Chemistry,11474,37203,0.803,0.051,Materials Science
-"Biochemistry, Genetics and Molecular Biology",8596,16847,0.684,0.038,Materials Science
-Energy,6589,20027,0.622,0.029,Engineering
-Mathematics,5651,8348,0.871,0.025,Engineering
-Earth and Planetary Sciences,5595,16355,0.749,0.025,Environmental Science
-Agricultural and Biological Sciences,3688,6446,0.539,0.016,Environmental Science
+Engineering,90799,205750,0.852,0.403,Materials Science
+Computer Science,26184,32213,0.837,0.116,Engineering
+Materials Science,25601,76318,0.718,0.114,Engineering
+Physics and Astronomy,18567,61591,0.917,0.082,Engineering
+Environmental Science,16321,48835,0.762,0.072,Engineering
+Chemistry,11473,37203,0.803,0.051,Materials Science
+"Biochemistry, Genetics and Molecular Biology",8593,16843,0.684,0.038,Materials Science
+Energy,6586,20010,0.622,0.029,Engineering
+Mathematics,5642,8345,0.872,0.025,Engineering
+Earth and Planetary Sciences,5593,16353,0.749,0.025,Environmental Science
+Agricultural and Biological Sciences,3688,6445,0.539,0.016,Environmental Science
 Chemical Engineering,2754,9154,0.645,0.012,Engineering
-Neuroscience,2069,2899,0.781,0.009,Computer Science
+Neuroscience,2068,2899,0.781,0.009,Computer Science
 "Pharmacology, Toxicology and Pharmaceutics",684,1454,0.34,0.003,Chemistry
 Immunology and Microbiology,592,945,0.521,0.003,"Biochemistry, Genetics and Molecular Biology"

@@ -73,42 +73,42 @@ IIT Ropar,all years,Mathematics,31,1,3,0,0,4,0.129
 IIT Ropar,all years,Civil Engineering,30,0,0,0,10,10,0.3333
 IIT Ropar,all years,Artificial Intelligence and Data Engineering,21,0,8,7,1,16,0.7619
 IIT Ropar,all years,Metallurgical and Materials Engineering,17,0,0,1,0,1,0.0588
-IIT Bombay,all years,,4517,71,97,164,236,568,0.1257
+IIT Bombay,all years,,4502,71,97,155,236,559,0.1242
 IIT Bombay,2016,,280,1,5,16,22,44,0.1571
 IIT Bombay,2017,,253,5,11,8,16,40,0.1581
-IIT Bombay,2018,,339,5,9,10,26,50,0.1475
-IIT Bombay,2019,,387,6,10,11,22,49,0.1266
-IIT Bombay,2020,,369,2,8,11,15,36,0.0976
-IIT Bombay,2021,,379,8,8,26,10,52,0.1372
-IIT Bombay,2022,,445,7,6,20,14,47,0.1056
+IIT Bombay,2018,,334,5,9,9,26,49,0.1467
+IIT Bombay,2019,,385,6,10,11,22,49,0.1273
+IIT Bombay,2020,,368,2,8,11,15,36,0.0978
+IIT Bombay,2021,,377,8,8,23,10,49,0.13
+IIT Bombay,2022,,440,7,6,15,14,42,0.0955
 IIT Bombay,2023,,579,8,12,17,33,70,0.1209
 IIT Bombay,2024,,648,10,12,25,29,76,0.1173
 IIT Bombay,2025,,592,13,10,12,33,68,0.1149
 IIT Bombay,2026,,246,6,6,8,16,36,0.1463
-IIT Bombay,all years,Electrical Engineering,1547,3,16,74,43,136,0.0879
-IIT Bombay,all years,Computer Science and Engineering,467,30,42,35,4,111,0.2377
+IIT Bombay,all years,Electrical Engineering,1546,3,16,74,43,136,0.088
+IIT Bombay,all years,Computer Science and Engineering,466,30,42,35,4,111,0.2382
 IIT Bombay,all years,Centre of Studies in Resources Engineering,270,7,12,12,103,134,0.4963
 IIT Bombay,all years,Mechanical Engineering,269,5,20,1,0,26,0.0967
 IIT Bombay,all years,Aerospace Engineering,257,0,2,0,1,3,0.0117
-IIT Bombay,all years,Energy Science and Engineering,227,0,0,0,2,2,0.0088
-IIT Bombay,all years,Civil Engineering,183,0,0,1,9,10,0.0546
+IIT Bombay,all years,Energy Science and Engineering,226,0,0,0,2,2,0.0088
+IIT Bombay,all years,Civil Engineering,181,0,0,1,9,10,0.0552
 IIT Bombay,all years,Centre for Systems and Control Engineering,89,0,6,2,2,10,0.1124
 IIT Bombay,all years,Biosciences and Bioengineering,69,0,0,1,1,2,0.029
 IIT Bombay,all years,Industrial Engineering and Operations Research,60,2,0,1,1,4,0.0667
 IIT Bombay,all years,Chemical Engineering,59,0,0,0,3,3,0.0508
-IIT Bombay,all years,Earth Sciences,41,0,1,0,1,2,0.0488
-IIT Bombay,all years,Centre for Educational Technology,41,0,0,20,5,25,0.6098
+IIT Bombay,all years,Earth Sciences,40,0,1,0,1,2,0.05
 IIT Bombay,all years,IDC School of Design,37,1,0,2,1,4,0.1081
 IIT Bombay,all years,Mathematics,37,1,1,2,0,4,0.1081
 IIT Bombay,all years,Chemistry,34,2,1,0,0,3,0.0882
+IIT Bombay,all years,Centre for Educational Technology,33,0,0,11,5,16,0.4848
 IIT Bombay,all years,Koita Centre for Digital Health,11,0,2,0,0,2,0.1818
 IIT Bombay,all years,Ashank Desai Centre for Policy Studies,7,0,0,1,0,1,0.1429
-IIT Madras,all years,,3939,59,56,147,50,312,0.0792
+IIT Madras,all years,,3935,59,56,147,50,312,0.0793
 IIT Madras,2016,,229,0,3,9,4,16,0.0699
 IIT Madras,2017,,252,3,2,6,2,13,0.0516
-IIT Madras,2018,,256,2,5,15,3,25,0.0977
-IIT Madras,2019,,355,5,5,7,12,29,0.0817
-IIT Madras,2020,,270,3,14,7,0,24,0.0889
+IIT Madras,2018,,255,2,5,15,3,25,0.098
+IIT Madras,2019,,353,5,5,7,12,29,0.0822
+IIT Madras,2020,,269,3,14,7,0,24,0.0892
 IIT Madras,2021,,301,10,5,10,1,26,0.0864
 IIT Madras,2022,,519,5,7,7,5,24,0.0462
 IIT Madras,2023,,465,8,6,25,5,44,0.0946
@@ -117,18 +117,18 @@ IIT Madras,2025,,535,10,4,21,5,40,0.0748
 IIT Madras,2026,,238,7,3,16,8,34,0.1429
 IIT Madras,all years,Electrical Engineering,766,19,8,59,8,94,0.1227
 IIT Madras,all years,Computer Science and Engineering,318,27,32,26,9,94,0.2956
-IIT Madras,all years,Mechanical Engineering,296,0,0,2,2,4,0.0135
+IIT Madras,all years,Mechanical Engineering,295,0,0,2,2,4,0.0136
 IIT Madras,all years,Aerospace Engineering,256,0,0,0,1,1,0.0039
 IIT Madras,all years,Applied Mechanics and Biomedical Engineering,248,1,4,11,4,20,0.0806
 IIT Madras,all years,Engineering Design,202,1,1,3,4,9,0.0446
 IIT Madras,all years,Civil Engineering,118,0,0,0,6,6,0.0508
 IIT Madras,all years,,101,1,1,1,0,3,0.0297
 IIT Madras,all years,Biotechnology,25,1,0,0,0,1,0.04
-IIT Kanpur,all years,,3305,55,82,148,47,332,0.1005
-IIT Kanpur,2016,,207,1,2,7,5,15,0.0725
+IIT Kanpur,all years,,3293,55,82,147,47,331,0.1005
+IIT Kanpur,2016,,204,1,2,7,5,15,0.0735
 IIT Kanpur,2017,,188,6,3,2,3,14,0.0745
-IIT Kanpur,2018,,233,3,7,13,4,27,0.1159
-IIT Kanpur,2019,,303,5,15,18,8,46,0.1518
+IIT Kanpur,2018,,227,3,7,12,4,26,0.1145
+IIT Kanpur,2019,,300,5,15,18,8,46,0.1533
 IIT Kanpur,2020,,222,3,22,6,1,32,0.1441
 IIT Kanpur,2021,,286,11,15,12,4,42,0.1469
 IIT Kanpur,2022,,369,5,5,23,4,37,0.1003
@@ -136,12 +136,12 @@ IIT Kanpur,2023,,404,9,3,18,2,32,0.0792
 IIT Kanpur,2024,,458,6,1,14,5,26,0.0568
 IIT Kanpur,2025,,449,4,5,31,6,46,0.1024
 IIT Kanpur,2026,,186,2,4,4,5,15,0.0806
-IIT Kanpur,all years,Electrical Engineering,1341,2,20,85,17,124,0.0925
-IIT Kanpur,all years,Computer Science and Engineering,330,25,24,22,6,77,0.2333
-IIT Kanpur,all years,Mechanical Engineering,238,0,1,1,5,7,0.0294
+IIT Kanpur,all years,Electrical Engineering,1333,2,20,85,17,124,0.093
+IIT Kanpur,all years,Computer Science and Engineering,329,25,24,22,6,77,0.234
+IIT Kanpur,all years,Mechanical Engineering,237,0,1,1,5,7,0.0295
 IIT Kanpur,all years,Aerospace Engineering,233,0,2,1,1,4,0.0172
-IIT Kanpur,all years,,144,8,28,10,0,46,0.3194
 IIT Kanpur,all years,Physics,142,0,0,0,1,1,0.007
+IIT Kanpur,all years,,142,8,28,9,0,45,0.3169
 IIT Kanpur,all years,Civil Engineering,109,0,0,0,6,6,0.055
 IIT Kanpur,all years,Materials Science and Engineering,50,1,0,0,0,1,0.02
 IIT Kanpur,all years,Kotak School of Sustainability,40,0,2,5,0,7,0.175
@@ -180,20 +180,20 @@ IIT Tirupati,all years,Electrical Engineering,131,1,1,14,2,18,0.1374
 IIT Tirupati,all years,Computer Science and Engineering,113,5,21,9,2,37,0.3274
 IIT Tirupati,all years,Chemical Engineering,8,0,0,0,3,3,0.375
 IIT Tirupati,all years,Mathematics and Statistics,3,1,0,0,0,1,0.3333
-IIT Patna,all years,,1297,25,30,131,34,220,0.1696
+IIT Patna,all years,,1293,25,30,131,34,220,0.1701
 IIT Patna,2016,,61,0,0,4,4,8,0.1311
 IIT Patna,2017,,58,0,0,3,1,4,0.069
 IIT Patna,2018,,101,0,4,6,8,18,0.1782
-IIT Patna,2019,,116,5,3,8,2,18,0.1552
-IIT Patna,2020,,99,1,9,3,1,14,0.1414
-IIT Patna,2021,,106,3,0,24,1,28,0.2642
+IIT Patna,2019,,115,5,3,8,2,18,0.1565
+IIT Patna,2020,,97,1,9,3,1,14,0.1443
+IIT Patna,2021,,105,3,0,24,1,28,0.2667
 IIT Patna,2022,,143,3,1,16,4,24,0.1678
 IIT Patna,2023,,168,2,5,17,3,27,0.1607
 IIT Patna,2024,,184,6,1,21,1,29,0.1576
 IIT Patna,2025,,184,3,5,25,7,40,0.2174
 IIT Patna,2026,,77,2,2,4,2,10,0.1299
-IIT Patna,all years,Computer Science and Engineering,467,22,27,98,20,167,0.3576
-IIT Patna,all years,Electrical Engineering,405,1,2,18,7,28,0.0691
+IIT Patna,all years,Computer Science and Engineering,465,22,27,98,20,167,0.3591
+IIT Patna,all years,Electrical Engineering,403,1,2,18,7,28,0.0695
 IIT Patna,all years,Mechanical Engineering,111,0,0,1,7,8,0.0721
 IIT Patna,all years,Mathematics,42,1,0,7,1,9,0.2143
 IIT Patna,all years,Civil and Environmental Engineering,38,0,0,4,0,4,0.1053
@@ -215,7 +215,7 @@ IIT Palakkad,all years,Computer Science and Engineering,31,0,1,7,2,10,0.3226
 IIT Palakkad,all years,Data Science,14,0,2,7,0,9,0.6429
 IIT Palakkad,all years,Civil Engineering,9,0,0,0,1,1,0.1111
 IIT Palakkad,all years,Mathematics,4,0,0,3,0,3,0.75
-IIT Guwahati,all years,,2414,6,23,128,68,225,0.0932
+IIT Guwahati,all years,,2413,6,23,128,68,225,0.0932
 IIT Guwahati,2016,,140,1,2,11,14,28,0.2
 IIT Guwahati,2017,,166,0,4,7,6,17,0.1024
 IIT Guwahati,2018,,151,0,1,10,6,17,0.1126
@@ -224,7 +224,7 @@ IIT Guwahati,2020,,166,0,2,8,2,12,0.0723
 IIT Guwahati,2021,,190,0,3,8,3,14,0.0737
 IIT Guwahati,2022,,270,1,2,12,7,22,0.0815
 IIT Guwahati,2023,,293,1,0,3,6,10,0.0341
-IIT Guwahati,2024,,320,1,3,24,6,34,0.1062
+IIT Guwahati,2024,,319,1,3,24,6,34,0.1066
 IIT Guwahati,2025,,350,1,1,17,8,27,0.0771
 IIT Guwahati,2026,,162,0,4,14,0,18,0.1111
 IIT Guwahati,all years,Electronics and Electrical Engineering,826,1,6,36,22,65,0.0787
@@ -235,32 +235,32 @@ IIT Guwahati,all years,Chemical Engineering,55,0,0,1,0,1,0.0182
 IIT Guwahati,all years,Mathematics,52,0,0,5,1,6,0.1154
 IIT Guwahati,all years,Mehta Family School of Data Science and Artificial Intelligence,23,0,2,6,0,8,0.3478
 IIT Guwahati,all years,School of Agro and Rural Technology,18,0,0,0,2,2,0.1111
-IIT Hyderabad,all years,,1937,32,44,169,49,294,0.1518
+IIT Hyderabad,all years,,1936,32,44,169,49,294,0.1519
 IIT Hyderabad,2016,,82,0,1,5,4,10,0.122
 IIT Hyderabad,2017,,79,1,2,7,6,16,0.2025
 IIT Hyderabad,2018,,129,0,1,8,1,10,0.0775
 IIT Hyderabad,2019,,140,1,3,12,7,23,0.1643
 IIT Hyderabad,2020,,147,0,6,7,1,14,0.0952
-IIT Hyderabad,2021,,164,4,3,14,1,22,0.1341
+IIT Hyderabad,2021,,163,4,3,14,1,22,0.135
 IIT Hyderabad,2022,,244,7,8,27,7,49,0.2008
 IIT Hyderabad,2023,,234,8,3,16,7,34,0.1453
 IIT Hyderabad,2024,,294,6,3,37,3,49,0.1667
 IIT Hyderabad,2025,,290,5,7,30,4,46,0.1586
 IIT Hyderabad,2026,,134,0,7,6,8,21,0.1567
 IIT Hyderabad,all years,Electrical Engineering,671,1,2,70,23,96,0.1431
-IIT Hyderabad,all years,Computer Science & Engineering,450,28,39,67,11,145,0.3222
+IIT Hyderabad,all years,Computer Science & Engineering,449,28,39,67,11,145,0.3229
 IIT Hyderabad,all years,Chemical Engineering,108,0,0,4,6,10,0.0926
 IIT Hyderabad,all years,Civil Engineering,76,0,0,1,4,5,0.0658
 IIT Hyderabad,all years,Biomedical Engineering,70,0,0,0,1,1,0.0143
 IIT Hyderabad,all years,Mathematics,20,0,0,4,0,4,0.2
 IIT Hyderabad,all years,Artificial Intelligence,15,3,1,0,0,4,0.2667
-IIT Bhubaneswar,all years,,796,1,11,44,10,66,0.0829
+IIT Bhubaneswar,all years,,792,1,11,44,10,66,0.0833
 IIT Bhubaneswar,2016,,21,0,0,1,0,1,0.0476
 IIT Bhubaneswar,2017,,31,0,0,3,3,6,0.1935
-IIT Bhubaneswar,2018,,40,0,1,1,1,3,0.075
+IIT Bhubaneswar,2018,,37,0,1,1,1,3,0.0811
 IIT Bhubaneswar,2019,,39,0,0,3,1,4,0.1026
 IIT Bhubaneswar,2020,,41,0,1,2,0,3,0.0732
-IIT Bhubaneswar,2021,,54,0,0,4,1,5,0.0926
+IIT Bhubaneswar,2021,,53,0,0,4,1,5,0.0943
 IIT Bhubaneswar,2022,,94,0,3,7,2,12,0.1277
 IIT Bhubaneswar,2023,,131,0,1,10,0,11,0.084
 IIT Bhubaneswar,2024,,119,0,2,8,2,12,0.1008
@@ -268,28 +268,28 @@ IIT Bhubaneswar,2025,,168,0,1,3,0,4,0.0238
 IIT Bhubaneswar,2026,,58,1,2,2,0,5,0.0862
 IIT Bhubaneswar,all years,School of Electrical and Computer Sciences,493,0,10,40,8,58,0.1176
 IIT Bhubaneswar,all years,School of Mechanical Sciences,58,0,0,0,2,2,0.0345
-IIT (BHU) Varanasi,all years,,1556,8,8,44,16,76,0.0488
+IIT (BHU) Varanasi,all years,,1555,8,8,44,16,76,0.0489
 IIT (BHU) Varanasi,2016,,82,0,0,1,3,4,0.0488
 IIT (BHU) Varanasi,2017,,75,0,0,5,2,7,0.0933
 IIT (BHU) Varanasi,2018,,102,0,1,2,3,6,0.0588
 IIT (BHU) Varanasi,2019,,124,0,1,4,1,6,0.0484
 IIT (BHU) Varanasi,2020,,133,1,1,1,0,3,0.0226
-IIT (BHU) Varanasi,2021,,98,0,0,1,1,2,0.0204
+IIT (BHU) Varanasi,2021,,97,0,0,1,1,2,0.0206
 IIT (BHU) Varanasi,2022,,171,2,1,3,1,7,0.0409
 IIT (BHU) Varanasi,2023,,199,1,2,0,1,4,0.0201
 IIT (BHU) Varanasi,2024,,212,2,0,7,1,10,0.0472
 IIT (BHU) Varanasi,2025,,263,1,1,11,3,16,0.0608
 IIT (BHU) Varanasi,2026,,97,1,1,9,0,11,0.1134
 IIT (BHU) Varanasi,all years,Department of Electronics Engineering,396,0,0,8,1,9,0.0227
-IIT (BHU) Varanasi,all years,Department of Electrical Engineering,375,0,1,2,4,7,0.0187
+IIT (BHU) Varanasi,all years,Department of Electrical Engineering,374,0,1,2,4,7,0.0187
 IIT (BHU) Varanasi,all years,Department of Computer Science and Engineering,187,4,1,25,3,33,0.1765
 IIT (BHU) Varanasi,all years,Department of Physics,82,0,0,0,2,2,0.0244
 IIT (BHU) Varanasi,all years,School of Biomedical Engineering,31,0,0,0,1,1,0.0323
 IIT (BHU) Varanasi,all years,,14,0,1,0,0,1,0.0714
-IIT Gandhinagar,all years,,777,18,14,44,15,91,0.1171
+IIT Gandhinagar,all years,,776,18,14,44,15,91,0.1173
 IIT Gandhinagar,2016,,20,0,1,1,0,2,0.1
 IIT Gandhinagar,2017,,30,0,0,1,2,3,0.1
-IIT Gandhinagar,2018,,31,2,0,0,3,5,0.1613
+IIT Gandhinagar,2018,,30,2,0,0,3,5,0.1667
 IIT Gandhinagar,2019,,51,2,2,1,3,8,0.1569
 IIT Gandhinagar,2020,,62,0,2,2,0,4,0.0645
 IIT Gandhinagar,2021,,59,0,1,2,0,3,0.0508
@@ -304,16 +304,16 @@ IIT Gandhinagar,all years,Mechanical Engineering,54,2,0,1,0,3,0.0556
 IIT Gandhinagar,all years,Cognitive and Brain Sciences,22,0,1,3,0,4,0.1818
 IIT Gandhinagar,all years,Earth Sciences,14,0,0,1,0,1,0.0714
 IIT Gandhinagar,all years,Biological Sciences and Engineering,3,0,0,1,0,1,0.3333
-IIT Indore,all years,,1170,3,7,99,23,132,0.1128
+IIT Indore,all years,,1163,3,7,99,23,132,0.1135
 IIT Indore,2016,,54,0,1,7,1,9,0.1667
-IIT Indore,2017,,67,0,0,13,1,14,0.209
-IIT Indore,2018,,87,0,1,8,1,10,0.1149
+IIT Indore,2017,,65,0,0,13,1,14,0.2154
+IIT Indore,2018,,86,0,1,8,1,10,0.1163
 IIT Indore,2019,,74,0,0,5,0,5,0.0676
 IIT Indore,2020,,94,0,1,6,4,11,0.117
 IIT Indore,2021,,108,0,0,10,0,10,0.0926
 IIT Indore,2022,,113,0,0,8,2,10,0.0885
 IIT Indore,2023,,124,0,2,5,0,7,0.0565
-IIT Indore,2024,,164,2,0,10,7,19,0.1159
+IIT Indore,2024,,160,2,0,10,7,19,0.1187
 IIT Indore,2025,,205,0,1,20,5,26,0.1268
 IIT Indore,2026,,80,1,1,7,2,11,0.1375
 IIT Indore,all years,Electrical Engineering,469,0,1,66,10,77,0.1642
@@ -321,13 +321,13 @@ IIT Indore,all years,Computer Science and Engineering,163,2,6,17,2,27,0.1656
 IIT Indore,all years,"Astronomy, Astrophysics and Space Engineering",78,0,0,0,5,5,0.0641
 IIT Indore,all years,Mathematics,27,0,1,15,0,16,0.5926
 IIT Indore,all years,Mehta Family School of Sustainability,10,0,0,0,2,2,0.2
-IIT Mandi,all years,,846,4,13,50,19,86,0.1017
+IIT Mandi,all years,,844,4,13,50,19,86,0.1019
 IIT Mandi,2016,,29,0,0,3,3,6,0.2069
-IIT Mandi,2017,,36,0,0,2,0,2,0.0556
+IIT Mandi,2017,,35,0,0,2,0,2,0.0571
 IIT Mandi,2018,,53,0,1,3,0,4,0.0755
 IIT Mandi,2019,,65,1,1,4,3,9,0.1385
 IIT Mandi,2020,,62,0,3,1,2,6,0.0968
-IIT Mandi,2021,,32,1,0,0,1,2,0.0625
+IIT Mandi,2021,,31,1,0,0,1,2,0.0645
 IIT Mandi,2022,,81,1,1,1,4,7,0.0864
 IIT Mandi,2023,,100,0,1,5,0,6,0.06
 IIT Mandi,2024,,147,1,2,10,3,16,0.1088
@@ -335,7 +335,7 @@ IIT Mandi,2025,,160,0,1,15,2,18,0.1125
 IIT Mandi,2026,,81,0,3,6,1,10,0.1235
 IIT Mandi,all years,School of Computing & Electrical Engineering,485,3,8,47,8,66,0.1361
 IIT Mandi,all years,,67,0,1,0,0,1,0.0149
-IIT Mandi,all years,School of Civil & Environmental Engineering,37,0,0,0,6,6,0.1622
+IIT Mandi,all years,School of Civil & Environmental Engineering,36,0,0,0,6,6,0.1667
 IIT Mandi,all years,Centre of Artificial Intelligence and Robotics (CAIR),31,0,2,0,1,3,0.0968
 IIT Mandi,all years,School of Mathematical & Statistical Sciences,9,0,0,1,0,1,0.1111
 IIT Mandi,all years,IKSMHA Center,2,0,0,1,0,1,0.5
@@ -361,11 +361,11 @@ IIT Delhi,all years,Biochemical Engineering and Biotechnology,17,0,0,0,1,1,0.058
 IIT Delhi,all years,Yardi School of Artificial Intelligence,15,0,0,0,3,3,0.2
 IIT Delhi,all years,School of Biological Sciences,7,0,0,1,0,1,0.1429
 IIT Delhi,all years,School of Public Policy,2,0,0,0,2,2,1.0
-IIT (ISM) Dhanbad,all years,,1851,6,3,23,5,37,0.02
+IIT (ISM) Dhanbad,all years,,1844,6,3,23,5,37,0.0201
 IIT (ISM) Dhanbad,2016,,172,0,0,1,0,1,0.0058
-IIT (ISM) Dhanbad,2017,,134,0,0,1,0,1,0.0075
-IIT (ISM) Dhanbad,2018,,265,0,1,0,0,1,0.0038
-IIT (ISM) Dhanbad,2019,,147,1,0,0,0,1,0.0068
+IIT (ISM) Dhanbad,2017,,133,0,0,1,0,1,0.0075
+IIT (ISM) Dhanbad,2018,,263,0,1,0,0,1,0.0038
+IIT (ISM) Dhanbad,2019,,143,1,0,0,0,1,0.007
 IIT (ISM) Dhanbad,2020,,149,0,1,1,0,2,0.0134
 IIT (ISM) Dhanbad,2021,,135,0,0,1,0,1,0.0074
 IIT (ISM) Dhanbad,2022,,149,4,0,3,0,7,0.047
@@ -374,16 +374,16 @@ IIT (ISM) Dhanbad,2024,,178,0,0,1,0,1,0.0056
 IIT (ISM) Dhanbad,2025,,250,0,0,5,1,6,0.024
 IIT (ISM) Dhanbad,2026,,102,0,1,6,2,9,0.0882
 IIT (ISM) Dhanbad,all years,Mechanical Engineering,240,0,0,1,0,1,0.0042
-IIT (ISM) Dhanbad,all years,Computer Science and Engineering,173,1,3,7,1,12,0.0694
-IIT (ISM) Dhanbad,all years,Mathematics & Computing,73,0,0,8,2,10,0.137
-IIT (ISM) Dhanbad,all years,Mining Engineering,42,0,0,0,1,1,0.0238
+IIT (ISM) Dhanbad,all years,Computer Science and Engineering,171,1,3,7,1,12,0.0702
+IIT (ISM) Dhanbad,all years,Mathematics & Computing,72,0,0,8,2,10,0.1389
+IIT (ISM) Dhanbad,all years,Mining Engineering,41,0,0,0,1,1,0.0244
 IIT (ISM) Dhanbad,all years,,22,1,0,2,0,3,0.1364
-IIT Jodhpur,all years,,1204,38,25,99,32,194,0.1611
+IIT Jodhpur,all years,,1200,38,25,99,32,194,0.1617
 IIT Jodhpur,2016,,41,0,0,1,0,1,0.0244
 IIT Jodhpur,2017,,18,0,1,0,0,1,0.0556
 IIT Jodhpur,2018,,31,0,0,0,3,3,0.0968
-IIT Jodhpur,2019,,63,1,2,4,2,9,0.1429
-IIT Jodhpur,2020,,65,2,3,6,0,11,0.1692
+IIT Jodhpur,2019,,60,1,2,4,2,9,0.15
+IIT Jodhpur,2020,,64,2,3,6,0,11,0.1719
 IIT Jodhpur,2021,,95,5,0,14,6,25,0.2632
 IIT Jodhpur,2022,,147,1,2,18,2,23,0.1565
 IIT Jodhpur,2023,,180,5,3,12,3,23,0.1278
@@ -391,8 +391,8 @@ IIT Jodhpur,2024,,233,8,4,22,7,41,0.176
 IIT Jodhpur,2025,,233,8,4,12,4,28,0.1202
 IIT Jodhpur,2026,,98,8,6,10,5,29,0.2959
 IIT Jodhpur,all years,Electrical Engineering,438,1,1,15,6,23,0.0525
-IIT Jodhpur,all years,Computer Science and Engineering,309,32,20,61,17,130,0.4207
-IIT Jodhpur,all years,Mechanical Engineering,106,0,0,0,3,3,0.0283
+IIT Jodhpur,all years,Computer Science and Engineering,308,32,20,61,17,130,0.4221
+IIT Jodhpur,all years,Mechanical Engineering,105,0,0,0,3,3,0.0286
 IIT Jodhpur,all years,Mathematics,44,0,1,0,1,2,0.0455
 IIT Jodhpur,all years,School of Artificial Intelligence and Data Science,12,0,0,1,0,1,0.0833
 IIT Jodhpur,all years,Bioscience and Bioengineering,11,0,0,0,2,2,0.1818

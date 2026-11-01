@@ -1,27 +1,27 @@
 ﻿metric,value
-papers (nodes),226170
-citations (edges),546348
+papers (nodes),226094
+citations (edges),546397
 spectral radius rho,4.7467
 Katz a,0.1053
-papers with Katz score > 0 (cited at least once),124065
+papers with Katz score > 0 (cited at least once),124049
 HITS: s1/s2,1.362
-HITS: hub support,6559
-HITS: authority support,5100
+HITS: hub support,6557
+HITS: authority support,5096
 HITS: one sign,True
-in-degree: Spearman with worldwide citations (n = 226168),0.713
+in-degree: Spearman with worldwide citations (n = 226093),0.713
 in-degree: top-100 share from 2016-2017,0.37
-PageRank: Spearman with worldwide citations (n = 226168),0.693
+PageRank: Spearman with worldwide citations (n = 226093),0.693
 PageRank: top-100 share from 2016-2017,0.75
-Katz: Spearman with worldwide citations (n = 226168),0.714
+Katz: Spearman with worldwide citations (n = 226093),0.714
 Katz: top-100 share from 2016-2017,0.59
-HITS authority: Spearman with worldwide citations (n = 5100),0.266
+HITS authority: Spearman with worldwide citations (n = 5096),0.266
 HITS authority: top-100 share from 2016-2017,0.18
-Spearman in-degree vs PageRank (n = 226170),0.959
-Spearman in-degree vs Katz (n = 226170),0.995
-Spearman in-degree vs HITS authority (n = 5100),0.302
-Spearman PageRank vs Katz (n = 226170),0.962
-Spearman PageRank vs HITS authority (n = 5100),0.102
-Spearman Katz vs HITS authority (n = 5100),0.348
+Spearman in-degree vs PageRank (n = 226094),0.959
+Spearman in-degree vs Katz (n = 226094),0.995
+Spearman in-degree vs HITS authority (n = 5096),0.303
+Spearman PageRank vs Katz (n = 226094),0.961
+Spearman PageRank vs HITS authority (n = 5096),0.103
+Spearman Katz vs HITS authority (n = 5096),0.349
 in-degree: top-100 most common field,Physics and Astronomy (56)
 in-degree: top-100 papers of the most frequent faculty member,15 (Seema Bahinipati (IIT Bhubaneswar))
 PageRank: top-100 most common field,Engineering (34)

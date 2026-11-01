@@ -1,277 +1,277 @@
 ﻿pair,faculty_in_giant_component,direct_coauthor_pairs,mean_cos_angle,median_cos_angle
-Kharagpur - Kharagpur,642 x 642,1611,0.3295,0.2217
-Roorkee - Roorkee,493 x 493,926,0.1249,0.0432
-Ropar - Ropar,149 x 149,217,0.0924,0.0221
-Bombay - Bombay,613 x 613,1411,0.1744,0.069
-Madras - Madras,479 x 479,1079,0.2101,0.1237
-Kanpur - Kanpur,382 x 382,689,0.1333,0.0461
-Goa - Goa,34 x 34,26,0.1067,0.0161
-Tirupati - Tirupati,71 x 71,60,0.0488,0.0042
-Patna - Patna,121 x 121,151,0.0807,0.0274
-Palakkad - Palakkad,67 x 67,48,0.0403,0.0019
-Guwahati - Guwahati,359 x 359,764,0.1745,0.094
-Hyderabad - Hyderabad,241 x 241,446,0.1407,0.0519
-Bhubaneswar - Bhubaneswar,156 x 156,207,0.0847,0.0236
-(BHU) Varanasi - (BHU) Varanasi,336 x 336,687,0.1792,0.0778
-Gandhinagar - Gandhinagar,123 x 123,213,0.2294,0.0491
-Indore - Indore,150 x 150,220,0.1138,0.0243
-Mandi - Mandi,146 x 146,215,0.1444,0.0444
-Delhi - Delhi,428 x 428,1031,0.2372,0.1547
-(ISM) Dhanbad - (ISM) Dhanbad,335 x 335,506,0.0527,0.0092
-Jodhpur - Jodhpur,184 x 184,286,0.1153,0.0302
-Jammu - Jammu,90 x 90,91,0.07,0.0099
-Bhilai - Bhilai,58 x 58,56,0.091,0.0219
-Dharwad - Dharwad,55 x 55,46,0.0441,0.0038
-Kharagpur - Roorkee,642 x 493,74,0.0935,0.0331
-Kharagpur - Ropar,642 x 149,18,0.087,0.0285
-Kharagpur - Bombay,642 x 613,63,0.0758,0.0386
-Kharagpur - Madras,642 x 479,46,0.0834,0.0416
-Kharagpur - Kanpur,642 x 382,63,0.1258,0.0498
-Kharagpur - Goa,642 x 34,5,0.0975,0.023
-Kharagpur - Tirupati,642 x 71,5,0.0568,0.0127
-Kharagpur - Patna,642 x 121,24,0.0896,0.0403
-Kharagpur - Palakkad,642 x 67,3,0.0381,0.0094
-Kharagpur - Guwahati,642 x 359,43,0.0898,0.0425
-Kharagpur - Hyderabad,642 x 241,27,0.0857,0.0332
-Kharagpur - Bhubaneswar,642 x 156,51,0.1018,0.0365
-Kharagpur - (BHU) Varanasi,642 x 336,29,0.1099,0.0451
-Kharagpur - Gandhinagar,642 x 123,34,0.1813,0.0627
-Kharagpur - Indore,642 x 150,20,0.0826,0.0306
-Kharagpur - Mandi,642 x 146,18,0.1014,0.0351
-Kharagpur - Delhi,642 x 428,62,0.1078,0.0602
-Kharagpur - (ISM) Dhanbad,642 x 335,47,0.0566,0.0128
-Kharagpur - Jodhpur,642 x 184,27,0.084,0.0319
-Kharagpur - Jammu,642 x 90,18,0.1027,0.0234
-Kharagpur - Bhilai,642 x 58,12,0.11,0.0348
-Kharagpur - Dharwad,642 x 55,5,0.0555,0.0119
-Roorkee - Ropar,493 x 149,22,0.0413,0.0117
-Roorkee - Bombay,493 x 613,56,0.0499,0.0182
-Roorkee - Madras,493 x 479,22,0.0396,0.0145
-Roorkee - Kanpur,493 x 382,52,0.0653,0.0206
-Roorkee - Goa,493 x 34,3,0.0413,0.0105
-Roorkee - Tirupati,493 x 71,5,0.029,0.0068
-Roorkee - Patna,493 x 121,19,0.0478,0.0153
-Roorkee - Palakkad,493 x 67,2,0.0247,0.0047
-Roorkee - Guwahati,493 x 359,15,0.0404,0.014
-Roorkee - Hyderabad,493 x 241,12,0.038,0.0106
-Roorkee - Bhubaneswar,493 x 156,18,0.045,0.0147
-Roorkee - (BHU) Varanasi,493 x 336,26,0.0579,0.0183
-Roorkee - Gandhinagar,493 x 123,12,0.0706,0.0196
-Roorkee - Indore,493 x 150,19,0.0468,0.0148
-Roorkee - Mandi,493 x 146,20,0.0554,0.0191
-Roorkee - Delhi,493 x 428,70,0.0777,0.0323
-Roorkee - (ISM) Dhanbad,493 x 335,19,0.0315,0.0072
-Roorkee - Jodhpur,493 x 184,30,0.0449,0.0133
-Roorkee - Jammu,493 x 90,7,0.0438,0.0095
-Roorkee - Bhilai,493 x 58,5,0.0463,0.0127
-Roorkee - Dharwad,493 x 55,4,0.0222,0.0047
-Ropar - Bombay,149 x 613,19,0.0464,0.0133
-Ropar - Madras,149 x 479,21,0.0494,0.0163
-Ropar - Kanpur,149 x 382,20,0.0582,0.0171
-Ropar - Goa,149 x 34,3,0.0394,0.0091
-Ropar - Tirupati,149 x 71,1,0.027,0.0054
-Ropar - Patna,149 x 121,8,0.0394,0.0122
-Ropar - Palakkad,149 x 67,3,0.0243,0.0037
-Ropar - Guwahati,149 x 359,14,0.0414,0.015
-Ropar - Hyderabad,149 x 241,6,0.038,0.0094
-Ropar - Bhubaneswar,149 x 156,3,0.0379,0.01
-Ropar - (BHU) Varanasi,149 x 336,8,0.0459,0.012
-Ropar - Gandhinagar,149 x 123,6,0.0662,0.0157
-Ropar - Indore,149 x 150,10,0.0502,0.0134
-Ropar - Mandi,149 x 146,23,0.0612,0.0175
-Ropar - Delhi,149 x 428,12,0.0569,0.0237
-Ropar - (ISM) Dhanbad,149 x 335,6,0.0239,0.0044
-Ropar - Jodhpur,149 x 184,8,0.0409,0.0106
-Ropar - Jammu,149 x 90,5,0.04,0.008
-Ropar - Bhilai,149 x 58,5,0.0461,0.012
-Ropar - Dharwad,149 x 55,3,0.0231,0.0039
-Bombay - Madras,613 x 479,74,0.0555,0.0252
+Kharagpur - Kharagpur,643 x 643,1621,0.3318,0.2249
+Roorkee - Roorkee,499 x 499,935,0.1215,0.041
+Ropar - Ropar,152 x 152,228,0.0989,0.0239
+Bombay - Bombay,613 x 613,1410,0.174,0.0683
+Madras - Madras,479 x 479,1082,0.2128,0.1239
+Kanpur - Kanpur,382 x 382,688,0.1334,0.0467
+Goa - Goa,34 x 34,26,0.1064,0.0159
+Tirupati - Tirupati,71 x 71,60,0.0489,0.0041
+Patna - Patna,122 x 122,154,0.0809,0.0275
+Palakkad - Palakkad,66 x 66,48,0.0414,0.0019
+Guwahati - Guwahati,358 x 358,765,0.1755,0.0949
+Hyderabad - Hyderabad,239 x 239,444,0.1417,0.0532
+Bhubaneswar - Bhubaneswar,154 x 154,207,0.0852,0.0235
+(BHU) Varanasi - (BHU) Varanasi,336 x 336,685,0.1792,0.0759
+Gandhinagar - Gandhinagar,123 x 123,212,0.2293,0.0495
+Indore - Indore,148 x 148,219,0.1168,0.0262
+Mandi - Mandi,147 x 147,216,0.1461,0.0448
+Delhi - Delhi,428 x 428,1030,0.2346,0.1526
+(ISM) Dhanbad - (ISM) Dhanbad,334 x 334,505,0.0528,0.0091
+Jodhpur - Jodhpur,183 x 183,287,0.1163,0.0311
+Jammu - Jammu,91 x 91,91,0.0685,0.009
+Bhilai - Bhilai,58 x 58,55,0.0863,0.0191
+Dharwad - Dharwad,55 x 55,46,0.0433,0.0034
+Kharagpur - Roorkee,643 x 499,74,0.093,0.0327
+Kharagpur - Ropar,643 x 152,16,0.086,0.0279
+Kharagpur - Bombay,643 x 613,60,0.0754,0.039
+Kharagpur - Madras,643 x 479,46,0.0824,0.0418
+Kharagpur - Kanpur,643 x 382,63,0.1267,0.0505
+Kharagpur - Goa,643 x 34,5,0.0981,0.0233
+Kharagpur - Tirupati,643 x 71,5,0.0568,0.0127
+Kharagpur - Patna,643 x 122,24,0.0888,0.0397
+Kharagpur - Palakkad,643 x 66,3,0.038,0.0092
+Kharagpur - Guwahati,643 x 358,44,0.0893,0.0416
+Kharagpur - Hyderabad,643 x 239,27,0.0847,0.0329
+Kharagpur - Bhubaneswar,643 x 154,51,0.1029,0.0373
+Kharagpur - (BHU) Varanasi,643 x 336,29,0.1096,0.0448
+Kharagpur - Gandhinagar,643 x 123,34,0.1821,0.0638
+Kharagpur - Indore,643 x 148,19,0.0839,0.032
+Kharagpur - Mandi,643 x 147,17,0.1016,0.0354
+Kharagpur - Delhi,643 x 428,59,0.1075,0.0604
+Kharagpur - (ISM) Dhanbad,643 x 334,45,0.0566,0.0127
+Kharagpur - Jodhpur,643 x 183,26,0.0848,0.0322
+Kharagpur - Jammu,643 x 91,18,0.1019,0.0227
+Kharagpur - Bhilai,643 x 58,11,0.1083,0.0324
+Kharagpur - Dharwad,643 x 55,4,0.0552,0.011
+Roorkee - Ropar,499 x 152,23,0.0405,0.0115
+Roorkee - Bombay,499 x 613,56,0.049,0.0176
+Roorkee - Madras,499 x 479,23,0.0385,0.0141
+Roorkee - Kanpur,499 x 382,50,0.0644,0.02
+Roorkee - Goa,499 x 34,3,0.0404,0.0101
+Roorkee - Tirupati,499 x 71,5,0.0284,0.0065
+Roorkee - Patna,499 x 122,19,0.0465,0.0147
+Roorkee - Palakkad,499 x 66,2,0.0241,0.0044
+Roorkee - Guwahati,499 x 358,14,0.0382,0.013
+Roorkee - Hyderabad,499 x 239,13,0.0367,0.0104
+Roorkee - Bhubaneswar,499 x 154,19,0.0447,0.0145
+Roorkee - (BHU) Varanasi,499 x 336,26,0.0566,0.0174
+Roorkee - Gandhinagar,499 x 123,12,0.0699,0.019
+Roorkee - Indore,499 x 148,19,0.0466,0.0147
+Roorkee - Mandi,499 x 147,20,0.0546,0.0186
+Roorkee - Delhi,499 x 428,68,0.0733,0.0306
+Roorkee - (ISM) Dhanbad,499 x 334,19,0.0301,0.0069
+Roorkee - Jodhpur,499 x 183,31,0.0443,0.0129
+Roorkee - Jammu,499 x 91,7,0.0426,0.0088
+Roorkee - Bhilai,499 x 58,5,0.0444,0.0112
+Roorkee - Dharwad,499 x 55,4,0.0216,0.0043
+Ropar - Bombay,152 x 613,19,0.0456,0.0132
+Ropar - Madras,152 x 479,24,0.0532,0.0188
+Ropar - Kanpur,152 x 382,19,0.0582,0.0173
+Ropar - Goa,152 x 34,3,0.0388,0.0092
+Ropar - Tirupati,152 x 71,1,0.0273,0.0056
+Ropar - Patna,152 x 122,8,0.0395,0.012
+Ropar - Palakkad,152 x 66,3,0.0249,0.0038
+Ropar - Guwahati,152 x 358,15,0.041,0.0148
+Ropar - Hyderabad,152 x 239,6,0.037,0.0096
+Ropar - Bhubaneswar,152 x 154,3,0.0378,0.01
+Ropar - (BHU) Varanasi,152 x 336,8,0.0454,0.0117
+Ropar - Gandhinagar,152 x 123,6,0.0655,0.016
+Ropar - Indore,152 x 148,10,0.0514,0.0143
+Ropar - Mandi,152 x 147,25,0.0624,0.0181
+Ropar - Delhi,152 x 428,12,0.056,0.0235
+Ropar - (ISM) Dhanbad,152 x 334,6,0.0236,0.0044
+Ropar - Jodhpur,152 x 183,7,0.0407,0.0107
+Ropar - Jammu,152 x 91,5,0.0392,0.0079
+Ropar - Bhilai,152 x 58,5,0.0454,0.0112
+Ropar - Dharwad,152 x 55,2,0.0225,0.0036
+Bombay - Madras,613 x 479,74,0.0554,0.0251
 Bombay - Kanpur,613 x 382,69,0.0599,0.0216
-Bombay - Goa,613 x 34,16,0.0684,0.0235
-Bombay - Tirupati,613 x 71,4,0.0291,0.0071
-Bombay - Patna,613 x 121,12,0.0462,0.0184
-Bombay - Palakkad,613 x 67,9,0.0326,0.006
-Bombay - Guwahati,613 x 359,35,0.0438,0.0184
-Bombay - Hyderabad,613 x 241,33,0.0535,0.0184
-Bombay - Bhubaneswar,613 x 156,18,0.0443,0.0142
-Bombay - (BHU) Varanasi,613 x 336,26,0.0461,0.0161
-Bombay - Gandhinagar,613 x 123,46,0.0875,0.0297
-Bombay - Indore,613 x 150,34,0.0567,0.0195
-Bombay - Mandi,613 x 146,22,0.0502,0.0188
-Bombay - Delhi,613 x 428,65,0.0654,0.0329
-Bombay - (ISM) Dhanbad,613 x 335,26,0.025,0.0062
-Bombay - Jodhpur,613 x 184,23,0.0447,0.0151
-Bombay - Jammu,613 x 90,12,0.0485,0.0115
-Bombay - Bhilai,613 x 58,8,0.0464,0.0157
-Bombay - Dharwad,613 x 55,6,0.0251,0.005
-Madras - Kanpur,479 x 382,35,0.061,0.0235
-Madras - Goa,479 x 34,2,0.04,0.0131
-Madras - Tirupati,479 x 71,17,0.0474,0.0103
-Madras - Patna,479 x 121,14,0.0501,0.0185
-Madras - Palakkad,479 x 67,29,0.0535,0.0098
-Madras - Guwahati,479 x 359,16,0.0368,0.0166
-Madras - Hyderabad,479 x 241,30,0.0493,0.0165
-Madras - Bhubaneswar,479 x 156,15,0.0445,0.014
-Madras - (BHU) Varanasi,479 x 336,14,0.0473,0.0175
-Madras - Gandhinagar,479 x 123,19,0.0716,0.0283
-Madras - Indore,479 x 150,29,0.0717,0.0224
-Madras - Mandi,479 x 146,11,0.0494,0.0184
-Madras - Delhi,479 x 428,41,0.0636,0.035
-Madras - (ISM) Dhanbad,479 x 335,10,0.0241,0.0049
-Madras - Jodhpur,479 x 184,13,0.0475,0.0182
-Madras - Jammu,479 x 90,7,0.0421,0.0112
-Madras - Bhilai,479 x 58,3,0.046,0.0141
-Madras - Dharwad,479 x 55,3,0.0224,0.0044
-Kanpur - Goa,382 x 34,4,0.0518,0.0151
-Kanpur - Tirupati,382 x 71,7,0.0417,0.0085
-Kanpur - Patna,382 x 121,14,0.0548,0.0188
-Kanpur - Palakkad,382 x 67,5,0.0371,0.0063
-Kanpur - Guwahati,382 x 359,29,0.0505,0.0189
-Kanpur - Hyderabad,382 x 241,29,0.0529,0.0158
-Kanpur - Bhubaneswar,382 x 156,13,0.0599,0.0175
-Kanpur - (BHU) Varanasi,382 x 336,38,0.0735,0.023
-Kanpur - Gandhinagar,382 x 123,19,0.1023,0.027
-Kanpur - Indore,382 x 150,21,0.0585,0.0192
-Kanpur - Mandi,382 x 146,32,0.0812,0.0277
-Kanpur - Delhi,382 x 428,58,0.0867,0.039
-Kanpur - (ISM) Dhanbad,382 x 335,29,0.0353,0.0069
-Kanpur - Jodhpur,382 x 184,26,0.0624,0.0197
-Kanpur - Jammu,382 x 90,15,0.0584,0.0117
-Kanpur - Bhilai,382 x 58,3,0.0617,0.0177
-Kanpur - Dharwad,382 x 55,9,0.0344,0.007
-Goa - Tirupati,34 x 71,1,0.0259,0.0057
-Goa - Patna,34 x 121,2,0.0403,0.0128
-Goa - Palakkad,34 x 67,2,0.0215,0.004
-Goa - Guwahati,34 x 359,6,0.0464,0.013
-Goa - Hyderabad,34 x 241,4,0.0486,0.0139
-Goa - Bhubaneswar,34 x 156,1,0.0377,0.01
-Goa - (BHU) Varanasi,34 x 336,9,0.059,0.0183
+Bombay - Goa,613 x 34,16,0.068,0.0234
+Bombay - Tirupati,613 x 71,4,0.029,0.007
+Bombay - Patna,613 x 122,12,0.0457,0.0181
+Bombay - Palakkad,613 x 66,9,0.0328,0.0058
+Bombay - Guwahati,613 x 358,35,0.0425,0.0176
+Bombay - Hyderabad,613 x 239,33,0.0528,0.0184
+Bombay - Bhubaneswar,613 x 154,18,0.0445,0.0143
+Bombay - (BHU) Varanasi,613 x 336,27,0.045,0.0156
+Bombay - Gandhinagar,613 x 123,46,0.0869,0.0296
+Bombay - Indore,613 x 148,34,0.0572,0.02
+Bombay - Mandi,613 x 147,22,0.0501,0.0187
+Bombay - Delhi,613 x 428,65,0.0646,0.0324
+Bombay - (ISM) Dhanbad,613 x 334,26,0.0246,0.006
+Bombay - Jodhpur,613 x 183,23,0.0446,0.0151
+Bombay - Jammu,613 x 91,12,0.0477,0.011
+Bombay - Bhilai,613 x 58,8,0.0448,0.0144
+Bombay - Dharwad,613 x 55,6,0.0248,0.0046
+Madras - Kanpur,479 x 382,37,0.0619,0.0243
+Madras - Goa,479 x 34,2,0.0396,0.0132
+Madras - Tirupati,479 x 71,17,0.048,0.0104
+Madras - Patna,479 x 122,14,0.0497,0.0178
+Madras - Palakkad,479 x 66,29,0.0555,0.0096
+Madras - Guwahati,479 x 358,16,0.0362,0.0164
+Madras - Hyderabad,479 x 239,25,0.045,0.0157
+Madras - Bhubaneswar,479 x 154,14,0.0449,0.0142
+Madras - (BHU) Varanasi,479 x 336,14,0.0462,0.0169
+Madras - Gandhinagar,479 x 123,18,0.0714,0.0285
+Madras - Indore,479 x 148,29,0.0735,0.0234
+Madras - Mandi,479 x 147,11,0.0505,0.0191
+Madras - Delhi,479 x 428,41,0.0634,0.0347
+Madras - (ISM) Dhanbad,479 x 334,10,0.024,0.0048
+Madras - Jodhpur,479 x 183,13,0.0479,0.0184
+Madras - Jammu,479 x 91,7,0.0414,0.0109
+Madras - Bhilai,479 x 58,3,0.045,0.0131
+Madras - Dharwad,479 x 55,3,0.0224,0.004
+Kanpur - Goa,382 x 34,4,0.052,0.0152
+Kanpur - Tirupati,382 x 71,7,0.0419,0.0085
+Kanpur - Patna,382 x 122,14,0.0544,0.0184
+Kanpur - Palakkad,382 x 66,5,0.0376,0.0063
+Kanpur - Guwahati,382 x 358,30,0.0501,0.0186
+Kanpur - Hyderabad,382 x 239,28,0.0516,0.0159
+Kanpur - Bhubaneswar,382 x 154,12,0.0601,0.0178
+Kanpur - (BHU) Varanasi,382 x 336,39,0.0733,0.0227
+Kanpur - Gandhinagar,382 x 123,19,0.1028,0.0272
+Kanpur - Indore,382 x 148,22,0.0597,0.0201
+Kanpur - Mandi,382 x 147,32,0.0815,0.0279
+Kanpur - Delhi,382 x 428,57,0.0857,0.0387
+Kanpur - (ISM) Dhanbad,382 x 334,31,0.035,0.0068
+Kanpur - Jodhpur,382 x 183,27,0.063,0.0199
+Kanpur - Jammu,382 x 91,15,0.058,0.0113
+Kanpur - Bhilai,382 x 58,3,0.0604,0.0158
+Kanpur - Dharwad,382 x 55,9,0.0342,0.0066
+Goa - Tirupati,34 x 71,1,0.0257,0.0056
+Goa - Patna,34 x 122,2,0.0398,0.0127
+Goa - Palakkad,34 x 66,2,0.0215,0.004
+Goa - Guwahati,34 x 358,5,0.0454,0.0122
+Goa - Hyderabad,34 x 239,4,0.0483,0.014
+Goa - Bhubaneswar,34 x 154,1,0.0377,0.01
+Goa - (BHU) Varanasi,34 x 336,9,0.0585,0.0179
 Goa - Gandhinagar,34 x 123,2,0.0729,0.0183
-Goa - Indore,34 x 150,2,0.0435,0.0127
-Goa - Mandi,34 x 146,3,0.0426,0.0122
-Goa - Delhi,34 x 428,3,0.0617,0.0259
-Goa - (ISM) Dhanbad,34 x 335,1,0.0236,0.0042
-Goa - Jodhpur,34 x 184,1,0.0382,0.0109
-Goa - Jammu,34 x 90,0,0.043,0.0087
-Goa - Bhilai,34 x 58,2,0.0504,0.0125
-Goa - Dharwad,34 x 55,0,0.028,0.0045
-Tirupati - Patna,71 x 121,4,0.0281,0.0068
-Tirupati - Palakkad,71 x 67,2,0.0188,0.0023
-Tirupati - Guwahati,71 x 359,15,0.0409,0.0097
-Tirupati - Hyderabad,71 x 241,1,0.0258,0.0053
-Tirupati - Bhubaneswar,71 x 156,2,0.027,0.0053
-Tirupati - (BHU) Varanasi,71 x 336,3,0.0349,0.0088
-Tirupati - Gandhinagar,71 x 123,0,0.0428,0.0081
-Tirupati - Indore,71 x 150,1,0.0301,0.0065
-Tirupati - Mandi,71 x 146,7,0.0349,0.0074
-Tirupati - Delhi,71 x 428,7,0.0419,0.0132
-Tirupati - (ISM) Dhanbad,71 x 335,2,0.018,0.0025
-Tirupati - Jodhpur,71 x 184,2,0.0274,0.0059
-Tirupati - Jammu,71 x 90,2,0.0271,0.0041
-Tirupati - Bhilai,71 x 58,0,0.0276,0.0056
-Tirupati - Dharwad,71 x 55,2,0.0158,0.0021
-Patna - Palakkad,121 x 67,8,0.0265,0.0051
-Patna - Guwahati,121 x 359,16,0.0414,0.0183
-Patna - Hyderabad,121 x 241,13,0.0448,0.0172
-Patna - Bhubaneswar,121 x 156,5,0.0401,0.0137
-Patna - (BHU) Varanasi,121 x 336,22,0.0543,0.0204
-Patna - Gandhinagar,121 x 123,3,0.064,0.0209
-Patna - Indore,121 x 150,13,0.0451,0.0158
-Patna - Mandi,121 x 146,10,0.0528,0.0179
-Patna - Delhi,121 x 428,8,0.0642,0.0289
-Patna - (ISM) Dhanbad,121 x 335,16,0.0266,0.0063
-Patna - Jodhpur,121 x 184,8,0.0397,0.0142
-Patna - Jammu,121 x 90,5,0.0424,0.0125
-Patna - Bhilai,121 x 58,3,0.0438,0.0143
-Patna - Dharwad,121 x 55,2,0.0253,0.0058
-Palakkad - Guwahati,67 x 359,3,0.0194,0.0042
-Palakkad - Hyderabad,67 x 241,10,0.0262,0.0048
-Palakkad - Bhubaneswar,67 x 156,4,0.024,0.004
-Palakkad - (BHU) Varanasi,67 x 336,0,0.0265,0.0046
-Palakkad - Gandhinagar,67 x 123,1,0.0372,0.0061
-Palakkad - Indore,67 x 150,7,0.0372,0.0054
-Palakkad - Mandi,67 x 146,3,0.0297,0.0055
-Palakkad - Delhi,67 x 428,10,0.0506,0.0122
-Palakkad - (ISM) Dhanbad,67 x 335,1,0.0142,0.0015
-Palakkad - Jodhpur,67 x 184,4,0.0255,0.0045
-Palakkad - Jammu,67 x 90,0,0.024,0.0035
-Palakkad - Bhilai,67 x 58,0,0.0259,0.0039
-Palakkad - Dharwad,67 x 55,5,0.0145,0.0016
-Guwahati - Hyderabad,359 x 241,16,0.0416,0.0148
-Guwahati - Bhubaneswar,359 x 156,6,0.0343,0.0119
-Guwahati - (BHU) Varanasi,359 x 336,31,0.0529,0.0207
-Guwahati - Gandhinagar,359 x 123,8,0.0636,0.022
-Guwahati - Indore,359 x 150,11,0.0375,0.0141
-Guwahati - Mandi,359 x 146,14,0.0432,0.0171
-Guwahati - Delhi,359 x 428,29,0.0556,0.0298
-Guwahati - (ISM) Dhanbad,359 x 335,11,0.0251,0.006
-Guwahati - Jodhpur,359 x 184,6,0.0359,0.0129
-Guwahati - Jammu,359 x 90,8,0.0417,0.0102
-Guwahati - Bhilai,359 x 58,11,0.0442,0.0151
-Guwahati - Dharwad,359 x 55,7,0.0313,0.0052
-Hyderabad - Bhubaneswar,241 x 156,9,0.0395,0.0118
-Hyderabad - (BHU) Varanasi,241 x 336,7,0.0501,0.0149
-Hyderabad - Gandhinagar,241 x 123,10,0.0713,0.0199
-Hyderabad - Indore,241 x 150,6,0.0443,0.0131
-Hyderabad - Mandi,241 x 146,4,0.0436,0.0137
-Hyderabad - Delhi,241 x 428,20,0.0532,0.0238
-Hyderabad - (ISM) Dhanbad,241 x 335,4,0.021,0.0039
-Hyderabad - Jodhpur,241 x 184,10,0.0387,0.0117
-Hyderabad - Jammu,241 x 90,9,0.0414,0.0097
-Hyderabad - Bhilai,241 x 58,3,0.0416,0.0116
-Hyderabad - Dharwad,241 x 55,6,0.0268,0.0061
-Bhubaneswar - (BHU) Varanasi,156 x 336,9,0.0498,0.0148
-Bhubaneswar - Gandhinagar,156 x 123,2,0.0681,0.0162
-Bhubaneswar - Indore,156 x 150,10,0.0415,0.0123
-Bhubaneswar - Mandi,156 x 146,2,0.0472,0.0145
-Bhubaneswar - Delhi,156 x 428,27,0.0648,0.0277
-Bhubaneswar - (ISM) Dhanbad,156 x 335,15,0.0272,0.0057
-Bhubaneswar - Jodhpur,156 x 184,8,0.0403,0.0117
-Bhubaneswar - Jammu,156 x 90,3,0.0433,0.0089
-Bhubaneswar - Bhilai,156 x 58,1,0.0454,0.0118
-Bhubaneswar - Dharwad,156 x 55,0,0.0234,0.0051
-(BHU) Varanasi - Gandhinagar,336 x 123,5,0.0918,0.0225
-(BHU) Varanasi - Indore,336 x 150,13,0.0576,0.019
-(BHU) Varanasi - Mandi,336 x 146,8,0.057,0.0189
-(BHU) Varanasi - Delhi,336 x 428,24,0.0709,0.0321
-(BHU) Varanasi - (ISM) Dhanbad,336 x 335,21,0.0314,0.0069
-(BHU) Varanasi - Jodhpur,336 x 184,9,0.0453,0.014
-(BHU) Varanasi - Jammu,336 x 90,10,0.0502,0.0106
-(BHU) Varanasi - Bhilai,336 x 58,9,0.0728,0.0202
-(BHU) Varanasi - Dharwad,336 x 55,3,0.0302,0.0063
-Gandhinagar - Indore,123 x 150,5,0.0689,0.0179
-Gandhinagar - Mandi,123 x 146,9,0.0878,0.0231
-Gandhinagar - Delhi,123 x 428,9,0.0825,0.0344
-Gandhinagar - (ISM) Dhanbad,123 x 335,4,0.0393,0.0071
-Gandhinagar - Jodhpur,123 x 184,10,0.0722,0.0191
-Gandhinagar - Jammu,123 x 90,0,0.0719,0.0108
-Gandhinagar - Bhilai,123 x 58,4,0.0806,0.0185
-Gandhinagar - Dharwad,123 x 55,1,0.034,0.0054
-Indore - Mandi,150 x 146,9,0.0498,0.0163
-Indore - Delhi,150 x 428,14,0.0605,0.0287
-Indore - (ISM) Dhanbad,150 x 335,14,0.0255,0.0052
-Indore - Jodhpur,150 x 184,15,0.0504,0.0153
-Indore - Jammu,150 x 90,5,0.0451,0.0103
-Indore - Bhilai,150 x 58,9,0.0582,0.0151
-Indore - Dharwad,150 x 55,3,0.0257,0.0049
-Mandi - Delhi,146 x 428,23,0.0836,0.0391
-Mandi - (ISM) Dhanbad,146 x 335,1,0.0285,0.0059
-Mandi - Jodhpur,146 x 184,10,0.0506,0.016
-Mandi - Jammu,146 x 90,9,0.05,0.0111
-Mandi - Bhilai,146 x 58,6,0.053,0.015
-Mandi - Dharwad,146 x 55,3,0.0288,0.0059
-Delhi - (ISM) Dhanbad,428 x 335,33,0.0425,0.0107
-Delhi - Jodhpur,428 x 184,27,0.0661,0.031
-Delhi - Jammu,428 x 90,21,0.0718,0.025
-Delhi - Bhilai,428 x 58,10,0.0744,0.0319
-Delhi - Dharwad,428 x 55,8,0.0416,0.0118
-(ISM) Dhanbad - Jodhpur,335 x 184,7,0.0241,0.0048
-(ISM) Dhanbad - Jammu,335 x 90,2,0.0247,0.0034
-(ISM) Dhanbad - Bhilai,335 x 58,1,0.0268,0.0044
-(ISM) Dhanbad - Dharwad,335 x 55,1,0.0145,0.002
-Jodhpur - Jammu,184 x 90,3,0.0408,0.0087
-Jodhpur - Bhilai,184 x 58,2,0.0467,0.0126
-Jodhpur - Dharwad,184 x 55,0,0.0225,0.0046
-Jammu - Bhilai,90 x 58,1,0.0484,0.0094
-Jammu - Dharwad,90 x 55,1,0.0264,0.0042
-Bhilai - Dharwad,58 x 55,0,0.0305,0.0057
+Goa - Indore,34 x 148,2,0.0439,0.0129
+Goa - Mandi,34 x 147,3,0.0425,0.0123
+Goa - Delhi,34 x 428,3,0.0609,0.0259
+Goa - (ISM) Dhanbad,34 x 334,1,0.0234,0.0042
+Goa - Jodhpur,34 x 183,1,0.0383,0.011
+Goa - Jammu,34 x 91,0,0.0426,0.0084
+Goa - Bhilai,34 x 58,2,0.0489,0.0112
+Goa - Dharwad,34 x 55,0,0.0275,0.0043
+Tirupati - Patna,71 x 122,4,0.0282,0.0067
+Tirupati - Palakkad,71 x 66,2,0.0193,0.0022
+Tirupati - Guwahati,71 x 358,15,0.0406,0.0094
+Tirupati - Hyderabad,71 x 239,1,0.0249,0.0052
+Tirupati - Bhubaneswar,71 x 154,2,0.027,0.0053
+Tirupati - (BHU) Varanasi,71 x 336,3,0.0342,0.0086
+Tirupati - Gandhinagar,71 x 123,0,0.0427,0.0081
+Tirupati - Indore,71 x 148,1,0.0304,0.0067
+Tirupati - Mandi,71 x 147,7,0.0351,0.0074
+Tirupati - Delhi,71 x 428,7,0.0416,0.013
+Tirupati - (ISM) Dhanbad,71 x 334,2,0.0179,0.0025
+Tirupati - Jodhpur,71 x 183,2,0.0275,0.0059
+Tirupati - Jammu,71 x 91,2,0.0268,0.0039
+Tirupati - Bhilai,71 x 58,0,0.0268,0.005
+Tirupati - Dharwad,71 x 55,2,0.0156,0.002
+Patna - Palakkad,122 x 66,6,0.0257,0.0048
+Patna - Guwahati,122 x 358,16,0.0405,0.0177
+Patna - Hyderabad,122 x 239,13,0.0436,0.0169
+Patna - Bhubaneswar,122 x 154,5,0.0398,0.0133
+Patna - (BHU) Varanasi,122 x 336,22,0.0543,0.0203
+Patna - Gandhinagar,122 x 123,3,0.0635,0.0203
+Patna - Indore,122 x 148,12,0.0449,0.0157
+Patna - Mandi,122 x 147,10,0.0528,0.0178
+Patna - Delhi,122 x 428,8,0.0629,0.028
+Patna - (ISM) Dhanbad,122 x 334,16,0.0263,0.0062
+Patna - Jodhpur,122 x 183,8,0.0395,0.014
+Patna - Jammu,122 x 91,5,0.0414,0.012
+Patna - Bhilai,122 x 58,3,0.0419,0.0125
+Patna - Dharwad,122 x 55,2,0.0245,0.0054
+Palakkad - Guwahati,66 x 358,3,0.019,0.0039
+Palakkad - Hyderabad,66 x 239,10,0.0253,0.0047
+Palakkad - Bhubaneswar,66 x 154,4,0.0242,0.0039
+Palakkad - (BHU) Varanasi,66 x 336,0,0.026,0.0044
+Palakkad - Gandhinagar,66 x 123,1,0.0373,0.0059
+Palakkad - Indore,66 x 148,7,0.0382,0.0054
+Palakkad - Mandi,66 x 147,3,0.03,0.0055
+Palakkad - Delhi,66 x 428,10,0.0506,0.0118
+Palakkad - (ISM) Dhanbad,66 x 334,1,0.0141,0.0015
+Palakkad - Jodhpur,66 x 183,4,0.0259,0.0044
+Palakkad - Jammu,66 x 91,0,0.0238,0.0032
+Palakkad - Bhilai,66 x 58,0,0.0253,0.0035
+Palakkad - Dharwad,66 x 55,5,0.0144,0.0014
+Guwahati - Hyderabad,358 x 239,16,0.0409,0.0144
+Guwahati - Bhubaneswar,358 x 154,6,0.0341,0.0117
+Guwahati - (BHU) Varanasi,358 x 336,26,0.0489,0.0187
+Guwahati - Gandhinagar,358 x 123,8,0.0628,0.0216
+Guwahati - Indore,358 x 148,11,0.037,0.0138
+Guwahati - Mandi,358 x 147,14,0.0425,0.0167
+Guwahati - Delhi,358 x 428,28,0.0536,0.0286
+Guwahati - (ISM) Dhanbad,358 x 334,11,0.0246,0.0058
+Guwahati - Jodhpur,358 x 183,6,0.0354,0.0125
+Guwahati - Jammu,358 x 91,8,0.0406,0.0095
+Guwahati - Bhilai,358 x 58,11,0.0426,0.0136
+Guwahati - Dharwad,358 x 55,6,0.0294,0.0046
+Hyderabad - Bhubaneswar,239 x 154,9,0.0389,0.0118
+Hyderabad - (BHU) Varanasi,239 x 336,7,0.0483,0.0147
+Hyderabad - Gandhinagar,239 x 123,10,0.0699,0.0199
+Hyderabad - Indore,239 x 148,6,0.0432,0.0135
+Hyderabad - Mandi,239 x 147,4,0.0428,0.0137
+Hyderabad - Delhi,239 x 428,21,0.0521,0.0237
+Hyderabad - (ISM) Dhanbad,239 x 334,4,0.0205,0.0039
+Hyderabad - Jodhpur,239 x 183,10,0.0379,0.0117
+Hyderabad - Jammu,239 x 91,9,0.0403,0.0095
+Hyderabad - Bhilai,239 x 58,3,0.0397,0.0105
+Hyderabad - Dharwad,239 x 55,6,0.0263,0.0058
+Bhubaneswar - (BHU) Varanasi,154 x 336,5,0.0463,0.0135
+Bhubaneswar - Gandhinagar,154 x 123,2,0.0685,0.0163
+Bhubaneswar - Indore,154 x 148,10,0.0419,0.0125
+Bhubaneswar - Mandi,154 x 147,2,0.0475,0.0147
+Bhubaneswar - Delhi,154 x 428,27,0.0645,0.0275
+Bhubaneswar - (ISM) Dhanbad,154 x 334,15,0.0272,0.0057
+Bhubaneswar - Jodhpur,154 x 183,8,0.0407,0.0117
+Bhubaneswar - Jammu,154 x 91,3,0.043,0.0085
+Bhubaneswar - Bhilai,154 x 58,1,0.044,0.0104
+Bhubaneswar - Dharwad,154 x 55,0,0.0232,0.0046
+(BHU) Varanasi - Gandhinagar,336 x 123,5,0.0912,0.0218
+(BHU) Varanasi - Indore,336 x 148,13,0.0568,0.0189
+(BHU) Varanasi - Mandi,336 x 147,7,0.056,0.0187
+(BHU) Varanasi - Delhi,336 x 428,24,0.0689,0.0309
+(BHU) Varanasi - (ISM) Dhanbad,336 x 334,20,0.0306,0.0065
+(BHU) Varanasi - Jodhpur,336 x 183,9,0.045,0.0137
+(BHU) Varanasi - Jammu,336 x 91,10,0.0494,0.0102
+(BHU) Varanasi - Bhilai,336 x 58,7,0.065,0.0166
+(BHU) Varanasi - Dharwad,336 x 55,2,0.0275,0.006
+Gandhinagar - Indore,123 x 148,5,0.0698,0.0182
+Gandhinagar - Mandi,123 x 147,9,0.0881,0.0232
+Gandhinagar - Delhi,123 x 428,9,0.082,0.0343
+Gandhinagar - (ISM) Dhanbad,123 x 334,4,0.0392,0.0069
+Gandhinagar - Jodhpur,123 x 183,10,0.0727,0.0192
+Gandhinagar - Jammu,123 x 91,0,0.0711,0.0103
+Gandhinagar - Bhilai,123 x 58,4,0.0791,0.0168
+Gandhinagar - Dharwad,123 x 55,1,0.0337,0.0053
+Indore - Mandi,148 x 147,9,0.0507,0.0168
+Indore - Delhi,148 x 428,14,0.0607,0.0287
+Indore - (ISM) Dhanbad,148 x 334,14,0.0254,0.0052
+Indore - Jodhpur,148 x 183,14,0.0512,0.0158
+Indore - Jammu,148 x 91,5,0.0451,0.0101
+Indore - Bhilai,148 x 58,9,0.0577,0.0141
+Indore - Dharwad,148 x 55,3,0.0256,0.0048
+Mandi - Delhi,147 x 428,23,0.0835,0.039
+Mandi - (ISM) Dhanbad,147 x 334,1,0.0283,0.0058
+Mandi - Jodhpur,147 x 183,10,0.051,0.0161
+Mandi - Jammu,147 x 91,9,0.0495,0.0107
+Mandi - Bhilai,147 x 58,6,0.052,0.0137
+Mandi - Dharwad,147 x 55,3,0.0285,0.0055
+Delhi - (ISM) Dhanbad,428 x 334,33,0.0413,0.0104
+Delhi - Jodhpur,428 x 183,26,0.0656,0.031
+Delhi - Jammu,428 x 91,21,0.0703,0.0239
+Delhi - Bhilai,428 x 58,9,0.0716,0.0281
+Delhi - Dharwad,428 x 55,8,0.041,0.0109
+(ISM) Dhanbad - Jodhpur,334 x 183,8,0.024,0.0047
+(ISM) Dhanbad - Jammu,334 x 91,2,0.0242,0.0032
+(ISM) Dhanbad - Bhilai,334 x 58,1,0.0258,0.0039
+(ISM) Dhanbad - Dharwad,334 x 55,1,0.0141,0.0017
+Jodhpur - Jammu,183 x 91,3,0.0405,0.0084
+Jodhpur - Bhilai,183 x 58,2,0.046,0.0115
+Jodhpur - Dharwad,183 x 55,0,0.0223,0.0043
+Jammu - Bhilai,91 x 58,1,0.0467,0.0081
+Jammu - Dharwad,91 x 55,1,0.0258,0.0037
+Bhilai - Dharwad,58 x 55,0,0.028,0.0043

@@ -47,12 +47,12 @@ IIT Ropar,Neuroscience,34,0.0061
 IIT Ropar,Immunology and Microbiology,23,0.0041
 IIT Ropar,Unknown,23,0.0041
 IIT Ropar,"Pharmacology, Toxicology and Pharmaceutics",15,0.0027
-IIT Bombay,Engineering,9464,0.3788
-IIT Bombay,Physics and Astronomy,2707,0.1083
-IIT Bombay,Computer Science,2557,0.1023
-IIT Bombay,Materials Science,2504,0.1002
-IIT Bombay,Environmental Science,1933,0.0774
-IIT Bombay,Chemistry,1681,0.0673
+IIT Bombay,Engineering,9454,0.3786
+IIT Bombay,Physics and Astronomy,2705,0.1083
+IIT Bombay,Computer Science,2551,0.1022
+IIT Bombay,Materials Science,2504,0.1003
+IIT Bombay,Environmental Science,1930,0.0773
+IIT Bombay,Chemistry,1680,0.0673
 IIT Bombay,"Biochemistry, Genetics and Molecular Biology",1161,0.0465
 IIT Bombay,Earth and Planetary Sciences,947,0.0379
 IIT Bombay,Energy,606,0.0243
@@ -61,37 +61,37 @@ IIT Bombay,Chemical Engineering,260,0.0104
 IIT Bombay,Agricultural and Biological Sciences,214,0.0086
 IIT Bombay,Neuroscience,130,0.0052
 IIT Bombay,"Pharmacology, Toxicology and Pharmaceutics",114,0.0046
-IIT Bombay,Unknown,105,0.0042
+IIT Bombay,Unknown,109,0.0044
 IIT Bombay,Immunology and Microbiology,65,0.0026
-IIT Madras,Engineering,9846,0.4053
-IIT Madras,Physics and Astronomy,3480,0.1433
-IIT Madras,Materials Science,2621,0.1079
+IIT Madras,Engineering,9839,0.4052
+IIT Madras,Physics and Astronomy,3478,0.1432
+IIT Madras,Materials Science,2620,0.1079
 IIT Madras,Computer Science,2331,0.096
 IIT Madras,Chemistry,1267,0.0522
-IIT Madras,Environmental Science,1218,0.0501
-IIT Madras,"Biochemistry, Genetics and Molecular Biology",968,0.0398
+IIT Madras,Environmental Science,1217,0.0501
+IIT Madras,"Biochemistry, Genetics and Molecular Biology",968,0.0399
 IIT Madras,Energy,559,0.023
 IIT Madras,Earth and Planetary Sciences,515,0.0212
-IIT Madras,Mathematics,503,0.0207
+IIT Madras,Mathematics,502,0.0207
 IIT Madras,Chemical Engineering,450,0.0185
 IIT Madras,Neuroscience,224,0.0092
 IIT Madras,Agricultural and Biological Sciences,162,0.0067
-IIT Madras,Unknown,62,0.0026
+IIT Madras,Unknown,64,0.0026
 IIT Madras,"Pharmacology, Toxicology and Pharmaceutics",57,0.0023
 IIT Madras,Immunology and Microbiology,29,0.0012
-IIT Kanpur,Engineering,7176,0.4067
-IIT Kanpur,Physics and Astronomy,2123,0.1203
-IIT Kanpur,Materials Science,1960,0.1111
-IIT Kanpur,Computer Science,1678,0.0951
-IIT Kanpur,Chemistry,1051,0.0596
+IIT Kanpur,Engineering,7163,0.4064
+IIT Kanpur,Physics and Astronomy,2122,0.1204
+IIT Kanpur,Materials Science,1958,0.1111
+IIT Kanpur,Computer Science,1673,0.0949
+IIT Kanpur,Chemistry,1050,0.0596
 IIT Kanpur,Environmental Science,693,0.0393
-IIT Kanpur,Mathematics,606,0.0343
-IIT Kanpur,"Biochemistry, Genetics and Molecular Biology",589,0.0334
-IIT Kanpur,Earth and Planetary Sciences,516,0.0292
-IIT Kanpur,Chemical Engineering,440,0.0249
-IIT Kanpur,Energy,404,0.0229
+IIT Kanpur,Mathematics,603,0.0342
+IIT Kanpur,"Biochemistry, Genetics and Molecular Biology",587,0.0333
+IIT Kanpur,Earth and Planetary Sciences,516,0.0293
+IIT Kanpur,Chemical Engineering,440,0.025
+IIT Kanpur,Energy,403,0.0229
 IIT Kanpur,Neuroscience,173,0.0098
-IIT Kanpur,Unknown,97,0.0055
+IIT Kanpur,Unknown,107,0.0061
 IIT Kanpur,Agricultural and Biological Sciences,85,0.0048
 IIT Kanpur,"Pharmacology, Toxicology and Pharmaceutics",32,0.0018
 IIT Kanpur,Immunology and Microbiology,22,0.0012
@@ -125,17 +125,17 @@ IIT Tirupati,Earth and Planetary Sciences,7,0.0049
 IIT Tirupati,Unknown,5,0.0035
 IIT Tirupati,"Pharmacology, Toxicology and Pharmaceutics",3,0.0021
 IIT Tirupati,Neuroscience,1,0.0007
-IIT Patna,Engineering,2442,0.3804
-IIT Patna,Computer Science,1687,0.2628
-IIT Patna,Materials Science,726,0.1131
+IIT Patna,Engineering,2441,0.3806
+IIT Patna,Computer Science,1683,0.2624
+IIT Patna,Materials Science,725,0.1131
 IIT Patna,Physics and Astronomy,349,0.0544
 IIT Patna,Mathematics,322,0.0502
-IIT Patna,Chemistry,253,0.0394
+IIT Patna,Chemistry,253,0.0395
 IIT Patna,Environmental Science,247,0.0385
 IIT Patna,"Biochemistry, Genetics and Molecular Biology",123,0.0192
 IIT Patna,Energy,63,0.0098
 IIT Patna,Neuroscience,52,0.0081
-IIT Patna,Agricultural and Biological Sciences,51,0.0079
+IIT Patna,Agricultural and Biological Sciences,51,0.008
 IIT Patna,Chemical Engineering,50,0.0078
 IIT Patna,Earth and Planetary Sciences,27,0.0042
 IIT Patna,Unknown,14,0.0022
@@ -156,8 +156,8 @@ IIT Palakkad,Neuroscience,15,0.0086
 IIT Palakkad,Immunology and Microbiology,15,0.0086
 IIT Palakkad,Chemical Engineering,14,0.008
 IIT Palakkad,Unknown,12,0.0069
-IIT Guwahati,Engineering,6547,0.3645
-IIT Guwahati,Materials Science,2068,0.1151
+IIT Guwahati,Engineering,6546,0.3645
+IIT Guwahati,Materials Science,2067,0.1151
 IIT Guwahati,Computer Science,1833,0.1021
 IIT Guwahati,Physics and Astronomy,1707,0.095
 IIT Guwahati,Environmental Science,1470,0.0818
@@ -170,46 +170,46 @@ IIT Guwahati,Chemical Engineering,172,0.0096
 IIT Guwahati,Earth and Planetary Sciences,171,0.0095
 IIT Guwahati,Neuroscience,104,0.0058
 IIT Guwahati,Immunology and Microbiology,95,0.0053
-IIT Guwahati,Unknown,78,0.0043
+IIT Guwahati,Unknown,80,0.0045
 IIT Guwahati,"Pharmacology, Toxicology and Pharmaceutics",46,0.0026
-IIT Hyderabad,Engineering,3781,0.3787
-IIT Hyderabad,Physics and Astronomy,1602,0.1604
-IIT Hyderabad,Computer Science,1308,0.131
+IIT Hyderabad,Engineering,3780,0.3786
+IIT Hyderabad,Physics and Astronomy,1601,0.1604
+IIT Hyderabad,Computer Science,1307,0.1309
 IIT Hyderabad,Materials Science,1108,0.111
 IIT Hyderabad,Chemistry,521,0.0522
 IIT Hyderabad,"Biochemistry, Genetics and Molecular Biology",391,0.0392
 IIT Hyderabad,Environmental Science,362,0.0363
 IIT Hyderabad,Energy,266,0.0266
-IIT Hyderabad,Mathematics,170,0.017
+IIT Hyderabad,Mathematics,169,0.0169
 IIT Hyderabad,Chemical Engineering,120,0.012
 IIT Hyderabad,Neuroscience,93,0.0093
 IIT Hyderabad,Agricultural and Biological Sciences,69,0.0069
 IIT Hyderabad,Earth and Planetary Sciences,68,0.0068
-IIT Hyderabad,Unknown,58,0.0058
+IIT Hyderabad,Unknown,60,0.006
 IIT Hyderabad,"Pharmacology, Toxicology and Pharmaceutics",50,0.005
 IIT Hyderabad,Immunology and Microbiology,18,0.0018
-IIT Bhubaneswar,Engineering,1889,0.3551
-IIT Bhubaneswar,Physics and Astronomy,1331,0.2502
+IIT Bhubaneswar,Engineering,1887,0.3548
+IIT Bhubaneswar,Physics and Astronomy,1328,0.2497
 IIT Bhubaneswar,Environmental Science,436,0.082
 IIT Bhubaneswar,Computer Science,416,0.0782
 IIT Bhubaneswar,Materials Science,336,0.0632
 IIT Bhubaneswar,Earth and Planetary Sciences,306,0.0575
 IIT Bhubaneswar,Mathematics,174,0.0327
-IIT Bhubaneswar,Chemistry,129,0.0242
+IIT Bhubaneswar,Chemistry,129,0.0243
 IIT Bhubaneswar,Energy,89,0.0167
+IIT Bhubaneswar,Unknown,63,0.0118
 IIT Bhubaneswar,"Biochemistry, Genetics and Molecular Biology",59,0.0111
-IIT Bhubaneswar,Unknown,59,0.0111
 IIT Bhubaneswar,Agricultural and Biological Sciences,49,0.0092
 IIT Bhubaneswar,Neuroscience,19,0.0036
 IIT Bhubaneswar,Chemical Engineering,14,0.0026
 IIT Bhubaneswar,Immunology and Microbiology,11,0.0021
 IIT Bhubaneswar,"Pharmacology, Toxicology and Pharmaceutics",3,0.0006
-IIT (BHU) Varanasi,Engineering,4735,0.4058
+IIT (BHU) Varanasi,Engineering,4734,0.4058
 IIT (BHU) Varanasi,Materials Science,2061,0.1767
-IIT (BHU) Varanasi,Computer Science,1240,0.1063
+IIT (BHU) Varanasi,Computer Science,1237,0.106
 IIT (BHU) Varanasi,Environmental Science,734,0.0629
 IIT (BHU) Varanasi,Physics and Astronomy,686,0.0588
-IIT (BHU) Varanasi,Energy,444,0.0381
+IIT (BHU) Varanasi,Energy,443,0.038
 IIT (BHU) Varanasi,"Biochemistry, Genetics and Molecular Biology",402,0.0345
 IIT (BHU) Varanasi,Mathematics,364,0.0312
 IIT (BHU) Varanasi,Chemistry,310,0.0266
@@ -218,17 +218,17 @@ IIT (BHU) Varanasi,Neuroscience,149,0.0128
 IIT (BHU) Varanasi,"Pharmacology, Toxicology and Pharmaceutics",130,0.0111
 IIT (BHU) Varanasi,Earth and Planetary Sciences,87,0.0075
 IIT (BHU) Varanasi,Chemical Engineering,76,0.0065
-IIT (BHU) Varanasi,Unknown,37,0.0032
+IIT (BHU) Varanasi,Unknown,40,0.0034
 IIT (BHU) Varanasi,Immunology and Microbiology,30,0.0026
-IIT Gandhinagar,Engineering,1323,0.2584
-IIT Gandhinagar,Physics and Astronomy,1017,0.1987
+IIT Gandhinagar,Engineering,1323,0.2585
+IIT Gandhinagar,Physics and Astronomy,1015,0.1984
 IIT Gandhinagar,Environmental Science,516,0.1008
-IIT Gandhinagar,Materials Science,513,0.1002
-IIT Gandhinagar,Computer Science,510,0.0996
+IIT Gandhinagar,Materials Science,513,0.1003
+IIT Gandhinagar,Computer Science,510,0.0997
 IIT Gandhinagar,"Biochemistry, Genetics and Molecular Biology",311,0.0608
 IIT Gandhinagar,Chemistry,252,0.0492
 IIT Gandhinagar,Earth and Planetary Sciences,165,0.0322
-IIT Gandhinagar,Energy,141,0.0275
+IIT Gandhinagar,Energy,141,0.0276
 IIT Gandhinagar,Mathematics,123,0.024
 IIT Gandhinagar,Neuroscience,121,0.0236
 IIT Gandhinagar,Agricultural and Biological Sciences,55,0.0107
@@ -236,13 +236,13 @@ IIT Gandhinagar,Chemical Engineering,29,0.0057
 IIT Gandhinagar,Unknown,25,0.0049
 IIT Gandhinagar,"Pharmacology, Toxicology and Pharmaceutics",9,0.0018
 IIT Gandhinagar,Immunology and Microbiology,9,0.0018
-IIT Indore,Engineering,2872,0.3202
-IIT Indore,Physics and Astronomy,1409,0.1571
-IIT Indore,Materials Science,1381,0.154
-IIT Indore,Computer Science,1183,0.1319
-IIT Indore,Chemistry,428,0.0477
-IIT Indore,Environmental Science,365,0.0407
-IIT Indore,Energy,320,0.0357
+IIT Indore,Engineering,2867,0.3201
+IIT Indore,Physics and Astronomy,1400,0.1563
+IIT Indore,Materials Science,1381,0.1542
+IIT Indore,Computer Science,1182,0.132
+IIT Indore,Chemistry,428,0.0478
+IIT Indore,Environmental Science,365,0.0408
+IIT Indore,Energy,321,0.0358
 IIT Indore,"Biochemistry, Genetics and Molecular Biology",293,0.0327
 IIT Indore,Mathematics,158,0.0176
 IIT Indore,Neuroscience,155,0.0173
@@ -250,22 +250,22 @@ IIT Indore,Earth and Planetary Sciences,121,0.0135
 IIT Indore,Agricultural and Biological Sciences,98,0.0109
 IIT Indore,Chemical Engineering,79,0.0088
 IIT Indore,Immunology and Microbiology,57,0.0064
-IIT Indore,Unknown,38,0.0042
+IIT Indore,Unknown,39,0.0044
 IIT Indore,"Pharmacology, Toxicology and Pharmaceutics",12,0.0013
-IIT Mandi,Engineering,1773,0.3509
-IIT Mandi,Materials Science,815,0.1613
-IIT Mandi,Computer Science,572,0.1132
+IIT Mandi,Engineering,1772,0.3509
+IIT Mandi,Materials Science,813,0.161
+IIT Mandi,Computer Science,572,0.1133
 IIT Mandi,Physics and Astronomy,387,0.0766
 IIT Mandi,Energy,300,0.0594
 IIT Mandi,Environmental Science,282,0.0558
-IIT Mandi,Chemistry,220,0.0435
+IIT Mandi,Chemistry,220,0.0436
 IIT Mandi,"Biochemistry, Genetics and Molecular Biology",198,0.0392
-IIT Mandi,Mathematics,174,0.0344
+IIT Mandi,Mathematics,173,0.0343
 IIT Mandi,Neuroscience,102,0.0202
 IIT Mandi,Agricultural and Biological Sciences,67,0.0133
 IIT Mandi,Earth and Planetary Sciences,62,0.0123
 IIT Mandi,Chemical Engineering,46,0.0091
-IIT Mandi,Unknown,26,0.0051
+IIT Mandi,Unknown,27,0.0053
 IIT Mandi,"Pharmacology, Toxicology and Pharmaceutics",18,0.0036
 IIT Mandi,Immunology and Microbiology,11,0.0022
 IIT Delhi,Engineering,11215,0.4497
@@ -284,36 +284,36 @@ IIT Delhi,Neuroscience,268,0.0107
 IIT Delhi,Unknown,93,0.0037
 IIT Delhi,Immunology and Microbiology,83,0.0033
 IIT Delhi,"Pharmacology, Toxicology and Pharmaceutics",68,0.0027
-IIT (ISM) Dhanbad,Engineering,6201,0.5037
-IIT (ISM) Dhanbad,Computer Science,1343,0.1091
-IIT (ISM) Dhanbad,Environmental Science,1095,0.0889
-IIT (ISM) Dhanbad,Materials Science,1022,0.083
-IIT (ISM) Dhanbad,Earth and Planetary Sciences,596,0.0484
-IIT (ISM) Dhanbad,Energy,485,0.0394
+IIT (ISM) Dhanbad,Engineering,6192,0.5036
+IIT (ISM) Dhanbad,Computer Science,1341,0.1091
+IIT (ISM) Dhanbad,Environmental Science,1094,0.089
+IIT (ISM) Dhanbad,Materials Science,1021,0.083
+IIT (ISM) Dhanbad,Earth and Planetary Sciences,594,0.0483
+IIT (ISM) Dhanbad,Energy,483,0.0393
 IIT (ISM) Dhanbad,Chemistry,433,0.0352
-IIT (ISM) Dhanbad,Mathematics,359,0.0292
-IIT (ISM) Dhanbad,Physics and Astronomy,334,0.0271
+IIT (ISM) Dhanbad,Mathematics,356,0.029
+IIT (ISM) Dhanbad,Physics and Astronomy,333,0.0271
 IIT (ISM) Dhanbad,"Biochemistry, Genetics and Molecular Biology",138,0.0112
-IIT (ISM) Dhanbad,Agricultural and Biological Sciences,131,0.0106
+IIT (ISM) Dhanbad,Agricultural and Biological Sciences,131,0.0107
 IIT (ISM) Dhanbad,Chemical Engineering,89,0.0072
+IIT (ISM) Dhanbad,Unknown,37,0.003
 IIT (ISM) Dhanbad,Neuroscience,37,0.003
-IIT (ISM) Dhanbad,Unknown,32,0.0026
 IIT (ISM) Dhanbad,"Pharmacology, Toxicology and Pharmaceutics",12,0.001
 IIT (ISM) Dhanbad,Immunology and Microbiology,5,0.0004
-IIT Jodhpur,Engineering,2377,0.4233
-IIT Jodhpur,Computer Science,951,0.1693
-IIT Jodhpur,Physics and Astronomy,490,0.0873
-IIT Jodhpur,Materials Science,460,0.0819
-IIT Jodhpur,"Biochemistry, Genetics and Molecular Biology",278,0.0495
-IIT Jodhpur,Chemistry,224,0.0399
+IIT Jodhpur,Engineering,2376,0.4233
+IIT Jodhpur,Computer Science,950,0.1692
+IIT Jodhpur,Physics and Astronomy,489,0.0871
+IIT Jodhpur,Materials Science,459,0.0818
+IIT Jodhpur,"Biochemistry, Genetics and Molecular Biology",277,0.0493
+IIT Jodhpur,Chemistry,225,0.0401
 IIT Jodhpur,Environmental Science,193,0.0344
 IIT Jodhpur,Mathematics,150,0.0267
 IIT Jodhpur,Energy,149,0.0265
-IIT Jodhpur,Neuroscience,112,0.0199
+IIT Jodhpur,Neuroscience,111,0.0198
 IIT Jodhpur,Agricultural and Biological Sciences,72,0.0128
 IIT Jodhpur,Chemical Engineering,54,0.0096
-IIT Jodhpur,Unknown,42,0.0075
-IIT Jodhpur,Earth and Planetary Sciences,41,0.0073
+IIT Jodhpur,Unknown,45,0.008
+IIT Jodhpur,Earth and Planetary Sciences,40,0.0071
 IIT Jodhpur,Immunology and Microbiology,14,0.0025
 IIT Jodhpur,"Pharmacology, Toxicology and Pharmaceutics",9,0.0016
 IIT Jammu,Engineering,1007,0.4708
@@ -331,33 +331,33 @@ IIT Jammu,Chemical Engineering,15,0.007
 IIT Jammu,Unknown,10,0.0047
 IIT Jammu,Neuroscience,4,0.0019
 IIT Jammu,"Pharmacology, Toxicology and Pharmaceutics",2,0.0009
-IIT Bhilai,Engineering,472,0.3371
-IIT Bhilai,Computer Science,245,0.175
-IIT Bhilai,Physics and Astronomy,188,0.1343
-IIT Bhilai,Materials Science,122,0.0871
-IIT Bhilai,Chemistry,114,0.0814
+IIT Bhilai,Engineering,472,0.3367
+IIT Bhilai,Computer Science,245,0.1748
+IIT Bhilai,Physics and Astronomy,188,0.1341
+IIT Bhilai,Materials Science,122,0.087
+IIT Bhilai,Chemistry,114,0.0813
 IIT Bhilai,Mathematics,80,0.0571
 IIT Bhilai,Energy,59,0.0421
 IIT Bhilai,"Biochemistry, Genetics and Molecular Biology",50,0.0357
-IIT Bhilai,Chemical Engineering,18,0.0129
+IIT Bhilai,Chemical Engineering,18,0.0128
 IIT Bhilai,Environmental Science,17,0.0121
 IIT Bhilai,Agricultural and Biological Sciences,13,0.0093
-IIT Bhilai,Unknown,10,0.0071
+IIT Bhilai,Unknown,12,0.0086
 IIT Bhilai,Neuroscience,9,0.0064
 IIT Bhilai,"Pharmacology, Toxicology and Pharmaceutics",2,0.0014
 IIT Bhilai,Earth and Planetary Sciences,1,0.0007
-IIT Dharwad,Engineering,527,0.4701
-IIT Dharwad,Computer Science,313,0.2792
-IIT Dharwad,"Biochemistry, Genetics and Molecular Biology",79,0.0705
+IIT Dharwad,Engineering,527,0.4697
+IIT Dharwad,Computer Science,313,0.279
+IIT Dharwad,"Biochemistry, Genetics and Molecular Biology",79,0.0704
 IIT Dharwad,Materials Science,48,0.0428
-IIT Dharwad,Physics and Astronomy,43,0.0384
+IIT Dharwad,Physics and Astronomy,43,0.0383
 IIT Dharwad,Environmental Science,40,0.0357
 IIT Dharwad,Chemistry,22,0.0196
 IIT Dharwad,Mathematics,17,0.0152
 IIT Dharwad,Energy,8,0.0071
 IIT Dharwad,Chemical Engineering,7,0.0062
 IIT Dharwad,Agricultural and Biological Sciences,7,0.0062
-IIT Dharwad,Unknown,4,0.0036
+IIT Dharwad,Unknown,5,0.0045
 IIT Dharwad,Earth and Planetary Sciences,3,0.0027
 IIT Dharwad,Neuroscience,2,0.0018
 IIT Dharwad,"Pharmacology, Toxicology and Pharmaceutics",1,0.0009

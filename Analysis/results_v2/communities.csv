@@ -1,43 +1,41 @@
 ﻿community,faculty,internal_edges,IIT Kharagpur,IIT Roorkee,IIT Ropar,IIT Bombay,IIT Madras,IIT Kanpur,IIT Goa,IIT Tirupati,IIT Patna,IIT Palakkad,IIT Guwahati,IIT Hyderabad,IIT Bhubaneswar,IIT (BHU) Varanasi,IIT Gandhinagar,IIT Indore,IIT Mandi,IIT Delhi,IIT (ISM) Dhanbad,IIT Jodhpur,IIT Jammu,IIT Bhilai,IIT Dharwad,top_department,top_department_share,departments,most_connected_member
-1,513,1154,4,8,48,9,361,16,0,4,4,8,2,9,6,4,3,6,4,4,3,1,2,4,3,Mechanical Engineering,0.148,44,M S Ramachandra Rao
-2,436,1030,350,12,4,1,1,4,1,3,7,1,3,2,2,2,3,4,2,1,15,2,1,11,4,Mechanical Engineering,0.108,48,Suman Chakraborty
-3,262,657,4,3,0,195,6,4,7,0,1,0,3,0,0,1,8,7,1,3,2,10,2,5,0,Mechanical Engineering,0.229,29,Dinesh Kabra
-4,261,582,2,14,0,5,4,3,1,1,1,2,1,2,3,2,1,1,4,186,8,7,10,0,3,Chemistry,0.192,35,Kamal K. Pant
-5,259,446,7,14,5,45,1,8,0,0,0,0,0,1,7,5,0,1,0,11,151,0,0,0,3,Civil Engineering,0.12,35,Arnab Dutta
-6,251,537,0,0,3,2,1,7,4,1,10,0,4,1,3,182,0,14,1,3,1,2,3,1,8,Department of Mechanical Engineering,0.096,37,Pralay Maiti
-7,250,490,103,1,2,6,5,15,0,0,2,1,0,1,13,7,64,3,3,6,9,3,6,0,0,Civil Engineering,0.08,54,Chandra Sekhar Tiwary
-8,243,459,0,1,11,15,6,6,9,3,3,0,151,0,2,4,4,1,3,9,5,8,2,0,0,Mechanical Engineering,0.21,28,Sachin Kumar
-9,213,413,7,178,1,1,1,1,1,5,2,1,0,1,6,1,0,0,2,2,2,1,0,0,0,Biosciences and Bioengineering,0.141,28,Partha Roy
-10,211,355,0,1,5,1,3,3,0,2,0,2,144,14,0,6,0,1,0,1,6,2,2,8,10,Electronics and Electrical Engineering,0.166,23,Kirti Chandra Sahu
-11,206,342,2,9,0,2,0,4,0,2,1,8,2,9,21,1,0,1,2,117,3,4,2,11,5,Electrical Engineering,0.33,26,B. K. Panigrahi
-12,202,372,6,1,9,2,2,107,0,1,2,0,0,2,0,3,2,1,4,11,3,42,1,1,2,Chemical Engineering,0.114,40,Gupta Raju Kumar
-13,159,242,44,14,1,24,5,24,0,1,0,0,3,0,5,0,11,8,4,7,4,2,2,0,0,Computer Science and Engineering,0.333,30,Niloy Ganguly
-14,149,301,3,1,0,2,1,1,0,0,6,1,0,123,0,1,1,0,0,4,2,2,0,0,1,Chemistry,0.195,21,Aravind Kumar Rengan
-15,141,243,0,0,25,82,2,2,3,0,1,0,0,1,0,8,0,5,4,0,1,6,0,0,1,Chemical Engineering,0.234,27,Rohit Srivastava
-16,135,204,2,2,1,49,18,10,1,1,6,7,1,1,1,4,0,1,2,25,2,0,0,1,0,Mechanical Engineering,0.133,36,Tarun Gupta
-17,135,191,4,9,1,13,8,6,0,1,2,6,0,52,0,1,10,2,7,4,0,5,1,0,3,Computer Science and Engineering,0.281,20,Abhinav Kumar
-18,125,192,1,5,3,24,4,38,1,3,0,2,3,2,1,0,8,5,16,0,4,1,1,0,3,Electrical Engineering,0.408,28,L. Behera
-19,115,177,0,80,0,0,0,1,0,0,1,0,0,0,5,24,0,1,0,1,1,1,0,0,0,Civil Engineering,0.322,26,Chandra Shekhar Prasad Ojha
-20,113,177,5,35,0,46,0,5,0,1,0,1,1,0,3,1,0,3,7,0,1,0,3,1,0,Civil Engineering,0.31,26,Subimal Ghosh
-21,111,154,4,5,0,3,0,17,0,1,26,1,12,1,1,3,0,0,0,0,6,1,30,0,0,Civil Engineering,0.306,21,T N Singh
-22,102,133,1,3,0,60,2,17,0,1,0,1,4,2,0,0,2,3,2,0,2,2,0,0,0,Computer Science and Engineering,0.216,26,Debasattam Pal
-23,101,169,5,9,0,0,0,1,0,2,7,0,6,0,0,1,0,0,63,1,0,4,1,0,1,School of Computing & Electrical Engineering,0.188,21,Satinder Sharma
-24,98,197,1,8,4,3,5,5,1,0,2,0,0,1,0,2,1,3,3,0,3,48,0,8,0,Physics,0.306,22,Mukesh Kumar
-25,95,172,3,0,0,1,2,3,0,0,0,13,0,1,0,1,0,55,0,0,3,1,7,4,1,Chemistry,0.263,18,Rajesh Kumar
-26,94,145,40,4,4,14,9,8,0,1,0,0,1,0,0,0,0,1,0,3,1,7,1,0,0,Computer Science and Engineering,0.447,12,Debdeep Mukhopadhyay
-27,87,127,1,0,3,0,0,0,3,0,3,1,0,0,0,52,0,0,2,0,18,4,0,0,0,Electrical Engineering,0.276,14,Shyam Kamal
-28,82,120,0,4,3,3,7,4,0,6,1,1,1,1,2,2,0,1,6,23,2,6,8,0,1,Civil Engineering,0.524,20,Gunturi Venkata Ramana
-29,79,106,7,2,0,0,1,0,0,9,10,0,0,0,0,1,0,3,0,0,46,0,0,0,0,Mechanical Engineering,0.443,19,Anup Kumar Keshri
-30,65,92,0,2,0,0,5,0,1,20,21,7,1,1,0,2,0,1,1,0,0,0,3,0,0,Physics,0.338,13,Shihabudheen M. Maliyekkal
-31,62,94,26,0,1,0,13,0,0,0,0,0,0,0,1,13,0,0,0,0,7,1,0,0,0,Ocean Engg and Naval Architecture,0.177,17,Damodar Maity
-32,60,94,1,0,1,0,2,1,0,0,0,0,2,2,33,0,1,13,0,1,2,1,0,0,0,"School of Minerals, Metallurgical and Materials Engineering",0.2,18,Gandham Phanikumar
-33,58,86,0,50,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,5,Electrical Engineering,0.534,15,N. P. Padhy
-34,46,77,0,0,1,0,1,1,0,0,0,0,0,0,39,0,0,1,0,2,0,0,1,0,0,"School of Earth, Ocean and Climate Sciences",0.261,11,Rajan Jha
-35,41,55,5,1,0,2,3,8,1,0,0,0,10,5,0,1,3,0,0,1,0,0,0,1,0,Physics,0.902,5,Debasish Borah
-36,40,61,0,16,11,0,0,0,0,0,0,0,0,4,2,0,1,0,0,0,4,1,0,1,0,Electronics and Communication Engineering,0.275,11,Sanjeev Manhas
-37,38,53,0,0,1,0,0,26,0,1,0,2,0,1,0,0,0,1,0,0,5,0,1,0,0,Electrical Engineering,0.474,6,Yogesh Singh Chauhan
-38,32,38,1,1,1,1,0,13,0,0,0,0,0,0,0,0,0,2,0,1,11,1,0,0,0,Electrical Engineering,0.312,10,Samrat Mukhopadhyay
-39,21,24,2,0,0,2,0,3,0,1,1,1,1,1,0,0,0,0,1,1,1,5,0,1,0,Mathematics,0.381,10,Neeraj Misra
-40,15,17,0,0,0,0,0,9,0,0,0,0,3,0,0,0,0,0,1,0,1,0,0,0,1,Aerospace Engineering,0.333,8,Debasis Kundu
-41,13,14,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,11,"Mechanical, Materials and Aerospace Engineering",0.462,6,Somashekara M A
-42,6,6,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,2,0,0,0,Computer Science and Engineering,0.5,3,Soumya Dutta
+1,473,1073,3,3,9,7,376,4,0,3,6,16,2,7,6,3,3,6,4,5,2,1,2,4,1,Mechanical Engineering,0.108,43,M S Ramachandra Rao
+2,339,717,0,0,5,17,12,7,1,3,2,0,227,15,3,4,4,2,3,8,8,12,3,1,2,Mechanical Engineering,0.177,31,Kirti Chandra Sahu
+3,329,606,8,270,0,6,1,4,1,6,3,0,0,0,4,5,0,1,9,2,3,2,3,1,0,Civil Engineering,0.204,42,Partha Roy
+4,321,559,29,15,9,39,1,3,0,9,0,1,0,1,12,5,0,1,0,9,186,0,1,0,0,Civil Engineering,0.1,41,Arnab Dutta
+5,312,700,252,3,4,2,1,5,1,3,5,2,3,0,1,2,3,0,2,2,12,5,0,1,3,Chemistry,0.119,45,Suman Chakraborty
+6,293,660,2,20,3,3,3,10,1,1,3,1,1,2,2,2,3,1,6,202,9,3,10,1,4,Physics,0.154,39,Soumitra Satapathi
+7,290,658,2,0,12,208,5,5,17,0,3,0,0,0,2,9,8,0,5,2,2,8,1,0,1,Physics,0.152,40,Dinesh Kabra
+8,241,404,2,10,2,4,0,5,4,3,4,8,4,10,22,6,0,15,2,112,3,4,2,11,8,Electrical Engineering,0.361,28,B. K. Panigrahi
+9,225,493,0,0,3,0,6,6,2,4,4,4,2,1,0,182,0,0,1,1,1,2,0,1,5,Department of Mechanical Engineering,0.102,32,Pralay Maiti
+10,215,430,56,1,2,5,4,30,0,0,4,1,0,0,8,6,63,4,4,8,8,4,6,0,1,Chemical Engineering,0.079,52,Chandra Sekhar Tiwary
+11,212,368,126,23,1,0,1,8,0,0,3,0,0,2,1,3,0,14,1,1,11,4,1,11,1,Metallurgical and Materials Engineering,0.16,43,Pabitra Mitra
+12,200,328,84,6,3,31,8,25,0,2,0,0,6,0,5,0,1,3,2,10,3,8,3,0,0,Computer Science and Engineering,0.44,31,Debdeep Mukhopadhyay
+13,186,336,4,0,1,30,0,112,0,3,1,0,3,3,0,2,0,1,4,12,2,2,1,0,5,Chemical Engineering,0.183,35,Gupta Raju Kumar
+14,181,255,4,10,1,16,8,6,0,2,7,6,0,51,0,2,10,1,7,12,0,5,30,0,3,Computer Science and Engineering,0.243,25,Abhinav Kumar
+15,171,333,4,1,0,6,1,1,0,0,15,1,0,124,0,1,1,0,0,5,8,2,0,0,1,Chemistry,0.175,24,Aravind Kumar Rengan
+16,142,249,5,24,3,0,5,2,0,0,1,0,0,0,6,2,0,2,1,3,0,87,0,1,0,Electrical Engineering,0.148,29,Ambesh Dixit
+17,133,206,2,3,3,10,5,38,1,1,0,2,7,2,1,0,3,1,44,0,4,3,2,0,1,Electrical Engineering,0.226,35,L. Behera
+18,129,172,2,5,0,71,2,16,0,3,0,0,5,2,0,0,7,8,2,0,2,2,0,0,2,Electrical Engineering,0.333,30,Debasattam Pal
+19,126,248,4,0,0,93,2,5,0,0,1,0,3,0,0,0,0,7,0,3,1,1,1,5,0,Mechanical Engineering,0.405,14,Indradev Samajdar
+20,107,156,0,6,3,3,8,4,0,22,4,1,2,1,2,3,0,0,7,24,2,6,8,0,1,Civil Engineering,0.411,25,Gunturi Venkata Ramana
+21,103,146,0,1,4,1,1,1,0,2,0,2,65,0,0,5,0,0,0,1,4,0,1,7,8,Computer Science and Engineering,0.301,18,Sukumar Nandi
+22,98,152,4,2,0,48,0,6,0,0,3,1,9,1,2,1,10,9,1,0,1,0,0,0,0,Civil Engineering,0.5,22,Subimal Ghosh
+23,95,172,3,0,0,1,2,3,0,0,0,13,0,1,0,1,0,55,0,0,3,1,7,4,1,Chemistry,0.263,18,Rajesh Kumar
+24,93,162,0,3,61,4,8,7,0,0,2,0,0,1,0,1,0,4,0,0,1,0,0,0,1,Mechanical Engineering,0.344,20,Harpreet Singh
+25,91,142,26,10,1,0,11,0,0,0,0,0,0,0,3,32,0,0,0,0,8,0,0,0,0,Department of Civil Engineering,0.275,18,Damodar Maity
+26,87,127,1,0,3,0,0,0,3,0,3,1,0,0,0,52,0,0,2,0,18,4,0,0,0,Electrical Engineering,0.276,14,Shyam Kamal
+27,69,95,7,1,2,0,0,15,0,0,20,1,6,1,1,2,1,1,0,0,6,4,1,0,0,Civil Engineering,0.333,20,T N Singh
+28,64,110,3,9,0,0,0,1,0,2,7,0,1,0,0,1,0,0,36,1,0,2,0,0,1,School of Mechanical & Materials Engineering,0.266,17,Vivek Kumar Malik
+29,58,86,0,50,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,5,Electrical Engineering,0.534,15,N. P. Padhy
+30,49,77,1,1,1,0,2,0,0,0,0,0,1,1,32,0,1,6,0,0,2,1,0,0,0,"School of Minerals, Metallurgical and Materials Engineering",0.245,13,Gandham Phanikumar
+31,45,76,0,0,1,0,1,0,0,0,0,0,0,0,39,0,0,1,0,2,0,0,1,0,0,"School of Earth, Ocean and Climate Sciences",0.267,10,Rajan Jha
+32,44,66,0,19,11,0,0,0,0,0,0,0,0,4,2,0,1,0,0,0,4,2,0,1,0,Electronics and Communication Engineering,0.273,11,Sanjeev Manhas
+33,42,56,6,1,0,2,3,8,1,0,0,0,10,5,0,1,3,0,0,1,0,0,0,1,0,Physics,0.905,5,Debasish Borah
+34,38,53,0,0,1,0,0,26,0,1,0,2,0,1,0,0,0,1,0,0,5,0,1,0,0,Electrical Engineering,0.474,6,Yogesh Singh Chauhan
+35,32,38,1,1,1,1,0,13,0,0,0,0,0,0,0,0,0,2,0,1,11,1,0,0,0,Electrical Engineering,0.312,10,Samrat Mukhopadhyay
+36,29,67,0,1,2,3,2,3,1,0,1,0,0,1,0,0,1,1,2,0,3,1,0,7,0,Physics,0.655,5,Raghunath Sahoo
+37,27,37,0,0,0,0,0,0,1,0,19,2,0,1,0,0,0,1,0,0,0,0,3,0,0,Chemistry,0.259,7,Ajay D Thakur
+38,21,24,2,0,0,2,0,3,0,1,1,1,1,1,0,0,0,0,1,1,1,5,0,1,0,Mathematics,0.381,10,Neeraj Misra
+39,13,14,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,11,"Mechanical, Materials and Aerospace Engineering",0.462,6,Somashekara M A
+40,5,7,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,3,0,0,Mechanical Engineering,0.6,2,Mohd Zaheer Khan Yusufzai
